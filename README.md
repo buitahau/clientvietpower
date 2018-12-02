@@ -1,3 +1,28 @@
+3 mode:
+
+# Develop
+
+ - git pull
+ - npm install
+ - ng serve
+Vào url : http://localhost:4200
+
+# Preview status của project
+
+ - git pull
+ - npm install
+ - ng build
+ - node server.js
+Vào url : http://localhost:8880
+
+# Cài đặt trên máy của client
+
+ - git pull
+ - npm install
+ - ng build
+Sau đó xóa thư mục scr, đóng gói lại thành file exe và cài đặt.
+Sau khi cài đặt xong, url vào project là :  http://localhost:8880
+ 
 # Frontend
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.6.
