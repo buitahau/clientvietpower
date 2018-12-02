@@ -1,11 +1,11 @@
 3 mode:
 
-# Develop
+# Development
 
  - git pull
  - npm install
  - ng serve
-Vào url : http://localhost:4200
+ - Vào url : http://localhost:4200
 
 # Preview status của project
 
@@ -13,15 +13,14 @@ Vào url : http://localhost:4200
  - npm install
  - ng build
  - node server.js
-Vào url : http://localhost:8880
+ - Vào url: http://localhost:8880
 
 # Cài đặt trên máy của client
 
  - git pull
  - npm install
  - ng build
-Sau đó xóa thư mục scr, đóng gói lại thành file exe và cài đặt.
-Sau khi cài đặt xong, url vào project là :  http://localhost:8880
+ - Sau đó xóa thư mục scr, đóng gói lại thành file exe và cài đặt. Sau khi cài đặt xong, url vào project là  http://localhost:8880
  
 # Frontend
 
