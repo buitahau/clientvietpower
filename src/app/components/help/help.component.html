@@ -1,0 +1,147 @@
+<section class="container">
+  <h2>Hướng dẫn setup git nếu commit ko được</h2>
+  <div class="content">
+    <p>Khi gặp lỗi này: </p>
+    <blockquote>
+      Failed with error: unable to access 'https://github.com/buitahau/demoson.git/': The requested URL returned error: 403
+    </blockquote>
+
+    <p>Ta cần làm như sau: Vào folder .git/config, edit lại cái url như sau :</p>
+
+    <p>url = https://github.com/buitahau/demoson.git</p>
+
+    <p>url = https://bluesky020990:xxxxxxxxxxx@github.com/buitahau/demoson.git</p>
+
+    <p>Vẫn ko được :( Do ko đc share !!</p>
+  </div>
+</section>
+
+<section class="container">
+  <h2>Hướng dẫn cài đặt angular</h2>
+
+  <div class="content">
+    <p>Để cài đặt angular, đầu tiên ta new 1 cái angular project</p>
+
+    <blockquote>
+      ng new frontend
+    </blockquote>
+
+    <p>Sau khi khởi tạo nó rồi, đơn giản là ta sẽ start nó thôi đúng ko</p>
+
+    <blockquote>
+      ng serve --open
+    </blockquote>
+
+    <p>--open khai báo tự open cái browser lên để show cái page.</p>
+
+
+    <p>Các npm cần install để làm việc trong project này bao gồm:</p>
+    <ol>
+      <li>material </li>
+      <li>boostrap</li>
+      <li>node sass (để generate scss files)</li>
+    </ol>
+
+    <p>Sau đó, ta add material cho cái project này</p>
+
+    <blockquote>
+      ng add @angular/material
+    </blockquote>
+
+
+    <p>Add luon cai boostrap</p>
+
+    <p>Install boostrap</p>
+
+    <blockquote>
+      npm install ngx-bootstrap --save
+    </blockquote>
+
+    <p>Add boostrap to project </p>
+
+    <blockquote>
+      ng add ngx-bootstrap
+    </blockquote>
+
+    <p>Xem hướng dẫn install bootstrap cho angular tai  : <a href="https://medium.com/@tomastrajan/how-to-build-responsive-layouts-with-bootstrap-4-and-angular-6-cfbb108d797b">đây</a> </p>
+
+    <p>Install node sass để generate scss file. Nếu ko cài cái này thì style trong file scss sẽ ko được generate ra đâu</p>
+
+    <blockquote>
+      npm install -g node-sass
+    </blockquote>
+  </div>
+</section>
+
+<section class="container">
+  <h2>Hướng dẫn tạo component và khai báo routers</h2>
+
+  <div class="content">
+    <p>Để tạo một component tự động, ta làm như sau : ** Khuyến khích xài command line vì generate thủ công
+    rất dễ sai và đôi khi xảy ra những sai sót ko đáng có.</p>
+
+    <ol>
+      <li>cd vào folder cài đặt angular, folder chứa file package.json (ở đây là front-end)</li>
+      <li>Dùng command line sau để tạo component một cách tự động:
+        <blockquote>
+          ng g c components/help
+        </blockquote>
+
+        <p>Giải thích  thêm : g - generate, c - component, components/help : tạo component Help ở folder /components</p>
+      </li>
+    </ol>
+
+    <img src="../../../assets/help/add_components.JPG" width="989" height="837" class="img-fluid"/>
+
+    <p>Đối với component, luôn có 2 phần, 1 là annotation @component và 2 là export class. 2 Cái này luôn đi với nhau, như hình:</p>
+
+    <img src="../../../assets/help/component_note_1.JPG" width="1492" height="1235" class="img-fluid"/>
+  </div>
+
+  <div class="content">
+    <p>Quan trọng nhất của angular là các router. Ta phải khai báo các router này để định tuyến các request tới
+    các Component tương ứng.</p>
+
+    <p>Trong file app.module.ts, ta khai báo routers như sau: Xem image</p>
+
+    <img src="../../../assets/help/config_routers.jpg" width="1884" height="1453"/>
+  </div>
+</section>
+
+<section class="container">
+  <h2>Những lưu ý khi sử dụng các components trong Angular.</h2>
+
+  <div class="content">
+    <p>Nếu một tag chưa được khai báo, thì nó sẽ báo lỗi biên dịch. Ví dụ thêm vào < mat-toolbar>&lt;/> thì ngay lập tức nó báo lỗi.</p>
+    <p>Khi import một module vào, thì phải thêm nó ở trong imports</p>
+
+    <img src="../../../assets/help/add_module.JPG" width="1432" height="1467" class="img-fluid"/>
+
+  </div>
+</section>
+
+
+<section class="container">
+  <h2>Tạo service trong Angular </h2>
+
+  <div class="content">
+    <p>Việc tạo service cũng như tạo component, tốt nhất nên generate tự động.</p>
+
+    <blockquote>
+      ng g s issue
+    </blockquote>
+
+    <p>Khác với component, sau khi generate xong ta phải khao báo trong declarations của app.module, thì service phải được khai báo trong providers.</p>
+
+    <img src="../../../assets/help/add_service.JPG" width="2134" height="1700" class="img-fluid"/>
+
+    <p>Như vậy, trước mắt ta có các lưu ý sau:</p>
+
+    <ol>
+      <li>Component khai báo trong declarations</li>
+      <li>Service khai báo trong providers</li>
+      <li>Module khai báo trong imports</li>
+    </ol>
+  </div>
+</section>
+

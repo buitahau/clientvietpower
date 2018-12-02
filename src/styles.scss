@@ -1,0 +1,247 @@
+body {
+  background: #f9f9ff;
+  height: 100%;
+}
+
+$defaultPadding: 30px;
+
+section.content{
+  margin: 15px;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.sidebar{
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  //font-family: "Roboto", sans-serif;
+  //background: #fdfdfd;
+  //width: 300px;
+  //overflow: hidden;
+  //display: inline-block;
+  height: calc(100vh - 77px);
+  //position: fixed;
+  //top: 70px;
+  //left: 0;
+  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  //z-index: 11 !important;
+}
+
+
+.card{
+  background: #fff;
+  min-height: 50px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  border-radius: 2px;
+  margin-bottom: $defaultPadding;
+
+  &.filter-card{
+    .card-header{
+      border-bottom: 0px solid transparent;
+      background: #ffffff;
+    }
+
+    .card-footer{
+      border-top: 0px solid transparent;
+      background: #ffffff;
+    }
+  }
+}
+
+$webColor : #00417b;
+
+.navbar.static-top{
+  //background-color: $webColor;
+}
+
+.block-header h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.block-header,
+.nav-item{
+  color: $webColor;
+}
+
+.card-header{
+  color: $webColor;
+}
+
+
+.breadcrumb{
+  background: #FFF !important;
+}
+
+footer.sticky-footer{
+  width: 100% !important;
+}
+
+#wrapper #content-wrapper{
+  padding-top: 125px;
+}
+
+.separate-line{
+  height: 1px;
+  background: $webColor;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  width: 100%;
+}
+
+
+.form-detail{
+  .form-group{
+    label.label-control{
+      text-align: right;
+    }
+  }
+}
+
+
+.base-can-empty{
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  width: 211px;
+  height: 260px;
+
+
+  padding: 75px 15px;
+  margin-left: 30px;
+  margin-right: 30px;
+
+  &:after{
+    content : "";
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: url('/assets/images/empty_base_can_size.png') center center no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .base-can-background{
+    position: absolute;
+    bottom: 30px;
+    left: 14px;
+    right: 16px;
+    width: auto !important;
+    top: 20px;
+
+    .base-can-volume{
+      position: absolute;
+      display: inline-block;
+      left: 0px;
+      bottom: 0px;
+      right: 0px;
+      border-left: 2px solid #ccc;
+      border-right: 2px solid #ccc;
+
+      &:before, &:after{
+        content: "";
+        display: inline-block;
+        position: absolute;
+
+        border-radius: 100%;
+        background-color: inherit;
+      }
+
+      &:before{
+        top: 0px;
+        left: -2px;
+        right: -2px;
+        transform: translate(0%, -50%);
+        height: 20px;
+        border: 2px solid #ccc;
+      }
+
+      &:after{
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        transform: translate(0%, 50%);
+        height: 42px;
+        border-bottom: 2px solid #ccc;
+      }
+    }
+
+    .can-base-info{
+      display: inline-block;
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      > *{
+        white-space: nowrap;
+        display: inline-block;
+        width: 100%;
+      }
+
+      .base-type{
+        position: relative;
+        font-size: 24px;
+      }
+
+      .base-volume{
+        position: relative;
+        font-size: 20px;
+      }
+
+      .base-name{
+        position: relative;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+
+.modal{
+  .modal-open &{
+    display: block !important;
+  }
+
+  .modal-dialog {
+    z-index: 9999;
+  }
+}
+
+
+.dispense-job-status-modal{
+  .modal-dialog{
+    width: 700px !important;
+    max-width: 700px !important;
+  }
+}
+
+
+.color-bar-group{
+  .color-bar{
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    height: 26px;
+    min-height: 26px;
+    margin-bottom: 10px;
+  }
+
+  span.color-name {
+    padding-left: 6px;
+    //text-shadow: -1px -1px 1px #fff;
+  }
+}

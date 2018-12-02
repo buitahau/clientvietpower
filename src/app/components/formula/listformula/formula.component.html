@@ -1,0 +1,87 @@
+<div class="block-header">
+  <h1>Formula</h1>
+</div>
+
+<div class="row">
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <div class="card filter-card">
+      <div class="card-header">
+        Filter
+      </div>
+
+      <div class="card-body">
+        <form class="form form-horizontal form-detail">
+          <div class="form-body">
+            <div class="form-group row">
+              <label class="col-md-3 label-control">Select Color</label>
+              <div class="col-md-9">
+                <ng-select2 class="select-color-field" [ngModelOptions]="{standalone: true}" [(ngModel)]="colorName" [data]="listColors"  [value]="colorName" [placeholder]="'Choose Color'"  [width]="400" (valueChanged)="changedColor($event)"></ng-select2>
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label class="col-md-3 label-control">Select Collection</label>
+              <div class="col-md-9">
+                <ng-select2 class="select-color-field" [ngModelOptions]="{standalone: true}" [(ngModel)]="collectionCode" [data]="listCollections"  [value]="collectionCode" [placeholder]="'Choose Collection'" [width]="400" (valueChanged)="changedCollection($event)"></ng-select2>
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label class="col-md-3 label-control">Select Product</label>
+              <div class="col-md-9">
+                <ng-select2 class="select-color-field" [ngModelOptions]="{standalone: true}" [(ngModel)]="productCode" [data]="listProducts"  [value]="productCode" [placeholder]="'Choose Product'" [width]="400" (valueChanged)="changedProduct($event)"></ng-select2>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-actions text-center">
+            <button class="btn btn-primary mr-3" (click)="filterFormula(null)">Search</button>
+            <button class="btn btn-default">Reset</button>
+          </div>
+        </form>
+      </div>
+
+      <!--<div class="card-footer">-->
+
+      <!--</div>-->
+    </div>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <div class="card">
+      <div class="card-header">
+        List Colorant
+      </div>
+
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table table-bordered" matSort (matSortChange)="sortData($event)" > <!---->
+            <tr>
+              <th mat-sort-header="formulaCode">Formula Code</th>
+              <th mat-sort-header="formulaName">Formula Name</th>
+              <th mat-sort-header="collection">Collection
+              <th mat-sort-header="product">Product</th>
+              <th mat-sort-header="createdDate">Created Date</th>
+              <th mat-sort-header="createdBy">Created By</th>
+              <th>Action</th>
+            </tr>
+
+            <tr *ngFor="let formula of listItems">
+              <td>{{formula.formulaCode}}</td>
+              <td>{{formula.formulaName}}</td>
+              <td>{{formula.collection.collectionName}}</td>
+              <td>{{formula.product.productName}}</td>
+              <td>{{formula.createdDate}}</td>
+              <td>{{formula.createdBy}}</td>
+              <td>
+                <button class="btn btn-primary" (click)="viewFormula(formula.formulaId)"><i class="fas fa-info-circle"></i> View</button>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

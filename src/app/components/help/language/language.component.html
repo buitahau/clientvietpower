@@ -1,0 +1,124 @@
+<div class="block-header">
+  <h1>Angular language</h1>
+</div>
+
+<div class="row">
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <div class="card">
+      <div class="card-header">
+        Làm việc với kiểu dữ liệu trong angular.
+      </div>
+
+      <div class="card-body">
+        <p>Danh sách các vấn đề cần quan tâm bao gồm :</p>
+
+        <ul>
+          <li>Show 1 biến ra màn hình</li>
+          <li>Gán giá trị local trong template</li>
+          <li>Câu điều kiện if else</li>
+          <li>Vòng lặp</li>
+        </ul>
+      </div>
+
+      <div class="card-body">
+        <h4>Overview</h4>
+
+        <p>Trong angular, để set các biến cho các component để sử dụng bên html page, thì ta phải khai báo nó trong method export component.</p>
+
+        <p>Mỗi languge có những vấn đề khác nhau, ở đây ta sẽ tìm hiểu về việc show cái giá trị biến, gán giá trị, so sánh
+          điều kiện if  else if, else, các vòng lặp for, while (nếu có), cũng như các hashtag khác.</p>
+      </div>
+
+      <div class="card-body">
+        <h4>Show 1 biến ra màn hình</h4>
+
+        <p>Biến trong angular được export trong đoạn block code cuối cùng của component. Ví dụ ta có biến pageTitle.</p>
+
+        <p>Để show nó ra màn hình ta sử dụng cặp dấu "{{'{'}}" "{{ '{' }}" "{{ '}' }}" "{{ '}' }}" này nhé.</p>
+
+        <p>(Lưu ý là show nó, còn sử dụng thì ko cần cặp dấu  "{{'{'}}" "{{ '}' }}" này đâu nhé. Xem file colorant.component.html để biết thêm chi tiết)</p>
+
+        <blockquote>
+          Content này lấy từ pageTitle : {{ pageTitle | uppercase }}
+        </blockquote>
+
+        <p>Màu của biến nó sẽ khác với màu của mấy thằng còn lại nên sẽ rất dễ xem.</p>
+
+        <p>Để gán giá trị của biến, ta cần sử dụng ngInit</p>
+
+        <blockquote>
+          *ngInit
+        </blockquote>
+      </div>
+
+      <div class="card-body">
+        <h4>Gán giá trị local trong template.</h4>
+
+        <p>để khai báo 1 biến, ta sử dụng từ khóa ngInit</p>
+
+        <p>Xem thêm ở đây <a href="https://www.guru99.com/angularjs-expressions.html" target="_blank">Click to view</a></p>
+
+      </div>
+
+      <div class="card-body">
+        <h4>Câu điều kiện if else</h4>
+
+        <p>Đây là 1 ví dụ của câu điều kiện if</p>
+
+        <blockquote>
+          &lt;p *ngIf="heroes.length > 3">There are many heroes!&lt;/p&gt;`
+        </blockquote>
+
+        <p *ngIf="test_if_value  == true">There are many heroes!</p>
+
+        <p>Xem thêm ở đây <a href="https://angular.io/guide/template-syntax#ngIf" target="_blank">Click to view</a> </p>
+
+      </div>
+
+
+
+
+      <div class="card-body">
+        <h4>Làm việc với biến.</h4>
+
+        <p>Biến trong angular được export trong đoạn block code cuối cùng của component. Ví dụ ta có biến pageTitle.</p>
+
+        <p>Để sử dụng nó, ta sử dụng cặp dấu "{{'{'}}" "{{ '{' }}" "{{ '}' }}" "{{ '}' }}" này nhé.</p>
+
+        <blockquote>
+          Content này lấy từ pageTitle : {{ pageTitle }}
+        </blockquote>
+
+        <p>Màu của biến nó sẽ khác với màu của mấy thằng còn lại nên sẽ rất dễ xem.</p>
+      </div>
+
+
+
+      *ngIf="heroes.length > 3"
+
+
+      <div class="card-body">
+        <h4>Làm việc với mảng.</h4>
+
+        <p>Duyệt các phần tử của mảng : sử dụng * ngFor="let item of listItem" </p>
+
+        <blockquote>
+          <ul *ngFor="let item of listItems">
+            <li>{{item}}</li>
+          </ul>
+        </blockquote>
+      </div>
+
+
+      <div class="card-body">
+        <h4>Style trong angular</h4>
+
+        <p>Xem tai link sau : <a href="https://alligator.io/angular/style-binding-ngstyle-angular/" target="_blank">Click to view </a></p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!---->
