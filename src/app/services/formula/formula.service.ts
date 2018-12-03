@@ -485,7 +485,7 @@ function getListFormulaEntities(): FormulaDTO [] {
 
 function generateFormula(formulaId, formulaCode, formulaName, collection, base, createdDate, createdBy, listProduct, listColorant, formulaDate, colorHex, comments, substrate): FormulaDTO [] {
   let result = [];
-  for (product of listProduct) {
+  for (let product of listProduct) {
     result.push({
       formulaId: formulaId,
       formulaCode: formulaCode,
