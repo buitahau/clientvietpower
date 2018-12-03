@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-language',
@@ -7,12 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LanguageComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }
-  test_if_value : boolean = true;
-  pageTitle : string = "ANGULAR LANGUAGE !!";
-  listItems : string[] = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6", "Item 7", "Item 8"];
+
+  test_if_value: boolean = true;
+  pageTitle: string = 'ANGULAR LANGUAGE !!';
+  listItems: string[] = ['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5', 'Item 6', 'Item 7', 'Item 8'];
 
 }

@@ -1,13 +1,13 @@
 import {Component, ElementRef, Input, OnDestroy, OnInit} from '@angular/core';
-import {ModalService} from "../../../services/boostrap/modal.service";
+import {ModalService} from '../../../services/boostrap/modal.service';
 
 @Component({
   selector: 'pp-modal',
   template:
-    '<div class="pp-modal modal-dialog modal-dialog-centered">' +
-      '<ng-content></ng-content>' +
-    '</div>' +
-    '<div class="modal-backdrop fade show"></div>',
+  '<div class="pp-modal modal-dialog modal-dialog-centered">' +
+  '<ng-content></ng-content>' +
+  '</div>' +
+  '<div class="modal-backdrop fade show"></div>',
 
   styleUrls: ['./modal.component.scss']
 })

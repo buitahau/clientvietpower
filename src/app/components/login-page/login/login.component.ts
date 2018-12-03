@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {UserService} from "../../../services/user/user.service";
-import {Router} from "@angular/router"
+import {UserService} from '../../../services/user/user.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -9,10 +9,11 @@ import {Router} from "@angular/router"
 })
 
 export class LoginComponent implements OnInit {
-  userName : string = null;
-  password : string = null;
+  userName: string = null;
+  password: string = null;
 
-  constructor(private userService : UserService, private router: Router) { }
+  constructor(private userService: UserService, private router: Router) {
+  }
 
   // @ContentChild(MatFormFieldControl) _control: MatFormFieldControl<any>;
   // @ViewChild(MatFormField) _matFormField: MatFormField;
@@ -21,10 +22,15 @@ export class LoginComponent implements OnInit {
     // this._matFormField._control = this._control;
   }
 
-  login (){
+  login() {
     let currentUser = this.userService.login(this.userName, this.password);
-    if(currentUser != null){
+
+    if (currentUser != null) {
       this.router.navigate(['/dashboard']);
+    } else {
+      alert('Username or Password is incorrect! Please try again');
+      this.userName = null;
+      this.password = null;
     }
   }
 }

@@ -1,9 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import {CollectionDTO} from "../../../models/colorant.model";
-import {Sort} from "@angular/material";
-import {CollectionService} from "../../../services/collection/collection.service";
-
-
+import {Component, OnInit} from '@angular/core';
+import {CollectionDTO} from '../../../models/colorant.model';
+import {Sort} from '@angular/material';
+import {CollectionService} from '../../../services/collection/collection.service';
 
 
 @Component({
@@ -14,8 +12,8 @@ import {CollectionService} from "../../../services/collection/collection.service
 export class CollectionComponent implements OnInit {
 
   // filter : ColorFilter = null;
-  collectionCode : string = null;
-  collectionName : string = null;
+  collectionCode: string = null;
+  collectionName: string = null;
 
   listItems: CollectionDTO[] = null;
   sortedData: CollectionDTO[] = null;
@@ -44,9 +42,12 @@ export class CollectionComponent implements OnInit {
     this.sortedData = data.sort((a, b) => {
       const isAsc = sort.direction === 'asc';
       switch (sort.active) {
-        case 'code': return compare(a.collectionCode, b.collectionCode, isAsc);
-        case 'collectionName': return compare(a.collectionName, b.collectionName, isAsc);
-        default: return 0;
+        case 'code':
+          return compare(a.collectionCode, b.collectionCode, isAsc);
+        case 'collectionName':
+          return compare(a.collectionName, b.collectionName, isAsc);
+        default:
+          return 0;
       }
     });
 

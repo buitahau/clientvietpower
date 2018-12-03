@@ -1,18 +1,18 @@
-import { Injectable } from '@angular/core';
-import {ColorantDTO} from "../../models/colorant.model";
-import {Sort} from "@angular/material";
+import {Injectable} from '@angular/core';
+import {ColorantDTO} from '../../models/colorant.model';
+import {Sort} from '@angular/material';
 
-function generateColorantEntity (colorantId, code, name, density, redV, greenV, blueV) : ColorantDTO {
+function generateColorantEntity(colorantId, code, name, density, redV, greenV, blueV): ColorantDTO {
   return {
-    colorantId : colorantId,
+    colorantId: colorantId,
     code: code,
     name: name,        // dựa vào 4 giá trị (density, red, green, blue) này để xác định màu. cách tính màu thì chưa xem chưa biết.
     density: density,
     redV: redV,
     greenV: greenV,
     blueV: blueV,
-    color: 'rgba(' + redV + ',' + greenV + ',' + blueV +',' + density + ')'
-  }
+    color: 'rgba(' + redV + ',' + greenV + ',' + blueV + ',' + density + ')'
+  };
 }
 
 export const C_A = generateColorantEntity(1, 'A', 'Blue', 1.95, 48, 128, 207);
@@ -34,40 +34,45 @@ export const C_P = generateColorantEntity(16, 'P', 'Black', 1.69, 0, 0, 0);
 export const C_ = null;
 
 export interface ColorFilter {
-  code : string,
-  name : string
+  code: string;
+  name: string;
 }
 
-const filterColor = function (filter : ColorFilter) {
+const filterColor = function (filter: ColorFilter) {
   return function (item: ColorantDTO): boolean {
-    return (filter.code === null || filter.code === "" || item.code === filter.code) && (filter.name === null || filter.name == "" || item.name === filter.name)
-  }
+    return (filter.code === null || filter.code === '' || item.code === filter.code)
+      && (filter.name === null || filter.name === '' || item.name === filter.name);
+  };
 };
 
 @Injectable({
   providedIn: 'root'
 })
 export class ColorantService {
-  listItems : ColorantDTO[] = [C_A, C_B, C_C, C_D, C_E, C_F, C_G, C_H, C_I, C_J, C_K, C_L, C_M, C_N, C_O, C_P];
+  listItems: ColorantDTO[] = [C_A, C_B, C_C, C_D, C_E, C_F, C_G, C_H, C_I, C_J, C_K, C_L, C_M, C_N, C_O, C_P];
 
-  constructor() { }
+  constructor() {
+  }
 
-  getListItems() : ColorantDTO[]{
+  getListItems(): ColorantDTO[] {
     return this.listItems;
   }
 
-  search (code : string, name : string){
-    return this.listItems.filter(filterColor({code : code, name : name}));
+  search(code: string, name: string) {
+    return this.listItems.filter(filterColor({code: code, name: name}));
   }
 
-  sortData (sort: Sort){
+  sortData(sort: Sort) {
     return this.listItems.sort((a, b) => {
       const isAsc = sort.direction === 'asc';
       switch (sort.active) {
-        case 'code': return compare(a.code, b.code, isAsc);
-        case 'name': return compare(a.name, b.name, isAsc);
+        case 'code':
+          return compare(a.code, b.code, isAsc);
+        case 'name':
+          return compare(a.name, b.name, isAsc);
         // case 'density': return compare(a.density, b.density, isAsc);
-        default: return 0;
+        default:
+          return 0;
       }
     });
 

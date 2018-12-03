@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Sort} from '@angular/material';
-import {ColorantDTO} from "../../../models/colorant.model";
-import {ColorantService} from "../../../services/colorant/colorant.service";
+import {ColorantDTO} from '../../../models/colorant.model';
+import {ColorantService} from '../../../services/colorant/colorant.service';
 
 @Component({
   selector: 'app-colorant',
@@ -10,8 +10,8 @@ import {ColorantService} from "../../../services/colorant/colorant.service";
 })
 
 export class ColorantComponent implements OnInit {
-  code : string = null;
-  name : string = null;
+  code: string = null;
+  name: string = null;
 
   sortedData: ColorantDTO[];
 
@@ -23,16 +23,16 @@ export class ColorantComponent implements OnInit {
     this.sortedData = this.colorantService.search(this.code, this.name);
   }
 
-  filter(){
+  filter() {
     this.sortedData = this.colorantService.search(this.code, this.name);
   }
 
-  resetFilter (){
+  resetFilter() {
     this.code = null;
     this.name = null;
   }
 
   sortData(sort: Sort) {
-    this.sortedData =  this.colorantService.sortData(sort);
+    this.sortedData = this.colorantService.sortData(sort);
   }
 }

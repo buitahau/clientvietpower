@@ -150,7 +150,7 @@
               <label class="col-md-4 label-control"></label>
 
               <div class="col-md-8">
-                <button class="btn btn-primary" (click)="openModal('custom-modal-1')"><i class="fas fa-fill-drip"></i> Dispense</button>
+                <button class="btn btn-primary" (click)="beginDispense('custom-modal-1')"><i class="fas fa-fill-drip"></i> Dispense</button>
               </div>
             </div>
           </div>
@@ -173,11 +173,50 @@
     <div class="modal-body">
       <div class="row">
         <div class="col-md-3">
+          <div *ngIf="currentBackgroundTask != null">
+            <div class="component-pumping-info" *ngIf="'pumping' == currentBackgroundTask.type">
 
+              <table cellpadding="5" cellspacing="0">
+                <tr>
+                  <td class="text-right">Component</td>
+                  <td colspan="100%" class="text-center" [style]="{'margin-left': '50px'}">
+                    <span class="color-bar" >
+                      <span class="color-select" [ngStyle]="{'background': 'rgba(' + currentBackgroundTask.data.colorant.redV + ',' + currentBackgroundTask.data.colorant.greenV +',' + currentBackgroundTask.data.colorant.blueV + ',' + currentBackgroundTask.data.colorant.density +')', 'width': '20px', 'height': '150px'}"></span>
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-right"><span class="component-name">{{currentBackgroundTask.data.colorant.name}}</span></td>
+                </tr>
+                <tr>
+                  <td>Wanted</td>
+                </tr>
+                <tr>
+                  <td  class="text-right"><span class="component-name">{{currentBackgroundTask.data.quantity}}</span> ml</td>
+                </tr>
+                <tr>
+                  <td>Dispensed</td>
+                </tr>
+                <tr>
+                  <td  class="text-right"><span class="component-name">0</span> ml</td>
+                </tr>
+              </table>
+            </div>
+          </div>
         </div>
 
         <div class="col-md-5">
+          <div *ngIf="currentBackgroundTask != null">
+            {{currentBackgroundTask.type}}
 
+            <div  *ngIf="'prepare' == currentBackgroundTask.type" class="formula-animation preparing-animation text-center">
+              <img src="../../../../assets/videos/Preparing.gif" width="250" height="250"/>
+            </div>
+
+            <div *ngIf="'pumping' == currentBackgroundTask.type" class="formula-animation pumping-animation text-center" [style]="{'display': 'none'}">
+              <img src="../../../../assets/videos/Pumping.gif" width="250" height="250"/>
+            </div>
+          </div>
         </div>
 
         <div class="col-md-4">
