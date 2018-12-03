@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import {BaseDTO} from "../../models/colorant.model";
 import {Sort} from "@angular/material";
+import {HttpService} from '../../shared/http/services/http.service';
+import {environment} from 'src/environments/environment';
 
 
 
@@ -23,7 +25,7 @@ export class BaseService{
   listItems : BaseDTO [] = [BASE_PA, BASE_EPA, BASE_DE, BASE_EDE];
   sortedData : BaseDTO [] = this.listItems;
 
-  constructor() { }
+  constructor(private http: HttpService) { }
 
   sortData (sort : Sort) : BaseDTO[]{
     if(sort != null && sort != undefined){
@@ -46,5 +48,9 @@ export class BaseService{
     function compare(a: string | string, b: string | string, isAsc) {
       return (a < b ? -1 : 1) * (isAsc ? 1 : -1);
     }
+  }
+
+  getListBaseFromServer() {
+    return this.http.get(environment.settings.serverendpoint + 'getAllBase');
   }
 }
