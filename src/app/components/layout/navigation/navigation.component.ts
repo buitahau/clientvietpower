@@ -26,7 +26,7 @@ export class NavigationComponent implements OnInit {
     this.currentUse = this.userService.getLogginUse();
 
     if (this.currentUse == null) {
-      this.router.navigate([`../login`]);
+      // this.router.navigate([`../login`]);
     }
   }
 

@@ -5,6 +5,13 @@ import {FormulaDTO, ProductBaseCanDTO, Select2Item} from '../../../models/colora
 import {ProductBaseService} from '../../../services/productbase/productbase.service';
 import {ModalService} from '../../../services/boostrap/modal.service';
 
+export interface BackgroundTask {
+  type: string;
+  time: number;
+  data: any | null;
+// {type: 'pumping', time: 2000, 'data': colorant}
+}
+
 @Component({
   selector: 'app-viewformula',
   templateUrl: './viewformula.component.html',
@@ -21,6 +28,13 @@ export class ViewFormulaComponent implements OnInit {
   selectProductBase: ProductBaseCanDTO = null;
   listProductBase: Select2Item[] | null = null;
 
+
+  isInProgress = false;
+  isStartProgress = false;
+  listBackGroundTask: BackgroundTask[] = [];
+  currentBackgroundTask: any  = null;
+  currentBackgroundTaskIndex: number = 0;
+
   constructor(private formulaService: FormulaService, private productBaseService: ProductBaseService, private modalService: ModalService, private router: Router, private route: ActivatedRoute) {
   }
 
@@ -36,7 +50,7 @@ export class ViewFormulaComponent implements OnInit {
     this.dbItem = this.formulaService.findById(this.id);
 
     for (let colorant of this.dbItem.listColorant) {
-      if (this.quantity == 0 || this.quantity < colorant.quantity) {
+      if (this.quantity === 0 || this.quantity < colorant.quantity) {
         this.quantity = colorant.quantity;
       }
     }
@@ -46,7 +60,7 @@ export class ViewFormulaComponent implements OnInit {
 
     for (let productBase of listProductBase) {
       this.listProductBase.push({id: productBase.can, text: productBase.can + ' ' + productBase.unit});
-      if (productBase.can == this.canSize) {
+      if (productBase.can === this.canSize) {
         this.selectProductBase = productBase;
       }
     }
@@ -55,13 +69,50 @@ export class ViewFormulaComponent implements OnInit {
       this.selectProductBase = listProductBase[0];
       this.canSize = this.selectProductBase.can;
     }
-
-    console.log(this.listProductBase);
-    console.log(this.selectProductBase);
   }
 
   changedCanSize(e: any): void {
     this.canSize = e.value;
+  }
+
+  beginDispense(id: string): void {
+    this.openModal(id);
+
+    if (! this.isStartProgress) {
+      this.listBackGroundTask = [];
+      this.currentBackgroundTaskIndex = 0;
+      this.currentBackgroundTask = null;
+
+      this.listBackGroundTask.push({type: 'prepare', time: 6000});
+      for (let colorant of this.dbItem.listColorant) {
+        this.listBackGroundTask.push({type: 'pumping', time: colorant.quantity / 2 * 3000, 'data': colorant});
+      }
+      this.listBackGroundTask.push({type: 'finished', time: 1000});
+
+      this.isStartProgress = true;
+      this.runBackGroundTask();
+    }
+  }
+
+  runBackGroundTask(): void {
+    this.isInProgress = true;
+    this.currentBackgroundTask = this.listBackGroundTask[this.currentBackgroundTaskIndex];
+
+    if (this.currentBackgroundTask != null) {
+      setTimeout(() => {
+        if ('pumping' === this.currentBackgroundTask.type) {
+          this.dbItem.listColorant[this.currentBackgroundTaskIndex - 1].quantity = 0;
+        }
+
+        this.currentBackgroundTaskIndex += 1;
+        this.runBackGroundTask();
+
+      }, this.currentBackgroundTask.time);
+    } else {
+      this.isInProgress = false;
+      alert('finished !!');
+    }
+
   }
 
   openModal(id: string) {

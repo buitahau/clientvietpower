@@ -507,7 +507,6 @@ function generateFormula(formulaId, formulaCode, formulaName, collection, base, 
 
   function convertColorHexToRGB(colorHex: number): string {
     let colorStr = colorHex.toString();
-    console.log(colorHex.toString(16));
     // let colorRgb : string[] = [];
     //
     // let currentValue = 0;
