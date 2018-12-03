@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import {BaseDTO} from "../../../models/colorant.model";
-import {Sort} from "@angular/material";
-import {BaseService} from "../../../services/base/base.service";
+import {Component, OnInit} from '@angular/core';
+import {BaseDTO} from '../../../models/colorant.model';
+import {Sort} from '@angular/material';
+import {BaseService} from '../../../services/base/base.service';
 
 @Component({
   selector: 'app-base',
@@ -11,7 +11,8 @@ import {BaseService} from "../../../services/base/base.service";
 
 export class BaseComponent implements OnInit {
 
-  constructor(private baseService : BaseService) { }
+  constructor(private baseService: BaseService) {
+  }
 
   sortedData: BaseDTO[];
 
@@ -20,6 +21,6 @@ export class BaseComponent implements OnInit {
   }
 
   sortData(sort: Sort) {
-    this.sortedData =  this.baseService.sortData(sort);
+    this.sortedData = this.baseService.sortData(sort);
   }
 }
