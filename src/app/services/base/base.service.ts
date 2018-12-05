@@ -25,10 +25,10 @@ export class BaseService {
 
    getListBaseFromServer() {
     return this.http.get(environment.settings.serverendpoint + 'base/getAll').pipe(
-      map(data => {
+      map((data: Array<any>) => {
         const listBases = [];
         if (data) {
-          for (let base of data) {
+          for (const base of data) {
             listBases.push(this.convertFromObjectServer2Model(base));
           }
         }
