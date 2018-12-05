@@ -32,19 +32,8 @@ export class BaseComponent implements OnInit {
 
   fletchData() {
     this.baseService.getListBaseFromServer().subscribe((data: any) => {
-      this.listBases = [];
-      data.map(base => {
-        this.listBases.push(this.convertFromObjectServer2Model(base));
-      });
+      this.listBases = data;
     });
-  }
-
-  convertFromObjectServer2Model(object: any) {
-    const baseModel = new BaseModel();
-    baseModel.baseCode = object.baseCode;
-    baseModel.baseId = object.baseId;
-    baseModel.baseName = object.baseName;
-    return baseModel;
   }
 
 }
