@@ -3,8 +3,6 @@ import {BaseService} from '../../../services/base/base.service';
 import {BaseModel} from '../../../models/base';
 import {Sort} from '@angular/material';
 
-// const _ = require('lodash');
-
 @Component({
   selector: 'app-base',
   templateUrl: './base.component.html',
