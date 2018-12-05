@@ -548,7 +548,7 @@ export class FormulaService {
 
   findById(formulaId) {
     let result = this.listItems.filter(filterById);
-    return result != null && result.length > 0 ? result[0] : null;
+    return result != null && result.length > 0 ? Object.assign({}, result[0]) : null;
 
     function filterById(item, index, array) {
       return (item.formulaId == formulaId);
