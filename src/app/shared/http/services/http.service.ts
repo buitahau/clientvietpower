@@ -2,6 +2,6 @@ import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 
 @Injectable()
-export class HttpService extends HttpClient{
+export class HttpService extends HttpClient {
 
 }

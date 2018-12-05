@@ -83,11 +83,11 @@ export class ViewFormulaComponent implements OnInit {
       this.currentBackgroundTaskIndex = 0;
       this.currentBackgroundTask = null;
 
-      this.listBackGroundTask.push({type: 'prepare', time: 6000});
-      for (let colorant of this.dbItem.listColorant) {
-        this.listBackGroundTask.push({type: 'pumping', time: colorant.quantity / 2 * 3000, 'data': colorant});
-      }
-      this.listBackGroundTask.push({type: 'finished', time: 1000});
+      // this.listBackGroundTask.push({type: 'prepare', time: 6000});
+      // for (let colorant of this.dbItem.listColorant) {
+      //   this.listBackGroundTask.push({type: 'pumping', time: colorant.quantity / 2 * 3000, 'data': colorant});
+      // }
+      // this.listBackGroundTask.push({type: 'finished', time: 1000});
 
       this.isStartProgress = true;
       this.runBackGroundTask();

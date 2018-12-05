@@ -62,6 +62,7 @@ import {MaintenanceComponent} from "./components/formula/maintenance/maintenance
 // help page !!
 import {LanguageComponent} from "./components/help/language/language.component";
 import {QuestionComponent} from "./components/help/question/question.component";
+import {HttpModule} from './shared/http/http.module';
 
 
 
@@ -150,6 +151,7 @@ const routes: Routes = [
     BrowserAnimationsModule,
 
     HttpClientModule,
+    HttpModule.forRoot(),
     RouterModule.forRoot(routes),
 
     // IMPORT MATERIAL

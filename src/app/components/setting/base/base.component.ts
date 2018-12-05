@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {BaseDTO} from "../../../models/colorant.model";
-import {Sort} from "@angular/material";
-import {BaseService} from "../../../services/base/base.service";
+import {BaseService} from '../../../services/base/base.service';
 import {BaseModel} from '../../../models/base';
+import {Sort} from '@angular/material';
+
+// const _ = require('lodash');
 
 @Component({
   selector: 'app-base',
@@ -16,23 +17,27 @@ export class BaseComponent implements OnInit {
 
   constructor(private baseService: BaseService) { }
 
-  sortedData: BaseDTO[];
-
   ngOnInit() {
-    this.sortedData = this.baseService.sortData(null);
     this.fletchData() ;
   }
 
   sortData(sort: Sort) {
-    this.sortedData =  this.baseService.sortData(sort);
+    this.listBases = this.listBases.sort((a, b) => {
+      const isAsc = sort.direction === 'asc';
+      return compare(a.baseCode, b.baseCode, isAsc);
+    });
+
+    function compare(a: string | string, b: string | string, isAsc) {
+      return (a < b ? -1 : 1) * (isAsc ? 1 : -1);
+    }
   }
 
   fletchData() {
     this.baseService.getListBaseFromServer().subscribe((data: any) => {
       this.listBases = [];
-      for (let i = 0; i < data.length; i++) {
-        this.listBases.push(this.convertFromObjectServer2Model(data[i]))
-      }
+      data.map(base => {
+        this.listBases.push(this.convertFromObjectServer2Model(base));
+      });
     });
   }
 
