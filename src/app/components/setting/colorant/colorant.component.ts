@@ -20,11 +20,13 @@ export class ColorantComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.sortedData = this.colorantService.search(this.code, this.name);
+    this.filter(this.code, this.name);
   }
 
-  filter() {
-    this.sortedData = this.colorantService.search(this.code, this.name);
+  filter(code: string, name: string) {
+    this.colorantService.getListItems().subscribe((data: any) => {
+      this.sortedData = data;
+    });
   }
 
   resetFilter() {
@@ -33,6 +35,6 @@ export class ColorantComponent implements OnInit {
   }
 
   sortData(sort: Sort) {
-    this.sortedData = this.colorantService.sortData(sort);
+    this.filter(null, null);
   }
 }

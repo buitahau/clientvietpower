@@ -1,6 +1,10 @@
 import {Injectable} from '@angular/core';
 import {ColorantDTO} from '../../models/colorant.model';
 import {Sort} from '@angular/material';
+import {environment} from '../../../environments/environment';
+import {catchError, map} from 'rxjs/internal/operators';
+import {BaseModel, ColorantModel} from '../../models/base';
+import {HttpService} from '../../shared/http/services/http.service';
 
 function generateColorantEntity(colorantId, code, name, density, redV, greenV, blueV): ColorantDTO {
   return {
@@ -49,35 +53,62 @@ const filterColor = function (filter: ColorFilter) {
   providedIn: 'root'
 })
 export class ColorantService {
-  listItems: ColorantDTO[] = [C_A, C_B, C_C, C_D, C_E, C_F, C_G, C_H, C_I, C_J, C_K, C_L, C_M, C_N, C_O, C_P];
+  // listItems: ColorantDTO[] = [C_A, C_B, C_C, C_D, C_E, C_F, C_G, C_H, C_I, C_J, C_K, C_L, C_M, C_N, C_O, C_P];
 
-  constructor() {
-  }
-
-  getListItems(): ColorantDTO[] {
-    return this.listItems;
+  constructor(private http: HttpService) {
   }
 
   search(code: string, name: string) {
-    return this.listItems.filter(filterColor({code: code, name: name}));
+    return this.getListItems();
+    // return this.listItems.filter(filterColor({code: code, name: name}));
   }
 
   sortData(sort: Sort) {
-    return this.listItems.sort((a, b) => {
-      const isAsc = sort.direction === 'asc';
-      switch (sort.active) {
-        case 'code':
-          return compare(a.code, b.code, isAsc);
-        case 'name':
-          return compare(a.name, b.name, isAsc);
-        // case 'density': return compare(a.density, b.density, isAsc);
-        default:
-          return 0;
-      }
-    });
+    return this.getListItems();
+    // return this.listItems.sort((a, b) => {
+    //   const isAsc = sort.direction === 'asc';
+    //   switch (sort.active) {
+    //     case 'code':
+    //       return compare(a.code, b.code, isAsc);
+    //     case 'name':
+    //       return compare(a.name, b.name, isAsc);
+    //     case 'density': return compare(a.density, b.density, isAsc);
+        // default:
+        //   return 0;
+      // }
+    // });
 
-    function compare(a: string | string, b: string | string, isAsc) {
-      return (a < b ? -1 : 1) * (isAsc ? 1 : -1);
-    }
+    // function compare(a: string | string, b: string | string, isAsc) {
+    //   return (a < b ? -1 : 1) * (isAsc ? 1 : -1);
+    // }
+  }
+
+  getListItems() {
+    return this.http.get(environment.settings.serverendpoint + 'colourant/getAll').pipe(
+      map((data: Array<any>) => {
+        const listColourant = [];
+        if (data) {
+          for (const colorant of data) {
+            listColourant.push(this.convertColourantToDTO(colorant));
+          }
+        }
+        return listColourant;
+      }), catchError(e => {
+        return [];
+      })
+    );
+  }
+
+  convertColourantToDTO(object: any) {
+    const colourantModel = new ColorantModel();
+    colourantModel.colourantId = object.colourantId;
+    colourantModel.colourantCode = object.colourantCode;
+    colourantModel.colourantName = object.colourantName;
+    colourantModel.density = object.density;
+    colourantModel.pricePerUnit = object.pricePerUnit;
+    colourantModel.surcharge = object.surcharge;
+    colourantModel.rbgHex = object.rbgHex;
+    colourantModel.kind = object.kind;
+    return colourantModel;
   }
 }

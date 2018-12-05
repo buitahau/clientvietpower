@@ -47,23 +47,23 @@
         <div class="table-responsive">
           <table class="table table-bordered" matSort (matSortChange)="sortData($event)">
             <tr>
-              <th mat-sort-header="code">Code</th>
-              <th mat-sort-header="name">Name</th>
+              <th mat-sort-header="code">Colourant Code</th>
+              <th mat-sort-header="name">Colourant Name</th>
               <th mat-sort-header="density">Density</th>
-              <th mat-sort-header="redV">Red</th>
-              <th mat-sort-header="greenV">Green</th>
+              <th mat-sort-header="redV">Price Per Unit</th>
+              <th mat-sort-header="greenV">Surcharge</th>
               <th mat-sort-header="blueV">Blue</th>
-              <th mat-sort-header="color">Color</th>
+              <th mat-sort-header="color">kind</th>
             </tr>
 
             <tr *ngFor="let colorant of sortedData">
-              <td>{{colorant.code}}</td>
-              <td>{{colorant.name}}</td>
+              <td>{{colorant.colourantCode}}</td>
+              <td>{{colorant.colourantName}}</td>
               <td>{{colorant.density}}</td>
-              <td>{{colorant.redV}}</td>
-              <td>{{colorant.greenV}}</td>
-              <td>{{colorant.blueV}}</td>
-              <td><span [ngStyle]="{'background': 'rgba(' + colorant.redV + ',' + colorant.greenV +',' + colorant.blueV + ',' + colorant.density +')', 'display': 'inline-block', 'width': '30px', 'height': '30px', 'border': '1px solid #333'}"></span></td>
+              <td>{{colorant.pricePerUnit}}</td>
+              <td>{{colorant.surcharge}}</td>
+              <td><span [ngStyle]="{'background': colorant.rbgHex, 'display': 'inline-block', 'width': '30px', 'height': '30px', 'border': '1px solid #333'}"></span></td>
+              <td>{{colorant.kind}}</td>
             </tr>
           </table>
         </div>
