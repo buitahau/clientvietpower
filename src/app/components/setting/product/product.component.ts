@@ -21,21 +21,27 @@ export class ProductComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.sortedData = this.productService.getListItems();
+    this.fletchData();
   }
 
   filter() {
-    const filterProduct = function (filter) {
-      return function (item: ProductDTO): boolean {
-        return (filter.productCode === null || filter.productCode === '' || item.productCode === filter.productCode)
-          && (filter.productName === null || filter.productName === '' || item.productName === filter.productName);
-      };
-    };
-
-    this.sortedData = this.listItems.filter(filterProduct({code: this.productCode, name: this.productName}));
+    // const filterProduct = function (filter) {
+    //   return function (item: ProductDTO): boolean {
+    //     return (filter.productCode === null || filter.productCode === '' || item.productCode === filter.productCode)
+    //       && (filter.productName === null || filter.productName === '' || item.productName === filter.productName);
+    //   };
+    // };
+    //
+    // this.sortedData = this.listItems.filter(filterProduct({code: this.productCode, name: this.productName}));
   }
 
   sortData(sort: Sort) {
     return this.productService.sortData(sort);
+  }
+
+  fletchData() {
+    this.productService.getListItems().subscribe((data: any) => {
+      this.sortedData = data;
+    });
   }
 }

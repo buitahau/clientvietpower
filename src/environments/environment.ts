@@ -5,9 +5,23 @@
 export const environment = {
   production: false,
   settings: {
-    serverendpoint: 'http://localhost:8080/server/api/'
+    serverendpoint: 'http://localhost:8080/server/api/',
+    dateFormat : 'dd/MM/yyyy'
   }
 };
+
+export class StaticVariable {
+  private static _settings;
+  constructor() {
+    StaticVariable._settings = environment.settings;
+  }
+
+  public STATIC_VARIABLE = StaticVariable;
+
+  static get settings() {
+    return this._settings;
+  }
+}
 
 /*
  * For easier debugging in development mode, you can import the following file

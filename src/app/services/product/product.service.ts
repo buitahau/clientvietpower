@@ -1,6 +1,10 @@
 import {Injectable} from '@angular/core';
 import {ColorantDTO, ProductDTO} from '../../models/colorant.model';
 import {Sort} from '@angular/material';
+import {environment} from '../../../environments/environment';
+import {catchError, map} from 'rxjs/internal/operators';
+import {HttpService} from '../../shared/http/services/http.service';
+import {ProductModel} from '../../models/base';
 
 function generateProductEntity(productId: number,
                                productCode: string,
@@ -32,12 +36,35 @@ export class ProductService {
   listItems: ProductDTO[] = [A, B, C3, D, E, s];
   sortedData: ProductDTO[] = null;
 
-  constructor() {
-    this.sortedData = this.listItems;
+  constructor(private http: HttpService) {
   }
 
-  getListItems(): ProductDTO[] {
-    return this.listItems;
+  getListItems(): ProductModel [] {
+    return this.http.get(environment.settings.serverendpoint + 'product/getAll').pipe(
+      map((data: Array<any>) => {
+        const listItems = [];
+        if (data) {
+          for (const item of data) {
+            listItems.push(this.convertToProductModel(item));
+          }
+        }
+        return listItems;
+      }),
+      catchError(e => {
+        return [];
+      })
+    );
+  }
+
+  convertToProductModel (object: any): ProductModel {
+    console.log(object);
+    const item = new ProductModel();
+    item.productId = object.productId;
+    item.productCode = object.productCode;
+    item.productName = object.productName;
+    item.createdDate = object.createdDate;
+    item.createBy = object.createBy;
+    return item;
   }
 
   sortData(sort: Sort) {
