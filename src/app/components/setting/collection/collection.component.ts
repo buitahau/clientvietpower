@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {CollectionDTO} from '../../../models/colorant.model';
 import {Sort} from '@angular/material';
 import {CollectionService} from '../../../services/collection/collection.service';
+import {CollectionModel} from '../../../models/base';
 
 
 @Component({
@@ -11,26 +11,19 @@ import {CollectionService} from '../../../services/collection/collection.service
 })
 export class CollectionComponent implements OnInit {
 
-  // filter : ColorFilter = null;
   collectionCode: string = null;
   collectionName: string = null;
 
-  listItems: CollectionDTO[] = null;
-  sortedData: CollectionDTO[] = null;
+  listItems: Array<any>;
+  sortedData: CollectionModel[] = null;
 
   constructor(private collectionService: CollectionService) {
 
   }
 
   ngOnInit() {
-    this.listItems = this.collectionService.getListItems();
-    this.sortedData = this.listItems.slice();
+    this.fetchData();
   }
-
-  // filter(){
-  //   this.sortedData = this.listItems.filter(filterByProp({code: this.code, name : this.name}));
-  //   // this.sortedData =  this.listItems.filter(item => ((this.filter.code == null || item.code === this.filter.code) || (this.filter.name  == null || item.name == this.filter)));
-  // }
 
   sortData(sort: Sort) {
     const data = this.listItems.slice();
@@ -54,5 +47,11 @@ export class CollectionComponent implements OnInit {
     function compare(a: string | string, b: string | string, isAsc) {
       return (a < b ? -1 : 1) * (isAsc ? 1 : -1);
     }
+  }
+
+  fetchData() {
+    this.collectionService.getListItems().subscribe((data: any) => {
+      this.listItems = data;
+    });
   }
 }

@@ -13,11 +13,13 @@
         <div class="table-responsive">
           <table class="table table-bordered" matSort (matSortChange)="sortData($event)">
             <tr>
-              <th mat-sort-header="type">Base Code</th>
+              <th mat-sort-header="baseCode">Base Code</th>
+              <th mat-sort-header="baseName">Base Name</th>
             </tr>
 
             <tr *ngFor="let base of listBases">
               <td>{{base.baseCode}}</td>
+              <td>{{base.baseName}}</td>
             </tr>
           </table>
         </div>

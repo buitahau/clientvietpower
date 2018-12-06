@@ -1,5 +1,9 @@
 import {Injectable} from '@angular/core';
 import {CollectionDTO, ColorantDTO} from '../../models/colorant.model';
+import {environment} from '../../../environments/environment';
+import {catchError, map} from 'rxjs/internal/operators';
+import {HttpService} from '../../shared/http/services/http.service';
+import {CollectionModel} from '../../models/base';
 
 function generateCollectionEntity(collectionId: number, collectionCode: string, collectionName: string, description: string, createdDate: string, createBy: number | null): CollectionDTO {
   return {
@@ -28,12 +32,32 @@ export let C_Galaxy = generateCollectionEntity(8, 'Galaxy', 'Galaxy', 'Galaxy', 
 })
 
 export class CollectionService {
-  listItems: CollectionDTO[] = [C_House, C_NCS, C_RAL, C_Special, C_Sports, C_Art, C_Music, C_Galaxy];
-
-  constructor() {
+  constructor(private http: HttpService) {
   }
 
-  getListItems(): CollectionDTO[] {
-    return this.listItems;
+  getListItems() {
+    return this.http.get(environment.settings.serverendpoint + 'collection/getAll').pipe(
+      map((data: Array<any>) => {
+        const listItems = [];
+        if (data) {
+          for (const collection of data) {
+            listItems.push(this.convertCollectionToDTO(collection));
+          }
+        }
+        return listItems;
+      }), catchError(e => {
+        return [];
+      })
+    );
+  }
+
+  convertCollectionToDTO(object: any): CollectionModel {
+    const collection = new CollectionModel();
+    collection.collectionId = object.collectionId;
+    collection.collectionName = object.collectionName;
+    collection.description = object.description;
+    collection.createdDate = object.createdDate;
+    collection.createBy = object.createBy;
+    return collection;
   }
 }

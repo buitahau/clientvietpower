@@ -9,18 +9,16 @@
         <div class="table-responsive">
           <table class="table table-bordered" matSort (matSortChange)="sortData($event)">
             <tr>
-              <th mat-sort-header="collectionCode">Collection Code</th>
               <th mat-sort-header="collectionName">Collection Name</th>
               <th mat-sort-header="description">Description</th>
               <th mat-sort-header="createdDate">Created Date</th>
-              <th mat-sort-header="createdBy">Created By</th>
+              <th mat-sort-header="createBy">Created By</th>
             </tr>
 
-            <tr *ngFor="let item of sortedData">
-              <td>{{item.collectionCode}}</td>
+            <tr *ngFor="let item of listItems">
               <td>{{item.collectionName}}</td>
               <td>{{item.description}}</td>
-              <td>{{item.createdDate}}</td>
+              <td>{{item.createdDate |  date:'dd/MM/yyyy'}}</td>
               <td>
                 <p *ngIf="item.createBy == null">System</p>
                 <p *ngIf="item.createBy != null">Me</p>

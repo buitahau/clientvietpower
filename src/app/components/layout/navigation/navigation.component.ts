@@ -12,7 +12,7 @@ import {USER_ROLE} from '../../../models/constant';
 })
 export class NavigationComponent implements OnInit {
   USER_ROLE = USER_ROLE;
-  currentUse: UserDTO | null;
+  currentUser: UserDTO | null;
   currentMode = '';
 
   userMode = 'user';
@@ -23,9 +23,9 @@ export class NavigationComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.currentUse = this.userService.getLogginUse();
+    this.currentUser = this.userService.getLogginUse();
 
-    if (this.currentUse == null) {
+    if (this.currentUser == null) {
       // this.router.navigate([`../login`]);
     }
   }

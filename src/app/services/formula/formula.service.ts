@@ -547,34 +547,34 @@ export class FormulaService {
   }
 
   findById(formulaId) {
-    let result = this.listItems.filter(filterById);
+    const result = this.listItems.filter(filterById);
     return result != null && result.length > 0 ? Object.assign({}, result[0]) : null;
 
     function filterById(item, index, array) {
-      return (item.formulaId == formulaId);
+      return (item.formulaId === formulaId);
     }
   }
 
   filterAndSort(colorName: string, collectionCode: string, productCode: string, sort: Sort | null): FormulaFilterResult {
-    let listColors = [];
-    let listCollections: CollectionDTO[] = [];
-    let listProducts: ProductDTO[] = [];
+    const listColors = [];
+    const listCollections: CollectionDTO[] = [];
+    const listProducts: ProductDTO[] = [];
     let listFormula: FormulaDTO[] = [];
 
-    for (let formula of this.listItems) {
+    for (const formula of this.listItems) {
       let isMatchingColor = false;
       let isMatchingCollection = false;
       let isMatchingProduct = false;
 
-      if (colorName == null || colorName == '' || formula.formulaCode == colorName) {
+      if (colorName == null || colorName === '' || formula.formulaCode === colorName) {
         isMatchingColor = true;
       }
 
-      if (collectionCode == null || collectionCode == '' || formula.collection.collectionCode == collectionCode) {
+      if (collectionCode == null || collectionCode === '' || formula.collection.collectionCode === collectionCode) {
         isMatchingCollection = true;
       }
 
-      if (productCode == null || productCode == '' || formula.product.productCode == productCode) {
+      if (productCode == null || productCode === '' || formula.product.productCode === productCode) {
         isMatchingProduct = true;
       }
 
@@ -586,7 +586,7 @@ export class FormulaService {
       }
     }
 
-    if (sort != null && sort != undefined) {
+    if (sort != null && sort !== undefined) {
       listFormula = listFormula.sort((a, b) => {
         const isAsc = sort.direction === 'asc';
         switch (sort.active) {
