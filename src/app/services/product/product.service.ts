@@ -39,7 +39,7 @@ export class ProductService {
   constructor(private http: HttpService) {
   }
 
-  getListItems(): ProductModel [] {
+  getListItems() {
     return this.http.get(environment.settings.serverendpoint + 'product/getAll').pipe(
       map((data: Array<any>) => {
         const listItems = [];
