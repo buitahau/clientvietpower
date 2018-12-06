@@ -44,4 +44,8 @@ export class ProductComponent implements OnInit {
       this.sortedData = data;
     });
   }
+
+  showProductDetail(productId: string) {
+    const result = this.productService.viewProductDetail(productId);
+  }
 }

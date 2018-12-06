@@ -56,6 +56,10 @@ export class ProductService {
     );
   }
 
+  viewProductDetail(productId: string): any {
+    return this.http.get(environment.settings.serverendpoint + 'product/view-detail/' + productId);
+  }
+
   convertToProductModel (object: any): ProductModel {
     console.log(object);
     const item = new ProductModel();

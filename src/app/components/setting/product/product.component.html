@@ -13,6 +13,7 @@
         <div class="table-responsive">
           <table class="table table-bordered" matSort (matSortChange)="sortData($event)">
             <tr>
+              <th>#</th>
               <th mat-sort-header="productCode">Product Code</th>
               <th mat-sort-header="productName">Product Name</th>
               <th mat-sort-header="createdDate">Created Date</th>
@@ -20,6 +21,9 @@
             </tr>
 
             <tr *ngFor="let item of sortedData">
+              <td>
+                <span (click)="showProductDetail(item.productId)"><i class="fas fa-info-circle"></i></span>
+              </td>
               <td>{{item.productCode}}</td>
               <td>{{item.productName}}</td>
               <td>{{item.createdDate | date : 'dd/MM/yyyy'}}</td>
