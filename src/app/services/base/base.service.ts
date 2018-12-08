@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpService} from '../../shared/http/services/http.service';
 import {environment} from 'src/environments/environment';
-import {BaseModel} from '../../models/base';
 import {catchError, map} from 'rxjs/internal/operators';
 import ConvertModelUtils from '../../utils/convert-models-utils';
 
@@ -16,9 +15,7 @@ function generateBaseEntity (baseId: number, type: string, name: string, created
   };
 }
 
-@Injectable ({
-  providedIn: 'root'
-})
+@Injectable({providedIn: 'root'})
 
 export class BaseService {
 
