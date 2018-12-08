@@ -528,14 +528,6 @@ function generateFormula(formulaId, formulaCode, formulaName, collection, base, 
   }
 }
 
-
-export interface FormulaFilterResult {
-  listColors: any,
-  listCollections: any,
-  listProducts: any,
-  listFormula: any
-}
-
 @Injectable({
   providedIn: 'root'
 })
@@ -573,79 +565,4 @@ export class FormulaService {
     }
   }
 
-  filterAndSort(colorName: string, collectionCode: string, productCode: string, sort: Sort | null): FormulaFilterResult {
-    const listColors = [];
-    const listCollections: CollectionDTO[] = [];
-    const listProducts: ProductDTO[] = [];
-    let listFormula: FormulaDTO[] = [];
-
-    for (const formula of this.listItems) {
-      let isMatchingColor = false;
-      let isMatchingCollection = false;
-      let isMatchingProduct = false;
-
-      if (colorName == null || colorName === '' || formula.formulaCode === colorName) {
-        isMatchingColor = true;
-      }
-
-      if (collectionCode == null || collectionCode === '' || formula.collection.collectionCode === collectionCode) {
-        isMatchingCollection = true;
-      }
-
-      if (productCode == null || productCode === '' || formula.product.productCode === productCode) {
-        isMatchingProduct = true;
-      }
-
-      if (isMatchingCollection && isMatchingProduct && isMatchingColor) {
-        listColors.push(formula.formulaCode);
-        listCollections.push(formula.collection);
-        listProducts.push(formula.product);
-        listFormula.push(formula);
-      }
-    }
-
-    if (sort != null && sort !== undefined) {
-      listFormula = listFormula.sort((a, b) => {
-        const isAsc = sort.direction === 'asc';
-        switch (sort.active) {
-          case 'formulaCode':
-            return compare(a.formulaCode, b.formulaCode, isAsc);
-          case 'formulaName':
-            return compare(a.formulaName, b.formulaName, isAsc);
-          case 'collection':
-            return compare(a.collection.collectionName, b.collection.collectionName, isAsc);
-          case 'product':
-            return compare(a.product.productName, b.product.productName, isAsc);
-
-          // case 'density': return compare(a.density, b.density, isAsc);
-          default:
-            return 0;
-        }
-      });
-    }
-
-    return {
-      listColors: listColors,
-      listCollections: listCollections,
-      listProducts: listProducts,
-      listFormula: listFormula
-    };
-
-    function compare(a: string | number, b: string | number, isAsc) {
-      return (a < b ? -1 : 1) * (isAsc ? 1 : -1);
-    }
-  }
-
-
-  getFormulaColor(): string[] | null {
-    return null;
-  }
-
-  getFormulaProduct(): ProductDTO[] | null {
-    return null;
-  }
-
-  getFormulaCollection(): CollectionDTO [] | null {
-    return null;
-  }
 }

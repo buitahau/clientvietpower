@@ -12,12 +12,8 @@ import {ProductService} from '../../../services/product/product.service';
 })
 
 export class FormulaComponent implements OnInit {
-  listItems = [];
-  listOriginal = [];
-
-  listColors = [];
-  listCollections = [];
-  listProducts = [];
+  listItems = []; listOriginal = [];
+  listColors = []; listCollections = []; listProducts = [];
 
   constructor(
     private formulaService: FormulaService,
@@ -81,7 +77,6 @@ export class FormulaComponent implements OnInit {
   }
 
   refresh() {
-    debugger;
     let resFilter = this.listOriginal;
     if (this.filter.colorId) {
      // TODO : filter color in here
