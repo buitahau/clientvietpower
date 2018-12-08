@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {BaseService} from '../../../services/base/base.service';
-import {BaseModel} from '../../../models/base';
 import {Sort} from '@angular/material';
 
 @Component({
@@ -16,7 +15,7 @@ export class BaseComponent implements OnInit {
   constructor(private baseService: BaseService) { }
 
   ngOnInit() {
-    this.fletchData() ;
+    this.fletchData();
   }
 
   sortData(sort: Sort) {

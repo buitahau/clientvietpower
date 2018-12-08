@@ -1,10 +1,10 @@
 import {Injectable} from '@angular/core';
-import {ColorantDTO, ProductDTO} from '../../models/colorant.model';
+import {ProductDTO} from '../../models/colorant.model';
 import {Sort} from '@angular/material';
 import {environment} from '../../../environments/environment';
 import {catchError, map} from 'rxjs/internal/operators';
 import {HttpService} from '../../shared/http/services/http.service';
-import {ProductModel} from '../../models/base';
+import {ProductModel} from '../../models/product';
 
 function generateProductEntity(productId: number,
                                productCode: string,
@@ -60,7 +60,7 @@ export class ProductService {
     return this.http.get(environment.settings.serverendpoint + 'product/view-detail/' + productId);
   }
 
-  convertToProductModel (object: any): ProductModel {
+  private convertToProductModel (object: any): ProductModel {
     console.log(object);
     const item = new ProductModel();
     item.productId = object.productId;

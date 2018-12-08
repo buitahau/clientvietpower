@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Sort} from '@angular/material';
 import {CollectionService} from '../../../services/collection/collection.service';
-import {CollectionModel} from '../../../models/base';
+import {CollectionModel} from '../../../models/collection';
 
 
 @Component({

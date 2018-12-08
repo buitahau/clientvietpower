@@ -3,6 +3,7 @@ import {HttpService} from '../../shared/http/services/http.service';
 import {environment} from 'src/environments/environment';
 import {BaseModel} from '../../models/base';
 import {catchError, map} from 'rxjs/internal/operators';
+import ConvertModelUtils from '../../utils/convert-models-utils';
 
 export let BASE_PA = generateBaseEntity(1,  'PA', 'Pale', null);
 export let BASE_EPA = generateBaseEntity(2, 'EPA', 'Extra Pale', null);
@@ -12,7 +13,7 @@ export let BASE_EDE = generateBaseEntity(4, 'EPA', 'Extra Deep', null);
 function generateBaseEntity (baseId: number, type: string, name: string, createdBy: number | null) {
   return {
     baseId: baseId, type: type, name: name, createdBy : createdBy
-  }
+  };
 }
 
 @Injectable ({
@@ -29,7 +30,8 @@ export class BaseService {
         const listBases = [];
         if (data) {
           for (const base of data) {
-            listBases.push(this.convertFromObjectServer2Model(base));
+            debugger;
+            listBases.push(ConvertModelUtils.convertBaseObject(base));
           }
         }
         return listBases;
@@ -40,11 +42,4 @@ export class BaseService {
     );
   }
 
-  convertFromObjectServer2Model(object: any) {
-    const baseModel = new BaseModel();
-    baseModel.baseCode = object.baseCode;
-    baseModel.baseId = object.baseId;
-    baseModel.baseName = object.baseName;
-    return baseModel;
-  }
 }

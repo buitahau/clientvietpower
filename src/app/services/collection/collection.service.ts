@@ -3,7 +3,7 @@ import {CollectionDTO, ColorantDTO} from '../../models/colorant.model';
 import {environment} from '../../../environments/environment';
 import {catchError, map} from 'rxjs/internal/operators';
 import {HttpService} from '../../shared/http/services/http.service';
-import {CollectionModel} from '../../models/base';
+import {CollectionModel} from '../../models/collection';
 
 function generateCollectionEntity(collectionId: number, collectionCode: string, collectionName: string, description: string, createdDate: string, createBy: number | null): CollectionDTO {
   return {
@@ -51,7 +51,7 @@ export class CollectionService {
     );
   }
 
-  convertCollectionToDTO(object: any): CollectionModel {
+  private convertCollectionToDTO(object: any): CollectionModel {
     const collection = new CollectionModel();
     collection.collectionId = object.collectionId;
     collection.collectionName = object.collectionName;

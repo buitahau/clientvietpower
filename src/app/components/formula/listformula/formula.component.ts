@@ -3,6 +3,9 @@ import {CollectionDTO, FormulaDTO, ProductDTO, Select2Item} from '../../../model
 import {FormulaService} from '../../../services/formula/formula.service';
 import {Sort} from '@angular/material';
 import {Router} from '@angular/router';
+import {ColorantService} from '../../../services/colorant/colorant.service';
+import {CollectionService} from '../../../services/collection/collection.service';
+import {ProductService} from '../../../services/product/product.service';
 
 @Component({
   selector: 'app-formula',
@@ -11,7 +14,9 @@ import {Router} from '@angular/router';
 })
 
 export class FormulaComponent implements OnInit {
-  listItems: FormulaDTO [] = [];
+  listItems = [];
+  listOriginal = [];
+
 
   colorName: string = '';
   collectionCode: string = '';
@@ -21,15 +26,61 @@ export class FormulaComponent implements OnInit {
   listCollections: Select2Item [] = null;
   listProducts: Select2Item [] = null;
 
-  constructor(private formulaService: FormulaService, private router: Router) {
+  constructor(
+    private formulaService: FormulaService,
+    private colorantService: ColorantService,
+    private collectionService: CollectionService,
+    private productService: ProductService,
+    private router: Router) {
   }
 
+  filter = {
+    colorId: undefined,
+    productId: undefined,
+    collectionId: undefined
+  };
 
   ngOnInit() {
-    this.filterFormula(null);
+    this.initMetadata();
+  }
+
+  initMetadata() {
+    const me = this;
+
+    this.listColors = [];
+    this.colorantService.getListItems().subscribe(datas => {
+      datas.map(c => {
+        me.listColors.push(c);
+      });
+    });
+
+    this.listProducts = [];
+    this.productService.getListItems().subscribe(datas => {
+      datas.map(p => {
+        me.listProducts.push(p);
+      });
+    });
+
+    this.listCollections = [];
+    this.collectionService.getListItems().subscribe(datas => {
+      datas.map(c => {
+        me.listCollections.push(c);
+      });
+    });
+
+    // lay list formula product base
+    this.listItems = [];
+    this.listOriginal = [];
+    this.formulaService.getListItems().subscribe(datas => {
+      datas.map(fpb => {
+        this.listItems.push(fpb);
+        this.listOriginal.push(fpb);
+      });
+    });
   }
 
   filterFormula(sort: Sort | null) {
+
     if (this.colorName == null) {
       this.colorName = '';
     }
@@ -43,23 +94,15 @@ export class FormulaComponent implements OnInit {
     }
 
     let result = this.formulaService.filterAndSort(this.colorName, this.collectionCode, this.productCode, sort);
-    let listColors: string [] = result.listColors;
+
+
+
     let listProduct: ProductDTO [] = result.listProducts;
     let listCollection: CollectionDTO [] = result.listCollections;
-
-    let mapColor = {};
     let mapProduct = {};
     let mapCollection = {};
 
-    this.listColors = [];
-    this.listColors.push({id: '', text: 'Choose Color'});
 
-    for (let _color of listColors) {
-      if (mapColor[_color] == null) {
-        mapColor[_color] = _color;
-        this.listColors.push({id: _color, text: _color});
-      }
-    }
 
     // if(listProduct.length === 1){
     //   this.listProducts = [];
@@ -72,7 +115,7 @@ export class FormulaComponent implements OnInit {
     for (let _product of listProduct) {
       if (mapProduct[_product.productCode] == null) {
         mapProduct[_product.productCode] = _product;
-        this.listProducts.push({id: _product.productCode, text: _product.productName});
+        // this.listProducts.push({id: _product.productCode, text: _product.productName});
       }
     }
     // }
@@ -83,7 +126,7 @@ export class FormulaComponent implements OnInit {
     for (let _collection of listCollection) {
       if (mapCollection[_collection.collectionId] == null) {
         mapCollection[_collection.collectionId] = _collection;
-        this.listCollections.push({id: _collection.collectionCode, text: _collection.collectionName});
+        // this.listCollections.push({id: _collection.collectionCode, text: _collection.collectionName});
       }
     }
 
@@ -111,5 +154,14 @@ export class FormulaComponent implements OnInit {
 
   viewFormula(id) {
     this.router.navigate([`../dashboard/view-formula/${id}`]);
+  }
+
+  onFilterChange() {
+    this.refresh();
+  }
+
+  refresh() {
+    debugger;
+    // TODO: filter in here
   }
 }

@@ -9,6 +9,11 @@ import {C_A, C_B, C_C, C_D, C_E, C_F, C_G, C_H, C_I, C_J, C_K, C_L, C_M, C_N, C_
 import {C_Art, C_Galaxy, C_House, C_Music, C_NCS, C_RAL, C_Special, C_Sports} from '../collection/collection.service';
 
 import {BASE_DE, BASE_EDE, BASE_EPA, BASE_PA} from '../base/base.service';
+import {HttpService} from '../../shared/http/services/http.service';
+import {environment} from '../../../environments/environment';
+import {catchError, map} from 'rxjs/internal/operators';
+import {FormulaProductBaseModel} from '../../models/formula_product_base';
+import ConvertModelUtils from '../../utils/convert-models-utils';
 
 
 function getListFormulaEntities(): FormulaDTO [] {
@@ -538,12 +543,25 @@ export interface FormulaFilterResult {
 export class FormulaService {
   listItems: FormulaDTO[] = getListFormulaEntities();
 
-  constructor() {
-
+  constructor(
+    private http: HttpService) {
   }
 
   getListItems() {
-    return this.listItems;
+    return this.http.get(environment.settings.serverendpoint + 'formula_product_base/getAll').pipe(
+      map((data: Array<any>) => {
+        const listFormulaProductBase = [];
+        if (data) {
+          for (const fpb of data) {
+            listFormulaProductBase.push(ConvertModelUtils.convertFormularProductBaseObject(fpb));
+          }
+        }
+        return listFormulaProductBase;
+      }),
+      catchError(e => {
+        return [];
+      })
+    );
   }
 
   findById(formulaId) {

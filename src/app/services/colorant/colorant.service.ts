@@ -3,7 +3,7 @@ import {ColorantDTO} from '../../models/colorant.model';
 import {Sort} from '@angular/material';
 import {environment} from '../../../environments/environment';
 import {catchError, map} from 'rxjs/internal/operators';
-import {BaseModel, ColorantModel} from '../../models/base';
+import {ColorantModel} from '../../models/colorant';
 import {HttpService} from '../../shared/http/services/http.service';
 
 function generateColorantEntity(colorantId, code, name, density, redV, greenV, blueV): ColorantDTO {
@@ -99,7 +99,7 @@ export class ColorantService {
     );
   }
 
-  convertColourantToDTO(object: any) {
+  private convertColourantToDTO(object: any) {
     const colourantModel = new ColorantModel();
     colourantModel.colourantId = object.colourantId;
     colourantModel.colourantCode = object.colourantCode;
