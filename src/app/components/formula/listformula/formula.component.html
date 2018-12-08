@@ -13,11 +13,11 @@
         <form class="form form-horizontal form-detail">
           <div class="form-body">
             <div class="form-group row">
-              <label class="col-md-3 label-control">Select Colour</label>
+              <label class="col-md-3 label-control">Select Color</label>
               <div class="input-group input-group-sm col-md-9">
-                <select class="form-control form-control-sm select-sm select-color-field" id="selectedColorFilter" name="selectedColorFilter" [(ngModel)]="filter.colorId" (ngModelChange)="onFilterChange($event)">
-                  <option [ngValue]="undefined">Choose Colour</option>
-                  <option *ngFor="let c of listColors" value="{{c._colourantId}}">{{c._colourantName}}</option>
+                <select class="form-control form-control-sm select-sm select-color-field" id="selectedFormulaFilter" name="selectedFormulaFilter" [(ngModel)]="filter.formulaId" (ngModelChange)="onFilterChange($event)">
+                  <option [ngValue]="undefined">Choose Color</option>
+                  <option *ngFor="let f of listFormulas" value="{{f.formulaId}}">{{f.formulaName}}</option>
                 </select>
               </div>
             </div>

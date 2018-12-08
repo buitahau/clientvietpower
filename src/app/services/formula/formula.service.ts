@@ -539,7 +539,7 @@ export class FormulaService {
     private http: HttpService) {
   }
 
-  getListItems() {
+  getAllFormulaProductBase() {
     return this.http.get(environment.settings.serverendpoint + 'formula_product_base/getAll').pipe(
       map((data: Array<any>) => {
         const listFormulaProductBase = [];
@@ -549,6 +549,23 @@ export class FormulaService {
           }
         }
         return listFormulaProductBase;
+      }),
+      catchError(e => {
+        return [];
+      })
+    );
+  }
+
+  getALl() {
+    return this.http.get(environment.settings.serverendpoint + 'formula/getAll').pipe(
+      map((data: Array<any>) => {
+        const result = [];
+        if (data) {
+          for (const formula of data) {
+            result.push(ConvertModelUtils.convertFormulaObject(formula));
+          }
+        }
+        return result;
       }),
       catchError(e => {
         return [];

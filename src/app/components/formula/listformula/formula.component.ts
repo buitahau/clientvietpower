@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {FormulaService} from '../../../services/formula/formula.service';
 import {Router} from '@angular/router';
-import {ColorantService} from '../../../services/colorant/colorant.service';
 import {CollectionService} from '../../../services/collection/collection.service';
 import {ProductService} from '../../../services/product/product.service';
 
@@ -13,18 +12,17 @@ import {ProductService} from '../../../services/product/product.service';
 
 export class FormulaComponent implements OnInit {
   listItems = []; listOriginal = [];
-  listColors = []; listCollections = []; listProducts = [];
+  listFormulas = []; listCollections = []; listProducts = [];
 
   constructor(
     private formulaService: FormulaService,
-    private colorantService: ColorantService,
     private collectionService: CollectionService,
     private productService: ProductService,
     private router: Router) {
   }
 
   filter = {
-    colorId: undefined,
+    formulaId: undefined,
     productId: undefined,
     collectionId: undefined
   };
@@ -36,10 +34,10 @@ export class FormulaComponent implements OnInit {
   initMetadata() {
     const me = this;
 
-    this.listColors = [];
-    this.colorantService.getListItems().subscribe(datas => {
+    this.listFormulas = [];
+    this.formulaService.getALl().subscribe(datas => {
       datas.map(c => {
-        me.listColors.push(c);
+        me.listFormulas.push(c);
       });
     });
 
@@ -60,10 +58,10 @@ export class FormulaComponent implements OnInit {
     // get list formula product base
     this.listItems = [];
     this.listOriginal = [];
-    this.formulaService.getListItems().subscribe(datas => {
+    this.formulaService.getAllFormulaProductBase().subscribe(datas => {
       datas.map(fpb => {
-        this.listItems.push(fpb);
-        this.listOriginal.push(fpb);
+        me.listItems.push(fpb);
+        me.listOriginal.push(fpb);
       });
     });
   }
@@ -78,8 +76,10 @@ export class FormulaComponent implements OnInit {
 
   refresh() {
     let resFilter = this.listOriginal;
-    if (this.filter.colorId) {
-     // TODO : filter color in here
+    if (this.filter.formulaId) {
+      resFilter = resFilter.filter(fpb => {
+        return fpb.formula.formulaId.toString() === this.filter.formulaId.toString();
+      });
     }
 
     if (this.filter.collectionId) {
