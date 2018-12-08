@@ -56,7 +56,7 @@ export class ProductService {
     );
   }
 
-  viewProductDetail(productId: string): any {
+  viewProductDetail(productId: number): any {
     return this.http.get(environment.settings.serverendpoint + 'product/view-detail/' + productId);
   }
 

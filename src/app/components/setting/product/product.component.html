@@ -23,6 +23,7 @@
             <tr *ngFor="let item of sortedData">
               <td>
                 <span (click)="showProductDetail(item.productId)"><i class="fas fa-info-circle"></i></span>
+                <app-viewdetail (productId)="item.productId"></app-viewdetail>
               </td>
               <td>{{item.productCode}}</td>
               <td>{{item.productName}}</td>

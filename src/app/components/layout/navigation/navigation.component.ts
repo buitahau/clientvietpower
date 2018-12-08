@@ -23,10 +23,10 @@ export class NavigationComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.currentUser = this.userService.getLogginUse();
+    this.currentUser = this.userService.getLoginUser();
 
     if (this.currentUser == null) {
-      // this.router.navigate([`../login`]);
+      this.router.navigate([`../login`]);
     }
   }
 
@@ -40,6 +40,5 @@ export class NavigationComponent implements OnInit {
 
   logOut() {
     this.userService.logOut();
-    this.router.navigate([`../login`]);
   }
 }

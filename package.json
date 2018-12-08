@@ -29,6 +29,7 @@
     "font-awesome": "^4.7.0",
     "jquery": "^3.3.1",
     "lodash": "^4.17.11",
+    "ng-cookie": "^1.0.8",
     "ng-select2": "^1.0.7-rc.1",
     "ngx-bootstrap": "^3.1.2",
     "rxjs": "~6.3.3",
