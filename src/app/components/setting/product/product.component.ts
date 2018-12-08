@@ -16,6 +16,7 @@ export class ProductComponent implements OnInit {
 
   listItems: ProductDTO[] = null;
   sortedData: ProductDTO[] = null;
+  currentProductViewer: number = null;
 
   constructor(private productService: ProductService) {
   }
@@ -46,6 +47,6 @@ export class ProductComponent implements OnInit {
   }
 
   showProductDetail(productId: number) {
-    const result = this.productService.viewProductDetail(productId);
+    this.currentProductViewer = productId;
   }
 }

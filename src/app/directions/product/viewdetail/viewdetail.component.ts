@@ -1,5 +1,6 @@
 import {Component, ElementRef, Input, OnInit} from '@angular/core';
 import {ProductService} from '../../../services/product/product.service';
+import {ProductBaseModel} from '../../../models/product_base';
 
 @Component({
   selector: 'app-viewdetail',
@@ -7,12 +8,10 @@ import {ProductService} from '../../../services/product/product.service';
   styleUrls: ['./viewdetail.component.scss']
 })
 export class ViewDetailComponent implements OnInit {
-  productId: number;
-  firstName: string  = null;
-  // id: number;
-  message: string | null = null;
+  @Input() productId: number;
+  listProductBaseCan: ProductBaseModel[] | null = null;
 
-  constructor(private productService: ProductService, private el: ElementRef) {
+  constructor(private productService: ProductService) {
     // this.element = el.nativeElement;
   }
 
@@ -22,10 +21,9 @@ export class ViewDetailComponent implements OnInit {
 
   fetchData(): void {
     this.productService.viewProductDetail(this.productId).subscribe((data: any) => {
-      this.message = data;
+      this.listProductBaseCan = data;
+      console.log(this.listProductBaseCan);
     });
-    console.log(this.message);
-    console.log(this.firstName);
   }
 
 }

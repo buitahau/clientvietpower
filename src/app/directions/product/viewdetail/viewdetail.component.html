@@ -1,3 +1,18 @@
-<p>
-  viewdetail works! {{message}}
-</p>
+<div class="table-responsive">
+  <table class="table table-borderless">
+    <thead>
+    <tr>
+      <th>Base</th>
+      <th>Density</th>
+      <th>Color</th>
+    </tr>
+    </thead>
+    <tr *ngFor="let item of listProductBaseCan let i=index">
+      <td>{{item.base.baseName}}</td>
+      <td>{{item.density}}</td>
+      <td>
+        <span [ngStyle]="{'background': item.rbgHex, 'display': 'inline-block', 'width': '30px', 'height': '30px', 'border': '1px solid #333'}"></span>
+      </td>
+    </tr>
+  </table>
+</div>

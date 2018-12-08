@@ -3,11 +3,12 @@ import {ModalService} from '../../../services/boostrap/modal.service';
 
 @Component({
   selector: 'pp-modal',
-  template:
-  '<div class="pp-modal modal-dialog modal-dialog-centered">' +
-  '<ng-content></ng-content>' +
-  '</div>' +
-  '<div class="modal-backdrop fade show"></div>',
+  templateUrl: './modal.component.html',
+  // template:
+  // '<div class="pp-modal modal-dialog modal-dialog-centered">' +
+  // '<ng-content></ng-content>' +
+  // '</div>' +
+  // '<div class="modal-backdrop fade show"></div>',
 
   styleUrls: ['./modal.component.scss']
 })
@@ -22,7 +23,7 @@ export class ModalComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    let modal = this;
+    const modal = this;
 
     // ensure id attribute exists
     if (!this.id) {
