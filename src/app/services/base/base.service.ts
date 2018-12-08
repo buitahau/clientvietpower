@@ -30,7 +30,6 @@ export class BaseService {
         const listBases = [];
         if (data) {
           for (const base of data) {
-            debugger;
             listBases.push(ConvertModelUtils.convertBaseObject(base));
           }
         }
