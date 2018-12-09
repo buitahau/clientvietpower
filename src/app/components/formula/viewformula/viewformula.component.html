@@ -123,7 +123,7 @@
                   <span class="base-can-volume" [ngStyle]="{'background-color': selectProductBase.color, 'height': selectProductBase.percentage + '%'}">
                     <span class="can-base-info">
                       <span class="base-type">Base : {{dbItem.base.type}}</span>
-                      <span class="base-volume">{{selectProductBase.can + " " + selectProductBase.unit}}</span>
+                      <span class="base-volume">{{canSize + " " + selectProductBase.unit}}</span>
                       <span class="base-name">{{dbItem.base.name}}</span>
                     </span>
                   </span>
@@ -150,7 +150,7 @@
               <label class="col-md-4 label-control"></label>
 
               <div class="col-md-8">
-                <button class="btn btn-primary" (click)="beginDispense('custom-modal-1')"><i class="fas fa-fill-drip"></i> Dispense</button>
+                <button class="btn btn-primary" (click)="beginDispense('custom-modal-1')"><i class="fas fa-fill-drip"></i> <span *ngIf="isStartProgress">In Progress</span> <span *ngIf="!isStartProgress">Dispense</span> </button>
               </div>
             </div>
           </div>
@@ -181,18 +181,18 @@
                   <td class="text-right">Component</td>
                   <td colspan="100%" class="text-center" [style]="{'margin-left': '50px'}">
                     <span class="color-bar" >
-                      <span class="color-select" [ngStyle]="{'background': 'rgba(' + currentBackgroundTask.data.colorant.redV + ',' + currentBackgroundTask.data.colorant.greenV +',' + currentBackgroundTask.data.colorant.blueV + ',' + currentBackgroundTask.data.colorant.density +')', 'width': '20px', 'height': '150px'}"></span>
+                      <span class="color-select" [ngStyle]="{'background': 'rgba(' + currentBackgroundTask.colorant.colorant.redV + ',' + currentBackgroundTask.colorant.colorant.greenV +',' + currentBackgroundTask.colorant.colorant.blueV + ',' + currentBackgroundTask.colorant.colorant.density +')', 'width': '20px', 'height': '150px'}"></span>
                     </span>
                   </td>
                 </tr>
                 <tr>
-                  <td class="text-right"><span class="component-name">{{currentBackgroundTask.data.colorant.name}}</span></td>
+                  <td class="text-right"><span class="component-name">{{currentBackgroundTask.colorant.colorant.name}}</span></td>
                 </tr>
                 <tr>
                   <td>Wanted</td>
                 </tr>
                 <tr>
-                  <td  class="text-right"><span class="component-name">{{currentBackgroundTask.data.quantity}}</span> ml</td>
+                  <td  class="text-right"><span class="component-name">{{currentBackgroundTask.colorant.quantity}}</span> ml</td>
                 </tr>
                 <tr>
                   <td>Dispensed</td>
@@ -220,7 +220,7 @@
         </div>
 
         <div class="col-md-4">
-          <div *ngFor="let colorantItem of dbItem.listColorant" class="color-bar-group">
+          <div *ngFor="let colorantItem of listColorant" class="color-bar-group">
           <span class="color-bar" >
             <span class="color-select" [ngStyle]="{'background': 'rgba(' + colorantItem.colorant.redV + ',' + colorantItem.colorant.greenV +',' + colorantItem.colorant.blueV + ',' + colorantItem.colorant.density +')',
             'width': (colorantItem.quantity / quantity) * 100 + '%'}">
@@ -243,7 +243,7 @@
             <span class="base-can-volume" [ngStyle]="{'background-color': selectProductBase.color, 'height': selectProductBase.percentage + '%'}">
               <span class="can-base-info">
                 <span class="base-type">Base : {{dbItem.base.type}}</span>
-                <span class="base-volume">{{selectProductBase.can + " " + selectProductBase.unit}}</span>
+                <span class="base-volume">{{canSize + " " + selectProductBase.unit}}</span>
                 <span class="base-name">{{dbItem.base.name}}</span>
               </span>
             </span>
@@ -262,3 +262,32 @@
     </div>
   </div>
 </pp-modal>
+
+<pp-modal id="print-formula-modal" class="modal print-formula-modal" *ngIf="currentBackgroundTask != null && 'finished' === currentBackgroundTask.type">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title">Print</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="closeModal('print-formula-modal')">
+        <span aria-hidden="true">×</span>
+      </button>
+    </div>
+
+    <div class="modal-body">
+      <div class="row">
+        <div class="formula-color-info"></div>
+        <div class="collection-info"></div>
+        <div class="shop-info">Paintshop "Demo"</div>
+        <div class="street-info">Demostreet 1</div>
+        <div class="ville-info">Demo ville</div>
+        <div class="substrate-info">Substrate recommendation Universal primer Grey</div>
+        <div class="bar-code-info"><span class="bar-code-sample"></span></div>
+      </div>
+    </div>
+
+    <div class="modal-footer">
+      <button type="button" class="btn btn-default" (click)="closeModal('print-formula-modal')">Hide</button>
+      <button type="button" class="btn btn-primary" >Print</button>
+    </div>
+  </div>
+</pp-modal>
+

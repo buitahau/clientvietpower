@@ -34,6 +34,7 @@ export class ViewFormulaComponent implements OnInit {
   listBackGroundTask: BackgroundTask[] = [];
   currentBackgroundTask: any = null;
   currentBackgroundTaskIndex: number = 0;
+  listColorant: any[] = null;
 
   constructor(private formulaService: FormulaService, private productBaseService: ProductBaseService, private modalService: ModalService,
               private router: Router, private route: ActivatedRoute) {
@@ -50,7 +51,10 @@ export class ViewFormulaComponent implements OnInit {
     this.selectProductBase = null;
     this.dbItem = this.formulaService.findById(this.id);
 
+    this.listColorant = [];
     for (const colorant of this.dbItem.listColorant) {
+      this.listColorant.push({colorant: colorant.colorant, quantity: colorant.quantity});
+
       if (this.quantity === 0 || this.quantity < colorant.quantity) {
         this.quantity = colorant.quantity;
       }
@@ -84,36 +88,38 @@ export class ViewFormulaComponent implements OnInit {
       this.currentBackgroundTaskIndex = 0;
       this.currentBackgroundTask = null;
 
-      // this.listBackGroundTask.push({type: 'prepare', time: 6000});
-      // for (let colorant of this.dbItem.listColorant) {
-      //   this.listBackGroundTask.push({type: 'pumping', time: colorant.quantity / 2 * 3000, 'data': colorant});
-      // }
-      // this.listBackGroundTask.push({type: 'finished', time: 1000});
+      for (const colorant of this.listColorant) {
+        this.listBackGroundTask.push({type: 'prepare', time: 2000});
+        this.listBackGroundTask.push({type: 'pumping', time: colorant.quantity / 2 * 3000, colorant: colorant});
+      }
+      this.listBackGroundTask.push({type: 'finished', time: 1000});
 
       this.isStartProgress = true;
+      this.isInProgress = true;
       this.runBackGroundTask();
     }
   }
 
   runBackGroundTask(): void {
-    this.isInProgress = true;
     this.currentBackgroundTask = this.listBackGroundTask[this.currentBackgroundTaskIndex];
 
     if (this.currentBackgroundTask != null) {
       setTimeout(() => {
-        if ('pumping' === this.currentBackgroundTask.type) {
-          this.dbItem.listColorant[this.currentBackgroundTaskIndex - 1].quantity = 0;
+        if ('finished' === this.currentBackgroundTask.type) {
+          this.isInProgress = false;
+          this.isStartProgress = false;
+          this.openModal('print-formula-modal');
+
+        } else {
+          if ('pumping' === this.currentBackgroundTask.type) {
+            this.currentBackgroundTask.colorant.quantity = 0;
+          }
+
+          this.currentBackgroundTaskIndex += 1;
+          this.runBackGroundTask();
         }
-
-        this.currentBackgroundTaskIndex += 1;
-        this.runBackGroundTask();
-
       }, this.currentBackgroundTask.time);
-    } else {
-      this.isInProgress = false;
-      alert('finished !!');
     }
-
   }
 
   openModal(id: string) {

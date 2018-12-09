@@ -230,6 +230,14 @@ footer.sticky-footer{
   }
 }
 
+.bar-code-sample{
+  display: inline-block;
+  width: 75 / 728 * 1572px; //728px
+  height: 75px;
+  background: url('/assets/images/bar-code-sample.png') center center no-repeat;
+  background-size: 100% 100%;
+}
+
 
 .color-bar-group{
   .color-bar{
