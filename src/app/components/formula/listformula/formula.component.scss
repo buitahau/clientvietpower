@@ -6,3 +6,20 @@
   min-width: 300px;
   width: 100%;
 }
+
+
+.pagenation-footer{
+  float: right;
+   span{
+     display: inline-block;
+
+     min-width: 50px;
+     text-align: center;
+     padding: 5px 10px;
+
+     &.btn-action{
+       border: 1px solid #ccc;
+       cursor: pointer;
+     }
+   }
+}

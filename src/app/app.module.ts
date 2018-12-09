@@ -32,7 +32,7 @@ import {BaseService} from './services/base/base.service';
 import {ProductBaseService} from './services/productbase/productbase.service';
 
 import {ModalService} from './services/boostrap/modal.service';
-
+import {JobStatusService} from './services/jobstatus/jobstatus.service';
 // import direction
 
 import {ModalComponent} from './directions/boostrap/modal/modal.component';
@@ -67,6 +67,7 @@ import {HttpModule} from './shared/http/http.module';
 import {ViewDetailComponent} from './directions/product/viewdetail/viewdetail.component';
 
 
+
 const routes: Routes = [
   {'path': '', redirectTo: 'login', pathMatch: 'full'},
   {'path': 'index', component: DashboardComponent},
@@ -83,7 +84,7 @@ const routes: Routes = [
       {path: 'base', component: BaseComponent},
       {path: 'collection', component: CollectionComponent},
       {path: 'product', component: ProductComponent},
-      {path: 'product/view-detail/:id', component: ViewDetailComponent},
+      // {path: 'product/view-detail/:id', component: ViewDetailComponent},
 
       {path: 'formula', component: FormulaComponent},
       {path: 'view-formula/:id', component: ViewFormulaComponent},
@@ -168,6 +169,7 @@ const routes: Routes = [
   ],
   providers: [
     CookieService,
+    JobStatusService,
     ModalService,
 
     IssueService,

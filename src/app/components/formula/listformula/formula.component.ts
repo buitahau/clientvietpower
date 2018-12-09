@@ -3,6 +3,7 @@ import {FormulaService} from '../../../services/formula/formula.service';
 import {Router} from '@angular/router';
 import {CollectionService} from '../../../services/collection/collection.service';
 import {ProductService} from '../../../services/product/product.service';
+import {PagenationModel} from '../../../models/pagination.model';
 
 @Component({
   selector: 'app-formula',
@@ -11,8 +12,12 @@ import {ProductService} from '../../../services/product/product.service';
 })
 
 export class FormulaComponent implements OnInit {
-  listItems = []; listOriginal = [];
-  listFormulas = []; listCollections = []; listProducts = [];
+  listItems = [];
+  listOriginal = [];
+  listFormulas = [];
+  listCollections = [];
+  listProducts = [];
+  pagenationMode: PagenationModel = new PagenationModel([], 0, 0, 15);
 
   constructor(
     private formulaService: FormulaService,
@@ -63,8 +68,28 @@ export class FormulaComponent implements OnInit {
         me.listItems.push(fpb);
         me.listOriginal.push(fpb);
       });
+
+      this.updatePagenationMode();
     });
   }
+
+  updatePagenationMode = function () {
+    const listItem = this.listItems;
+    const currentPage = this.pagenationMode.pageIndex;
+
+    const _listItem = [];
+
+    for (let i = currentPage * this.pagenationMode.maxPageItem; i < listItem.length; i++) {
+      if (i < currentPage * this.pagenationMode.maxPageItem + this.pagenationMode.maxPageItem) {
+        _listItem.push(listItem[i]);
+      } else {
+        break;
+      }
+    }
+
+    this.pagenationMode.listItems = _listItem;
+    this.pagenationMode.totalItem = listItem.length;
+  };
 
   viewFormula(id) {
     this.router.navigate([`../dashboard/view-formula/${id}`]);
@@ -94,5 +119,12 @@ export class FormulaComponent implements OnInit {
       });
     }
     this.listItems = resFilter;
+
+    this.updatePagenationMode();
+  }
+
+  goToPage(pageIndex: number) {
+    this.pagenationMode.pageIndex = pageIndex;
+    this.updatePagenationMode();
   }
 }
