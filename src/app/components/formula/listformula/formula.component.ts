@@ -120,6 +120,7 @@ export class FormulaComponent implements OnInit {
     }
     this.listItems = resFilter;
 
+    this.pagenationMode.pageIndex = 0;
     this.updatePagenationMode();
   }
 
