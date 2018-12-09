@@ -6,9 +6,14 @@ import {JobStatusModel} from '../../models/job.status.model';
 })
 export class JobStatusService {
   listJob: JobStatusModel[];
+  currentTaskId: number = 1;
 
   constructor() {
     this.listJob = [];
+  }
+
+  getListJob() {
+    return this.listJob;
   }
 
   getCurrentJob() {
@@ -16,7 +21,11 @@ export class JobStatusService {
   }
 
   addJob(job: JobStatusModel) {
+    job.jobStatusId = this.currentTaskId;
     this.listJob.push(job);
+    this.currentTaskId++;
+
+    console.log(this.listJob);
   }
 
   removeJob(job: JobStatusModel) {
@@ -27,7 +36,5 @@ export class JobStatusService {
         break;
       }
     }
-
-    // this.listJob.remove(job);
   }
 }

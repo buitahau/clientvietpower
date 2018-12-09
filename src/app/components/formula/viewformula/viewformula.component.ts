@@ -4,12 +4,13 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {FormulaDTO, ProductBaseCanDTO, Select2Item} from '../../../models/colorant.model';
 import {ProductBaseService} from '../../../services/productbase/productbase.service';
 import {ModalService} from '../../../services/boostrap/modal.service';
+import {JobStatusModel} from '../../../models/job.status.model';
+import {JobStatusService} from '../../../services/jobstatus/jobstatus.service';
 
 export interface BackgroundTask {
   type: string;
   time: number;
-  data: any | null;
-// {type: 'pumping', time: 2000, 'data': colorant}
+  colorant: any | null;
 }
 
 @Component({
@@ -29,6 +30,7 @@ export class ViewFormulaComponent implements OnInit {
   listProductBase: Select2Item[] | null = null;
 
 
+  currentJob: JobStatusModel = null;
   isInProgress = false;
   isStartProgress = false;
   listBackGroundTask: BackgroundTask[] = [];
@@ -36,7 +38,10 @@ export class ViewFormulaComponent implements OnInit {
   currentBackgroundTaskIndex: number = 0;
   listColorant: any[] = null;
 
-  constructor(private formulaService: FormulaService, private productBaseService: ProductBaseService, private modalService: ModalService,
+  constructor(private formulaService: FormulaService,
+              private productBaseService: ProductBaseService,
+              private modalService: ModalService,
+              private jobStatusService: JobStatusService,
               private router: Router, private route: ActivatedRoute) {
   }
 
@@ -89,13 +94,17 @@ export class ViewFormulaComponent implements OnInit {
       this.currentBackgroundTask = null;
 
       for (const colorant of this.listColorant) {
-        this.listBackGroundTask.push({type: 'prepare', time: 2000});
+        this.listBackGroundTask.push({type: 'prepare', time: 2000, colorant: null});
         this.listBackGroundTask.push({type: 'pumping', time: colorant.quantity / 2 * 3000, colorant: colorant});
       }
-      this.listBackGroundTask.push({type: 'finished', time: 1000});
+      this.listBackGroundTask.push({type: 'finished', time: 1000, colorant: null});
 
+      this.currentJob = new JobStatusModel('Dispense', this.listBackGroundTask);
+      this.jobStatusService.addJob(this.currentJob);
       this.isStartProgress = true;
       this.isInProgress = true;
+      this.currentJob.start();
+
       this.runBackGroundTask();
     }
   }
@@ -108,11 +117,13 @@ export class ViewFormulaComponent implements OnInit {
         if ('finished' === this.currentBackgroundTask.type) {
           this.isInProgress = false;
           this.isStartProgress = false;
+          this.currentJob.stop();
           this.openModal('print-formula-modal');
 
         } else {
           if ('pumping' === this.currentBackgroundTask.type) {
             this.currentBackgroundTask.colorant.quantity = 0;
+            this.currentJob.update(0);
           }
 
           this.currentBackgroundTaskIndex += 1;

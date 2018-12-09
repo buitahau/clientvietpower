@@ -48,6 +48,9 @@ import {NavigationComponent} from './components/layout/navigation/navigation.com
 import {BreadcrumbComponent} from './components/layout/breadcrumb/breadcrumb.component';
 import {FooterComponent} from './components/layout/footer/footer.component';
 
+
+import {BackgroundTaskComponent} from './components/backgroundtask/backgroundtask.component';
+
 // setting
 import {ColorantComponent} from './components/setting/colorant/colorant.component';
 import {BaseComponent} from './components/setting/base/base.component';
@@ -89,6 +92,7 @@ const routes: Routes = [
       {path: 'formula', component: FormulaComponent},
       {path: 'view-formula/:id', component: ViewFormulaComponent},
 
+      {path: 'job-status', component: BackgroundTaskComponent},
       {path: 'maintenance', component: MaintenanceComponent},
 
       {path: 'question', component: QuestionComponent},
@@ -123,6 +127,8 @@ const routes: Routes = [
     NavigationComponent,
     BreadcrumbComponent,
     FooterComponent,
+
+    BackgroundTaskComponent,
 
     // setting component
     ColorantComponent,
