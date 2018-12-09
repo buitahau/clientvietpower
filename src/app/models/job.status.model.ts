@@ -4,8 +4,8 @@ export class JobStatusModel {
  private _process: number;
  private _status: string;
  private _listTask: any[];
- private _startTime: number;
- private _stopTime: number;
+ private _startTime: Date;
+ private _stopTime: Date;
 
   constructor(type, listTask: any[]) {
     this._type = type;
@@ -68,19 +68,19 @@ export class JobStatusModel {
     this._type = value;
   }
 
-  get startTime(): number {
+  get startTime(): Date {
     return this._startTime;
   }
 
-  set startTime(value: number) {
+  set startTime(value: Date) {
     this._startTime = value;
   }
 
-  get stopTime(): number {
+  get stopTime(): Date {
     return this._stopTime;
   }
 
-  set stopTime(value: number) {
+  set stopTime(value: Date) {
     this._stopTime = value;
   }
 }
