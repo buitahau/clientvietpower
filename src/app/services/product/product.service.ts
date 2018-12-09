@@ -61,7 +61,6 @@ export class ProductService {
   }
 
   private convertToProductModel (object: any): ProductModel {
-    console.log(object);
     const item = new ProductModel();
     item.productId = object.productId;
     item.productCode = object.productCode;

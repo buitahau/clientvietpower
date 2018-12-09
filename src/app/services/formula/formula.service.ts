@@ -573,12 +573,12 @@ export class FormulaService {
     );
   }
 
-  findById(formulaId) {
+  findById(formulaId: number) {
     const result = this.listItems.filter(filterById);
     return result != null && result.length > 0 ? Object.assign({}, result[0]) : null;
 
     function filterById(item, index, array) {
-      return (item.formulaId === formulaId);
+      return (item.formulaId == formulaId);
     }
   }
 

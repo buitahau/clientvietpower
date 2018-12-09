@@ -32,10 +32,11 @@ export class ViewFormulaComponent implements OnInit {
   isInProgress = false;
   isStartProgress = false;
   listBackGroundTask: BackgroundTask[] = [];
-  currentBackgroundTask: any  = null;
+  currentBackgroundTask: any = null;
   currentBackgroundTaskIndex: number = 0;
 
-  constructor(private formulaService: FormulaService, private productBaseService: ProductBaseService, private modalService: ModalService, private router: Router, private route: ActivatedRoute) {
+  constructor(private formulaService: FormulaService, private productBaseService: ProductBaseService, private modalService: ModalService,
+              private router: Router, private route: ActivatedRoute) {
   }
 
   ngOnInit() {
@@ -49,16 +50,16 @@ export class ViewFormulaComponent implements OnInit {
     this.selectProductBase = null;
     this.dbItem = this.formulaService.findById(this.id);
 
-    for (let colorant of this.dbItem.listColorant) {
+    for (const colorant of this.dbItem.listColorant) {
       if (this.quantity === 0 || this.quantity < colorant.quantity) {
         this.quantity = colorant.quantity;
       }
     }
 
-    let listProductBase = this.productBaseService.filterByProductCodeAndBaseType(this.dbItem.product.productCode, this.dbItem.base.type);
+    const listProductBase = this.productBaseService.filterByProductCodeAndBaseType(this.dbItem.product.productCode, this.dbItem.base.type);
     this.listProductBase = [];
 
-    for (let productBase of listProductBase) {
+    for (const productBase of listProductBase) {
       this.listProductBase.push({id: productBase.can, text: productBase.can + ' ' + productBase.unit});
       if (productBase.can === this.canSize) {
         this.selectProductBase = productBase;
@@ -78,7 +79,7 @@ export class ViewFormulaComponent implements OnInit {
   beginDispense(id: string): void {
     this.openModal(id);
 
-    if (! this.isStartProgress) {
+    if (!this.isStartProgress) {
       this.listBackGroundTask = [];
       this.currentBackgroundTaskIndex = 0;
       this.currentBackgroundTask = null;
