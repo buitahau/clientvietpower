@@ -30,7 +30,7 @@
               <td>{{process}} / 100%</td>
               <td>{{item.startTime | date: 'hh:mm:ss dd/MM/yyyy'}}</td>
               <td>{{item.stopTime |  date: 'hh:mm:ss dd/MM/yyyy'}}</td>
-              <td></td>
+              <td><span (click)="viewCurrentTask(item.jobStatusId)"><i class="fas fa-info-circle"></i></span></td>
             </tr>
 
             <!--<tfoot>-->

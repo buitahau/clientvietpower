@@ -1,4 +1,29 @@
-export class JobStatusModel {
+export interface TaskInterface {
+  start(): void;
+  stop(): void;
+  update(): void;
+  pause(): void;
+  cancel(): void;
+}
+
+export class JobStepModal implements TaskInterface {
+  cancel(): void {
+  }
+
+  pause(): void {
+  }
+
+  start(): void {
+  }
+
+  stop(): void {
+  }
+
+  update(): void {
+  }
+}
+
+export class JobStatusModel implements TaskInterface {
  private _jobStatusId: number;
  private _type: string;
  private _process: number;
@@ -24,8 +49,15 @@ export class JobStatusModel {
     this._stopTime = new Date();
   }
 
-  update(process: number): void {
-    this._process = process;
+  update(): void {
+  }
+
+  pause(): void {
+    this._status = 'PAUSE';
+  }
+
+  cancel(): void {
+    this._status = 'PAUSE';
   }
 
   get jobStatusId(): number {

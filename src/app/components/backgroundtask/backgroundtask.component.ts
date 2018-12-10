@@ -20,4 +20,8 @@ export class BackgroundTaskComponent implements OnInit {
     this.listBackgroundTask = this.jobStatusService.getListJob();
   }
 
+  viewCurrentTask(jobId: number) {
+    console.log( this.jobStatusService.findById(jobId));
+  }
+
 }

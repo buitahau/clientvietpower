@@ -123,7 +123,7 @@ export class ViewFormulaComponent implements OnInit {
         } else {
           if ('pumping' === this.currentBackgroundTask.type) {
             this.currentBackgroundTask.colorant.quantity = 0;
-            this.currentJob.update(0);
+            this.currentJob.update();
           }
 
           this.currentBackgroundTaskIndex += 1;

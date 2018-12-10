@@ -1,5 +1,6 @@
 import {Injectable} from '@angular/core';
 import {JobStatusModel} from '../../models/job.status.model';
+import {CookieService} from 'ng-cookie';
 
 @Injectable({
   providedIn: 'root'
@@ -8,8 +9,25 @@ export class JobStatusService {
   listJob: JobStatusModel[];
   currentTaskId: number = 1;
 
-  constructor() {
-    this.listJob = [];
+  constructor(private cookieService: CookieService) {
+    this.loadCurrentData();
+  }
+
+  loadCurrentData(): void {
+    const savingData = this.cookieService.get_cookie('backgroundtask');
+    console.log(savingData);
+
+    if (savingData != null && savingData === undefined && savingData.trim() !== '') {
+      this.listJob = JSON.parse(savingData);
+    } else {
+      this.listJob = [];
+    }
+
+    this.updateCookie();
+  }
+
+  updateCookie() {
+    this.cookieService.set_cookie('backgroundtask', JSON.stringify(this.listJob), 2);
   }
 
   getListJob() {
@@ -25,7 +43,7 @@ export class JobStatusService {
     this.listJob.push(job);
     this.currentTaskId++;
 
-    console.log(this.listJob);
+    this.updateCookie();
   }
 
   removeJob(job: JobStatusModel) {
@@ -36,5 +54,15 @@ export class JobStatusService {
         break;
       }
     }
+    this.updateCookie();
+  }
+
+  findById(jobId: number) {
+    for (const job of this.listJob) {
+      if (jobId === job.jobStatusId) {
+        return job;
+      }
+    }
+    return null;
   }
 }
