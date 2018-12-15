@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {JobStatusService} from '../../services/jobstatus/jobstatus.service';
-import {JobStatusModel} from '../../models/job.status.model';
+import {TaskModel} from '../../models/job.status.model';
 
 @Component({
   selector: 'app-backgroundtask',
@@ -9,7 +9,7 @@ import {JobStatusModel} from '../../models/job.status.model';
 })
 export class BackgroundTaskComponent implements OnInit {
 
-  listBackgroundTask: JobStatusModel [];
+  listBackgroundTask: TaskModel [];
   constructor(private jobStatusService: JobStatusService) { }
 
   ngOnInit() {

@@ -13,49 +13,49 @@
         <div class="form-group row">
           <label class="col-md-4 label-control">Color</label>
           <div class="col-md-8">
-            {{dbItem.formulaCode}}
+            {{dbItem.formula.formulaCode}}
           </div>
         </div>
 
         <div class="form-group row">
           <label class="col-md-4 label-control">Collection</label>
           <div class="col-md-8">
-            {{dbItem.collection.collectionName}}
+            {{dbItem.formula.collection.collectionName}}
           </div>
         </div>
 
         <div class="form-group row">
           <label class="col-md-4 label-control">Approximate Color</label>
           <div class="col-md-8">
-            <span [ngStyle]="{'background': dbItem.colorRGB, 'display': 'inline-block', 'width': '30px', 'height': '30px', 'border': '1px solid #333'}"></span>
+            <span [ngStyle]="{'background': dbItem.formula.colorRGB, 'display': 'inline-block', 'width': '30px', 'height': '30px', 'border': '1px solid #333'}"></span>
           </div>
         </div>
 
         <div class="form-group row">
           <label class="col-md-4 label-control">Product</label>
           <div class="col-md-8">
-            {{dbItem.product.productName}}
+            {{dbItem.productBase.product.productName}}
           </div>
         </div>
 
         <div class="form-group row">
           <label class="col-md-4 label-control">Formula Date</label>
           <div class="col-md-8">
-            {{dbItem.formulaDate}}
+            {{dbItem.formula.formulaDate}}
           </div>
         </div>
 
         <div class="form-group row">
           <label class="col-md-4 label-control">Substrate</label>
           <div class="col-md-8">
-            {{dbItem.substrate}}
+            {{dbItem.productBase.substrate}}
           </div>
         </div>
 
         <div class="form-group row">
           <label class="col-md-4 label-control">Comments</label>
           <div class="col-md-8">
-            {{dbItem.comments}}
+            {{dbItem.formula.comments}}
           </div>
         </div>
 
@@ -88,13 +88,13 @@
               <th style="width: 50%">Color
             </tr>
 
-            <tr *ngFor="let colorantItem of dbItem.listColorant">
+            <tr *ngFor="let colorantItem of listFormulaColorant">
               <td>{{colorantItem.colorant.name}}</td>
               <td>{{colorantItem.quantity * canSize}}</td>
               <td>
                 <span class="color-bar" >
                   <span class="color-select" [ngStyle]="{'background': 'rgba(' + colorantItem.colorant.redV + ',' + colorantItem.colorant.greenV +',' + colorantItem.colorant.blueV + ',' + colorantItem.colorant.density +')',
-                  'width': (colorantItem.quantity / quantity) * 100 + '%'}"></span>
+                  'width': (colorantItem.quantity / maxColorQuantity) * 100 + '%'}"></span>
                 </span>
               </td>
             </tr>
@@ -122,7 +122,7 @@
                 <span class="base-can-background">
                   <span class="base-can-volume" [ngStyle]="{'background-color': selectProductBase.color, 'height': selectProductBase.percentage + '%'}">
                     <span class="can-base-info">
-                      <span class="base-type">Base : {{dbItem.base.type}}</span>
+                      <span class="base-type">Base : {{selectProductBase.type}}</span>
                       <span class="base-volume">{{canSize + " " + selectProductBase.unit}}</span>
                       <span class="base-name">{{dbItem.base.name}}</span>
                     </span>
@@ -142,7 +142,14 @@
             <div class="row form-group">
               <label class="col-md-4 label-control">Can size:</label>
               <div class="col-md-8">
-                <ng-select2 class="select-color-field" [(ngModel)]="canSize" [data]="listProductBase"  [value]="canSize" [placeholder]="'Choose Cansize'" [width]="200" (valueChanged)="changedCanSize($event)"></ng-select2>
+                <input type="number" [(ngModel)]="canSize" class="form-control" required="required" [ngModelOptions]="{standalone: true}" [ngStyle]="{'width': '200px'}">
+              </div>
+            </div>
+
+            <div class="row form-group">
+              <label class="col-md-4 label-control">Or select:</label>
+              <div class="col-md-8">
+                <ng-select2 class="select-color-field" [(ngModel)]="canSize" [data]="listProductBase" [value]="canSize" [placeholder]="'Choose Cansize'" [width]="200" (valueChanged)="changedCanSize($event)"></ng-select2>
               </div>
             </div>
 
@@ -150,7 +157,7 @@
               <label class="col-md-4 label-control"></label>
 
               <div class="col-md-8">
-                <button class="btn btn-primary" (click)="beginDispense('custom-modal-1')"><i class="fas fa-fill-drip"></i> <span *ngIf="isStartProgress">In Progress</span> <span *ngIf="!isStartProgress">Dispense</span> </button>
+                <button class="btn btn-primary" (click)="beginDispense('view-dispense-task-modal')"><i class="fas fa-fill-drip"></i> <span *ngIf="isNotBusy">Dispense</span> <span *ngIf="! isNotBusy">In Progress</span> </button>
               </div>
             </div>
           </div>
@@ -160,110 +167,120 @@
   </div>
 </div>
 
-
-<pp-modal id="custom-modal-1" class="modal dispense-job-status-modal">
+<pp-modal id="view-dispense-task-modal" class="modal dispense-job-status-modal">
   <div class="modal-content">
     <div class="modal-header">
       <h5 class="modal-title">Dispense Job Status</h5>
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="closeModal('custom-modal-1')">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="closeModal('view-dispense-task-modal')">
         <span aria-hidden="true">×</span>
       </button>
     </div>
 
     <div class="modal-body">
-      <div class="row">
-        <div class="col-md-3">
-          <div *ngIf="currentBackgroundTask != null">
-            <div class="component-pumping-info" *ngIf="'pumping' == currentBackgroundTask.type">
+      <app-viewdispensetask [taskId]="currentJob.taskId " *ngIf="currentJob != null && currentJob.taskId != null && currentJob.taskId > 0"></app-viewdispensetask>
 
-              <table cellpadding="5" cellspacing="0">
-                <tr>
-                  <td class="text-right">Component</td>
-                  <td colspan="100%" class="text-center" [style]="{'margin-left': '50px'}">
-                    <span class="color-bar" >
-                      <span class="color-select" [ngStyle]="{'background': 'rgba(' + currentBackgroundTask.colorant.colorant.redV + ',' + currentBackgroundTask.colorant.colorant.greenV +',' + currentBackgroundTask.colorant.colorant.blueV + ',' + currentBackgroundTask.colorant.colorant.density +')', 'width': '20px', 'height': '150px'}"></span>
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="text-right"><span class="component-name">{{currentBackgroundTask.colorant.colorant.name}}</span></td>
-                </tr>
-                <tr>
-                  <td>Wanted</td>
-                </tr>
-                <tr>
-                  <td  class="text-right"><span class="component-name">{{currentBackgroundTask.colorant.quantity}}</span> ml</td>
-                </tr>
-                <tr>
-                  <td>Dispensed</td>
-                </tr>
-                <tr>
-                  <td  class="text-right"><span class="component-name">0</span> ml</td>
-                </tr>
-              </table>
-            </div>
-          </div>
-        </div>
+      <!--<div class="row">-->
 
-        <div class="col-md-5">
-          <div *ngIf="currentBackgroundTask != null">
-            {{currentBackgroundTask.type}}
 
-            <div  *ngIf="'prepare' == currentBackgroundTask.type" class="formula-animation preparing-animation text-center">
-              <img src="../../../../assets/videos/Preparing.gif" width="250" height="250"/>
-            </div>
+        <!--<div class="col-md-3">-->
+          <!--<div *ngIf="currentBgrTask != null">-->
+          <!--<div class="component-pumping-info" *ngIf="'pumping' == currentBgrTask.type">-->
 
-            <div *ngIf="'pumping' == currentBackgroundTask.type" class="formula-animation pumping-animation text-center" [style]="{'display': 'none'}">
-              <img src="../../../../assets/videos/Pumping.gif" width="250" height="250"/>
-            </div>
-          </div>
-        </div>
+          <!--<table cellpadding="5" cellspacing="0">-->
+          <!--<tr>-->
+          <!--<td class="text-right">Component</td>-->
+          <!--<td colspan="100%" class="text-center" [style]="{'margin-left': '50px'}">-->
+          <!--<span class="color-bar" >-->
+          <!--<span class="color-select" [ngStyle]="{'background': 'rgba(' + currentBackgroundTask.colorant.colorant.redV + ',' + currentBackgroundTask.colorant.colorant.greenV +',' + currentBackgroundTask.colorant.colorant.blueV + ',' + currentBackgroundTask.colorant.colorant.density +')', 'width': '20px', 'height': '150px'}"></span>-->
+          <!--</span>-->
+          <!--</td>-->
+          <!--</tr>-->
+          <!--<tr>-->
+          <!--<td class="text-right"><span class="component-name">{{currentBackgroundTask.colorant.colorant.name}}</span></td>-->
+          <!--</tr>-->
+          <!--<tr>-->
+          <!--<td>Wanted</td>-->
+          <!--</tr>-->
+          <!--<tr>-->
+          <!--<td  class="text-right"><span class="component-name">{{currentBackgroundTask.colorant.quantity}}</span> ml</td>-->
+          <!--</tr>-->
+          <!--<tr>-->
+          <!--<td>Dispensed</td>-->
+          <!--</tr>-->
+          <!--<tr>-->
+          <!--<td  class="text-right"><span class="component-name">0</span> ml</td>-->
+          <!--</tr>-->
+          <!--</table>-->
+          <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
 
-        <div class="col-md-4">
-          <div *ngFor="let colorantItem of listColorant" class="color-bar-group">
-          <span class="color-bar" >
-            <span class="color-select" [ngStyle]="{'background': 'rgba(' + colorantItem.colorant.redV + ',' + colorantItem.colorant.greenV +',' + colorantItem.colorant.blueV + ',' + colorantItem.colorant.density +')',
-            'width': (colorantItem.quantity / quantity) * 100 + '%'}">
-              <span class="color-name">{{colorantItem.colorant.name}}</span>
-            </span>
-        </span>
-          </div>
+        <!--<div class="col-md-5">-->
+          <!--<div *ngIf="currentBackgroundTask != null">-->
+          <!--{{currentBackgroundTask.type}}-->
 
-        </div>
-      </div>
+          <!--<div  *ngIf="'prepare' == currentBackgroundTask.type" class="formula-animation preparing-animation text-center">-->
+          <!--<img src="../../../../assets/videos/Preparing.gif" width="250" height="250"/>-->
+          <!--</div>-->
 
-      <div class="row">
-        <div class="col-md-3">
+          <!--<div *ngIf="'pumping' == currentBackgroundTask.type" class="formula-animation pumping-animation text-center" [style]="{'display': 'none'}">-->
+          <!--<img src="../../../../assets/videos/Pumping.gif" width="250" height="250"/>-->
+          <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
 
-        </div>
+        <!--<div class="col-md-4">-->
+        <!--<div *ngFor="let colorantItem of listColorant" class="color-bar-group">-->
+        <!--<span class="color-bar" >-->
+        <!--<span class="color-select" [ngStyle]="{'background': 'rgba(' + colorantItem.colorant.redV + ',' + colorantItem.colorant.greenV +',' + colorantItem.colorant.blueV + ',' + colorantItem.colorant.density +')',-->
+        <!--'width': (colorantItem.quantity / maxColorQuantity) * 100 + '%'}">-->
+        <!--<span class="color-name">{{colorantItem.colorant.name}}</span>-->
+        <!--</span>-->
+        <!--</span>-->
+        <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
 
-        <div class="col-md-5">
-        <span class="base-can-empty" *ngIf="selectProductBase != null">
-          <span class="base-can-background">
-            <span class="base-can-volume" [ngStyle]="{'background-color': selectProductBase.color, 'height': selectProductBase.percentage + '%'}">
-              <span class="can-base-info">
-                <span class="base-type">Base : {{dbItem.base.type}}</span>
-                <span class="base-volume">{{canSize + " " + selectProductBase.unit}}</span>
-                <span class="base-name">{{dbItem.base.name}}</span>
-              </span>
-            </span>
-          </span>
-        </span>
-        </div>
+      <!--<div class="row">-->
+      <!--<div class="col-md-3">-->
 
-        <div class="col-md-4">
+      <!--</div>-->
 
-        </div>
-      </div>
+      <!--<div class="col-md-5">-->
+      <!--<span class="base-can-empty" *ngIf="selectProductBase != null">-->
+      <!--<span class="base-can-background">-->
+      <!--<span class="base-can-volume"-->
+      <!--[ngStyle]="{'background-color': selectProductBase.color, 'height': selectProductBase.percentage + '%'}">-->
+      <!--<span class="can-base-info">-->
+      <!--<span class="base-type">Base : {{dbItem.base.type}}</span>-->
+      <!--<span class="base-volume">{{canSize + " " + selectProductBase.unit}}</span>-->
+      <!--<span class="base-name">{{dbItem.base.name}}</span>-->
+      <!--</span>-->
+      <!--</span>-->
+      <!--</span>-->
+      <!--</span>-->
+      <!--</div>-->
+
+      <!--<div class="col-md-4">-->
+
+      <!--</div>-->
+      <!--</div>-->
     </div>
 
     <div class="modal-footer">
-      <button type="button" class="btn btn-primary" (click)="closeModal('custom-modal-1')">Hide</button>
+      <button type="button" class="btn btn-primary" (click)="closeModal('view-dispense-task-modal')">Hide</button>
     </div>
   </div>
 </pp-modal>
 
-<pp-modal id="print-formula-modal" class="modal print-formula-modal" *ngIf="currentBackgroundTask != null && 'finished' === currentBackgroundTask.type">
+
+
+
+
+
+
+
+<pp-modal id="print-formula-modal" class="modal print-formula-modal" *ngIf="isTaskDone">
   <div class="modal-content">
     <div class="modal-header">
       <h5 class="modal-title">Print</h5>

@@ -1,42 +1,39 @@
 import {Component, OnInit} from '@angular/core';
 import {FormulaService} from '../../../services/formula/formula.service';
 import {ActivatedRoute, Router} from '@angular/router';
-import {FormulaDTO, ProductBaseCanDTO, Select2Item} from '../../../models/colorant.model';
-import {ProductBaseService} from '../../../services/productbase/productbase.service';
+import {Select2Item} from '../../../models/colorant.model';
 import {ModalService} from '../../../services/boostrap/modal.service';
-import {JobStatusModel} from '../../../models/job.status.model';
-import {JobStatusService} from '../../../services/jobstatus/jobstatus.service';
-
-export interface BackgroundTask {
-  type: string;
-  time: number;
-  colorant: any | null;
-}
+import {DispenseDataModel, DispenseStepDataModel, TaskModel} from '../../../models/job.status.model';
+import {JobStatusService, MAP_JOB_STATE} from '../../../services/jobstatus/jobstatus.service';
+import {FormulaColourantModel, FormulaProductBaseModel, ProductBaseCanModel} from '../../../models/formula_product_base';
+import {ProductBaseService} from '../../../services/productbase/productbase.service';
+import ConvertModelUtils from '../../../utils/convert-models-utils';
 
 @Component({
   selector: 'app-viewformula',
   templateUrl: './viewformula.component.html',
   styleUrls: ['./viewformula.component.scss']
 })
+
 export class ViewFormulaComponent implements OnInit {
-  id: number;
-  dbItem: FormulaDTO | null = null;
-  quantity = 0;
+  formulaProductBaseId: number;
 
+  // formula Product Base
+  dbItem: FormulaProductBaseModel = null;
+  listFormulaColorant: FormulaColourantModel[] = null;
+  listProductBaseCan: ProductBaseCanModel[] = null;
 
+  maxColorQuantity = 0;
   canSize = 1;
+  selectProductBase: ProductBaseCanModel = null;
   numberOfCan = 1;
-  selectProductBase: ProductBaseCanDTO = null;
   listProductBase: Select2Item[] | null = null;
 
-
-  currentJob: JobStatusModel = null;
-  isInProgress = false;
-  isStartProgress = false;
-  listBackGroundTask: BackgroundTask[] = [];
-  currentBackgroundTask: any = null;
-  currentBackgroundTaskIndex: number = 0;
+  currentJob: TaskModel = null;
   listColorant: any[] = null;
+
+  isNotBusy: boolean;
+  isTaskDone: boolean;
 
   constructor(private formulaService: FormulaService,
               private productBaseService: ProductBaseService,
@@ -47,37 +44,65 @@ export class ViewFormulaComponent implements OnInit {
 
   ngOnInit() {
     this.route.params.subscribe(params => {
-      this.id = params.id;
+      this.formulaProductBaseId = parseInt(params.id);
+      this.listFormulaColorant = [];
+      this.listProductBaseCan = [];
       this.fetchDBItem();
     });
   }
 
   fetchDBItem() {
     this.selectProductBase = null;
-    this.dbItem = this.formulaService.findById(this.id);
 
-    this.listColorant = [];
-    for (const colorant of this.dbItem.listColorant) {
-      this.listColorant.push({colorant: colorant.colorant, quantity: colorant.quantity});
+    // step 1. Get Formula By Id
+    this.formulaService.findFormulaProductBaseById(this.formulaProductBaseId).subscribe((data: any) => {
+      this.dbItem = ConvertModelUtils.convertToFormulaProductBaseObject(data);
+      this.getRelativeData();
+    });
+  }
 
-      if (this.quantity === 0 || this.quantity < colorant.quantity) {
-        this.quantity = colorant.quantity;
-      }
-    }
+  getRelativeData() {
+    if (this.dbItem != null) {
+      // Step 2. Get list Colorant of Formula
+      this.formulaService.getListColorantOfFormula(this.dbItem.formula.formulaId).subscribe(datas => {
+        datas.map(c => {
+          this.listFormulaColorant.push(c);
+        });
 
-    const listProductBase = this.productBaseService.filterByProductCodeAndBaseType(this.dbItem.product.productCode, this.dbItem.base.type);
-    this.listProductBase = [];
+        // Step 4. Process data before render
+        this.listColorant = [];
 
-    for (const productBase of listProductBase) {
-      this.listProductBase.push({id: productBase.can, text: productBase.can + ' ' + productBase.unit});
-      if (productBase.can === this.canSize) {
-        this.selectProductBase = productBase;
-      }
-    }
+        for (const colorant of this.listFormulaColorant) {
+          this.listColorant.push({colorant: colorant.colorant, quantity: colorant.quantity});
 
-    if (this.selectProductBase == null && listProductBase.length > 0) {
-      this.selectProductBase = listProductBase[0];
-      this.canSize = this.selectProductBase.can;
+          if (this.maxColorQuantity === 0 || this.maxColorQuantity < colorant.quantity) {
+            this.maxColorQuantity = colorant.quantity;
+          }
+        }
+      });
+
+      // Step 3. Get List Product Base Can of Formula
+      this.formulaService.getListProductBaseCanOfFormula(this.dbItem.formula.formulaId).subscribe(datas => {
+        datas.map(c => {
+          this.listProductBaseCan.push(c);
+        });
+
+        for (const productBaseCan of this.listProductBaseCan) {
+          this.listProductBase.push({id: productBaseCan.can, text: productBaseCan.can + ' ' + productBaseCan.unit});
+          if (productBaseCan.can === this.canSize) {
+            this.selectProductBase = productBaseCan;
+          }
+        }
+
+        if (this.selectProductBase == null && this.listProductBaseCan.length > 0) {
+          this.selectProductBase = this.listProductBaseCan[0];
+          this.canSize = this.selectProductBase.can;
+        }
+      });
+
+      this.isTaskDone = false;
+
+      console.log(this);
     }
   }
 
@@ -85,52 +110,36 @@ export class ViewFormulaComponent implements OnInit {
     this.canSize = e.value;
   }
 
-  beginDispense(id: string): void {
-    this.openModal(id);
+  beginDispense(modalId: string): void {
+    this.isNotBusy = this.jobStatusService.getState() === MAP_JOB_STATE.WAITING;
 
-    if (!this.isStartProgress) {
-      this.listBackGroundTask = [];
-      this.currentBackgroundTaskIndex = 0;
-      this.currentBackgroundTask = null;
+    if (this.isNotBusy) {
+      this.isTaskDone = false;
+      const listPumpingTask = [];
 
       for (const colorant of this.listColorant) {
-        this.listBackGroundTask.push({type: 'prepare', time: 2000, colorant: null});
-        this.listBackGroundTask.push({type: 'pumping', time: colorant.quantity / 2 * 3000, colorant: colorant});
+        const prepare_t = new TaskModel('prepare', null, null, null);
+        const pumping_t = new TaskModel('pumping', null, new DispenseStepDataModel(colorant.colorant,
+          colorant.quantity * this.canSize), null);
+        listPumpingTask.push(prepare_t);
+        listPumpingTask.push(pumping_t);
       }
-      this.listBackGroundTask.push({type: 'finished', time: 1000, colorant: null});
 
-      this.currentJob = new JobStatusModel('Dispense', this.listBackGroundTask);
-      this.jobStatusService.addJob(this.currentJob);
-      this.isStartProgress = true;
-      this.isInProgress = true;
-      this.currentJob.start();
-
-      this.runBackGroundTask();
-    }
-  }
-
-  runBackGroundTask(): void {
-    this.currentBackgroundTask = this.listBackGroundTask[this.currentBackgroundTaskIndex];
-
-    if (this.currentBackgroundTask != null) {
-      setTimeout(() => {
-        if ('finished' === this.currentBackgroundTask.type) {
-          this.isInProgress = false;
-          this.isStartProgress = false;
-          this.currentJob.stop();
+      const stop_t = new TaskModel('finished', null, null, () => {
+        this.isTaskDone = true;
+        setTimeout(() => {
           this.openModal('print-formula-modal');
+        }, 500);
+      });
 
-        } else {
-          if ('pumping' === this.currentBackgroundTask.type) {
-            this.currentBackgroundTask.colorant.quantity = 0;
-            this.currentJob.update();
-          }
+      listPumpingTask.push(stop_t);
 
-          this.currentBackgroundTaskIndex += 1;
-          this.runBackGroundTask();
-        }
-      }, this.currentBackgroundTask.time);
+      this.currentJob = new TaskModel('Dispense', listPumpingTask,
+        new DispenseDataModel(this.dbItem, this.selectProductBase, this.canSize, this.numberOfCan), null);
+      this.jobStatusService.addJob(this.currentJob);
     }
+
+    this.openModal(modalId);
   }
 
   openModal(id: string) {

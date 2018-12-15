@@ -6,6 +6,7 @@ export const environment = {
   production: false,
   settings: {
     serverendpoint: 'http://localhost:8080/server/api/',
+    // serverendpoint: 'http://localhost:80/SpringHibernateExample/server/api',
     dateFormat : 'dd/MM/yyyy'
   }
 };

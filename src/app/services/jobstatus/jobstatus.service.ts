@@ -1,66 +1,86 @@
 import {Injectable} from '@angular/core';
-import {JobStatusModel} from '../../models/job.status.model';
-import {CookieService} from 'ng-cookie';
+import {TaskModel} from '../../models/job.status.model';
+
+export const MAP_JOB_STATE = {
+  WAITING: 'WAITING',
+  IN_PROGRESS: 'IN-PROGRESS',
+};
 
 @Injectable({
   providedIn: 'root'
 })
-export class JobStatusService {
-  listJob: JobStatusModel[];
-  currentTaskId: number = 1;
 
-  constructor(private cookieService: CookieService) {
+export class JobStatusService {
+  listTask: TaskModel[];
+  // listAddedJob: TaskModel[];
+  currentTaskId: number;
+  currentTask: TaskModel | null = null;
+  status: string;
+
+  constructor() {
     this.loadCurrentData();
+    this.currentTask = null;
+    this.currentTaskId = 1;
+    this.status = MAP_JOB_STATE.WAITING;
   }
 
   loadCurrentData(): void {
-    const savingData = this.cookieService.get_cookie('backgroundtask');
-    console.log(savingData);
-
-    if (savingData != null && savingData === undefined && savingData.trim() !== '') {
-      this.listJob = JSON.parse(savingData);
-    } else {
-      this.listJob = [];
-    }
-
-    this.updateCookie();
+    this.listTask = [];
   }
 
-  updateCookie() {
-    this.cookieService.set_cookie('backgroundtask', JSON.stringify(this.listJob), 2);
+  getState(): string {
+    return this.status;
   }
 
   getListJob() {
-    return this.listJob;
+    return this.listTask;
   }
 
   getCurrentJob() {
-    return this.listJob;
+    return this.listTask;
   }
 
-  addJob(job: JobStatusModel) {
-    job.jobStatusId = this.currentTaskId;
-    this.listJob.push(job);
+  update(): void {
+    if (this.status === MAP_JOB_STATE.WAITING && this.listTask != null && this.listTask.length > 0) {
+      this.currentTask = this.listTask[0];
+      this.currentTask.run(this);
+      this.status = MAP_JOB_STATE.IN_PROGRESS;
+    }
+  }
+
+  record(type: string, data): void {
+    console.log('record ' + type);
+    if (type === 'pumping') {
+      console.log('Saving this data to server !!!');
+      console.log(data);
+    } else if (type === 'finished') {
+      console.log('This task is finished !!');
+      this.status = MAP_JOB_STATE.WAITING;
+    }
+  }
+
+  addJob(job: TaskModel) {
+    job.taskId = this.currentTaskId;
+    this.listTask.push(job);
     this.currentTaskId++;
 
-    this.updateCookie();
+    this.update();
   }
 
-  removeJob(job: JobStatusModel) {
-    for (let i = 0; i < this.listJob.length; i++) {
-      const currentJob: JobStatusModel = this.listJob[i];
-      if (currentJob.jobStatusId === job.jobStatusId) {
-        this.listJob.splice(i, 1);
+  removeJob(job: TaskModel) {
+    for (let i = 0; i < this.listTask.length; i++) {
+      const currentJob: TaskModel = this.listTask[i];
+      if (currentJob.taskId === job.taskId) {
+        this.listTask.splice(i, 1);
         break;
       }
     }
-    this.updateCookie();
   }
 
-  findById(jobId: number) {
-    for (const job of this.listJob) {
-      if (jobId === job.jobStatusId) {
-        return job;
+  findById(taskId: number): TaskModel {
+    for (const task of this.listTask) {
+      if (taskId === task.taskId) {
+        return task;
       }
     }
     return null;

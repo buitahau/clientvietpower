@@ -4,6 +4,7 @@ import {Router} from '@angular/router';
 import {CollectionService} from '../../../services/collection/collection.service';
 import {ProductService} from '../../../services/product/product.service';
 import {PagenationModel} from '../../../models/pagination.model';
+import {FormulaProductBaseModel} from '../../../models/formula_product_base';
 
 @Component({
   selector: 'app-formula',
@@ -12,8 +13,9 @@ import {PagenationModel} from '../../../models/pagination.model';
 })
 
 export class FormulaComponent implements OnInit {
-  listItems = [];
+  listItems: FormulaProductBaseModel[] = [];
   listOriginal = [];
+
   listFormulas = [];
   listCollections = [];
   listProducts = [];
@@ -63,7 +65,10 @@ export class FormulaComponent implements OnInit {
     // get list formula product base
     this.listItems = [];
     this.listOriginal = [];
+
     this.formulaService.getAllFormulaProductBase().subscribe(datas => {
+      console.log(datas);
+
       datas.map(fpb => {
         me.listItems.push(fpb);
         me.listOriginal.push(fpb);
@@ -91,8 +96,8 @@ export class FormulaComponent implements OnInit {
     this.pagenationMode.totalItem = listItem.length;
   };
 
-  viewFormula(id) {
-    this.router.navigate([`../dashboard/view-formula/${id}`]);
+  viewFormula(formulaProductBaseId) {
+    this.router.navigate([`../dashboard/view-formula/${formulaProductBaseId}`]);
   }
 
   onFilterChange() {

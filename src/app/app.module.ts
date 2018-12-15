@@ -68,6 +68,7 @@ import {LanguageComponent} from './components/help/language/language.component';
 import {QuestionComponent} from './components/help/question/question.component';
 import {HttpModule} from './shared/http/http.module';
 import {ViewDetailComponent} from './directions/product/viewdetail/viewdetail.component';
+import {ViewDispenseTaskComponent} from './components/backgroundtask/viewdispensetask/viewdispensetask.component';
 
 
 
@@ -129,6 +130,7 @@ const routes: Routes = [
     FooterComponent,
 
     BackgroundTaskComponent,
+    ViewDispenseTaskComponent,
 
     // setting component
     ColorantComponent,
