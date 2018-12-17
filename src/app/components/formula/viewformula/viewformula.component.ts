@@ -64,16 +64,14 @@ export class ViewFormulaComponent implements OnInit {
   getRelativeData() {
     if (this.dbItem != null) {
       // Step 2. Get list Colorant of Formula
-      this.formulaService.getListColorantOfFormula(this.dbItem.formula.formulaId).subscribe(datas => {
-        datas.map(c => {
-          this.listFormulaColorant.push(c);
-        });
+      this.formulaService.getListColorantOfFormula(this.dbItem.formula.formulaId).subscribe((data: any) => {
+        this.listFormulaColorant = data;
 
         // Step 4. Process data before render
         this.listColorant = [];
 
         for (const colorant of this.listFormulaColorant) {
-          this.listColorant.push({colorant: colorant.colorant, quantity: colorant.quantity});
+          this.listColorant.push({colorant: colorant.colourant, quantity: colorant.quantity});
 
           if (this.maxColorQuantity === 0 || this.maxColorQuantity < colorant.quantity) {
             this.maxColorQuantity = colorant.quantity;
@@ -82,13 +80,17 @@ export class ViewFormulaComponent implements OnInit {
       });
 
       // Step 3. Get List Product Base Can of Formula
-      this.formulaService.getListProductBaseCanOfFormula(this.dbItem.formula.formulaId).subscribe(datas => {
-        datas.map(c => {
-          this.listProductBaseCan.push(c);
-        });
+      this.formulaService.getListProductBaseCan(this.dbItem.productBase.productBaseId).subscribe(datas => {
+        this.listProductBaseCan = datas;
+
+        this.listProductBase = [];
 
         for (const productBaseCan of this.listProductBaseCan) {
-          this.listProductBase.push({id: productBaseCan.can, text: productBaseCan.can + ' ' + productBaseCan.unit});
+          this.listProductBase.push({
+            id: productBaseCan.can,
+            text: productBaseCan.can + ' ' + (productBaseCan.unit === null ? 'L' : productBaseCan.unit)
+          });
+
           if (productBaseCan.can === this.canSize) {
             this.selectProductBase = productBaseCan;
           }
@@ -102,7 +104,7 @@ export class ViewFormulaComponent implements OnInit {
 
       this.isTaskDone = false;
 
-      console.log(this);
+      this.isNotBusy = this.jobStatusService.getState() === MAP_JOB_STATE.WAITING;
     }
   }
 
@@ -111,7 +113,6 @@ export class ViewFormulaComponent implements OnInit {
   }
 
   beginDispense(modalId: string): void {
-    this.isNotBusy = this.jobStatusService.getState() === MAP_JOB_STATE.WAITING;
 
     if (this.isNotBusy) {
       this.isTaskDone = false;

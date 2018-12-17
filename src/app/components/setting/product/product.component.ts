@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {ProductDTO} from '../../../models/colorant.model';
 import {Sort} from '@angular/material';
 import {ProductService} from '../../../services/product/product.service';
+import {ProductModel} from '../../../models/product';
 
 
 @Component({
@@ -14,8 +14,8 @@ export class ProductComponent implements OnInit {
   productCode: string = null;
   productName: string = null;
 
-  listItems: ProductDTO[] = null;
-  sortedData: ProductDTO[] = null;
+  listItems: ProductModel[] = null;
+  sortedData: ProductModel[] = null;
   currentProductViewer: number = null;
 
   constructor(private productService: ProductService) {

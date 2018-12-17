@@ -75,25 +75,26 @@ export class FormulaService {
       map((data: Array<any>) => {
         const result = [];
         if (data) {
-          for (const formula of data) {
-            result.push(ConvertModelUtils.convertToFormulaObject(formula));
+          for (const item of data) {
+            result.push(ConvertModelUtils.convertToFormulaColourantObject(item));
           }
         }
         return result;
-      }),
-      catchError(e => {
+      }), catchError(e => {
         return [];
       })
     );
   }
 
-  getListProductBaseCanOfFormula(formulaId: number) {
-    return this.http.get(environment.settings.serverendpoint + 'formula_product_base/findByFormula/' + formulaId).pipe(
+  getListProductBaseCan(productBaseId: number) {
+    return this.http.get(environment.settings.serverendpoint + 'product_base_can/findById/' + productBaseId).pipe(
       map((data: Array<any>) => {
+        console.log(data);
+
         const result = [];
         if (data) {
-          for (const formula of data) {
-            result.push(ConvertModelUtils.convertToFormulaObject(formula));
+          for (const item of data) {
+            result.push(ConvertModelUtils.convertToProductBaseCanObject(item));
           }
         }
         return result;

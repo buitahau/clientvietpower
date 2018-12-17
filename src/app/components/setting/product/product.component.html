@@ -30,11 +30,11 @@
                 <td>{{item.productName}}</td>
                 <td>{{item.createdDate | date : 'dd/MM/yyyy'}}</td>
                 <td>
-                  <span *ngIf="item.createdBy == null">
+                  <span *ngIf="item.createBy == null">
                     System
                   </span>
 
-                  <span *ngIf="item.createdBy != null">
+                  <span *ngIf="item.createBy != null">
                     Me
                   </span>
                 </td>

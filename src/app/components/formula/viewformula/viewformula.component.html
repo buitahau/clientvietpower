@@ -2,7 +2,7 @@
   <h1>Standard Formula</h1>
 </div>
 
-<div class="row">
+<div class="row" *ngIf="dbItem != null">
   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
     <div class="card">
       <div class="card-header">
@@ -41,7 +41,7 @@
         <div class="form-group row">
           <label class="col-md-4 label-control">Formula Date</label>
           <div class="col-md-8">
-            {{dbItem.formula.formulaDate}}
+            {{dbItem.formula.createdDate | date : 'dd/MM/yyyy'}}
           </div>
         </div>
 
@@ -89,12 +89,11 @@
             </tr>
 
             <tr *ngFor="let colorantItem of listFormulaColorant">
-              <td>{{colorantItem.colorant.name}}</td>
+              <td>{{colorantItem.colourant.colourantName}}</td>
               <td>{{colorantItem.quantity * canSize}}</td>
               <td>
                 <span class="color-bar" >
-                  <span class="color-select" [ngStyle]="{'background': 'rgba(' + colorantItem.colorant.redV + ',' + colorantItem.colorant.greenV +',' + colorantItem.colorant.blueV + ',' + colorantItem.colorant.density +')',
-                  'width': (colorantItem.quantity / maxColorQuantity) * 100 + '%'}"></span>
+                  <span class="color-select" [ngStyle]="{'background': colorantItem.colourant.rbgHex, 'width': (colorantItem.quantity / maxColorQuantity) * 100 + '%'}"></span>
                 </span>
               </td>
             </tr>
@@ -120,11 +119,11 @@
 
              <span class="base-can-empty" *ngIf="selectProductBase != null">
                 <span class="base-can-background">
-                  <span class="base-can-volume" [ngStyle]="{'background-color': selectProductBase.color, 'height': selectProductBase.percentage + '%'}">
+                  <span class="base-can-volume" [ngStyle]="{'background-color': selectProductBase.productBase.rbgHex, 'height': selectProductBase.percentage + '%'}">
                     <span class="can-base-info">
-                      <span class="base-type">Base : {{selectProductBase.type}}</span>
+                      <span class="base-type">Base : {{selectProductBase.productBase.base.baseCode}}</span>
                       <span class="base-volume">{{canSize + " " + selectProductBase.unit}}</span>
-                      <span class="base-name">{{dbItem.base.name}}</span>
+                      <span class="base-name">{{selectProductBase.productBase.product.productName}}</span>
                     </span>
                   </span>
                 </span>
@@ -149,7 +148,7 @@
             <div class="row form-group">
               <label class="col-md-4 label-control">Or select:</label>
               <div class="col-md-8">
-                <ng-select2 class="select-color-field" [(ngModel)]="canSize" [data]="listProductBase" [value]="canSize" [placeholder]="'Choose Cansize'" [width]="200" (valueChanged)="changedCanSize($event)"></ng-select2>
+                <ng-select2 class="select-color-field" [(ngModel)]="canSize" [data]="listProductBase" [value]="canSize" [placeholder]="'Choose Can Size'" [width]="200" (valueChanged)="changedCanSize($event)"></ng-select2>
               </div>
             </div>
 
@@ -178,93 +177,6 @@
 
     <div class="modal-body">
       <app-viewdispensetask [taskId]="currentJob.taskId " *ngIf="currentJob != null && currentJob.taskId != null && currentJob.taskId > 0"></app-viewdispensetask>
-
-      <!--<div class="row">-->
-
-
-        <!--<div class="col-md-3">-->
-          <!--<div *ngIf="currentBgrTask != null">-->
-          <!--<div class="component-pumping-info" *ngIf="'pumping' == currentBgrTask.type">-->
-
-          <!--<table cellpadding="5" cellspacing="0">-->
-          <!--<tr>-->
-          <!--<td class="text-right">Component</td>-->
-          <!--<td colspan="100%" class="text-center" [style]="{'margin-left': '50px'}">-->
-          <!--<span class="color-bar" >-->
-          <!--<span class="color-select" [ngStyle]="{'background': 'rgba(' + currentBackgroundTask.colorant.colorant.redV + ',' + currentBackgroundTask.colorant.colorant.greenV +',' + currentBackgroundTask.colorant.colorant.blueV + ',' + currentBackgroundTask.colorant.colorant.density +')', 'width': '20px', 'height': '150px'}"></span>-->
-          <!--</span>-->
-          <!--</td>-->
-          <!--</tr>-->
-          <!--<tr>-->
-          <!--<td class="text-right"><span class="component-name">{{currentBackgroundTask.colorant.colorant.name}}</span></td>-->
-          <!--</tr>-->
-          <!--<tr>-->
-          <!--<td>Wanted</td>-->
-          <!--</tr>-->
-          <!--<tr>-->
-          <!--<td  class="text-right"><span class="component-name">{{currentBackgroundTask.colorant.quantity}}</span> ml</td>-->
-          <!--</tr>-->
-          <!--<tr>-->
-          <!--<td>Dispensed</td>-->
-          <!--</tr>-->
-          <!--<tr>-->
-          <!--<td  class="text-right"><span class="component-name">0</span> ml</td>-->
-          <!--</tr>-->
-          <!--</table>-->
-          <!--</div>-->
-          <!--</div>-->
-        <!--</div>-->
-
-        <!--<div class="col-md-5">-->
-          <!--<div *ngIf="currentBackgroundTask != null">-->
-          <!--{{currentBackgroundTask.type}}-->
-
-          <!--<div  *ngIf="'prepare' == currentBackgroundTask.type" class="formula-animation preparing-animation text-center">-->
-          <!--<img src="../../../../assets/videos/Preparing.gif" width="250" height="250"/>-->
-          <!--</div>-->
-
-          <!--<div *ngIf="'pumping' == currentBackgroundTask.type" class="formula-animation pumping-animation text-center" [style]="{'display': 'none'}">-->
-          <!--<img src="../../../../assets/videos/Pumping.gif" width="250" height="250"/>-->
-          <!--</div>-->
-          <!--</div>-->
-        <!--</div>-->
-
-        <!--<div class="col-md-4">-->
-        <!--<div *ngFor="let colorantItem of listColorant" class="color-bar-group">-->
-        <!--<span class="color-bar" >-->
-        <!--<span class="color-select" [ngStyle]="{'background': 'rgba(' + colorantItem.colorant.redV + ',' + colorantItem.colorant.greenV +',' + colorantItem.colorant.blueV + ',' + colorantItem.colorant.density +')',-->
-        <!--'width': (colorantItem.quantity / maxColorQuantity) * 100 + '%'}">-->
-        <!--<span class="color-name">{{colorantItem.colorant.name}}</span>-->
-        <!--</span>-->
-        <!--</span>-->
-        <!--</div>-->
-        <!--</div>-->
-      <!--</div>-->
-
-      <!--<div class="row">-->
-      <!--<div class="col-md-3">-->
-
-      <!--</div>-->
-
-      <!--<div class="col-md-5">-->
-      <!--<span class="base-can-empty" *ngIf="selectProductBase != null">-->
-      <!--<span class="base-can-background">-->
-      <!--<span class="base-can-volume"-->
-      <!--[ngStyle]="{'background-color': selectProductBase.color, 'height': selectProductBase.percentage + '%'}">-->
-      <!--<span class="can-base-info">-->
-      <!--<span class="base-type">Base : {{dbItem.base.type}}</span>-->
-      <!--<span class="base-volume">{{canSize + " " + selectProductBase.unit}}</span>-->
-      <!--<span class="base-name">{{dbItem.base.name}}</span>-->
-      <!--</span>-->
-      <!--</span>-->
-      <!--</span>-->
-      <!--</span>-->
-      <!--</div>-->
-
-      <!--<div class="col-md-4">-->
-
-      <!--</div>-->
-      <!--</div>-->
     </div>
 
     <div class="modal-footer">

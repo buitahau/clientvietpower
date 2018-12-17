@@ -1,35 +1,35 @@
 import {ColorantModel} from './colorant';
 import {JobStatusService} from '../services/jobstatus/jobstatus.service';
 import {FormulaModel} from './formula';
-import {ProductBaseCanDTO} from './colorant.model';
-import {FormulaProductBaseModel} from './formula_product_base';
+import {FormulaProductBaseModel, ProductBaseCanModel} from './formula_product_base';
 
 export class DispenseDataModel {
-  private _formula: FormulaModel;
-  private _productBaseCan: ProductBaseCanDTO;
+  private _formulaProductBase: FormulaProductBaseModel;
+  private _productBaseCan: ProductBaseCanModel;
   private _canSize: number;
   private _numberOfCan: number;
 
-  constructor(formulaProductBase: FormulaProductBaseModel, productBaseCan: ProductBaseCanDTO, canSize: number, numberOfCan: number) {
+  constructor(formulaProductBase: FormulaProductBaseModel, productBaseCan: ProductBaseCanModel, canSize: number, numberOfCan: number) {
     this._formulaProductBase = formulaProductBase;
     this._productBaseCan = productBaseCan;
     this._canSize = canSize;
     this._numberOfCan = numberOfCan;
   }
 
-  get formula(): FormulaModel {
-    return this._formula;
+
+  get formulaProductBase(): FormulaProductBaseModel {
+    return this._formulaProductBase;
   }
 
-  set formula(value: FormulaModel) {
-    this._formula = value;
+  set formulaProductBase(value: FormulaProductBaseModel) {
+    this._formulaProductBase = value;
   }
 
-  get productBaseCan(): ProductBaseCanDTO {
+  get productBaseCan(): ProductBaseCanModel {
     return this._productBaseCan;
   }
 
-  set productBaseCan(value: ProductBaseCanDTO) {
+  set productBaseCan(value: ProductBaseCanModel) {
     this._productBaseCan = value;
   }
 

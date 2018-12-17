@@ -5,6 +5,8 @@ export class FormulaModel {
   private _formulaCode: string;
   private _formulaName: string;
   private _collection: CollectionModel;
+  private _createdDate: Date;
+  private _createBy: any | null;
 
   get formulaId(): number {
     return this._formulaId;
@@ -36,5 +38,22 @@ export class FormulaModel {
 
   set collection(value: CollectionModel) {
     this._collection = value;
+  }
+
+
+  get createdDate(): Date {
+    return this._createdDate;
+  }
+
+  set createdDate(value: Date) {
+    this._createdDate = value;
+  }
+
+  get createBy(): any | null {
+    return this._createBy;
+  }
+
+  set createBy(value: any | null) {
+    this._createBy = value;
   }
 }

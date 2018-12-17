@@ -35,7 +35,7 @@ export class FormulaProductBaseModel {
 export class FormulaColourantModel {
   private _formulaColourantId: number;
   private _formula: FormulaModel;
-  private _colorant: ColorantModel;
+  private _colourant: ColorantModel;
   private _quantity: number;
 
 
@@ -55,14 +55,13 @@ export class FormulaColourantModel {
     this._formula = value;
   }
 
-  get colorant(): ColorantModel {
-    return this._colorant;
+  get colourant(): ColorantModel {
+    return this._colourant;
   }
 
-  set colorant(value: ColorantModel) {
-    this._colorant = value;
+  set colourant(value: ColorantModel) {
+    this._colourant = value;
   }
-
 
   get quantity(): number {
     return this._quantity;

@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Sort} from '@angular/material';
-import {ColorantDTO} from '../../../models/colorant.model';
-import {ColorantService} from '../../../services/colorant/colorant.service';
+import {ColourantService} from '../../../services/colorant/colorant.service';
+import {ColorantModel} from '../../../models/colorant';
 
 @Component({
   selector: 'app-colorant',
@@ -13,9 +13,9 @@ export class ColorantComponent implements OnInit {
   code: string = null;
   name: string = null;
 
-  sortedData: ColorantDTO[];
+  sortedData: ColorantModel[];
 
-  constructor(private colorantService: ColorantService) {
+  constructor(private ColourantService: ColourantService) {
 
   }
 
@@ -24,7 +24,7 @@ export class ColorantComponent implements OnInit {
   }
 
   filter(code: string, name: string) {
-    this.colorantService.getListItems().subscribe((data: any) => {
+    this.ColourantService.getListItems().subscribe((data: any) => {
       this.sortedData = data;
     });
   }

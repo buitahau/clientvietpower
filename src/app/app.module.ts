@@ -24,7 +24,7 @@ import {StructureComponent} from './components/help/structure/structure.componen
 
 import {CookieService} from 'ng-cookie';
 import {IssueService} from './services/issues/issue.service';
-import {ColorantService} from './services/colorant/colorant.service';
+import {ColourantService} from './services/colorant/colorant.service';
 import {ProductService} from './services/product/product.service';
 import {CollectionService} from './services/collection/collection.service';
 import {FormulaService} from './services/formula/formula.service';
@@ -181,7 +181,7 @@ const routes: Routes = [
     ModalService,
 
     IssueService,
-    ColorantService,
+    ColourantService,
     ProductService,
     CollectionService,
     FormulaService,

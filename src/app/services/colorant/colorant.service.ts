@@ -8,7 +8,7 @@ import {HttpService} from '../../shared/http/services/http.service';
 @Injectable({
   providedIn: 'root'
 })
-export class ColorantService {
+export class ColourantService {
   constructor(private http: HttpService) {
   }
 
