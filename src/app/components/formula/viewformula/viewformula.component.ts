@@ -113,7 +113,7 @@ export class ViewFormulaComponent implements OnInit {
   }
 
   beginDispense(modalId: string): void {
-
+    this.isNotBusy = this.jobStatusService.getState() === MAP_JOB_STATE.WAITING;
     if (this.isNotBusy) {
       this.isTaskDone = false;
       const listPumpingTask = [];

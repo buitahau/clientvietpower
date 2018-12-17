@@ -1,109 +1,89 @@
-<div class="row" *ngIf="currentTask != null">
-  TEST THE DATA !!!!
-  {{currentTask.taskId}};
+<div class="task-content" *ngIf="currentTask != null">
+  <div class="row">
+    <div class="col-md-3">
+      <div *ngIf="currentBgrTask != null">
+        {{currentBgrTask.type}}
+
+        <div class="component-pumping-info" *ngIf="'pumping' == currentBgrTask.type">
+
+          <table cellpadding="5" cellspacing="0">
+            <tr>
+              <td class="text-right">Component</td>
+              <td colspan="100%" class="text-center" [style]="{'margin-left': '50px'}">
+                    <span class="color-bar" >
+                      <span class="color-select" [ngStyle]="{'background': currentBgrTask.taskData.colorant.rbgHex, 'width': '20px', 'height': '150px'}"></span>
+                    </span>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-right"><span class="component-name">{{currentBgrTask.taskData.colorant.colourantName}}</span></td>
+            </tr>
+            <tr>
+              <td>Wanted</td>
+            </tr>
+            <tr>
+              <td  class="text-right"><span class="component-name">{{currentBgrTask.taskData.quantity}}</span> ml</td>
+            </tr>
+            <tr>
+              <td>Dispensed</td>
+            </tr>
+            <tr>
+              <td  class="text-right"><span class="component-name">0</span> ml</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-5">
+      <div *ngIf="currentTask.childrenTask != null && currentTask.childrenTask.length > 0" >
+
+        {{currentBgrTask.type}}
+
+        <div  *ngIf="'prepare' == currentBgrTask.type" class="formula-animation preparing-animation text-center">
+          <img src="../../../../assets/videos/Preparing.gif" width="250" height="250"/>
+        </div>
+
+        <div *ngIf="'pumping' == currentBgrTask.type" class="formula-animation pumping-animation text-center">
+          <img src="../../../../assets/videos/Pumping.gif" width="250" height="250"/>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div *ngFor="let colorantItem of listColorant" class="color-bar-group">
+          <span class="color-bar" >
+            <span class="color-select" [ngStyle]="{'background': 'rgba(' + colorantItem.colorant.redV + ',' + colorantItem.colorant.greenV +',' + colorantItem.colorant.blueV + ',' + colorantItem.colorant.density +')',
+            'width': (colorantItem.quantity / maxColorQuantity) * 100 + '%'}">
+              <span class="color-name">{{colorantItem.colorant.name}}</span>
+            </span>
+          </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+
+    </div>
+
+    <div class="col-md-5">
+        <span class="base-can-empty" *ngIf="currentTask.taskData != null">
+          <span class="base-can-background">
+            <span class="base-can-volume"
+                  [ngStyle]="{'background-color': currentTask.taskData.productBaseCan.productBase.rbgHex, 'height': currentTask.taskData.productBaseCan.percentage + '%'}">
+              <span class="can-base-info">
+                <span class="base-type">Base : {{currentTask.taskData.productBaseCan.productBase.base.baseCode}}</span>
+                <span class="base-volume">{{currentTask.taskData.canSize + " " + currentTask.taskData.unit}}</span>
+                <span class="base-name">{{currentTask.taskData.formulaProductBase.formula.collection.collectionName}}</span>
+              </span>
+            </span>
+          </span>
+        </span>
+    </div>
+
+    <div class="col-md-4">
+
+    </div>
+  </div>
 </div>
-
-
-<!--<pp-modal *ngIf="currentTask != null" id="{{'view-dispense-task-modal-' + currentTask.taskId}}">-->
-
-
-  <!--<div class="modal-content">-->
-    <!--<div class="modal-header">-->
-      <!--<h5 class="modal-title">Dispense Job Status</h5>-->
-      <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="closeModal('view-dispense-task-modal-' + currentTask.taskId)">-->
-        <!--<span aria-hidden="true">×</span>-->
-      <!--</button>-->
-    <!--</div>-->
-
-    <!--<div class="modal-body">-->
-      <!--<div class="row">-->
-        <!--<div class="col-md-3">-->
-          <!--<div *ngIf="currentBgrTask != null">-->
-            <!--<div class="component-pumping-info" *ngIf="'pumping' == currentBgrTask.type">-->
-
-              <!--<table cellpadding="5" cellspacing="0">-->
-                <!--<tr>-->
-                  <!--<td class="text-right">Component</td>-->
-                  <!--<td colspan="100%" class="text-center" [style]="{'margin-left': '50px'}">-->
-                    <!--<span class="color-bar" >-->
-                      <!--<span class="color-select" [ngStyle]="{'background': 'rgba(' + currentBackgroundTask.colorant.colorant.redV + ',' + currentBackgroundTask.colorant.colorant.greenV +',' + currentBackgroundTask.colorant.colorant.blueV + ',' + currentBackgroundTask.colorant.colorant.density +')', 'width': '20px', 'height': '150px'}"></span>-->
-                    <!--</span>-->
-                  <!--</td>-->
-                <!--</tr>-->
-                <!--<tr>-->
-                  <!--<td class="text-right"><span class="component-name">{{currentBackgroundTask.colorant.colorant.name}}</span></td>-->
-                <!--</tr>-->
-                <!--<tr>-->
-                  <!--<td>Wanted</td>-->
-                <!--</tr>-->
-                <!--<tr>-->
-                  <!--<td  class="text-right"><span class="component-name">{{currentBackgroundTask.colorant.quantity}}</span> ml</td>-->
-                <!--</tr>-->
-                <!--<tr>-->
-                  <!--<td>Dispensed</td>-->
-                <!--</tr>-->
-                <!--<tr>-->
-                  <!--<td  class="text-right"><span class="component-name">0</span> ml</td>-->
-                <!--</tr>-->
-              <!--</table>-->
-            <!--</div>-->
-          <!--</div>-->
-        <!--</div>-->
-<!---->
-        <!--<div class="col-md-5">-->
-          <!--<div *ngIf="currentBackgroundTask != null">-->
-            <!--{{currentBackgroundTask.type}}-->
-
-            <!--<div  *ngIf="'prepare' == currentBackgroundTask.type" class="formula-animation preparing-animation text-center">-->
-              <!--<img src="../../../../assets/videos/Preparing.gif" width="250" height="250"/>-->
-            <!--</div>-->
-
-            <!--<div *ngIf="'pumping' == currentBackgroundTask.type" class="formula-animation pumping-animation text-center" [style]="{'display': 'none'}">-->
-              <!--<img src="../../../../assets/videos/Pumping.gif" width="250" height="250"/>-->
-            <!--</div>-->
-          <!--</div>-->
-        <!--</div>-->
-
-        <!--<div class="col-md-4">-->
-          <!--<div *ngFor="let colorantItem of listColorant" class="color-bar-group">-->
-            <!--<span class="color-bar" >-->
-              <!--<span class="color-select" [ngStyle]="{'background': 'rgba(' + colorantItem.colorant.redV + ',' + colorantItem.colorant.greenV +',' + colorantItem.colorant.blueV + ',' + colorantItem.colorant.density +')',-->
-              <!--'width': (colorantItem.quantity / maxColorQuantity) * 100 + '%'}">-->
-                <!--<span class="color-name">{{colorantItem.colorant.name}}</span>-->
-              <!--</span>-->
-            <!--</span>-->
-          <!--</div>-->
-        <!--</div>-->
-      <!--</div>-->
-
-      <!--<div class="row">-->
-        <!--<div class="col-md-3">-->
-
-        <!--</div>-->
-
-        <!--<div class="col-md-5">-->
-        <!--<span class="base-can-empty" *ngIf="selectProductBase != null">-->
-          <!--<span class="base-can-background">-->
-            <!--<span class="base-can-volume"-->
-                  <!--[ngStyle]="{'background-color': selectProductBase.color, 'height': selectProductBase.percentage + '%'}">-->
-              <!--<span class="can-base-info">-->
-                <!--<span class="base-type">Base : {{dbItem.base.type}}</span>-->
-                <!--<span class="base-volume">{{canSize + " " + selectProductBase.unit}}</span>-->
-                <!--<span class="base-name">{{dbItem.base.name}}</span>-->
-              <!--</span>-->
-            <!--</span>-->
-          <!--</span>-->
-        <!--</span>-->
-        <!--</div>-->
-
-        <!--<div class="col-md-4">-->
-
-        <!--</div>-->
-      <!--</div>-->
-    <!--</div>-->
-<!---->
-    <!--<div class="modal-footer">-->
-      <!--<button type="button" class="btn btn-primary" (click)="closeModal('view-dispense-task-modal-' + currentTask.taskId)">Hide</button>-->
-    <!--</div>-->
-  <!--</div>-->
-<!--</pp-modal>-->

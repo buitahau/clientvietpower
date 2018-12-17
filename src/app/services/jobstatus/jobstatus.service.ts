@@ -49,7 +49,6 @@ export class JobStatusService {
   }
 
   record(type: string, data): void {
-    console.log('record ' + type);
     if (type === 'pumping') {
       console.log('Saving this data to server !!!');
       console.log(data);

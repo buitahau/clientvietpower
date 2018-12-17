@@ -1,6 +1,5 @@
 import {ColorantModel} from './colorant';
 import {JobStatusService} from '../services/jobstatus/jobstatus.service';
-import {FormulaModel} from './formula';
 import {FormulaProductBaseModel, ProductBaseCanModel} from './formula_product_base';
 
 export class DispenseDataModel {
@@ -15,7 +14,6 @@ export class DispenseDataModel {
     this._canSize = canSize;
     this._numberOfCan = numberOfCan;
   }
-
 
   get formulaProductBase(): FormulaProductBaseModel {
     return this._formulaProductBase;
@@ -83,8 +81,8 @@ export interface TaskInterface {
   state: string;
   process: number;
   totalProcess: number;
-  childrenTask: TaskInterface[] | null;
-  parentTask: TaskInterface | null;
+  childrenTask: TaskModel[] | null;
+  parentTask: TaskModel | null;
   callBackFunction;
 
   run(jobServices: JobStatusService): void;
@@ -104,8 +102,8 @@ export class TaskModel implements TaskInterface {
   private _state: string;
   private _process: number;
   private _totalProcess: number;
-  private _childrenTask: TaskInterface[] | null;
-  private _parentTask: TaskInterface | null;
+  private _childrenTask: TaskModel[] | null;
+  private _parentTask: TaskModel | null;
   private _callBackFunction;
 
   private jobStatusService: JobStatusService;
@@ -274,19 +272,19 @@ export class TaskModel implements TaskInterface {
     this._endTime = value;
   }
 
-  get childrenTask(): TaskInterface[] | null {
+  get childrenTask(): TaskModel[] | null {
     return this._childrenTask;
   }
 
-  set childrenTask(value: TaskInterface[] | null) {
+  set childrenTask(value: TaskModel[] | null) {
     this._childrenTask = value;
   }
 
-  get parentTask(): TaskInterface | null {
+  get parentTask(): TaskModel | null {
     return this._parentTask;
   }
 
-  set parentTask(value: TaskInterface | null) {
+  set parentTask(value: TaskModel | null) {
     this._parentTask = value;
   }
 

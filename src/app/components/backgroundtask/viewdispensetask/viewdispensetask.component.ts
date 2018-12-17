@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {JobStatusService} from '../../../services/jobstatus/jobstatus.service';
-import {TaskModel} from '../../../models/job.status.model';
+import {MAP_TASK_STATE, TaskModel} from '../../../models/job.status.model';
 
 @Component({
   selector: 'app-viewdispensetask',
@@ -23,7 +23,11 @@ export class ViewDispenseTaskComponent implements OnInit {
     if (this.taskId != null && this.taskId > 0) {
       this.currentTask = this.jobStatusService.findById(this.taskId);
 
-      console.log(this.currentTask);
+      for (const task of this.currentTask.childrenTask) {
+        if (task.state === MAP_TASK_STATE.IN_PROGRESS) {
+          this.currentBgrTask = task;
+        }
+      }
     }
   }
 
