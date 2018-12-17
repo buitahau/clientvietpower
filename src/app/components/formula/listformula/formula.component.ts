@@ -40,6 +40,7 @@ export class FormulaComponent implements OnInit {
 
   initMetadata() {
     this.formulaService.postData();
+    this.formulaService.postData1();
     const me = this;
 
     this.listFormulas = [];
