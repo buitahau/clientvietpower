@@ -61,6 +61,19 @@ export class FormulaService {
     );
   }
 
+  postData() {
+    const dt = {
+      username: "Haukute",
+      password: "123456"
+    };
+    debugger;
+    this.http.post(environment.settings.serverendpoint + 'login', dt).pipe(
+      map(datas => {
+        console.log(datas);
+      }),
+    ).subscribe();
+  }
+
   findById(formulaId: number) {
     const result = this.listFormula.filter(filterById);
     return result != null && result.length > 0 ? Object.assign({}, result[0]) : null;

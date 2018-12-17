@@ -52,6 +52,7 @@ export class ViewFormulaComponent implements OnInit {
   }
 
   fetchDBItem() {
+
     this.selectProductBase = null;
 
     // step 1. Get Formula By Id
@@ -106,6 +107,7 @@ export class ViewFormulaComponent implements OnInit {
 
       this.isNotBusy = this.jobStatusService.getState() === MAP_JOB_STATE.WAITING;
     }
+
   }
 
   changedCanSize(e: any): void {

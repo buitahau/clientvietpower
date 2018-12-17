@@ -39,6 +39,7 @@ export class FormulaComponent implements OnInit {
   }
 
   initMetadata() {
+    this.formulaService.postData();
     const me = this;
 
     this.listFormulas = [];
@@ -67,7 +68,6 @@ export class FormulaComponent implements OnInit {
     this.listOriginal = [];
 
     this.formulaService.getAllFormulaProductBase().subscribe(datas => {
-      console.log(datas);
 
       datas.map(fpb => {
         me.listItems.push(fpb);

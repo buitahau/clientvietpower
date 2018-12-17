@@ -18,6 +18,7 @@ export class AppHttpInterceptor implements HttpInterceptor {
     // var token = this.authService.getToken();
     // if (token) {
       req.headers.set("Access-Control-Allow-Origin", "*");
+      req.headers.set("ContentType ", "application/json");
       authReq = req.clone({ headers: req.headers });
     // } else {
     //   authReq = req.clone();
