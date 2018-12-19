@@ -5,6 +5,7 @@ import {ProductBaseModel} from '../models/product_base';
 import {ProductModel} from '../models/product';
 import {BaseModel} from '../models/base';
 import {ColorantModel} from '../models/colorant';
+import {MachineModel, RoleModel, UserModel} from '../models/user.model';
 
 export default class ConvertModelUtils {
   static convertToFormulaObject(object: any): FormulaModel {
@@ -110,5 +111,29 @@ export default class ConvertModelUtils {
     base.baseId = object.baseId;
     base.baseName = object.baseName;
     return base;
+  }
+
+  static convertToUserModel(object: any): UserModel {
+    const user = new UserModel();
+    user.userId = object.userId;
+    user.userName = object.userName;
+    user.role = ConvertModelUtils.convertToRoleModel(object.role);
+    user.machine = ConvertModelUtils.convertToMachineModel(object.machine);
+    return user;
+  }
+
+  static convertToRoleModel(object: any): RoleModel {
+    const role = new RoleModel();
+    role.roleId = object.roleId;
+    role.roleName = object.roleName;
+    return role;
+  }
+
+  static convertToMachineModel(object: any): MachineModel {
+    const machine = new MachineModel();
+    machine.machineId = object.machineId;
+    machine.code = object.code;
+    machine.name = object.name;
+    return machine;
   }
 }

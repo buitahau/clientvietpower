@@ -1,6 +1,8 @@
 import {ColorantModel} from './colorant';
 import {JobStatusService} from '../services/jobstatus/jobstatus.service';
 import {FormulaProductBaseModel, ProductBaseCanModel} from './formula_product_base';
+import {OnInit} from '@angular/core';
+import {ChangeDetectorRef} from '@angular/core';
 
 export class DispenseDataModel {
   private _formulaProductBase: FormulaProductBaseModel;
@@ -96,7 +98,7 @@ export const MAP_TASK_STATE = {
   FINISHED: 'FINISHED'
 };
 
-export class TaskModel implements TaskInterface {
+export class TaskModel implements TaskInterface, OnInit {
   private _taskId: number;
   private _type: string;
   private _state: string;
@@ -112,9 +114,17 @@ export class TaskModel implements TaskInterface {
   private _taskData: DispenseDataModel | DispenseStepDataModel | null;
   private _startTime: Date;
   private _endTime: Date;
+  private _cd: ChangeDetectorRef;
 
+  constructor(cd: ChangeDetectorRef) {
+    this._cd = cd;
+  }
 
-  constructor(type: string, listTask: TaskModel[], taskData: DispenseDataModel | DispenseStepDataModel | null, callBackFunction) {
+  ngOnInit(): void {
+
+  }
+
+  updateState(type: string, listTask: TaskModel[], taskData: DispenseDataModel | DispenseStepDataModel | null, callBackFunction) {
     this._type = type;
     this._state = MAP_TASK_STATE.SLEEP;
     this._process = 0;
@@ -146,6 +156,8 @@ export class TaskModel implements TaskInterface {
     } else {
       this._totalProcess = this._totalProcess;
     }
+
+    this._cd.detectChanges();
   }
 
   run(jobStatusService: JobStatusService): void {
@@ -162,6 +174,7 @@ export class TaskModel implements TaskInterface {
     } else {   // fake event should be call after task done.
       const waitTime = this.totalProcess;
       setTimeout(() => {
+        this._cd.detectChanges();
         this.notify('done', this._taskData);
       }, waitTime);
     }

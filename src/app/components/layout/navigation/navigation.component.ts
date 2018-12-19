@@ -1,9 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {UserService} from '../../../services/user/user.service';
-import {UserDTO} from '../../../models/user.model';
 import {Router} from '@angular/router';
 
 import {USER_ROLE} from '../../../models/constant';
+import {UserModel} from '../../../models/user.model';
 
 @Component({
   selector: 'app-navigation',
@@ -12,7 +12,7 @@ import {USER_ROLE} from '../../../models/constant';
 })
 export class NavigationComponent implements OnInit {
   USER_ROLE = USER_ROLE;
-  currentUser: UserDTO | null;
+  currentUser: UserModel | null;
   currentMode = '';
 
   userMode = 'user';

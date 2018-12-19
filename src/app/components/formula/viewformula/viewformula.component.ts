@@ -8,6 +8,7 @@ import {JobStatusService, MAP_JOB_STATE} from '../../../services/jobstatus/jobst
 import {FormulaColourantModel, FormulaProductBaseModel, ProductBaseCanModel} from '../../../models/formula_product_base';
 import {ProductBaseService} from '../../../services/productbase/productbase.service';
 import ConvertModelUtils from '../../../utils/convert-models-utils';
+import {ChangeDetectorRef} from '@angular/core';
 
 @Component({
   selector: 'app-viewformula',
@@ -39,7 +40,8 @@ export class ViewFormulaComponent implements OnInit {
               private productBaseService: ProductBaseService,
               private modalService: ModalService,
               private jobStatusService: JobStatusService,
-              private router: Router, private route: ActivatedRoute) {
+              private router: Router, private route: ActivatedRoute,
+              private cd: ChangeDetectorRef) {
   }
 
   ngOnInit() {
@@ -121,14 +123,17 @@ export class ViewFormulaComponent implements OnInit {
       const listPumpingTask = [];
 
       for (const colorant of this.listColorant) {
-        const prepare_t = new TaskModel('prepare', null, null, null);
-        const pumping_t = new TaskModel('pumping', null, new DispenseStepDataModel(colorant.colorant,
-          colorant.quantity * this.canSize), null);
+        const prepare_t = new TaskModel(this.cd);
+        const pumping_t = new TaskModel(this.cd);
+        prepare_t.updateState('prepare', null, null, null);
+        pumping_t.updateState('pumping', null, new DispenseStepDataModel(colorant.colorant, colorant.quantity * this.canSize),
+          null);
         listPumpingTask.push(prepare_t);
         listPumpingTask.push(pumping_t);
       }
 
-      const stop_t = new TaskModel('finished', null, null, () => {
+      const stop_t = new TaskModel(this.cd);
+      stop_t.updateState('finished', null, null, () => {
         this.isTaskDone = true;
         setTimeout(() => {
           this.openModal('print-formula-modal');
@@ -137,8 +142,9 @@ export class ViewFormulaComponent implements OnInit {
 
       listPumpingTask.push(stop_t);
 
-      this.currentJob = new TaskModel('Dispense', listPumpingTask,
-        new DispenseDataModel(this.dbItem, this.selectProductBase, this.canSize, this.numberOfCan), null);
+      this.currentJob = new TaskModel(this.cd);
+      this.currentJob.updateState('Dispense', listPumpingTask, new DispenseDataModel(this.dbItem, this.selectProductBase, this.canSize,
+        this.numberOfCan), null);
       this.jobStatusService.addJob(this.currentJob);
     }
 

@@ -23,14 +23,6 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-    let currentUser = this.userService.login(this.userName, this.password);
-
-    if (currentUser != null) {
-      this.router.navigate(['/dashboard']);
-    } else {
-      alert('Username or Password is incorrect! Please try again');
-      this.userName = null;
-      this.password = null;
-    }
+    this.userService.login(this.userName, this.password);
   }
 }

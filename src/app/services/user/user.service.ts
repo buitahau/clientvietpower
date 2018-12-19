@@ -1,8 +1,11 @@
 import {Injectable} from '@angular/core';
-import {UserDTO} from '../../models/user.model';
-import {USER_ROLE} from '../../models/constant';
 import {CookieService} from 'ng-cookie';
 import {Router} from '@angular/router';
+import {map} from 'rxjs/internal/operators';
+import {environment} from '../../../environments/environment';
+import {HttpService} from '../../shared/http/services/http.service';
+import ConvertModelUtils from '../../utils/convert-models-utils';
+import {UserModel} from '../../models/user.model';
 
 @Injectable({
   providedIn: 'root'
@@ -10,50 +13,42 @@ import {Router} from '@angular/router';
 
 export class UserService {
   isLogin: boolean = false;
-  userDTO: UserDTO = null;
+  userDTO: UserModel = null;
 
-  constructor(private router: Router, private cookieService: CookieService) {
+  constructor(private http: HttpService, private router: Router, private cookieService: CookieService) {
     this.isAuthenticated();
   }
 
   isAuthenticated() {
     if (this.cookieService.get_cookie('username') && this.cookieService.get_cookie('password')) {
-      const loginUser = this.login(this.cookieService.get_cookie('username'), this.cookieService.get_cookie('password'));
-      if (loginUser != null) {
-        this.userDTO = loginUser;
-      }
+      this.login(this.cookieService.get_cookie('username'), this.cookieService.get_cookie('password'));
     }
-    return this.isLogin;
   }
 
-  login(userName: string, password: string): UserDTO {
-    if (userName === 'admin' && password === '123456') {
-      this.userDTO = {userName: 'admin', password: '123456', role: USER_ROLE.ADMIN};
-      this.isLogin = true;
-    } else if (userName === 'shop' && password === '123456') {
-      this.userDTO = {userName: 'shop', password: '123456', role: USER_ROLE.SHOP};
-      this.isLogin = true;
+  login(userName: string, password: string) {
+    const dt = {
+      userName: userName,
+      password: password,
+    };
 
-    } else if (userName === 'operator' && password === '123456') {
-      this.userDTO = {userName: 'operator', password: '123456', role: USER_ROLE.OPERATOR};
-      this.isLogin = true;
-
-    } else if (userName === 'maintenance' && password === '123456') {
-      this.userDTO = {userName: 'maintenance', password: '123456', role: USER_ROLE.MAINTENANCE};
-      this.isLogin = true;
-
-    } else {
-      this.userDTO = null;
-      this.isLogin = false;
-    }
-
-    this.cookieService.set_cookie('username', userName, 1);
-    this.cookieService.set_cookie('password', password, 1);
-
-    return this.userDTO;
+    this.http.post(environment.settings.serverendpoint + 'login_test', dt).pipe(
+      map(datas => {
+        if (datas != null) {
+          this.isLogin = true;
+          this.userDTO = ConvertModelUtils.convertToUserModel(datas);
+          this.cookieService.set_cookie('username', userName, 1);
+          this.cookieService.set_cookie('password', password, 1);
+          this.router.navigate(['/dashboard']);
+        } else {
+          this.userDTO = null;
+          this.isLogin = false;
+          alert('Username or Password is incorrect! Please try again');
+        }
+      }),
+    ).subscribe();
   }
 
-  getLoginUser(): UserDTO | null {
+  getLoginUser(): UserModel | null {
     return this.userDTO;
   }
 
