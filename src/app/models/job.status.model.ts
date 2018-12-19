@@ -114,7 +114,6 @@ export class TaskModel implements TaskInterface {
   private _endTime: Date;
 
 
-
   constructor(type: string, listTask: TaskModel[], taskData: DispenseDataModel | DispenseStepDataModel | null, callBackFunction) {
     this._type = type;
     this._state = MAP_TASK_STATE.SLEEP;

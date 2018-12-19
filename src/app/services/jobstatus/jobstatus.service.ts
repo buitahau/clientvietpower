@@ -1,5 +1,6 @@
 import {Injectable} from '@angular/core';
 import {TaskModel} from '../../models/job.status.model';
+import {Observable} from 'rxjs';
 
 export const MAP_JOB_STATE = {
   WAITING: 'WAITING',
@@ -76,12 +77,21 @@ export class JobStatusService {
     }
   }
 
-  findById(taskId: number): TaskModel {
-    for (const task of this.listTask) {
-      if (taskId === task.taskId) {
-        return task;
+  findById(taskId: number) {
+    const taskObservable = new Observable(observer => {
+      let currentTask: TaskModel = null;
+      for (const task of this.listTask) {
+        if (taskId === task.taskId) {
+          currentTask = task;
+          break;
+        }
       }
-    }
-    return null;
+
+      setTimeout(() => {
+        observer.next(currentTask);
+      }, 1);
+    });
+
+    return taskObservable;
   }
 }
