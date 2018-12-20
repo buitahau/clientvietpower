@@ -5,7 +5,7 @@ import {ProductBaseModel} from '../models/product_base';
 import {ProductModel} from '../models/product';
 import {BaseModel} from '../models/base';
 import {ColorantModel} from '../models/colorant';
-import {MachineModel, RoleModel, UserModel} from '../models/user.model';
+import {MachineColourantModel, MachineModel, RoleModel, UserModel} from '../models/user.model';
 
 export default class ConvertModelUtils {
   static convertToFormulaObject(object: any): FormulaModel {
@@ -135,5 +135,14 @@ export default class ConvertModelUtils {
     machine.code = object.code;
     machine.name = object.name;
     return machine;
+  }
+
+  static convertToMachineColourant(object: any): MachineColourantModel{
+    const item = new MachineColourantModel();
+    item.machineColourantId = object.machineColourantId;
+    item.colourant = ConvertModelUtils.convertToColourantObject(object.colourant);
+    item.machine = ConvertModelUtils.convertToMachineModel(object.machine);
+    item.quantity = object.quantity;
+    return item;
   }
 }

@@ -174,13 +174,14 @@ export class TaskModel implements TaskInterface, OnInit {
     } else {   // fake event should be call after task done.
       const waitTime = this.totalProcess;
       setTimeout(() => {
-        this._cd.detectChanges();
         this.notify('done', this._taskData);
       }, waitTime);
     }
   }
 
   notify(type: string, taskData: any) {
+    this._cd.detectChanges();
+
     if (type === 'done') {
       // update data for pumping
       if ('pumping' === this._type && this._taskData != null && this._taskData instanceof DispenseStepDataModel) {

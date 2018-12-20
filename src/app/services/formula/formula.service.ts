@@ -14,8 +14,7 @@ export class FormulaService {
   listFormula: FormulaModel[] = [];
   listFormulaProductBase: FormulaProductBaseModel[] = [];
 
-  constructor(
-    private http: HttpService) {
+  constructor(private http: HttpService) {
     this.fetchData();
   }
 

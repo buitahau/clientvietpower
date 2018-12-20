@@ -1,3 +1,5 @@
+import {ColorantModel} from './colorant';
+
 export class MachineModel {
   private _machineId: number;
   private _code: string;
@@ -88,5 +90,44 @@ export class UserModel {
 
   set machine(value: MachineModel) {
     this._machine = value;
+  }
+}
+
+export class MachineColourantModel {
+  private _machineColourantId: number;
+  private _machine: MachineModel;
+  private _colourant: ColorantModel;
+  private _quantity: number;
+
+  get machineColourantId(): number {
+    return this._machineColourantId;
+  }
+
+  set machineColourantId(value: number) {
+    this._machineColourantId = value;
+  }
+
+  get machine(): MachineModel {
+    return this._machine;
+  }
+
+  set machine(value: MachineModel) {
+    this._machine = value;
+  }
+
+  get colourant(): ColorantModel {
+    return this._colourant;
+  }
+
+  set colourant(value: ColorantModel) {
+    this._colourant = value;
+  }
+
+  get quantity(): number {
+    return this._quantity;
+  }
+
+  set quantity(value: number) {
+    this._quantity = value;
   }
 }

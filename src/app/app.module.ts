@@ -30,6 +30,7 @@ import {CollectionService} from './services/collection/collection.service';
 import {FormulaService} from './services/formula/formula.service';
 import {BaseService} from './services/base/base.service';
 import {ProductBaseService} from './services/productbase/productbase.service';
+import {MachineService} from './services/machine/machine.service';
 
 import {ModalService} from './services/boostrap/modal.service';
 import {JobStatusService} from './services/jobstatus/jobstatus.service';
@@ -186,7 +187,9 @@ const routes: Routes = [
     CollectionService,
     FormulaService,
     BaseService,
-    ProductBaseService
+    ProductBaseService,
+
+    MachineService
   ],
   bootstrap: [AppComponent]
 })
