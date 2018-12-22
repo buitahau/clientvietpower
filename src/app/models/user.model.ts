@@ -4,7 +4,8 @@ export class MachineModel {
   private _machineId: number;
   private _code: string;
   private _name: string;
-
+  private _minQuantity: number;
+  private _maxQuantity: number;
 
   get machineId(): number {
     return this._machineId;
@@ -28,6 +29,22 @@ export class MachineModel {
 
   set name(value: string) {
     this._name = value;
+  }
+
+  get minQuantity(): number {
+    return this._minQuantity;
+  }
+
+  set minQuantity(value: number) {
+    this._minQuantity = value;
+  }
+
+  get maxQuantity(): number {
+    return this._maxQuantity;
+  }
+
+  set maxQuantity(value: number) {
+    this._maxQuantity = value;
   }
 }
 
@@ -58,7 +75,6 @@ export class UserModel {
   private _userName: string;
   private _role: RoleModel;
   private _machine: MachineModel;
-
 
   get userId(): string {
     return this._userId;

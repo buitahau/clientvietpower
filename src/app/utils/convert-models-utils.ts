@@ -134,6 +134,8 @@ export default class ConvertModelUtils {
     machine.machineId = object.machineId;
     machine.code = object.code;
     machine.name = object.name;
+    machine.minQuantity = object.minQuantity;
+    machine.maxQuantity = object.maxQuantity;
     return machine;
   }
 

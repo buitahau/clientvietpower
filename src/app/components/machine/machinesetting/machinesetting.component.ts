@@ -32,8 +32,9 @@ export class MachineSettingComponent implements OnInit {
 
   fetchData() {
     this.machine = this.machineService.getCurrentMachine();
-    this.minQuantity = 400;
-    this.maxQuantity = 2000;
+    this.minQuantity = this.machine.minQuantity;
+    this.maxQuantity = this.machine.maxQuantity;
+
     this.machineService.fetchDataFromServer().subscribe((datas) => {
       this.processListColourantData(datas);
     });
@@ -86,9 +87,9 @@ export class MachineSettingComponent implements OnInit {
   updateAndSaving(id: string) {
     this.machineService.updateColourantMachineData(this.machine, this.selectedMachineColourant.colourant, this.addedAmount)
       .subscribe((datas) => {
-      this.processListColourantData(datas);
-      this.modalService.close(id);
-    });
+        this.processListColourantData(datas);
+        this.modalService.close(id);
+      });
   }
 
   openModal(id: string) {
