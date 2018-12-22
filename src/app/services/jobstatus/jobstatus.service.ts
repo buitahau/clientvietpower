@@ -1,6 +1,8 @@
 import {Injectable} from '@angular/core';
-import {TaskModel} from '../../models/job.status.model';
+import {DispenseDataModel, DispenseStepDataModel, TaskModel} from '../../models/job.status.model';
 import {Observable} from 'rxjs';
+import {MachineService} from '../machine/machine.service';
+import {UserService} from '../user/user.service';
 
 export const MAP_JOB_STATE = {
   WAITING: 'WAITING',
@@ -17,12 +19,14 @@ export class JobStatusService {
   currentTaskId: number;
   currentTask: TaskModel | null = null;
   status: string;
+  listSubcribleComponent;
 
-  constructor() {
+  constructor(private machineService: MachineService, private userService: UserService) {
     this.loadCurrentData();
     this.currentTask = null;
     this.currentTaskId = 1;
     this.status = MAP_JOB_STATE.WAITING;
+    this.listSubcribleComponent = {};
   }
 
   loadCurrentData(): void {
@@ -49,21 +53,21 @@ export class JobStatusService {
     }
   }
 
-  record(type: string, data): void {
-    if (type === 'pumping') {
-      console.log('Saving this data to server !!!');
-      console.log(data);
-    } else if (type === 'finished') {
-      console.log('This task is finished !!');
+  record(type: string, data: DispenseDataModel | DispenseStepDataModel | null): void {
+    if (type === 'pumping' && data instanceof DispenseStepDataModel) {
+      this.machineService.subtractionColourantMachine(data.colorant, data.quantity);
+
+    } else if (type === 'finished' && data instanceof DispenseDataModel) {
+      this.machineService.recordDispenseFormulaProductBase(data.formulaProductBase, data.canSize);
       this.status = MAP_JOB_STATE.WAITING;
     }
   }
 
-  addJob(job: TaskModel) {
+  addJob(job: TaskModel, component) {
     job.taskId = this.currentTaskId;
     this.listTask.push(job);
     this.currentTaskId++;
-
+    this.subcribleTheTask(job.taskId, component);
     this.update();
   }
 
@@ -77,7 +81,22 @@ export class JobStatusService {
     }
   }
 
-  findById(taskId: number) {
+  publishTask(task: TaskModel) {
+    const listComponentRegister = this.listSubcribleComponent[task.taskId];
+    if (listComponentRegister != null && listComponentRegister.length > 0) {
+      for (const item of listComponentRegister) {
+        try {
+          item.triggerUpdateTask(task);
+        } catch (e) {
+          console.log('The component does support this method !! Please implement ');
+          console.log(item);
+        }
+      }
+
+    }
+  }
+
+  subcribleTask(taskId: number, component: any) {
     const taskObservable = new Observable(observer => {
       let currentTask: TaskModel = null;
       for (const task of this.listTask) {
@@ -91,7 +110,20 @@ export class JobStatusService {
         observer.next(currentTask);
       }, 1);
     });
-
+    this.subcribleTheTask(taskId, component);
     return taskObservable;
   }
+
+  subcribleTheTask(taskId: number, component) {
+    let listComponentRegister = this.listSubcribleComponent[taskId];
+
+    if (listComponentRegister == null || listComponentRegister.length === 0) {
+      listComponentRegister = [];
+    }
+
+    listComponentRegister.push(component);
+    this.listSubcribleComponent[taskId] = listComponentRegister;
+  }
+
+
 }

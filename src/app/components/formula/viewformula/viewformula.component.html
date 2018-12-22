@@ -185,13 +185,6 @@
   </div>
 </pp-modal>
 
-
-
-
-
-
-
-
 <pp-modal id="print-formula-modal" class="modal print-formula-modal" *ngIf="isTaskDone">
   <div class="modal-content">
     <div class="modal-header">
@@ -214,8 +207,8 @@
     </div>
 
     <div class="modal-footer">
-      <button type="button" class="btn btn-default" (click)="closeModal('print-formula-modal')">Close</button>
-      <button type="button" class="btn btn-primary" >Print</button>
+      <button type="button" class="btn btn-default" (click)="closeDispenseModel()">Close</button>
+      <button type="button" class="btn btn-primary" (click)="closeDispenseModel()">Print</button>
     </div>
   </div>
 </pp-modal>

@@ -21,17 +21,25 @@ export class ViewDispenseTaskComponent implements OnInit {
 
   fetchData(): void {
     if (this.taskId != null && this.taskId > 0) {
-      this.jobStatusService.findById(this.taskId).subscribe((result) => {
+      this.jobStatusService.subcribleTask(this.taskId, this).subscribe((result) => {
         this.currentTask = result;
-        if (this.currentTask != null) {
-          for (const task of this.currentTask.childrenTask) {
-            if (task.state === MAP_TASK_STATE.IN_PROGRESS) {
-              this.currentBgrTask = task;
-            }
-          }
-        }
+        this.updateDataForCurrentTask();
       });
     }
   }
 
+  public triggerUpdateTask(taskData) {
+    this.currentTask = taskData;
+    this.updateDataForCurrentTask();
+  }
+
+  updateDataForCurrentTask() {
+    if (this.currentTask != null) {
+      for (const task of this.currentTask.childrenTask) {
+        if (task.state === MAP_TASK_STATE.IN_PROGRESS) {
+          this.currentBgrTask = task;
+        }
+      }
+    }
+  }
 }

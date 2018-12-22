@@ -123,8 +123,8 @@ export class ViewFormulaComponent implements OnInit {
       const listPumpingTask = [];
 
       for (const colorant of this.listColorant) {
-        const prepare_t = new TaskModel(this.cd);
-        const pumping_t = new TaskModel(this.cd);
+        const prepare_t = new TaskModel();
+        const pumping_t = new TaskModel();
         prepare_t.updateState('prepare', null, null, null);
         pumping_t.updateState('pumping', null, new DispenseStepDataModel(colorant.colorant, colorant.quantity * this.canSize),
           null);
@@ -132,7 +132,7 @@ export class ViewFormulaComponent implements OnInit {
         listPumpingTask.push(pumping_t);
       }
 
-      const stop_t = new TaskModel(this.cd);
+      const stop_t = new TaskModel();
       stop_t.updateState('finished', null, null, () => {
         this.isTaskDone = true;
         setTimeout(() => {
@@ -142,13 +142,17 @@ export class ViewFormulaComponent implements OnInit {
 
       listPumpingTask.push(stop_t);
 
-      this.currentJob = new TaskModel(this.cd);
+      this.currentJob = new TaskModel();
       this.currentJob.updateState('Dispense', listPumpingTask, new DispenseDataModel(this.dbItem, this.selectProductBase, this.canSize,
         this.numberOfCan), null);
-      this.jobStatusService.addJob(this.currentJob);
+      this.jobStatusService.addJob(this.currentJob, this);
     }
 
     this.openModal(modalId);
+  }
+
+  public triggerUpdateTask(taskData) {
+    this.currentJob = taskData;
   }
 
   openModal(id: string) {
@@ -157,5 +161,10 @@ export class ViewFormulaComponent implements OnInit {
 
   closeModal(id: string) {
     this.modalService.close(id);
+  }
+
+  closeDispenseModel() {
+    this.closeModal('view-dispense-task-modal');
+    this.closeModal('print-formula-modal');
   }
 }

@@ -2,7 +2,6 @@ import {ColorantModel} from './colorant';
 import {JobStatusService} from '../services/jobstatus/jobstatus.service';
 import {FormulaProductBaseModel, ProductBaseCanModel} from './formula_product_base';
 import {OnInit} from '@angular/core';
-import {ChangeDetectorRef} from '@angular/core';
 
 export class DispenseDataModel {
   private _formulaProductBase: FormulaProductBaseModel;
@@ -114,10 +113,8 @@ export class TaskModel implements TaskInterface, OnInit {
   private _taskData: DispenseDataModel | DispenseStepDataModel | null;
   private _startTime: Date;
   private _endTime: Date;
-  private _cd: ChangeDetectorRef;
 
-  constructor(cd: ChangeDetectorRef) {
-    this._cd = cd;
+  constructor() {
   }
 
   ngOnInit(): void {
@@ -156,8 +153,6 @@ export class TaskModel implements TaskInterface, OnInit {
     } else {
       this._totalProcess = this._totalProcess;
     }
-
-    this._cd.detectChanges();
   }
 
   run(jobStatusService: JobStatusService): void {
@@ -180,8 +175,6 @@ export class TaskModel implements TaskInterface, OnInit {
   }
 
   notify(type: string, taskData: any) {
-    this._cd.detectChanges();
-
     if (type === 'done') {
       // update data for pumping
       if ('pumping' === this._type && this._taskData != null && this._taskData instanceof DispenseStepDataModel) {
@@ -205,6 +198,9 @@ export class TaskModel implements TaskInterface, OnInit {
       }
 
     } else if (type === 'next-step' && taskData != null && taskData instanceof TaskModel) {
+      if (this.jobStatusService != null && this.jobStatusService !== undefined) {
+        this.jobStatusService.publishTask(this.parentTask != null ? this.parentTask : this);
+      }
       this.goToNextStep(taskData);
     }
   }
@@ -217,7 +213,7 @@ export class TaskModel implements TaskInterface, OnInit {
       nextStep.run(this.jobStatusService);
     } else {
       this._state = MAP_TASK_STATE.FINISHED;
-      this.jobStatusService.record('finished', this._taskId);
+      this.jobStatusService.record('finished', this.taskData);
     }
   }
 
