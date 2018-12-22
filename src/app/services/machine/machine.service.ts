@@ -6,6 +6,7 @@ import ConvertModelUtils from '../../utils/convert-models-utils';
 import {catchError, map} from 'rxjs/internal/operators';
 import {environment} from '../../../environments/environment';
 import {Router} from '@angular/router';
+import {ColorantModel} from '../../models/colorant';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +16,6 @@ export class MachineService {
   listMachineColourants: MachineColourantModel[];
 
   constructor(private http: HttpService, private userService: UserService, private router: Router) {
-    console.log('constructor !!!!');
     this.fetchData();
   }
 
@@ -56,4 +56,25 @@ export class MachineService {
     return this.machine;
   }
 
+  updateColourantMachineData(machine: MachineModel, colourant: ColorantModel, addedAmount: number) {
+    const dt = {
+      machine : {machineId: machine.machineId},
+      colourant : {colourantId: colourant.colourantId},
+      quantity: addedAmount
+    };
+
+    return this.http.post(environment.settings.serverendpoint + 'machine_colour/update', dt).pipe(
+      map((data: Array<any>) => {
+        const result = [];
+        if (data && data.length > 0) {
+          for (const item of data) {
+            result.push(ConvertModelUtils.convertToMachineColourant(item));
+          }
+        }
+        return result;
+      }), catchError(e => {
+        return [];
+      })
+    );
+  }
 }

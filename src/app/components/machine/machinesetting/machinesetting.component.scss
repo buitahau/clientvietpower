@@ -2,102 +2,134 @@
   margin: 30px 10px 50px 50px;
   position: relative;
   display: flex;
+}
 
-  .machine-background{
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    bottom: 0px;
-    right: 0px;
 
-    .machine-colourant-min-range,
-    .machine-colourant-max-range{
-      width: 100%;
-      position: absolute;
-      left: 0px;
-      right: 0px;
-      bottom: 0px;
-      opacity: 0.5;
-
-      .step-label{
-        position: absolute;
-        top: 0px;
-        left: -5px;
-        -webkit-transform: translate(-100%, -50%);
-        -moz-transform: translate(-100%, -50%);
-        -ms-transform: translate(-100%, -50%);
-        -o-transform: translate(-100%, -50%);
-        transform: translate(-100%, -50%);
-      }
-    }
-
-    .machine-colourant-min-range{
-      border-top: 1px dashed red;
-      .step-label{
-        color: red;
-      }
-    }
-
-    .machine-colourant-max-range{
-      border-top: 1px dashed green;
-      .step-label{
-        color: green;
-      }
-    }
+.machine-colourant-single-item{
+  .machine-colourant-group{
+    margin: 0px;
   }
 
   .machine-colourant-item{
-    width: percentage(1 / 16);
-    display: inline-block;
-    height: 400px;
-    padding-left: 5px;
-    padding-right: 5px;
-    position: relative;
+    min-width: 60px;
+  }
 
-    .machine-colourant-bgr{
+  .machine-colourant-min-range,
+  .machine-colourant-warning-range,
+  .machine-colourant-max-range{
+    .step-label{
+      display: none;
+    }
+  }
+}
+
+.machine-background{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+
+  .machine-colourant-min-range,
+  .machine-colourant-warning-range,
+  .machine-colourant-max-range{
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    opacity: 0.5;
+
+    .step-label{
       position: absolute;
       top: 0px;
-      bottom: 0px;
-      left: 15px;
-      right: 15px;
-      border: 1px solid #333333;
-
-      .machine-colourant-current-range {
-        position: absolute;
-        display: inline-block;
-        left: 1px;
-        right: 1px;
-        bottom: 0px;
-      }
+      left: -5px;
+      -webkit-transform: translate(-100%, -50%);
+      -moz-transform: translate(-100%, -50%);
+      -ms-transform: translate(-100%, -50%);
+      -o-transform: translate(-100%, -50%);
+      transform: translate(-100%, -50%);
     }
+  }
 
-    .selected-colourant-bgr{
-      position: absolute;
-      outline: 2px solid #cccccc;
-      top: -15px;
-      left: 0px;
-      right: 0px;
-      bottom: -15px;
+  .machine-colourant-warning-range{
+    border-top: 1px dashed darkorange;
+    .step-label{
+      color: darkorange;
     }
+  }
 
-    .colourant-name{
+  .machine-colourant-min-range{
+    border-top: 1px dashed red;
+    .step-label{
+      color: red;
+    }
+  }
+
+  .machine-colourant-max-range{
+    border-top: 1px dashed green;
+    .step-label{
+      color: green;
+    }
+  }
+}
+
+.machine-colourant-item{
+  width: percentage(1 / 16);
+  display: inline-block;
+  height: 400px;
+  padding-left: 5px;
+  padding-right: 5px;
+  position: relative;
+
+  .machine-colourant-bgr{
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 15px;
+    right: 15px;
+    border: 1px solid #333333;
+
+    .machine-colourant-update-range,
+    .machine-colourant-current-range {
       position: absolute;
-      width: 100%;
       display: inline-block;
-      transform: rotate(-90deg);
-      transform-origin: left center;
-      left: 50%;
+      left: 1px;
+      right: 1px;
       bottom: 0px;
-      white-space: nowrap;
     }
 
-    .colourant-code {
-      font-weight: bold;
-      font-size: 120%;
-      position: absolute;
-      bottom: 0px;
-      left: 50%;
-      transform: translate(-50%, 45px);
+    .machine-colourant-update-range{
+      opacity: 0.5;
     }
+  }
+
+  .selected-colourant-bgr{
+    position: absolute;
+    outline: 2px solid #cccccc;
+    top: -15px;
+    left: 0px;
+    right: 0px;
+    bottom: -15px;
+  }
+
+  .colourant-name{
+    position: absolute;
+    width: 100%;
+    display: inline-block;
+    transform: rotate(-90deg);
+    transform-origin: left center;
+    left: 50%;
+    bottom: 0px;
+    white-space: nowrap;
+  }
+
+  .colourant-code {
+    font-weight: bold;
+    font-size: 120%;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translate(-50%, 45px);
   }
 }
