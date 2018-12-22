@@ -21,7 +21,7 @@ export class BackgroundTaskComponent implements OnInit {
   }
 
   viewCurrentTask(jobId: number) {
-    console.log( this.jobStatusService.findById(jobId));
+    console.log( this.jobStatusService.subcribleTask(jobId, this));
   }
 
 }
