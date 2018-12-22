@@ -71,6 +71,7 @@ import {HttpModule} from './shared/http/http.module';
 import {ViewDetailComponent} from './directions/product/viewdetail/viewdetail.component';
 import {ViewDispenseTaskComponent} from './components/backgroundtask/viewdispensetask/viewdispensetask.component';
 
+import {MachineSettingComponent} from './components/machine/machinesetting/machinesetting.component';
 
 
 const routes: Routes = [
@@ -96,6 +97,9 @@ const routes: Routes = [
 
       {path: 'job-status', component: BackgroundTaskComponent},
       {path: 'maintenance', component: MaintenanceComponent},
+
+      {path: 'machine', component: MachineSettingComponent},
+
 
       {path: 'question', component: QuestionComponent},
       {path: 'help/overview', component: HelpComponent},
@@ -144,6 +148,9 @@ const routes: Routes = [
     FormulaComponent,
     ViewFormulaComponent,
     MaintenanceComponent,
+
+    // machine component
+    MachineSettingComponent,
 
     // test component
     ListComponent,

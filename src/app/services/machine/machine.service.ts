@@ -14,33 +14,48 @@ export class MachineService {
   machine: MachineModel = null;
   listMachineColourants: MachineColourantModel[];
 
-  constructor(private http: HttpService, private userService: UserService, private router: Router,) {
+  constructor(private http: HttpService, private userService: UserService, private router: Router) {
+    console.log('constructor !!!!');
     this.fetchData();
   }
 
   fetchData() {
     this.machine = this.userService.getLoginUser().machine;
+
     if (this.machine != null) {
-      this.getListColorantOfMachine(this.machine.machineId);
+      this.fetchDataFromServer().subscribe((data: any) => {
+        this.listMachineColourants = data;
+        if (this.listMachineColourants == null || this.listMachineColourants.length === 0) {
+          // this.router.navigate([`../dashboard/machine`]);
+        }
+      });
     }
   }
 
-  getListColorantOfMachine(machineId: number) {
-    return this.http.get(environment.settings.serverendpoint + 'machine/getColourants/' + machineId).pipe(
+  fetchDataFromServer() {
+    console.log('fetch data  !!!!');
+
+    return this.http.get(environment.settings.serverendpoint + 'machine/getColourants/' + this.machine.machineId).pipe(
       map((data: Array<any>) => {
         const result = [];
         if (data && data.length > 0) {
           for (const item of data) {
             result.push(ConvertModelUtils.convertToMachineColourant(item));
           }
-        } else {
-          this.router.navigate([`../dashboard/setting`]);
         }
         this.listMachineColourants = result;
       }), catchError(e => {
         return [];
       })
     );
+  }
+
+  getListColorantOfMachine() {
+    return this.listMachineColourants;
+  }
+
+  getCurrentMachine() {
+    return this.machine;
   }
 
 }

@@ -1,0 +1,29 @@
+<div class="block-header">
+  <h1>Machine Setting</h1>
+</div>
+
+<div class="row">
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <div class="card">
+      <div class="card-header">
+        Colorant Machine {{ machine.name + '(' + machine.code + ')'}}
+      </div>
+
+      <div class="card-body">
+        <div *ngFor="let machineColourant of listMachineColourant">
+          <div class="machine-colourant-item">
+            <div class="machine-background">
+              <span class="machine-colourant-max-range" [ngStyle]="{width: '100%'}"></span>
+              <span class="machine-colourant-min-range" [ngStyle]="{width: (minQuantity / maxQuantity) + '%'}"></span>
+              <span class="machine-colourant-current-range" [ngStyle]="{width: (machineColourant.quantity / maxQuantity) + '%'}"></span>
+            </div>
+
+            <div>
+              <span class="colourant-name" [ngStyle]="{color: machineColourant.colourant.rbgHex}">{{machineColourant.colourant.colourantName}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

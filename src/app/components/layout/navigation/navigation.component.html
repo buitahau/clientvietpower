@@ -25,15 +25,12 @@
       <a class="dropdown-item" [routerLink]="['../dashboard/base']">Base</a>
       <a class="dropdown-item" [routerLink]="['../dashboard/collection']">Collection</a>
       <a class="dropdown-item" [routerLink]="['../dashboard/product']">Product</a>
-      <!--<a class="dropdown-item" [routerLink]="['../dashboard/product']">Prefill Can</a>-->
 
-
-      <!--<a class="dropdown-item" [routerLink]="['../colorant']">Register</a>-->
-      <!--<a class="dropdown-item" [routerLink]="['../colorant']">Forgot Password</a>-->
-      <!--<div class="dropdown-divider"></div>-->
-      <!--<h6 class="dropdown-header">Other Pages:</h6>-->
-      <!--<a class="dropdown-item" href="404.html">404 Page</a>-->
-      <!--<a class="dropdown-item active" href="blank.html">Blank Page</a>-->
+      <ng-container *ngIf="currentUser != null && currentUser.role.roleName == USER_ROLE.SHOP">
+        <div class="dropdown-divider"></div>
+        <h6 class="dropdown-header">Machine Setting:</h6>
+        <a class="dropdown-item" [routerLink]="['../dashboard/machine']">Machine</a>
+      </ng-container>
     </div>
   </li>
 

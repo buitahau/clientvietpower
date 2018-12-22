@@ -15,7 +15,7 @@ export class ColorantComponent implements OnInit {
 
   sortedData: ColorantModel[];
 
-  constructor(private ColourantService: ColourantService) {
+  constructor(private colourantService: ColourantService) {
 
   }
 
@@ -24,7 +24,7 @@ export class ColorantComponent implements OnInit {
   }
 
   filter(code: string, name: string) {
-    this.ColourantService.getListItems().subscribe((data: any) => {
+    this.colourantService.getListItems().subscribe((data: any) => {
       this.sortedData = data;
     });
   }
