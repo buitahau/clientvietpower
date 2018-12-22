@@ -10,18 +10,22 @@
       </div>
 
       <div class="card-body">
-        <div *ngFor="let machineColourant of listMachineColourant">
-          <div class="machine-colourant-item">
-            <div class="machine-background">
-              <span class="machine-colourant-max-range" [ngStyle]="{width: '100%'}"></span>
-              <span class="machine-colourant-min-range" [ngStyle]="{width: (minQuantity / maxQuantity) + '%'}"></span>
-              <span class="machine-colourant-current-range" [ngStyle]="{width: (machineColourant.quantity / maxQuantity) + '%'}"></span>
-            </div>
-
-            <div>
-              <span class="colourant-name" [ngStyle]="{color: machineColourant.colourant.rbgHex}">{{machineColourant.colourant.colourantName}}</span>
-            </div>
+        <div class="machine-colourant-group">
+          <div class="machine-background">
+            <span class="machine-colourant-max-range" [ngStyle]="{'height': '100%'}"><span class="step-label">{{maxQuantity}}</span></span>
+            <span class="machine-colourant-min-range" [ngStyle]="{'height': (minQuantity / maxQuantity) * 100 + '%'}"><span class="step-label">{{minQuantity}}</span></span>
           </div>
+
+          <ng-container *ngFor="let machineColourant of listMachineColourant">
+            <div class="machine-colourant-item" (click)="selectMachineColourant(machineColourant.colourant.colourantId)">
+              <span *ngIf="selectedMachineColourant != null && selectedMachineColourant.colourant.colourantId == machineColourant.colourant.colourantId" class="selected-colourant-bgr"></span>
+              <span class="machine-colourant-bgr">
+                <span class="machine-colourant-current-range" [ngStyle]="{'height': (machineColourant.quantity / maxQuantity) * 100 + '%', 'background-color': machineColourant.colourant.rbgHex, 'border': '1px solid #' + machineColourant.colourant.rbgHex}"></span>
+              </span>
+              <span class="colourant-name">{{machineColourant.colourant.colourantName}}</span>
+              <span class="colourant-code" [ngStyle]="{color: machineColourant.colourant.rbgHex}">{{machineColourant.colourant.colourantCode}}</span>
+            </div>
+          </ng-container>
         </div>
       </div>
     </div>

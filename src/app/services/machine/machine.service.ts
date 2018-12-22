@@ -33,8 +33,6 @@ export class MachineService {
   }
 
   fetchDataFromServer() {
-    console.log('fetch data  !!!!');
-
     return this.http.get(environment.settings.serverendpoint + 'machine/getColourants/' + this.machine.machineId).pipe(
       map((data: Array<any>) => {
         const result = [];
@@ -43,7 +41,7 @@ export class MachineService {
             result.push(ConvertModelUtils.convertToMachineColourant(item));
           }
         }
-        this.listMachineColourants = result;
+        return result;
       }), catchError(e => {
         return [];
       })

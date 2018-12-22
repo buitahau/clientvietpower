@@ -53,8 +53,7 @@
     <div class="col-md-4">
       <div *ngFor="let colorantItem of listColorant" class="color-bar-group">
           <span class="color-bar" >
-            <span class="color-select" [ngStyle]="{'background': 'rgba(' + colorantItem.colorant.redV + ',' + colorantItem.colorant.greenV +',' + colorantItem.colorant.blueV + ',' + colorantItem.colorant.density +')',
-            'width': (colorantItem.quantity / maxColorQuantity) * 100 + '%'}">
+            <span class="color-select" [ngStyle]="{'background': colorantItem.colorant.rbgHex, 'width': (colorantItem.quantity / maxColorQuantity) * 100 + '%'}">
               <span class="color-name">{{colorantItem.colorant.name}}</span>
             </span>
           </span>
