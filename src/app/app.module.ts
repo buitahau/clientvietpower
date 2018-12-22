@@ -63,6 +63,8 @@ import {FormulaComponent} from './components/formula/listformula/formula.compone
 import {ViewFormulaComponent} from './components/formula/viewformula/viewformula.component';
 
 import {MaintenanceComponent} from './components/formula/maintenance/maintenance.component';
+import {ProductbaseComponent} from './components/setting/productbase/productbase.component';
+import {UserComponent} from './components/user/user.component';
 
 // help page !!
 import {LanguageComponent} from './components/help/language/language.component';
@@ -109,6 +111,7 @@ const routes: Routes = [
       {path: 'create', component: CreateComponent},
       {path: 'edit/:id', component: EditComponent},
       {path: 'list', component: ListComponent},
+      {path: 'pbc', component: ProductbaseComponent},
     ]
   }
 ];
