@@ -18,7 +18,7 @@ export const MAP_DISPENSE_TASK_STATE = {
   DONE: 'DONE',
 };
 
-export const MAP_DISPENSE_TASK_STEP_STATE = {
+export const MAP_DISPENSE_TASK_STEP_TYPE = {
   PREPARE: 'prepare',
   PUMPING: 'pumping',
   FINISHED: 'finished'
@@ -73,7 +73,7 @@ export class DispenseTaskService {
 
   notifyInDoneDispenseStepAction() {
     if (this.currentTaskStep != null) {
-      if (this.currentTaskStep.type === MAP_DISPENSE_TASK_STEP_STATE.PREPARE) {
+      if (this.currentTaskStep.type === MAP_DISPENSE_TASK_STEP_TYPE.PREPARE) {
         // do nothing
         this.currentTaskStep.status = MAP_DISPENSE_TASK_STATE.DONE;
         if (this.currentTaskStep.callBackFunction != null) {
@@ -81,7 +81,7 @@ export class DispenseTaskService {
         }
         this.processDispenseTask();
 
-      } else if (this.currentTaskStep.type === MAP_DISPENSE_TASK_STEP_STATE.PUMPING) {
+      } else if (this.currentTaskStep.type === MAP_DISPENSE_TASK_STEP_TYPE.PUMPING) {
         this.currentTaskStep.status = MAP_DISPENSE_TASK_STATE.DONE;
 
         this.recordDispenseTaskLog(this.currentTaskStep.type, this.currentTaskStep);
@@ -92,7 +92,7 @@ export class DispenseTaskService {
 
         this.processDispenseTask();
 
-      } else if (this.currentTaskStep.type === MAP_DISPENSE_TASK_STEP_STATE.FINISHED) {
+      } else if (this.currentTaskStep.type === MAP_DISPENSE_TASK_STEP_TYPE.FINISHED) {
         this.updateDispenseTaskStatus(MAP_DISPENSE_TASK_STATE.DONE, this.currentTask.taskId, this.currentTask.taskData.formulaProductBase,
           this.currentTask.taskData.canSize);
       }
@@ -100,7 +100,7 @@ export class DispenseTaskService {
   }
 
   recordDispenseTaskLog(type: string, data: DispenseTaskStepModel): void {
-    if (type === MAP_DISPENSE_TASK_STEP_STATE.PUMPING && data instanceof DispenseStepDataModel) {
+    if (type === MAP_DISPENSE_TASK_STEP_TYPE.PUMPING && data instanceof DispenseStepDataModel) {
       this.machineService.subtractionColourantMachine(data.colorant, data.quantity);
     }
   }
@@ -112,8 +112,8 @@ export class DispenseTaskService {
       this.currentTask.status = MAP_DISPENSE_TASK_STATE.DONE;
       this.status = MAP_DISPENSE_TASK_STATE.WAITING;
 
-      if (this.currentTask.callBackFunction != null) {
-        this.currentTask.callBackFunction(this.currentTask, this.currentTaskStep);
+      if (this.currentTaskStep.callBackFunction != null) {
+        this.currentTaskStep.callBackFunction(this.currentTask, this.currentTaskStep);
       }
     });
   }

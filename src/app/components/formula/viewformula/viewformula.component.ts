@@ -13,7 +13,7 @@ import {
 import {
   DispenseTaskService,
   MAP_DISPENSE_TASK_STATE,
-  MAP_DISPENSE_TASK_STEP_STATE
+  MAP_DISPENSE_TASK_STEP_TYPE
 } from '../../../services/dispensetask/dispensetask.service';
 import {FormulaColourantModel, FormulaProductBaseModel, ProductBaseCanModel} from '../../../models/formula_product_base';
 import {ProductBaseService} from '../../../services/productbase/productbase.service';
@@ -43,6 +43,7 @@ export class ViewFormulaComponent implements OnInit {
   // step 2. dispense colourant
   inProgress: boolean = false;
   currentTask: DispenseTaskModel | any = null;
+  currentTaskStep: DispenseTaskStepModel | any = null;
   listColorant: any[] = null;
 
   constructor(private formulaService: FormulaService,
@@ -125,10 +126,11 @@ export class ViewFormulaComponent implements OnInit {
       const listPumpingTask = [];
 
       for (const colorant of this.listColorant) {
-        const prepare_t = new DispenseTaskStepModel(MAP_DISPENSE_TASK_STEP_STATE.PREPARE, null, (newDispenseTask, newDispenseStepTask) => {
+        const prepare_t = new DispenseTaskStepModel(MAP_DISPENSE_TASK_STEP_TYPE.PREPARE, null, (newDispenseTask, newDispenseStepTask) => {
           this.updateDispenseTaskData(newDispenseTask, newDispenseStepTask);
         });
-        const pumping_t = new DispenseTaskStepModel(MAP_DISPENSE_TASK_STEP_STATE.PUMPING, new DispenseStepDataModel(colorant.colorant,
+
+        const pumping_t = new DispenseTaskStepModel(MAP_DISPENSE_TASK_STEP_TYPE.PUMPING, new DispenseStepDataModel(colorant.colorant,
           colorant.quantity * this.canSize), (newDispenseTask, newDispenseStepTask) => {
           this.updateDispenseTaskData(newDispenseTask, newDispenseStepTask);
         });
@@ -137,7 +139,7 @@ export class ViewFormulaComponent implements OnInit {
         listPumpingTask.push(pumping_t);
       }
 
-      const stop_t = new DispenseTaskStepModel(MAP_DISPENSE_TASK_STEP_STATE.FINISHED, null, (newDispenseTask, newDispenseStepTask) => {
+      const stop_t = new DispenseTaskStepModel(MAP_DISPENSE_TASK_STEP_TYPE.FINISHED, null, (newDispenseTask, newDispenseStepTask) => {
         this.updateDispenseTaskData(newDispenseTask, newDispenseStepTask);
         setTimeout(() => {
           this.openModal('print-formula-modal');
@@ -160,16 +162,21 @@ export class ViewFormulaComponent implements OnInit {
       });
     }
 
-    this.openModal(modalId);
+    setTimeout(() => {
+      this.openModal(modalId);
+    }, 200);
   }
 
   updateDispenseTaskData(newDispenseTask: DispenseTaskModel, newDispenseStepTask: DispenseTaskStepModel) {
     this.currentTask = newDispenseTask;
+    this.currentTaskStep = newDispenseStepTask;
 
     if (this.currentTask.status === MAP_DISPENSE_TASK_STATE.IN_PROGRESS) {
       this.inProgress = true;
     }
-    console.log('UPDATE DISPENSE TASK DATA !!!!!!!!!');
+
+    console.log(this.currentTask);
+    console.log(this.currentTaskStep);
   }
 
   openModal(id: string) {

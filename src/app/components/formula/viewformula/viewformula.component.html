@@ -106,7 +106,7 @@
 </div>
 
 
-<div class="row">
+<div class="row" *ngIf="dbItem != null">
   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
     <div class="card">
       <div class="card-header">
@@ -170,7 +170,7 @@
   </div>
 </div>
 
-<pp-modal id="view-dispense-task-modal" class="modal dispense-job-status-modal">
+<pp-modal id="view-dispense-task-modal" class="modal dispense-job-status-modal" [style]="{'display': 'none'}">
   <div class="modal-content">
     <div class="modal-header">
       <h5 class="modal-title">Dispense Job Status</h5>
@@ -179,7 +179,9 @@
       </button>
     </div>
     <div class="modal-body">
-      <app-viewdispensetask [taskId]="currentTask.taskId " *ngIf="currentTask != null && currentTask.taskId != null && currentTask.taskId > 0"></app-viewdispensetask>
+      <ng-container *ngIf="dbItem != null && currentTask != null && currentTask.taskId != null && currentTask.taskId > 0">
+        <app-viewdispensetask [dispenseTask]="currentTask" [dispenseStepTask]="currentTaskStep" [listColorantUsed]="listColorant" [maxColorQuantity]="maxColorQuantity"></app-viewdispensetask>
+      </ng-container>
     </div>
 
     <div class="modal-footer">
@@ -188,8 +190,7 @@
   </div>
 </pp-modal>
 
-
-<pp-modal id="print-formula-modal" class="modal print-formula-modal">
+<pp-modal id="print-formula-modal" class="modal print-formula-modal" [style]="{'display': 'none'}">
   <div class="modal-content">
     <div class="modal-header">
       <h5 class="modal-title">Print</h5>
@@ -199,7 +200,7 @@
     </div>
 
     <div class="modal-body">
-      <div class="row text-center">
+      <div class="row text-center" *ngIf="dbItem != null">
         <div class="col-md-12 formula-color-info"><h3>{{dbItem.formula.formulaCode}}</h3></div>
         <div class="col-md-12 collection-info"><h4>{{dbItem.formula.collection.collectionName}}</h4></div>
         <div class="col-md-12 shop-info"><h5>Paintshop "Demo"</h5></div>
@@ -216,3 +217,4 @@
     </div>
   </div>
 </pp-modal>
+

@@ -1,28 +1,28 @@
-<div class="task-content" *ngIf="currentTask != null">
+<div class="task-content" *ngIf="dispenseStepTask != null">
   <div class="row">
     <div class="col-md-3">
-      <div *ngIf="currentStepTask != null">
-        {{currentStepTask.type}}
+      <div *ngIf="dispenseStepTask != null">
+        {{dispenseStepTask.type}}
 
-        <div class="component-pumping-info" *ngIf="'pumping' == currentStepTask.type">
+        <div class="component-pumping-info" *ngIf="'pumping' == dispenseStepTask.type">
 
           <table cellpadding="5" cellspacing="0">
             <tr>
               <td class="text-right">Component</td>
               <td colspan="100%" class="text-center" [style]="{'margin-left': '50px'}">
                   <span class="color-bar" >
-                    <span class="color-select" [ngStyle]="{'background': currentStepTask.taskData.colorant.rbgHex, 'width': '20px', 'height': '150px'}"></span>
+                    <span class="color-select" [ngStyle]="{'background': dispenseStepTask.taskData.colorant.rbgHex, 'width': '20px', 'height': '150px'}"></span>
                   </span>
               </td>
             </tr>
             <tr>
-              <td class="text-right"><span class="component-name">{{currentStepTask.taskData.colorant.colourantName}}</span></td>
+              <td class="text-right"><span class="component-name">{{dispenseStepTask.taskData.colorant.colourantName}}</span></td>
             </tr>
             <tr>
               <td>Wanted</td>
             </tr>
             <tr>
-              <td  class="text-right"><span class="component-name">{{currentStepTask.taskData.quantity}}</span> ml</td>
+              <td  class="text-right"><span class="component-name">{{dispenseStepTask.taskData.quantity}}</span> ml</td>
             </tr>
             <tr>
               <td>Dispensed</td>
@@ -36,22 +36,24 @@
     </div>
 
     <div class="col-md-5">
-      <div *ngIf="currentTask.childrenTask != null && currentTask.childrenTask.length > 0" >
+      {{dispenseTask.type}}
 
-        {{currentStepTask.type}}
+      <div *ngIf="dispenseTask.childrenTask != null && dispenseTask.childrenTask.length > 0" >
 
-        <div  *ngIf="'prepare' == currentStepTask.type" class="formula-animation preparing-animation text-center">
+        {{dispenseStepTask.type}}
+
+        <div  *ngIf="'prepare' == dispenseStepTask.type" class="formula-animation preparing-animation text-center">
           <img src="../../../../assets/videos/Preparing.gif" width="250" height="250"/>
         </div>
 
-        <div *ngIf="'pumping' == currentStepTask.type" class="formula-animation pumping-animation text-center">
+        <div *ngIf="'pumping' == dispenseStepTask.type" class="formula-animation pumping-animation text-center">
           <img src="../../../../assets/videos/Pumping.gif" width="250" height="250"/>
         </div>
       </div>
     </div>
 
     <div class="col-md-4">
-      <div *ngFor="let colorantItem of listColorant" class="color-bar-group">
+      <div *ngFor="let colorantItem of listColorantUsed" class="color-bar-group">
           <span class="color-bar" >
             <span class="color-select" [ngStyle]="{'background': colorantItem.colorant.rbgHex, 'width': (colorantItem.quantity / maxColorQuantity) * 100 + '%'}">
               <span class="color-name">{{colorantItem.colorant.name}}</span>
@@ -67,14 +69,14 @@
     </div>
 
     <div class="col-md-5">
-        <span class="base-can-empty" *ngIf="currentTask.taskData != null">
+        <span class="base-can-empty" *ngIf="dispenseTask.taskData != null">
           <span class="base-can-background">
             <span class="base-can-volume"
-                  [ngStyle]="{'background-color': currentTask.taskData.productBaseCan.productBase.rbgHex, 'height': currentTask.taskData.productBaseCan.percentage + '%'}">
+                  [ngStyle]="{'background-color': dispenseTask.taskData.productBaseCan.productBase.rbgHex, 'height': dispenseTask.taskData.productBaseCan.percentage + '%'}">
               <span class="can-base-info">
-                <span class="base-type">Base : {{currentTask.taskData.productBaseCan.productBase.base.baseCode}}</span>
-                <span class="base-volume">{{currentTask.taskData.canSize + " " + currentTask.taskData.unit}}</span>
-                <span class="base-name">{{currentTask.taskData.formulaProductBase.formula.collection.collectionName}}</span>
+                <span class="base-type">Base : {{dispenseTask.taskData.productBaseCan.productBase.base.baseCode}}</span>
+                <span class="base-volume">{{dispenseTask.taskData.canSize + " " + dispenseTask.taskData.unit}}</span>
+                <span class="base-name">{{dispenseTask.taskData.formulaProductBase.formula.collection.collectionName}}</span>
               </span>
             </span>
           </span>
