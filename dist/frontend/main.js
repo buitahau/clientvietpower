@@ -5324,7 +5324,7 @@ __webpack_require__.r(__webpack_exports__);
 var environment = {
     production: false,
     settings: {
-        serverendpoint: 'http://ec2-34-227-171-6.compute-1.amazonaws.com:8081/demoson/server/api',
+        serverendpoint: 'http://ec2-34-227-171-6.compute-1.amazonaws.com:8081/demoson/server/api/',
         dateFormat: 'dd/MM/yyyy'
     }
 };
