@@ -18,7 +18,6 @@ import {
 import {FormulaColourantModel, FormulaProductBaseModel, ProductBaseCanModel} from '../../../models/formula_product_base';
 import {ProductBaseService} from '../../../services/productbase/productbase.service';
 import ConvertModelUtils from '../../../utils/convert-models-utils';
-import {ChangeDetectorRef} from '@angular/core';
 import {MachineService} from '../../../services/machine/machine.service';
 
 @Component({
@@ -42,17 +41,16 @@ export class ViewFormulaComponent implements OnInit {
 
 
   // step 2. dispense colourant
+  inProgress: boolean = false;
   currentTask: DispenseTaskModel | any = null;
   listColorant: any[] = null;
-  backgroundTaskState: string | any;
 
   constructor(private formulaService: FormulaService,
               private productBaseService: ProductBaseService,
               private modalService: ModalService,
               private dispenseTaskService: DispenseTaskService,
               private machineService: MachineService,
-              private router: Router, private route: ActivatedRoute,
-              private cd: ChangeDetectorRef) {
+              private router: Router, private route: ActivatedRoute) {
   }
 
   ngOnInit() {
@@ -60,7 +58,6 @@ export class ViewFormulaComponent implements OnInit {
       this.formulaProductBaseId = parseInt(params.id);
       this.listFormulaColorant = [];
       this.listProductBaseCan = [];
-      this.backgroundTaskState = null;
       this.fetchDBItem();
     });
   }
@@ -115,12 +112,7 @@ export class ViewFormulaComponent implements OnInit {
           this.canSize = this.selectProductBase.can;
         }
       });
-
-      this.dispenseTaskService.getCurrentState().subscribe((data) => {
-        this.backgroundTaskState = data;
-      });
     }
-
   }
 
   changedCanSize(e: any): void {
@@ -128,20 +120,27 @@ export class ViewFormulaComponent implements OnInit {
   }
 
   beginDispense(modalId: string): void {
-    if (this.backgroundTaskState === MAP_DISPENSE_TASK_STATE.WAITING) {
+    // create when not current task in process or task is done !!!!;
+    if (this.currentTask == null || this.currentTask.status === MAP_DISPENSE_TASK_STATE.DONE) {
       const listPumpingTask = [];
 
       for (const colorant of this.listColorant) {
-        const prepare_t = new DispenseTaskStepModel(MAP_DISPENSE_TASK_STEP_STATE.PREPARE, null, null);
+        const prepare_t = new DispenseTaskStepModel(MAP_DISPENSE_TASK_STEP_STATE.PREPARE, null, (newDispenseTask, newDispenseStepTask) => {
+          this.updateDispenseTaskData(newDispenseTask, newDispenseStepTask);
+        });
         const pumping_t = new DispenseTaskStepModel(MAP_DISPENSE_TASK_STEP_STATE.PUMPING, new DispenseStepDataModel(colorant.colorant,
-          colorant.quantity * this.canSize), null);
+          colorant.quantity * this.canSize), (newDispenseTask, newDispenseStepTask) => {
+          this.updateDispenseTaskData(newDispenseTask, newDispenseStepTask);
+        });
+
         listPumpingTask.push(prepare_t);
         listPumpingTask.push(pumping_t);
       }
 
-      const stop_t = new DispenseTaskStepModel(MAP_DISPENSE_TASK_STEP_STATE.FINISHED, null, () => {
+      const stop_t = new DispenseTaskStepModel(MAP_DISPENSE_TASK_STEP_STATE.FINISHED, null, (newDispenseTask, newDispenseStepTask) => {
+        this.updateDispenseTaskData(newDispenseTask, newDispenseStepTask);
         setTimeout(() => {
-          // this.openModal('print-formula-modal');
+          this.openModal('print-formula-modal');
         }, 500);
       });
 
@@ -164,6 +163,14 @@ export class ViewFormulaComponent implements OnInit {
     this.openModal(modalId);
   }
 
+  updateDispenseTaskData(newDispenseTask: DispenseTaskModel, newDispenseStepTask: DispenseTaskStepModel) {
+    this.currentTask = newDispenseTask;
+
+    if (this.currentTask.status === MAP_DISPENSE_TASK_STATE.IN_PROGRESS) {
+      this.inProgress = true;
+    }
+    console.log('UPDATE DISPENSE TASK DATA !!!!!!!!!');
+  }
 
   openModal(id: string) {
     this.modalService.open(id);
@@ -174,7 +181,6 @@ export class ViewFormulaComponent implements OnInit {
   }
 
   closeDispenseModel() {
-    this.closeModal('view-dispense-task-modal');
     this.closeModal('print-formula-modal');
   }
 }

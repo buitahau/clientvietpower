@@ -9,6 +9,7 @@ import {Observable} from 'rxjs';
 import {MachineService} from '../machine/machine.service';
 import {UserService} from '../user/user.service';
 import {HttpService} from '../../shared/http/services/http.service';
+import {FormulaProductBaseModel} from '../../models/formula_product_base';
 
 
 export const MAP_DISPENSE_TASK_STATE = {
@@ -71,40 +72,50 @@ export class DispenseTaskService {
   }
 
   notifyInDoneDispenseStepAction() {
-    console.log(this.currentTask);
-
     if (this.currentTaskStep != null) {
       if (this.currentTaskStep.type === MAP_DISPENSE_TASK_STEP_STATE.PREPARE) {
         // do nothing
         this.currentTaskStep.status = MAP_DISPENSE_TASK_STATE.DONE;
+        if (this.currentTaskStep.callBackFunction != null) {
+          this.currentTaskStep.callBackFunction(this.currentTask, this.currentTaskStep);
+        }
         this.processDispenseTask();
 
       } else if (this.currentTaskStep.type === MAP_DISPENSE_TASK_STEP_STATE.PUMPING) {
         this.currentTaskStep.status = MAP_DISPENSE_TASK_STATE.DONE;
 
         this.recordDispenseTaskLog(this.currentTaskStep.type, this.currentTaskStep);
+
+        if (this.currentTaskStep.callBackFunction != null) {
+          this.currentTaskStep.callBackFunction(this.currentTask, this.currentTaskStep);
+        }
+
         this.processDispenseTask();
 
       } else if (this.currentTaskStep.type === MAP_DISPENSE_TASK_STEP_STATE.FINISHED) {
-
-        this.recordDispenseTaskLog(this.currentTaskStep.type, this.currentTaskStep);
-
-        // update current data
-        this.currentTaskStep.status = MAP_DISPENSE_TASK_STATE.DONE;
-        this.currentTask.status = MAP_DISPENSE_TASK_STATE.DONE;
-        this.status = MAP_DISPENSE_TASK_STATE.WAITING;
+        this.updateDispenseTaskStatus(MAP_DISPENSE_TASK_STATE.DONE, this.currentTask.taskId, this.currentTask.taskData.formulaProductBase,
+          this.currentTask.taskData.canSize);
       }
     }
   }
 
-  recordDispenseTaskLog(type: string, data: DispenseDataModel | DispenseTaskStepModel | null): void {
+  recordDispenseTaskLog(type: string, data: DispenseTaskStepModel): void {
     if (type === MAP_DISPENSE_TASK_STEP_STATE.PUMPING && data instanceof DispenseStepDataModel) {
       this.machineService.subtractionColourantMachine(data.colorant, data.quantity);
-
-    } else if (type === MAP_DISPENSE_TASK_STEP_STATE.FINISHED && data instanceof DispenseDataModel) {
-      this.machineService.recordDispenseFormulaProductBase(MAP_DISPENSE_TASK_STATE.DONE, this.currentTask.taskId, data.formulaProductBase,
-        data.canSize).subscribe();
     }
+  }
+
+  updateDispenseTaskStatus(type: string, taskId: number, formulaProductBase: FormulaProductBaseModel, canSize: number) {
+    this.machineService.recordDispenseFormulaProductBase(type, taskId, formulaProductBase, canSize).subscribe((datas) => {
+      // update current data
+      this.currentTaskStep.status = MAP_DISPENSE_TASK_STATE.DONE;
+      this.currentTask.status = MAP_DISPENSE_TASK_STATE.DONE;
+      this.status = MAP_DISPENSE_TASK_STATE.WAITING;
+
+      if (this.currentTask.callBackFunction != null) {
+        this.currentTask.callBackFunction(this.currentTask, this.currentTaskStep);
+      }
+    });
   }
 
   findDispenseTaskById(taskId: number) {
