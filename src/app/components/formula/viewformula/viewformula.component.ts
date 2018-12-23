@@ -3,12 +3,23 @@ import {FormulaService} from '../../../services/formula/formula.service';
 import {ActivatedRoute, Router} from '@angular/router';
 import {Select2Item} from '../../../models/colorant.model';
 import {ModalService} from '../../../services/boostrap/modal.service';
-import {DispenseDataModel, DispenseStepDataModel, TaskModel} from '../../../models/job.status.model';
-import {JobStatusService, MAP_JOB_STATE} from '../../../services/jobstatus/jobstatus.service';
+import {
+  DispenseDataModel,
+  DispenseStepDataModel,
+  DispenseTaskModel,
+  DispenseTaskStepModel,
+  MachineFormulaProductBaseLogModel
+} from '../../../models/dispense.task.model';
+import {
+  DispenseTaskService,
+  MAP_DISPENSE_TASK_STATE,
+  MAP_DISPENSE_TASK_STEP_STATE
+} from '../../../services/dispensetask/dispensetask.service';
 import {FormulaColourantModel, FormulaProductBaseModel, ProductBaseCanModel} from '../../../models/formula_product_base';
 import {ProductBaseService} from '../../../services/productbase/productbase.service';
 import ConvertModelUtils from '../../../utils/convert-models-utils';
 import {ChangeDetectorRef} from '@angular/core';
+import {MachineService} from '../../../services/machine/machine.service';
 
 @Component({
   selector: 'app-viewformula',
@@ -19,7 +30,6 @@ import {ChangeDetectorRef} from '@angular/core';
 export class ViewFormulaComponent implements OnInit {
   formulaProductBaseId: number;
 
-  // formula Product Base
   dbItem: FormulaProductBaseModel = null;
   listFormulaColorant: FormulaColourantModel[] = null;
   listProductBaseCan: ProductBaseCanModel[] = null;
@@ -30,16 +40,17 @@ export class ViewFormulaComponent implements OnInit {
   numberOfCan = 1;
   listProductBase: Select2Item[] | null = null;
 
-  currentJob: TaskModel = null;
-  listColorant: any[] = null;
 
-  isNotBusy: boolean;
-  isTaskDone: boolean;
+  // step 2. dispense colourant
+  currentTask: DispenseTaskModel | any = null;
+  listColorant: any[] = null;
+  backgroundTaskState: string | any;
 
   constructor(private formulaService: FormulaService,
               private productBaseService: ProductBaseService,
               private modalService: ModalService,
-              private jobStatusService: JobStatusService,
+              private dispenseTaskService: DispenseTaskService,
+              private machineService: MachineService,
               private router: Router, private route: ActivatedRoute,
               private cd: ChangeDetectorRef) {
   }
@@ -49,12 +60,12 @@ export class ViewFormulaComponent implements OnInit {
       this.formulaProductBaseId = parseInt(params.id);
       this.listFormulaColorant = [];
       this.listProductBaseCan = [];
+      this.backgroundTaskState = null;
       this.fetchDBItem();
     });
   }
 
   fetchDBItem() {
-
     this.selectProductBase = null;
 
     // step 1. Get Formula By Id
@@ -105,9 +116,9 @@ export class ViewFormulaComponent implements OnInit {
         }
       });
 
-      this.isTaskDone = false;
-
-      this.isNotBusy = this.jobStatusService.getState() === MAP_JOB_STATE.WAITING;
+      this.dispenseTaskService.getCurrentState().subscribe((data) => {
+        this.backgroundTaskState = data;
+      });
     }
 
   }
@@ -117,43 +128,42 @@ export class ViewFormulaComponent implements OnInit {
   }
 
   beginDispense(modalId: string): void {
-    this.isNotBusy = this.jobStatusService.getState() === MAP_JOB_STATE.WAITING;
-    if (this.isNotBusy) {
-      this.isTaskDone = false;
+    if (this.backgroundTaskState === MAP_DISPENSE_TASK_STATE.WAITING) {
       const listPumpingTask = [];
 
       for (const colorant of this.listColorant) {
-        const prepare_t = new TaskModel();
-        const pumping_t = new TaskModel();
-        prepare_t.updateState('prepare', null, null, null);
-        pumping_t.updateState('pumping', null, new DispenseStepDataModel(colorant.colorant, colorant.quantity * this.canSize),
-          null);
+        const prepare_t = new DispenseTaskStepModel(MAP_DISPENSE_TASK_STEP_STATE.PREPARE, null, null);
+        const pumping_t = new DispenseTaskStepModel(MAP_DISPENSE_TASK_STEP_STATE.PUMPING, new DispenseStepDataModel(colorant.colorant,
+          colorant.quantity * this.canSize), null);
         listPumpingTask.push(prepare_t);
         listPumpingTask.push(pumping_t);
       }
 
-      const stop_t = new TaskModel();
-      stop_t.updateState('finished', null, null, () => {
-        this.isTaskDone = true;
+      const stop_t = new DispenseTaskStepModel(MAP_DISPENSE_TASK_STEP_STATE.FINISHED, null, () => {
         setTimeout(() => {
-          this.openModal('print-formula-modal');
+          // this.openModal('print-formula-modal');
         }, 500);
       });
 
       listPumpingTask.push(stop_t);
 
-      this.currentJob = new TaskModel();
-      this.currentJob.updateState('Dispense', listPumpingTask, new DispenseDataModel(this.dbItem, this.selectProductBase, this.canSize,
-        this.numberOfCan), null);
-      this.jobStatusService.addJob(this.currentJob, this);
+      this.currentTask = new DispenseTaskModel('Dispense', listPumpingTask, new DispenseDataModel(this.dbItem, this.selectProductBase,
+        this.canSize, this.numberOfCan), null);
+
+      this.machineService.recordDispenseFormulaProductBase(MAP_DISPENSE_TASK_STATE.IN_PROGRESS, this.currentTask.taskId,
+        this.currentTask.taskData.formulaProductBase, this.currentTask.taskData.canSize).subscribe((data: any) => {
+        const item: MachineFormulaProductBaseLogModel = ConvertModelUtils.convertToDispenseFormulaProductBase(data);
+        this.currentTask.taskId = item.machineFormulaProductBaseId;
+        this.currentTask.status = item.status;
+        this.currentTask.startTime = item.createdDate;
+
+        this.dispenseTaskService.runDispenseTask(this.currentTask);
+      });
     }
 
     this.openModal(modalId);
   }
 
-  public triggerUpdateTask(taskData) {
-    this.currentJob = taskData;
-  }
 
   openModal(id: string) {
     this.modalService.open(id);

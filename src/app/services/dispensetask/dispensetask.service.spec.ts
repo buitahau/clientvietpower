@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 
-import { JobstatusService } from './jobstatus.service';
+import { DispenseTaskService } from './dispensetask.service';
 
-describe('JobstatusService', () => {
+describe('DispenseTaskService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: JobstatusService = TestBed.get(JobstatusService);
+    const service: DispenseTaskService = TestBed.get(DispenseTaskService);
     expect(service).toBeTruthy();
   });
 });

@@ -59,8 +59,8 @@ export class MachineService {
 
   updateColourantMachineData(machine: MachineModel, colourant: ColorantModel, addedAmount: number) {
     const dt = {
-      machine : {machineId: machine.machineId},
-      colourant : {colourantId: colourant.colourantId},
+      machine: {machineId: machine.machineId},
+      colourant: {colourantId: colourant.colourantId},
       quantity: addedAmount
     };
 
@@ -82,25 +82,46 @@ export class MachineService {
   subtractionColourantMachine(colorant: ColorantModel, quantity: number) {
     const machine = this.getCurrentMachine();
     const dt = {
-      machine : {machineId: machine.machineId},
-      colourant : {colourantId: colorant.colourantId},
+      machine: {machineId: machine.machineId},
+      colourant: {colourantId: colorant.colourantId},
       quantity: quantity
     };
-
     this.http.post(environment.settings.serverendpoint + 'machine_colour/subtraction', dt).pipe().subscribe();
   }
 
-  recordDispenseFormulaProductBase(formulaProductBase: FormulaProductBaseModel, quantity: number) {
+  recordDispenseFormulaProductBase(status: string, taskId, formulaProductBase: FormulaProductBaseModel, quantity: number) {
     const machine = this.getCurrentMachine();
     const user = this.userService.getLoginUser();
 
     const dt = {
-      formulaProductBase : {formulaProductBaseId: formulaProductBase.formulaProductBaseId},
-      user : {userId: user.userId},
+      machineFormulaProductBaseId : taskId,
+      formulaProductBase: {formulaProductBaseId: formulaProductBase.formulaProductBaseId},
+      user: {userId: user.userId},
+      machine: {machineId: machine.machineId},
       quantity: quantity,
-      machine : {machineId: machine.machineId}
+      status : status
     };
 
-    this.http.post(environment.settings.serverendpoint + 'machine_formula/record', dt).pipe().subscribe();
+    return this.http.post(environment.settings.serverendpoint + 'machine_formula/record', dt);
+  }
+
+  findAllDispenseTask() {
+    return this.http.get(environment.settings.serverendpoint + 'machine_formula/findAll/' + this.machine.machineId).pipe(
+      map((data: Array<any>) => {
+        const listDispenseTaskLog = [];
+        if (data) {
+          for (const item of data) {
+            listDispenseTaskLog.push(ConvertModelUtils.convertToDispenseFormulaProductBase(item));
+          }
+        }
+        return listDispenseTaskLog;
+      }), catchError(e => {
+        return [];
+      })
+    );
+  }
+
+  findDispenseTaskById(taskId: number) {
+    return this.http.get(environment.settings.serverendpoint + 'machine_formula/findById/' + taskId);
   }
 }

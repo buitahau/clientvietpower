@@ -1,5 +1,5 @@
 <div class="block-header">
-  <h1>Job status</h1>
+  <h1>Dispense History</h1>
 </div>
 
 
@@ -7,45 +7,35 @@
   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
     <div class="card">
       <div class="card-header">
-        List Job
+        Dispense History
       </div>
 
       <div class="card-body">
         <div class="table-responsive">
-          <table class="table table-bordered" matSort (matSortChange)="sortData($event)" > <!---->
+          <table class="table table-bordered" matSort (matSortChange)="sortData($event)">
             <tr>
               <th mat-sort-header="jobStatusId">#Id</th>
-              <th mat-sort-header="type">Type</th>
-              <th mat-sort-header="status">Status</th>
-              <th mat-sort-header="process">Process</th>
-              <th mat-sort-header="startTime">Start Time</th>
-              <th mat-sort-header="stopTime">End Time</th>
+              <th mat-sort-header="type">Formula Name</th>
+              <th mat-sort-header="status">Collection</th>
+              <th mat-sort-header="process">Product</th>
+              <th mat-sort-header="canSize">Can Size</th>
+              <th mat-sort-header="stopTime">Status</th>
+              <th mat-sort-header="createdDate">Created Time</th>
+              <th mat-sort-header="finishedDate">Finished Time</th>
               <th>Action</th>
             </tr>
 
             <tr *ngFor="let item of listBackgroundTask">
-              <td>{{item.jobStatusId}}</td>
-              <td>{{item.type}}</td>
+              <td>{{item.machineFormulaProductBaseId}}</td>
+              <td>{{item.formulaProductBase.formula.formulaName}}</td>
+              <td>{{item.formulaProductBase.formula.collection.collectionName}}</td>
+              <td>{{item.formulaProductBase.productBase.product.productName}}</td>
+              <td>{{item.canSize}} L</td>
               <td>{{item.status}}</td>
-              <td>{{process}} / 100%</td>
-              <td>{{item.startTime | date: 'hh:mm:ss dd/MM/yyyy'}}</td>
-              <td>{{item.stopTime |  date: 'hh:mm:ss dd/MM/yyyy'}}</td>
-              <td><span (click)="viewCurrentTask(item.jobStatusId)"><i class="fas fa-info-circle"></i></span></td>
+              <td>{{item.createdDate | date: 'hh:mm:ss dd/MM/yyyy'}}</td>
+              <td>{{item.finishedDate | date: 'hh:mm:ss dd/MM/yyyy'}}</td>
+              <td><span (click)="viewCurrentTask(item.machineFormulaProductBaseId)"><i class="fas fa-info-circle"></i></span></td>
             </tr>
-
-            <!--<tfoot>-->
-            <!--<tr>-->
-              <!--<td colspan="100%">-->
-                <!--Show {{pagenationMode.listItems.length}} of  {{pagenationMode.totalItem}} items.-->
-
-                <!--<span class="pagenation-footer" style="float: right">-->
-                  <!--<span *ngIf="pagenationMode.pageIndex > 0" (click)="goToPage(pagenationMode.pageIndex - 1)" class="btn-action">previous</span>-->
-                  <!--<span>{{pagenationMode.pageIndex + 1}}</span>-->
-                  <!--<span *ngIf="pagenationMode.pageIndex * pagenationMode.maxPageItem + pagenationMode.maxPageItem < pagenationMode.totalItem"  (click)="goToPage(pagenationMode.pageIndex + 1)" class="btn-action">next</span>-->
-                <!--</span>-->
-              <!--</td>-->
-            <!--</tr>-->
-            <!--</tfoot>-->
           </table>
         </div>
       </div>

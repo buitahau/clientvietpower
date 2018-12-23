@@ -174,9 +174,8 @@
         <span aria-hidden="true">×</span>
       </button>
     </div>
-
     <div class="modal-body">
-      <app-viewdispensetask [taskId]="currentJob.taskId " *ngIf="currentJob != null && currentJob.taskId != null && currentJob.taskId > 0"></app-viewdispensetask>
+      <app-viewdispensetask [taskId]="currentTask.taskId " *ngIf="currentTask != null && currentTask.taskId != null && currentTask.taskId > 0"></app-viewdispensetask>
     </div>
 
     <div class="modal-footer">
@@ -185,31 +184,30 @@
   </div>
 </pp-modal>
 
-<pp-modal id="print-formula-modal" class="modal print-formula-modal" *ngIf="isTaskDone">
-  <div class="modal-content">
-    <div class="modal-header">
-      <h5 class="modal-title">Print</h5>
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="closeModal('print-formula-modal')">
-        <span aria-hidden="true">×</span>
-      </button>
-    </div>
+<!--<pp-modal id="print-formula-modal" class="modal print-formula-modal">-->
+  <!--<div class="modal-content">-->
+    <!--<div class="modal-header">-->
+      <!--<h5 class="modal-title">Print</h5>-->
+      <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="closeModal('print-formula-modal')">-->
+        <!--<span aria-hidden="true">×</span>-->
+      <!--</button>-->
+    <!--</div>-->
 
-    <div class="modal-body">
-      <div class="row text-center">
-        <div class="col-md-12 formula-color-info"><h3>{{dbItem.formula.formulaCode}}</h3></div>
-        <div class="col-md-12 collection-info"><h4>{{dbItem.formula.collection.collectionName}}</h4></div>
-        <div class="col-md-12 shop-info"><h5>Paintshop "Demo"</h5></div>
-        <div class="col-md-12 street-info"><h5>Demostreet 1</h5></div>
-        <div class="col-md-12 ville-info"><h5>Demo ville</h5></div>
-        <div class="col-md-12 substrate-info"><p>Substrate recommendation Universal primer Grey</p></div>
-        <div class="col-md-12 bar-code-info "><p><span class="bar-code-sample"></span></p></div>
-      </div>
-    </div>
+    <!--<div class="modal-body">-->
+      <!--<div class="row text-center">-->
+        <!--<div class="col-md-12 formula-color-info"><h3>{{dbItem.formula.formulaCode}}</h3></div>-->
+        <!--<div class="col-md-12 collection-info"><h4>{{dbItem.formula.collection.collectionName}}</h4></div>-->
+        <!--<div class="col-md-12 shop-info"><h5>Paintshop "Demo"</h5></div>-->
+        <!--<div class="col-md-12 street-info"><h5>Demostreet 1</h5></div>-->
+        <!--<div class="col-md-12 ville-info"><h5>Demo ville</h5></div>-->
+        <!--<div class="col-md-12 substrate-info"><p>Substrate recommendation Universal primer Grey</p></div>-->
+        <!--<div class="col-md-12 bar-code-info "><p><span class="bar-code-sample"></span></p></div>-->
+      <!--</div>-->
+    <!--</div>-->
 
-    <div class="modal-footer">
-      <button type="button" class="btn btn-default" (click)="closeDispenseModel()">Close</button>
-      <button type="button" class="btn btn-primary" (click)="closeDispenseModel()">Print</button>
-    </div>
-  </div>
-</pp-modal>
-
+    <!--<div class="modal-footer">-->
+      <!--<button type="button" class="btn btn-default" (click)="closeDispenseModel()">Close</button>-->
+      <!--<button type="button" class="btn btn-primary" (click)="closeDispenseModel()">Print</button>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</pp-modal>-->

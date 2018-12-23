@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {JobStatusService} from '../../../services/jobstatus/jobstatus.service';
-import {MAP_TASK_STATE, TaskModel} from '../../../models/job.status.model';
+import {DispenseTaskService} from '../../../services/dispensetask/dispensetask.service';
+import {DispenseTaskModel, DispenseTaskStepModel, MAP_TASK_STATE} from '../../../models/dispense.task.model';
 
 @Component({
   selector: 'app-viewdispensetask',
@@ -9,10 +9,10 @@ import {MAP_TASK_STATE, TaskModel} from '../../../models/job.status.model';
 })
 export class ViewDispenseTaskComponent implements OnInit {
   @Input() taskId: number;
-  currentTask: TaskModel | any;
-  currentBgrTask: TaskModel | null;
+  currentTask: DispenseTaskModel | any;
+  currentStepTask: DispenseTaskStepModel | null;
 
-  constructor(private jobStatusService: JobStatusService) {
+  constructor(private dispenseTaskService: DispenseTaskService) {
   }
 
   ngOnInit() {
@@ -21,23 +21,18 @@ export class ViewDispenseTaskComponent implements OnInit {
 
   fetchData(): void {
     if (this.taskId != null && this.taskId > 0) {
-      this.jobStatusService.subcribleTask(this.taskId, this).subscribe((result) => {
+      this.dispenseTaskService.findDispenseTaskById(this.taskId).subscribe((result) => {
         this.currentTask = result;
         this.updateDataForCurrentTask();
       });
     }
   }
 
-  public triggerUpdateTask(taskData) {
-    this.currentTask = taskData;
-    this.updateDataForCurrentTask();
-  }
-
   updateDataForCurrentTask() {
     if (this.currentTask != null) {
       for (const task of this.currentTask.childrenTask) {
-        if (task.state === MAP_TASK_STATE.IN_PROGRESS) {
-          this.currentBgrTask = task;
+        if (task.status === MAP_TASK_STATE.IN_PROGRESS) {
+          this.currentStepTask = task;
         }
       }
     }

@@ -1,28 +1,28 @@
 <div class="task-content" *ngIf="currentTask != null">
   <div class="row">
     <div class="col-md-3">
-      <div *ngIf="currentBgrTask != null">
-        {{currentBgrTask.type}}
+      <div *ngIf="currentStepTask != null">
+        {{currentStepTask.type}}
 
-        <div class="component-pumping-info" *ngIf="'pumping' == currentBgrTask.type">
+        <div class="component-pumping-info" *ngIf="'pumping' == currentStepTask.type">
 
           <table cellpadding="5" cellspacing="0">
             <tr>
               <td class="text-right">Component</td>
               <td colspan="100%" class="text-center" [style]="{'margin-left': '50px'}">
                   <span class="color-bar" >
-                    <span class="color-select" [ngStyle]="{'background': currentBgrTask.taskData.colorant.rbgHex, 'width': '20px', 'height': '150px'}"></span>
+                    <span class="color-select" [ngStyle]="{'background': currentStepTask.taskData.colorant.rbgHex, 'width': '20px', 'height': '150px'}"></span>
                   </span>
               </td>
             </tr>
             <tr>
-              <td class="text-right"><span class="component-name">{{currentBgrTask.taskData.colorant.colourantName}}</span></td>
+              <td class="text-right"><span class="component-name">{{currentStepTask.taskData.colorant.colourantName}}</span></td>
             </tr>
             <tr>
               <td>Wanted</td>
             </tr>
             <tr>
-              <td  class="text-right"><span class="component-name">{{currentBgrTask.taskData.quantity}}</span> ml</td>
+              <td  class="text-right"><span class="component-name">{{currentStepTask.taskData.quantity}}</span> ml</td>
             </tr>
             <tr>
               <td>Dispensed</td>
@@ -38,13 +38,13 @@
     <div class="col-md-5">
       <div *ngIf="currentTask.childrenTask != null && currentTask.childrenTask.length > 0" >
 
-        {{currentBgrTask.type}}
+        {{currentStepTask.type}}
 
-        <div  *ngIf="'prepare' == currentBgrTask.type" class="formula-animation preparing-animation text-center">
+        <div  *ngIf="'prepare' == currentStepTask.type" class="formula-animation preparing-animation text-center">
           <img src="../../../../assets/videos/Preparing.gif" width="250" height="250"/>
         </div>
 
-        <div *ngIf="'pumping' == currentBgrTask.type" class="formula-animation pumping-animation text-center">
+        <div *ngIf="'pumping' == currentStepTask.type" class="formula-animation pumping-animation text-center">
           <img src="../../../../assets/videos/Pumping.gif" width="250" height="250"/>
         </div>
       </div>

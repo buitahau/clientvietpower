@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import {JobStatusService} from '../../services/jobstatus/jobstatus.service';
-import {TaskModel} from '../../models/job.status.model';
+import {Component, OnInit} from '@angular/core';
+import {DispenseTaskService} from '../../services/dispensetask/dispensetask.service';
+import {DispenseTaskModel, MachineFormulaProductBaseLogModel} from '../../models/dispense.task.model';
+import {MachineService} from '../../services/machine/machine.service';
 
 @Component({
   selector: 'app-backgroundtask',
@@ -9,19 +10,25 @@ import {TaskModel} from '../../models/job.status.model';
 })
 export class BackgroundTaskComponent implements OnInit {
 
-  listBackgroundTask: TaskModel [];
-  constructor(private jobStatusService: JobStatusService) { }
+  listBackgroundTask: MachineFormulaProductBaseLogModel [] | any;
+
+  constructor(private machineService: MachineService) {
+  }
 
   ngOnInit() {
     this.loadData();
   }
 
   loadData() {
-    this.listBackgroundTask = this.jobStatusService.getListJob();
+    this.machineService.findAllDispenseTask().subscribe((datas: MachineFormulaProductBaseLogModel []) => {
+      this.listBackgroundTask = datas;
+      console.log(this.listBackgroundTask);
+    });
   }
 
-  viewCurrentTask(jobId: number) {
-    console.log( this.jobStatusService.subcribleTask(jobId, this));
-  }
+  viewCurrentTask(taskId: number) {
+    this.machineService.findDispenseTaskById(taskId).subscribe((datas) => {
 
+    });
+  }
 }

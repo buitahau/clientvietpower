@@ -6,6 +6,7 @@ import {ProductModel} from '../models/product';
 import {BaseModel} from '../models/base';
 import {ColorantModel} from '../models/colorant';
 import {MachineColourantModel, MachineModel, RoleModel, UserModel} from '../models/user.model';
+import {MachineFormulaProductBaseLogModel} from '../models/dispense.task.model';
 
 export default class ConvertModelUtils {
   static convertToFormulaObject(object: any): FormulaModel {
@@ -117,8 +118,8 @@ export default class ConvertModelUtils {
     const user = new UserModel();
     user.userId = object.userId;
     user.userName = object.userName;
-    user.role = ConvertModelUtils.convertToRoleModel(object.role);
-    user.machine = ConvertModelUtils.convertToMachineModel(object.machine);
+    user.role = object.role != null ? ConvertModelUtils.convertToRoleModel(object.role) : null;
+    user.machine = object.machine != null ? ConvertModelUtils.convertToMachineModel(object.machine) : null;
     return user;
   }
 
@@ -139,12 +140,25 @@ export default class ConvertModelUtils {
     return machine;
   }
 
-  static convertToMachineColourant(object: any): MachineColourantModel{
+  static convertToMachineColourant(object: any): MachineColourantModel {
     const item = new MachineColourantModel();
     item.machineColourantId = object.machineColourantId;
     item.colourant = ConvertModelUtils.convertToColourantObject(object.colourant);
     item.machine = ConvertModelUtils.convertToMachineModel(object.machine);
     item.quantity = object.quantity;
+    return item;
+  }
+
+  static convertToDispenseFormulaProductBase(object: any): MachineFormulaProductBaseLogModel {
+    const item = new MachineFormulaProductBaseLogModel();
+    item.machineFormulaProductBaseId = object.machineFormulaProductBaseId;
+    item.formulaProductBase = ConvertModelUtils.convertToFormulaProductBaseObject(object.formulaProductBase);
+    item.machine = ConvertModelUtils.convertToMachineModel(object.machine);
+    item.user = ConvertModelUtils.convertToUserModel(object.user);
+    item.canSize = object.quantity;
+    item.createdDate = object.createdDate;
+    item.finishedDate = object.finishedDate;
+    item.status = object.status;
     return item;
   }
 }

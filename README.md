@@ -1,4 +1,4 @@
-3 mode:
+ng bu3 mode:
 
 # Development
 

@@ -33,7 +33,7 @@ import {ProductBaseService} from './services/productbase/productbase.service';
 import {MachineService} from './services/machine/machine.service';
 
 import {ModalService} from './services/boostrap/modal.service';
-import {JobStatusService} from './services/jobstatus/jobstatus.service';
+import {DispenseTaskService} from './services/dispensetask/dispensetask.service';
 // import direction
 
 import {ModalComponent} from './directions/boostrap/modal/modal.component';
@@ -72,6 +72,7 @@ import {ViewDetailComponent} from './directions/product/viewdetail/viewdetail.co
 import {ViewDispenseTaskComponent} from './components/backgroundtask/viewdispensetask/viewdispensetask.component';
 
 import {MachineSettingComponent} from './components/machine/machinesetting/machinesetting.component';
+import {ProductbaseComponent} from './components/setting/productbase/productbase.component';
 
 
 const routes: Routes = [
@@ -142,6 +143,7 @@ const routes: Routes = [
     BaseComponent,
     CollectionComponent,
     ProductComponent,
+    ProductbaseComponent,
     ViewDetailComponent,
 
     // formula component
@@ -185,7 +187,7 @@ const routes: Routes = [
   ],
   providers: [
     CookieService,
-    JobStatusService,
+    DispenseTaskService,
     ModalService,
 
     IssueService,
