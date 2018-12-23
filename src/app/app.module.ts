@@ -109,7 +109,7 @@ const routes: Routes = [
 
       {path: 'create', component: CreateComponent},
       {path: 'edit/:id', component: EditComponent},
-      {path: 'list', component: ListComponent},
+      {path: 'list', component: ListComponent}
     ]
   }
 ];
