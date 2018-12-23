@@ -5,7 +5,8 @@ import {map} from 'rxjs/internal/operators';
 import {environment} from '../../../environments/environment';
 import {HttpService} from '../../shared/http/services/http.service';
 import ConvertModelUtils from '../../utils/convert-models-utils';
-import {UserModel} from '../../models/user.model';
+import {MachineColourantModel, UserModel} from '../../models/user.model';
+import {MachineService} from '../machine/machine.service';
 
 @Injectable({
   providedIn: 'root'
@@ -53,10 +54,14 @@ export class UserService {
   }
 
   logOut() {
+    this.clearData();
+    this.router.navigate([`../login`]);
+  }
+
+  clearData() {
     this.userDTO = null;
     this.isLogin = false;
     this.cookieService.delete_cookie('username');
     this.cookieService.delete_cookie('token');
-    this.router.navigate([`../login`]);
   }
 }

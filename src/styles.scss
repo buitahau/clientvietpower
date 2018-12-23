@@ -246,11 +246,15 @@ footer.sticky-footer{
     height: 26px;
     min-height: 26px;
     margin-bottom: 10px;
+
+    display: inline-block;
+    width: 100%;
   }
 
   span.color-name {
     padding-left: 6px;
     white-space: nowrap;
+    display: inline-block;
     //text-shadow: -1px -1px 1px #fff;
   }
 }

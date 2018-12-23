@@ -1,0 +1,14 @@
+.color-bar{
+  width: 100%;
+  display: inline-block;
+  position: relative;
+  height: 1em;
+
+  .color-select{
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+  }
+}

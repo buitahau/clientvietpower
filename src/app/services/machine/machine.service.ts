@@ -26,9 +26,6 @@ export class MachineService {
     if (this.machine != null) {
       this.fetchDataFromServer().subscribe((data: any) => {
         this.listMachineColourants = data;
-        if (this.listMachineColourants == null || this.listMachineColourants.length === 0) {
-          // this.router.navigate([`../dashboard/machine`]);
-        }
       });
     }
   }
@@ -94,12 +91,12 @@ export class MachineService {
     const user = this.userService.getLoginUser();
 
     const dt = {
-      machineFormulaProductBaseId : taskId,
+      machineFormulaProductBaseId: taskId,
       formulaProductBase: {formulaProductBaseId: formulaProductBase.formulaProductBaseId},
       user: {userId: user.userId},
       machine: {machineId: machine.machineId},
       quantity: quantity,
-      status : status
+      status: status
     };
 
     return this.http.post(environment.settings.serverendpoint + 'machine_formula/record', dt);

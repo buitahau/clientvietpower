@@ -10,6 +10,7 @@
             <tr>
               <td class="text-right">Component</td>
               <td colspan="100%" class="text-center" [style]="{'margin-left': '50px'}">
+
                   <span class="color-bar" >
                     <span class="color-select" [ngStyle]="{'background': dispenseStepTask.taskData.colorant.rbgHex, 'width': '20px', 'height': '150px'}"></span>
                   </span>
@@ -36,11 +37,7 @@
     </div>
 
     <div class="col-md-5">
-      {{dispenseTask.type}}
-
       <div *ngIf="dispenseTask.childrenTask != null && dispenseTask.childrenTask.length > 0" >
-
-        {{dispenseStepTask.type}}
 
         <div  *ngIf="'prepare' == dispenseStepTask.type" class="formula-animation preparing-animation text-center">
           <img src="../../../../assets/videos/Preparing.gif" width="250" height="250"/>
@@ -48,6 +45,10 @@
 
         <div *ngIf="'pumping' == dispenseStepTask.type" class="formula-animation pumping-animation text-center">
           <img src="../../../../assets/videos/Pumping.gif" width="250" height="250"/>
+        </div>
+
+        <div *ngIf="'finished' == dispenseStepTask.type" class="text-center">
+          FINISHED
         </div>
       </div>
     </div>
@@ -75,7 +76,7 @@
                   [ngStyle]="{'background-color': dispenseTask.taskData.productBaseCan.productBase.rbgHex, 'height': dispenseTask.taskData.productBaseCan.percentage + '%'}">
               <span class="can-base-info">
                 <span class="base-type">Base : {{dispenseTask.taskData.productBaseCan.productBase.base.baseCode}}</span>
-                <span class="base-volume">{{dispenseTask.taskData.canSize + " " + dispenseTask.taskData.unit}}</span>
+                <span class="base-volume">{{dispenseTask.taskData.canSize + " " + dispenseTask.taskData.productBaseCan.unit}}</span>
                 <span class="base-name">{{dispenseTask.taskData.formulaProductBase.formula.collection.collectionName}}</span>
               </span>
             </span>

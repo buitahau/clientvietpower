@@ -19,10 +19,11 @@ export class LoginComponent implements OnInit {
   // @ViewChild(MatFormField) _matFormField: MatFormField;
 
   ngOnInit() {
-    // this._matFormField._control = this._control;
+    this.userService.clearData();
   }
 
   login() {
+    this.userService.clearData();
     this.userService.login(this.userName, this.password);
   }
 }

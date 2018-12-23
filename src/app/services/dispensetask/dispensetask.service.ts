@@ -100,8 +100,8 @@ export class DispenseTaskService {
   }
 
   recordDispenseTaskLog(type: string, data: DispenseTaskStepModel): void {
-    if (type === MAP_DISPENSE_TASK_STEP_TYPE.PUMPING && data instanceof DispenseStepDataModel) {
-      this.machineService.subtractionColourantMachine(data.colorant, data.quantity);
+    if (type === MAP_DISPENSE_TASK_STEP_TYPE.PUMPING) {
+      this.machineService.subtractionColourantMachine(data.taskData.colorant, data.taskData.quantity);
     }
   }
 
@@ -115,30 +115,6 @@ export class DispenseTaskService {
       if (this.currentTaskStep.callBackFunction != null) {
         this.currentTaskStep.callBackFunction(this.currentTask, this.currentTaskStep);
       }
-    });
-  }
-
-  findDispenseTaskById(taskId: number) {
-    return new Observable(observer => {
-      let currentTask: DispenseTaskModel = null;
-      for (const task of this.listDispenseTask) {
-        if (taskId === task.taskId) {
-          currentTask = task;
-          break;
-        }
-      }
-
-      setTimeout(() => {
-        observer.next(currentTask);
-      }, 1);
-    });
-  }
-
-  getCurrentState() {
-    return new Observable(observer => {
-      setTimeout(() => {
-        observer.next(this.status == null ? MAP_DISPENSE_TASK_STATE.WAITING : this.status);
-      }, 1);
     });
   }
 }

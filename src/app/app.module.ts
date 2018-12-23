@@ -73,6 +73,7 @@ import {ViewDispenseTaskComponent} from './components/backgroundtask/viewdispens
 
 import {MachineSettingComponent} from './components/machine/machinesetting/machinesetting.component';
 import {ProductbaseComponent} from './components/setting/productbase/productbase.component';
+import {DashboardService} from './services/dashboard/dashboard.service';
 
 
 const routes: Routes = [
@@ -86,7 +87,7 @@ const routes: Routes = [
     path: 'dashboard',
     component: DashboardComponent,
     children: [
-      {path: '', redirectTo: 'formula', pathMatch: 'full'},
+      // {path: '', redirectTo: 'formula', pathMatch: 'full'},
       {path: 'colorant', component: ColorantComponent},
       {path: 'base', component: BaseComponent},
       {path: 'collection', component: CollectionComponent},
@@ -189,6 +190,8 @@ const routes: Routes = [
     CookieService,
     DispenseTaskService,
     ModalService,
+
+    DashboardService,
 
     IssueService,
     ColourantService,
