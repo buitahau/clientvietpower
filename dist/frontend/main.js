@@ -174,13 +174,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_formula_listformula_formula_component__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ./components/formula/listformula/formula.component */ "./src/app/components/formula/listformula/formula.component.ts");
 /* harmony import */ var _components_formula_viewformula_viewformula_component__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ./components/formula/viewformula/viewformula.component */ "./src/app/components/formula/viewformula/viewformula.component.ts");
 /* harmony import */ var _components_formula_maintenance_maintenance_component__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! ./components/formula/maintenance/maintenance.component */ "./src/app/components/formula/maintenance/maintenance.component.ts");
-/* harmony import */ var _components_setting_productbase_productbase_component__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! ./components/setting/productbase/productbase.component */ "./src/app/components/setting/productbase/productbase.component.ts");
-/* harmony import */ var _components_help_language_language_component__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(/*! ./components/help/language/language.component */ "./src/app/components/help/language/language.component.ts");
-/* harmony import */ var _components_help_question_question_component__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(/*! ./components/help/question/question.component */ "./src/app/components/help/question/question.component.ts");
-/* harmony import */ var _shared_http_http_module__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(/*! ./shared/http/http.module */ "./src/app/shared/http/http.module.ts");
-/* harmony import */ var _directions_product_viewdetail_viewdetail_component__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(/*! ./directions/product/viewdetail/viewdetail.component */ "./src/app/directions/product/viewdetail/viewdetail.component.ts");
-/* harmony import */ var _components_backgroundtask_viewdispensetask_viewdispensetask_component__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(/*! ./components/backgroundtask/viewdispensetask/viewdispensetask.component */ "./src/app/components/backgroundtask/viewdispensetask/viewdispensetask.component.ts");
-/* harmony import */ var _components_machine_machinesetting_machinesetting_component__WEBPACK_IMPORTED_MODULE_51__ = __webpack_require__(/*! ./components/machine/machinesetting/machinesetting.component */ "./src/app/components/machine/machinesetting/machinesetting.component.ts");
+/* harmony import */ var _components_help_language_language_component__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! ./components/help/language/language.component */ "./src/app/components/help/language/language.component.ts");
+/* harmony import */ var _components_help_question_question_component__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(/*! ./components/help/question/question.component */ "./src/app/components/help/question/question.component.ts");
+/* harmony import */ var _shared_http_http_module__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(/*! ./shared/http/http.module */ "./src/app/shared/http/http.module.ts");
+/* harmony import */ var _directions_product_viewdetail_viewdetail_component__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(/*! ./directions/product/viewdetail/viewdetail.component */ "./src/app/directions/product/viewdetail/viewdetail.component.ts");
+/* harmony import */ var _components_backgroundtask_viewdispensetask_viewdispensetask_component__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(/*! ./components/backgroundtask/viewdispensetask/viewdispensetask.component */ "./src/app/components/backgroundtask/viewdispensetask/viewdispensetask.component.ts");
+/* harmony import */ var _components_machine_machinesetting_machinesetting_component__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(/*! ./components/machine/machinesetting/machinesetting.component */ "./src/app/components/machine/machinesetting/machinesetting.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -236,7 +235,6 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
-
 // help page !!
 
 
@@ -264,15 +262,14 @@ var routes = [
             { path: 'view-formula/:id', component: _components_formula_viewformula_viewformula_component__WEBPACK_IMPORTED_MODULE_43__["ViewFormulaComponent"] },
             { path: 'job-status', component: _components_backgroundtask_backgroundtask_component__WEBPACK_IMPORTED_MODULE_37__["BackgroundTaskComponent"] },
             { path: 'maintenance', component: _components_formula_maintenance_maintenance_component__WEBPACK_IMPORTED_MODULE_44__["MaintenanceComponent"] },
-            { path: 'machine', component: _components_machine_machinesetting_machinesetting_component__WEBPACK_IMPORTED_MODULE_51__["MachineSettingComponent"] },
-            { path: 'question', component: _components_help_question_question_component__WEBPACK_IMPORTED_MODULE_47__["QuestionComponent"] },
+            { path: 'machine', component: _components_machine_machinesetting_machinesetting_component__WEBPACK_IMPORTED_MODULE_50__["MachineSettingComponent"] },
+            { path: 'question', component: _components_help_question_question_component__WEBPACK_IMPORTED_MODULE_46__["QuestionComponent"] },
             { path: 'help/overview', component: _components_help_help_component__WEBPACK_IMPORTED_MODULE_15__["HelpComponent"] },
-            { path: 'help/language', component: _components_help_language_language_component__WEBPACK_IMPORTED_MODULE_46__["LanguageComponent"] },
+            { path: 'help/language', component: _components_help_language_language_component__WEBPACK_IMPORTED_MODULE_45__["LanguageComponent"] },
             { path: 'help/boostrap', component: _components_help_structure_structure_component__WEBPACK_IMPORTED_MODULE_16__["StructureComponent"] },
             { path: 'create', component: _components_issue_create_create_component__WEBPACK_IMPORTED_MODULE_13__["CreateComponent"] },
             { path: 'edit/:id', component: _components_issue_edit_edit_component__WEBPACK_IMPORTED_MODULE_14__["EditComponent"] },
-            { path: 'list', component: _components_issue_list_list_component__WEBPACK_IMPORTED_MODULE_12__["ListComponent"] },
-            { path: 'pbc', component: _components_setting_productbase_productbase_component__WEBPACK_IMPORTED_MODULE_45__["ProductbaseComponent"] },
+            { path: 'list', component: _components_issue_list_list_component__WEBPACK_IMPORTED_MODULE_12__["ListComponent"] }
         ]
     }
 ];
@@ -297,27 +294,27 @@ var AppModule = /** @class */ (function () {
                 _components_layout_breadcrumb_breadcrumb_component__WEBPACK_IMPORTED_MODULE_35__["BreadcrumbComponent"],
                 _components_layout_footer_footer_component__WEBPACK_IMPORTED_MODULE_36__["FooterComponent"],
                 _components_backgroundtask_backgroundtask_component__WEBPACK_IMPORTED_MODULE_37__["BackgroundTaskComponent"],
-                _components_backgroundtask_viewdispensetask_viewdispensetask_component__WEBPACK_IMPORTED_MODULE_50__["ViewDispenseTaskComponent"],
+                _components_backgroundtask_viewdispensetask_viewdispensetask_component__WEBPACK_IMPORTED_MODULE_49__["ViewDispenseTaskComponent"],
                 // setting component
                 _components_setting_colorant_colorant_component__WEBPACK_IMPORTED_MODULE_38__["ColorantComponent"],
                 _components_setting_base_base_component__WEBPACK_IMPORTED_MODULE_39__["BaseComponent"],
                 _components_setting_collection_collection_component__WEBPACK_IMPORTED_MODULE_40__["CollectionComponent"],
                 _components_setting_product_product_component__WEBPACK_IMPORTED_MODULE_41__["ProductComponent"],
-                _directions_product_viewdetail_viewdetail_component__WEBPACK_IMPORTED_MODULE_49__["ViewDetailComponent"],
+                _directions_product_viewdetail_viewdetail_component__WEBPACK_IMPORTED_MODULE_48__["ViewDetailComponent"],
                 // formula component
                 _components_formula_listformula_formula_component__WEBPACK_IMPORTED_MODULE_42__["FormulaComponent"],
                 _components_formula_viewformula_viewformula_component__WEBPACK_IMPORTED_MODULE_43__["ViewFormulaComponent"],
                 _components_formula_maintenance_maintenance_component__WEBPACK_IMPORTED_MODULE_44__["MaintenanceComponent"],
                 // machine component
-                _components_machine_machinesetting_machinesetting_component__WEBPACK_IMPORTED_MODULE_51__["MachineSettingComponent"],
+                _components_machine_machinesetting_machinesetting_component__WEBPACK_IMPORTED_MODULE_50__["MachineSettingComponent"],
                 // test component
                 _components_issue_list_list_component__WEBPACK_IMPORTED_MODULE_12__["ListComponent"],
                 _components_issue_create_create_component__WEBPACK_IMPORTED_MODULE_13__["CreateComponent"],
                 _components_issue_edit_edit_component__WEBPACK_IMPORTED_MODULE_14__["EditComponent"],
                 // help page
-                _components_help_question_question_component__WEBPACK_IMPORTED_MODULE_47__["QuestionComponent"],
+                _components_help_question_question_component__WEBPACK_IMPORTED_MODULE_46__["QuestionComponent"],
                 _components_help_help_component__WEBPACK_IMPORTED_MODULE_15__["HelpComponent"],
-                _components_help_language_language_component__WEBPACK_IMPORTED_MODULE_46__["LanguageComponent"],
+                _components_help_language_language_component__WEBPACK_IMPORTED_MODULE_45__["LanguageComponent"],
                 _components_help_structure_structure_component__WEBPACK_IMPORTED_MODULE_16__["StructureComponent"],
             ],
             imports: [
@@ -325,7 +322,7 @@ var AppModule = /** @class */ (function () {
                 _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"],
                 _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_4__["BrowserAnimationsModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClientModule"],
-                _shared_http_http_module__WEBPACK_IMPORTED_MODULE_48__["HttpModule"].forRoot(),
+                _shared_http_http_module__WEBPACK_IMPORTED_MODULE_47__["HttpModule"].forRoot(),
                 _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forRoot(routes),
                 // IMPORT MATERIAL
                 _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatToolbarModule"],
@@ -2453,69 +2450,6 @@ var ProductComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [_services_product_product_service__WEBPACK_IMPORTED_MODULE_1__["ProductService"]])
     ], ProductComponent);
     return ProductComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/components/setting/productbase/productbase.component.html":
-/*!***************************************************************************!*\
-  !*** ./src/app/components/setting/productbase/productbase.component.html ***!
-  \***************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<p>\r\n  productbase works!\r\n</p>\r\n"
-
-/***/ }),
-
-/***/ "./src/app/components/setting/productbase/productbase.component.scss":
-/*!***************************************************************************!*\
-  !*** ./src/app/components/setting/productbase/productbase.component.scss ***!
-  \***************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvc2V0dGluZy9wcm9kdWN0YmFzZS9wcm9kdWN0YmFzZS5jb21wb25lbnQuc2NzcyJ9 */"
-
-/***/ }),
-
-/***/ "./src/app/components/setting/productbase/productbase.component.ts":
-/*!*************************************************************************!*\
-  !*** ./src/app/components/setting/productbase/productbase.component.ts ***!
-  \*************************************************************************/
-/*! exports provided: ProductbaseComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProductbaseComponent", function() { return ProductbaseComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var ProductbaseComponent = /** @class */ (function () {
-    function ProductbaseComponent() {
-    }
-    ProductbaseComponent.prototype.ngOnInit = function () {
-    };
-    ProductbaseComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: 'app-productbase',
-            template: __webpack_require__(/*! ./productbase.component.html */ "./src/app/components/setting/productbase/productbase.component.html"),
-            styles: [__webpack_require__(/*! ./productbase.component.scss */ "./src/app/components/setting/productbase/productbase.component.scss")]
-        }),
-        __metadata("design:paramtypes", [])
-    ], ProductbaseComponent);
-    return ProductbaseComponent;
 }());
 
 
