@@ -45,6 +45,7 @@ export class ViewFormulaComponent implements OnInit {
   currentTask: DispenseTaskModel | any = null;
   currentTaskStep: DispenseTaskStepModel | any = null;
   listColorant: any[] = null;
+  errorMessage: string = null;
 
   constructor(private formulaService: FormulaService,
               private productBaseService: ProductBaseService,
@@ -76,7 +77,7 @@ export class ViewFormulaComponent implements OnInit {
   getRelativeData() {
     if (this.dbItem != null) {
       // Step 2. Get list Colorant of Formula
-      this.formulaService.getListColorantOfFormula(this.dbItem.formula.formulaId).subscribe((data: any) => {
+      this.formulaService.getListColorantOfFormula(this.dbItem.formula.formulaId).subscribe((data: FormulaColourantModel[]) => {
         this.listFormulaColorant = data;
 
         // Step 4. Process data before render
@@ -141,6 +142,10 @@ export class ViewFormulaComponent implements OnInit {
 
       const stop_t = new DispenseTaskStepModel(MAP_DISPENSE_TASK_STEP_TYPE.FINISHED, null, (newDispenseTask, newDispenseStepTask) => {
         this.updateDispenseTaskData(newDispenseTask, newDispenseStepTask);
+        this.numberOfCan -= 1;
+        if (this.numberOfCan > 0) {
+          this.beginDispense(modalId);
+        }
         setTimeout(() => {
           this.openModal('print-formula-modal');
         }, 500);
@@ -150,6 +155,11 @@ export class ViewFormulaComponent implements OnInit {
 
       this.currentTask = new DispenseTaskModel('Dispense', listPumpingTask, new DispenseDataModel(this.dbItem, this.selectProductBase,
         this.canSize, this.numberOfCan), null);
+
+      // this.machineService.validateDispenseTaskBeforeProcess(this.listFormulaColorant, this.currentTask.taskData.canSize)
+      //   .subscribe((data: any) => {
+      //   console.log(data);
+      // });
 
       this.machineService.recordDispenseFormulaProductBase(MAP_DISPENSE_TASK_STATE.IN_PROGRESS, this.currentTask.taskId,
         this.currentTask.taskData.formulaProductBase, this.currentTask.taskData.canSize).subscribe((data: any) => {
@@ -174,9 +184,6 @@ export class ViewFormulaComponent implements OnInit {
     if (this.currentTask.status === MAP_DISPENSE_TASK_STATE.IN_PROGRESS) {
       this.inProgress = true;
     }
-
-    console.log(this.currentTask);
-    console.log(this.currentTaskStep);
   }
 
   openModal(id: string) {
