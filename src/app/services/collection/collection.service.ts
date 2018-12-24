@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {environment} from '../../../environments/environment';
 import {catchError, map} from 'rxjs/internal/operators';
 import {HttpService} from '../../shared/http/services/http.service';
-import {CollectionModel} from '../../models/collection';
+import ConvertModelUtils from '../../utils/convert-models-utils';
 
 @Injectable({
   providedIn: 'root'
@@ -18,7 +18,7 @@ export class CollectionService {
         const listItems = [];
         if (data) {
           for (const collection of data) {
-            listItems.push(this.convertCollectionToDTO(collection));
+            listItems.push(ConvertModelUtils.convertToColourantObject(collection));
           }
         }
         return listItems;
@@ -26,15 +26,5 @@ export class CollectionService {
         return [];
       })
     );
-  }
-
-  private convertCollectionToDTO(object: any): CollectionModel {
-    const collection = new CollectionModel();
-    collection.collectionId = object.collectionId;
-    collection.collectionName = object.collectionName;
-    collection.description = object.description;
-    collection.createdDate = object.createdDate;
-    collection.createBy = object.createBy;
-    return collection;
   }
 }

@@ -8,7 +8,6 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {HttpClientModule} from '@angular/common/http';
 
 // IMPORT MATERIAL
-import {MatToolbarModule} from '@angular/material';
 import {MaterialModule} from './material.module';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {FormsModule} from '@angular/forms';
@@ -168,16 +167,16 @@ const routes: Routes = [
   ],
 
   imports: [
+    BrowserAnimationsModule,
+    MaterialModule,
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
 
     HttpClientModule,
     HttpModule.forRoot(),
     RouterModule.forRoot(routes),
 
     // IMPORT MATERIAL
-    MatToolbarModule,
     MaterialModule,
 
     // import boostrap

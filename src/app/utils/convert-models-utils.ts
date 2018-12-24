@@ -55,7 +55,7 @@ export default class ConvertModelUtils {
     item.density = object.density;
     item.pricePerUnit = object.pricePerUnit;
     item.surcharge = object.surcharge;
-    item.rbgHex = object.rbgHex;
+    item.rbgHex = object.rbgHex === '#00' ? '#000000' : object.rbgHex;
     item.kind = object.kind;
     return item;
   }

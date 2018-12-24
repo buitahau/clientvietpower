@@ -1,14 +1,9 @@
 import {Injectable} from '@angular/core';
 import {
-  DispenseDataModel,
-  DispenseStepDataModel,
   DispenseTaskModel, DispenseTaskStepModel,
   MAP_TASK_STATE
 } from '../../models/dispense.task.model';
-import {Observable} from 'rxjs';
 import {MachineService} from '../machine/machine.service';
-import {UserService} from '../user/user.service';
-import {HttpService} from '../../shared/http/services/http.service';
 import {FormulaProductBaseModel} from '../../models/formula_product_base';
 
 
@@ -35,7 +30,7 @@ export class DispenseTaskService {
   listDispenseTask: DispenseTaskModel[];
   status: string;
 
-  constructor(private machineService: MachineService, private userService: UserService, private http: HttpService) {
+  constructor(private machineService: MachineService) {
     this.listDispenseTask = [];
     this.currentTask = null;
     this.status = MAP_DISPENSE_TASK_STATE.WAITING;
