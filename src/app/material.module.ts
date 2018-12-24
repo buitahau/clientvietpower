@@ -22,7 +22,7 @@ import {
   // MatRippleModule,
   // MatSelectModule,
   // MatSidenavModule,
-  MatSliderModule,
+  MatSliderModule, // The module require hammerjs to getting smoothly
   // MatSlideToggleModule,
   // MatSnackBarModule,
   // MatStepperModule,

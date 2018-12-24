@@ -116,10 +116,10 @@
     .machine-colourant-current-range {
       position: absolute;
       display: inline-block;
-      left: 1px;
-      right: 1px;
+      left: 0px;
+      right: 0px;
       bottom: 0px;
-      border-top: 1px solid #cccccc;
+      border-top: 1px solid #000000;
     }
 
     .machine-colourant-update-range{

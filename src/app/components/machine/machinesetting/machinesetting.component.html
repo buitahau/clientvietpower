@@ -24,7 +24,7 @@
                 <span class="machine-colourant-current-range" [ngStyle]="{'height': (machineColourant.quantity / maxQuantity) * 100 + '%', 'background-color': machineColourant.colourant.rbgHex, 'border': '1px solid #' + machineColourant.colourant.rbgHex}"></span>
               </span>
               <span class="colourant-name">{{machineColourant.colourant.colourantName}}</span>
-              <span class="colourant-code" [ngStyle]="{color: machineColourant.colourant.rbgHex}">{{machineColourant.colourant.colourantCode}}</span>
+              <span class="colourant-code">{{machineColourant.colourant.colourantCode}}</span>
             </div>
           </ng-container>
         </div>

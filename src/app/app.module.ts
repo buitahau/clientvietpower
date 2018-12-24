@@ -167,23 +167,22 @@ const routes: Routes = [
   ],
 
   imports: [
-    BrowserAnimationsModule,
-    MaterialModule,
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
 
     HttpClientModule,
     HttpModule.forRoot(),
     RouterModule.forRoot(routes),
 
-    // IMPORT MATERIAL
-    MaterialModule,
+    FormsModule,
 
     // import boostrap
     NgbModule,
     NgSelect2Module,
 
-    FormsModule
+    // IMPORT MATERIAL
+    MaterialModule
   ],
   providers: [
     CookieService,
