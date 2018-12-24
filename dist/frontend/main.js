@@ -134,54 +134,53 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
 /* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
-/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
-/* harmony import */ var _material_module__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./material.module */ "./src/app/material.module.ts");
-/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/fesm5/ng-bootstrap.js");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var ng_select2__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ng-select2 */ "./node_modules/ng-select2/fesm5/ng-select2.js");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _components_issue_list_list_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/issue/list/list.component */ "./src/app/components/issue/list/list.component.ts");
-/* harmony import */ var _components_issue_create_create_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/issue/create/create.component */ "./src/app/components/issue/create/create.component.ts");
-/* harmony import */ var _components_issue_edit_edit_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/issue/edit/edit.component */ "./src/app/components/issue/edit/edit.component.ts");
-/* harmony import */ var _components_help_help_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/help/help.component */ "./src/app/components/help/help.component.ts");
-/* harmony import */ var _components_help_structure_structure_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/help/structure/structure.component */ "./src/app/components/help/structure/structure.component.ts");
-/* harmony import */ var ng_cookie__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ng-cookie */ "./node_modules/ng-cookie/dist/cookie.service.js");
-/* harmony import */ var ng_cookie__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(ng_cookie__WEBPACK_IMPORTED_MODULE_17__);
-/* harmony import */ var _services_issues_issue_service__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./services/issues/issue.service */ "./src/app/services/issues/issue.service.ts");
-/* harmony import */ var _services_colorant_colorant_service__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./services/colorant/colorant.service */ "./src/app/services/colorant/colorant.service.ts");
-/* harmony import */ var _services_product_product_service__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./services/product/product.service */ "./src/app/services/product/product.service.ts");
-/* harmony import */ var _services_collection_collection_service__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./services/collection/collection.service */ "./src/app/services/collection/collection.service.ts");
-/* harmony import */ var _services_formula_formula_service__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./services/formula/formula.service */ "./src/app/services/formula/formula.service.ts");
-/* harmony import */ var _services_base_base_service__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./services/base/base.service */ "./src/app/services/base/base.service.ts");
-/* harmony import */ var _services_productbase_productbase_service__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./services/productbase/productbase.service */ "./src/app/services/productbase/productbase.service.ts");
-/* harmony import */ var _services_machine_machine_service__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./services/machine/machine.service */ "./src/app/services/machine/machine.service.ts");
-/* harmony import */ var _services_boostrap_modal_service__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./services/boostrap/modal.service */ "./src/app/services/boostrap/modal.service.ts");
-/* harmony import */ var _services_dispensetask_dispensetask_service__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./services/dispensetask/dispensetask.service */ "./src/app/services/dispensetask/dispensetask.service.ts");
-/* harmony import */ var _directions_boostrap_modal_modal_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./directions/boostrap/modal/modal.component */ "./src/app/directions/boostrap/modal/modal.component.ts");
-/* harmony import */ var _components_login_page_login_login_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./components/login-page/login/login.component */ "./src/app/components/login-page/login/login.component.ts");
-/* harmony import */ var _components_login_page_register_register_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./components/login-page/register/register.component */ "./src/app/components/login-page/register/register.component.ts");
-/* harmony import */ var _components_login_page_forgotpassword_forgotpassword_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./components/login-page/forgotpassword/forgotpassword.component */ "./src/app/components/login-page/forgotpassword/forgotpassword.component.ts");
-/* harmony import */ var _components_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./components/dashboard/dashboard.component */ "./src/app/components/dashboard/dashboard.component.ts");
-/* harmony import */ var _components_layout_header_header_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./components/layout/header/header.component */ "./src/app/components/layout/header/header.component.ts");
-/* harmony import */ var _components_layout_navigation_navigation_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./components/layout/navigation/navigation.component */ "./src/app/components/layout/navigation/navigation.component.ts");
-/* harmony import */ var _components_layout_breadcrumb_breadcrumb_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./components/layout/breadcrumb/breadcrumb.component */ "./src/app/components/layout/breadcrumb/breadcrumb.component.ts");
-/* harmony import */ var _components_layout_footer_footer_component__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./components/layout/footer/footer.component */ "./src/app/components/layout/footer/footer.component.ts");
-/* harmony import */ var _components_backgroundtask_backgroundtask_component__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./components/backgroundtask/backgroundtask.component */ "./src/app/components/backgroundtask/backgroundtask.component.ts");
-/* harmony import */ var _components_setting_colorant_colorant_component__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./components/setting/colorant/colorant.component */ "./src/app/components/setting/colorant/colorant.component.ts");
-/* harmony import */ var _components_setting_base_base_component__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./components/setting/base/base.component */ "./src/app/components/setting/base/base.component.ts");
-/* harmony import */ var _components_setting_collection_collection_component__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./components/setting/collection/collection.component */ "./src/app/components/setting/collection/collection.component.ts");
-/* harmony import */ var _components_setting_product_product_component__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./components/setting/product/product.component */ "./src/app/components/setting/product/product.component.ts");
-/* harmony import */ var _components_formula_listformula_formula_component__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ./components/formula/listformula/formula.component */ "./src/app/components/formula/listformula/formula.component.ts");
-/* harmony import */ var _components_formula_viewformula_viewformula_component__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ./components/formula/viewformula/viewformula.component */ "./src/app/components/formula/viewformula/viewformula.component.ts");
-/* harmony import */ var _components_formula_maintenance_maintenance_component__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! ./components/formula/maintenance/maintenance.component */ "./src/app/components/formula/maintenance/maintenance.component.ts");
-/* harmony import */ var _components_help_language_language_component__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! ./components/help/language/language.component */ "./src/app/components/help/language/language.component.ts");
-/* harmony import */ var _components_help_question_question_component__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(/*! ./components/help/question/question.component */ "./src/app/components/help/question/question.component.ts");
-/* harmony import */ var _shared_http_http_module__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(/*! ./shared/http/http.module */ "./src/app/shared/http/http.module.ts");
-/* harmony import */ var _directions_product_viewdetail_viewdetail_component__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(/*! ./directions/product/viewdetail/viewdetail.component */ "./src/app/directions/product/viewdetail/viewdetail.component.ts");
-/* harmony import */ var _components_backgroundtask_viewdispensetask_viewdispensetask_component__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(/*! ./components/backgroundtask/viewdispensetask/viewdispensetask.component */ "./src/app/components/backgroundtask/viewdispensetask/viewdispensetask.component.ts");
-/* harmony import */ var _components_machine_machinesetting_machinesetting_component__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(/*! ./components/machine/machinesetting/machinesetting.component */ "./src/app/components/machine/machinesetting/machinesetting.component.ts");
-/* harmony import */ var _components_setting_productbase_productbase_component__WEBPACK_IMPORTED_MODULE_51__ = __webpack_require__(/*! ./components/setting/productbase/productbase.component */ "./src/app/components/setting/productbase/productbase.component.ts");
-/* harmony import */ var _services_dashboard_dashboard_service__WEBPACK_IMPORTED_MODULE_52__ = __webpack_require__(/*! ./services/dashboard/dashboard.service */ "./src/app/services/dashboard/dashboard.service.ts");
+/* harmony import */ var _material_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./material.module */ "./src/app/material.module.ts");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/fesm5/ng-bootstrap.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var ng_select2__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ng-select2 */ "./node_modules/ng-select2/fesm5/ng-select2.js");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _components_issue_list_list_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/issue/list/list.component */ "./src/app/components/issue/list/list.component.ts");
+/* harmony import */ var _components_issue_create_create_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/issue/create/create.component */ "./src/app/components/issue/create/create.component.ts");
+/* harmony import */ var _components_issue_edit_edit_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/issue/edit/edit.component */ "./src/app/components/issue/edit/edit.component.ts");
+/* harmony import */ var _components_help_help_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/help/help.component */ "./src/app/components/help/help.component.ts");
+/* harmony import */ var _components_help_structure_structure_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/help/structure/structure.component */ "./src/app/components/help/structure/structure.component.ts");
+/* harmony import */ var ng_cookie__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ng-cookie */ "./node_modules/ng-cookie/dist/cookie.service.js");
+/* harmony import */ var ng_cookie__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(ng_cookie__WEBPACK_IMPORTED_MODULE_16__);
+/* harmony import */ var _services_issues_issue_service__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./services/issues/issue.service */ "./src/app/services/issues/issue.service.ts");
+/* harmony import */ var _services_colorant_colorant_service__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./services/colorant/colorant.service */ "./src/app/services/colorant/colorant.service.ts");
+/* harmony import */ var _services_product_product_service__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./services/product/product.service */ "./src/app/services/product/product.service.ts");
+/* harmony import */ var _services_collection_collection_service__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./services/collection/collection.service */ "./src/app/services/collection/collection.service.ts");
+/* harmony import */ var _services_formula_formula_service__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./services/formula/formula.service */ "./src/app/services/formula/formula.service.ts");
+/* harmony import */ var _services_base_base_service__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./services/base/base.service */ "./src/app/services/base/base.service.ts");
+/* harmony import */ var _services_productbase_productbase_service__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./services/productbase/productbase.service */ "./src/app/services/productbase/productbase.service.ts");
+/* harmony import */ var _services_machine_machine_service__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./services/machine/machine.service */ "./src/app/services/machine/machine.service.ts");
+/* harmony import */ var _services_boostrap_modal_service__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./services/boostrap/modal.service */ "./src/app/services/boostrap/modal.service.ts");
+/* harmony import */ var _services_dispensetask_dispensetask_service__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./services/dispensetask/dispensetask.service */ "./src/app/services/dispensetask/dispensetask.service.ts");
+/* harmony import */ var _directions_boostrap_modal_modal_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./directions/boostrap/modal/modal.component */ "./src/app/directions/boostrap/modal/modal.component.ts");
+/* harmony import */ var _components_login_page_login_login_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./components/login-page/login/login.component */ "./src/app/components/login-page/login/login.component.ts");
+/* harmony import */ var _components_login_page_register_register_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./components/login-page/register/register.component */ "./src/app/components/login-page/register/register.component.ts");
+/* harmony import */ var _components_login_page_forgotpassword_forgotpassword_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./components/login-page/forgotpassword/forgotpassword.component */ "./src/app/components/login-page/forgotpassword/forgotpassword.component.ts");
+/* harmony import */ var _components_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./components/dashboard/dashboard.component */ "./src/app/components/dashboard/dashboard.component.ts");
+/* harmony import */ var _components_layout_header_header_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./components/layout/header/header.component */ "./src/app/components/layout/header/header.component.ts");
+/* harmony import */ var _components_layout_navigation_navigation_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./components/layout/navigation/navigation.component */ "./src/app/components/layout/navigation/navigation.component.ts");
+/* harmony import */ var _components_layout_breadcrumb_breadcrumb_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./components/layout/breadcrumb/breadcrumb.component */ "./src/app/components/layout/breadcrumb/breadcrumb.component.ts");
+/* harmony import */ var _components_layout_footer_footer_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./components/layout/footer/footer.component */ "./src/app/components/layout/footer/footer.component.ts");
+/* harmony import */ var _components_backgroundtask_backgroundtask_component__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./components/backgroundtask/backgroundtask.component */ "./src/app/components/backgroundtask/backgroundtask.component.ts");
+/* harmony import */ var _components_setting_colorant_colorant_component__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./components/setting/colorant/colorant.component */ "./src/app/components/setting/colorant/colorant.component.ts");
+/* harmony import */ var _components_setting_base_base_component__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./components/setting/base/base.component */ "./src/app/components/setting/base/base.component.ts");
+/* harmony import */ var _components_setting_collection_collection_component__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./components/setting/collection/collection.component */ "./src/app/components/setting/collection/collection.component.ts");
+/* harmony import */ var _components_setting_product_product_component__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./components/setting/product/product.component */ "./src/app/components/setting/product/product.component.ts");
+/* harmony import */ var _components_formula_listformula_formula_component__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./components/formula/listformula/formula.component */ "./src/app/components/formula/listformula/formula.component.ts");
+/* harmony import */ var _components_formula_viewformula_viewformula_component__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ./components/formula/viewformula/viewformula.component */ "./src/app/components/formula/viewformula/viewformula.component.ts");
+/* harmony import */ var _components_formula_maintenance_maintenance_component__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ./components/formula/maintenance/maintenance.component */ "./src/app/components/formula/maintenance/maintenance.component.ts");
+/* harmony import */ var _components_help_language_language_component__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! ./components/help/language/language.component */ "./src/app/components/help/language/language.component.ts");
+/* harmony import */ var _components_help_question_question_component__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! ./components/help/question/question.component */ "./src/app/components/help/question/question.component.ts");
+/* harmony import */ var _shared_http_http_module__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(/*! ./shared/http/http.module */ "./src/app/shared/http/http.module.ts");
+/* harmony import */ var _directions_product_viewdetail_viewdetail_component__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(/*! ./directions/product/viewdetail/viewdetail.component */ "./src/app/directions/product/viewdetail/viewdetail.component.ts");
+/* harmony import */ var _components_backgroundtask_viewdispensetask_viewdispensetask_component__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(/*! ./components/backgroundtask/viewdispensetask/viewdispensetask.component */ "./src/app/components/backgroundtask/viewdispensetask/viewdispensetask.component.ts");
+/* harmony import */ var _components_machine_machinesetting_machinesetting_component__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(/*! ./components/machine/machinesetting/machinesetting.component */ "./src/app/components/machine/machinesetting/machinesetting.component.ts");
+/* harmony import */ var _components_setting_productbase_productbase_component__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(/*! ./components/setting/productbase/productbase.component */ "./src/app/components/setting/productbase/productbase.component.ts");
+/* harmony import */ var _services_dashboard_dashboard_service__WEBPACK_IMPORTED_MODULE_51__ = __webpack_require__(/*! ./services/dashboard/dashboard.service */ "./src/app/services/dashboard/dashboard.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -195,7 +194,6 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 // IMPORT MATERIAL
-
 
 
 
@@ -248,32 +246,32 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 var routes = [
     { 'path': '', redirectTo: 'login', pathMatch: 'full' },
-    { 'path': 'index', component: _components_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_32__["DashboardComponent"] },
-    { 'path': 'login', component: _components_login_page_login_login_component__WEBPACK_IMPORTED_MODULE_29__["LoginComponent"] }, { 'path': 'sign-in', component: _components_login_page_login_login_component__WEBPACK_IMPORTED_MODULE_29__["LoginComponent"] },
-    { 'path': 'register', component: _components_login_page_register_register_component__WEBPACK_IMPORTED_MODULE_30__["RegisterComponent"] }, { 'path': 'sign-up', component: _components_login_page_register_register_component__WEBPACK_IMPORTED_MODULE_30__["RegisterComponent"] },
-    { 'path': 'forgot-password', component: _components_login_page_forgotpassword_forgotpassword_component__WEBPACK_IMPORTED_MODULE_31__["ForgotpasswordComponent"] },
+    { 'path': 'index', component: _components_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_31__["DashboardComponent"] },
+    { 'path': 'login', component: _components_login_page_login_login_component__WEBPACK_IMPORTED_MODULE_28__["LoginComponent"] }, { 'path': 'sign-in', component: _components_login_page_login_login_component__WEBPACK_IMPORTED_MODULE_28__["LoginComponent"] },
+    { 'path': 'register', component: _components_login_page_register_register_component__WEBPACK_IMPORTED_MODULE_29__["RegisterComponent"] }, { 'path': 'sign-up', component: _components_login_page_register_register_component__WEBPACK_IMPORTED_MODULE_29__["RegisterComponent"] },
+    { 'path': 'forgot-password', component: _components_login_page_forgotpassword_forgotpassword_component__WEBPACK_IMPORTED_MODULE_30__["ForgotpasswordComponent"] },
     {
         path: 'dashboard',
-        component: _components_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_32__["DashboardComponent"],
+        component: _components_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_31__["DashboardComponent"],
         children: [
             // {path: '', redirectTo: 'formula', pathMatch: 'full'},
-            { path: 'colorant', component: _components_setting_colorant_colorant_component__WEBPACK_IMPORTED_MODULE_38__["ColorantComponent"] },
-            { path: 'base', component: _components_setting_base_base_component__WEBPACK_IMPORTED_MODULE_39__["BaseComponent"] },
-            { path: 'collection', component: _components_setting_collection_collection_component__WEBPACK_IMPORTED_MODULE_40__["CollectionComponent"] },
-            { path: 'product', component: _components_setting_product_product_component__WEBPACK_IMPORTED_MODULE_41__["ProductComponent"] },
+            { path: 'colorant', component: _components_setting_colorant_colorant_component__WEBPACK_IMPORTED_MODULE_37__["ColorantComponent"] },
+            { path: 'base', component: _components_setting_base_base_component__WEBPACK_IMPORTED_MODULE_38__["BaseComponent"] },
+            { path: 'collection', component: _components_setting_collection_collection_component__WEBPACK_IMPORTED_MODULE_39__["CollectionComponent"] },
+            { path: 'product', component: _components_setting_product_product_component__WEBPACK_IMPORTED_MODULE_40__["ProductComponent"] },
             // {path: 'product/view-detail/:id', component: ViewDetailComponent},
-            { path: 'formula', component: _components_formula_listformula_formula_component__WEBPACK_IMPORTED_MODULE_42__["FormulaComponent"] },
-            { path: 'view-formula/:id', component: _components_formula_viewformula_viewformula_component__WEBPACK_IMPORTED_MODULE_43__["ViewFormulaComponent"] },
-            { path: 'job-status', component: _components_backgroundtask_backgroundtask_component__WEBPACK_IMPORTED_MODULE_37__["BackgroundTaskComponent"] },
-            { path: 'maintenance', component: _components_formula_maintenance_maintenance_component__WEBPACK_IMPORTED_MODULE_44__["MaintenanceComponent"] },
-            { path: 'machine', component: _components_machine_machinesetting_machinesetting_component__WEBPACK_IMPORTED_MODULE_50__["MachineSettingComponent"] },
-            { path: 'question', component: _components_help_question_question_component__WEBPACK_IMPORTED_MODULE_46__["QuestionComponent"] },
-            { path: 'help/overview', component: _components_help_help_component__WEBPACK_IMPORTED_MODULE_15__["HelpComponent"] },
-            { path: 'help/language', component: _components_help_language_language_component__WEBPACK_IMPORTED_MODULE_45__["LanguageComponent"] },
-            { path: 'help/boostrap', component: _components_help_structure_structure_component__WEBPACK_IMPORTED_MODULE_16__["StructureComponent"] },
-            { path: 'create', component: _components_issue_create_create_component__WEBPACK_IMPORTED_MODULE_13__["CreateComponent"] },
-            { path: 'edit/:id', component: _components_issue_edit_edit_component__WEBPACK_IMPORTED_MODULE_14__["EditComponent"] },
-            { path: 'list', component: _components_issue_list_list_component__WEBPACK_IMPORTED_MODULE_12__["ListComponent"] }
+            { path: 'formula', component: _components_formula_listformula_formula_component__WEBPACK_IMPORTED_MODULE_41__["FormulaComponent"] },
+            { path: 'view-formula/:id', component: _components_formula_viewformula_viewformula_component__WEBPACK_IMPORTED_MODULE_42__["ViewFormulaComponent"] },
+            { path: 'job-status', component: _components_backgroundtask_backgroundtask_component__WEBPACK_IMPORTED_MODULE_36__["BackgroundTaskComponent"] },
+            { path: 'maintenance', component: _components_formula_maintenance_maintenance_component__WEBPACK_IMPORTED_MODULE_43__["MaintenanceComponent"] },
+            { path: 'machine', component: _components_machine_machinesetting_machinesetting_component__WEBPACK_IMPORTED_MODULE_49__["MachineSettingComponent"] },
+            { path: 'question', component: _components_help_question_question_component__WEBPACK_IMPORTED_MODULE_45__["QuestionComponent"] },
+            { path: 'help/overview', component: _components_help_help_component__WEBPACK_IMPORTED_MODULE_14__["HelpComponent"] },
+            { path: 'help/language', component: _components_help_language_language_component__WEBPACK_IMPORTED_MODULE_44__["LanguageComponent"] },
+            { path: 'help/boostrap', component: _components_help_structure_structure_component__WEBPACK_IMPORTED_MODULE_15__["StructureComponent"] },
+            { path: 'create', component: _components_issue_create_create_component__WEBPACK_IMPORTED_MODULE_12__["CreateComponent"] },
+            { path: 'edit/:id', component: _components_issue_edit_edit_component__WEBPACK_IMPORTED_MODULE_13__["EditComponent"] },
+            { path: 'list', component: _components_issue_list_list_component__WEBPACK_IMPORTED_MODULE_11__["ListComponent"] }
         ]
     }
 ];
@@ -283,75 +281,74 @@ var AppModule = /** @class */ (function () {
     AppModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_11__["AppComponent"],
+                _app_component__WEBPACK_IMPORTED_MODULE_10__["AppComponent"],
                 // import directions
-                _directions_boostrap_modal_modal_component__WEBPACK_IMPORTED_MODULE_28__["ModalComponent"],
+                _directions_boostrap_modal_modal_component__WEBPACK_IMPORTED_MODULE_27__["ModalComponent"],
                 // page !!
-                _components_login_page_login_login_component__WEBPACK_IMPORTED_MODULE_29__["LoginComponent"],
-                _components_login_page_register_register_component__WEBPACK_IMPORTED_MODULE_30__["RegisterComponent"],
-                _components_login_page_forgotpassword_forgotpassword_component__WEBPACK_IMPORTED_MODULE_31__["ForgotpasswordComponent"],
+                _components_login_page_login_login_component__WEBPACK_IMPORTED_MODULE_28__["LoginComponent"],
+                _components_login_page_register_register_component__WEBPACK_IMPORTED_MODULE_29__["RegisterComponent"],
+                _components_login_page_forgotpassword_forgotpassword_component__WEBPACK_IMPORTED_MODULE_30__["ForgotpasswordComponent"],
                 // dashboard after login
-                _components_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_32__["DashboardComponent"],
+                _components_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_31__["DashboardComponent"],
                 // common layout
-                _components_layout_header_header_component__WEBPACK_IMPORTED_MODULE_33__["HeaderComponent"],
-                _components_layout_navigation_navigation_component__WEBPACK_IMPORTED_MODULE_34__["NavigationComponent"],
-                _components_layout_breadcrumb_breadcrumb_component__WEBPACK_IMPORTED_MODULE_35__["BreadcrumbComponent"],
-                _components_layout_footer_footer_component__WEBPACK_IMPORTED_MODULE_36__["FooterComponent"],
-                _components_backgroundtask_backgroundtask_component__WEBPACK_IMPORTED_MODULE_37__["BackgroundTaskComponent"],
-                _components_backgroundtask_viewdispensetask_viewdispensetask_component__WEBPACK_IMPORTED_MODULE_49__["ViewDispenseTaskComponent"],
+                _components_layout_header_header_component__WEBPACK_IMPORTED_MODULE_32__["HeaderComponent"],
+                _components_layout_navigation_navigation_component__WEBPACK_IMPORTED_MODULE_33__["NavigationComponent"],
+                _components_layout_breadcrumb_breadcrumb_component__WEBPACK_IMPORTED_MODULE_34__["BreadcrumbComponent"],
+                _components_layout_footer_footer_component__WEBPACK_IMPORTED_MODULE_35__["FooterComponent"],
+                _components_backgroundtask_backgroundtask_component__WEBPACK_IMPORTED_MODULE_36__["BackgroundTaskComponent"],
+                _components_backgroundtask_viewdispensetask_viewdispensetask_component__WEBPACK_IMPORTED_MODULE_48__["ViewDispenseTaskComponent"],
                 // setting component
-                _components_setting_colorant_colorant_component__WEBPACK_IMPORTED_MODULE_38__["ColorantComponent"],
-                _components_setting_base_base_component__WEBPACK_IMPORTED_MODULE_39__["BaseComponent"],
-                _components_setting_collection_collection_component__WEBPACK_IMPORTED_MODULE_40__["CollectionComponent"],
-                _components_setting_product_product_component__WEBPACK_IMPORTED_MODULE_41__["ProductComponent"],
-                _components_setting_productbase_productbase_component__WEBPACK_IMPORTED_MODULE_51__["ProductbaseComponent"],
-                _directions_product_viewdetail_viewdetail_component__WEBPACK_IMPORTED_MODULE_48__["ViewDetailComponent"],
+                _components_setting_colorant_colorant_component__WEBPACK_IMPORTED_MODULE_37__["ColorantComponent"],
+                _components_setting_base_base_component__WEBPACK_IMPORTED_MODULE_38__["BaseComponent"],
+                _components_setting_collection_collection_component__WEBPACK_IMPORTED_MODULE_39__["CollectionComponent"],
+                _components_setting_product_product_component__WEBPACK_IMPORTED_MODULE_40__["ProductComponent"],
+                _components_setting_productbase_productbase_component__WEBPACK_IMPORTED_MODULE_50__["ProductbaseComponent"],
+                _directions_product_viewdetail_viewdetail_component__WEBPACK_IMPORTED_MODULE_47__["ViewDetailComponent"],
                 // formula component
-                _components_formula_listformula_formula_component__WEBPACK_IMPORTED_MODULE_42__["FormulaComponent"],
-                _components_formula_viewformula_viewformula_component__WEBPACK_IMPORTED_MODULE_43__["ViewFormulaComponent"],
-                _components_formula_maintenance_maintenance_component__WEBPACK_IMPORTED_MODULE_44__["MaintenanceComponent"],
+                _components_formula_listformula_formula_component__WEBPACK_IMPORTED_MODULE_41__["FormulaComponent"],
+                _components_formula_viewformula_viewformula_component__WEBPACK_IMPORTED_MODULE_42__["ViewFormulaComponent"],
+                _components_formula_maintenance_maintenance_component__WEBPACK_IMPORTED_MODULE_43__["MaintenanceComponent"],
                 // machine component
-                _components_machine_machinesetting_machinesetting_component__WEBPACK_IMPORTED_MODULE_50__["MachineSettingComponent"],
+                _components_machine_machinesetting_machinesetting_component__WEBPACK_IMPORTED_MODULE_49__["MachineSettingComponent"],
                 // test component
-                _components_issue_list_list_component__WEBPACK_IMPORTED_MODULE_12__["ListComponent"],
-                _components_issue_create_create_component__WEBPACK_IMPORTED_MODULE_13__["CreateComponent"],
-                _components_issue_edit_edit_component__WEBPACK_IMPORTED_MODULE_14__["EditComponent"],
+                _components_issue_list_list_component__WEBPACK_IMPORTED_MODULE_11__["ListComponent"],
+                _components_issue_create_create_component__WEBPACK_IMPORTED_MODULE_12__["CreateComponent"],
+                _components_issue_edit_edit_component__WEBPACK_IMPORTED_MODULE_13__["EditComponent"],
                 // help page
-                _components_help_question_question_component__WEBPACK_IMPORTED_MODULE_46__["QuestionComponent"],
-                _components_help_help_component__WEBPACK_IMPORTED_MODULE_15__["HelpComponent"],
-                _components_help_language_language_component__WEBPACK_IMPORTED_MODULE_45__["LanguageComponent"],
-                _components_help_structure_structure_component__WEBPACK_IMPORTED_MODULE_16__["StructureComponent"],
+                _components_help_question_question_component__WEBPACK_IMPORTED_MODULE_45__["QuestionComponent"],
+                _components_help_help_component__WEBPACK_IMPORTED_MODULE_14__["HelpComponent"],
+                _components_help_language_language_component__WEBPACK_IMPORTED_MODULE_44__["LanguageComponent"],
+                _components_help_structure_structure_component__WEBPACK_IMPORTED_MODULE_15__["StructureComponent"],
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
-                _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"],
                 _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_4__["BrowserAnimationsModule"],
+                _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClientModule"],
-                _shared_http_http_module__WEBPACK_IMPORTED_MODULE_47__["HttpModule"].forRoot(),
+                _shared_http_http_module__WEBPACK_IMPORTED_MODULE_46__["HttpModule"].forRoot(),
                 _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forRoot(routes),
-                // IMPORT MATERIAL
-                _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatToolbarModule"],
-                _material_module__WEBPACK_IMPORTED_MODULE_7__["MaterialModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_8__["FormsModule"],
                 // import boostrap
-                _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_8__["NgbModule"],
-                ng_select2__WEBPACK_IMPORTED_MODULE_10__["NgSelect2Module"],
-                _angular_forms__WEBPACK_IMPORTED_MODULE_9__["FormsModule"]
+                _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__["NgbModule"],
+                ng_select2__WEBPACK_IMPORTED_MODULE_9__["NgSelect2Module"],
+                // IMPORT MATERIAL
+                _material_module__WEBPACK_IMPORTED_MODULE_6__["MaterialModule"]
             ],
             providers: [
-                ng_cookie__WEBPACK_IMPORTED_MODULE_17__["CookieService"],
-                _services_dispensetask_dispensetask_service__WEBPACK_IMPORTED_MODULE_27__["DispenseTaskService"],
-                _services_boostrap_modal_service__WEBPACK_IMPORTED_MODULE_26__["ModalService"],
-                _services_dashboard_dashboard_service__WEBPACK_IMPORTED_MODULE_52__["DashboardService"],
-                _services_issues_issue_service__WEBPACK_IMPORTED_MODULE_18__["IssueService"],
-                _services_colorant_colorant_service__WEBPACK_IMPORTED_MODULE_19__["ColourantService"],
-                _services_product_product_service__WEBPACK_IMPORTED_MODULE_20__["ProductService"],
-                _services_collection_collection_service__WEBPACK_IMPORTED_MODULE_21__["CollectionService"],
-                _services_formula_formula_service__WEBPACK_IMPORTED_MODULE_22__["FormulaService"],
-                _services_base_base_service__WEBPACK_IMPORTED_MODULE_23__["BaseService"],
-                _services_productbase_productbase_service__WEBPACK_IMPORTED_MODULE_24__["ProductBaseService"],
-                _services_machine_machine_service__WEBPACK_IMPORTED_MODULE_25__["MachineService"]
+                ng_cookie__WEBPACK_IMPORTED_MODULE_16__["CookieService"],
+                _services_dispensetask_dispensetask_service__WEBPACK_IMPORTED_MODULE_26__["DispenseTaskService"],
+                _services_boostrap_modal_service__WEBPACK_IMPORTED_MODULE_25__["ModalService"],
+                _services_dashboard_dashboard_service__WEBPACK_IMPORTED_MODULE_51__["DashboardService"],
+                _services_issues_issue_service__WEBPACK_IMPORTED_MODULE_17__["IssueService"],
+                _services_colorant_colorant_service__WEBPACK_IMPORTED_MODULE_18__["ColourantService"],
+                _services_product_product_service__WEBPACK_IMPORTED_MODULE_19__["ProductService"],
+                _services_collection_collection_service__WEBPACK_IMPORTED_MODULE_20__["CollectionService"],
+                _services_formula_formula_service__WEBPACK_IMPORTED_MODULE_21__["FormulaService"],
+                _services_base_base_service__WEBPACK_IMPORTED_MODULE_22__["BaseService"],
+                _services_productbase_productbase_service__WEBPACK_IMPORTED_MODULE_23__["ProductBaseService"],
+                _services_machine_machine_service__WEBPACK_IMPORTED_MODULE_24__["MachineService"]
             ],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_11__["AppComponent"]]
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_10__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
@@ -836,7 +833,7 @@ var MaintenanceComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"block-header\">\r\n  <h1>Standard Formula</h1>\r\n</div>\r\n\r\n<div class=\"row\" *ngIf=\"dbItem != null\">\r\n  <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        Information\r\n      </div>\r\n\r\n      <div class=\"card-body form-detail\">\r\n        <div class=\"form-group row\">\r\n          <label class=\"col-md-4 label-control\">Color</label>\r\n          <div class=\"col-md-8\">\r\n            {{dbItem.formula.formulaCode}}\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"form-group row\">\r\n          <label class=\"col-md-4 label-control\">Collection</label>\r\n          <div class=\"col-md-8\">\r\n            {{dbItem.formula.collection.collectionName}}\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"form-group row\">\r\n          <label class=\"col-md-4 label-control\">Approximate Color</label>\r\n          <div class=\"col-md-8\">\r\n            <span [ngStyle]=\"{'background': dbItem.productBase.rbgHex, 'display': 'inline-block', 'width': '30px', 'height': '30px', 'border': '1px solid #333'}\"></span>\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"form-group row\">\r\n          <label class=\"col-md-4 label-control\">Product</label>\r\n          <div class=\"col-md-8\">\r\n            {{dbItem.productBase.product.productName}}\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"form-group row\">\r\n          <label class=\"col-md-4 label-control\">Formula Date</label>\r\n          <div class=\"col-md-8\">\r\n            {{dbItem.formula.createdDate | date : 'dd/MM/yyyy'}}\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"form-group row\">\r\n          <label class=\"col-md-4 label-control\">Substrate</label>\r\n          <div class=\"col-md-8\">\r\n            substrate???/\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"form-group row\">\r\n          <label class=\"col-md-4 label-control\">Comments</label>\r\n          <div class=\"col-md-8\">\r\n            {{dbItem.formula.comments}}\r\n          </div>\r\n        </div>\r\n\r\n\r\n        <div class=\"form-group row\">\r\n          <label class=\"col-md-4 label-control\">Barcode</label>\r\n          <div class=\"col-md-8\">\r\n            <span *ngIf=\"selectProductBase != null\">\r\n              {{selectProductBase.barCode}}\r\n            </span>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n\r\n  </div>\r\n\r\n  <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        Component colors\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        <div class=\"table-responsive\">\r\n          <table class=\"table table-bordered\" >\r\n            <tr>\r\n              <th style=\"width: 30%\">Component</th>\r\n              <th style=\"width: 20%\">ml</th>\r\n              <th style=\"width: 50%\">Color\r\n            </tr>\r\n\r\n            <tr *ngFor=\"let colorantItem of listFormulaColorant\">\r\n              <td>{{colorantItem.colourant.colourantName}}</td>\r\n              <td>{{colorantItem.quantity * canSize}}</td>\r\n              <td>\r\n                <span class=\"color-bar\" >\r\n                  <span class=\"color-select\" [ngStyle]=\"{'background': colorantItem.colourant.rbgHex, 'width': (colorantItem.quantity / maxColorQuantity) * 100 + '%'}\"></span>\r\n                </span>\r\n              </td>\r\n            </tr>\r\n          </table>\r\n        </div>\r\n\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n\r\n<div class=\"row\" *ngIf=\"dbItem != null\">\r\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        Mixed\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        <div class=\"row\">\r\n          <div class=\"col-lg-6 col-md-6 col-sm-126 col-xs-12 text-right\">\r\n\r\n             <span class=\"base-can-empty\" *ngIf=\"selectProductBase != null\">\r\n                <span class=\"base-can-background\">\r\n                  <span class=\"base-can-volume\" [ngStyle]=\"{'background-color': selectProductBase.productBase.rbgHex, 'height': selectProductBase.percentage + '%'}\">\r\n                    <span class=\"can-base-info\">\r\n                      <span class=\"base-type\">Base : {{selectProductBase.productBase.base.baseCode}}</span>\r\n                      <span class=\"base-volume\">{{canSize + \" \" + selectProductBase.unit}}</span>\r\n                      <span class=\"base-name\">{{selectProductBase.productBase.product.productName}}</span>\r\n                    </span>\r\n                  </span>\r\n                </span>\r\n              </span>\r\n          </div>\r\n\r\n          <div class=\"col-lg-6 col-md-6 col-sm-126 col-xs-12 form-detail\">\r\n            <div class=\"row form-group\">\r\n              <label class=\"col-md-4 label-control\">Number of cans : </label>\r\n              <div class=\"col-md-8\">\r\n                <input type=\"number\" [(ngModel)]=\"numberOfCan\" class=\"form-control\" required=\"required\" [ngModelOptions]=\"{standalone: true}\" [ngStyle]=\"{'width': '200px'}\">\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"row form-group\">\r\n              <label class=\"col-md-4 label-control\">Can size:</label>\r\n              <div class=\"col-md-8\">\r\n                <input type=\"number\" [(ngModel)]=\"canSize\" class=\"form-control\" required=\"required\" [ngModelOptions]=\"{standalone: true}\" [ngStyle]=\"{'width': '200px'}\">\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"row form-group\">\r\n              <label class=\"col-md-4 label-control\">Or select:</label>\r\n              <div class=\"col-md-8\">\r\n                <ng-select2 class=\"select-color-field\" [(ngModel)]=\"canSize\" [data]=\"listProductBase\" [value]=\"canSize\" [placeholder]=\"'Choose Can Size'\" [width]=\"200\" (valueChanged)=\"changedCanSize($event)\"></ng-select2>\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"row form-group\">\r\n              <label class=\"col-md-4 label-control\"></label>\r\n\r\n              <div class=\"col-md-8\">\r\n                <button class=\"btn btn-primary\" (click)=\"beginDispense('view-dispense-task-modal')\">\r\n                  <i class=\"fas fa-fill-drip\"></i>\r\n                  <span *ngIf=\"inProgress\">In Progress</span>\r\n                  <span *ngIf=\"! inProgress\">Dispense</span>\r\n                </button>\r\n              </div>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<pp-modal id=\"view-dispense-task-modal\" class=\"modal dispense-job-status-modal\" [style]=\"{'display': 'none'}\">\r\n  <div class=\"modal-content\">\r\n    <div class=\"modal-header\">\r\n      <h5 class=\"modal-title\">Dispense Job Status</h5>\r\n      <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\" (click)=\"closeModal('view-dispense-task-modal')\">\r\n        <span aria-hidden=\"true\">×</span>\r\n      </button>\r\n    </div>\r\n    <div class=\"modal-body\">\r\n      <ng-container *ngIf=\"dbItem != null && currentTask != null && currentTask.taskId != null && currentTask.taskId > 0\">\r\n        <app-viewdispensetask [dispenseTask]=\"currentTask\" [dispenseStepTask]=\"currentTaskStep\" [listColorantUsed]=\"listColorant\" [maxColorQuantity]=\"maxColorQuantity\"></app-viewdispensetask>\r\n      </ng-container>\r\n    </div>\r\n\r\n    <div class=\"modal-footer\">\r\n      <button type=\"button\" class=\"btn btn-primary\" (click)=\"closeModal('view-dispense-task-modal')\">Hide</button>\r\n    </div>\r\n  </div>\r\n</pp-modal>\r\n\r\n<pp-modal id=\"print-formula-modal\" class=\"modal print-formula-modal\" [style]=\"{'display': 'none'}\">\r\n  <div class=\"modal-content\">\r\n    <div class=\"modal-header\">\r\n      <h5 class=\"modal-title\">Print</h5>\r\n      <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\" (click)=\"closeModal('print-formula-modal')\">\r\n        <span aria-hidden=\"true\">×</span>\r\n      </button>\r\n    </div>\r\n\r\n    <div class=\"modal-body\">\r\n      <div class=\"row text-center\" *ngIf=\"dbItem != null\">\r\n        <div class=\"col-md-12 formula-color-info\"><h3>{{dbItem.formula.formulaCode}}</h3></div>\r\n        <div class=\"col-md-12 collection-info\"><h4>{{dbItem.formula.collection.collectionName}}</h4></div>\r\n        <div class=\"col-md-12 shop-info\"><h5>Paintshop \"Demo\"</h5></div>\r\n        <div class=\"col-md-12 street-info\"><h5>Demostreet 1</h5></div>\r\n        <div class=\"col-md-12 ville-info\"><h5>Demo ville</h5></div>\r\n        <div class=\"col-md-12 substrate-info\"><p>Substrate recommendation Universal primer Grey</p></div>\r\n        <div class=\"col-md-12 bar-code-info \"><p><span class=\"bar-code-sample\"></span></p></div>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"modal-footer\">\r\n      <button type=\"button\" class=\"btn btn-default\" (click)=\"closeDispenseModel()\">Close</button>\r\n      <button type=\"button\" class=\"btn btn-primary\" (click)=\"closeDispenseModel()\">Print</button>\r\n    </div>\r\n  </div>\r\n</pp-modal>\r\n\r\n"
+module.exports = "<div class=\"block-header\">\r\n  <h1>Standard Formula</h1>\r\n</div>\r\n\r\n<div class=\"row\" *ngIf=\"dbItem != null\">\r\n  <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        Information\r\n      </div>\r\n\r\n      <div class=\"card-body form-detail\">\r\n        <div class=\"form-group row\">\r\n          <label class=\"col-md-4 label-control\">Color</label>\r\n          <div class=\"col-md-8\">\r\n            {{dbItem.formula.formulaCode}}\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"form-group row\">\r\n          <label class=\"col-md-4 label-control\">Collection</label>\r\n          <div class=\"col-md-8\">\r\n            {{dbItem.formula.collection.collectionName}}\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"form-group row\">\r\n          <label class=\"col-md-4 label-control\">Approximate Color</label>\r\n          <div class=\"col-md-8\">\r\n            <span [ngStyle]=\"{'background': dbItem.productBase.rbgHex, 'display': 'inline-block', 'width': '30px', 'height': '30px', 'border': '1px solid #333'}\"></span>\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"form-group row\">\r\n          <label class=\"col-md-4 label-control\">Product</label>\r\n          <div class=\"col-md-8\">\r\n            {{dbItem.productBase.product.productName}}\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"form-group row\">\r\n          <label class=\"col-md-4 label-control\">Formula Date</label>\r\n          <div class=\"col-md-8\">\r\n            {{dbItem.formula.createdDate | date : 'dd/MM/yyyy'}}\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"form-group row\">\r\n          <label class=\"col-md-4 label-control\">Substrate</label>\r\n          <div class=\"col-md-8\">\r\n            substrate???/\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"form-group row\">\r\n          <label class=\"col-md-4 label-control\">Comments</label>\r\n          <div class=\"col-md-8\">\r\n            {{dbItem.formula.comments}}\r\n          </div>\r\n        </div>\r\n\r\n\r\n        <div class=\"form-group row\">\r\n          <label class=\"col-md-4 label-control\">Barcode</label>\r\n          <div class=\"col-md-8\">\r\n            <span *ngIf=\"selectProductBase != null\">\r\n              {{selectProductBase.barCode}}\r\n            </span>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n\r\n  </div>\r\n\r\n  <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        Component colors\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        <div class=\"table-responsive\">\r\n          <table class=\"table table-bordered\" >\r\n            <tr>\r\n              <th style=\"width: 30%\">Component</th>\r\n              <th style=\"width: 20%\">ml</th>\r\n              <th style=\"width: 50%\">Color\r\n            </tr>\r\n\r\n            <tr *ngFor=\"let colorantItem of listFormulaColorant\">\r\n              <td>{{colorantItem.colourant.colourantName}}</td>\r\n              <td>{{colorantItem.quantity * canSize}}</td>\r\n              <td>\r\n                <span class=\"color-bar\" >\r\n                  <span class=\"color-select\" [ngStyle]=\"{'background': colorantItem.colourant.rbgHex, 'width': (colorantItem.quantity / maxColorQuantity) * 100 + '%'}\"></span>\r\n                </span>\r\n              </td>\r\n            </tr>\r\n          </table>\r\n        </div>\r\n\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n\r\n<div class=\"row\" *ngIf=\"dbItem != null\">\r\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        Mixed\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        <div class=\"row\">\r\n          <div class=\"col-lg-6 col-md-6 col-sm-126 col-xs-12 text-right\">\r\n\r\n             <span class=\"base-can-empty\" *ngIf=\"selectProductBase != null\">\r\n                <span class=\"base-can-background\">\r\n                  <span class=\"base-can-volume\" [ngStyle]=\"{'background-color': selectProductBase.productBase.rbgHex, 'height': selectProductBase.percentage + '%'}\">\r\n                    <span class=\"can-base-info\">\r\n                      <span class=\"base-type\">Base : {{selectProductBase.productBase.base.baseCode}}</span>\r\n                      <span class=\"base-volume\">{{canSize + \" \" + selectProductBase.unit}}</span>\r\n                      <span class=\"base-name\">{{selectProductBase.productBase.product.productName}}</span>\r\n                    </span>\r\n                  </span>\r\n                </span>\r\n              </span>\r\n          </div>\r\n\r\n          <div class=\"col-lg-6 col-md-6 col-sm-126 col-xs-12 form-detail\">\r\n            <div class=\"row form-group\">\r\n              <label class=\"col-md-4 label-control\">Number of cans : </label>\r\n              <div class=\"col-md-8\">\r\n                <input type=\"number\" [(ngModel)]=\"numberOfCan\" class=\"form-control\" required=\"required\" [ngModelOptions]=\"{standalone: true}\" [ngStyle]=\"{'width': '200px'}\">\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"row form-group\">\r\n              <label class=\"col-md-4 label-control\">Can size:</label>\r\n              <div class=\"col-md-8\">\r\n                <input type=\"number\" [(ngModel)]=\"canSize\" class=\"form-control\" required=\"required\" [ngModelOptions]=\"{standalone: true}\" [ngStyle]=\"{'width': '200px'}\">\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"row form-group\">\r\n              <label class=\"col-md-4 label-control\">Or select:</label>\r\n              <div class=\"col-md-8\">\r\n                <ng-select2 class=\"select-color-field\" [(ngModel)]=\"canSize\" [data]=\"listProductBase\" [value]=\"canSize\" [placeholder]=\"'Choose Can Size'\" [width]=\"200\" (valueChanged)=\"changedCanSize($event)\"></ng-select2>\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"row form-group\">\r\n              <label class=\"col-md-4 label-control\"></label>\r\n\r\n              <div class=\"col-md-8\">\r\n                <button class=\"btn btn-primary\" (click)=\"beginDispense('view-dispense-task-modal')\">\r\n                  <i class=\"fas fa-fill-drip\"></i>\r\n                  <span *ngIf=\"inProgress\">In Progress</span>\r\n                  <span *ngIf=\"! inProgress\">Dispense</span>\r\n                </button>\r\n              </div>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<pp-modal id=\"view-dispense-task-modal\" class=\"modal dispense-job-status-modal\" [style]=\"{'display': 'none'}\">\r\n  <div class=\"modal-content\">\r\n    <ng-container *ngIf=\"errorMessage != null && errorMessage != ''\">\r\n      <div class=\"modal-header\">\r\n        <h5 class=\"modal-title\">Dispense Job Error Message</h5>\r\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\" (click)=\"closeModal('view-dispense-task-modal')\">\r\n          <span aria-hidden=\"true\">×</span>\r\n        </button>\r\n      </div>\r\n      <div class=\"modal-body\">\r\n        <h3 class=\"warning-message\">{{errorMessage}}</h3>\r\n      </div>\r\n    </ng-container>\r\n\r\n    <ng-container *ngIf=\"errorMessage == null || errorMessage == ''\">\r\n      <div class=\"modal-header\">\r\n        <h5 class=\"modal-title\">Dispense Job Status</h5>\r\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\" (click)=\"closeModal('view-dispense-task-modal')\">\r\n          <span aria-hidden=\"true\">×</span>\r\n        </button>\r\n      </div>\r\n      <div class=\"modal-body\">\r\n        <ng-container *ngIf=\"dbItem != null && currentTask != null && currentTask.taskId != null && currentTask.taskId > 0\">\r\n          <app-viewdispensetask [dispenseTask]=\"currentTask\" [dispenseStepTask]=\"currentTaskStep\" [listColorantUsed]=\"listColorant\" [maxColorQuantity]=\"maxColorQuantity\"></app-viewdispensetask>\r\n        </ng-container>\r\n      </div>\r\n    </ng-container>\r\n\r\n    <div class=\"modal-footer\">\r\n      <button type=\"button\" class=\"btn btn-primary\" (click)=\"closeModal('view-dispense-task-modal')\">Hide</button>\r\n    </div>\r\n  </div>\r\n</pp-modal>\r\n\r\n<pp-modal id=\"print-formula-modal\" class=\"modal print-formula-modal\" [style]=\"{'display': 'none'}\">\r\n  <div class=\"modal-content\">\r\n    <div class=\"modal-header\">\r\n      <h5 class=\"modal-title\">Print</h5>\r\n      <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\" (click)=\"closeModal('print-formula-modal')\">\r\n        <span aria-hidden=\"true\">×</span>\r\n      </button>\r\n    </div>\r\n\r\n    <div class=\"modal-body\">\r\n      <div class=\"row text-center\" *ngIf=\"dbItem != null\">\r\n        <div class=\"col-md-12 formula-color-info\"><h3>{{dbItem.formula.formulaCode}}</h3></div>\r\n        <div class=\"col-md-12 collection-info\"><h4>{{dbItem.formula.collection.collectionName}}</h4></div>\r\n        <div class=\"col-md-12 shop-info\"><h5>Paintshop \"Demo\"</h5></div>\r\n        <div class=\"col-md-12 street-info\"><h5>Demostreet 1</h5></div>\r\n        <div class=\"col-md-12 ville-info\"><h5>Demo ville</h5></div>\r\n        <div class=\"col-md-12 substrate-info\"><p>Substrate recommendation Universal primer Grey</p></div>\r\n        <div class=\"col-md-12 bar-code-info \"><p><span class=\"bar-code-sample\"></span></p></div>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"modal-footer\">\r\n      <button type=\"button\" class=\"btn btn-default\" (click)=\"closeDispenseModel()\">Close</button>\r\n      <button type=\"button\" class=\"btn btn-primary\" (click)=\"closeDispenseModel()\">Print</button>\r\n    </div>\r\n  </div>\r\n</pp-modal>\r\n\r\n"
 
 /***/ }),
 
@@ -910,6 +907,7 @@ var ViewFormulaComponent = /** @class */ (function () {
         this.currentTask = null;
         this.currentTaskStep = null;
         this.listColorant = null;
+        this.errorMessage = null;
     }
     ViewFormulaComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -987,12 +985,20 @@ var ViewFormulaComponent = /** @class */ (function () {
             }
             var stop_t = new _models_dispense_task_model__WEBPACK_IMPORTED_MODULE_4__["DispenseTaskStepModel"](_services_dispensetask_dispensetask_service__WEBPACK_IMPORTED_MODULE_5__["MAP_DISPENSE_TASK_STEP_TYPE"].FINISHED, null, function (newDispenseTask, newDispenseStepTask) {
                 _this.updateDispenseTaskData(newDispenseTask, newDispenseStepTask);
+                _this.numberOfCan -= 1;
+                if (_this.numberOfCan > 0) {
+                    _this.beginDispense(modalId);
+                }
                 setTimeout(function () {
                     _this.openModal('print-formula-modal');
                 }, 500);
             });
             listPumpingTask.push(stop_t);
             this.currentTask = new _models_dispense_task_model__WEBPACK_IMPORTED_MODULE_4__["DispenseTaskModel"]('Dispense', listPumpingTask, new _models_dispense_task_model__WEBPACK_IMPORTED_MODULE_4__["DispenseDataModel"](this.dbItem, this.selectProductBase, this.canSize, this.numberOfCan), null);
+            // this.machineService.validateDispenseTaskBeforeProcess(this.listFormulaColorant, this.currentTask.taskData.canSize)
+            //   .subscribe((data: any) => {
+            //   console.log(data);
+            // });
             this.machineService.recordDispenseFormulaProductBase(_services_dispensetask_dispensetask_service__WEBPACK_IMPORTED_MODULE_5__["MAP_DISPENSE_TASK_STATE"].IN_PROGRESS, this.currentTask.taskId, this.currentTask.taskData.formulaProductBase, this.currentTask.taskData.canSize).subscribe(function (data) {
                 var item = _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_7__["default"].convertToDispenseFormulaProductBase(data);
                 _this.currentTask.taskId = item.machineFormulaProductBaseId;
@@ -1011,8 +1017,6 @@ var ViewFormulaComponent = /** @class */ (function () {
         if (this.currentTask.status === _services_dispensetask_dispensetask_service__WEBPACK_IMPORTED_MODULE_5__["MAP_DISPENSE_TASK_STATE"].IN_PROGRESS) {
             this.inProgress = true;
         }
-        console.log(this.currentTask);
-        console.log(this.currentTaskStep);
     };
     ViewFormulaComponent.prototype.openModal = function (id) {
         this.modalService.open(id);
@@ -1991,7 +1995,7 @@ var RegisterComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"block-header\">\n  <h1>Machine Setting</h1>\n</div>\n\n<div class=\"row\">\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n    <div class=\"card\">\n      <div class=\"card-header\">\n        Colorant Machine {{ machine.name + '(' + machine.code + ')'}}\n      </div>\n\n      <div class=\"card-body\">\n        <div class=\"machine-colourant-group\">\n          <div class=\"machine-background\">\n            <span class=\"machine-colourant-max-range\" [ngStyle]=\"{'height': '100%'}\"><span class=\"step-label\">{{maxQuantity}}</span></span>\n            <span class=\"machine-colourant-warning-range\" [ngStyle]=\"{'height': (minQuantity / maxQuantity) * 100 + '%'}\"><span class=\"step-label\">{{minQuantity}}</span></span>\n            <span class=\"machine-colourant-min-range\" [ngStyle]=\"{'height': '0%'}\"><span class=\"step-label\">0</span></span>\n          </div>\n\n          <ng-container *ngFor=\"let machineColourant of listMachineColourant\">\n            <div class=\"machine-colourant-item\" (click)=\"selectMachineColourant(machineColourant.colourant.colourantId)\">\n              <span *ngIf=\"selectedMachineColourant != null && selectedMachineColourant.colourant.colourantId == machineColourant.colourant.colourantId\" class=\"selected-colourant-bgr\"></span>\n              <span class=\"machine-colourant-bgr\">\n                <span class=\"machine-colourant-current-range\" [ngStyle]=\"{'height': (machineColourant.quantity / maxQuantity) * 100 + '%', 'background-color': machineColourant.colourant.rbgHex, 'border': '1px solid #' + machineColourant.colourant.rbgHex}\"></span>\n              </span>\n              <span class=\"colourant-name\">{{machineColourant.colourant.colourantName}}</span>\n              <span class=\"colourant-code\" [ngStyle]=\"{color: machineColourant.colourant.rbgHex}\">{{machineColourant.colourant.colourantCode}}</span>\n            </div>\n          </ng-container>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n\n<ng-container *ngIf=\"selectedMachineColourant != null\">\n  <pp-modal id=\"view-selected-colourant-machine-modal\" class=\"modal machine-colourant-single-item\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <h5 class=\"modal-title\">Canister Refill</h5>\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\" (click)=\"closeModal('view-selected-colourant-machine-modal')\">\n          <span aria-hidden=\"true\">×</span>\n        </button>\n      </div>\n\n      <div class=\"modal-body\">\n        <div class=\"row\">\n          <div class=\"col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n            <div class=\"machine-colourant-group\">\n              <div class=\"machine-background\">\n                <span class=\"machine-colourant-max-range\" [ngStyle]=\"{'height': '100%'}\"><span class=\"step-label\">{{maxQuantity}}</span></span>\n                <span class=\"machine-colourant-warning-range\" [ngStyle]=\"{'height': (minQuantity / maxQuantity) * 100 + '%'}\"><span class=\"step-label\">{{minQuantity}}</span></span>\n                <span class=\"machine-colourant-min-range\" [ngStyle]=\"{'height': '0%'}\"><span class=\"step-label\">0</span></span>\n              </div>\n              <div class=\"machine-colourant-item\">\n                <span class=\"machine-colourant-bgr\">\n                  <span class=\"machine-colourant-update-range\"  [ngStyle]=\"{'height': ((selectedMachineColourant.quantity + addedAmount) / maxQuantity) * 100 + '%', 'background-color': selectedMachineColourant.colourant.rbgHex, 'border': '1px solid #' + selectedMachineColourant.colourant.rbgHex}\"></span>\n                  <span class=\"machine-colourant-current-range\" [ngStyle]=\"{'height': (selectedMachineColourant.quantity / maxQuantity) * 100 + '%', 'background-color': selectedMachineColourant.colourant.rbgHex, 'border': '1px solid #' + selectedMachineColourant.colourant.rbgHex}\"></span>\n                </span>\n                <span class=\"colourant-name\">{{selectedMachineColourant.colourant.colourantName}}</span>\n                <span class=\"colourant-code\" [ngStyle]=\"{color: selectedMachineColourant.colourant.rbgHex}\">{{selectedMachineColourant.colourant.colourantCode}}</span>\n              </div>\n            </div>\n          </div>\n\n          <div class=\"col-lg-10 col-md-10 col-sm-9 col-xs-9 \">\n            <div class=\"machine-colourant-info form-detail\">\n              <div class=\"row form-group\">\n                <label class=\"col-md-4 label-control\">Amount:</label>\n                <div class=\"col-md-6\">\n                  <div class=\"input-group\">\n                    <input type=\"number\" [(ngModel)]=\"addedAmount\" class=\"form-control\" required=\"required\" [ngModelOptions]=\"{standalone: true}\" (change)=\"updateAddedAmount('amount')\">\n                    <div class=\"input-group-append\">\n                      <span class=\"input-group-text\">ml</span>\n                    </div>\n                  </div>\n                </div>\n              </div>\n              <div class=\"row form-group\">\n                <label class=\"col-md-4 label-control\">Refill Factor:</label>\n                <div class=\"col-md-6\">\n                  <div class=\"input-group\">\n                    <input type=\"number\" [(ngModel)]=\"addedAmountPercent\" class=\"form-control\" required=\"required\" [ngModelOptions]=\"{standalone: true}\" (change)=\"updateAddedAmount('percent')\">\n                    <div class=\"input-group-append\">\n                      <span class=\"input-group-text\">%</span>\n                    </div>\n                  </div>\n                </div>\n              </div>\n\n              <div class=\"row form-group\">\n                <label class=\"col-md-4 label-control\">\n\n                </label>\n                <div class=\"col-md-8\">\n                  <button class=\"btn btn-dark\" (click)=\"fillByPercent(100);\">Fill to 100%</button>\n                </div>\n              </div>\n\n              <div class=\"row form-group\">\n                <label class=\"col-md-4 label-control\">Canister</label>\n                <div class=\"col-md-8\">\n                  {{selectedMachineColourant.colourant.colourantId}}\n                </div>\n              </div>\n\n              <div class=\"row form-group\">\n                <label class=\"col-md-4 label-control\">Component</label>\n                <div class=\"col-md-8\">\n                  {{selectedMachineColourant.colourant.colourantCode}}\n                </div>\n              </div>\n\n              <div class=\"row form-group\">\n                <label class=\"col-md-4 label-control\">Current</label>\n                <div class=\"col-md-8\">\n                  {{selectedMachineColourant.quantity / 1000}} L\n                </div>\n              </div>\n\n              <div class=\"row form-group\">\n                <label class=\"col-md-4 label-control\">Maximum</label>\n                <div class=\"col-md-8\">\n                  {{maxQuantity / 1000}} L\n                </div>\n              </div>\n\n              <div class=\"row form-group\">\n                <label class=\"col-md-4 label-control\">Minimum</label>\n                <div class=\"col-md-8\">\n                  {{minQuantity / 1000}} L\n                </div>\n              </div>\n\n              <div class=\"row form-group\">\n                <label class=\"col-md-4 label-control\">Density</label>\n                <div class=\"col-md-8\">\n                  {{selectedMachineColourant.colourant.density}} kg/L\n                </div>\n              </div>\n\n              <div class=\"row form-group\">\n                View Usage >>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n\n      <div class=\"modal-footer\">\n        <button type=\"button\" class=\"btn btn-success\" (click)=\"updateAndSaving('view-selected-colourant-machine-modal')\">Update</button>\n        <button type=\"button\" class=\"btn btn-default\" (click)=\"closeModal('view-selected-colourant-machine-modal')\">Cancel</button>\n      </div>\n    </div>\n  </pp-modal>\n</ng-container>\n"
+module.exports = "<div class=\"block-header\">\n  <h1>Machine Setting</h1>\n</div>\n\n<div class=\"row\">\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n    <div class=\"card\">\n      <div class=\"card-header\">\n        Colorant Machine {{ machine.name + '(' + machine.code + ')'}}\n      </div>\n\n      <div class=\"card-body\">\n        <div class=\"machine-colourant-group\">\n          <div class=\"machine-background\">\n            <span class=\"machine-colourant-max-range\" [ngStyle]=\"{'height': '100%'}\"><span class=\"step-label\">{{maxQuantity}}</span></span>\n            <span class=\"machine-colourant-warning-range\" [ngStyle]=\"{'height': (minQuantity / maxQuantity) * 100 + '%'}\"><span class=\"step-label\">{{minQuantity}}</span></span>\n            <span class=\"machine-colourant-min-range\" [ngStyle]=\"{'height': '0%'}\"><span class=\"step-label\">0</span></span>\n          </div>\n\n          <ng-container *ngFor=\"let machineColourant of listMachineColourant\">\n            <div class=\"machine-colourant-item\" (click)=\"selectMachineColourant(machineColourant.colourant.colourantId)\">\n              <span *ngIf=\"selectedMachineColourant != null && selectedMachineColourant.colourant.colourantId == machineColourant.colourant.colourantId\" class=\"selected-colourant-bgr\"></span>\n              <span class=\"machine-colourant-bgr\">\n                <span class=\"machine-colourant-current-range\" [ngStyle]=\"{'height': (machineColourant.quantity / maxQuantity) * 100 + '%', 'background-color': machineColourant.colourant.rbgHex, 'border': '1px solid #' + machineColourant.colourant.rbgHex}\"></span>\n              </span>\n              <span class=\"colourant-name\">{{machineColourant.colourant.colourantName}}</span>\n              <span class=\"colourant-code\">{{machineColourant.colourant.colourantCode}}</span>\n            </div>\n          </ng-container>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n\n<ng-container *ngIf=\"selectedMachineColourant != null\">\n  <pp-modal id=\"view-selected-colourant-machine-modal\" class=\"modal machine-colourant-single-item\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <h5 class=\"modal-title\">Canister Refill</h5>\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\" (click)=\"closeModal('view-selected-colourant-machine-modal')\">\n          <span aria-hidden=\"true\">×</span>\n        </button>\n      </div>\n\n      <div class=\"modal-body\">\n        <div class=\"row\">\n          <div class=\"col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n            <div class=\"machine-colorant-slider-group\">\n              <mat-slider class=\"machine-colourant-slider\" [tickInterval]=\"maxQuantity / 20\" [max]=\"maxQuantity\" [min]=\"0\" [step]=\"1\" [(ngModel)]=\"updateAmount\" [vertical]=\"true\" [thumbLabel]=\"true\" (change)=\"updateAmountBySlider()\"></mat-slider>\n            </div>\n          </div>\n\n          <div class=\"col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n            <div class=\"machine-colourant-group\">\n              <div class=\"machine-background\">\n                <span class=\"machine-colourant-max-range\" [ngStyle]=\"{'height': '100%'}\"><span class=\"step-label\">{{maxQuantity}}</span></span>\n                <span class=\"machine-colourant-warning-range\" [ngStyle]=\"{'height': (minQuantity / maxQuantity) * 100 + '%'}\"><span class=\"step-label\">{{minQuantity}}</span></span>\n                <span class=\"machine-colourant-min-range\" [ngStyle]=\"{'height': '0%'}\"><span class=\"step-label\">0</span></span>\n              </div>\n              <div class=\"machine-colourant-item\">\n                <span class=\"machine-colourant-bgr\">\n                  <span class=\"machine-colourant-update-range\"  [ngStyle]=\"{'height': ((selectedMachineColourant.quantity + addedAmount) / maxQuantity) * 100 + '%', 'background-color': selectedMachineColourant.colourant.rbgHex, 'border': '1px solid #' + selectedMachineColourant.colourant.rbgHex}\"></span>\n                  <span class=\"machine-colourant-current-range\" [ngStyle]=\"{'height': (selectedMachineColourant.quantity / maxQuantity) * 100 + '%', 'background-color': selectedMachineColourant.colourant.rbgHex, 'border': '1px solid #' + selectedMachineColourant.colourant.rbgHex}\"></span>\n                </span>\n                <span class=\"colourant-name\">{{selectedMachineColourant.colourant.colourantName}}</span>\n                <span class=\"colourant-code\">{{selectedMachineColourant.colourant.colourantCode}}</span>\n              </div>\n            </div>\n          </div>\n\n          <div class=\"col-lg-8 col-md-8 col-sm-6 col-xs-6\">\n            <div class=\"machine-colourant-info form-detail\">\n              <div class=\"row form-group\">\n                <label class=\"col-md-4 label-control\">Amount:</label>\n                <div class=\"col-md-6\">\n                  <div class=\"input-group\">\n                    <!--<input type=\"number\" [(ngModel)]=\"addedAmount\" class=\"form-control\" required=\"required\" [ngModelOptions]=\"{standalone: true}\" (change)=\"updateAddedAmount('amount')\">-->\n                    <input type=\"number\" [(ngModel)]=\"addedAmount\" class=\"form-control\" required=\"required\" [ngModelOptions]=\"{standalone: true}\" (change)=\"updateAddedAmount('amount')\">\n                    <div class=\"input-group-append\">\n                      <span class=\"input-group-text\">ml</span>\n                    </div>\n                  </div>\n                </div>\n              </div>\n\n              <!--<div class=\"row form-group\">-->\n                <!--<label class=\"col-md-4 label-control\">Refill Factor:</label>-->\n                <!--<div class=\"col-md-6\">-->\n                  <!--<div class=\"input-group\">-->\n                    <!--<input type=\"number\" [(ngModel)]=\"addedAmountPercent\" class=\"form-control\" required=\"required\" [ngModelOptions]=\"{standalone: true}\" (change)=\"updateAddedAmount('percent')\">-->\n                    <!--<div class=\"input-group-append\">-->\n                      <!--<span class=\"input-group-text\">%</span>-->\n                    <!--</div>-->\n                  <!--</div>-->\n                <!--</div>-->\n              <!--</div>-->\n\n              <div class=\"row form-group\">\n                <label class=\"col-md-4 label-control\">\n\n                </label>\n                <div class=\"col-md-8\">\n                  <button class=\"btn btn-dark\" (click)=\"fillByPercent(100);\">Fill to 100%</button>\n                </div>\n              </div>\n\n              <div class=\"row form-group\">\n                <label class=\"col-md-4 label-control\">Canister</label>\n                <div class=\"col-md-8\">\n                  {{selectedMachineColourant.colourant.colourantId}}\n                </div>\n              </div>\n\n              <div class=\"row form-group\">\n                <label class=\"col-md-4 label-control\">Component</label>\n                <div class=\"col-md-8\">\n                  {{selectedMachineColourant.colourant.colourantCode}}\n                </div>\n              </div>\n\n              <div class=\"row form-group\">\n                <label class=\"col-md-4 label-control\">Current</label>\n                <div class=\"col-md-8\">\n                  {{selectedMachineColourant.quantity / 1000}} L\n                </div>\n              </div>\n\n              <div class=\"row form-group\">\n                <label class=\"col-md-4 label-control\">Maximum</label>\n                <div class=\"col-md-8\">\n                  {{maxQuantity / 1000}} L\n                </div>\n              </div>\n\n              <div class=\"row form-group\">\n                <label class=\"col-md-4 label-control\">Minimum</label>\n                <div class=\"col-md-8\">\n                  {{minQuantity / 1000}} L\n                </div>\n              </div>\n\n              <div class=\"row form-group\">\n                <label class=\"col-md-4 label-control\">Density</label>\n                <div class=\"col-md-8\">\n                  {{selectedMachineColourant.colourant.density}} kg/L\n                </div>\n              </div>\n\n              <div class=\"row form-group\">\n                View Usage >>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n\n      <div class=\"modal-footer\">\n        <button type=\"button\" class=\"btn btn-success\" (click)=\"updateAndSaving('view-selected-colourant-machine-modal')\">Update</button>\n        <button type=\"button\" class=\"btn btn-default\" (click)=\"closeModal('view-selected-colourant-machine-modal')\">Cancel</button>\n      </div>\n    </div>\n  </pp-modal>\n</ng-container>\n"
 
 /***/ }),
 
@@ -2002,7 +2006,7 @@ module.exports = "<div class=\"block-header\">\n  <h1>Machine Setting</h1>\n</di
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".machine-colourant-group {\n  margin: 30px 10px 50px 50px;\n  position: relative;\n  display: flex; }\n\n.machine-colourant-single-item .machine-colourant-group {\n  margin: 0px; }\n\n.machine-colourant-single-item .machine-colourant-item {\n  min-width: 60px; }\n\n.machine-colourant-single-item .machine-colourant-min-range .step-label,\n.machine-colourant-single-item .machine-colourant-warning-range .step-label,\n.machine-colourant-single-item .machine-colourant-max-range .step-label {\n  display: none; }\n\n.machine-background {\n  position: absolute;\n  top: 0px;\n  left: 0px;\n  bottom: 0px;\n  right: 0px; }\n\n.machine-background .machine-colourant-min-range,\n  .machine-background .machine-colourant-warning-range,\n  .machine-background .machine-colourant-max-range {\n    width: 100%;\n    position: absolute;\n    left: 0px;\n    right: 0px;\n    bottom: 0px;\n    opacity: 0.5; }\n\n.machine-background .machine-colourant-min-range .step-label,\n    .machine-background .machine-colourant-warning-range .step-label,\n    .machine-background .machine-colourant-max-range .step-label {\n      position: absolute;\n      top: 0px;\n      left: -5px;\n      -webkit-transform: translate(-100%, -50%);\n      transform: translate(-100%, -50%); }\n\n.machine-background .machine-colourant-warning-range {\n    border-top: 1px dashed darkorange; }\n\n.machine-background .machine-colourant-warning-range .step-label {\n      color: darkorange; }\n\n.machine-background .machine-colourant-min-range {\n    border-top: 1px dashed red; }\n\n.machine-background .machine-colourant-min-range .step-label {\n      color: red; }\n\n.machine-background .machine-colourant-max-range {\n    border-top: 1px dashed green; }\n\n.machine-background .machine-colourant-max-range .step-label {\n      color: green; }\n\n.machine-colourant-item {\n  width: 6.25%;\n  display: inline-block;\n  height: 400px;\n  padding-left: 5px;\n  padding-right: 5px;\n  position: relative; }\n\n.machine-colourant-item .machine-colourant-bgr {\n    position: absolute;\n    top: 0px;\n    bottom: 0px;\n    left: 15px;\n    right: 15px;\n    border: 1px solid #333333; }\n\n.machine-colourant-item .machine-colourant-bgr:after {\n      content: \"\";\n      display: inline-block;\n      position: absolute;\n      top: 0px;\n      left: 0px;\n      right: 0px;\n      bottom: 0px;\n      background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(204, 204, 204, 0.5), rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)); }\n\n.machine-colourant-item .machine-colourant-bgr .machine-colourant-update-range,\n    .machine-colourant-item .machine-colourant-bgr .machine-colourant-current-range {\n      position: absolute;\n      display: inline-block;\n      left: 1px;\n      right: 1px;\n      bottom: 0px;\n      border-top: 1px solid #cccccc; }\n\n.machine-colourant-item .machine-colourant-bgr .machine-colourant-update-range {\n      opacity: 0.5; }\n\n.machine-colourant-item .selected-colourant-bgr {\n    position: absolute;\n    outline: 2px solid #00417b;\n    top: -15px;\n    left: 0px;\n    right: 0px;\n    bottom: -15px; }\n\n.machine-colourant-item .colourant-name {\n    position: absolute;\n    width: 100%;\n    display: inline-block;\n    -webkit-transform: rotate(-90deg);\n            transform: rotate(-90deg);\n    -webkit-transform-origin: left center;\n            transform-origin: left center;\n    left: 50%;\n    bottom: 0px;\n    white-space: nowrap; }\n\n.machine-colourant-item .colourant-code {\n    font-weight: bold;\n    font-size: 120%;\n    position: absolute;\n    bottom: 0px;\n    left: 50%;\n    -webkit-transform: translate(-50%, 45px);\n            transform: translate(-50%, 45px); }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9tYWNoaW5lL21hY2hpbmVzZXR0aW5nL0c6XFxXb3Jrc3BhY2VcXGNsaWVudHZpZXRwb3dlci9zcmNcXGFwcFxcY29tcG9uZW50c1xcbWFjaGluZVxcbWFjaGluZXNldHRpbmdcXG1hY2hpbmVzZXR0aW5nLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsNEJBQTJCO0VBQzNCLG1CQUFrQjtFQUNsQixjQUFhLEVBQ2Q7O0FBR0Q7RUFFSSxZQUFXLEVBQ1o7O0FBSEg7RUFNSSxnQkFBZSxFQUNoQjs7QUFQSDs7O0VBYU0sY0FBYSxFQUNkOztBQUlMO0VBQ0UsbUJBQWtCO0VBQ2xCLFNBQVE7RUFDUixVQUFTO0VBQ1QsWUFBVztFQUNYLFdBQVUsRUE0Q1g7O0FBakREOzs7SUFVSSxZQUFXO0lBQ1gsbUJBQWtCO0lBQ2xCLFVBQVM7SUFDVCxXQUFVO0lBQ1YsWUFBVztJQUNYLGFBQVksRUFZYjs7QUEzQkg7OztNQWtCTSxtQkFBa0I7TUFDbEIsU0FBUTtNQUNSLFdBQVU7TUFDViwwQ0FBeUM7TUFJekMsa0NBQWlDLEVBQ2xDOztBQTFCTDtJQThCSSxrQ0FBaUMsRUFJbEM7O0FBbENIO01BZ0NNLGtCQUFpQixFQUNsQjs7QUFqQ0w7SUFxQ0ksMkJBQTBCLEVBSTNCOztBQXpDSDtNQXVDTSxXQUFVLEVBQ1g7O0FBeENMO0lBNENJLDZCQUE0QixFQUk3Qjs7QUFoREg7TUE4Q00sYUFBWSxFQUNiOztBQUlMO0VBQ0UsYUFBeUI7RUFDekIsc0JBQXFCO0VBQ3JCLGNBQWE7RUFDYixrQkFBaUI7RUFDakIsbUJBQWtCO0VBQ2xCLG1CQUFrQixFQWdFbkI7O0FBdEVEO0lBU0ksbUJBQWtCO0lBQ2xCLFNBQVE7SUFDUixZQUFXO0lBQ1gsV0FBVTtJQUNWLFlBQVc7SUFDWCwwQkFBeUIsRUEwQjFCOztBQXhDSDtNQWlCTSxZQUFXO01BQ1gsc0JBQXFCO01BQ3JCLG1CQUFrQjtNQUNsQixTQUFRO01BQ1IsVUFBUztNQUNULFdBQVU7TUFDVixZQUFXO01BQ1gsZ0pBQW9KLEVBQ3JKOztBQXpCTDs7TUE2Qk0sbUJBQWtCO01BQ2xCLHNCQUFxQjtNQUNyQixVQUFTO01BQ1QsV0FBVTtNQUNWLFlBQVc7TUFDWCw4QkFBNkIsRUFDOUI7O0FBbkNMO01Bc0NNLGFBQVksRUFDYjs7QUF2Q0w7SUEyQ0ksbUJBQWtCO0lBQ2xCLDJCQUEwQjtJQUMxQixXQUFVO0lBQ1YsVUFBUztJQUNULFdBQVU7SUFDVixjQUFhLEVBQ2Q7O0FBakRIO0lBb0RJLG1CQUFrQjtJQUNsQixZQUFXO0lBQ1gsc0JBQXFCO0lBQ3JCLGtDQUF5QjtZQUF6QiwwQkFBeUI7SUFDekIsc0NBQTZCO1lBQTdCLDhCQUE2QjtJQUM3QixVQUFTO0lBQ1QsWUFBVztJQUNYLG9CQUFtQixFQUNwQjs7QUE1REg7SUErREksa0JBQWlCO0lBQ2pCLGdCQUFlO0lBQ2YsbUJBQWtCO0lBQ2xCLFlBQVc7SUFDWCxVQUFTO0lBQ1QseUNBQWdDO1lBQWhDLGlDQUFnQyxFQUNqQyIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvbWFjaGluZS9tYWNoaW5lc2V0dGluZy9tYWNoaW5lc2V0dGluZy5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5tYWNoaW5lLWNvbG91cmFudC1ncm91cHtcclxuICBtYXJnaW46IDMwcHggMTBweCA1MHB4IDUwcHg7XHJcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbn1cclxuXHJcblxyXG4ubWFjaGluZS1jb2xvdXJhbnQtc2luZ2xlLWl0ZW17XHJcbiAgLm1hY2hpbmUtY29sb3VyYW50LWdyb3Vwe1xyXG4gICAgbWFyZ2luOiAwcHg7XHJcbiAgfVxyXG5cclxuICAubWFjaGluZS1jb2xvdXJhbnQtaXRlbXtcclxuICAgIG1pbi13aWR0aDogNjBweDtcclxuICB9XHJcblxyXG4gIC5tYWNoaW5lLWNvbG91cmFudC1taW4tcmFuZ2UsXHJcbiAgLm1hY2hpbmUtY29sb3VyYW50LXdhcm5pbmctcmFuZ2UsXHJcbiAgLm1hY2hpbmUtY29sb3VyYW50LW1heC1yYW5nZXtcclxuICAgIC5zdGVwLWxhYmVse1xyXG4gICAgICBkaXNwbGF5OiBub25lO1xyXG4gICAgfVxyXG4gIH1cclxufVxyXG5cclxuLm1hY2hpbmUtYmFja2dyb3VuZHtcclxuICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgdG9wOiAwcHg7XHJcbiAgbGVmdDogMHB4O1xyXG4gIGJvdHRvbTogMHB4O1xyXG4gIHJpZ2h0OiAwcHg7XHJcblxyXG4gIC5tYWNoaW5lLWNvbG91cmFudC1taW4tcmFuZ2UsXHJcbiAgLm1hY2hpbmUtY29sb3VyYW50LXdhcm5pbmctcmFuZ2UsXHJcbiAgLm1hY2hpbmUtY29sb3VyYW50LW1heC1yYW5nZXtcclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgbGVmdDogMHB4O1xyXG4gICAgcmlnaHQ6IDBweDtcclxuICAgIGJvdHRvbTogMHB4O1xyXG4gICAgb3BhY2l0eTogMC41O1xyXG5cclxuICAgIC5zdGVwLWxhYmVse1xyXG4gICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICAgIHRvcDogMHB4O1xyXG4gICAgICBsZWZ0OiAtNXB4O1xyXG4gICAgICAtd2Via2l0LXRyYW5zZm9ybTogdHJhbnNsYXRlKC0xMDAlLCAtNTAlKTtcclxuICAgICAgLW1vei10cmFuc2Zvcm06IHRyYW5zbGF0ZSgtMTAwJSwgLTUwJSk7XHJcbiAgICAgIC1tcy10cmFuc2Zvcm06IHRyYW5zbGF0ZSgtMTAwJSwgLTUwJSk7XHJcbiAgICAgIC1vLXRyYW5zZm9ybTogdHJhbnNsYXRlKC0xMDAlLCAtNTAlKTtcclxuICAgICAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTEwMCUsIC01MCUpO1xyXG4gICAgfVxyXG4gIH1cclxuXHJcbiAgLm1hY2hpbmUtY29sb3VyYW50LXdhcm5pbmctcmFuZ2V7XHJcbiAgICBib3JkZXItdG9wOiAxcHggZGFzaGVkIGRhcmtvcmFuZ2U7XHJcbiAgICAuc3RlcC1sYWJlbHtcclxuICAgICAgY29sb3I6IGRhcmtvcmFuZ2U7XHJcbiAgICB9XHJcbiAgfVxyXG5cclxuICAubWFjaGluZS1jb2xvdXJhbnQtbWluLXJhbmdle1xyXG4gICAgYm9yZGVyLXRvcDogMXB4IGRhc2hlZCByZWQ7XHJcbiAgICAuc3RlcC1sYWJlbHtcclxuICAgICAgY29sb3I6IHJlZDtcclxuICAgIH1cclxuICB9XHJcblxyXG4gIC5tYWNoaW5lLWNvbG91cmFudC1tYXgtcmFuZ2V7XHJcbiAgICBib3JkZXItdG9wOiAxcHggZGFzaGVkIGdyZWVuO1xyXG4gICAgLnN0ZXAtbGFiZWx7XHJcbiAgICAgIGNvbG9yOiBncmVlbjtcclxuICAgIH1cclxuICB9XHJcbn1cclxuXHJcbi5tYWNoaW5lLWNvbG91cmFudC1pdGVte1xyXG4gIHdpZHRoOiBwZXJjZW50YWdlKDEgLyAxNik7XHJcbiAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG4gIGhlaWdodDogNDAwcHg7XHJcbiAgcGFkZGluZy1sZWZ0OiA1cHg7XHJcbiAgcGFkZGluZy1yaWdodDogNXB4O1xyXG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuXHJcbiAgLm1hY2hpbmUtY29sb3VyYW50LWJncntcclxuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgIHRvcDogMHB4O1xyXG4gICAgYm90dG9tOiAwcHg7XHJcbiAgICBsZWZ0OiAxNXB4O1xyXG4gICAgcmlnaHQ6IDE1cHg7XHJcbiAgICBib3JkZXI6IDFweCBzb2xpZCAjMzMzMzMzO1xyXG5cclxuICAgICY6YWZ0ZXJ7XHJcbiAgICAgIGNvbnRlbnQ6IFwiXCI7XHJcbiAgICAgIGRpc3BsYXk6IGlubGluZS1ibG9jaztcclxuICAgICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgICB0b3A6IDBweDtcclxuICAgICAgbGVmdDogMHB4O1xyXG4gICAgICByaWdodDogMHB4O1xyXG4gICAgICBib3R0b206IDBweDtcclxuICAgICAgYmFja2dyb3VuZC1pbWFnZTogbGluZWFyLWdyYWRpZW50KHRvIHJpZ2h0LCByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMCksIHJnYmEoMjA0LCAyMDQsIDIwNCwgMC41KSwgIHJnYmEoMjU1LCAyNTUsIDI1NSwgMC4zKSwgcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjApKTtcclxuICAgIH1cclxuXHJcbiAgICAubWFjaGluZS1jb2xvdXJhbnQtdXBkYXRlLXJhbmdlLFxyXG4gICAgLm1hY2hpbmUtY29sb3VyYW50LWN1cnJlbnQtcmFuZ2Uge1xyXG4gICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICAgIGRpc3BsYXk6IGlubGluZS1ibG9jaztcclxuICAgICAgbGVmdDogMXB4O1xyXG4gICAgICByaWdodDogMXB4O1xyXG4gICAgICBib3R0b206IDBweDtcclxuICAgICAgYm9yZGVyLXRvcDogMXB4IHNvbGlkICNjY2NjY2M7XHJcbiAgICB9XHJcblxyXG4gICAgLm1hY2hpbmUtY29sb3VyYW50LXVwZGF0ZS1yYW5nZXtcclxuICAgICAgb3BhY2l0eTogMC41O1xyXG4gICAgfVxyXG4gIH1cclxuXHJcbiAgLnNlbGVjdGVkLWNvbG91cmFudC1iZ3J7XHJcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICBvdXRsaW5lOiAycHggc29saWQgIzAwNDE3YjtcclxuICAgIHRvcDogLTE1cHg7XHJcbiAgICBsZWZ0OiAwcHg7XHJcbiAgICByaWdodDogMHB4O1xyXG4gICAgYm90dG9tOiAtMTVweDtcclxuICB9XHJcblxyXG4gIC5jb2xvdXJhbnQtbmFtZXtcclxuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG4gICAgdHJhbnNmb3JtOiByb3RhdGUoLTkwZGVnKTtcclxuICAgIHRyYW5zZm9ybS1vcmlnaW46IGxlZnQgY2VudGVyO1xyXG4gICAgbGVmdDogNTAlO1xyXG4gICAgYm90dG9tOiAwcHg7XHJcbiAgICB3aGl0ZS1zcGFjZTogbm93cmFwO1xyXG4gIH1cclxuXHJcbiAgLmNvbG91cmFudC1jb2RlIHtcclxuICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xyXG4gICAgZm9udC1zaXplOiAxMjAlO1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgYm90dG9tOiAwcHg7XHJcbiAgICBsZWZ0OiA1MCU7XHJcbiAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgtNTAlLCA0NXB4KTtcclxuICB9XHJcbn1cclxuIl19 */"
+module.exports = ".machine-colourant-group {\n  margin: 30px 10px 50px 50px;\n  position: relative;\n  display: flex; }\n\n.machine-colourant-single-item .machine-colourant-group {\n  margin: 0px; }\n\n.machine-colourant-single-item .machine-colourant-item {\n  min-width: 60px; }\n\n.machine-colourant-single-item .machine-colourant-min-range .step-label,\n.machine-colourant-single-item .machine-colourant-warning-range .step-label,\n.machine-colourant-single-item .machine-colourant-max-range .step-label {\n  display: none; }\n\n.machine-background {\n  position: absolute;\n  top: 0px;\n  left: 0px;\n  bottom: 0px;\n  right: 0px; }\n\n.machine-background .machine-colourant-min-range,\n  .machine-background .machine-colourant-warning-range,\n  .machine-background .machine-colourant-max-range {\n    width: 100%;\n    position: absolute;\n    left: 0px;\n    right: 0px;\n    bottom: 0px;\n    opacity: 0.5; }\n\n.machine-background .machine-colourant-min-range .step-label,\n    .machine-background .machine-colourant-warning-range .step-label,\n    .machine-background .machine-colourant-max-range .step-label {\n      position: absolute;\n      top: 0px;\n      left: -5px;\n      -webkit-transform: translate(-100%, -50%);\n      transform: translate(-100%, -50%); }\n\n.machine-background .machine-colourant-warning-range {\n    border-top: 1px dashed darkorange; }\n\n.machine-background .machine-colourant-warning-range .step-label {\n      color: darkorange; }\n\n.machine-background .machine-colourant-min-range {\n    border-top: 1px dashed red; }\n\n.machine-background .machine-colourant-min-range .step-label {\n      color: red; }\n\n.machine-background .machine-colourant-max-range {\n    border-top: 1px dashed green; }\n\n.machine-background .machine-colourant-max-range .step-label {\n      color: green; }\n\n.machine-colorant-slider-group {\n  padding-left: 20px; }\n\n.machine-colorant-slider-group .machine-colourant-slider {\n    height: 416px;\n    margin-top: -8px;\n    padding: 8px; }\n\n.machine-colourant-item {\n  width: 6.25%;\n  display: inline-block;\n  height: 400px;\n  padding-left: 5px;\n  padding-right: 5px;\n  position: relative; }\n\n.machine-colourant-item .machine-colourant-bgr {\n    position: absolute;\n    top: 0px;\n    bottom: 0px;\n    left: 15px;\n    right: 15px;\n    border: 1px solid #333333; }\n\n.machine-colourant-item .machine-colourant-bgr .machine-colourant-update-range,\n    .machine-colourant-item .machine-colourant-bgr .machine-colourant-current-range {\n      position: absolute;\n      display: inline-block;\n      left: 0px;\n      right: 0px;\n      bottom: 0px;\n      border-top: 1px solid #000000; }\n\n.machine-colourant-item .machine-colourant-bgr .machine-colourant-update-range {\n      opacity: 0.5; }\n\n.machine-colourant-item .selected-colourant-bgr {\n    position: absolute;\n    outline: 2px solid #00417b;\n    top: -15px;\n    left: 0px;\n    right: 0px;\n    bottom: -15px; }\n\n.machine-colourant-item .colourant-name {\n    position: absolute;\n    width: 100%;\n    display: inline-block;\n    -webkit-transform: rotate(-90deg);\n            transform: rotate(-90deg);\n    -webkit-transform-origin: left center;\n            transform-origin: left center;\n    left: 50%;\n    bottom: 0px;\n    white-space: nowrap; }\n\n.machine-colourant-item .colourant-code {\n    font-weight: bold;\n    font-size: 120%;\n    position: absolute;\n    bottom: 0px;\n    left: 50%;\n    -webkit-transform: translate(-50%, 45px);\n            transform: translate(-50%, 45px); }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9tYWNoaW5lL21hY2hpbmVzZXR0aW5nL0c6XFxXb3Jrc3BhY2VcXGNsaWVudHZpZXRwb3dlci9zcmNcXGFwcFxcY29tcG9uZW50c1xcbWFjaGluZVxcbWFjaGluZXNldHRpbmdcXG1hY2hpbmVzZXR0aW5nLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsNEJBQTJCO0VBQzNCLG1CQUFrQjtFQUNsQixjQUFhLEVBQ2Q7O0FBR0Q7RUFFSSxZQUFXLEVBQ1o7O0FBSEg7RUFNSSxnQkFBZSxFQUNoQjs7QUFQSDs7O0VBYU0sY0FBYSxFQUNkOztBQUlMO0VBQ0UsbUJBQWtCO0VBQ2xCLFNBQVE7RUFDUixVQUFTO0VBQ1QsWUFBVztFQUNYLFdBQVUsRUE0Q1g7O0FBakREOzs7SUFVSSxZQUFXO0lBQ1gsbUJBQWtCO0lBQ2xCLFVBQVM7SUFDVCxXQUFVO0lBQ1YsWUFBVztJQUNYLGFBQVksRUFZYjs7QUEzQkg7OztNQWtCTSxtQkFBa0I7TUFDbEIsU0FBUTtNQUNSLFdBQVU7TUFDViwwQ0FBeUM7TUFJekMsa0NBQWlDLEVBQ2xDOztBQTFCTDtJQThCSSxrQ0FBaUMsRUFJbEM7O0FBbENIO01BZ0NNLGtCQUFpQixFQUNsQjs7QUFqQ0w7SUFxQ0ksMkJBQTBCLEVBSTNCOztBQXpDSDtNQXVDTSxXQUFVLEVBQ1g7O0FBeENMO0lBNENJLDZCQUE0QixFQUk3Qjs7QUFoREg7TUE4Q00sYUFBWSxFQUNiOztBQUlMO0VBQ0UsbUJBQWtCLEVBUW5COztBQVREO0lBS0ksY0FBbUM7SUFDbkMsaUJBQWlDO0lBQ2pDLGFBSm1CLEVBS3BCOztBQUdIO0VBQ0UsYUFBeUI7RUFDekIsc0JBQXFCO0VBQ3JCLGNBQWE7RUFDYixrQkFBaUI7RUFDakIsbUJBQWtCO0VBQ2xCLG1CQUFrQixFQWdFbkI7O0FBdEVEO0lBU0ksbUJBQWtCO0lBQ2xCLFNBQVE7SUFDUixZQUFXO0lBQ1gsV0FBVTtJQUNWLFlBQVc7SUFDWCwwQkFBeUIsRUEwQjFCOztBQXhDSDs7TUE2Qk0sbUJBQWtCO01BQ2xCLHNCQUFxQjtNQUNyQixVQUFTO01BQ1QsV0FBVTtNQUNWLFlBQVc7TUFDWCw4QkFBNkIsRUFDOUI7O0FBbkNMO01Bc0NNLGFBQVksRUFDYjs7QUF2Q0w7SUEyQ0ksbUJBQWtCO0lBQ2xCLDJCQUEwQjtJQUMxQixXQUFVO0lBQ1YsVUFBUztJQUNULFdBQVU7SUFDVixjQUFhLEVBQ2Q7O0FBakRIO0lBb0RJLG1CQUFrQjtJQUNsQixZQUFXO0lBQ1gsc0JBQXFCO0lBQ3JCLGtDQUF5QjtZQUF6QiwwQkFBeUI7SUFDekIsc0NBQTZCO1lBQTdCLDhCQUE2QjtJQUM3QixVQUFTO0lBQ1QsWUFBVztJQUNYLG9CQUFtQixFQUNwQjs7QUE1REg7SUErREksa0JBQWlCO0lBQ2pCLGdCQUFlO0lBQ2YsbUJBQWtCO0lBQ2xCLFlBQVc7SUFDWCxVQUFTO0lBQ1QseUNBQWdDO1lBQWhDLGlDQUFnQyxFQUNqQyIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvbWFjaGluZS9tYWNoaW5lc2V0dGluZy9tYWNoaW5lc2V0dGluZy5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5tYWNoaW5lLWNvbG91cmFudC1ncm91cHtcclxuICBtYXJnaW46IDMwcHggMTBweCA1MHB4IDUwcHg7XHJcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbn1cclxuXHJcblxyXG4ubWFjaGluZS1jb2xvdXJhbnQtc2luZ2xlLWl0ZW17XHJcbiAgLm1hY2hpbmUtY29sb3VyYW50LWdyb3Vwe1xyXG4gICAgbWFyZ2luOiAwcHg7XHJcbiAgfVxyXG5cclxuICAubWFjaGluZS1jb2xvdXJhbnQtaXRlbXtcclxuICAgIG1pbi13aWR0aDogNjBweDtcclxuICB9XHJcblxyXG4gIC5tYWNoaW5lLWNvbG91cmFudC1taW4tcmFuZ2UsXHJcbiAgLm1hY2hpbmUtY29sb3VyYW50LXdhcm5pbmctcmFuZ2UsXHJcbiAgLm1hY2hpbmUtY29sb3VyYW50LW1heC1yYW5nZXtcclxuICAgIC5zdGVwLWxhYmVse1xyXG4gICAgICBkaXNwbGF5OiBub25lO1xyXG4gICAgfVxyXG4gIH1cclxufVxyXG5cclxuLm1hY2hpbmUtYmFja2dyb3VuZHtcclxuICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgdG9wOiAwcHg7XHJcbiAgbGVmdDogMHB4O1xyXG4gIGJvdHRvbTogMHB4O1xyXG4gIHJpZ2h0OiAwcHg7XHJcblxyXG4gIC5tYWNoaW5lLWNvbG91cmFudC1taW4tcmFuZ2UsXHJcbiAgLm1hY2hpbmUtY29sb3VyYW50LXdhcm5pbmctcmFuZ2UsXHJcbiAgLm1hY2hpbmUtY29sb3VyYW50LW1heC1yYW5nZXtcclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgbGVmdDogMHB4O1xyXG4gICAgcmlnaHQ6IDBweDtcclxuICAgIGJvdHRvbTogMHB4O1xyXG4gICAgb3BhY2l0eTogMC41O1xyXG5cclxuICAgIC5zdGVwLWxhYmVse1xyXG4gICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICAgIHRvcDogMHB4O1xyXG4gICAgICBsZWZ0OiAtNXB4O1xyXG4gICAgICAtd2Via2l0LXRyYW5zZm9ybTogdHJhbnNsYXRlKC0xMDAlLCAtNTAlKTtcclxuICAgICAgLW1vei10cmFuc2Zvcm06IHRyYW5zbGF0ZSgtMTAwJSwgLTUwJSk7XHJcbiAgICAgIC1tcy10cmFuc2Zvcm06IHRyYW5zbGF0ZSgtMTAwJSwgLTUwJSk7XHJcbiAgICAgIC1vLXRyYW5zZm9ybTogdHJhbnNsYXRlKC0xMDAlLCAtNTAlKTtcclxuICAgICAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTEwMCUsIC01MCUpO1xyXG4gICAgfVxyXG4gIH1cclxuXHJcbiAgLm1hY2hpbmUtY29sb3VyYW50LXdhcm5pbmctcmFuZ2V7XHJcbiAgICBib3JkZXItdG9wOiAxcHggZGFzaGVkIGRhcmtvcmFuZ2U7XHJcbiAgICAuc3RlcC1sYWJlbHtcclxuICAgICAgY29sb3I6IGRhcmtvcmFuZ2U7XHJcbiAgICB9XHJcbiAgfVxyXG5cclxuICAubWFjaGluZS1jb2xvdXJhbnQtbWluLXJhbmdle1xyXG4gICAgYm9yZGVyLXRvcDogMXB4IGRhc2hlZCByZWQ7XHJcbiAgICAuc3RlcC1sYWJlbHtcclxuICAgICAgY29sb3I6IHJlZDtcclxuICAgIH1cclxuICB9XHJcblxyXG4gIC5tYWNoaW5lLWNvbG91cmFudC1tYXgtcmFuZ2V7XHJcbiAgICBib3JkZXItdG9wOiAxcHggZGFzaGVkIGdyZWVuO1xyXG4gICAgLnN0ZXAtbGFiZWx7XHJcbiAgICAgIGNvbG9yOiBncmVlbjtcclxuICAgIH1cclxuICB9XHJcbn1cclxuXHJcbi5tYWNoaW5lLWNvbG9yYW50LXNsaWRlci1ncm91cHtcclxuICBwYWRkaW5nLWxlZnQ6IDIwcHg7XHJcblxyXG4gICRzbGlkZXJfcGFkZGluZyA6IDhweDtcclxuICAubWFjaGluZS1jb2xvdXJhbnQtc2xpZGVye1xyXG4gICAgaGVpZ2h0OiA0MDBweCArICRzbGlkZXJfcGFkZGluZyAqIDI7XHJcbiAgICBtYXJnaW4tdG9wOiAwcHggLSAkc2xpZGVyX3BhZGRpbmc7XHJcbiAgICBwYWRkaW5nOiAkc2xpZGVyX3BhZGRpbmc7XHJcbiAgfVxyXG59XHJcblxyXG4ubWFjaGluZS1jb2xvdXJhbnQtaXRlbXtcclxuICB3aWR0aDogcGVyY2VudGFnZSgxIC8gMTYpO1xyXG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcclxuICBoZWlnaHQ6IDQwMHB4O1xyXG4gIHBhZGRpbmctbGVmdDogNXB4O1xyXG4gIHBhZGRpbmctcmlnaHQ6IDVweDtcclxuICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcblxyXG4gIC5tYWNoaW5lLWNvbG91cmFudC1iZ3J7XHJcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICB0b3A6IDBweDtcclxuICAgIGJvdHRvbTogMHB4O1xyXG4gICAgbGVmdDogMTVweDtcclxuICAgIHJpZ2h0OiAxNXB4O1xyXG4gICAgYm9yZGVyOiAxcHggc29saWQgIzMzMzMzMztcclxuXHJcbiAgICAmOmFmdGVye1xyXG4gICAgICAvL2NvbnRlbnQ6IFwiXCI7XHJcbiAgICAgIC8vZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG4gICAgICAvL3Bvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgICAgLy90b3A6IDBweDtcclxuICAgICAgLy9sZWZ0OiAwcHg7XHJcbiAgICAgIC8vcmlnaHQ6IDBweDtcclxuICAgICAgLy9ib3R0b206IDBweDtcclxuICAgICAgLy9iYWNrZ3JvdW5kLWltYWdlOiBsaW5lYXItZ3JhZGllbnQodG8gcmlnaHQsIHJnYmEoMjU1LCAyNTUsIDI1NSwgMC4wKSwgcmdiYSgyMDQsIDIwNCwgMjA0LCAwLjIpLCAgcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjEpLCByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMDUpLCByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMCkpO1xyXG4gICAgfVxyXG5cclxuICAgIC5tYWNoaW5lLWNvbG91cmFudC11cGRhdGUtcmFuZ2UsXHJcbiAgICAubWFjaGluZS1jb2xvdXJhbnQtY3VycmVudC1yYW5nZSB7XHJcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG4gICAgICBsZWZ0OiAwcHg7XHJcbiAgICAgIHJpZ2h0OiAwcHg7XHJcbiAgICAgIGJvdHRvbTogMHB4O1xyXG4gICAgICBib3JkZXItdG9wOiAxcHggc29saWQgIzAwMDAwMDtcclxuICAgIH1cclxuXHJcbiAgICAubWFjaGluZS1jb2xvdXJhbnQtdXBkYXRlLXJhbmdle1xyXG4gICAgICBvcGFjaXR5OiAwLjU7XHJcbiAgICB9XHJcbiAgfVxyXG5cclxuICAuc2VsZWN0ZWQtY29sb3VyYW50LWJncntcclxuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgIG91dGxpbmU6IDJweCBzb2xpZCAjMDA0MTdiO1xyXG4gICAgdG9wOiAtMTVweDtcclxuICAgIGxlZnQ6IDBweDtcclxuICAgIHJpZ2h0OiAwcHg7XHJcbiAgICBib3R0b206IC0xNXB4O1xyXG4gIH1cclxuXHJcbiAgLmNvbG91cmFudC1uYW1le1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XHJcbiAgICB0cmFuc2Zvcm06IHJvdGF0ZSgtOTBkZWcpO1xyXG4gICAgdHJhbnNmb3JtLW9yaWdpbjogbGVmdCBjZW50ZXI7XHJcbiAgICBsZWZ0OiA1MCU7XHJcbiAgICBib3R0b206IDBweDtcclxuICAgIHdoaXRlLXNwYWNlOiBub3dyYXA7XHJcbiAgfVxyXG5cclxuICAuY29sb3VyYW50LWNvZGUge1xyXG4gICAgZm9udC13ZWlnaHQ6IGJvbGQ7XHJcbiAgICBmb250LXNpemU6IDEyMCU7XHJcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICBib3R0b206IDBweDtcclxuICAgIGxlZnQ6IDUwJTtcclxuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIDQ1cHgpO1xyXG4gIH1cclxufVxyXG4iXX0= */"
 
 /***/ }),
 
@@ -2034,6 +2038,7 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 var MachineSettingComponent = /** @class */ (function () {
+    // addedAmountPercent: number;
     function MachineSettingComponent(modalService, machineService, colourantService) {
         this.modalService = modalService;
         this.machineService = machineService;
@@ -2051,15 +2056,13 @@ var MachineSettingComponent = /** @class */ (function () {
         this.machineService.fetchDataFromServer().subscribe(function (datas) {
             _this.processListColourantData(datas);
         });
-        function getRandomBetweenTwoNumber(begin, end) {
-            return begin + Math.ceil(Math.random() * (end - begin));
-        }
     };
     MachineSettingComponent.prototype.processListColourantData = function (datas) {
         this.listMachineColourant = datas;
         this.selectedMachineColourant = null;
         this.addedAmount = 0;
-        this.addedAmountPercent = 0;
+        this.currentAmount = 0;
+        // this.addedAmountPercent = 0;
     };
     MachineSettingComponent.prototype.selectMachineColourant = function (colourantId) {
         var _this = this;
@@ -2067,28 +2070,38 @@ var MachineSettingComponent = /** @class */ (function () {
             return item.colourant.colourantId === colourantId;
         });
         this.selectedMachineColourant = listFilter.length > 0 ? listFilter[0] : null;
+        this.currentAmount = this.selectedMachineColourant != null ? this.selectedMachineColourant.quantity : 0;
         this.addedAmount = 0;
-        this.addedAmountPercent = 0;
+        // this.addedAmountPercent = 0;
+        this.updateAmount = this.currentAmount + this.addedAmount;
         setTimeout(function () {
             _this.openModal('view-selected-colourant-machine-modal');
         }, 0);
     };
     MachineSettingComponent.prototype.updateAddedAmount = function (type) {
         if (type === 'amount') {
-            this.addedAmountPercent = this.addedAmount * 100 / this.maxQuantity;
+            this.updateAmount = this.currentAmount + this.addedAmount;
+            if (this.updateAmount > this.maxQuantity) {
+                this.updateAmount = this.maxQuantity;
+                this.addedAmount = this.maxQuantity - this.updateAmount;
+            }
+            else if (this.updateAmount < 0) {
+                this.updateAmount = 0;
+                this.addedAmount = this.updateAmount - this.currentAmount;
+            }
+            // this.addedAmountPercent = (this.addedAmount / this.maxQuantity) * 100;
         }
         else if (type === 'percent') {
-            this.addedAmount = (this.addedAmountPercent - (this.selectedMachineColourant.quantity / this.maxQuantity)) * this.maxQuantity;
+            // this.addedAmount = (this.addedAmountPercent - (this.currentAmount / this.maxQuantity)) * this.maxQuantity;
         }
     };
+    MachineSettingComponent.prototype.updateAmountBySlider = function () {
+        this.addedAmount = this.updateAmount - this.currentAmount;
+    };
     MachineSettingComponent.prototype.fillByPercent = function (percent) {
-        if (this.selectedMachineColourant != null) {
-            var currentAmount = this.selectedMachineColourant.quantity;
-            var currentPercent = currentAmount * 100 / this.maxQuantity;
-            var remainPercent = percent - currentPercent;
-            this.addedAmount = remainPercent / 100 * this.maxQuantity;
-            this.addedAmountPercent = remainPercent;
-        }
+        var remainPercent = percent - (this.currentAmount / this.maxQuantity) * 100;
+        this.addedAmount = remainPercent / 100 * this.maxQuantity;
+        this.updateAmount = this.currentAmount + this.addedAmount;
     };
     MachineSettingComponent.prototype.updateAndSaving = function (id) {
         var _this = this;
@@ -4248,7 +4261,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/internal/operators */ "./node_modules/rxjs/internal/operators/index.js");
 /* harmony import */ var rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _shared_http_services_http_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../shared/http/services/http.service */ "./src/app/shared/http/services/http.service.ts");
-/* harmony import */ var _models_collection__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../models/collection */ "./src/app/models/collection.ts");
+/* harmony import */ var _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../utils/convert-models-utils */ "./src/app/utils/convert-models-utils.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4268,28 +4281,18 @@ var CollectionService = /** @class */ (function () {
         this.http = http;
     }
     CollectionService.prototype.getListItems = function () {
-        var _this = this;
         return this.http.get(_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].settings.serverendpoint + 'collection/getAll').pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (data) {
             var listItems = [];
             if (data) {
                 for (var _i = 0, data_1 = data; _i < data_1.length; _i++) {
                     var collection = data_1[_i];
-                    listItems.push(_this.convertCollectionToDTO(collection));
+                    listItems.push(_utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_4__["default"].convertToColourantObject(collection));
                 }
             }
             return listItems;
         }), Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])(function (e) {
             return [];
         }));
-    };
-    CollectionService.prototype.convertCollectionToDTO = function (object) {
-        var collection = new _models_collection__WEBPACK_IMPORTED_MODULE_4__["CollectionModel"]();
-        collection.collectionId = object.collectionId;
-        collection.collectionName = object.collectionName;
-        collection.description = object.description;
-        collection.createdDate = object.createdDate;
-        collection.createBy = object.createBy;
-        return collection;
     };
     CollectionService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
@@ -4472,8 +4475,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _models_dispense_task_model__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../models/dispense.task.model */ "./src/app/models/dispense.task.model.ts");
 /* harmony import */ var _machine_machine_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../machine/machine.service */ "./src/app/services/machine/machine.service.ts");
-/* harmony import */ var _user_user_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../user/user.service */ "./src/app/services/user/user.service.ts");
-/* harmony import */ var _shared_http_services_http_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../shared/http/services/http.service */ "./src/app/shared/http/services/http.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4483,8 +4484,6 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
-
 
 
 
@@ -4499,10 +4498,8 @@ var MAP_DISPENSE_TASK_STEP_TYPE = {
     FINISHED: 'finished'
 };
 var DispenseTaskService = /** @class */ (function () {
-    function DispenseTaskService(machineService, userService, http) {
+    function DispenseTaskService(machineService) {
         this.machineService = machineService;
-        this.userService = userService;
-        this.http = http;
         this.currentTask = null;
         this.currentTaskStep = null;
         this.listDispenseTask = [];
@@ -4580,7 +4577,7 @@ var DispenseTaskService = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
             providedIn: 'root'
         }),
-        __metadata("design:paramtypes", [_machine_machine_service__WEBPACK_IMPORTED_MODULE_2__["MachineService"], _user_user_service__WEBPACK_IMPORTED_MODULE_3__["UserService"], _shared_http_services_http_service__WEBPACK_IMPORTED_MODULE_4__["HttpService"]])
+        __metadata("design:paramtypes", [_machine_machine_service__WEBPACK_IMPORTED_MODULE_2__["MachineService"]])
     ], DispenseTaskService);
     return DispenseTaskService;
 }());
@@ -4927,6 +4924,61 @@ var MachineService = /** @class */ (function () {
         };
         return this.http.post(_environments_environment__WEBPACK_IMPORTED_MODULE_5__["environment"].settings.serverendpoint + 'machine_formula/record', dt);
     };
+    // validateDispenseTaskBeforeProcess(listFormulaColourant: FormulaColourantModel[] | null, numberCan: number) {
+    //   return this.http.get(environment.settings.serverendpoint + 'machine/getColourants/' + this.machine.machineId).pipe(
+    //     map((data: Array<any>) => {
+    //       const currentListColourantMachine = [];
+    //       if (data && data.length > 0) {
+    //         for (const item of data) {
+    //           currentListColourantMachine.push(ConvertModelUtils.convertToMachineColourant(item));
+    //         }
+    //       }
+    //
+    //       return currentListColourantMachine;
+    //
+    //       let enoughColorDataToDispenseOneCan = true;
+    //       let enoughColorDataToDispenseAction = true;
+    //
+    //       for (const _item of listFormulaColourant) {
+    //         const validColorForOneCan = currentListColourantMachine.filter((_cmitem) => {
+    //           return _cmitem.colorant.colourantId === _item.colourant.colourantId && _item.quantity > _cmitem.quantity;
+    //         });
+    //
+    //         if (validColorForOneCan.length === 0) {
+    //           enoughColorDataToDispenseOneCan = false;
+    //           enoughColorDataToDispenseAction = false;
+    //         }
+    //
+    //         if (enoughColorDataToDispenseOneCan) {
+    //           const validColorForAction = currentListColourantMachine.filter((_cmitem) => {
+    //             return _cmitem.colorant.colourantId === _item.colourant.colourantId && _item.quantity > _cmitem.quantity * numberCan;
+    //           });
+    //
+    //           if (validColorForAction.length === 0) {
+    //             enoughColorDataToDispenseAction = false;
+    //           }
+    //         }
+    //       }
+    //
+    //       if (enoughColorDataToDispenseOneCan) {
+    //         return {
+    //           success: true,
+    //           errorMessage: ''
+    //         };
+    //       } else {
+    //         return {
+    //           success: false,
+    //           errorMessage: `Don't have enough colourant to dispense formula !!!!`
+    //         };
+    //       }
+    //     }), catchError(e => {
+    //       return {
+    //         success: false,
+    //         errorMessage: `Cannot load data from serve !!!!`
+    //       };
+    //     })
+    //   );
+    // }
     MachineService.prototype.findAllDispenseTask = function () {
         return this.http.get(_environments_environment__WEBPACK_IMPORTED_MODULE_5__["environment"].settings.serverendpoint + 'machine_formula/findAll/' + this.machine.machineId).pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (data) {
             var listDispenseTaskLog = [];
@@ -5478,7 +5530,7 @@ var ConvertModelUtils = /** @class */ (function () {
         item.density = object.density;
         item.pricePerUnit = object.pricePerUnit;
         item.surcharge = object.surcharge;
-        item.rbgHex = object.rbgHex;
+        item.rbgHex = object.rbgHex === '#00' ? '#000000' : object.rbgHex;
         item.kind = object.kind;
         return item;
     };
