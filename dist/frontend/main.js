@@ -3073,14 +3073,13 @@ var USER_ROLE = {
 /*!***********************************************!*\
   !*** ./src/app/models/dispense.task.model.ts ***!
   \***********************************************/
-/*! exports provided: DispenseDataModel, DispenseStepDataModel, MAP_TASK_STATE, DispenseTaskStepModel, DispenseTaskModel, MachineFormulaProductBaseLogModel */
+/*! exports provided: DispenseDataModel, DispenseStepDataModel, DispenseTaskStepModel, DispenseTaskModel, MachineFormulaProductBaseLogModel */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DispenseDataModel", function() { return DispenseDataModel; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DispenseStepDataModel", function() { return DispenseStepDataModel; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MAP_TASK_STATE", function() { return MAP_TASK_STATE; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DispenseTaskStepModel", function() { return DispenseTaskStepModel; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DispenseTaskModel", function() { return DispenseTaskModel; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MachineFormulaProductBaseLogModel", function() { return MachineFormulaProductBaseLogModel; });
@@ -3164,11 +3163,6 @@ var DispenseStepDataModel = /** @class */ (function () {
     return DispenseStepDataModel;
 }());
 
-var MAP_TASK_STATE = {
-    SLEEP: 'SLEEP',
-    IN_PROGRESS: 'IN-PROGRESS',
-    FINISHED: 'FINISHED'
-};
 var DispenseTaskStepModel = /** @class */ (function () {
     function DispenseTaskStepModel(type, taskData, callBackFunction) {
         this._type = type;
@@ -4286,7 +4280,7 @@ var CollectionService = /** @class */ (function () {
             if (data) {
                 for (var _i = 0, data_1 = data; _i < data_1.length; _i++) {
                     var collection = data_1[_i];
-                    listItems.push(_utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_4__["default"].convertToColourantObject(collection));
+                    listItems.push(_utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_4__["default"].convertCollectionModel(collection));
                 }
             }
             return listItems;
@@ -4473,8 +4467,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MAP_DISPENSE_TASK_STEP_TYPE", function() { return MAP_DISPENSE_TASK_STEP_TYPE; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DispenseTaskService", function() { return DispenseTaskService; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _models_dispense_task_model__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../models/dispense.task.model */ "./src/app/models/dispense.task.model.ts");
-/* harmony import */ var _machine_machine_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../machine/machine.service */ "./src/app/services/machine/machine.service.ts");
+/* harmony import */ var _machine_machine_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../machine/machine.service */ "./src/app/services/machine/machine.service.ts");
+/* harmony import */ var _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../utils/convert-models-utils */ "./src/app/utils/convert-models-utils.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4514,10 +4508,10 @@ var DispenseTaskService = /** @class */ (function () {
     DispenseTaskService.prototype.processDispenseTask = function () {
         var _this = this;
         if (this.currentTask != null) {
-            this.status = _models_dispense_task_model__WEBPACK_IMPORTED_MODULE_1__["MAP_TASK_STATE"].IN_PROGRESS;
+            this.status = _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_2__["MAP_TASK_STATE"].IN_PROGRESS;
             this.currentTaskStep = getInProgressStepData(this.currentTask);
-            this.currentTask.status = _models_dispense_task_model__WEBPACK_IMPORTED_MODULE_1__["MAP_TASK_STATE"].IN_PROGRESS;
-            this.currentTaskStep.status = _models_dispense_task_model__WEBPACK_IMPORTED_MODULE_1__["MAP_TASK_STATE"].IN_PROGRESS;
+            this.currentTask.status = _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_2__["MAP_TASK_STATE"].IN_PROGRESS;
+            this.currentTaskStep.status = _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_2__["MAP_TASK_STATE"].IN_PROGRESS;
             var waitTime = this.currentTaskStep.totalProcess;
             setTimeout(function () {
                 _this.notifyInDoneDispenseStepAction();
@@ -4577,7 +4571,7 @@ var DispenseTaskService = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
             providedIn: 'root'
         }),
-        __metadata("design:paramtypes", [_machine_machine_service__WEBPACK_IMPORTED_MODULE_2__["MachineService"]])
+        __metadata("design:paramtypes", [_machine_machine_service__WEBPACK_IMPORTED_MODULE_1__["MachineService"]])
     ], DispenseTaskService);
     return DispenseTaskService;
 }());
@@ -5462,11 +5456,12 @@ var HttpService = /** @class */ (function (_super) {
 /*!***********************************************!*\
   !*** ./src/app/utils/convert-models-utils.ts ***!
   \***********************************************/
-/*! exports provided: default */
+/*! exports provided: MAP_TASK_STATE, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MAP_TASK_STATE", function() { return MAP_TASK_STATE; });
 /* harmony import */ var _models_formula__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../models/formula */ "./src/app/models/formula.ts");
 /* harmony import */ var _models_collection__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../models/collection */ "./src/app/models/collection.ts");
 /* harmony import */ var _models_formula_product_base__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../models/formula_product_base */ "./src/app/models/formula_product_base.ts");
@@ -5485,6 +5480,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+var MAP_TASK_STATE = {
+    SLEEP: 'SLEEP',
+    IN_PROGRESS: 'IN-PROGRESS',
+    FINISHED: 'FINISHED'
+};
 var ConvertModelUtils = /** @class */ (function () {
     function ConvertModelUtils() {
     }
@@ -5493,7 +5493,7 @@ var ConvertModelUtils = /** @class */ (function () {
         formula.formulaId = object.formulaId;
         formula.formulaCode = object.formulaCode;
         formula.formulaName = object.formulaName;
-        formula.collection = ConvertModelUtils.convertCollectionObject(object.collection);
+        formula.collection = ConvertModelUtils.convertCollectionModel(object.collection);
         formula.createdDate = object.createdDate;
         formula.createBy = object.createBy;
         return formula;
@@ -5545,7 +5545,7 @@ var ConvertModelUtils = /** @class */ (function () {
         item.percentage = object.percentage;
         return item;
     };
-    ConvertModelUtils.convertCollectionObject = function (object) {
+    ConvertModelUtils.convertCollectionModel = function (object) {
         var collection = new _models_collection__WEBPACK_IMPORTED_MODULE_1__["CollectionModel"]();
         collection.collectionId = object.collectionId;
         collection.collectionName = object.collectionName;
