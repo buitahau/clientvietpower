@@ -18,7 +18,7 @@ export class CollectionService {
         const listItems = [];
         if (data) {
           for (const collection of data) {
-            listItems.push(ConvertModelUtils.convertToColourantObject(collection));
+            listItems.push(ConvertModelUtils.convertCollectionModel(collection));
           }
         }
         return listItems;

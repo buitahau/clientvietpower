@@ -8,13 +8,28 @@ import {ColorantModel} from '../models/colorant';
 import {MachineColourantModel, MachineModel, RoleModel, UserModel} from '../models/user.model';
 import {MachineFormulaProductBaseLogModel} from '../models/dispense.task.model';
 
+export interface TaskInterface {
+  taskId: number;
+  type: string;
+  status: string;
+  process: number;
+  totalProcess: number;
+  callBackFunction;
+}
+
+export const MAP_TASK_STATE = {
+  SLEEP: 'SLEEP',
+  IN_PROGRESS: 'IN-PROGRESS',
+  FINISHED: 'FINISHED'
+};
+
 export default class ConvertModelUtils {
   static convertToFormulaObject(object: any): FormulaModel {
     const formula = new FormulaModel();
     formula.formulaId = object.formulaId;
     formula.formulaCode = object.formulaCode;
     formula.formulaName = object.formulaName;
-    formula.collection = ConvertModelUtils.convertCollectionObject(object.collection);
+    formula.collection = ConvertModelUtils.convertCollectionModel(object.collection);
     formula.createdDate = object.createdDate;
     formula.createBy = object.createBy;
     return formula;
@@ -72,7 +87,7 @@ export default class ConvertModelUtils {
     return item;
   }
 
-  static convertCollectionObject(object: any): CollectionModel {
+  static convertCollectionModel(object: any): CollectionModel {
     const collection = new CollectionModel();
     collection.collectionId = object.collectionId;
     collection.collectionName = object.collectionName;

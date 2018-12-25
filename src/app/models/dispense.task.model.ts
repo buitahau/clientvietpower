@@ -2,6 +2,7 @@ import {ColorantModel} from './colorant';
 import {FormulaProductBaseModel, ProductBaseCanModel} from './formula_product_base';
 import {MachineModel, UserModel} from './user.model';
 import {MAP_DISPENSE_TASK_STATE} from '../services/dispensetask/dispensetask.service';
+import {TaskInterface} from '../utils/convert-models-utils';
 
 export class DispenseDataModel {
   private _formulaProductBase: FormulaProductBaseModel;
@@ -75,21 +76,6 @@ export class DispenseStepDataModel {
   }
 }
 
-
-export interface TaskInterface {
-  taskId: number;
-  type: string;
-  status: string;
-  process: number;
-  totalProcess: number;
-  callBackFunction;
-}
-
-export const MAP_TASK_STATE = {
-  SLEEP: 'SLEEP',
-  IN_PROGRESS: 'IN-PROGRESS',
-  FINISHED: 'FINISHED'
-};
 
 export class DispenseTaskStepModel implements TaskInterface {
   private _taskId: number;

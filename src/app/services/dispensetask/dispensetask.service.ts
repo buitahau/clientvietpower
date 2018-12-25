@@ -1,10 +1,10 @@
 import {Injectable} from '@angular/core';
 import {
   DispenseTaskModel, DispenseTaskStepModel,
-  MAP_TASK_STATE
 } from '../../models/dispense.task.model';
 import {MachineService} from '../machine/machine.service';
 import {FormulaProductBaseModel} from '../../models/formula_product_base';
+import {MAP_TASK_STATE} from '../../utils/convert-models-utils';
 
 
 export const MAP_DISPENSE_TASK_STATE = {
