@@ -5,20 +5,7 @@ import {
 import {MachineService} from '../machine/machine.service';
 import {FormulaProductBaseModel} from '../../models/formula_product_base';
 import {MAP_TASK_STATE} from '../../utils/convert-models-utils';
-
-
-export const MAP_DISPENSE_TASK_STATE = {
-  WAITING: 'WAITING',
-  IN_PROGRESS: 'START',
-  DONE: 'DONE',
-};
-
-export const MAP_DISPENSE_TASK_STEP_TYPE = {
-  PREPARE: 'prepare',
-  PUMPING: 'pumping',
-  FINISHED: 'finished'
-};
-
+import {MAP_DISPENSE_TASK_STATE, MAP_DISPENSE_TASK_STEP_TYPE} from '../../models/dispense.task.model';
 
 @Injectable({
   providedIn: 'root'

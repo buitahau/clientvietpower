@@ -10,11 +10,8 @@ import {
   DispenseTaskStepModel,
   MachineFormulaProductBaseLogModel
 } from '../../../models/dispense.task.model';
-import {
-  DispenseTaskService,
-  MAP_DISPENSE_TASK_STATE,
-  MAP_DISPENSE_TASK_STEP_TYPE
-} from '../../../services/dispensetask/dispensetask.service';
+import {DispenseTaskService} from '../../../services/dispensetask/dispensetask.service';
+import {MAP_DISPENSE_TASK_STATE, MAP_DISPENSE_TASK_STEP_TYPE} from '../../../models/dispense.task.model';
 import {FormulaColourantModel, FormulaProductBaseModel, ProductBaseCanModel} from '../../../models/formula_product_base';
 import {ProductBaseService} from '../../../services/productbase/productbase.service';
 import ConvertModelUtils from '../../../utils/convert-models-utils';

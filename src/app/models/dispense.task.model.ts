@@ -1,8 +1,19 @@
 import {ColorantModel} from './colorant';
 import {FormulaProductBaseModel, ProductBaseCanModel} from './formula_product_base';
 import {MachineModel, UserModel} from './user.model';
-import {MAP_DISPENSE_TASK_STATE} from '../services/dispensetask/dispensetask.service';
 import {TaskInterface} from '../utils/convert-models-utils';
+
+export const MAP_DISPENSE_TASK_STATE = {
+  WAITING: 'WAITING',
+  IN_PROGRESS: 'START',
+  DONE: 'DONE',
+};
+
+export const MAP_DISPENSE_TASK_STEP_TYPE = {
+  PREPARE: 'prepare',
+  PUMPING: 'pumping',
+  FINISHED: 'finished'
+};
 
 export class DispenseDataModel {
   private _formulaProductBase: FormulaProductBaseModel;

@@ -90,7 +90,7 @@
 
             <tr *ngFor="let colorantItem of listFormulaColorant">
               <td>{{colorantItem.colourant.colourantName}}</td>
-              <td>{{colorantItem.quantity * canSize}}</td>
+              <td>{{(colorantItem.quantity / dbItem.formula.baseOnCan) * canSize}}</td>
               <td>
                 <span class="color-bar" >
                   <span class="color-select" [ngStyle]="{'background': colorantItem.colourant.rbgHex, 'width': (colorantItem.quantity / maxColorQuantity) * 100 + '%'}"></span>

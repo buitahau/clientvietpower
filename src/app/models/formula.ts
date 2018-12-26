@@ -7,7 +7,7 @@ export class FormulaModel {
   private _collection: CollectionModel;
   private _createdDate: Date;
   private _createBy: any | null;
-  private _baseOnCan: number;
+  private _baseOnCan: number | 1;
 
   get baseOnCan(): number {
     return this._baseOnCan;
