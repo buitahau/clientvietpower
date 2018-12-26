@@ -119,62 +119,66 @@ export class ViewFormulaComponent implements OnInit {
 
   changedCanSize(e: any): void {
     this.canSize = e.value;
+
   }
 
   beginDispense(modalId: string): void {
-    // create when not current task in process or task is done !!!!;
-    if (this.currentTask == null || this.currentTask.status === MAP_DISPENSE_TASK_STATE.DONE) {
-      const listPumpingTask = [];
+    this.machineService.validateQuantityColourant(this.canSize, this.listFormulaColorant).subscribe(res => {
+      if (res.length === 0 ) {
+        // create when not current task in process or task is done !!!!;
+        if (this.currentTask == null || this.currentTask.status === MAP_DISPENSE_TASK_STATE.DONE) {
+          const listPumpingTask = [];
 
-      for (const colorant of this.listColorant) {
-        const prepare_t = new DispenseTaskStepModel(MAP_DISPENSE_TASK_STEP_TYPE.PREPARE, null, (newDispenseTask, newDispenseStepTask) => {
-          this.updateDispenseTaskData(newDispenseTask, newDispenseStepTask);
-        });
+          for (const colorant of this.listColorant) {
+            const prepare_t = new DispenseTaskStepModel(MAP_DISPENSE_TASK_STEP_TYPE.PREPARE, null,
+              (newDispenseTask, newDispenseStepTask) => {
+              this.updateDispenseTaskData(newDispenseTask, newDispenseStepTask);
+            });
 
-        const pumping_t = new DispenseTaskStepModel(MAP_DISPENSE_TASK_STEP_TYPE.PUMPING, new DispenseStepDataModel(colorant.colorant,
-          colorant.quantity * this.canSize), (newDispenseTask, newDispenseStepTask) => {
-          this.updateDispenseTaskData(newDispenseTask, newDispenseStepTask);
-        });
+            const pumping_t = new DispenseTaskStepModel(MAP_DISPENSE_TASK_STEP_TYPE.PUMPING, new DispenseStepDataModel(colorant.colorant,
+              colorant.quantity * this.canSize), (newDispenseTask, newDispenseStepTask) => {
+              this.updateDispenseTaskData(newDispenseTask, newDispenseStepTask);
+            });
 
-        listPumpingTask.push(prepare_t);
-        listPumpingTask.push(pumping_t);
-      }
+            listPumpingTask.push(prepare_t);
+            listPumpingTask.push(pumping_t);
+          }
 
-      const stop_t = new DispenseTaskStepModel(MAP_DISPENSE_TASK_STEP_TYPE.FINISHED, null, (newDispenseTask, newDispenseStepTask) => {
-        this.updateDispenseTaskData(newDispenseTask, newDispenseStepTask);
-        this.numberOfCan -= 1;
-        if (this.numberOfCan > 0) {
-          this.beginDispense(modalId);
+          const stop_t = new DispenseTaskStepModel(MAP_DISPENSE_TASK_STEP_TYPE.FINISHED, null, (newDispenseTask, newDispenseStepTask) => {
+            this.updateDispenseTaskData(newDispenseTask, newDispenseStepTask);
+            this.numberOfCan -= 1;
+            if (this.numberOfCan > 0) {
+              this.beginDispense(modalId);
+            }
+            setTimeout(() => {
+              this.openModal('print-formula-modal');
+            }, 500);
+          });
+
+          listPumpingTask.push(stop_t);
+
+          this.currentTask = new DispenseTaskModel('Dispense', listPumpingTask, new DispenseDataModel(this.dbItem, this.selectProductBase,
+            this.canSize, this.numberOfCan), null);
+
+          this.machineService.recordDispenseFormulaProductBase(MAP_DISPENSE_TASK_STATE.IN_PROGRESS, this.currentTask.taskId,
+            this.currentTask.taskData.formulaProductBase, this.currentTask.taskData.canSize).subscribe((data: any) => {
+            const item: MachineFormulaProductBaseLogModel = ConvertModelUtils.convertToDispenseFormulaProductBase(data);
+            this.currentTask.taskId = item.machineFormulaProductBaseId;
+            this.currentTask.status = item.status;
+            this.currentTask.startTime = item.createdDate;
+
+            this.dispenseTaskService.runDispenseTask(this.currentTask);
+          });
         }
+
         setTimeout(() => {
-          this.openModal('print-formula-modal');
-        }, 500);
-      });
+          this.openModal(modalId);
+        }, 200);
+      } else {
+        alert('Not enough colorant quantity to dispense.');
+      }
+    });
 
-      listPumpingTask.push(stop_t);
-
-      this.currentTask = new DispenseTaskModel('Dispense', listPumpingTask, new DispenseDataModel(this.dbItem, this.selectProductBase,
-        this.canSize, this.numberOfCan), null);
-
-      // this.machineService.validateDispenseTaskBeforeProcess(this.listFormulaColorant, this.currentTask.taskData.canSize)
-      //   .subscribe((data: any) => {
-      //   console.log(data);
-      // });
-
-      this.machineService.recordDispenseFormulaProductBase(MAP_DISPENSE_TASK_STATE.IN_PROGRESS, this.currentTask.taskId,
-        this.currentTask.taskData.formulaProductBase, this.currentTask.taskData.canSize).subscribe((data: any) => {
-        const item: MachineFormulaProductBaseLogModel = ConvertModelUtils.convertToDispenseFormulaProductBase(data);
-        this.currentTask.taskId = item.machineFormulaProductBaseId;
-        this.currentTask.status = item.status;
-        this.currentTask.startTime = item.createdDate;
-
-        this.dispenseTaskService.runDispenseTask(this.currentTask);
-      });
-    }
-
-    setTimeout(() => {
-      this.openModal(modalId);
-    }, 200);
   }
 
   updateDispenseTaskData(newDispenseTask: DispenseTaskModel, newDispenseStepTask: DispenseTaskStepModel) {

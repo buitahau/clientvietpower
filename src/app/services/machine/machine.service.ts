@@ -192,7 +192,7 @@ export class MachineService {
     return this.http.get(environment.settings.serverendpoint + 'machine/getColourants/' + machineId).pipe(
       map((mColours: Array<any>) => {
         // list colourant hiện có của machine
-        let res = true; // kết quả trả về, true là đủ, false là ko
+        const res = []; // kết quả trả về, danh sách màu không đủ
         const mapExistColours = {}; // tạo map colour với key là colourcode, value là số lượng còn lại
         mColours.map(c => {
           mapExistColours[c.colourant.colourantCode] = c.quantity;
@@ -204,7 +204,7 @@ export class MachineService {
 
           // nếu trong máy không còn màu này, hoặc còn nhưng nhỏ hơn số lượng mong đợi
           if (!mapExistColours[colourCode] || mapExistColours[colourCode] < expectQuantity) {
-            res = false;
+            res.push(colourCode);
           }
         });
 
