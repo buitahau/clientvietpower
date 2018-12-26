@@ -160,7 +160,6 @@ export class MachineService {
   //   );
   // }
 
-
   findAllDispenseTask() {
     return this.http.get(environment.settings.serverendpoint + 'machine_formula/findAll/' + this.machine.machineId).pipe(
       map((data: Array<any>) => {
@@ -179,5 +178,38 @@ export class MachineService {
 
   findDispenseTaskById(taskId: number) {
     return this.http.get(environment.settings.serverendpoint + 'machine_formula/findById/' + taskId);
+  }
+
+  /**
+   * Validate số lượng colourant của machine có còn đủ để pha màu với cansize này hay không
+   * listFormulaColorant: là default colourant khi chọn formula, chưa nhân cansize
+   * canSize: số lít
+   * @param {number} canSize
+   * @param {FormulaColourantModel[]} listFormulaColorant
+   */
+  validateQuantityColourant(canSize: number, listFormulaColorant: FormulaColourantModel[]) {
+    const machineId = this.machine.machineId;
+    return this.http.get(environment.settings.serverendpoint + 'machine/getColourants/' + machineId).pipe(
+      map((mColours: Array<any>) => {
+        // list colourant hiện có của machine
+        let res = true; // kết quả trả về, true là đủ, false là ko
+        const mapExistColours = {}; // tạo map colour với key là colourcode, value là số lượng còn lại
+        mColours.map(c => {
+          mapExistColours[c.colourant.colourantCode] = c.quantity;
+        });
+
+        listFormulaColorant.map(lf => {
+          const colourCode = lf.colourant.colourantCode;
+          const expectQuantity = lf.quantity * canSize; // số lượng mong đợi
+
+          // nếu trong máy không còn màu này, hoặc còn nhưng nhỏ hơn số lượng mong đợi
+          if (!mapExistColours[colourCode] || mapExistColours[colourCode] < expectQuantity) {
+            res = false;
+          }
+        });
+
+        return res;
+      })
+    );
   }
 }
