@@ -32,6 +32,7 @@ export default class ConvertModelUtils {
     formula.collection = ConvertModelUtils.convertCollectionModel(object.collection);
     formula.createdDate = object.createdDate;
     formula.createBy = object.createBy;
+    formula.baseOnCan = object.baseOnCan;
     return formula;
   }
 

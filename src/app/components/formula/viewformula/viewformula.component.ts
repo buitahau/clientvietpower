@@ -123,7 +123,7 @@ export class ViewFormulaComponent implements OnInit {
   }
 
   beginDispense(modalId: string): void {
-    this.machineService.validateQuantityColourant(this.canSize, this.listFormulaColorant).subscribe(res => {
+    this.machineService.validateQuantityColourant(this.canSize, this.listFormulaColorant, this.dbItem.formula).subscribe(res => {
       if (res.length === 0 ) {
         // create when not current task in process or task is done !!!!;
         if (this.currentTask == null || this.currentTask.status === MAP_DISPENSE_TASK_STATE.DONE) {

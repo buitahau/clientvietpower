@@ -7,6 +7,15 @@ export class FormulaModel {
   private _collection: CollectionModel;
   private _createdDate: Date;
   private _createBy: any | null;
+  private _baseOnCan: number;
+
+  get baseOnCan(): number {
+    return this._baseOnCan;
+  }
+
+  set baseOnCan(value: number) {
+    this._baseOnCan = value;
+  }
 
   get formulaId(): number {
     return this._formulaId;

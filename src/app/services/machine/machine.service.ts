@@ -10,6 +10,7 @@ import {ColorantModel} from '../../models/colorant';
 import {FormulaColourantModel, FormulaProductBaseModel} from '../../models/formula_product_base';
 import {MAP_DISPENSE_TASK_STATE} from '../dispensetask/dispensetask.service';
 import {Observable} from 'rxjs';
+import {FormulaModel} from '../../models/formula';
 
 @Injectable({
   providedIn: 'root'
@@ -184,11 +185,10 @@ export class MachineService {
    * Validate số lượng colourant của machine có còn đủ để pha màu với cansize này hay không
    * listFormulaColorant: là default colourant khi chọn formula, chưa nhân cansize
    * canSize: số lít
-   * @param {number} canSize
-   * @param {FormulaColourantModel[]} listFormulaColorant
    */
-  validateQuantityColourant(canSize: number, listFormulaColorant: FormulaColourantModel[]) {
+  validateQuantityColourant(canSize: number, listFormulaColorant: FormulaColourantModel[], formular: FormulaModel) {
     const machineId = this.machine.machineId;
+    const baseOnCan = formular.baseOnCan ? formular.baseOnCan : 1; // nếu undefined thì default là 1;
     return this.http.get(environment.settings.serverendpoint + 'machine/getColourants/' + machineId).pipe(
       map((mColours: Array<any>) => {
         // list colourant hiện có của machine
@@ -197,17 +197,15 @@ export class MachineService {
         mColours.map(c => {
           mapExistColours[c.colourant.colourantCode] = c.quantity;
         });
-
         listFormulaColorant.map(lf => {
           const colourCode = lf.colourant.colourantCode;
-          const expectQuantity = lf.quantity * canSize; // số lượng mong đợi
-
+          // số lượng mong đợi: lấy số ml cần có, chia cho baseOnCan của formula và nhân cho số lit cansize
+          const expectQuantity = (lf.quantity / baseOnCan) * canSize;
           // nếu trong máy không còn màu này, hoặc còn nhưng nhỏ hơn số lượng mong đợi
           if (!mapExistColours[colourCode] || mapExistColours[colourCode] < expectQuantity) {
             res.push(colourCode);
           }
         });
-
         return res;
       })
     );
