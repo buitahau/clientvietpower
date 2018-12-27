@@ -121,7 +121,7 @@ export class ViewFormulaComponent implements OnInit {
 
   changedCanSize(e: any): void {
     this.canSize = e.value;
-
+    this.hasError = false;
   }
 
   beginDispense(modalId: string): void {
