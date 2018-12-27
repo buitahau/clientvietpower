@@ -142,7 +142,7 @@ export class MachineService {
         listFormulaColorant.map(lf => {
           const colourCode = lf.colourant.colourantCode;
           // số lượng mong đợi: lấy số ml cần có, chia cho baseOnCan của formula và nhân cho số lit cansize
-          const expectQuantity = (lf.quantity / baseOnCan) * canSize;
+          const expectQuantity = ((lf.quantity / baseOnCan) * canSize).toFixed(2);
           // nếu trong máy không còn màu này, hoặc còn nhưng nhỏ hơn số lượng mong đợi
           if (!mapExistColours[colourCode] || mapExistColours[colourCode] < expectQuantity) {
             res.push(colourCode);
