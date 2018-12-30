@@ -13,6 +13,7 @@ import {ModalService} from '../../../services/boostrap/modal.service';
 export class MachineSettingComponent implements OnInit {
   minQuantity: number;
   maxQuantity: number;
+  warningQuantity: number;
   machine: MachineModel;
   listMachineColourant: MachineColourantModel[];
 
@@ -21,6 +22,10 @@ export class MachineSettingComponent implements OnInit {
   updateAmount: number;
   addedAmount: number;
   // addedAmountPercent: number;
+  openSetting: boolean;
+
+  initMinQuantity: number;
+  initWarningQuantity: number;
 
   constructor(
     private modalService: ModalService,
@@ -29,6 +34,7 @@ export class MachineSettingComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.openSetting = false;
     this.fetchData();
   }
 
@@ -36,6 +42,10 @@ export class MachineSettingComponent implements OnInit {
     this.machine = this.machineService.getCurrentMachine();
     this.minQuantity = this.machine.minQuantity;
     this.maxQuantity = this.machine.maxQuantity;
+    this.warningQuantity = this.machine.warningQuantity;
+
+    this.initMinQuantity = this.machine.minQuantity;
+    this.initWarningQuantity = this.machine.warningQuantity;
 
     this.machineService.fetchDataFromServer().subscribe((datas) => {
       this.processListColourantData(datas);
@@ -51,19 +61,21 @@ export class MachineSettingComponent implements OnInit {
   }
 
   selectMachineColourant(colourantId: number) {
-    const listFilter = this.listMachineColourant.filter((item: MachineColourantModel) => {
-      return item.colourant.colourantId === colourantId;
-    });
+    if (this.openSettingMachine === false) {
+      const listFilter = this.listMachineColourant.filter((item: MachineColourantModel) => {
+        return item.colourant.colourantId === colourantId;
+      });
 
-    this.selectedMachineColourant = listFilter.length > 0 ? listFilter[0] : null;
-    this.currentAmount = this.selectedMachineColourant != null ? this.selectedMachineColourant.quantity : 0;
-    this.addedAmount = 0;
-    // this.addedAmountPercent = 0;
-    this.updateAmount = this.currentAmount + this.addedAmount;
+      this.selectedMachineColourant = listFilter.length > 0 ? listFilter[0] : null;
+      this.currentAmount = this.selectedMachineColourant != null ? this.selectedMachineColourant.quantity : 0;
+      this.addedAmount = 0;
+      // this.addedAmountPercent = 0;
+      this.updateAmount = this.currentAmount + this.addedAmount;
 
-    setTimeout(() => {
-      this.openModal('view-selected-colourant-machine-modal');
-    }, 0);
+      setTimeout(() => {
+        this.openModal('view-selected-colourant-machine-modal');
+      }, 0);
+    }
   }
 
   updateAddedAmount(type: string) {
@@ -85,6 +97,38 @@ export class MachineSettingComponent implements OnInit {
 
   updateAmountBySlider() {
     this.addedAmount = this.updateAmount - this.currentAmount;
+  }
+
+  openSettingMachine() {
+    this.openSetting = true;
+  }
+
+  closeSettingMachine() {
+    this.openSetting = false;
+  }
+
+  updateMachineDataSlider(type: string) {
+    if ('warning' === type) {
+      if (this.warningQuantity < this.minQuantity) {
+        this.warningQuantity = this.minQuantity;
+      }
+    } else if ('min' === type) {
+      if (this.minQuantity > this.warningQuantity) {
+        this.minQuantity = this.warningQuantity;
+      }
+    }
+  }
+
+  updateSettingMachine() {
+    this.machineService.updateSettingMachine(this.minQuantity, this.warningQuantity).subscribe((machineData) => {
+      this.machine = machineData;
+      this.minQuantity = machineData.minQuantity;
+      this.maxQuantity = machineData.maxQuantity;
+      this.warningQuantity = machineData.warningQuantity;
+
+      this.initMinQuantity = machineData.minQuantity;
+      this.initWarningQuantity = machineData.warningQuantity;
+    });
   }
 
   fillByPercent(percent: number) {

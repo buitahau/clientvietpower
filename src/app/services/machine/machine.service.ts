@@ -152,4 +152,14 @@ export class MachineService {
       })
     );
   }
+
+  updateSettingMachine(minQuantity: number, warningQuantity: number) {
+    const dt = {
+      machineId: this.machine.machineId,
+      minQuantity: minQuantity,
+      warningQuantity: warningQuantity,
+    };
+
+    return this.http.post(environment.settings.serverendpoint + 'machine/update', dt);
+  }
 }

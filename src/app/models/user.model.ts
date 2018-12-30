@@ -6,6 +6,7 @@ export class MachineModel {
   private _name: string;
   private _minQuantity: number;
   private _maxQuantity: number;
+  private _warningQuantity: number;
 
   get machineId(): number {
     return this._machineId;
@@ -45,6 +46,14 @@ export class MachineModel {
 
   set maxQuantity(value: number) {
     this._maxQuantity = value;
+  }
+
+  get warningQuantity(): number {
+    return this._warningQuantity;
+  }
+
+  set warningQuantity(value: number) {
+    this._warningQuantity = value;
   }
 }
 

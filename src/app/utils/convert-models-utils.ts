@@ -152,6 +152,7 @@ export default class ConvertModelUtils {
     machine.code = object.code;
     machine.name = object.name;
     machine.minQuantity = object.minQuantity;
+    machine.warningQuantity = object.warningQuantity;
     machine.maxQuantity = object.maxQuantity;
     return machine;
   }

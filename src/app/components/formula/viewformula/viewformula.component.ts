@@ -116,12 +116,11 @@ export class ViewFormulaComponent implements OnInit {
 
   changedCanSize(e: any): void {
     this.canSize = e.value;
-
   }
 
   beginDispense(modalId: string): void {
     this.machineService.validateQuantityColourant(this.canSize, this.listFormulaColorant, this.dbItem.formula).subscribe(res => {
-      if (res.length === 0 ) {
+      if (res.length === 0) {
         // create when not current task in process or task is done !!!!;
         if (this.currentTask == null || this.currentTask.status === MAP_DISPENSE_TASK_STATE.DONE) {
           const listPumpingTask = [];
@@ -129,8 +128,8 @@ export class ViewFormulaComponent implements OnInit {
           for (const colorant of this.listColorant) {
             const prepare_t = new DispenseTaskStepModel(MAP_DISPENSE_TASK_STEP_TYPE.PREPARE, null,
               (newDispenseTask, newDispenseStepTask) => {
-              this.updateDispenseTaskData(newDispenseTask, newDispenseStepTask);
-            });
+                this.updateDispenseTaskData(newDispenseTask, newDispenseStepTask);
+              });
 
             const pumping_t = new DispenseTaskStepModel(MAP_DISPENSE_TASK_STEP_TYPE.PUMPING, new DispenseStepDataModel(colorant.colorant,
               colorant.quantity * this.canSize), (newDispenseTask, newDispenseStepTask) => {
@@ -172,10 +171,14 @@ export class ViewFormulaComponent implements OnInit {
           this.openModal(modalId);
         }, 200);
       } else {
-        alert('Not enough colorant quantity to dispense.');
+        this.errorMessage = 'Not enough colorant quantity to dispense.';
+        this.currentTask == null;
       }
     });
+  }
 
+  clearErrorMessage() {
+    this.errorMessage = null;
   }
 
   updateDispenseTaskData(newDispenseTask: DispenseTaskModel, newDispenseStepTask: DispenseTaskStepModel) {

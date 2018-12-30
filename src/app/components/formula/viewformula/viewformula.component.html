@@ -114,8 +114,17 @@
       </div>
 
       <div class="card-body">
+        <div class="row"  *ngIf="errorMessage != null && errorMessage != ''">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="alert alert-danger">
+              <button class="close" data-dismiss="alert" aria-label="close" (click)="clearErrorMessage()">&times;</button>
+              {{errorMessage}}
+            </div>
+          </div>
+        </div>
+
         <div class="row">
-          <div class="col-lg-6 col-md-6 col-sm-126 col-xs-12 text-right">
+          <div class="col-lg-6 col-md-6 col-sm-16 col-xs-12 text-right">
 
              <span class="base-can-empty" *ngIf="selectProductBase != null">
                 <span class="base-can-background">
@@ -172,18 +181,6 @@
 
 <pp-modal id="view-dispense-task-modal" class="modal dispense-job-status-modal" [style]="{'display': 'none'}">
   <div class="modal-content">
-    <ng-container *ngIf="errorMessage != null && errorMessage != ''">
-      <div class="modal-header">
-        <h5 class="modal-title">Dispense Job Error Message</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="closeModal('view-dispense-task-modal')">
-          <span aria-hidden="true">×</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <h3 class="warning-message">{{errorMessage}}</h3>
-      </div>
-    </ng-container>
-
     <ng-container *ngIf="errorMessage == null || errorMessage == ''">
       <div class="modal-header">
         <h5 class="modal-title">Dispense Job Status</h5>
@@ -191,6 +188,7 @@
           <span aria-hidden="true">×</span>
         </button>
       </div>
+
       <div class="modal-body">
         <ng-container *ngIf="dbItem != null && currentTask != null && currentTask.taskId != null && currentTask.taskId > 0">
           <app-viewdispensetask [dispenseTask]="currentTask" [dispenseStepTask]="currentTaskStep" [listColorantUsed]="listColorant" [maxColorQuantity]="maxColorQuantity"></app-viewdispensetask>

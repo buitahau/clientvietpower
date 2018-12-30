@@ -1,7 +1,33 @@
 .machine-colourant-group{
-  margin: 30px 10px 50px 50px;
+  margin: 30px 20px 50px 70px;
   position: relative;
   display: flex;
+
+  &[actiontype="open-setting"]{
+    .machine-background{
+      left: -25px;
+    }
+
+    .machine-background-setting{
+      position: absolute;
+      top: 0px;
+      left: -10px;
+      bottom: 0px;
+
+      .machine-range-slider{
+        top: -8px;
+        bottom: -8px;
+        position: absolute;
+      }
+    }
+
+    .machine-colourant-min-range,
+    .machine-colourant-warning-range{
+      .step-label{
+        display: none;
+      }
+    }
+  }
 }
 
 
@@ -14,6 +40,7 @@
     min-width: 60px;
   }
 
+  .machine-colourant-zero-range,
   .machine-colourant-min-range,
   .machine-colourant-warning-range,
   .machine-colourant-max-range{
@@ -30,6 +57,7 @@
   bottom: 0px;
   right: 0px;
 
+  .machine-colourant-zero-range,
   .machine-colourant-min-range,
   .machine-colourant-warning-range,
   .machine-colourant-max-range{
@@ -49,6 +77,13 @@
       -ms-transform: translate(-100%, -50%);
       -o-transform: translate(-100%, -50%);
       transform: translate(-100%, -50%);
+    }
+  }
+
+  .machine-colourant-zero-range{
+    border-top: 1px dashed #333333;
+    .step-label{
+      color: #333333;
     }
   }
 
