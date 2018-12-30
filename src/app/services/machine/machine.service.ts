@@ -160,6 +160,10 @@ export class MachineService {
       warningQuantity: warningQuantity,
     };
 
-    return this.http.post(environment.settings.serverendpoint + 'machine/update', dt);
+    return this.http.post(environment.settings.serverendpoint + 'machine/update', dt).pipe(
+      map((data: any) => {
+        return ConvertModelUtils.convertToMachineModel(data);
+      })
+    );
   }
 }

@@ -27,6 +27,9 @@ export class MachineSettingComponent implements OnInit {
   initMinQuantity: number;
   initWarningQuantity: number;
 
+  errorType: string;
+  errorMessage: string;
+
   constructor(
     private modalService: ModalService,
     private machineService: MachineService,
@@ -35,6 +38,8 @@ export class MachineSettingComponent implements OnInit {
 
   ngOnInit() {
     this.openSetting = false;
+    this.errorType = null;
+    this.errorMessage = null;
     this.fetchData();
   }
 
@@ -57,11 +62,19 @@ export class MachineSettingComponent implements OnInit {
     this.selectedMachineColourant = null;
     this.addedAmount = 0;
     this.currentAmount = 0;
+
+    for (const item of this.listMachineColourant) {
+      if (item.quantity < this.minQuantity) {
+
+      }
+    }
+
+    console.log(this.listMachineColourant);
     // this.addedAmountPercent = 0;
   }
 
   selectMachineColourant(colourantId: number) {
-    if (this.openSettingMachine === false) {
+    if (this.openSetting === false) {
       const listFilter = this.listMachineColourant.filter((item: MachineColourantModel) => {
         return item.colourant.colourantId === colourantId;
       });
@@ -105,6 +118,8 @@ export class MachineSettingComponent implements OnInit {
 
   closeSettingMachine() {
     this.openSetting = false;
+    this.minQuantity = this.initMinQuantity;
+    this.warningQuantity = this.initWarningQuantity;
   }
 
   updateMachineDataSlider(type: string) {
