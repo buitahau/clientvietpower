@@ -35,6 +35,7 @@ export class ViewFormulaComponent implements OnInit {
   selectProductBase: ProductBaseCanModel = null;
   numberOfCan = 1;
   listProductBase: Select2Item[] | null = null;
+  hasError = false; // sử dụng để hiển thị error
 
 
   // step 2. dispense colourant
@@ -69,6 +70,10 @@ export class ViewFormulaComponent implements OnInit {
       this.dbItem = ConvertModelUtils.convertToFormulaProductBaseObject(data);
       this.getRelativeData();
     });
+  }
+
+  roundNumber(num: number) {
+    return Math.round(num * 100) / 100;
   }
 
   getRelativeData() {
@@ -116,6 +121,7 @@ export class ViewFormulaComponent implements OnInit {
 
   changedCanSize(e: any): void {
     this.canSize = e.value;
+    this.hasError = false;
   }
 
   beginDispense(modalId: string): void {
@@ -173,6 +179,7 @@ export class ViewFormulaComponent implements OnInit {
       } else {
         this.errorMessage = 'Not enough colorant quantity to dispense.';
         this.currentTask == null;
+        this.hasError = true;
       }
     });
   }

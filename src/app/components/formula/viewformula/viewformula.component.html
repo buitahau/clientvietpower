@@ -90,7 +90,7 @@
 
             <tr *ngFor="let colorantItem of listFormulaColorant">
               <td>{{colorantItem.colourant.colourantName}}</td>
-              <td>{{(colorantItem.quantity / dbItem.formula.baseOnCan) * canSize}}</td>
+              <td>{{roundNumber((colorantItem.quantity / dbItem.formula.baseOnCan) * canSize)}}</td>
               <td>
                 <span class="color-bar" >
                   <span class="color-select" [ngStyle]="{'background': colorantItem.colourant.rbgHex, 'width': (colorantItem.quantity / maxColorQuantity) * 100 + '%'}"></span>
@@ -170,6 +170,9 @@
                   <span *ngIf="inProgress">In Progress</span>
                   <span *ngIf="! inProgress">Dispense</span>
                 </button>
+              </div>
+              <div class="col-md-12" *ngIf="hasError">
+                <span class="text-error">Not enough colorant quantity to dispense.</span>
               </div>
             </div>
           </div>
