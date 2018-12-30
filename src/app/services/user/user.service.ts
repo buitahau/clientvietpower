@@ -5,7 +5,7 @@ import {map} from 'rxjs/internal/operators';
 import {environment} from '../../../environments/environment';
 import {HttpService} from '../../shared/http/services/http.service';
 import ConvertModelUtils from '../../utils/convert-models-utils';
-import {MachineColourantModel, UserModel} from '../../models/user.model';
+import {MachineColourantModel, MachineModel, UserModel} from '../../models/user.model';
 import {MachineService} from '../machine/machine.service';
 
 @Injectable({
@@ -15,6 +15,7 @@ import {MachineService} from '../machine/machine.service';
 export class UserService {
   isLogin: boolean = false;
   userDTO: UserModel = null;
+  errorMessage: string;
 
   constructor(private http: HttpService, private router: Router, private cookieService: CookieService) {
     this.isAuthenticated();
@@ -40,9 +41,11 @@ export class UserService {
           this.cookieService.set_cookie('username', userName, 1);
           this.cookieService.set_cookie('password', password, 1);
           this.router.navigate(['/dashboard']);
+          this.errorMessage = null;
         } else {
           this.userDTO = null;
           this.isLogin = false;
+          this.errorMessage = 'Username or Password is incorrect! Please try again';
           alert('Username or Password is incorrect! Please try again');
         }
       }),

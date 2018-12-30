@@ -9,6 +9,7 @@ import {Router} from '@angular/router';
 import {ColorantModel} from '../../models/colorant';
 import {FormulaColourantModel, FormulaProductBaseModel} from '../../models/formula_product_base';
 import {FormulaModel} from '../../models/formula';
+import {fromPromise} from 'rxjs/internal-compatibility';
 
 @Injectable({
   providedIn: 'root'

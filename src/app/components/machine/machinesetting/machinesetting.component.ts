@@ -45,32 +45,47 @@ export class MachineSettingComponent implements OnInit {
 
   fetchData() {
     this.machine = this.machineService.getCurrentMachine();
-    this.minQuantity = this.machine.minQuantity;
-    this.maxQuantity = this.machine.maxQuantity;
-    this.warningQuantity = this.machine.warningQuantity;
 
-    this.initMinQuantity = this.machine.minQuantity;
-    this.initWarningQuantity = this.machine.warningQuantity;
+    if (this.machine != null) {
+      this.minQuantity = this.machine.minQuantity;
+      this.maxQuantity = this.machine.maxQuantity;
+      this.warningQuantity = this.machine.warningQuantity;
 
-    this.machineService.fetchDataFromServer().subscribe((datas) => {
-      this.processListColourantData(datas);
-    });
+      this.initMinQuantity = this.machine.minQuantity;
+      this.initWarningQuantity = this.machine.warningQuantity;
+
+      this.machineService.fetchDataFromServer().subscribe((datas) => {
+        this.processListColourantData(datas, 'init');
+      });
+    }
   }
 
-  processListColourantData(datas: any) {
+  processListColourantData(datas: any, type: string) {
     this.listMachineColourant = datas;
     this.selectedMachineColourant = null;
     this.addedAmount = 0;
     this.currentAmount = 0;
 
-    for (const item of this.listMachineColourant) {
-      if (item.quantity < this.minQuantity) {
+    if (type === 'init') {
+      for (const item of this.listMachineColourant) {
+        if (this.errorType == null && item.quantity < this.initWarningQuantity) {
+          this.errorType = 'Warning';
+          this.errorMessage = 'Some colorants are low. Please add more!';
+        }
 
+        if (item.quantity < this.initMinQuantity) {
+          this.errorType = 'Danger';
+          this.errorMessage = 'Some colorants are low. Please add more!';
+          break;
+        }
+      }
+
+      if (this.errorType != null && this.errorMessage != null) {
+        setTimeout(() => {
+          this.openModal('warning-colourants-machine-modal');
+        }, 0);
       }
     }
-
-    console.log(this.listMachineColourant);
-    // this.addedAmountPercent = 0;
   }
 
   selectMachineColourant(colourantId: number) {
@@ -155,7 +170,7 @@ export class MachineSettingComponent implements OnInit {
   updateAndSaving(id: string) {
     this.machineService.updateColourantMachineData(this.machine, this.selectedMachineColourant.colourant, this.addedAmount)
       .subscribe((datas) => {
-        this.processListColourantData(datas);
+        this.processListColourantData(datas, 'update');
         this.modalService.close(id);
       });
   }
@@ -166,6 +181,9 @@ export class MachineSettingComponent implements OnInit {
 
   closeModal(id: string) {
     this.modalService.close(id);
+
+    this.errorType = null;
+    this.errorMessage = null;
   }
 
 }
