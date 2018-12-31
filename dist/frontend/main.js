@@ -597,7 +597,7 @@ var DashboardComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"block-header\">\r\n  <h1>Formula</h1>\r\n</div>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n    <div class=\"card filter-card\">\r\n      <div class=\"card-header\">\r\n        Filter\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        <form class=\"form form-horizontal form-detail\">\r\n          <div class=\"form-body\">\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-md-3 label-control\">Select Color</label>\r\n              <div class=\"input-group input-group-sm col-md-9\">\r\n                <select class=\"form-control form-control-sm select-sm select-color-field\" id=\"selectedFormulaFilter\" name=\"selectedFormulaFilter\" [(ngModel)]=\"filter.formulaId\" (ngModelChange)=\"onFilterChange($event)\">\r\n                  <option [ngValue]=\"undefined\">Choose Color</option>\r\n                  <option *ngFor=\"let f of listFormulas\" value=\"{{f.formulaId}}\">{{f.formulaName}}</option>\r\n                </select>\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-md-3 label-control\">Select Collection</label>\r\n              <div class=\"col-md-9\">\r\n                <select class=\"form-control form-control-sm select-sm select-color-field\" id=\"selectedCollectionFilter\" name=\"selectedCollectionFilter\" [(ngModel)]=\"filter.collectionId\" (ngModelChange)=\"onFilterChange($event)\">\r\n                  <option [ngValue]=\"undefined\">Choose Collection</option>\r\n                  <option *ngFor=\"let c of listCollections\" value=\"{{c._collectionId}}\">{{c._collectionName}}</option>\r\n                </select>\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-md-3 label-control\">Select Product</label>\r\n              <div class=\"col-md-9\">\r\n                <select class=\"form-control form-control-sm select-sm select-color-field\" id=\"selectedProductFilter\" name=\"selectedProductFilter\" [(ngModel)]=\"filter.productId\" (ngModelChange)=\"onFilterChange($event)\">\r\n                  <option [ngValue]=\"undefined\">Choose Product</option>\r\n                  <option *ngFor=\"let c of listProducts\" value=\"{{c._productId}}\">{{c._productCode}}</option>\r\n                </select>\r\n              </div>\r\n            </div>\r\n          </div>\r\n\r\n          <div class=\"form-actions text-center\">\r\n            <button class=\"btn btn-primary mr-3\" (click)=\"filterFormula(null)\">Search</button>\r\n            <button class=\"btn btn-default\">Reset</button>\r\n          </div>\r\n        </form>\r\n      </div>\r\n\r\n      <!--<div class=\"card-footer\">-->\r\n\r\n      <!--</div>-->\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        List Colorant\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        <div class=\"table-responsive\">\r\n          <table class=\"table table-bordered\" matSort (matSortChange)=\"sortData($event)\" > <!---->\r\n            <tr>\r\n              <th mat-sort-header=\"formulaCode\">Formula Code</th>\r\n              <th mat-sort-header=\"formulaName\">Formula Name</th>\r\n              <th mat-sort-header=\"collection\">Collection\r\n              <th mat-sort-header=\"product\">Product</th>\r\n              <th mat-sort-header=\"createdDate\">Created Date</th>\r\n              <th mat-sort-header=\"createdBy\">Created By</th>\r\n              <th>Action</th>\r\n            </tr>\r\n\r\n            <tr *ngFor=\"let item of pagenationMode.listItems\">\r\n              <td>{{item.formula.formulaCode}}</td>\r\n              <td>{{item.formula.formulaName}}</td>\r\n              <td>{{item.formula.collection.collectionName}}</td>\r\n              <td>{{item.productBase.product.productName}}</td>\r\n              <td></td>\r\n              <td></td>\r\n              <td>\r\n                <button class=\"btn btn-primary\" (click)=\"viewFormula(item.formulaProductBaseId)\"><i class=\"fas fa-info-circle\"></i> View</button>\r\n            </tr>\r\n            <tfoot>\r\n            <tr>\r\n              <td colspan=\"100%\">\r\n                Show {{pagenationMode.listItems.length}} of  {{pagenationMode.totalItem}} items.\r\n\r\n                <span class=\"pagenation-footer\" style=\"float: right\">\r\n                  <span *ngIf=\"pagenationMode.pageIndex > 0\" (click)=\"goToPage(pagenationMode.pageIndex - 1)\" class=\"btn-action\">previous</span>\r\n                  <span>{{pagenationMode.pageIndex + 1}}</span>\r\n                  <span *ngIf=\"pagenationMode.pageIndex * pagenationMode.maxPageItem + pagenationMode.maxPageItem < pagenationMode.totalItem\"  (click)=\"goToPage(pagenationMode.pageIndex + 1)\" class=\"btn-action\">next</span>\r\n                </span>\r\n              </td>\r\n            </tr>\r\n            </tfoot>\r\n          </table>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class=\"block-header\">\r\n  <h1>Formula</h1>\r\n</div>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n    <div class=\"card filter-card\">\r\n      <div class=\"card-header\">\r\n        Filter\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        <form class=\"form form-horizontal form-detail\">\r\n          <div class=\"form-body\">\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-md-3 label-control\">Select Color</label>\r\n              <div class=\"input-group input-group-sm col-md-9\">\r\n                <select class=\"form-control form-control-sm select-sm select-color-field\" id=\"selectedFormulaFilter\" name=\"selectedFormulaFilter\" [(ngModel)]=\"filter.formulaId\" (ngModelChange)=\"onFilterChange($event)\">\r\n                  <option [ngValue]=\"undefined\">Choose Color</option>\r\n                  <option *ngFor=\"let f of listFormulas\" value=\"{{f.formulaId}}\">{{f.formulaName}}</option>\r\n                </select>\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-md-3 label-control\">Select Collection</label>\r\n              <div class=\"col-md-9\">\r\n                <select class=\"form-control form-control-sm select-sm select-color-field\" id=\"selectedCollectionFilter\" name=\"selectedCollectionFilter\" [(ngModel)]=\"filter.collectionId\" (ngModelChange)=\"onFilterChange($event)\">\r\n                  <option [ngValue]=\"undefined\">Choose Collection</option>\r\n                  <option *ngFor=\"let c of listCollections\" value=\"{{c._collectionId}}\">{{c._collectionName}}</option>\r\n                </select>\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-md-3 label-control\">Select Product</label>\r\n              <div class=\"col-md-9\">\r\n                <select class=\"form-control form-control-sm select-sm select-color-field\" id=\"selectedProductFilter\" name=\"selectedProductFilter\" [(ngModel)]=\"filter.productId\" (ngModelChange)=\"onFilterChange($event)\">\r\n                  <option [ngValue]=\"undefined\">Choose Product</option>\r\n                  <option *ngFor=\"let c of listProducts\" value=\"{{c._productId}}\">{{c._productCode}}</option>\r\n                </select>\r\n              </div>\r\n            </div>\r\n          </div>\r\n\r\n          <div class=\"form-actions text-center\">\r\n            <button class=\"btn btn-primary mr-3\" (click)=\"refresh()\">Search</button>\r\n            <button class=\"btn btn-default\" (click)=\"reset()\">Reset</button>\r\n          </div>\r\n        </form>\r\n      </div>\r\n\r\n      <!--<div class=\"card-footer\">-->\r\n\r\n      <!--</div>-->\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        List Colorant\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        <div class=\"table-responsive\">\r\n          <table class=\"table table-bordered\" matSort (matSortChange)=\"sortData($event)\" > <!---->\r\n            <tr>\r\n              <th mat-sort-header=\"formulaCode\">Formula Code</th>\r\n              <th mat-sort-header=\"formulaName\">Formula Name</th>\r\n              <th mat-sort-header=\"collection\">Collection\r\n              <th mat-sort-header=\"product\">Product</th>\r\n              <th mat-sort-header=\"createdDate\">Created Date</th>\r\n              <th mat-sort-header=\"createdBy\">Created By</th>\r\n              <th>Action</th>\r\n            </tr>\r\n\r\n            <tr *ngFor=\"let item of pagenationMode.listItems\">\r\n              <td>{{item.formula.formulaCode}}</td>\r\n              <td>{{item.formula.formulaName}}</td>\r\n              <td>{{item.formula.collection.collectionName}}</td>\r\n              <td>{{item.productBase.product.productName}}</td>\r\n              <td></td>\r\n              <td></td>\r\n              <td>\r\n                <button class=\"btn btn-primary\" (click)=\"viewFormula(item.formulaProductBaseId)\"><i class=\"fas fa-info-circle\"></i> View</button>\r\n            </tr>\r\n            <tfoot>\r\n            <tr>\r\n              <td colspan=\"100%\">\r\n                Show {{pagenationMode.listItems.length}} of  {{pagenationMode.totalItem}} items.\r\n\r\n                <span class=\"pagenation-footer\" style=\"float: right\">\r\n                  <span *ngIf=\"pagenationMode.pageIndex > 0\" (click)=\"goToPage(pagenationMode.pageIndex - 1)\" class=\"btn-action\">previous</span>\r\n                  <span>{{pagenationMode.pageIndex + 1}}</span>\r\n                  <span *ngIf=\"pagenationMode.pageIndex * pagenationMode.maxPageItem + pagenationMode.maxPageItem < pagenationMode.totalItem\"  (click)=\"goToPage(pagenationMode.pageIndex + 1)\" class=\"btn-action\">next</span>\r\n                </span>\r\n              </td>\r\n            </tr>\r\n            </tfoot>\r\n          </table>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -719,6 +719,8 @@ var FormulaComponent = /** @class */ (function () {
     FormulaComponent.prototype.onFilterChange = function () {
         this.refresh();
     };
+    FormulaComponent.prototype.reset = function () {
+    };
     FormulaComponent.prototype.refresh = function () {
         var _this = this;
         var resFilter = this.listOriginal;
@@ -833,7 +835,7 @@ var MaintenanceComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"block-header\">\r\n  <h1>Standard Formula</h1>\r\n</div>\r\n\r\n<div class=\"row\" *ngIf=\"dbItem != null\">\r\n  <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        Information\r\n      </div>\r\n\r\n      <div class=\"card-body form-detail\">\r\n        <div class=\"form-group row\">\r\n          <label class=\"col-md-4 label-control\">Color</label>\r\n          <div class=\"col-md-8\">\r\n            {{dbItem.formula.formulaCode}}\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"form-group row\">\r\n          <label class=\"col-md-4 label-control\">Collection</label>\r\n          <div class=\"col-md-8\">\r\n            {{dbItem.formula.collection.collectionName}}\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"form-group row\">\r\n          <label class=\"col-md-4 label-control\">Approximate Color</label>\r\n          <div class=\"col-md-8\">\r\n            <span [ngStyle]=\"{'background': dbItem.productBase.rbgHex, 'display': 'inline-block', 'width': '30px', 'height': '30px', 'border': '1px solid #333'}\"></span>\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"form-group row\">\r\n          <label class=\"col-md-4 label-control\">Product</label>\r\n          <div class=\"col-md-8\">\r\n            {{dbItem.productBase.product.productName}}\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"form-group row\">\r\n          <label class=\"col-md-4 label-control\">Formula Date</label>\r\n          <div class=\"col-md-8\">\r\n            {{dbItem.formula.createdDate | date : 'dd/MM/yyyy'}}\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"form-group row\">\r\n          <label class=\"col-md-4 label-control\">Substrate</label>\r\n          <div class=\"col-md-8\">\r\n            substrate???/\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"form-group row\">\r\n          <label class=\"col-md-4 label-control\">Comments</label>\r\n          <div class=\"col-md-8\">\r\n            {{dbItem.formula.comments}}\r\n          </div>\r\n        </div>\r\n\r\n\r\n        <div class=\"form-group row\">\r\n          <label class=\"col-md-4 label-control\">Barcode</label>\r\n          <div class=\"col-md-8\">\r\n            <span *ngIf=\"selectProductBase != null\">\r\n              {{selectProductBase.barCode}}\r\n            </span>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n\r\n  </div>\r\n\r\n  <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        Component colors\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        <div class=\"table-responsive\">\r\n          <table class=\"table table-bordered\" >\r\n            <tr>\r\n              <th style=\"width: 30%\">Component</th>\r\n              <th style=\"width: 20%\">ml</th>\r\n              <th style=\"width: 50%\">Color\r\n            </tr>\r\n\r\n            <tr *ngFor=\"let colorantItem of listFormulaColorant\">\r\n              <td>{{colorantItem.colourant.colourantName}}</td>\r\n              <td>{{colorantItem.quantity * canSize}}</td>\r\n              <td>\r\n                <span class=\"color-bar\" >\r\n                  <span class=\"color-select\" [ngStyle]=\"{'background': colorantItem.colourant.rbgHex, 'width': (colorantItem.quantity / maxColorQuantity) * 100 + '%'}\"></span>\r\n                </span>\r\n              </td>\r\n            </tr>\r\n          </table>\r\n        </div>\r\n\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n\r\n<div class=\"row\" *ngIf=\"dbItem != null\">\r\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        Mixed\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        <div class=\"row\">\r\n          <div class=\"col-lg-6 col-md-6 col-sm-126 col-xs-12 text-right\">\r\n\r\n             <span class=\"base-can-empty\" *ngIf=\"selectProductBase != null\">\r\n                <span class=\"base-can-background\">\r\n                  <span class=\"base-can-volume\" [ngStyle]=\"{'background-color': selectProductBase.productBase.rbgHex, 'height': selectProductBase.percentage + '%'}\">\r\n                    <span class=\"can-base-info\">\r\n                      <span class=\"base-type\">Base : {{selectProductBase.productBase.base.baseCode}}</span>\r\n                      <span class=\"base-volume\">{{canSize + \" \" + selectProductBase.unit}}</span>\r\n                      <span class=\"base-name\">{{selectProductBase.productBase.product.productName}}</span>\r\n                    </span>\r\n                  </span>\r\n                </span>\r\n              </span>\r\n          </div>\r\n\r\n          <div class=\"col-lg-6 col-md-6 col-sm-126 col-xs-12 form-detail\">\r\n            <div class=\"row form-group\">\r\n              <label class=\"col-md-4 label-control\">Number of cans : </label>\r\n              <div class=\"col-md-8\">\r\n                <input type=\"number\" [(ngModel)]=\"numberOfCan\" class=\"form-control\" required=\"required\" [ngModelOptions]=\"{standalone: true}\" [ngStyle]=\"{'width': '200px'}\">\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"row form-group\">\r\n              <label class=\"col-md-4 label-control\">Can size:</label>\r\n              <div class=\"col-md-8\">\r\n                <input type=\"number\" [(ngModel)]=\"canSize\" class=\"form-control\" required=\"required\" [ngModelOptions]=\"{standalone: true}\" [ngStyle]=\"{'width': '200px'}\">\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"row form-group\">\r\n              <label class=\"col-md-4 label-control\">Or select:</label>\r\n              <div class=\"col-md-8\">\r\n                <ng-select2 class=\"select-color-field\" [(ngModel)]=\"canSize\" [data]=\"listProductBase\" [value]=\"canSize\" [placeholder]=\"'Choose Can Size'\" [width]=\"200\" (valueChanged)=\"changedCanSize($event)\"></ng-select2>\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"row form-group\">\r\n              <label class=\"col-md-4 label-control\"></label>\r\n\r\n              <div class=\"col-md-8\">\r\n                <button class=\"btn btn-primary\" (click)=\"beginDispense('view-dispense-task-modal')\">\r\n                  <i class=\"fas fa-fill-drip\"></i>\r\n                  <span *ngIf=\"inProgress\">In Progress</span>\r\n                  <span *ngIf=\"! inProgress\">Dispense</span>\r\n                </button>\r\n              </div>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<pp-modal id=\"view-dispense-task-modal\" class=\"modal dispense-job-status-modal\" [style]=\"{'display': 'none'}\">\r\n  <div class=\"modal-content\">\r\n    <ng-container *ngIf=\"errorMessage != null && errorMessage != ''\">\r\n      <div class=\"modal-header\">\r\n        <h5 class=\"modal-title\">Dispense Job Error Message</h5>\r\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\" (click)=\"closeModal('view-dispense-task-modal')\">\r\n          <span aria-hidden=\"true\">×</span>\r\n        </button>\r\n      </div>\r\n      <div class=\"modal-body\">\r\n        <h3 class=\"warning-message\">{{errorMessage}}</h3>\r\n      </div>\r\n    </ng-container>\r\n\r\n    <ng-container *ngIf=\"errorMessage == null || errorMessage == ''\">\r\n      <div class=\"modal-header\">\r\n        <h5 class=\"modal-title\">Dispense Job Status</h5>\r\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\" (click)=\"closeModal('view-dispense-task-modal')\">\r\n          <span aria-hidden=\"true\">×</span>\r\n        </button>\r\n      </div>\r\n      <div class=\"modal-body\">\r\n        <ng-container *ngIf=\"dbItem != null && currentTask != null && currentTask.taskId != null && currentTask.taskId > 0\">\r\n          <app-viewdispensetask [dispenseTask]=\"currentTask\" [dispenseStepTask]=\"currentTaskStep\" [listColorantUsed]=\"listColorant\" [maxColorQuantity]=\"maxColorQuantity\"></app-viewdispensetask>\r\n        </ng-container>\r\n      </div>\r\n    </ng-container>\r\n\r\n    <div class=\"modal-footer\">\r\n      <button type=\"button\" class=\"btn btn-primary\" (click)=\"closeModal('view-dispense-task-modal')\">Hide</button>\r\n    </div>\r\n  </div>\r\n</pp-modal>\r\n\r\n<pp-modal id=\"print-formula-modal\" class=\"modal print-formula-modal\" [style]=\"{'display': 'none'}\">\r\n  <div class=\"modal-content\">\r\n    <div class=\"modal-header\">\r\n      <h5 class=\"modal-title\">Print</h5>\r\n      <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\" (click)=\"closeModal('print-formula-modal')\">\r\n        <span aria-hidden=\"true\">×</span>\r\n      </button>\r\n    </div>\r\n\r\n    <div class=\"modal-body\">\r\n      <div class=\"row text-center\" *ngIf=\"dbItem != null\">\r\n        <div class=\"col-md-12 formula-color-info\"><h3>{{dbItem.formula.formulaCode}}</h3></div>\r\n        <div class=\"col-md-12 collection-info\"><h4>{{dbItem.formula.collection.collectionName}}</h4></div>\r\n        <div class=\"col-md-12 shop-info\"><h5>Paintshop \"Demo\"</h5></div>\r\n        <div class=\"col-md-12 street-info\"><h5>Demostreet 1</h5></div>\r\n        <div class=\"col-md-12 ville-info\"><h5>Demo ville</h5></div>\r\n        <div class=\"col-md-12 substrate-info\"><p>Substrate recommendation Universal primer Grey</p></div>\r\n        <div class=\"col-md-12 bar-code-info \"><p><span class=\"bar-code-sample\"></span></p></div>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"modal-footer\">\r\n      <button type=\"button\" class=\"btn btn-default\" (click)=\"closeDispenseModel()\">Close</button>\r\n      <button type=\"button\" class=\"btn btn-primary\" (click)=\"closeDispenseModel()\">Print</button>\r\n    </div>\r\n  </div>\r\n</pp-modal>\r\n\r\n"
+module.exports = "<div class=\"block-header\">\r\n  <h1>Standard Formula</h1>\r\n</div>\r\n\r\n<div class=\"row\" *ngIf=\"dbItem != null\">\r\n  <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        Information\r\n      </div>\r\n\r\n      <div class=\"card-body form-detail\">\r\n        <div class=\"form-group row\">\r\n          <label class=\"col-md-4 label-control\">Color</label>\r\n          <div class=\"col-md-8\">\r\n            {{dbItem.formula.formulaCode}}\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"form-group row\">\r\n          <label class=\"col-md-4 label-control\">Collection</label>\r\n          <div class=\"col-md-8\">\r\n            {{dbItem.formula.collection.collectionName}}\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"form-group row\">\r\n          <label class=\"col-md-4 label-control\">Approximate Color</label>\r\n          <div class=\"col-md-8\">\r\n            <span [ngStyle]=\"{'background': dbItem.productBase.rbgHex, 'display': 'inline-block', 'width': '30px', 'height': '30px', 'border': '1px solid #333'}\"></span>\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"form-group row\">\r\n          <label class=\"col-md-4 label-control\">Product</label>\r\n          <div class=\"col-md-8\">\r\n            {{dbItem.productBase.product.productName}}\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"form-group row\">\r\n          <label class=\"col-md-4 label-control\">Formula Date</label>\r\n          <div class=\"col-md-8\">\r\n            {{dbItem.formula.createdDate | date : 'dd/MM/yyyy'}}\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"form-group row\">\r\n          <label class=\"col-md-4 label-control\">Substrate</label>\r\n          <div class=\"col-md-8\">\r\n            substrate???/\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"form-group row\">\r\n          <label class=\"col-md-4 label-control\">Comments</label>\r\n          <div class=\"col-md-8\">\r\n            {{dbItem.formula.comments}}\r\n          </div>\r\n        </div>\r\n\r\n\r\n        <div class=\"form-group row\">\r\n          <label class=\"col-md-4 label-control\">Barcode</label>\r\n          <div class=\"col-md-8\">\r\n            <span *ngIf=\"selectProductBase != null\">\r\n              {{selectProductBase.barCode}}\r\n            </span>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n\r\n  </div>\r\n\r\n  <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        Component colors\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        <div class=\"table-responsive\">\r\n          <table class=\"table table-bordered\" >\r\n            <tr>\r\n              <th style=\"width: 30%\">Component</th>\r\n              <th style=\"width: 20%\">ml</th>\r\n              <th style=\"width: 50%\">Color\r\n            </tr>\r\n\r\n            <tr *ngFor=\"let colorantItem of listFormulaColorant\">\r\n              <td>{{colorantItem.colourant.colourantName}}</td>\r\n              <td>{{roundNumber((colorantItem.quantity / dbItem.formula.baseOnCan) * canSize)}}</td>\r\n              <td>\r\n                <span class=\"color-bar\" >\r\n                  <span class=\"color-select\" [ngStyle]=\"{'background': colorantItem.colourant.rbgHex, 'width': (colorantItem.quantity / maxColorQuantity) * 100 + '%'}\"></span>\r\n                </span>\r\n              </td>\r\n            </tr>\r\n          </table>\r\n        </div>\r\n\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n\r\n<div class=\"row\" *ngIf=\"dbItem != null\">\r\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        Mixed\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        <div class=\"row\"  *ngIf=\"errorMessage != null && errorMessage != ''\">\r\n          <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n            <div class=\"alert alert-danger\">\r\n              <button class=\"close\" data-dismiss=\"alert\" aria-label=\"close\" (click)=\"clearErrorMessage()\">&times;</button>\r\n              {{errorMessage}}\r\n            </div>\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"row\">\r\n          <div class=\"col-lg-6 col-md-6 col-sm-16 col-xs-12 text-right\">\r\n\r\n             <span class=\"base-can-empty\" *ngIf=\"selectProductBase != null\">\r\n                <span class=\"base-can-background\">\r\n                  <span class=\"base-can-volume\" [ngStyle]=\"{'background-color': selectProductBase.productBase.rbgHex, 'height': selectProductBase.percentage + '%'}\">\r\n                    <span class=\"can-base-info\">\r\n                      <span class=\"base-type\">Base : {{selectProductBase.productBase.base.baseCode}}</span>\r\n                      <span class=\"base-volume\">{{canSize + \" \" + selectProductBase.unit}}</span>\r\n                      <span class=\"base-name\">{{selectProductBase.productBase.product.productName}}</span>\r\n                    </span>\r\n                  </span>\r\n                </span>\r\n              </span>\r\n          </div>\r\n\r\n          <div class=\"col-lg-6 col-md-6 col-sm-126 col-xs-12 form-detail\">\r\n            <div class=\"row form-group\">\r\n              <label class=\"col-md-4 label-control\">Number of cans : </label>\r\n              <div class=\"col-md-8\">\r\n                <input type=\"number\" [(ngModel)]=\"numberOfCan\" class=\"form-control\" required=\"required\" [ngModelOptions]=\"{standalone: true}\" [ngStyle]=\"{'width': '200px'}\">\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"row form-group\">\r\n              <label class=\"col-md-4 label-control\">Can size:</label>\r\n              <div class=\"col-md-8\">\r\n                <input type=\"number\" [(ngModel)]=\"canSize\" class=\"form-control\" required=\"required\" [ngModelOptions]=\"{standalone: true}\" [ngStyle]=\"{'width': '200px'}\">\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"row form-group\">\r\n              <label class=\"col-md-4 label-control\">Or select:</label>\r\n              <div class=\"col-md-8\">\r\n                <ng-select2 class=\"select-color-field\" [(ngModel)]=\"canSize\" [data]=\"listProductBase\" [value]=\"canSize\" [placeholder]=\"'Choose Can Size'\" [width]=\"200\" (valueChanged)=\"changedCanSize($event)\"></ng-select2>\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"row form-group\">\r\n              <label class=\"col-md-4 label-control\"></label>\r\n\r\n              <div class=\"col-md-8\">\r\n                <button class=\"btn btn-primary\" (click)=\"beginDispense('view-dispense-task-modal')\">\r\n                  <i class=\"fas fa-fill-drip\"></i>\r\n                  <span *ngIf=\"inProgress\">In Progress</span>\r\n                  <span *ngIf=\"! inProgress\">Dispense</span>\r\n                </button>\r\n              </div>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<pp-modal id=\"view-dispense-task-modal\" class=\"modal dispense-job-status-modal\" [style]=\"{'display': 'none'}\">\r\n  <div class=\"modal-content\">\r\n    <ng-container *ngIf=\"errorMessage == null || errorMessage == ''\">\r\n      <div class=\"modal-header\">\r\n        <h5 class=\"modal-title\">Dispense Job Status</h5>\r\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\" (click)=\"closeModal('view-dispense-task-modal')\">\r\n          <span aria-hidden=\"true\">×</span>\r\n        </button>\r\n      </div>\r\n\r\n      <div class=\"modal-body\">\r\n        <ng-container *ngIf=\"dbItem != null && currentTask != null && currentTask.taskId != null && currentTask.taskId > 0\">\r\n          <app-viewdispensetask [dispenseTask]=\"currentTask\" [dispenseStepTask]=\"currentTaskStep\" [listColorantUsed]=\"listColorant\" [maxColorQuantity]=\"maxColorQuantity\"></app-viewdispensetask>\r\n        </ng-container>\r\n      </div>\r\n    </ng-container>\r\n\r\n    <div class=\"modal-footer\">\r\n      <button type=\"button\" class=\"btn btn-primary\" (click)=\"closeModal('view-dispense-task-modal')\">Hide</button>\r\n    </div>\r\n  </div>\r\n</pp-modal>\r\n\r\n<pp-modal id=\"print-formula-modal\" class=\"modal print-formula-modal\" [style]=\"{'display': 'none'}\">\r\n  <div class=\"modal-content\">\r\n    <div class=\"modal-header\">\r\n      <h5 class=\"modal-title\">Print</h5>\r\n      <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\" (click)=\"closeModal('print-formula-modal')\">\r\n        <span aria-hidden=\"true\">×</span>\r\n      </button>\r\n    </div>\r\n\r\n    <div class=\"modal-body\">\r\n      <div class=\"row text-center\" *ngIf=\"dbItem != null\">\r\n        <div class=\"col-md-12 formula-color-info\"><h3>{{dbItem.formula.formulaCode}}</h3></div>\r\n        <div class=\"col-md-12 collection-info\"><h4>{{dbItem.formula.collection.collectionName}}</h4></div>\r\n        <div class=\"col-md-12 shop-info\"><h5>Paintshop \"Demo\"</h5></div>\r\n        <div class=\"col-md-12 street-info\"><h5>Demostreet 1</h5></div>\r\n        <div class=\"col-md-12 ville-info\"><h5>Demo ville</h5></div>\r\n        <div class=\"col-md-12 substrate-info\"><p>Substrate recommendation Universal primer Grey</p></div>\r\n        <div class=\"col-md-12 bar-code-info \"><p><span class=\"bar-code-sample\"></span></p></div>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"modal-footer\">\r\n      <button type=\"button\" class=\"btn btn-default\" (click)=\"closeDispenseModel()\">Close</button>\r\n      <button type=\"button\" class=\"btn btn-primary\" (click)=\"closeDispenseModel()\">Print</button>\r\n    </div>\r\n  </div>\r\n</pp-modal>\r\n\r\n"
 
 /***/ }),
 
@@ -844,7 +846,7 @@ module.exports = "<div class=\"block-header\">\r\n  <h1>Standard Formula</h1>\r\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".color-bar {\n  width: 100%;\n  display: inline-block;\n  position: relative;\n  height: 1em; }\n  .color-bar .color-select {\n    display: inline-block;\n    position: absolute;\n    top: 0px;\n    left: 0px;\n    bottom: 0px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9mb3JtdWxhL3ZpZXdmb3JtdWxhL0c6XFxXb3Jrc3BhY2VcXGNsaWVudHZpZXRwb3dlci9zcmNcXGFwcFxcY29tcG9uZW50c1xcZm9ybXVsYVxcdmlld2Zvcm11bGFcXHZpZXdmb3JtdWxhLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsWUFBVztFQUNYLHNCQUFxQjtFQUNyQixtQkFBa0I7RUFDbEIsWUFBVyxFQVNaO0VBYkQ7SUFPSSxzQkFBcUI7SUFDckIsbUJBQWtCO0lBQ2xCLFNBQVE7SUFDUixVQUFTO0lBQ1QsWUFBVyxFQUNaIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50cy9mb3JtdWxhL3ZpZXdmb3JtdWxhL3ZpZXdmb3JtdWxhLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmNvbG9yLWJhcntcclxuICB3aWR0aDogMTAwJTtcclxuICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XHJcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG4gIGhlaWdodDogMWVtO1xyXG5cclxuICAuY29sb3Itc2VsZWN0e1xyXG4gICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgdG9wOiAwcHg7XHJcbiAgICBsZWZ0OiAwcHg7XHJcbiAgICBib3R0b206IDBweDtcclxuICB9XHJcbn1cclxuIl19 */"
+module.exports = ".color-bar {\n  width: 100%;\n  display: inline-block;\n  position: relative;\n  height: 1em; }\n  .color-bar .color-select {\n    display: inline-block;\n    position: absolute;\n    top: 0px;\n    left: 0px;\n    bottom: 0px; }\n  .text-error {\n  color: red; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9mb3JtdWxhL3ZpZXdmb3JtdWxhL0c6XFxXb3Jrc3BhY2VcXGNsaWVudHZpZXRwb3dlci9zcmNcXGFwcFxcY29tcG9uZW50c1xcZm9ybXVsYVxcdmlld2Zvcm11bGFcXHZpZXdmb3JtdWxhLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsWUFBVztFQUNYLHNCQUFxQjtFQUNyQixtQkFBa0I7RUFDbEIsWUFBVyxFQVNaO0VBYkQ7SUFPSSxzQkFBcUI7SUFDckIsbUJBQWtCO0lBQ2xCLFNBQVE7SUFDUixVQUFTO0lBQ1QsWUFBVyxFQUNaO0VBRUg7RUFDRSxXQUFVLEVBQ1giLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL2Zvcm11bGEvdmlld2Zvcm11bGEvdmlld2Zvcm11bGEuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY29sb3ItYmFye1xyXG4gIHdpZHRoOiAxMDAlO1xyXG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcclxuICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbiAgaGVpZ2h0OiAxZW07XHJcblxyXG4gIC5jb2xvci1zZWxlY3R7XHJcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XHJcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICB0b3A6IDBweDtcclxuICAgIGxlZnQ6IDBweDtcclxuICAgIGJvdHRvbTogMHB4O1xyXG4gIH1cclxufVxyXG4udGV4dC1lcnJvcntcclxuICBjb2xvcjogcmVkO1xyXG59XHJcbiJdfQ== */"
 
 /***/ }),
 
@@ -876,6 +878,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -927,6 +930,9 @@ var ViewFormulaComponent = /** @class */ (function () {
             _this.getRelativeData();
         });
     };
+    ViewFormulaComponent.prototype.roundNumber = function (num) {
+        return Math.round(num * 100) / 100;
+    };
     ViewFormulaComponent.prototype.getRelativeData = function () {
         var _this = this;
         if (this.dbItem != null) {
@@ -969,52 +975,59 @@ var ViewFormulaComponent = /** @class */ (function () {
     };
     ViewFormulaComponent.prototype.beginDispense = function (modalId) {
         var _this = this;
-        // create when not current task in process or task is done !!!!;
-        if (this.currentTask == null || this.currentTask.status === _services_dispensetask_dispensetask_service__WEBPACK_IMPORTED_MODULE_5__["MAP_DISPENSE_TASK_STATE"].DONE) {
-            var listPumpingTask = [];
-            for (var _i = 0, _a = this.listColorant; _i < _a.length; _i++) {
-                var colorant = _a[_i];
-                var prepare_t = new _models_dispense_task_model__WEBPACK_IMPORTED_MODULE_4__["DispenseTaskStepModel"](_services_dispensetask_dispensetask_service__WEBPACK_IMPORTED_MODULE_5__["MAP_DISPENSE_TASK_STEP_TYPE"].PREPARE, null, function (newDispenseTask, newDispenseStepTask) {
-                    _this.updateDispenseTaskData(newDispenseTask, newDispenseStepTask);
-                });
-                var pumping_t = new _models_dispense_task_model__WEBPACK_IMPORTED_MODULE_4__["DispenseTaskStepModel"](_services_dispensetask_dispensetask_service__WEBPACK_IMPORTED_MODULE_5__["MAP_DISPENSE_TASK_STEP_TYPE"].PUMPING, new _models_dispense_task_model__WEBPACK_IMPORTED_MODULE_4__["DispenseStepDataModel"](colorant.colorant, colorant.quantity * this.canSize), function (newDispenseTask, newDispenseStepTask) {
-                    _this.updateDispenseTaskData(newDispenseTask, newDispenseStepTask);
-                });
-                listPumpingTask.push(prepare_t);
-                listPumpingTask.push(pumping_t);
-            }
-            var stop_t = new _models_dispense_task_model__WEBPACK_IMPORTED_MODULE_4__["DispenseTaskStepModel"](_services_dispensetask_dispensetask_service__WEBPACK_IMPORTED_MODULE_5__["MAP_DISPENSE_TASK_STEP_TYPE"].FINISHED, null, function (newDispenseTask, newDispenseStepTask) {
-                _this.updateDispenseTaskData(newDispenseTask, newDispenseStepTask);
-                _this.numberOfCan -= 1;
-                if (_this.numberOfCan > 0) {
-                    _this.beginDispense(modalId);
+        this.machineService.validateQuantityColourant(this.canSize, this.listFormulaColorant, this.dbItem.formula).subscribe(function (res) {
+            if (res.length === 0) {
+                // create when not current task in process or task is done !!!!;
+                if (_this.currentTask == null || _this.currentTask.status === _models_dispense_task_model__WEBPACK_IMPORTED_MODULE_4__["MAP_DISPENSE_TASK_STATE"].DONE) {
+                    var listPumpingTask = [];
+                    for (var _i = 0, _a = _this.listColorant; _i < _a.length; _i++) {
+                        var colorant = _a[_i];
+                        var prepare_t = new _models_dispense_task_model__WEBPACK_IMPORTED_MODULE_4__["DispenseTaskStepModel"](_models_dispense_task_model__WEBPACK_IMPORTED_MODULE_4__["MAP_DISPENSE_TASK_STEP_TYPE"].PREPARE, null, function (newDispenseTask, newDispenseStepTask) {
+                            _this.updateDispenseTaskData(newDispenseTask, newDispenseStepTask);
+                        });
+                        var pumping_t = new _models_dispense_task_model__WEBPACK_IMPORTED_MODULE_4__["DispenseTaskStepModel"](_models_dispense_task_model__WEBPACK_IMPORTED_MODULE_4__["MAP_DISPENSE_TASK_STEP_TYPE"].PUMPING, new _models_dispense_task_model__WEBPACK_IMPORTED_MODULE_4__["DispenseStepDataModel"](colorant.colorant, colorant.quantity * _this.canSize), function (newDispenseTask, newDispenseStepTask) {
+                            _this.updateDispenseTaskData(newDispenseTask, newDispenseStepTask);
+                        });
+                        listPumpingTask.push(prepare_t);
+                        listPumpingTask.push(pumping_t);
+                    }
+                    var stop_t = new _models_dispense_task_model__WEBPACK_IMPORTED_MODULE_4__["DispenseTaskStepModel"](_models_dispense_task_model__WEBPACK_IMPORTED_MODULE_4__["MAP_DISPENSE_TASK_STEP_TYPE"].FINISHED, null, function (newDispenseTask, newDispenseStepTask) {
+                        _this.updateDispenseTaskData(newDispenseTask, newDispenseStepTask);
+                        _this.numberOfCan -= 1;
+                        if (_this.numberOfCan > 0) {
+                            _this.beginDispense(modalId);
+                        }
+                        setTimeout(function () {
+                            _this.openModal('print-formula-modal');
+                        }, 500);
+                    });
+                    listPumpingTask.push(stop_t);
+                    _this.currentTask = new _models_dispense_task_model__WEBPACK_IMPORTED_MODULE_4__["DispenseTaskModel"]('Dispense', listPumpingTask, new _models_dispense_task_model__WEBPACK_IMPORTED_MODULE_4__["DispenseDataModel"](_this.dbItem, _this.selectProductBase, _this.canSize, _this.numberOfCan), null);
+                    _this.machineService.recordDispenseFormulaProductBase(_models_dispense_task_model__WEBPACK_IMPORTED_MODULE_4__["MAP_DISPENSE_TASK_STATE"].IN_PROGRESS, _this.currentTask.taskId, _this.currentTask.taskData.formulaProductBase, _this.currentTask.taskData.canSize).subscribe(function (data) {
+                        var item = _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_7__["default"].convertToDispenseFormulaProductBase(data);
+                        _this.currentTask.taskId = item.machineFormulaProductBaseId;
+                        _this.currentTask.status = item.status;
+                        _this.currentTask.startTime = item.createdDate;
+                        _this.dispenseTaskService.runDispenseTask(_this.currentTask);
+                    });
                 }
                 setTimeout(function () {
-                    _this.openModal('print-formula-modal');
-                }, 500);
-            });
-            listPumpingTask.push(stop_t);
-            this.currentTask = new _models_dispense_task_model__WEBPACK_IMPORTED_MODULE_4__["DispenseTaskModel"]('Dispense', listPumpingTask, new _models_dispense_task_model__WEBPACK_IMPORTED_MODULE_4__["DispenseDataModel"](this.dbItem, this.selectProductBase, this.canSize, this.numberOfCan), null);
-            // this.machineService.validateDispenseTaskBeforeProcess(this.listFormulaColorant, this.currentTask.taskData.canSize)
-            //   .subscribe((data: any) => {
-            //   console.log(data);
-            // });
-            this.machineService.recordDispenseFormulaProductBase(_services_dispensetask_dispensetask_service__WEBPACK_IMPORTED_MODULE_5__["MAP_DISPENSE_TASK_STATE"].IN_PROGRESS, this.currentTask.taskId, this.currentTask.taskData.formulaProductBase, this.currentTask.taskData.canSize).subscribe(function (data) {
-                var item = _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_7__["default"].convertToDispenseFormulaProductBase(data);
-                _this.currentTask.taskId = item.machineFormulaProductBaseId;
-                _this.currentTask.status = item.status;
-                _this.currentTask.startTime = item.createdDate;
-                _this.dispenseTaskService.runDispenseTask(_this.currentTask);
-            });
-        }
-        setTimeout(function () {
-            _this.openModal(modalId);
-        }, 200);
+                    _this.openModal(modalId);
+                }, 200);
+            }
+            else {
+                _this.errorMessage = 'Not enough colorant quantity to dispense.';
+                _this.currentTask == null;
+            }
+        });
+    };
+    ViewFormulaComponent.prototype.clearErrorMessage = function () {
+        this.errorMessage = null;
     };
     ViewFormulaComponent.prototype.updateDispenseTaskData = function (newDispenseTask, newDispenseStepTask) {
         this.currentTask = newDispenseTask;
         this.currentTaskStep = newDispenseStepTask;
-        if (this.currentTask.status === _services_dispensetask_dispensetask_service__WEBPACK_IMPORTED_MODULE_5__["MAP_DISPENSE_TASK_STATE"].IN_PROGRESS) {
+        if (this.currentTask.status === _models_dispense_task_model__WEBPACK_IMPORTED_MODULE_4__["MAP_DISPENSE_TASK_STATE"].IN_PROGRESS) {
             this.inProgress = true;
         }
     };
@@ -1995,7 +2008,7 @@ var RegisterComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"block-header\">\n  <h1>Machine Setting</h1>\n</div>\n\n<div class=\"row\">\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n    <div class=\"card\">\n      <div class=\"card-header\">\n        Colorant Machine {{ machine.name + '(' + machine.code + ')'}}\n      </div>\n\n      <div class=\"card-body\">\n        <div class=\"machine-colourant-group\">\n          <div class=\"machine-background\">\n            <span class=\"machine-colourant-max-range\" [ngStyle]=\"{'height': '100%'}\"><span class=\"step-label\">{{maxQuantity}}</span></span>\n            <span class=\"machine-colourant-warning-range\" [ngStyle]=\"{'height': (minQuantity / maxQuantity) * 100 + '%'}\"><span class=\"step-label\">{{minQuantity}}</span></span>\n            <span class=\"machine-colourant-min-range\" [ngStyle]=\"{'height': '0%'}\"><span class=\"step-label\">0</span></span>\n          </div>\n\n          <ng-container *ngFor=\"let machineColourant of listMachineColourant\">\n            <div class=\"machine-colourant-item\" (click)=\"selectMachineColourant(machineColourant.colourant.colourantId)\">\n              <span *ngIf=\"selectedMachineColourant != null && selectedMachineColourant.colourant.colourantId == machineColourant.colourant.colourantId\" class=\"selected-colourant-bgr\"></span>\n              <span class=\"machine-colourant-bgr\">\n                <span class=\"machine-colourant-current-range\" [ngStyle]=\"{'height': (machineColourant.quantity / maxQuantity) * 100 + '%', 'background-color': machineColourant.colourant.rbgHex, 'border': '1px solid #' + machineColourant.colourant.rbgHex}\"></span>\n              </span>\n              <span class=\"colourant-name\">{{machineColourant.colourant.colourantName}}</span>\n              <span class=\"colourant-code\">{{machineColourant.colourant.colourantCode}}</span>\n            </div>\n          </ng-container>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n\n<ng-container *ngIf=\"selectedMachineColourant != null\">\n  <pp-modal id=\"view-selected-colourant-machine-modal\" class=\"modal machine-colourant-single-item\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <h5 class=\"modal-title\">Canister Refill</h5>\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\" (click)=\"closeModal('view-selected-colourant-machine-modal')\">\n          <span aria-hidden=\"true\">×</span>\n        </button>\n      </div>\n\n      <div class=\"modal-body\">\n        <div class=\"row\">\n          <div class=\"col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n            <div class=\"machine-colorant-slider-group\">\n              <mat-slider class=\"machine-colourant-slider\" [tickInterval]=\"maxQuantity / 20\" [max]=\"maxQuantity\" [min]=\"0\" [step]=\"1\" [(ngModel)]=\"updateAmount\" [vertical]=\"true\" [thumbLabel]=\"true\" (change)=\"updateAmountBySlider()\"></mat-slider>\n            </div>\n          </div>\n\n          <div class=\"col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n            <div class=\"machine-colourant-group\">\n              <div class=\"machine-background\">\n                <span class=\"machine-colourant-max-range\" [ngStyle]=\"{'height': '100%'}\"><span class=\"step-label\">{{maxQuantity}}</span></span>\n                <span class=\"machine-colourant-warning-range\" [ngStyle]=\"{'height': (minQuantity / maxQuantity) * 100 + '%'}\"><span class=\"step-label\">{{minQuantity}}</span></span>\n                <span class=\"machine-colourant-min-range\" [ngStyle]=\"{'height': '0%'}\"><span class=\"step-label\">0</span></span>\n              </div>\n              <div class=\"machine-colourant-item\">\n                <span class=\"machine-colourant-bgr\">\n                  <span class=\"machine-colourant-update-range\"  [ngStyle]=\"{'height': ((selectedMachineColourant.quantity + addedAmount) / maxQuantity) * 100 + '%', 'background-color': selectedMachineColourant.colourant.rbgHex, 'border': '1px solid #' + selectedMachineColourant.colourant.rbgHex}\"></span>\n                  <span class=\"machine-colourant-current-range\" [ngStyle]=\"{'height': (selectedMachineColourant.quantity / maxQuantity) * 100 + '%', 'background-color': selectedMachineColourant.colourant.rbgHex, 'border': '1px solid #' + selectedMachineColourant.colourant.rbgHex}\"></span>\n                </span>\n                <span class=\"colourant-name\">{{selectedMachineColourant.colourant.colourantName}}</span>\n                <span class=\"colourant-code\">{{selectedMachineColourant.colourant.colourantCode}}</span>\n              </div>\n            </div>\n          </div>\n\n          <div class=\"col-lg-8 col-md-8 col-sm-6 col-xs-6\">\n            <div class=\"machine-colourant-info form-detail\">\n              <div class=\"row form-group\">\n                <label class=\"col-md-4 label-control\">Amount:</label>\n                <div class=\"col-md-6\">\n                  <div class=\"input-group\">\n                    <!--<input type=\"number\" [(ngModel)]=\"addedAmount\" class=\"form-control\" required=\"required\" [ngModelOptions]=\"{standalone: true}\" (change)=\"updateAddedAmount('amount')\">-->\n                    <input type=\"number\" [(ngModel)]=\"addedAmount\" class=\"form-control\" required=\"required\" [ngModelOptions]=\"{standalone: true}\" (change)=\"updateAddedAmount('amount')\">\n                    <div class=\"input-group-append\">\n                      <span class=\"input-group-text\">ml</span>\n                    </div>\n                  </div>\n                </div>\n              </div>\n\n              <!--<div class=\"row form-group\">-->\n                <!--<label class=\"col-md-4 label-control\">Refill Factor:</label>-->\n                <!--<div class=\"col-md-6\">-->\n                  <!--<div class=\"input-group\">-->\n                    <!--<input type=\"number\" [(ngModel)]=\"addedAmountPercent\" class=\"form-control\" required=\"required\" [ngModelOptions]=\"{standalone: true}\" (change)=\"updateAddedAmount('percent')\">-->\n                    <!--<div class=\"input-group-append\">-->\n                      <!--<span class=\"input-group-text\">%</span>-->\n                    <!--</div>-->\n                  <!--</div>-->\n                <!--</div>-->\n              <!--</div>-->\n\n              <div class=\"row form-group\">\n                <label class=\"col-md-4 label-control\">\n\n                </label>\n                <div class=\"col-md-8\">\n                  <button class=\"btn btn-dark\" (click)=\"fillByPercent(100);\">Fill to 100%</button>\n                </div>\n              </div>\n\n              <div class=\"row form-group\">\n                <label class=\"col-md-4 label-control\">Canister</label>\n                <div class=\"col-md-8\">\n                  {{selectedMachineColourant.colourant.colourantId}}\n                </div>\n              </div>\n\n              <div class=\"row form-group\">\n                <label class=\"col-md-4 label-control\">Component</label>\n                <div class=\"col-md-8\">\n                  {{selectedMachineColourant.colourant.colourantCode}}\n                </div>\n              </div>\n\n              <div class=\"row form-group\">\n                <label class=\"col-md-4 label-control\">Current</label>\n                <div class=\"col-md-8\">\n                  {{selectedMachineColourant.quantity / 1000}} L\n                </div>\n              </div>\n\n              <div class=\"row form-group\">\n                <label class=\"col-md-4 label-control\">Maximum</label>\n                <div class=\"col-md-8\">\n                  {{maxQuantity / 1000}} L\n                </div>\n              </div>\n\n              <div class=\"row form-group\">\n                <label class=\"col-md-4 label-control\">Minimum</label>\n                <div class=\"col-md-8\">\n                  {{minQuantity / 1000}} L\n                </div>\n              </div>\n\n              <div class=\"row form-group\">\n                <label class=\"col-md-4 label-control\">Density</label>\n                <div class=\"col-md-8\">\n                  {{selectedMachineColourant.colourant.density}} kg/L\n                </div>\n              </div>\n\n              <div class=\"row form-group\">\n                View Usage >>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n\n      <div class=\"modal-footer\">\n        <button type=\"button\" class=\"btn btn-success\" (click)=\"updateAndSaving('view-selected-colourant-machine-modal')\">Update</button>\n        <button type=\"button\" class=\"btn btn-default\" (click)=\"closeModal('view-selected-colourant-machine-modal')\">Cancel</button>\n      </div>\n    </div>\n  </pp-modal>\n</ng-container>\n"
+module.exports = "<div class=\"block-header\">\n  <h1>Machine Setting</h1>\n</div>\n\n<div class=\"row\" *ngIf=\"machine != null\">\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n    <div class=\"card\">\n      <div class=\"card-header\">\n        Colorant Machine {{ machine.name + '(' + machine.code + ')'}}\n\n        <ng-container *ngIf=\"! openSetting\">\n          <button class=\"close\" (click)=\"openSettingMachine()\"><i class=\"fas fa-sliders-h\"></i></button>\n        </ng-container>\n\n        <ng-container *ngIf=\"openSetting\">\n          <button class=\"close\" (click)=\"closeSettingMachine()\"><i class=\"fas fa-window-close\"></i></button>\n        </ng-container>\n      </div>\n\n      <div class=\"card-body\">\n        <div class=\"machine-colourant-group\" [attr.actionType]=\"openSetting ? 'open-setting': ''\">\n          <div class=\"machine-background\">\n            <ng-container *ngIf=\"openSetting == true\">\n              <div class=\"machine-background-setting\">\n                <mat-slider class=\"machine-range-slider\" [tickInterval]=\"100 / 20\" [max]=\"maxQuantity\" [min]=\"0\" [step]=\"50\" [(ngModel)]=\"warningQuantity\" [vertical]=\"true\" [thumbLabel]=\"true\" (change)=\"updateMachineDataSlider('warning')\"></mat-slider>\n                <mat-slider class=\"machine-range-slider\" [tickInterval]=\"100 / 20\" [max]=\"maxQuantity\" [min]=\"0\" [step]=\"50\" [(ngModel)]=\"minQuantity\" [vertical]=\"true\" [thumbLabel]=\"true\" (change)=\"updateMachineDataSlider('min')\"></mat-slider>\n              </div>\n            </ng-container>\n\n            <span class=\"machine-colourant-max-range\" [ngStyle]=\"{'height': '100%'}\"><span class=\"step-label\">{{maxQuantity}}</span></span>\n            <span class=\"machine-colourant-warning-range\" [ngStyle]=\"{'height': (warningQuantity / maxQuantity) * 100 + '%'}\"><span class=\"step-label\">{{warningQuantity}}</span></span>\n            <span class=\"machine-colourant-min-range\" [ngStyle]=\"{'height': (minQuantity / maxQuantity) * 100 + '%'}\"><span class=\"step-label\">{{minQuantity}}</span></span>\n            <span class=\"machine-colourant-zero-range\" [ngStyle]=\"{'height': '0%'}\"><span class=\"step-label\">0</span></span>\n          </div>\n\n          <ng-container *ngFor=\"let machineColourant of listMachineColourant\">\n            <div class=\"machine-colourant-item\" (click)=\"selectMachineColourant(machineColourant.colourant.colourantId)\">\n              <span *ngIf=\"selectedMachineColourant != null && selectedMachineColourant.colourant.colourantId == machineColourant.colourant.colourantId\" class=\"selected-colourant-bgr\"></span>\n              <span class=\"machine-colourant-bgr\">\n                <span class=\"machine-colourant-current-range\" [ngStyle]=\"{'height': (machineColourant.quantity / maxQuantity) * 100 + '%', 'background-color': machineColourant.colourant.rbgHex, 'border': '1px solid #' + machineColourant.colourant.rbgHex}\"></span>\n              </span>\n              <span class=\"colourant-name\">{{machineColourant.colourant.colourantName}}</span>\n              <span class=\"colourant-code\">{{machineColourant.colourant.colourantCode}}</span>\n            </div>\n          </ng-container>\n        </div>\n      </div>\n      <ng-container *ngIf=\"minQuantity != initMinQuantity || warningQuantity != initWarningQuantity\">\n        <div class=\"card-footer\">\n          <button class=\"btn btn-primary\" (click)=\"updateSettingMachine()\">Update</button>\n        </div>\n      </ng-container>\n    </div>\n  </div>\n</div>\n\n<ng-container *ngIf=\"errorType != null\">\n  <pp-modal id=\"warning-colourants-machine-modal\" class=\"modal warning-colourants-machine-modal\">\n    <div class=\"modal-content\" [attr.type]=\"errorType\" >\n      <div class=\"modal-header\">\n        <h5 class=\"modal-title\">{{errorType}}</h5>\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\" (click)=\"closeModal('warning-colourants-machine-modal')\">\n          <span aria-hidden=\"true\">×</span>\n        </button>\n      </div>\n\n      <div class=\"modal-body\">\n        {{errorMessage}}\n      </div>\n\n      <div class=\"modal-footer\">\n        <button type=\"button\" class=\"btn btn-primary\" (click)=\"closeModal('warning-colourants-machine-modal')\">Close</button>\n      </div>\n    </div>\n  </pp-modal>\n</ng-container>\n\n\n\n<ng-container *ngIf=\"selectedMachineColourant != null\">\n  <pp-modal id=\"view-selected-colourant-machine-modal\" class=\"modal machine-colourant-single-item\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <h5 class=\"modal-title\">Canister Refill</h5>\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\" (click)=\"closeModal('view-selected-colourant-machine-modal')\">\n          <span aria-hidden=\"true\">×</span>\n        </button>\n      </div>\n\n      <div class=\"modal-body\">\n        <div class=\"row\">\n          <div class=\"col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n            <div class=\"machine-colorant-slider-group\">\n              <mat-slider class=\"machine-colourant-slider\" [tickInterval]=\"maxQuantity / 20\" [max]=\"maxQuantity\" [min]=\"0\" [step]=\"1\" [(ngModel)]=\"updateAmount\" [vertical]=\"true\" [thumbLabel]=\"true\" (change)=\"updateAmountBySlider()\"></mat-slider>\n            </div>\n          </div>\n\n          <div class=\"col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n            <div class=\"machine-colourant-group\">\n              <div class=\"machine-background\">\n                <span class=\"machine-colourant-max-range\" [ngStyle]=\"{'height': '100%'}\"><span class=\"step-label\">{{maxQuantity}}</span></span>\n                <span class=\"machine-colourant-warning-range\" [ngStyle]=\"{'height': (minQuantity / maxQuantity) * 100 + '%'}\"><span class=\"step-label\">{{minQuantity}}</span></span>\n                <span class=\"machine-colourant-min-range\" [ngStyle]=\"{'height': '0%'}\"><span class=\"step-label\">0</span></span>\n              </div>\n              <div class=\"machine-colourant-item\">\n                <span class=\"machine-colourant-bgr\">\n                  <span class=\"machine-colourant-update-range\"  [ngStyle]=\"{'height': ((selectedMachineColourant.quantity + addedAmount) / maxQuantity) * 100 + '%', 'background-color': selectedMachineColourant.colourant.rbgHex, 'border': '1px solid #' + selectedMachineColourant.colourant.rbgHex}\"></span>\n                  <span class=\"machine-colourant-current-range\" [ngStyle]=\"{'height': (selectedMachineColourant.quantity / maxQuantity) * 100 + '%', 'background-color': selectedMachineColourant.colourant.rbgHex, 'border': '1px solid #' + selectedMachineColourant.colourant.rbgHex}\"></span>\n                </span>\n                <span class=\"colourant-name\">{{selectedMachineColourant.colourant.colourantName}}</span>\n                <span class=\"colourant-code\">{{selectedMachineColourant.colourant.colourantCode}}</span>\n              </div>\n            </div>\n          </div>\n\n          <div class=\"col-lg-8 col-md-8 col-sm-6 col-xs-6\">\n            <div class=\"machine-colourant-info form-detail\">\n              <div class=\"row form-group\">\n                <label class=\"col-md-4 label-control\">Amount:</label>\n                <div class=\"col-md-6\">\n                  <div class=\"input-group\">\n                    <!--<input type=\"number\" [(ngModel)]=\"addedAmount\" class=\"form-control\" required=\"required\" [ngModelOptions]=\"{standalone: true}\" (change)=\"updateAddedAmount('amount')\">-->\n                    <input type=\"number\" [(ngModel)]=\"addedAmount\" class=\"form-control\" required=\"required\" [ngModelOptions]=\"{standalone: true}\" (change)=\"updateAddedAmount('amount')\">\n                    <div class=\"input-group-append\">\n                      <span class=\"input-group-text\">ml</span>\n                    </div>\n                  </div>\n                </div>\n              </div>\n\n              <div class=\"row form-group\">\n                <label class=\"col-md-4 label-control\">\n\n                </label>\n                <div class=\"col-md-8\">\n                  <button class=\"btn btn-dark\" (click)=\"fillByPercent(100);\">Fill to 100%</button>\n                </div>\n              </div>\n\n              <div class=\"row form-group\">\n                <label class=\"col-md-4 label-control\">Canister</label>\n                <div class=\"col-md-8\">\n                  {{selectedMachineColourant.colourant.colourantId}}\n                </div>\n              </div>\n\n              <div class=\"row form-group\">\n                <label class=\"col-md-4 label-control\">Component</label>\n                <div class=\"col-md-8\">\n                  {{selectedMachineColourant.colourant.colourantCode}}\n                </div>\n              </div>\n\n              <div class=\"row form-group\">\n                <label class=\"col-md-4 label-control\">Current</label>\n                <div class=\"col-md-8\">\n                  {{selectedMachineColourant.quantity / 1000}} L\n                </div>\n              </div>\n\n              <div class=\"row form-group\">\n                <label class=\"col-md-4 label-control\">Maximum</label>\n                <div class=\"col-md-8\">\n                  {{maxQuantity / 1000}} L\n                </div>\n              </div>\n\n              <div class=\"row form-group\">\n                <label class=\"col-md-4 label-control\">Minimum</label>\n                <div class=\"col-md-8\">\n                  {{minQuantity / 1000}} L\n                </div>\n              </div>\n\n              <div class=\"row form-group\">\n                <label class=\"col-md-4 label-control\">Density</label>\n                <div class=\"col-md-8\">\n                  {{selectedMachineColourant.colourant.density}} kg/L\n                </div>\n              </div>\n\n              <div class=\"row form-group\">\n                View Usage >>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n\n      <div class=\"modal-footer\">\n        <button type=\"button\" class=\"btn btn-success\" (click)=\"updateAndSaving('view-selected-colourant-machine-modal')\">Update</button>\n        <button type=\"button\" class=\"btn btn-default\" (click)=\"closeModal('view-selected-colourant-machine-modal')\">Cancel</button>\n      </div>\n    </div>\n  </pp-modal>\n</ng-container>\n"
 
 /***/ }),
 
@@ -2006,7 +2019,7 @@ module.exports = "<div class=\"block-header\">\n  <h1>Machine Setting</h1>\n</di
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".machine-colourant-group {\n  margin: 30px 10px 50px 50px;\n  position: relative;\n  display: flex; }\n\n.machine-colourant-single-item .machine-colourant-group {\n  margin: 0px; }\n\n.machine-colourant-single-item .machine-colourant-item {\n  min-width: 60px; }\n\n.machine-colourant-single-item .machine-colourant-min-range .step-label,\n.machine-colourant-single-item .machine-colourant-warning-range .step-label,\n.machine-colourant-single-item .machine-colourant-max-range .step-label {\n  display: none; }\n\n.machine-background {\n  position: absolute;\n  top: 0px;\n  left: 0px;\n  bottom: 0px;\n  right: 0px; }\n\n.machine-background .machine-colourant-min-range,\n  .machine-background .machine-colourant-warning-range,\n  .machine-background .machine-colourant-max-range {\n    width: 100%;\n    position: absolute;\n    left: 0px;\n    right: 0px;\n    bottom: 0px;\n    opacity: 0.5; }\n\n.machine-background .machine-colourant-min-range .step-label,\n    .machine-background .machine-colourant-warning-range .step-label,\n    .machine-background .machine-colourant-max-range .step-label {\n      position: absolute;\n      top: 0px;\n      left: -5px;\n      -webkit-transform: translate(-100%, -50%);\n      transform: translate(-100%, -50%); }\n\n.machine-background .machine-colourant-warning-range {\n    border-top: 1px dashed darkorange; }\n\n.machine-background .machine-colourant-warning-range .step-label {\n      color: darkorange; }\n\n.machine-background .machine-colourant-min-range {\n    border-top: 1px dashed red; }\n\n.machine-background .machine-colourant-min-range .step-label {\n      color: red; }\n\n.machine-background .machine-colourant-max-range {\n    border-top: 1px dashed green; }\n\n.machine-background .machine-colourant-max-range .step-label {\n      color: green; }\n\n.machine-colorant-slider-group {\n  padding-left: 20px; }\n\n.machine-colorant-slider-group .machine-colourant-slider {\n    height: 416px;\n    margin-top: -8px;\n    padding: 8px; }\n\n.machine-colourant-item {\n  width: 6.25%;\n  display: inline-block;\n  height: 400px;\n  padding-left: 5px;\n  padding-right: 5px;\n  position: relative; }\n\n.machine-colourant-item .machine-colourant-bgr {\n    position: absolute;\n    top: 0px;\n    bottom: 0px;\n    left: 15px;\n    right: 15px;\n    border: 1px solid #333333; }\n\n.machine-colourant-item .machine-colourant-bgr .machine-colourant-update-range,\n    .machine-colourant-item .machine-colourant-bgr .machine-colourant-current-range {\n      position: absolute;\n      display: inline-block;\n      left: 0px;\n      right: 0px;\n      bottom: 0px;\n      border-top: 1px solid #000000; }\n\n.machine-colourant-item .machine-colourant-bgr .machine-colourant-update-range {\n      opacity: 0.5; }\n\n.machine-colourant-item .selected-colourant-bgr {\n    position: absolute;\n    outline: 2px solid #00417b;\n    top: -15px;\n    left: 0px;\n    right: 0px;\n    bottom: -15px; }\n\n.machine-colourant-item .colourant-name {\n    position: absolute;\n    width: 100%;\n    display: inline-block;\n    -webkit-transform: rotate(-90deg);\n            transform: rotate(-90deg);\n    -webkit-transform-origin: left center;\n            transform-origin: left center;\n    left: 50%;\n    bottom: 0px;\n    white-space: nowrap; }\n\n.machine-colourant-item .colourant-code {\n    font-weight: bold;\n    font-size: 120%;\n    position: absolute;\n    bottom: 0px;\n    left: 50%;\n    -webkit-transform: translate(-50%, 45px);\n            transform: translate(-50%, 45px); }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9tYWNoaW5lL21hY2hpbmVzZXR0aW5nL0c6XFxXb3Jrc3BhY2VcXGNsaWVudHZpZXRwb3dlci9zcmNcXGFwcFxcY29tcG9uZW50c1xcbWFjaGluZVxcbWFjaGluZXNldHRpbmdcXG1hY2hpbmVzZXR0aW5nLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsNEJBQTJCO0VBQzNCLG1CQUFrQjtFQUNsQixjQUFhLEVBQ2Q7O0FBR0Q7RUFFSSxZQUFXLEVBQ1o7O0FBSEg7RUFNSSxnQkFBZSxFQUNoQjs7QUFQSDs7O0VBYU0sY0FBYSxFQUNkOztBQUlMO0VBQ0UsbUJBQWtCO0VBQ2xCLFNBQVE7RUFDUixVQUFTO0VBQ1QsWUFBVztFQUNYLFdBQVUsRUE0Q1g7O0FBakREOzs7SUFVSSxZQUFXO0lBQ1gsbUJBQWtCO0lBQ2xCLFVBQVM7SUFDVCxXQUFVO0lBQ1YsWUFBVztJQUNYLGFBQVksRUFZYjs7QUEzQkg7OztNQWtCTSxtQkFBa0I7TUFDbEIsU0FBUTtNQUNSLFdBQVU7TUFDViwwQ0FBeUM7TUFJekMsa0NBQWlDLEVBQ2xDOztBQTFCTDtJQThCSSxrQ0FBaUMsRUFJbEM7O0FBbENIO01BZ0NNLGtCQUFpQixFQUNsQjs7QUFqQ0w7SUFxQ0ksMkJBQTBCLEVBSTNCOztBQXpDSDtNQXVDTSxXQUFVLEVBQ1g7O0FBeENMO0lBNENJLDZCQUE0QixFQUk3Qjs7QUFoREg7TUE4Q00sYUFBWSxFQUNiOztBQUlMO0VBQ0UsbUJBQWtCLEVBUW5COztBQVREO0lBS0ksY0FBbUM7SUFDbkMsaUJBQWlDO0lBQ2pDLGFBSm1CLEVBS3BCOztBQUdIO0VBQ0UsYUFBeUI7RUFDekIsc0JBQXFCO0VBQ3JCLGNBQWE7RUFDYixrQkFBaUI7RUFDakIsbUJBQWtCO0VBQ2xCLG1CQUFrQixFQWdFbkI7O0FBdEVEO0lBU0ksbUJBQWtCO0lBQ2xCLFNBQVE7SUFDUixZQUFXO0lBQ1gsV0FBVTtJQUNWLFlBQVc7SUFDWCwwQkFBeUIsRUEwQjFCOztBQXhDSDs7TUE2Qk0sbUJBQWtCO01BQ2xCLHNCQUFxQjtNQUNyQixVQUFTO01BQ1QsV0FBVTtNQUNWLFlBQVc7TUFDWCw4QkFBNkIsRUFDOUI7O0FBbkNMO01Bc0NNLGFBQVksRUFDYjs7QUF2Q0w7SUEyQ0ksbUJBQWtCO0lBQ2xCLDJCQUEwQjtJQUMxQixXQUFVO0lBQ1YsVUFBUztJQUNULFdBQVU7SUFDVixjQUFhLEVBQ2Q7O0FBakRIO0lBb0RJLG1CQUFrQjtJQUNsQixZQUFXO0lBQ1gsc0JBQXFCO0lBQ3JCLGtDQUF5QjtZQUF6QiwwQkFBeUI7SUFDekIsc0NBQTZCO1lBQTdCLDhCQUE2QjtJQUM3QixVQUFTO0lBQ1QsWUFBVztJQUNYLG9CQUFtQixFQUNwQjs7QUE1REg7SUErREksa0JBQWlCO0lBQ2pCLGdCQUFlO0lBQ2YsbUJBQWtCO0lBQ2xCLFlBQVc7SUFDWCxVQUFTO0lBQ1QseUNBQWdDO1lBQWhDLGlDQUFnQyxFQUNqQyIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvbWFjaGluZS9tYWNoaW5lc2V0dGluZy9tYWNoaW5lc2V0dGluZy5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5tYWNoaW5lLWNvbG91cmFudC1ncm91cHtcclxuICBtYXJnaW46IDMwcHggMTBweCA1MHB4IDUwcHg7XHJcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbn1cclxuXHJcblxyXG4ubWFjaGluZS1jb2xvdXJhbnQtc2luZ2xlLWl0ZW17XHJcbiAgLm1hY2hpbmUtY29sb3VyYW50LWdyb3Vwe1xyXG4gICAgbWFyZ2luOiAwcHg7XHJcbiAgfVxyXG5cclxuICAubWFjaGluZS1jb2xvdXJhbnQtaXRlbXtcclxuICAgIG1pbi13aWR0aDogNjBweDtcclxuICB9XHJcblxyXG4gIC5tYWNoaW5lLWNvbG91cmFudC1taW4tcmFuZ2UsXHJcbiAgLm1hY2hpbmUtY29sb3VyYW50LXdhcm5pbmctcmFuZ2UsXHJcbiAgLm1hY2hpbmUtY29sb3VyYW50LW1heC1yYW5nZXtcclxuICAgIC5zdGVwLWxhYmVse1xyXG4gICAgICBkaXNwbGF5OiBub25lO1xyXG4gICAgfVxyXG4gIH1cclxufVxyXG5cclxuLm1hY2hpbmUtYmFja2dyb3VuZHtcclxuICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgdG9wOiAwcHg7XHJcbiAgbGVmdDogMHB4O1xyXG4gIGJvdHRvbTogMHB4O1xyXG4gIHJpZ2h0OiAwcHg7XHJcblxyXG4gIC5tYWNoaW5lLWNvbG91cmFudC1taW4tcmFuZ2UsXHJcbiAgLm1hY2hpbmUtY29sb3VyYW50LXdhcm5pbmctcmFuZ2UsXHJcbiAgLm1hY2hpbmUtY29sb3VyYW50LW1heC1yYW5nZXtcclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgbGVmdDogMHB4O1xyXG4gICAgcmlnaHQ6IDBweDtcclxuICAgIGJvdHRvbTogMHB4O1xyXG4gICAgb3BhY2l0eTogMC41O1xyXG5cclxuICAgIC5zdGVwLWxhYmVse1xyXG4gICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICAgIHRvcDogMHB4O1xyXG4gICAgICBsZWZ0OiAtNXB4O1xyXG4gICAgICAtd2Via2l0LXRyYW5zZm9ybTogdHJhbnNsYXRlKC0xMDAlLCAtNTAlKTtcclxuICAgICAgLW1vei10cmFuc2Zvcm06IHRyYW5zbGF0ZSgtMTAwJSwgLTUwJSk7XHJcbiAgICAgIC1tcy10cmFuc2Zvcm06IHRyYW5zbGF0ZSgtMTAwJSwgLTUwJSk7XHJcbiAgICAgIC1vLXRyYW5zZm9ybTogdHJhbnNsYXRlKC0xMDAlLCAtNTAlKTtcclxuICAgICAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTEwMCUsIC01MCUpO1xyXG4gICAgfVxyXG4gIH1cclxuXHJcbiAgLm1hY2hpbmUtY29sb3VyYW50LXdhcm5pbmctcmFuZ2V7XHJcbiAgICBib3JkZXItdG9wOiAxcHggZGFzaGVkIGRhcmtvcmFuZ2U7XHJcbiAgICAuc3RlcC1sYWJlbHtcclxuICAgICAgY29sb3I6IGRhcmtvcmFuZ2U7XHJcbiAgICB9XHJcbiAgfVxyXG5cclxuICAubWFjaGluZS1jb2xvdXJhbnQtbWluLXJhbmdle1xyXG4gICAgYm9yZGVyLXRvcDogMXB4IGRhc2hlZCByZWQ7XHJcbiAgICAuc3RlcC1sYWJlbHtcclxuICAgICAgY29sb3I6IHJlZDtcclxuICAgIH1cclxuICB9XHJcblxyXG4gIC5tYWNoaW5lLWNvbG91cmFudC1tYXgtcmFuZ2V7XHJcbiAgICBib3JkZXItdG9wOiAxcHggZGFzaGVkIGdyZWVuO1xyXG4gICAgLnN0ZXAtbGFiZWx7XHJcbiAgICAgIGNvbG9yOiBncmVlbjtcclxuICAgIH1cclxuICB9XHJcbn1cclxuXHJcbi5tYWNoaW5lLWNvbG9yYW50LXNsaWRlci1ncm91cHtcclxuICBwYWRkaW5nLWxlZnQ6IDIwcHg7XHJcblxyXG4gICRzbGlkZXJfcGFkZGluZyA6IDhweDtcclxuICAubWFjaGluZS1jb2xvdXJhbnQtc2xpZGVye1xyXG4gICAgaGVpZ2h0OiA0MDBweCArICRzbGlkZXJfcGFkZGluZyAqIDI7XHJcbiAgICBtYXJnaW4tdG9wOiAwcHggLSAkc2xpZGVyX3BhZGRpbmc7XHJcbiAgICBwYWRkaW5nOiAkc2xpZGVyX3BhZGRpbmc7XHJcbiAgfVxyXG59XHJcblxyXG4ubWFjaGluZS1jb2xvdXJhbnQtaXRlbXtcclxuICB3aWR0aDogcGVyY2VudGFnZSgxIC8gMTYpO1xyXG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcclxuICBoZWlnaHQ6IDQwMHB4O1xyXG4gIHBhZGRpbmctbGVmdDogNXB4O1xyXG4gIHBhZGRpbmctcmlnaHQ6IDVweDtcclxuICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcblxyXG4gIC5tYWNoaW5lLWNvbG91cmFudC1iZ3J7XHJcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICB0b3A6IDBweDtcclxuICAgIGJvdHRvbTogMHB4O1xyXG4gICAgbGVmdDogMTVweDtcclxuICAgIHJpZ2h0OiAxNXB4O1xyXG4gICAgYm9yZGVyOiAxcHggc29saWQgIzMzMzMzMztcclxuXHJcbiAgICAmOmFmdGVye1xyXG4gICAgICAvL2NvbnRlbnQ6IFwiXCI7XHJcbiAgICAgIC8vZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG4gICAgICAvL3Bvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgICAgLy90b3A6IDBweDtcclxuICAgICAgLy9sZWZ0OiAwcHg7XHJcbiAgICAgIC8vcmlnaHQ6IDBweDtcclxuICAgICAgLy9ib3R0b206IDBweDtcclxuICAgICAgLy9iYWNrZ3JvdW5kLWltYWdlOiBsaW5lYXItZ3JhZGllbnQodG8gcmlnaHQsIHJnYmEoMjU1LCAyNTUsIDI1NSwgMC4wKSwgcmdiYSgyMDQsIDIwNCwgMjA0LCAwLjIpLCAgcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjEpLCByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMDUpLCByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMCkpO1xyXG4gICAgfVxyXG5cclxuICAgIC5tYWNoaW5lLWNvbG91cmFudC11cGRhdGUtcmFuZ2UsXHJcbiAgICAubWFjaGluZS1jb2xvdXJhbnQtY3VycmVudC1yYW5nZSB7XHJcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG4gICAgICBsZWZ0OiAwcHg7XHJcbiAgICAgIHJpZ2h0OiAwcHg7XHJcbiAgICAgIGJvdHRvbTogMHB4O1xyXG4gICAgICBib3JkZXItdG9wOiAxcHggc29saWQgIzAwMDAwMDtcclxuICAgIH1cclxuXHJcbiAgICAubWFjaGluZS1jb2xvdXJhbnQtdXBkYXRlLXJhbmdle1xyXG4gICAgICBvcGFjaXR5OiAwLjU7XHJcbiAgICB9XHJcbiAgfVxyXG5cclxuICAuc2VsZWN0ZWQtY29sb3VyYW50LWJncntcclxuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgIG91dGxpbmU6IDJweCBzb2xpZCAjMDA0MTdiO1xyXG4gICAgdG9wOiAtMTVweDtcclxuICAgIGxlZnQ6IDBweDtcclxuICAgIHJpZ2h0OiAwcHg7XHJcbiAgICBib3R0b206IC0xNXB4O1xyXG4gIH1cclxuXHJcbiAgLmNvbG91cmFudC1uYW1le1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XHJcbiAgICB0cmFuc2Zvcm06IHJvdGF0ZSgtOTBkZWcpO1xyXG4gICAgdHJhbnNmb3JtLW9yaWdpbjogbGVmdCBjZW50ZXI7XHJcbiAgICBsZWZ0OiA1MCU7XHJcbiAgICBib3R0b206IDBweDtcclxuICAgIHdoaXRlLXNwYWNlOiBub3dyYXA7XHJcbiAgfVxyXG5cclxuICAuY29sb3VyYW50LWNvZGUge1xyXG4gICAgZm9udC13ZWlnaHQ6IGJvbGQ7XHJcbiAgICBmb250LXNpemU6IDEyMCU7XHJcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICBib3R0b206IDBweDtcclxuICAgIGxlZnQ6IDUwJTtcclxuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIDQ1cHgpO1xyXG4gIH1cclxufVxyXG4iXX0= */"
+module.exports = ".machine-colourant-group {\n  margin: 30px 20px 50px 70px;\n  position: relative;\n  display: flex; }\n  .machine-colourant-group[actiontype=\"open-setting\"] .machine-background {\n    left: -25px; }\n  .machine-colourant-group[actiontype=\"open-setting\"] .machine-background-setting {\n    position: absolute;\n    top: 0px;\n    left: -10px;\n    bottom: 0px; }\n  .machine-colourant-group[actiontype=\"open-setting\"] .machine-background-setting .machine-range-slider {\n      top: -8px;\n      bottom: -8px;\n      position: absolute; }\n  .machine-colourant-group[actiontype=\"open-setting\"] .machine-colourant-min-range .step-label,\n  .machine-colourant-group[actiontype=\"open-setting\"] .machine-colourant-warning-range .step-label {\n    opacity: 0.8; }\n  .machine-colourant-single-item .machine-colourant-group {\n  margin: 0px; }\n  .machine-colourant-single-item .machine-colourant-item {\n  min-width: 60px; }\n  .machine-colourant-single-item .machine-colourant-zero-range .step-label,\n.machine-colourant-single-item .machine-colourant-min-range .step-label,\n.machine-colourant-single-item .machine-colourant-warning-range .step-label,\n.machine-colourant-single-item .machine-colourant-max-range .step-label {\n  display: none; }\n  .machine-background {\n  position: absolute;\n  top: 0px;\n  left: 0px;\n  bottom: 0px;\n  right: 0px; }\n  .machine-background .machine-colourant-zero-range,\n  .machine-background .machine-colourant-min-range,\n  .machine-background .machine-colourant-warning-range,\n  .machine-background .machine-colourant-max-range {\n    width: 100%;\n    position: absolute;\n    left: 0px;\n    right: 0px;\n    bottom: 0px;\n    opacity: 0.5; }\n  .machine-background .machine-colourant-zero-range .step-label,\n    .machine-background .machine-colourant-min-range .step-label,\n    .machine-background .machine-colourant-warning-range .step-label,\n    .machine-background .machine-colourant-max-range .step-label {\n      position: absolute;\n      top: 0px;\n      left: -5px;\n      -webkit-transform: translate(-100%, -50%);\n      transform: translate(-100%, -50%); }\n  .machine-background .machine-colourant-zero-range {\n    border-top: 1px dashed #333333; }\n  .machine-background .machine-colourant-zero-range .step-label {\n      color: #333333; }\n  .machine-background .machine-colourant-warning-range {\n    border-top: 1px dashed darkorange; }\n  .machine-background .machine-colourant-warning-range .step-label {\n      color: darkorange; }\n  .machine-background .machine-colourant-min-range {\n    border-top: 1px dashed red; }\n  .machine-background .machine-colourant-min-range .step-label {\n      color: red; }\n  .machine-background .machine-colourant-max-range {\n    border-top: 1px dashed green; }\n  .machine-background .machine-colourant-max-range .step-label {\n      color: green; }\n  .machine-colorant-slider-group {\n  padding-left: 20px; }\n  .machine-colorant-slider-group .machine-colourant-slider {\n    height: 416px;\n    margin-top: -8px;\n    padding: 8px; }\n  .machine-colourant-item {\n  width: 6.25%;\n  display: inline-block;\n  height: 400px;\n  padding-left: 5px;\n  padding-right: 5px;\n  position: relative; }\n  .machine-colourant-item .machine-colourant-bgr {\n    position: absolute;\n    top: 0px;\n    bottom: 0px;\n    left: 15px;\n    right: 15px;\n    border: 1px solid #333333; }\n  .machine-colourant-item .machine-colourant-bgr .machine-colourant-update-range,\n    .machine-colourant-item .machine-colourant-bgr .machine-colourant-current-range {\n      position: absolute;\n      display: inline-block;\n      left: 0px;\n      right: 0px;\n      bottom: 0px;\n      border-top: 1px solid #000000; }\n  .machine-colourant-item .machine-colourant-bgr .machine-colourant-update-range {\n      opacity: 0.5; }\n  .machine-colourant-item .selected-colourant-bgr {\n    position: absolute;\n    outline: 2px solid #00417b;\n    top: -15px;\n    left: 0px;\n    right: 0px;\n    bottom: -15px; }\n  .machine-colourant-item .colourant-name {\n    position: absolute;\n    width: 100%;\n    display: inline-block;\n    -webkit-transform: rotate(-90deg);\n            transform: rotate(-90deg);\n    -webkit-transform-origin: left center;\n            transform-origin: left center;\n    left: 50%;\n    bottom: 0px;\n    white-space: nowrap; }\n  .machine-colourant-item .colourant-code {\n    font-weight: bold;\n    font-size: 120%;\n    position: absolute;\n    bottom: 0px;\n    left: 50%;\n    -webkit-transform: translate(-50%, 45px);\n            transform: translate(-50%, 45px); }\n  .warning-colourants-machine-modal .modal-content[type=\"Warning\"] .modal-header,\n.warning-colourants-machine-modal .modal-content[type=\"Warning\"] .modal-body {\n  color: darkorange; }\n  .warning-colourants-machine-modal .modal-content[type=\"Danger\"] .modal-header,\n.warning-colourants-machine-modal .modal-content[type=\"Danger\"] .modal-body {\n  color: red; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9tYWNoaW5lL21hY2hpbmVzZXR0aW5nL0c6XFxXb3Jrc3BhY2VcXGNsaWVudHZpZXRwb3dlci9zcmNcXGFwcFxcY29tcG9uZW50c1xcbWFjaGluZVxcbWFjaGluZXNldHRpbmdcXG1hY2hpbmVzZXR0aW5nLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsNEJBQTJCO0VBQzNCLG1CQUFrQjtFQUNsQixjQUFhLEVBMkJkO0VBOUJEO0lBT00sWUFBVyxFQUNaO0VBUkw7SUFXTSxtQkFBa0I7SUFDbEIsU0FBUTtJQUNSLFlBQVc7SUFDWCxZQUFXLEVBT1o7RUFyQkw7TUFpQlEsVUFBUztNQUNULGFBQVk7TUFDWixtQkFBa0IsRUFDbkI7RUFwQlA7O0lBMEJRLGFBQVksRUFDYjtFQU1QO0VBRUksWUFBVyxFQUNaO0VBSEg7RUFNSSxnQkFBZSxFQUNoQjtFQVBIOzs7O0VBY00sY0FBYSxFQUNkO0VBSUw7RUFDRSxtQkFBa0I7RUFDbEIsU0FBUTtFQUNSLFVBQVM7RUFDVCxZQUFXO0VBQ1gsV0FBVSxFQW9EWDtFQXpERDs7OztJQVdJLFlBQVc7SUFDWCxtQkFBa0I7SUFDbEIsVUFBUztJQUNULFdBQVU7SUFDVixZQUFXO0lBQ1gsYUFBWSxFQVliO0VBNUJIOzs7O01BbUJNLG1CQUFrQjtNQUNsQixTQUFRO01BQ1IsV0FBVTtNQUNWLDBDQUF5QztNQUl6QyxrQ0FBaUMsRUFDbEM7RUEzQkw7SUErQkksK0JBQThCLEVBSS9CO0VBbkNIO01BaUNNLGVBQWMsRUFDZjtFQWxDTDtJQXNDSSxrQ0FBaUMsRUFJbEM7RUExQ0g7TUF3Q00sa0JBQWlCLEVBQ2xCO0VBekNMO0lBNkNJLDJCQUEwQixFQUkzQjtFQWpESDtNQStDTSxXQUFVLEVBQ1g7RUFoREw7SUFvREksNkJBQTRCLEVBSTdCO0VBeERIO01Bc0RNLGFBQVksRUFDYjtFQUlMO0VBQ0UsbUJBQWtCLEVBUW5CO0VBVEQ7SUFLSSxjQUFtQztJQUNuQyxpQkFBaUM7SUFDakMsYUFKbUIsRUFLcEI7RUFHSDtFQUNFLGFBQXlCO0VBQ3pCLHNCQUFxQjtFQUNyQixjQUFhO0VBQ2Isa0JBQWlCO0VBQ2pCLG1CQUFrQjtFQUNsQixtQkFBa0IsRUFnRW5CO0VBdEVEO0lBU0ksbUJBQWtCO0lBQ2xCLFNBQVE7SUFDUixZQUFXO0lBQ1gsV0FBVTtJQUNWLFlBQVc7SUFDWCwwQkFBeUIsRUEwQjFCO0VBeENIOztNQTZCTSxtQkFBa0I7TUFDbEIsc0JBQXFCO01BQ3JCLFVBQVM7TUFDVCxXQUFVO01BQ1YsWUFBVztNQUNYLDhCQUE2QixFQUM5QjtFQW5DTDtNQXNDTSxhQUFZLEVBQ2I7RUF2Q0w7SUEyQ0ksbUJBQWtCO0lBQ2xCLDJCQUEwQjtJQUMxQixXQUFVO0lBQ1YsVUFBUztJQUNULFdBQVU7SUFDVixjQUFhLEVBQ2Q7RUFqREg7SUFvREksbUJBQWtCO0lBQ2xCLFlBQVc7SUFDWCxzQkFBcUI7SUFDckIsa0NBQXlCO1lBQXpCLDBCQUF5QjtJQUN6QixzQ0FBNkI7WUFBN0IsOEJBQTZCO0lBQzdCLFVBQVM7SUFDVCxZQUFXO0lBQ1gsb0JBQW1CLEVBQ3BCO0VBNURIO0lBK0RJLGtCQUFpQjtJQUNqQixnQkFBZTtJQUNmLG1CQUFrQjtJQUNsQixZQUFXO0lBQ1gsVUFBUztJQUNULHlDQUFnQztZQUFoQyxpQ0FBZ0MsRUFDakM7RUFHSDs7RUFLUSxrQkFBaUIsRUFDbEI7RUFOUDs7RUFZUSxXQUFVLEVBQ1giLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL21hY2hpbmUvbWFjaGluZXNldHRpbmcvbWFjaGluZXNldHRpbmcuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubWFjaGluZS1jb2xvdXJhbnQtZ3JvdXB7XHJcbiAgbWFyZ2luOiAzMHB4IDIwcHggNTBweCA3MHB4O1xyXG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuICBkaXNwbGF5OiBmbGV4O1xyXG5cclxuICAmW2FjdGlvbnR5cGU9XCJvcGVuLXNldHRpbmdcIl17XHJcbiAgICAubWFjaGluZS1iYWNrZ3JvdW5ke1xyXG4gICAgICBsZWZ0OiAtMjVweDtcclxuICAgIH1cclxuXHJcbiAgICAubWFjaGluZS1iYWNrZ3JvdW5kLXNldHRpbmd7XHJcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgICAgdG9wOiAwcHg7XHJcbiAgICAgIGxlZnQ6IC0xMHB4O1xyXG4gICAgICBib3R0b206IDBweDtcclxuXHJcbiAgICAgIC5tYWNoaW5lLXJhbmdlLXNsaWRlcntcclxuICAgICAgICB0b3A6IC04cHg7XHJcbiAgICAgICAgYm90dG9tOiAtOHB4O1xyXG4gICAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgICAgfVxyXG4gICAgfVxyXG5cclxuICAgIC5tYWNoaW5lLWNvbG91cmFudC1taW4tcmFuZ2UsXHJcbiAgICAubWFjaGluZS1jb2xvdXJhbnQtd2FybmluZy1yYW5nZXtcclxuICAgICAgLnN0ZXAtbGFiZWx7XHJcbiAgICAgICAgb3BhY2l0eTogMC44O1xyXG4gICAgICB9XHJcbiAgICB9XHJcbiAgfVxyXG59XHJcblxyXG5cclxuLm1hY2hpbmUtY29sb3VyYW50LXNpbmdsZS1pdGVte1xyXG4gIC5tYWNoaW5lLWNvbG91cmFudC1ncm91cHtcclxuICAgIG1hcmdpbjogMHB4O1xyXG4gIH1cclxuXHJcbiAgLm1hY2hpbmUtY29sb3VyYW50LWl0ZW17XHJcbiAgICBtaW4td2lkdGg6IDYwcHg7XHJcbiAgfVxyXG5cclxuICAubWFjaGluZS1jb2xvdXJhbnQtemVyby1yYW5nZSxcclxuICAubWFjaGluZS1jb2xvdXJhbnQtbWluLXJhbmdlLFxyXG4gIC5tYWNoaW5lLWNvbG91cmFudC13YXJuaW5nLXJhbmdlLFxyXG4gIC5tYWNoaW5lLWNvbG91cmFudC1tYXgtcmFuZ2V7XHJcbiAgICAuc3RlcC1sYWJlbHtcclxuICAgICAgZGlzcGxheTogbm9uZTtcclxuICAgIH1cclxuICB9XHJcbn1cclxuXHJcbi5tYWNoaW5lLWJhY2tncm91bmR7XHJcbiAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gIHRvcDogMHB4O1xyXG4gIGxlZnQ6IDBweDtcclxuICBib3R0b206IDBweDtcclxuICByaWdodDogMHB4O1xyXG5cclxuICAubWFjaGluZS1jb2xvdXJhbnQtemVyby1yYW5nZSxcclxuICAubWFjaGluZS1jb2xvdXJhbnQtbWluLXJhbmdlLFxyXG4gIC5tYWNoaW5lLWNvbG91cmFudC13YXJuaW5nLXJhbmdlLFxyXG4gIC5tYWNoaW5lLWNvbG91cmFudC1tYXgtcmFuZ2V7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgIGxlZnQ6IDBweDtcclxuICAgIHJpZ2h0OiAwcHg7XHJcbiAgICBib3R0b206IDBweDtcclxuICAgIG9wYWNpdHk6IDAuNTtcclxuXHJcbiAgICAuc3RlcC1sYWJlbHtcclxuICAgICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgICB0b3A6IDBweDtcclxuICAgICAgbGVmdDogLTVweDtcclxuICAgICAgLXdlYmtpdC10cmFuc2Zvcm06IHRyYW5zbGF0ZSgtMTAwJSwgLTUwJSk7XHJcbiAgICAgIC1tb3otdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTEwMCUsIC01MCUpO1xyXG4gICAgICAtbXMtdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTEwMCUsIC01MCUpO1xyXG4gICAgICAtby10cmFuc2Zvcm06IHRyYW5zbGF0ZSgtMTAwJSwgLTUwJSk7XHJcbiAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC0xMDAlLCAtNTAlKTtcclxuICAgIH1cclxuICB9XHJcblxyXG4gIC5tYWNoaW5lLWNvbG91cmFudC16ZXJvLXJhbmdle1xyXG4gICAgYm9yZGVyLXRvcDogMXB4IGRhc2hlZCAjMzMzMzMzO1xyXG4gICAgLnN0ZXAtbGFiZWx7XHJcbiAgICAgIGNvbG9yOiAjMzMzMzMzO1xyXG4gICAgfVxyXG4gIH1cclxuXHJcbiAgLm1hY2hpbmUtY29sb3VyYW50LXdhcm5pbmctcmFuZ2V7XHJcbiAgICBib3JkZXItdG9wOiAxcHggZGFzaGVkIGRhcmtvcmFuZ2U7XHJcbiAgICAuc3RlcC1sYWJlbHtcclxuICAgICAgY29sb3I6IGRhcmtvcmFuZ2U7XHJcbiAgICB9XHJcbiAgfVxyXG5cclxuICAubWFjaGluZS1jb2xvdXJhbnQtbWluLXJhbmdle1xyXG4gICAgYm9yZGVyLXRvcDogMXB4IGRhc2hlZCByZWQ7XHJcbiAgICAuc3RlcC1sYWJlbHtcclxuICAgICAgY29sb3I6IHJlZDtcclxuICAgIH1cclxuICB9XHJcblxyXG4gIC5tYWNoaW5lLWNvbG91cmFudC1tYXgtcmFuZ2V7XHJcbiAgICBib3JkZXItdG9wOiAxcHggZGFzaGVkIGdyZWVuO1xyXG4gICAgLnN0ZXAtbGFiZWx7XHJcbiAgICAgIGNvbG9yOiBncmVlbjtcclxuICAgIH1cclxuICB9XHJcbn1cclxuXHJcbi5tYWNoaW5lLWNvbG9yYW50LXNsaWRlci1ncm91cHtcclxuICBwYWRkaW5nLWxlZnQ6IDIwcHg7XHJcblxyXG4gICRzbGlkZXJfcGFkZGluZyA6IDhweDtcclxuICAubWFjaGluZS1jb2xvdXJhbnQtc2xpZGVye1xyXG4gICAgaGVpZ2h0OiA0MDBweCArICRzbGlkZXJfcGFkZGluZyAqIDI7XHJcbiAgICBtYXJnaW4tdG9wOiAwcHggLSAkc2xpZGVyX3BhZGRpbmc7XHJcbiAgICBwYWRkaW5nOiAkc2xpZGVyX3BhZGRpbmc7XHJcbiAgfVxyXG59XHJcblxyXG4ubWFjaGluZS1jb2xvdXJhbnQtaXRlbXtcclxuICB3aWR0aDogcGVyY2VudGFnZSgxIC8gMTYpO1xyXG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcclxuICBoZWlnaHQ6IDQwMHB4O1xyXG4gIHBhZGRpbmctbGVmdDogNXB4O1xyXG4gIHBhZGRpbmctcmlnaHQ6IDVweDtcclxuICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcblxyXG4gIC5tYWNoaW5lLWNvbG91cmFudC1iZ3J7XHJcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICB0b3A6IDBweDtcclxuICAgIGJvdHRvbTogMHB4O1xyXG4gICAgbGVmdDogMTVweDtcclxuICAgIHJpZ2h0OiAxNXB4O1xyXG4gICAgYm9yZGVyOiAxcHggc29saWQgIzMzMzMzMztcclxuXHJcbiAgICAmOmFmdGVye1xyXG4gICAgICAvL2NvbnRlbnQ6IFwiXCI7XHJcbiAgICAgIC8vZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG4gICAgICAvL3Bvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgICAgLy90b3A6IDBweDtcclxuICAgICAgLy9sZWZ0OiAwcHg7XHJcbiAgICAgIC8vcmlnaHQ6IDBweDtcclxuICAgICAgLy9ib3R0b206IDBweDtcclxuICAgICAgLy9iYWNrZ3JvdW5kLWltYWdlOiBsaW5lYXItZ3JhZGllbnQodG8gcmlnaHQsIHJnYmEoMjU1LCAyNTUsIDI1NSwgMC4wKSwgcmdiYSgyMDQsIDIwNCwgMjA0LCAwLjIpLCAgcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjEpLCByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMDUpLCByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMCkpO1xyXG4gICAgfVxyXG5cclxuICAgIC5tYWNoaW5lLWNvbG91cmFudC11cGRhdGUtcmFuZ2UsXHJcbiAgICAubWFjaGluZS1jb2xvdXJhbnQtY3VycmVudC1yYW5nZSB7XHJcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG4gICAgICBsZWZ0OiAwcHg7XHJcbiAgICAgIHJpZ2h0OiAwcHg7XHJcbiAgICAgIGJvdHRvbTogMHB4O1xyXG4gICAgICBib3JkZXItdG9wOiAxcHggc29saWQgIzAwMDAwMDtcclxuICAgIH1cclxuXHJcbiAgICAubWFjaGluZS1jb2xvdXJhbnQtdXBkYXRlLXJhbmdle1xyXG4gICAgICBvcGFjaXR5OiAwLjU7XHJcbiAgICB9XHJcbiAgfVxyXG5cclxuICAuc2VsZWN0ZWQtY29sb3VyYW50LWJncntcclxuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgIG91dGxpbmU6IDJweCBzb2xpZCAjMDA0MTdiO1xyXG4gICAgdG9wOiAtMTVweDtcclxuICAgIGxlZnQ6IDBweDtcclxuICAgIHJpZ2h0OiAwcHg7XHJcbiAgICBib3R0b206IC0xNXB4O1xyXG4gIH1cclxuXHJcbiAgLmNvbG91cmFudC1uYW1le1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XHJcbiAgICB0cmFuc2Zvcm06IHJvdGF0ZSgtOTBkZWcpO1xyXG4gICAgdHJhbnNmb3JtLW9yaWdpbjogbGVmdCBjZW50ZXI7XHJcbiAgICBsZWZ0OiA1MCU7XHJcbiAgICBib3R0b206IDBweDtcclxuICAgIHdoaXRlLXNwYWNlOiBub3dyYXA7XHJcbiAgfVxyXG5cclxuICAuY29sb3VyYW50LWNvZGUge1xyXG4gICAgZm9udC13ZWlnaHQ6IGJvbGQ7XHJcbiAgICBmb250LXNpemU6IDEyMCU7XHJcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICBib3R0b206IDBweDtcclxuICAgIGxlZnQ6IDUwJTtcclxuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIDQ1cHgpO1xyXG4gIH1cclxufVxyXG5cclxuLndhcm5pbmctY29sb3VyYW50cy1tYWNoaW5lLW1vZGFse1xyXG4gIC5tb2RhbC1jb250ZW50e1xyXG4gICAgJlt0eXBlPVwiV2FybmluZ1wiXXtcclxuICAgICAgLm1vZGFsLWhlYWRlcixcclxuICAgICAgLm1vZGFsLWJvZHl7XHJcbiAgICAgICAgY29sb3I6IGRhcmtvcmFuZ2U7XHJcbiAgICAgIH1cclxuICAgIH1cclxuXHJcbiAgICAmW3R5cGU9XCJEYW5nZXJcIl17XHJcbiAgICAgIC5tb2RhbC1oZWFkZXIsXHJcbiAgICAgIC5tb2RhbC1ib2R5e1xyXG4gICAgICAgIGNvbG9yOiByZWQ7XHJcbiAgICAgIH1cclxuICAgIH1cclxuICB9XHJcblxyXG59XHJcbiJdfQ== */"
 
 /***/ }),
 
@@ -2038,7 +2051,6 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 var MachineSettingComponent = /** @class */ (function () {
-    // addedAmountPercent: number;
     function MachineSettingComponent(modalService, machineService, colourantService) {
         this.modalService = modalService;
         this.machineService = machineService;
@@ -2046,37 +2058,66 @@ var MachineSettingComponent = /** @class */ (function () {
         this.selectedMachineColourant = null;
     }
     MachineSettingComponent.prototype.ngOnInit = function () {
+        this.openSetting = false;
+        this.errorType = null;
+        this.errorMessage = null;
         this.fetchData();
     };
     MachineSettingComponent.prototype.fetchData = function () {
         var _this = this;
         this.machine = this.machineService.getCurrentMachine();
-        this.minQuantity = this.machine.minQuantity;
-        this.maxQuantity = this.machine.maxQuantity;
-        this.machineService.fetchDataFromServer().subscribe(function (datas) {
-            _this.processListColourantData(datas);
-        });
+        if (this.machine != null) {
+            this.minQuantity = this.machine.minQuantity;
+            this.maxQuantity = this.machine.maxQuantity;
+            this.warningQuantity = this.machine.warningQuantity;
+            this.initMinQuantity = this.machine.minQuantity;
+            this.initWarningQuantity = this.machine.warningQuantity;
+            this.machineService.fetchDataFromServer().subscribe(function (datas) {
+                _this.processListColourantData(datas, 'init');
+            });
+        }
     };
-    MachineSettingComponent.prototype.processListColourantData = function (datas) {
+    MachineSettingComponent.prototype.processListColourantData = function (datas, type) {
+        var _this = this;
         this.listMachineColourant = datas;
         this.selectedMachineColourant = null;
         this.addedAmount = 0;
         this.currentAmount = 0;
-        // this.addedAmountPercent = 0;
+        if (type === 'init') {
+            for (var _i = 0, _a = this.listMachineColourant; _i < _a.length; _i++) {
+                var item = _a[_i];
+                if (this.errorType == null && item.quantity < this.initWarningQuantity) {
+                    this.errorType = 'Warning';
+                    this.errorMessage = 'Some colorants are low. Please add more!';
+                }
+                if (item.quantity < this.initMinQuantity) {
+                    this.errorType = 'Danger';
+                    this.errorMessage = 'Some colorants are low. Please add more!';
+                    break;
+                }
+            }
+            if (this.errorType != null && this.errorMessage != null) {
+                setTimeout(function () {
+                    _this.openModal('warning-colourants-machine-modal');
+                }, 0);
+            }
+        }
     };
     MachineSettingComponent.prototype.selectMachineColourant = function (colourantId) {
         var _this = this;
-        var listFilter = this.listMachineColourant.filter(function (item) {
-            return item.colourant.colourantId === colourantId;
-        });
-        this.selectedMachineColourant = listFilter.length > 0 ? listFilter[0] : null;
-        this.currentAmount = this.selectedMachineColourant != null ? this.selectedMachineColourant.quantity : 0;
-        this.addedAmount = 0;
-        // this.addedAmountPercent = 0;
-        this.updateAmount = this.currentAmount + this.addedAmount;
-        setTimeout(function () {
-            _this.openModal('view-selected-colourant-machine-modal');
-        }, 0);
+        if (this.openSetting === false) {
+            var listFilter = this.listMachineColourant.filter(function (item) {
+                return item.colourant.colourantId === colourantId;
+            });
+            this.selectedMachineColourant = listFilter.length > 0 ? listFilter[0] : null;
+            this.currentAmount = this.selectedMachineColourant != null ? this.selectedMachineColourant.quantity : 0;
+            this.addedAmount = 0;
+            // this.addedAmountPercent = 0;
+            this.updateAmount = this.currentAmount + this.addedAmount;
+            setTimeout(function () {
+                _this.openModal('view-selected-colourant-machine-modal');
+            }, 0);
+        }
     };
     MachineSettingComponent.prototype.updateAddedAmount = function (type) {
         if (type === 'amount') {
@@ -2098,6 +2139,37 @@ var MachineSettingComponent = /** @class */ (function () {
     MachineSettingComponent.prototype.updateAmountBySlider = function () {
         this.addedAmount = this.updateAmount - this.currentAmount;
     };
+    MachineSettingComponent.prototype.openSettingMachine = function () {
+        this.openSetting = true;
+    };
+    MachineSettingComponent.prototype.closeSettingMachine = function () {
+        this.openSetting = false;
+        this.minQuantity = this.initMinQuantity;
+        this.warningQuantity = this.initWarningQuantity;
+    };
+    MachineSettingComponent.prototype.updateMachineDataSlider = function (type) {
+        if ('warning' === type) {
+            if (this.warningQuantity < this.minQuantity) {
+                this.warningQuantity = this.minQuantity;
+            }
+        }
+        else if ('min' === type) {
+            if (this.minQuantity > this.warningQuantity) {
+                this.minQuantity = this.warningQuantity;
+            }
+        }
+    };
+    MachineSettingComponent.prototype.updateSettingMachine = function () {
+        var _this = this;
+        this.machineService.updateSettingMachine(this.minQuantity, this.warningQuantity).subscribe(function (machineData) {
+            _this.machine = machineData;
+            _this.minQuantity = machineData.minQuantity;
+            _this.maxQuantity = machineData.maxQuantity;
+            _this.warningQuantity = machineData.warningQuantity;
+            _this.initMinQuantity = machineData.minQuantity;
+            _this.initWarningQuantity = machineData.warningQuantity;
+        });
+    };
     MachineSettingComponent.prototype.fillByPercent = function (percent) {
         var remainPercent = percent - (this.currentAmount / this.maxQuantity) * 100;
         this.addedAmount = remainPercent / 100 * this.maxQuantity;
@@ -2107,7 +2179,7 @@ var MachineSettingComponent = /** @class */ (function () {
         var _this = this;
         this.machineService.updateColourantMachineData(this.machine, this.selectedMachineColourant.colourant, this.addedAmount)
             .subscribe(function (datas) {
-            _this.processListColourantData(datas);
+            _this.processListColourantData(datas, 'update');
             _this.modalService.close(id);
         });
     };
@@ -2116,6 +2188,8 @@ var MachineSettingComponent = /** @class */ (function () {
     };
     MachineSettingComponent.prototype.closeModal = function (id) {
         this.modalService.close(id);
+        this.errorType = null;
+        this.errorMessage = null;
     };
     MachineSettingComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -2320,7 +2394,7 @@ var CollectionComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"block-header\">\n  <h1>Colorant Manager</h1>\n</div>\n\n<div class=\"row\">\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n    <div class=\"card filter-card\">\n      <div class=\"card-header\">\n        Filter\n      </div>\n\n      <div class=\"card-body\">\n        <div class=\"row\">\n          <div class=\"col-lg-6 col-md-6 col-sm-6 col-xs-12\">\n            <input placeholder=\"Code\" [(ngModel)]=\"code\">\n          </div>\n\n          <div class=\"col-lg-6 col-md-6 col-sm-6 col-xs-12\">\n            <input matInput placeholder=\"Name\" [(ngModel)]=\"name\">\n          </div>\n        </div>\n      </div>\n\n      <div class=\"card-footer\">\n        <!--<mat-card-actions>-->\n          <button mat-raised-button color=\"primary\" (click)=\"filter()\">Search</button>\n          <button mat-button class=\"btn btn-default\" (click)=\"resetFilter()\">Reset</button>\n        <!--</mat-card-actions>-->\n      </div>\n    </div>\n  </div>\n</div>\n\n\n<div class=\"row\" ng-init=\"testInput='value'\">\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n    <div class=\"card\">\n      <div class=\"card-header\">\n        List Colorant\n      </div>\n\n      <div class=\"card-body\">\n        <div class=\"table-responsive\">\n          <table class=\"table table-bordered\" matSort (matSortChange)=\"sortData($event)\">\n            <tr>\n              <th mat-sort-header=\"code\">Colourant Code</th>\n              <th mat-sort-header=\"name\">Colourant Name</th>\n              <th mat-sort-header=\"density\">Density</th>\n              <th mat-sort-header=\"redV\">Price Per Unit</th>\n              <th mat-sort-header=\"greenV\">Surcharge</th>\n              <th mat-sort-header=\"blueV\">Blue</th>\n              <th mat-sort-header=\"color\">kind</th>\n            </tr>\n\n            <tr *ngFor=\"let colorant of sortedData\">\n              <td>{{colorant.colourantCode}}</td>\n              <td>{{colorant.colourantName}}</td>\n              <td>{{colorant.density}}</td>\n              <td>{{colorant.pricePerUnit}}</td>\n              <td>{{colorant.surcharge}}</td>\n              <td><span [ngStyle]=\"{'background': colorant.rbgHex, 'display': 'inline-block', 'width': '30px', 'height': '30px', 'border': '1px solid #333'}\"></span></td>\n              <td>{{colorant.kind}}</td>\n            </tr>\n          </table>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
+module.exports = "<div class=\"block-header\">\n  <h1>Colorant Manager</h1>\n</div>\n\n<div class=\"row\">\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n    <div class=\"card filter-card\">\n      <div class=\"card-header\">\n        Filter\n      </div>\n\n      <div class=\"card-body\">\n        <form class=\"form form-horizontal form-detail\">\n          <div class=\"form-body\">\n            <div class=\"form-group row\">\n              <label class=\"col-md-3 label-control\">Colourant Code</label>\n              <div class=\"col-md-5\">\n                <input type=\"text\" [(ngModel)]=\"code\" class=\"form-control\">\n              </div>\n            </div>\n\n            <div class=\"form-group row\">\n              <label class=\"col-md-3 label-control\">Colourant Name</label>\n              <div class=\"col-md-5\">\n                <input type=\"text\" [(ngModel)]=\"name\" class=\"form-control\">\n              </div>\n            </div>\n\n            <div class=\"form-group row text-center\">\n              <button class=\"btn btn-primary\" (click)=\"filter()\">Search</button>\n              <button class=\"btn btn-default\" (click)=\"resetFilter()\">Reset</button>\n            </div>\n          </div>\n        </form>\n        <div class=\"form-group rng ow\">\n\n        </div>\n\n        <div class=\"row\">\n          <div class=\"col-lg-6 col-md-6 col-sm-6 col-xs-12\">\n\n          </div>\n\n          <div class=\"col-lg-6 col-md-6 col-sm-6 col-xs-12\">\n\n          </div>\n        </div>\n      </div>\n\n      <div class=\"card-footer\">\n        <!--<mat-card-actions>-->\n\n        <!--</mat-card-actions>-->\n      </div>\n    </div>\n  </div>\n</div>\n\n\n<div class=\"row\" ng-init=\"testInput='value'\">\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n    <div class=\"card\">\n      <div class=\"card-header\">\n        List Colorant\n      </div>\n\n      <div class=\"card-body\">\n        <div class=\"table-responsive\">\n          <table class=\"table table-bordered\" matSort (matSortChange)=\"sortData($event)\">\n            <tr>\n              <th mat-sort-header=\"code\">Colourant Code</th>\n              <th mat-sort-header=\"name\">Colourant Name</th>\n              <th mat-sort-header=\"density\">Density</th>\n              <th mat-sort-header=\"redV\">Price Per Unit</th>\n              <th mat-sort-header=\"greenV\">Surcharge</th>\n              <th mat-sort-header=\"blueV\">Blue</th>\n              <th mat-sort-header=\"color\">kind</th>\n            </tr>\n\n            <tr *ngFor=\"let colorant of sortedData\">\n              <td>{{colorant.colourantCode}}</td>\n              <td>{{colorant.colourantName}}</td>\n              <td>{{colorant.density}}</td>\n              <td>{{colorant.pricePerUnit}}</td>\n              <td>{{colorant.surcharge}}</td>\n              <td><span [ngStyle]=\"{'background': colorant.rbgHex, 'display': 'inline-block', 'width': '30px', 'height': '30px', 'border': '1px solid #333'}\"></span></td>\n              <td>{{colorant.kind}}</td>\n            </tr>\n          </table>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -2365,9 +2439,11 @@ var ColorantComponent = /** @class */ (function () {
         this.name = null;
     }
     ColorantComponent.prototype.ngOnInit = function () {
-        this.filter(this.code, this.name);
+        this.code = null;
+        this.name = null;
+        this.filter();
     };
-    ColorantComponent.prototype.filter = function (code, name) {
+    ColorantComponent.prototype.filter = function () {
         var _this = this;
         this.colourantService.getListItems().subscribe(function (data) {
             _this.sortedData = data;
@@ -2378,7 +2454,7 @@ var ColorantComponent = /** @class */ (function () {
         this.name = null;
     };
     ColorantComponent.prototype.sortData = function (sort) {
-        this.filter(null, null);
+        this.filter();
     };
     ColorantComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -3073,18 +3149,28 @@ var USER_ROLE = {
 /*!***********************************************!*\
   !*** ./src/app/models/dispense.task.model.ts ***!
   \***********************************************/
-/*! exports provided: DispenseDataModel, DispenseStepDataModel, DispenseTaskStepModel, DispenseTaskModel, MachineFormulaProductBaseLogModel */
+/*! exports provided: MAP_DISPENSE_TASK_STATE, MAP_DISPENSE_TASK_STEP_TYPE, DispenseDataModel, DispenseStepDataModel, DispenseTaskStepModel, DispenseTaskModel, MachineFormulaProductBaseLogModel */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MAP_DISPENSE_TASK_STATE", function() { return MAP_DISPENSE_TASK_STATE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MAP_DISPENSE_TASK_STEP_TYPE", function() { return MAP_DISPENSE_TASK_STEP_TYPE; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DispenseDataModel", function() { return DispenseDataModel; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DispenseStepDataModel", function() { return DispenseStepDataModel; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DispenseTaskStepModel", function() { return DispenseTaskStepModel; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DispenseTaskModel", function() { return DispenseTaskModel; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MachineFormulaProductBaseLogModel", function() { return MachineFormulaProductBaseLogModel; });
-/* harmony import */ var _services_dispensetask_dispensetask_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../services/dispensetask/dispensetask.service */ "./src/app/services/dispensetask/dispensetask.service.ts");
-
+var MAP_DISPENSE_TASK_STATE = {
+    WAITING: 'WAITING',
+    IN_PROGRESS: 'START',
+    DONE: 'DONE',
+};
+var MAP_DISPENSE_TASK_STEP_TYPE = {
+    PREPARE: 'prepare',
+    PUMPING: 'pumping',
+    FINISHED: 'finished'
+};
 var DispenseDataModel = /** @class */ (function () {
     function DispenseDataModel(formulaProductBase, productBaseCan, canSize, numberOfCan) {
         this._formulaProductBase = formulaProductBase;
@@ -3168,7 +3254,7 @@ var DispenseTaskStepModel = /** @class */ (function () {
         this._type = type;
         this._taskData = taskData;
         this._callBackFunction = callBackFunction;
-        this._status = _services_dispensetask_dispensetask_service__WEBPACK_IMPORTED_MODULE_0__["MAP_DISPENSE_TASK_STATE"].WAITING;
+        this._status = MAP_DISPENSE_TASK_STATE.WAITING;
         this._totalProcess = 2000;
     }
     Object.defineProperty(DispenseTaskStepModel.prototype, "taskId", {
@@ -3280,7 +3366,7 @@ var DispenseTaskModel = /** @class */ (function () {
         this._childrenTask = childrenTask;
         this._taskData = taskData;
         this._callBackFunction = callBackFunction;
-        this._status = _services_dispensetask_dispensetask_service__WEBPACK_IMPORTED_MODULE_0__["MAP_DISPENSE_TASK_STATE"].WAITING;
+        this._status = MAP_DISPENSE_TASK_STATE.WAITING;
         this._totalProcess = 2000;
     }
     Object.defineProperty(DispenseTaskModel.prototype, "taskId", {
@@ -3489,6 +3575,16 @@ __webpack_require__.r(__webpack_exports__);
 var FormulaModel = /** @class */ (function () {
     function FormulaModel() {
     }
+    Object.defineProperty(FormulaModel.prototype, "baseOnCan", {
+        get: function () {
+            return this._baseOnCan;
+        },
+        set: function (value) {
+            this._baseOnCan = value;
+        },
+        enumerable: true,
+        configurable: true
+    });
     Object.defineProperty(FormulaModel.prototype, "formulaId", {
         get: function () {
             return this._formulaId;
@@ -4000,6 +4096,16 @@ var MachineModel = /** @class */ (function () {
         enumerable: true,
         configurable: true
     });
+    Object.defineProperty(MachineModel.prototype, "warningQuantity", {
+        get: function () {
+            return this._warningQuantity;
+        },
+        set: function (value) {
+            this._warningQuantity = value;
+        },
+        enumerable: true,
+        configurable: true
+    });
     return MachineModel;
 }());
 
@@ -4425,7 +4531,7 @@ var DashboardService = /** @class */ (function () {
                 else {
                     for (var _i = 0, listMachineColourants_1 = listMachineColourants; _i < listMachineColourants_1.length; _i++) {
                         var colourantMachine = listMachineColourants_1[_i];
-                        if (colourantMachine.quantity < machine.minQuantity) {
+                        if (colourantMachine.quantity < machine.warningQuantity) {
                             isLowColourant = true;
                         }
                     }
@@ -4458,17 +4564,16 @@ var DashboardService = /** @class */ (function () {
 /*!***************************************************************!*\
   !*** ./src/app/services/dispensetask/dispensetask.service.ts ***!
   \***************************************************************/
-/*! exports provided: MAP_DISPENSE_TASK_STATE, MAP_DISPENSE_TASK_STEP_TYPE, DispenseTaskService */
+/*! exports provided: DispenseTaskService */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MAP_DISPENSE_TASK_STATE", function() { return MAP_DISPENSE_TASK_STATE; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MAP_DISPENSE_TASK_STEP_TYPE", function() { return MAP_DISPENSE_TASK_STEP_TYPE; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DispenseTaskService", function() { return DispenseTaskService; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _machine_machine_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../machine/machine.service */ "./src/app/services/machine/machine.service.ts");
 /* harmony import */ var _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../utils/convert-models-utils */ "./src/app/utils/convert-models-utils.ts");
+/* harmony import */ var _models_dispense_task_model__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../models/dispense.task.model */ "./src/app/models/dispense.task.model.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4481,16 +4586,7 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
-var MAP_DISPENSE_TASK_STATE = {
-    WAITING: 'WAITING',
-    IN_PROGRESS: 'START',
-    DONE: 'DONE',
-};
-var MAP_DISPENSE_TASK_STEP_TYPE = {
-    PREPARE: 'prepare',
-    PUMPING: 'pumping',
-    FINISHED: 'finished'
-};
+
 var DispenseTaskService = /** @class */ (function () {
     function DispenseTaskService(machineService) {
         this.machineService = machineService;
@@ -4498,7 +4594,7 @@ var DispenseTaskService = /** @class */ (function () {
         this.currentTaskStep = null;
         this.listDispenseTask = [];
         this.currentTask = null;
-        this.status = MAP_DISPENSE_TASK_STATE.WAITING;
+        this.status = _models_dispense_task_model__WEBPACK_IMPORTED_MODULE_3__["MAP_DISPENSE_TASK_STATE"].WAITING;
     }
     DispenseTaskService.prototype.runDispenseTask = function (_dispenseTask) {
         this.listDispenseTask.push(_dispenseTask);
@@ -4520,7 +4616,7 @@ var DispenseTaskService = /** @class */ (function () {
         function getInProgressStepData(_dispenseTask) {
             for (var _i = 0, _a = _dispenseTask.childrenTask; _i < _a.length; _i++) {
                 var step = _a[_i];
-                if (step.status === MAP_DISPENSE_TASK_STATE.WAITING) {
+                if (step.status === _models_dispense_task_model__WEBPACK_IMPORTED_MODULE_3__["MAP_DISPENSE_TASK_STATE"].WAITING) {
                     return step;
                 }
             }
@@ -4529,29 +4625,29 @@ var DispenseTaskService = /** @class */ (function () {
     };
     DispenseTaskService.prototype.notifyInDoneDispenseStepAction = function () {
         if (this.currentTaskStep != null) {
-            if (this.currentTaskStep.type === MAP_DISPENSE_TASK_STEP_TYPE.PREPARE) {
+            if (this.currentTaskStep.type === _models_dispense_task_model__WEBPACK_IMPORTED_MODULE_3__["MAP_DISPENSE_TASK_STEP_TYPE"].PREPARE) {
                 // do nothing
-                this.currentTaskStep.status = MAP_DISPENSE_TASK_STATE.DONE;
+                this.currentTaskStep.status = _models_dispense_task_model__WEBPACK_IMPORTED_MODULE_3__["MAP_DISPENSE_TASK_STATE"].DONE;
                 if (this.currentTaskStep.callBackFunction != null) {
                     this.currentTaskStep.callBackFunction(this.currentTask, this.currentTaskStep);
                 }
                 this.processDispenseTask();
             }
-            else if (this.currentTaskStep.type === MAP_DISPENSE_TASK_STEP_TYPE.PUMPING) {
-                this.currentTaskStep.status = MAP_DISPENSE_TASK_STATE.DONE;
+            else if (this.currentTaskStep.type === _models_dispense_task_model__WEBPACK_IMPORTED_MODULE_3__["MAP_DISPENSE_TASK_STEP_TYPE"].PUMPING) {
+                this.currentTaskStep.status = _models_dispense_task_model__WEBPACK_IMPORTED_MODULE_3__["MAP_DISPENSE_TASK_STATE"].DONE;
                 this.recordDispenseTaskLog(this.currentTaskStep.type, this.currentTaskStep);
                 if (this.currentTaskStep.callBackFunction != null) {
                     this.currentTaskStep.callBackFunction(this.currentTask, this.currentTaskStep);
                 }
                 this.processDispenseTask();
             }
-            else if (this.currentTaskStep.type === MAP_DISPENSE_TASK_STEP_TYPE.FINISHED) {
-                this.updateDispenseTaskStatus(MAP_DISPENSE_TASK_STATE.DONE, this.currentTask.taskId, this.currentTask.taskData.formulaProductBase, this.currentTask.taskData.canSize);
+            else if (this.currentTaskStep.type === _models_dispense_task_model__WEBPACK_IMPORTED_MODULE_3__["MAP_DISPENSE_TASK_STEP_TYPE"].FINISHED) {
+                this.updateDispenseTaskStatus(_models_dispense_task_model__WEBPACK_IMPORTED_MODULE_3__["MAP_DISPENSE_TASK_STATE"].DONE, this.currentTask.taskId, this.currentTask.taskData.formulaProductBase, this.currentTask.taskData.canSize);
             }
         }
     };
     DispenseTaskService.prototype.recordDispenseTaskLog = function (type, data) {
-        if (type === MAP_DISPENSE_TASK_STEP_TYPE.PUMPING) {
+        if (type === _models_dispense_task_model__WEBPACK_IMPORTED_MODULE_3__["MAP_DISPENSE_TASK_STEP_TYPE"].PUMPING) {
             this.machineService.subtractionColourantMachine(data.taskData.colorant, data.taskData.quantity);
         }
     };
@@ -4559,9 +4655,9 @@ var DispenseTaskService = /** @class */ (function () {
         var _this = this;
         this.machineService.recordDispenseFormulaProductBase(type, taskId, formulaProductBase, canSize).subscribe(function (datas) {
             // update current data
-            _this.currentTaskStep.status = MAP_DISPENSE_TASK_STATE.DONE;
-            _this.currentTask.status = MAP_DISPENSE_TASK_STATE.DONE;
-            _this.status = MAP_DISPENSE_TASK_STATE.WAITING;
+            _this.currentTaskStep.status = _models_dispense_task_model__WEBPACK_IMPORTED_MODULE_3__["MAP_DISPENSE_TASK_STATE"].DONE;
+            _this.currentTask.status = _models_dispense_task_model__WEBPACK_IMPORTED_MODULE_3__["MAP_DISPENSE_TASK_STATE"].DONE;
+            _this.status = _models_dispense_task_model__WEBPACK_IMPORTED_MODULE_3__["MAP_DISPENSE_TASK_STATE"].WAITING;
             if (_this.currentTaskStep.callBackFunction != null) {
                 _this.currentTaskStep.callBackFunction(_this.currentTask, _this.currentTaskStep);
             }
@@ -4918,61 +5014,6 @@ var MachineService = /** @class */ (function () {
         };
         return this.http.post(_environments_environment__WEBPACK_IMPORTED_MODULE_5__["environment"].settings.serverendpoint + 'machine_formula/record', dt);
     };
-    // validateDispenseTaskBeforeProcess(listFormulaColourant: FormulaColourantModel[] | null, numberCan: number) {
-    //   return this.http.get(environment.settings.serverendpoint + 'machine/getColourants/' + this.machine.machineId).pipe(
-    //     map((data: Array<any>) => {
-    //       const currentListColourantMachine = [];
-    //       if (data && data.length > 0) {
-    //         for (const item of data) {
-    //           currentListColourantMachine.push(ConvertModelUtils.convertToMachineColourant(item));
-    //         }
-    //       }
-    //
-    //       return currentListColourantMachine;
-    //
-    //       let enoughColorDataToDispenseOneCan = true;
-    //       let enoughColorDataToDispenseAction = true;
-    //
-    //       for (const _item of listFormulaColourant) {
-    //         const validColorForOneCan = currentListColourantMachine.filter((_cmitem) => {
-    //           return _cmitem.colorant.colourantId === _item.colourant.colourantId && _item.quantity > _cmitem.quantity;
-    //         });
-    //
-    //         if (validColorForOneCan.length === 0) {
-    //           enoughColorDataToDispenseOneCan = false;
-    //           enoughColorDataToDispenseAction = false;
-    //         }
-    //
-    //         if (enoughColorDataToDispenseOneCan) {
-    //           const validColorForAction = currentListColourantMachine.filter((_cmitem) => {
-    //             return _cmitem.colorant.colourantId === _item.colourant.colourantId && _item.quantity > _cmitem.quantity * numberCan;
-    //           });
-    //
-    //           if (validColorForAction.length === 0) {
-    //             enoughColorDataToDispenseAction = false;
-    //           }
-    //         }
-    //       }
-    //
-    //       if (enoughColorDataToDispenseOneCan) {
-    //         return {
-    //           success: true,
-    //           errorMessage: ''
-    //         };
-    //       } else {
-    //         return {
-    //           success: false,
-    //           errorMessage: `Don't have enough colourant to dispense formula !!!!`
-    //         };
-    //       }
-    //     }), catchError(e => {
-    //       return {
-    //         success: false,
-    //         errorMessage: `Cannot load data from serve !!!!`
-    //       };
-    //     })
-    //   );
-    // }
     MachineService.prototype.findAllDispenseTask = function () {
         return this.http.get(_environments_environment__WEBPACK_IMPORTED_MODULE_5__["environment"].settings.serverendpoint + 'machine_formula/findAll/' + this.machine.machineId).pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (data) {
             var listDispenseTaskLog = [];
@@ -4989,6 +5030,43 @@ var MachineService = /** @class */ (function () {
     };
     MachineService.prototype.findDispenseTaskById = function (taskId) {
         return this.http.get(_environments_environment__WEBPACK_IMPORTED_MODULE_5__["environment"].settings.serverendpoint + 'machine_formula/findById/' + taskId);
+    };
+    /**
+     * Validate số lượng colourant của machine có còn đủ để pha màu với cansize này hay không
+     * listFormulaColorant: là default colourant khi chọn formula, chưa nhân cansize
+     * canSize: số lít
+     */
+    MachineService.prototype.validateQuantityColourant = function (canSize, listFormulaColorant, formular) {
+        var machineId = this.machine.machineId;
+        var baseOnCan = formular.baseOnCan ? formular.baseOnCan : 1; // nếu undefined thì default là 1;
+        return this.http.get(_environments_environment__WEBPACK_IMPORTED_MODULE_5__["environment"].settings.serverendpoint + 'machine/getColourants/' + machineId).pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (mColours) {
+            // list colourant hiện có của machine
+            var res = []; // kết quả trả về, danh sách màu không đủ
+            var mapExistColours = {}; // tạo map colour với key là colourcode, value là số lượng còn lại
+            mColours.map(function (c) {
+                mapExistColours[c.colourant.colourantCode] = c.quantity;
+            });
+            listFormulaColorant.map(function (lf) {
+                var colourCode = lf.colourant.colourantCode;
+                // số lượng mong đợi: lấy số ml cần có, chia cho baseOnCan của formula và nhân cho số lit cansize
+                var expectQuantity = ((lf.quantity / baseOnCan) * canSize).toFixed(2);
+                // nếu trong máy không còn màu này, hoặc còn nhưng nhỏ hơn số lượng mong đợi
+                if (!mapExistColours[colourCode] || mapExistColours[colourCode] < expectQuantity) {
+                    res.push(colourCode);
+                }
+            });
+            return res;
+        }));
+    };
+    MachineService.prototype.updateSettingMachine = function (minQuantity, warningQuantity) {
+        var dt = {
+            machineId: this.machine.machineId,
+            minQuantity: minQuantity,
+            warningQuantity: warningQuantity,
+        };
+        return this.http.post(_environments_environment__WEBPACK_IMPORTED_MODULE_5__["environment"].settings.serverendpoint + 'machine/update', dt).pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (data) {
+            return _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_3__["default"].convertToMachineModel(data);
+        }));
     };
     MachineService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
@@ -5188,10 +5266,12 @@ var UserService = /** @class */ (function () {
                 _this.cookieService.set_cookie('username', userName, 1);
                 _this.cookieService.set_cookie('password', password, 1);
                 _this.router.navigate(['/dashboard']);
+                _this.errorMessage = null;
             }
             else {
                 _this.userDTO = null;
                 _this.isLogin = false;
+                _this.errorMessage = 'Username or Password is incorrect! Please try again';
                 alert('Username or Password is incorrect! Please try again');
             }
         })).subscribe();
@@ -5496,6 +5576,7 @@ var ConvertModelUtils = /** @class */ (function () {
         formula.collection = ConvertModelUtils.convertCollectionModel(object.collection);
         formula.createdDate = object.createdDate;
         formula.createBy = object.createBy;
+        formula.baseOnCan = object.baseOnCan;
         return formula;
     };
     ConvertModelUtils.convertToProductObject = function (object) {
@@ -5602,6 +5683,7 @@ var ConvertModelUtils = /** @class */ (function () {
         machine.code = object.code;
         machine.name = object.name;
         machine.minQuantity = object.minQuantity;
+        machine.warningQuantity = object.warningQuantity;
         machine.maxQuantity = object.maxQuantity;
         return machine;
     };
@@ -5649,8 +5731,9 @@ __webpack_require__.r(__webpack_exports__);
 var environment = {
     production: false,
     settings: {
-        // serverendpoint: 'http://localhost:8080/server/api/',
-        serverendpoint: 'http://ec2-34-227-171-6.compute-1.amazonaws.com:8081/demoson/server/api/',
+        serverendpoint: 'http://localhost:8080/server/api/',
+        // serverendpoint: 'http://ec2-34-227-17
+        // 1-6.compute-1.amazonaws.com:8081/demoson/server/api/',
         dateFormat: 'dd/MM/yyyy'
     }
 };
