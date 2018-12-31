@@ -167,4 +167,9 @@ export class MachineService {
       })
     );
   }
+
+  updateMachineLocal(machine: MachineModel) {
+    this.machine = machine;
+    this.userService.updateMachineLocal(this.machine);
+  }
 }

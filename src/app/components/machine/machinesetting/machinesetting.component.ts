@@ -158,6 +158,7 @@ export class MachineSettingComponent implements OnInit {
 
       this.initMinQuantity = machineData.minQuantity;
       this.initWarningQuantity = machineData.warningQuantity;
+      this.machineService.updateMachineLocal(this.machine);
     });
   }
 

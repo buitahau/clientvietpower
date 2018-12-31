@@ -2168,6 +2168,7 @@ var MachineSettingComponent = /** @class */ (function () {
             _this.warningQuantity = machineData.warningQuantity;
             _this.initMinQuantity = machineData.minQuantity;
             _this.initWarningQuantity = machineData.warningQuantity;
+            _this.machineService.updateMachineLocal(_this.machine);
         });
     };
     MachineSettingComponent.prototype.fillByPercent = function (percent) {
@@ -5068,6 +5069,10 @@ var MachineService = /** @class */ (function () {
             return _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_3__["default"].convertToMachineModel(data);
         }));
     };
+    MachineService.prototype.updateMachineLocal = function (machine) {
+        this.machine = machine;
+        this.userService.updateMachineLocal(this.machine);
+    };
     MachineService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
             providedIn: 'root'
@@ -5288,6 +5293,11 @@ var UserService = /** @class */ (function () {
         this.isLogin = false;
         this.cookieService.delete_cookie('username');
         this.cookieService.delete_cookie('token');
+    };
+    UserService.prototype.updateMachineLocal = function (machine) {
+        if (this.userDTO != null) {
+            this.userDTO.machine = machine;
+        }
     };
     UserService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({

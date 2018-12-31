@@ -5,7 +5,7 @@ import {map} from 'rxjs/internal/operators';
 import {environment} from '../../../environments/environment';
 import {HttpService} from '../../shared/http/services/http.service';
 import ConvertModelUtils from '../../utils/convert-models-utils';
-import {UserModel} from '../../models/user.model';
+import {MachineModel, UserModel} from '../../models/user.model';
 import {MachineService} from '../machine/machine.service';
 
 @Injectable({
@@ -66,5 +66,11 @@ export class UserService {
     this.isLogin = false;
     this.cookieService.delete_cookie('username');
     this.cookieService.delete_cookie('token');
+  }
+
+  updateMachineLocal(machine: MachineModel) {
+    if (this.userDTO != null) {
+      this.userDTO.machine = machine;
+    }
   }
 }
