@@ -20,10 +20,12 @@ export class ColorantComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.filter(this.code, this.name);
+    this.code = null;
+    this.name = null;
+    this.filter();
   }
 
-  filter(code: string, name: string) {
+  filter() {
     this.colourantService.getListItems().subscribe((data: any) => {
       this.sortedData = data;
     });
@@ -35,6 +37,6 @@ export class ColorantComponent implements OnInit {
   }
 
   sortData(sort: Sort) {
-    this.filter(null, null);
+    this.filter();
   }
 }

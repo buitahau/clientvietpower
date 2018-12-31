@@ -105,6 +105,10 @@ export class FormulaComponent implements OnInit {
     this.refresh();
   }
 
+  reset() {
+
+  }
+
   refresh() {
     let resFilter = this.listOriginal;
     if (this.filter.formulaId) {
