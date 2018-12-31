@@ -21,7 +21,7 @@ export class DashboardService {
           isLowColourant = true;
         } else {
           for (const colourantMachine of listMachineColourants) {
-            if (colourantMachine.quantity < machine.minQuantity) {
+            if (colourantMachine.quantity < machine.warningQuantity) {
               isLowColourant = true;
             }
           }

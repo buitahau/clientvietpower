@@ -5,7 +5,7 @@ import {map} from 'rxjs/internal/operators';
 import {environment} from '../../../environments/environment';
 import {HttpService} from '../../shared/http/services/http.service';
 import ConvertModelUtils from '../../utils/convert-models-utils';
-import {MachineColourantModel, MachineModel, UserModel} from '../../models/user.model';
+import {UserModel} from '../../models/user.model';
 import {MachineService} from '../machine/machine.service';
 
 @Injectable({
