@@ -4,7 +4,7 @@ import {CollectionService} from '../../../services/collection/collection.service
 import {CollectionModel} from '../../../models/collection';
 import {ModalService} from '../../../services/boostrap/modal.service';
 import {MachineService} from '../../../services/machine/machine.service';
-import {MachineModel} from '../../../models/user.model';
+import {MachineModel, ResponseMessageModel} from '../../../models/user.model';
 
 
 @Component({
@@ -14,12 +14,14 @@ import {MachineModel} from '../../../models/user.model';
 })
 export class CollectionComponent implements OnInit {
   machine: MachineModel = null;
+  collectionId: number = null;
   dbItem: CollectionModel = null;
   collectionCode: string = null;
   collectionName: string = null;
 
   listItems: Array<any>;
   sortedData: CollectionModel[] = null;
+  responseMessage: ResponseMessageModel = null;
 
   constructor(private collectionService: CollectionService, private modalService: ModalService) {
 
@@ -67,10 +69,43 @@ export class CollectionComponent implements OnInit {
     }, 100);
   }
 
-  updateOrSavingCollection(): void {
-    this.collectionService.updateOrSavingCollection(this.dbItem).subscribe((datas: any) => {
-      this.dbItem = datas;
+  viewCollection(collectionId: number): void {
+    this.collectionService.findById(collectionId).subscribe((data: any) => {
+      this.dbItem = data;
+      setTimeout(() => {
+        this.openModal('view-detail-collection');
+      }, 100);
     });
+  }
+
+  confirmDeleteCollection(collectionId) {
+    this.collectionId = collectionId;
+
+    setTimeout(() => {
+      this.openModal('confirm-remove-collection-model');
+    }, 100);
+  }
+
+  deleteCollection(collectionId: number): void {
+    this.collectionService.deleteCollection(collectionId).subscribe((data: any) => {
+      this.responseMessage = data;
+      this.collectionId = null;
+      this.closeModal('confirm-remove-collection-model');
+      this.fetchData();
+    });
+  }
+
+  updateOrSavingCollection(): void {
+    this.collectionService.updateOrSavingCollection(this.dbItem).subscribe((data: any) => {
+      this.dbItem = data;
+      this.closeModal('view-detail-collection');
+      this.dbItem = null;
+      this.fetchData();
+    });
+  }
+
+  clearResponseMessage(): void {
+    this.responseMessage = null;
   }
 
   openModal(id: string) {

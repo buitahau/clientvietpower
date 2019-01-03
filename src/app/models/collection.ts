@@ -1,9 +1,11 @@
+import {MachineModel} from './user.model';
 
 export class CollectionModel {
   private _collectionId: number;
   private _collectionName: string;
   private _description: string;
   private _createdDate: string;
+  private _machine: MachineModel;
 
   get collectionId(): number {
     return this._collectionId;
@@ -35,5 +37,13 @@ export class CollectionModel {
 
   set createdDate(value: string) {
     this._createdDate = value;
+  }
+
+  get machine(): MachineModel {
+    return this._machine;
+  }
+
+  set machine(value: MachineModel) {
+    this._machine = value;
   }
 }

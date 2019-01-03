@@ -156,3 +156,25 @@ export class MachineColourantModel {
     this._quantity = value;
   }
 }
+
+
+export class ResponseMessageModel {
+  private _type: string;
+  private _message: string;
+
+  get type(): string {
+    return this._type;
+  }
+
+  set type(value: string) {
+    this._type = value;
+  }
+
+  get message(): string {
+    return this._message;
+  }
+
+  set message(value: string) {
+    this._message = value;
+  }
+}

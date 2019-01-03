@@ -31,7 +31,7 @@ import {
   MatFormFieldModule,
   // MatTabsModule,
   // MatToolbarModule,
-  // MatTooltipModule,
+  MatTooltipModule,
 } from '@angular/material';
 
 
@@ -67,7 +67,7 @@ import {
     MatFormFieldModule,
     // MatTabsModule,
     // MatToolbarModule,
-    // MatTooltipModule,
+    MatTooltipModule,
     // MatNativeDateModule,
   ],
   exports: [
@@ -101,7 +101,7 @@ import {
     MatFormFieldModule,
     // MatTabsModule,
     // MatToolbarModule,
-    // MatTooltipModule,
+    MatTooltipModule,
     // MatNativeDateModule,
   ]
 })

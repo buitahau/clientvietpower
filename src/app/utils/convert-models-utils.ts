@@ -5,7 +5,7 @@ import {ProductBaseModel} from '../models/product_base';
 import {ProductModel} from '../models/product';
 import {BaseModel} from '../models/base';
 import {ColorantModel} from '../models/colorant';
-import {MachineColourantModel, MachineModel, RoleModel, UserModel} from '../models/user.model';
+import {MachineColourantModel, MachineModel, ResponseMessageModel, RoleModel, UserModel} from '../models/user.model';
 import {MachineFormulaProductBaseLogModel} from '../models/dispense.task.model';
 
 export interface TaskInterface {
@@ -93,6 +93,7 @@ export default class ConvertModelUtils {
     collection.collectionId = object.collectionId;
     collection.collectionName = object.collectionName;
     collection.description = object.description;
+    collection.machine = object.machine != null ? ConvertModelUtils.convertToMachineModel(object.machine) : null;
     return collection;
   }
 
@@ -176,6 +177,13 @@ export default class ConvertModelUtils {
     item.createdDate = object.createdDate;
     item.finishedDate = object.finishedDate;
     item.status = object.status;
+    return item;
+  }
+
+  static convertToResponseMessageModel(object: any): ResponseMessageModel {
+    const item = new ResponseMessageModel();
+    item.type = object.type;
+    item.message = object.message;
     return item;
   }
 }

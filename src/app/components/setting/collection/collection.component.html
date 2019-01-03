@@ -8,6 +8,21 @@
       </div>
 
       <div class="card-body">
+        <ng-container *ngIf="responseMessage != null && responseMessage.type == 'success'">
+          <div class="alert alert-success">
+            <button class="close" data-dismiss="alert" aria-label="close" (click)="clearResponseMessage()">&times;</button>
+            {{responseMessage.message}}
+          </div>
+        </ng-container>
+
+        <ng-container *ngIf="responseMessage != null && responseMessage.type == 'error'">
+          <div class="alert alert-danger">
+            <button class="close" data-dismiss="alert" aria-label="close" (click)="clearResponseMessage()">&times;</button>
+            {{responseMessage.message}}
+          </div>
+        </ng-container>
+
+
         <div class="table-responsive">
           <table class="table table-bordered" matSort (matSortChange)="sortData($event)">
             <tr>
@@ -15,6 +30,7 @@
               <th mat-sort-header="description">Description</th>
               <th mat-sort-header="createdDate">Created Date</th>
               <th mat-sort-header="createBy">Created By</th>
+              <th class="text-center">Action</th>
             </tr>
 
             <tr *ngFor="let item of listItems">
@@ -22,8 +38,23 @@
               <td>{{item.description}}</td>
               <td>{{item.createdDate |  date: 'dd/MM/yyyy'}}</td>
               <td>
-                <p *ngIf="item.createBy == null">System</p>
-                <p *ngIf="item.createBy != null">Me</p>
+                <p *ngIf="item.machine == null">System</p>
+                <p *ngIf="item.machine != null">Me</p>
+              </td>
+              <td class="text-center">
+                <ng-container *ngIf="item.machine != null && item.machine.machineId != null && item.machine.machineId > 0">
+                  <button mat-raised-button
+                          matTooltip="Edit Collection"
+                          aria-label="Edit Collection"
+                          (click)="viewCollection(item.collectionId)">
+                          <i class="fas fa-edit"></i>
+                  </button> <button mat-raised-button
+                          matTooltip="Delete Collection"
+                          aria-label="Delete Collection"
+                          (click)="confirmDeleteCollection(item.collectionId)">
+                    <i class="fas fa-trash-alt"></i>
+                  </button>
+                </ng-container>
               </td>
             </tr>
           </table>
@@ -69,6 +100,30 @@
       <div class="modal-footer">
         <button type="button" class="btn btn-default" (click)="closeModal('view-detail-collection')">Cancel</button>
         <button type="button" class="btn btn-primary" (click)="updateOrSavingCollection()">Save</button>
+      </div>
+    </div>
+  </pp-modal>
+</ng-container>
+
+
+
+<ng-container *ngIf="collectionId != null && collectionId > 0">
+  <pp-modal id="confirm-remove-collection-model" class="modal confirm-remove-collection-model">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Confirm</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="closeModal('confirm-remove-collection-model')">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        Do you want to delete this collection ?
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" (click)="closeModal('view-detail-collection')">Cancel</button>
+        <button type="button" class="btn btn-primary" (click)="deleteCollection(collectionId)">Ok</button>
       </div>
     </div>
   </pp-modal>

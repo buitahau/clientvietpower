@@ -54,4 +54,12 @@ export class CollectionService {
       })
     );
   }
+
+  deleteCollection(collectionId: number) {
+    return this.http.get(environment.settings.serverendpoint + 'collection/delete/' + collectionId).pipe(
+      map((data: any) => {
+        return ConvertModelUtils.convertToResponseMessageModel(data);
+      })
+    );
+  }
 }
