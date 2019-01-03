@@ -5,8 +5,8 @@ import {map} from 'rxjs/internal/operators';
 import {environment} from '../../../environments/environment';
 import {HttpService} from '../../shared/http/services/http.service';
 import ConvertModelUtils from '../../utils/convert-models-utils';
-import {MachineModel, UserModel} from '../../models/user.model';
-import {MachineService} from '../machine/machine.service';
+import {UserModel} from '../../models/user.model';
+import {StoreService} from '../store/store.service';
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +17,7 @@ export class UserService {
   userDTO: UserModel = null;
   errorMessage: string;
 
-  constructor(private http: HttpService, private router: Router, private cookieService: CookieService) {
+  constructor(private http: HttpService, private router: Router, private cookieService: CookieService, private storeService: StoreService) {
     this.isAuthenticated();
   }
 
@@ -38,6 +38,8 @@ export class UserService {
         if (datas != null) {
           this.isLogin = true;
           this.userDTO = ConvertModelUtils.convertToUserModel(datas);
+          this.storeService.updateLoginUserData(this.userDTO);
+          this.storeService.updateMachineData(this.userDTO.machine);
           this.cookieService.set_cookie('username', userName, 1);
           this.cookieService.set_cookie('password', password, 1);
           this.router.navigate(['/dashboard']);
@@ -66,11 +68,5 @@ export class UserService {
     this.isLogin = false;
     this.cookieService.delete_cookie('username');
     this.cookieService.delete_cookie('token');
-  }
-
-  updateMachineLocal(machine: MachineModel) {
-    if (this.userDTO != null) {
-      this.userDTO.machine = machine;
-    }
   }
 }

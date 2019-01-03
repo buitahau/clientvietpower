@@ -230,6 +230,13 @@ footer.sticky-footer{
   }
 }
 
+.view-detail-collection{
+  .modal-dialog{
+    width: 700px !important;
+    max-width: 700px !important;
+  }
+}
+
 .bar-code-sample{
   display: inline-block;
   width: 75 / 728 * 1572px; //728px

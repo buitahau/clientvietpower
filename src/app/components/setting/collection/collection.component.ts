@@ -2,6 +2,9 @@ import {Component, OnInit} from '@angular/core';
 import {Sort} from '@angular/material';
 import {CollectionService} from '../../../services/collection/collection.service';
 import {CollectionModel} from '../../../models/collection';
+import {ModalService} from '../../../services/boostrap/modal.service';
+import {MachineService} from '../../../services/machine/machine.service';
+import {MachineModel} from '../../../models/user.model';
 
 
 @Component({
@@ -10,14 +13,15 @@ import {CollectionModel} from '../../../models/collection';
   styleUrls: ['./collection.component.scss']
 })
 export class CollectionComponent implements OnInit {
-
+  machine: MachineModel = null;
+  dbItem: CollectionModel = null;
   collectionCode: string = null;
   collectionName: string = null;
 
   listItems: Array<any>;
   sortedData: CollectionModel[] = null;
 
-  constructor(private collectionService: CollectionService) {
+  constructor(private collectionService: CollectionService, private modalService: ModalService) {
 
   }
 
@@ -53,5 +57,27 @@ export class CollectionComponent implements OnInit {
     this.collectionService.getListItems().subscribe((data: any) => {
       this.listItems = data;
     });
+  }
+
+  addCollection(): void {
+    this.dbItem = new CollectionModel();
+
+    setTimeout(() => {
+      this.openModal('view-detail-collection');
+    }, 100);
+  }
+
+  updateOrSavingCollection(): void {
+    this.collectionService.updateOrSavingCollection(this.dbItem).subscribe((datas: any) => {
+      this.dbItem = datas;
+    });
+  }
+
+  openModal(id: string) {
+    this.modalService.open(id);
+  }
+
+  closeModal(id: string) {
+    this.modalService.close(id);
   }
 }

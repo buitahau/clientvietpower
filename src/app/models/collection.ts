@@ -4,7 +4,6 @@ export class CollectionModel {
   private _collectionName: string;
   private _description: string;
   private _createdDate: string;
-  private _createBy: any;
 
   get collectionId(): number {
     return this._collectionId;
@@ -36,13 +35,5 @@ export class CollectionModel {
 
   set createdDate(value: string) {
     this._createdDate = value;
-  }
-
-  get createBy(): any {
-    return this._createBy;
-  }
-
-  set createBy(value: any) {
-    this._createBy = value;
   }
 }

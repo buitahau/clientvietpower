@@ -1,7 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpService} from '../../shared/http/services/http.service';
-import {MachineColourantModel, MachineModel, UserModel} from '../../models/user.model';
-import {UserService} from '../user/user.service';
+import {MachineColourantModel, MachineModel} from '../../models/user.model';
 import ConvertModelUtils from '../../utils/convert-models-utils';
 import {catchError, map} from 'rxjs/internal/operators';
 import {environment} from '../../../environments/environment';
@@ -9,7 +8,7 @@ import {Router} from '@angular/router';
 import {ColorantModel} from '../../models/colorant';
 import {FormulaColourantModel, FormulaProductBaseModel} from '../../models/formula_product_base';
 import {FormulaModel} from '../../models/formula';
-import {fromPromise} from 'rxjs/internal-compatibility';
+import {StoreService} from '../store/store.service';
 
 @Injectable({
   providedIn: 'root'
@@ -18,12 +17,12 @@ export class MachineService {
   machine: MachineModel = null;
   listMachineColourants: MachineColourantModel[];
 
-  constructor(private http: HttpService, private userService: UserService, private router: Router) {
+  constructor(private http: HttpService, private storeService: StoreService, private router: Router) {
     this.fetchData();
   }
 
   fetchData() {
-    this.machine = this.userService.getLoginUser().machine;
+    this.machine = this.storeService.getMachineData();
 
     if (this.machine != null) {
       this.fetchDataFromServer().subscribe((data: any) => {
@@ -33,6 +32,8 @@ export class MachineService {
   }
 
   fetchDataFromServer() {
+   this.getCurrentMachine();
+
     return this.http.get(environment.settings.serverendpoint + 'machine/getColourants/' + this.machine.machineId).pipe(
       map((data: Array<any>) => {
         const result = [];
@@ -53,6 +54,9 @@ export class MachineService {
   }
 
   getCurrentMachine() {
+    if (this.machine == null) {
+      this.machine = this.storeService.getMachineData();
+    }
     return this.machine;
   }
 
@@ -80,6 +84,7 @@ export class MachineService {
 
   subtractionColourantMachine(colorant: ColorantModel, quantity: number) {
     const machine = this.getCurrentMachine();
+
     const dt = {
       machine: {machineId: machine.machineId},
       colourant: {colourantId: colorant.colourantId},
@@ -89,8 +94,8 @@ export class MachineService {
   }
 
   recordDispenseFormulaProductBase(status: string, taskId, formulaProductBase: FormulaProductBaseModel, quantity: number) {
-    const machine = this.getCurrentMachine();
-    const user = this.userService.getLoginUser();
+    const machine = this.storeService.getMachineData();
+    const user = this.storeService.getLoginUserData();
 
     const dt = {
       machineFormulaProductBaseId: taskId,
@@ -105,6 +110,8 @@ export class MachineService {
   }
 
   findAllDispenseTask() {
+    this.getCurrentMachine();
+
     return this.http.get(environment.settings.serverendpoint + 'machine_formula/findAll/' + this.machine.machineId).pipe(
       map((data: Array<any>) => {
         const listDispenseTaskLog = [];
@@ -130,6 +137,8 @@ export class MachineService {
    * canSize: số lít
    */
   validateQuantityColourant(canSize: number, listFormulaColorant: FormulaColourantModel[], formular: FormulaModel) {
+    this.getCurrentMachine();
+
     const machineId = this.machine.machineId;
     const baseOnCan = formular.baseOnCan ? formular.baseOnCan : 1; // nếu undefined thì default là 1;
     return this.http.get(environment.settings.serverendpoint + 'machine/getColourants/' + machineId).pipe(
@@ -155,6 +164,8 @@ export class MachineService {
   }
 
   updateSettingMachine(minQuantity: number, warningQuantity: number) {
+    this.getCurrentMachine();
+
     const dt = {
       machineId: this.machine.machineId,
       minQuantity: minQuantity,
@@ -170,6 +181,6 @@ export class MachineService {
 
   updateMachineLocal(machine: MachineModel) {
     this.machine = machine;
-    this.userService.updateMachineLocal(this.machine);
+    this.storeService.updateMachineData(this.machine);
   }
 }

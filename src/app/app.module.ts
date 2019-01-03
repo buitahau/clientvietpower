@@ -73,6 +73,7 @@ import {ViewDispenseTaskComponent} from './components/backgroundtask/viewdispens
 import {MachineSettingComponent} from './components/machine/machinesetting/machinesetting.component';
 import {ProductbaseComponent} from './components/setting/productbase/productbase.component';
 import {DashboardService} from './services/dashboard/dashboard.service';
+import {StoreService} from './services/store/store.service';
 
 
 const routes: Routes = [
@@ -186,6 +187,7 @@ const routes: Routes = [
   ],
   providers: [
     CookieService,
+    StoreService,
     DispenseTaskService,
     ModalService,
 

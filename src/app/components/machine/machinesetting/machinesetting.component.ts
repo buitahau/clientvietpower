@@ -3,6 +3,7 @@ import {MachineService} from '../../../services/machine/machine.service';
 import {MachineColourantModel, MachineModel} from '../../../models/user.model';
 import {ColourantService} from '../../../services/colorant/colorant.service';
 import {ModalService} from '../../../services/boostrap/modal.service';
+import {StoreService} from '../../../services/store/store.service';
 
 @Component({
   selector: 'app-machinesetting',
@@ -33,7 +34,7 @@ export class MachineSettingComponent implements OnInit {
   constructor(
     private modalService: ModalService,
     private machineService: MachineService,
-    private colourantService: ColourantService) {
+    private storeService: StoreService) {
   }
 
   ngOnInit() {
@@ -44,7 +45,7 @@ export class MachineSettingComponent implements OnInit {
   }
 
   fetchData() {
-    this.machine = this.machineService.getCurrentMachine();
+    this.machine = this.storeService.getMachineData();
 
     if (this.machine != null) {
       this.minQuantity = this.machine.minQuantity;

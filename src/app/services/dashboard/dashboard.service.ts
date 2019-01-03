@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 import {MachineService} from '../machine/machine.service';
 import {Router} from '@angular/router';
+import {StoreService} from '../store/store.service';
 
 @Injectable({
   providedIn: 'root'
@@ -8,11 +9,11 @@ import {Router} from '@angular/router';
 
 export class DashboardService {
 
-  constructor(private router: Router, private machineService: MachineService) {
+  constructor(private router: Router, private storeService: StoreService, private machineService: MachineService) {
   }
 
   validateMachineData() {
-    const machine = this.machineService.getCurrentMachine();
+    const machine = this.storeService.getMachineData();
     if (machine != null) {
       this.machineService.fetchDataFromServer().subscribe((data: any) => {
         let isLowColourant = false;
