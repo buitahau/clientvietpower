@@ -131,6 +131,10 @@ export class FormulaService {
   }
 
   findFormulaProductBaseById(formulaProductBaseId: number) {
-    return this.http.get(environment.settings.serverendpoint + 'formula_product_base/findById/' + formulaProductBaseId);
+    return this.http.get(environment.settings.serverendpoint + 'formula_product_base/findById/' + formulaProductBaseId).pipe(
+      map((data: any) => {
+        return ConvertModelUtils.convertToFormulaProductBaseObject(data);
+      })
+    );
   }
 }

@@ -38,7 +38,6 @@ export class FormulaColourantModel {
   private _colourant: ColorantModel;
   private _quantity: number;
 
-
   get formulaColourantId(): number {
     return this._formulaColourantId;
   }

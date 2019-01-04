@@ -138,4 +138,12 @@ export class FormulaComponent implements OnInit {
     this.pagenationMode.pageIndex = pageIndex;
     this.updatePagenationMode();
   }
+
+  addNewFormula() {
+    this.router.navigate([`../dashboard/formula/add`]);
+  }
+
+  editTheFormula(formulaId) {
+    this.router.navigate([`../dashboard/formula/edit/${formulaId}`]);
+  }
 }

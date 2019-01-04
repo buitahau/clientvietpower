@@ -66,7 +66,7 @@ export class ViewFormulaComponent implements OnInit {
 
     // step 1. Get Formula By Id
     this.formulaService.findFormulaProductBaseById(this.formulaProductBaseId).subscribe((data: any) => {
-      this.dbItem = ConvertModelUtils.convertToFormulaProductBaseObject(data);
+      this.dbItem = data;
       this.getRelativeData();
     });
   }

@@ -63,11 +63,13 @@
     <div class="card">
       <div class="card-header">
         List Colorant
+
+        <button class="close" (click)="addNewFormula()" matTooltip="Add Formula" aria-label="Add Formula"><i class="fas fa-plus-square"></i></button>
       </div>
 
       <div class="card-body">
         <div class="table-responsive">
-          <table class="table table-bordered" matSort (matSortChange)="sortData($event)" > <!---->
+          <table class="table table-bordered" matSort (matSortChange)="sortData($event)">
             <tr>
               <th mat-sort-header="formulaCode">Formula Code</th>
               <th mat-sort-header="formulaName">Formula Name</th>
@@ -84,10 +86,20 @@
               <td>{{item.formula.collection.collectionName}}</td>
               <td>{{item.productBase.product.productName}}</td>
               <td></td>
-              <td></td>
+
               <td>
-                <button class="btn btn-primary" (click)="viewFormula(item.formulaProductBaseId)"><i class="fas fa-info-circle"></i> View</button>
+
+              </td>
+              <td>
+                <button type="button" class="btn btn-default" matTooltip="View Formula" aria-label="View Formula" (click)="viewFormula(item.formulaProductBaseId)">
+                  <i class="fas fa-info-circle"></i>
+                </button>
+
+                <button type="button" class="btn btn-default" matTooltip="Edit Formula" aria-label="Edit Formula" (click)="editTheFormula(item.formulaProductBaseId)">
+                  <i class="fas fa-edit"></i>
+                </button>
             </tr>
+
             <tfoot>
             <tr>
               <td colspan="100%">

@@ -1,0 +1,125 @@
+<div class="block-header">
+  <h1>{{viewMode}} Formula</h1>
+</div>
+
+<div class="row" *ngIf="dbItem != null">
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <div class="card filter-card">
+      <div class="card-header">
+        Standard Formula
+      </div>
+
+      <div class="card-body">
+        <form class="form form-horizontal form-detail">
+          <div class="form-body">
+            <div class="form-group row">
+              <label class="col-md-3 label-control">Formula Code</label>
+              <div class="input-group input-group-sm col-md-9">
+                <input type="text" [(ngModel)]="dbItem.formula.formulaCode" class="form-control" [ngModelOptions]="{standalone: true}">
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label class="col-md-3 label-control">Formula name</label>
+              <div class="input-group input-group-sm col-md-9">
+                <input type="text" [(ngModel)]="dbItem.formula.formulaName" class="form-control" [ngModelOptions]="{standalone: true}">
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label class="col-md-3 label-control">Collection</label>
+              <div class="col-md-9">
+                <select class="form-control form-control-sm select-sm" [(ngModel)]="dbItem.formula.collection.collectionId" [ngModelOptions]="{standalone: true}">
+                  <option [ngValue]="undefined">Choose Collection</option>
+                  <option *ngFor="let c of listCollections" value="{{c.collectionId}}">{{c.collectionName}}</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label class="col-md-3 label-control">Product</label>
+              <div class="col-md-9">
+                <select class="form-control form-control-sm select-sm" [(ngModel)]="dbItem.productBase.product.productId" [ngModelOptions]="{standalone: true}">
+                  <option [ngValue]="undefined">Choose Product</option>
+                  <option *ngFor="let c of listProducts" value="{{c.productId}}">{{c.productCode}}</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label class="col-md-3 label-control">Approximate color</label>
+              <div class="col-md-9">
+                <input [(colorPicker)]="dbItem.productBase.rbgHex" [style.background]="dbItem.productBase.rbgHex">
+              </div>
+            </div>
+
+            <div class="form-group row" *ngIf="viewMode == 'Edit'">
+              <label class="col-md-3 label-control">Formula Date</label>
+              <div class="col-md-9">
+                {{dbItem.formula.createdDate | date : 'dd/MM/yyyy'}}
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label class="col-md-3 label-control">Substrate</label>
+              <div class="col-md-9">
+
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label class="col-md-3 label-control">Comment</label>
+              <div class="col-md-9">
+                {{dbItem.formula.comments}}
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label class="col-md-3 label-control">Barcode</label>
+              <div class="col-md-9">
+                <!--{{dbItem.productBase.product}}-->
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="card-footer">
+        <div class="row">
+          <label class="col-md-3 label-control"></label>
+          <div class="col-md-9">
+            <button class="btn btn-primary mr-3" (click)="saveFormula()">
+              <span *ngIf="viewMode == 'Add'">Save</span>
+              <span *ngIf="viewMode == 'Edit'">Update</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="row" *ngIf="dbItem != null && listColourants != null">
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <div class="card filter-card">
+      <div class="card-header">
+        List Colourants
+      </div>
+
+      <div class="card-body">
+        <form class="form form-horizontal form-detail">
+          <div class="row">
+            <ng-container *ngFor="let colour of listColourants">
+              <label class="col-md-2 label-control">{{colour.colourant.colourantCode}} : {{colour.colourant.colourantName}}</label>
+
+              <div class="col-md-2">
+                <input type="number" [(ngModel)]="colour.quantity" class="form-control" [ngModelOptions]="{standalone: true}">
+              </div>
+            </ng-container>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

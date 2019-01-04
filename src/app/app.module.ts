@@ -74,6 +74,7 @@ import {MachineSettingComponent} from './components/machine/machinesetting/machi
 import {ProductbaseComponent} from './components/setting/productbase/productbase.component';
 import {DashboardService} from './services/dashboard/dashboard.service';
 import {StoreService} from './services/store/store.service';
+import {EditFormulaComponent} from './components/formula/editformula/edit-formula/edit-formula.component';
 
 
 const routes: Routes = [
@@ -96,6 +97,8 @@ const routes: Routes = [
 
       {path: 'formula', component: FormulaComponent},
       {path: 'view-formula/:id', component: ViewFormulaComponent},
+      {path: 'formula/add', component: EditFormulaComponent},
+      {path: 'formula/edit/:id', component: EditFormulaComponent},
 
       {path: 'job-status', component: BackgroundTaskComponent},
       {path: 'maintenance', component: MaintenanceComponent},
@@ -150,6 +153,7 @@ const routes: Routes = [
     // formula component
     FormulaComponent,
     ViewFormulaComponent,
+    EditFormulaComponent,
     MaintenanceComponent,
 
     // machine component

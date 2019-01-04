@@ -33,6 +33,7 @@
     "ng-cookie": "^1.0.8",
     "ng-select2": "^1.0.7-rc.1",
     "ngx-bootstrap": "^3.1.2",
+    "ngx-color-picker": "^7.2.2",
     "rxjs": "~6.3.3",
     "select2": "^4.0.6-rc.1",
     "zone.js": "~0.8.26"

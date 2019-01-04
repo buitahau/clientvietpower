@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { ColorPickerModule } from 'ngx-color-picker';
 
 import {
   // MatAutocompleteModule,
@@ -69,6 +70,7 @@ import {
     // MatToolbarModule,
     MatTooltipModule,
     // MatNativeDateModule,
+    ColorPickerModule
   ],
   exports: [
     // Material
@@ -103,6 +105,7 @@ import {
     // MatToolbarModule,
     MatTooltipModule,
     // MatNativeDateModule,
+    ColorPickerModule
   ]
 })
 
