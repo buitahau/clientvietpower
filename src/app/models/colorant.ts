@@ -65,11 +65,11 @@ export class ColorantModel {
     this._rbgHex = value;
   }
 
-  get kind(): string {
+  get kind(): string | null {
     return this._kind;
   }
 
-  set kind(value: string) {
+  set kind(value: string | null) {
     this._kind = value;
   }
 }

@@ -41,9 +41,7 @@ export class EditFormulaComponent implements OnInit {
         this.viewMode = 'Add';
         this.generateNewFormulaProductBase();
       }
-
       this.loadRelativeData();
-      this.loadColourantDatas();
     });
   }
 
@@ -54,11 +52,13 @@ export class EditFormulaComponent implements OnInit {
     this.dbItem = new FormulaProductBaseModel();
     this.dbItem.formula = formula;
     this.dbItem.productBase = productBase;
+    this.loadColourantDatas();
   }
 
   loadCurrentFormulaProductBase() {
     this.formulaService.findFormulaProductBaseById(this.formulaProductBaseId).subscribe((data: any) => {
       this.dbItem = data;
+      this.loadColourantDatas();
     });
   }
 
@@ -92,7 +92,7 @@ export class EditFormulaComponent implements OnInit {
 
           for (const colour of listColourantDb) {
             const existColourantIndex = this.listColourants.findIndex((item) => {
-              return item._colourant.colourantId === colour.colourant.colourantId;
+              return item.colourant.colourantId === colour.colourant.colourantId;
             });
 
             if (existColourantIndex != null) {
@@ -106,6 +106,10 @@ export class EditFormulaComponent implements OnInit {
 
   saveFormula() {
 
+  }
+
+  goToFormulaPage() {
+    this.router.navigate([`../dashboard/formula`]);
   }
 
 }
