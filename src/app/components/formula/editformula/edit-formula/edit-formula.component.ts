@@ -60,6 +60,7 @@ export class EditFormulaComponent implements OnInit {
   loadCurrentFormulaProductBase() {
     this.formulaService.findFormulaProductBaseById(this.formulaProductBaseId).subscribe((data: any) => {
       this.dbItem = data;
+      this.getListProductBase();
       this.loadColourantDatas();
     });
   }
@@ -76,18 +77,21 @@ export class EditFormulaComponent implements OnInit {
     });
   }
 
-  loadColourantDatas() {
+  getListProductBase() {
     this.listProductBases = [];
-    this.productService.getListBaseFromProduct(this.dbItem.productBase.product.productId).subscribe(datas => {
+    this.productService.getListProductBaseFromProduct(this.dbItem.productBase.product.productId).subscribe(datas => {
       this.listProductBases = datas;
     });
+  }
 
+  loadColourantDatas() {
     this.colourantService.getListItems().subscribe(datas => {
       this.listColourants = [];
 
       for (const colour of datas) {
         const formulaColourant = new FormulaColourantModel();
         formulaColourant.colourant = colour;
+        formulaColourant.formula = this.dbItem.formula;
         formulaColourant.quantity = null;
 
         this.listColourants.push(formulaColourant);
@@ -111,8 +115,33 @@ export class EditFormulaComponent implements OnInit {
     });
   }
 
-  saveFormula() {
+  getMaxColourantValue(listFormulaColorant: FormulaColourantModel[]) {
+    let maxQuantity = 0;
+    for (const c of listFormulaColorant) {
+      if (c.quantity != null && c.quantity > 0) {
+        if (maxQuantity == null || maxQuantity < c.quantity) {
+          maxQuantity = c.quantity;
+        }
+      }
+    }
+    return maxQuantity;
+    //
+    // return listFormulaColorant.reduce(function (p: FormulaColourantModel, v: FormulaColourantModel) {
+    //   const p_quantity = p.quantity == null ? 0 : p.quantity;
+    //   const v_quantity = v.quantity == null ? 0 : v.quantity;
+    //   return (p_quantity >= v_quantity ? p_quantity : v_quantity );
+    // });
+  }
 
+  logChangeValue() {
+    console.log(this.dbItem);
+    console.log(this.listColourants);
+  }
+
+  saveOrUpdateFormula() {
+    this.formulaService.saveOrUpdateFormulaData(this.dbItem, this.listColourants).subscribe((datas) => {
+      console.log(datas);
+    });
   }
 
   goToFormulaPage() {

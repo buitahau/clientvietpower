@@ -178,4 +178,50 @@ export default class ConvertModelUtils {
     item.message = object.message;
     return item;
   }
+
+  static convertToSavingFormulaProductBaseDBItem(formulaProductBase: FormulaProductBaseModel,
+                                                 machine: MachineModel,
+                                                 formulaColourantList: FormulaColourantModel[]) {
+    const machineDbItem = {
+      machineId: machine.machineId
+    };
+
+    const formulaProductBaseDBItem = {
+      formulaProductBaseId: formulaProductBase.formulaProductBaseId,
+      formula: ConvertModelUtils.convertToFormulaDBItem(formulaProductBase.formula),
+      productBase: {productBaseId: formulaProductBase.productBase.productBaseId}
+    };
+
+    const formulaColourantListDBItem = [];
+    for (const item of formulaColourantList) {
+      if (item.quantity != null && item.quantity > 0) {
+        formulaColourantListDBItem.push(ConvertModelUtils.convertToFormulaColourantDBItem(item));
+      }
+    }
+
+    return {
+      formulaProductBase: formulaProductBaseDBItem,
+      machine: machineDbItem,
+      formulaColourantList: formulaColourantListDBItem,
+    };
+  }
+
+  static convertToFormulaDBItem(formula: FormulaModel) {
+    return {
+      formulaId: formula.formulaId,
+      formulaCode: formula.formulaCode,
+      formulaName: formula.formulaName,
+      collection: {collectionId: formula.collection.collectionId},
+      baseOnCan: formula.baseOnCan,
+    };
+  }
+
+  static convertToFormulaColourantDBItem(formulaColourant: FormulaColourantModel) {
+    return {
+      formulaColourantId: formulaColourant.formulaColourantId,
+      colourant: {colourantId: formulaColourant.colourant.colourantId},
+      formula : {formulaId: formulaColourant.formula.formulaId},
+      quantity : formulaColourant.quantity,
+    };
+  }
 }

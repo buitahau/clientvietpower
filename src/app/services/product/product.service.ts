@@ -59,7 +59,7 @@ export class ProductService {
     }
   }
 
-  getListBaseFromProduct(productId: number) {
+  getListProductBaseFromProduct(productId: number) {
     return this.http.get(environment.settings.serverendpoint + 'product-base/findByProduct/' + productId).pipe(
       map((data: Array<any>) => {
         const listItems = [];

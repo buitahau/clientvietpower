@@ -4,7 +4,8 @@ import {environment} from '../../../environments/environment';
 import {catchError, map} from 'rxjs/internal/operators';
 import ConvertModelUtils from '../../utils/convert-models-utils';
 import {FormulaModel} from '../../models/formula';
-import {FormulaProductBaseModel} from '../../models/formula_product_base';
+import {FormulaColourantModel, FormulaProductBaseModel} from '../../models/formula_product_base';
+import {StoreService} from '../store/store.service';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,7 @@ export class FormulaService {
   listFormula: FormulaModel[] = [];
   listFormulaProductBase: FormulaProductBaseModel[] = [];
 
-  constructor(private http: HttpService) {
+  constructor(private http: HttpService, private storeService: StoreService) {
     this.fetchData();
   }
 
@@ -60,31 +61,31 @@ export class FormulaService {
     );
   }
 
-  postData() {
-    const dt = {
-      username: "Haukute",
-      password: "123456"
-    };
-    debugger;
-    this.http.post(environment.settings.serverendpoint + 'login', dt).pipe(
-      map(datas => {
-        console.log(datas);
-      }),
-    ).subscribe();
-  }
-
-  postData1() {
-    const dt = {
-      username: "Haukute",
-      password: "123456"
-    };
-    debugger;
-    this.http.post(environment.settings.serverendpoint + 'login_test', dt).pipe(
-      map(datas => {
-        console.log(datas);
-      }),
-    ).subscribe();
-  }
+  // postData() {
+  //   const dt = {
+  //     username: "Haukute",
+  //     password: "123456"
+  //   };
+  //   debugger;
+  //   this.http.post(environment.settings.serverendpoint + 'login', dt).pipe(
+  //     map(datas => {
+  //       console.log(datas);
+  //     }),
+  //   ).subscribe();
+  // }
+  //
+  // postData1() {
+  //   const dt = {
+  //     username: "Haukute",
+  //     password: "123456"
+  //   };
+  //   debugger;
+  //   this.http.post(environment.settings.serverendpoint + 'login_test', dt).pipe(
+  //     map(datas => {
+  //       console.log(datas);
+  //     }),
+  //   ).subscribe();
+  // }
 
   findById(formulaId: number) {
     const result = this.listFormula.filter(filterById);
@@ -134,6 +135,18 @@ export class FormulaService {
     return this.http.get(environment.settings.serverendpoint + 'formula_product_base/findById/' + formulaProductBaseId).pipe(
       map((data: any) => {
         return ConvertModelUtils.convertToFormulaProductBaseModel(data);
+      })
+    );
+  }
+
+  saveOrUpdateFormulaData(dbItem: FormulaProductBaseModel, listColourants: FormulaColourantModel[]) {
+    const savingItem = ConvertModelUtils.convertToSavingFormulaProductBaseDBItem(dbItem, this.storeService.getMachineData(), listColourants);
+
+    return this.http.post(environment.settings.serverendpoint + 'machine_formula/saveOrUpdate', savingItem).pipe(
+      map((data: any) => {
+        console.log(data);
+
+        return data;
       })
     );
   }

@@ -1,3 +1,15 @@
-<p>
-  base-can works!
-</p>
+<ng-container *ngIf="productBase != null">
+  <div class="base-can-information">
+    <div class="base-can-empty">
+    <span class="base-can-background">
+      <span class="base-can-volume" [ngStyle]="{'background-color': productBase.rbgHex, 'height': '100%'}">
+        <span class="can-base-info">
+          <span class="base-type">Base : {{productBase.base.baseCode}}</span>
+          <span class="base-volume">{{canSize + " Liter" }}</span>
+          <span class="base-name">{{collection.collectionName}}</span>
+        </span>
+      </span>
+    </span>
+    </div>
+  </div>
+</ng-container>
