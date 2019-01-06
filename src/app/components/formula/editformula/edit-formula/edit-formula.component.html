@@ -142,7 +142,7 @@
                   <div class="form-group row">
                     <label class="col-md-4 label-control">Base</label>
                     <div class="col-md-8">
-                      <select class="form-control form-control-sm select-sm" [(ngModel)]="dbItem.productBase.productBaseId" [ngModelOptions]="{standalone: true}">
+                      <select class="form-control form-control-sm select-sm" [(ngModel)]="selectedProductBaseId" [ngModelOptions]="{standalone: true}" (change)="updateCurrentProductBase()">
                         <option [ngValue]="undefined">Choose Base</option>
                         <option *ngFor="let pb of listProductBases" value="{{pb.productBaseId}}">{{pb.base.baseName}} ({{pb.base.baseCode}})</option>
                       </select>

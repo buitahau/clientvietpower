@@ -18,6 +18,8 @@ import {BaseModel} from '../../../../models/base';
 })
 export class EditFormulaComponent implements OnInit {
   formulaProductBaseId: number;
+  selectedProductId: number;
+  selectedProductBaseId: number;
   viewMode: string = null;
   dbItem: FormulaProductBaseModel = null;
   listProducts: ProductModel[] = null;
@@ -60,6 +62,9 @@ export class EditFormulaComponent implements OnInit {
   loadCurrentFormulaProductBase() {
     this.formulaService.findFormulaProductBaseById(this.formulaProductBaseId).subscribe((data: any) => {
       this.dbItem = data;
+      this.selectedProductBaseId = this.dbItem.productBase.productBaseId;
+      this.selectedProductId = this.dbItem.productBase.product;
+
       this.getListProductBase();
       this.loadColourantDatas();
     });
@@ -77,11 +82,30 @@ export class EditFormulaComponent implements OnInit {
     });
   }
 
+  updateCurrentProduct() {
+    const selected = this.listProductBases.filter((item) => {
+      return item.productBaseId == this.selectedProductBaseId && item.product.productId === this.dbItem.productBase.product.productId;
+    });
+  }
+
   getListProductBase() {
     this.listProductBases = [];
     this.productService.getListProductBaseFromProduct(this.dbItem.productBase.product.productId).subscribe(datas => {
       this.listProductBases = datas;
+      console.log(this.dbItem.productBase.product);
     });
+  }
+
+  updateCurrentProductBase() {
+    const selected = this.listProductBases.filter((item) => {
+      return item.productBaseId == this.selectedProductBaseId && item.product.productId === this.dbItem.productBase.product.productId;
+    });
+
+    if (selected != null && selected.length > 0) {
+      console.log(selected);
+
+      this.dbItem.productBase = selected[0];
+    }
   }
 
   loadColourantDatas() {
