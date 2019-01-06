@@ -24,7 +24,7 @@ export const MAP_TASK_STATE = {
 };
 
 export default class ConvertModelUtils {
-  static convertToFormulaObject(object: any): FormulaModel {
+  static convertToFormulaModel(object: any): FormulaModel {
     const formula = new FormulaModel();
     formula.formulaId = object.formulaId;
     formula.formulaCode = object.formulaCode;
@@ -36,7 +36,7 @@ export default class ConvertModelUtils {
     return formula;
   }
 
-  static convertToProductObject(object: any): ProductModel {
+  static convertToProductModel(object: any): ProductModel {
     const item = new ProductModel();
     item.productId = object.productId;
     item.productCode = object.productCode;
@@ -46,24 +46,24 @@ export default class ConvertModelUtils {
     return item;
   }
 
-  static convertToFormulaProductBaseObject(object: any): FormulaProductBaseModel {
+  static convertToFormulaProductBaseModel(object: any): FormulaProductBaseModel {
     const item = new FormulaProductBaseModel();
     item.formulaProductBaseId = object.formulaProductBaseId;
-    item.productBase = ConvertModelUtils.convertProductBaseObject(object.productBase);
-    item.formula = ConvertModelUtils.convertToFormulaObject(object.formula);
+    item.productBase = ConvertModelUtils.convertToProductBaseModel(object.productBase);
+    item.formula = ConvertModelUtils.convertToFormulaModel(object.formula);
     return item;
   }
 
-  static convertToFormulaColourantObject(object: any): FormulaColourantModel {
+  static convertToFormulaColourantModel(object: any): FormulaColourantModel {
     const item = new FormulaColourantModel();
     item.formulaColourantId = object.formulaColourantId;
-    item.formula = ConvertModelUtils.convertToFormulaObject(object.formula);
-    item.colourant = ConvertModelUtils.convertToColourantObject(object.colourant);
+    item.formula = ConvertModelUtils.convertToFormulaModel(object.formula);
+    item.colourant = ConvertModelUtils.convertToColourantModel(object.colourant);
     item.quantity = object.quantity;
     return item;
   }
 
-  static convertToColourantObject(object: any): ColorantModel {
+  static convertToColourantModel(object: any): ColorantModel {
     const item = new ColorantModel();
     item.colourantId = object.colourantId;
     item.colourantCode = object.colourantCode;
@@ -76,7 +76,7 @@ export default class ConvertModelUtils {
     return item;
   }
 
-  static convertToProductBaseCanObject(object: any) {
+  static convertToProductBaseCanModel(object: any) {
     const item = new ProductBaseCanModel();
     item.productBaseCanId = object.productBaseCanId;
     item.productBase = object.productBase;
@@ -97,33 +97,25 @@ export default class ConvertModelUtils {
     return collection;
   }
 
-  static convertFormulaProductBaseObject(object: any): FormulaProductBaseModel {
+  static convertFormulaProductBaseModel(object: any): FormulaProductBaseModel {
     const formulaProductBase = new FormulaProductBaseModel();
     formulaProductBase.formulaProductBaseId = object.formulaProductBaseId;
-    formulaProductBase.formula = ConvertModelUtils.convertToFormulaObject(object.formula);
-    formulaProductBase.productBase = ConvertModelUtils.convertProductBaseObject(object.productBase);
+    formulaProductBase.formula = ConvertModelUtils.convertToFormulaModel(object.formula);
+    formulaProductBase.productBase = ConvertModelUtils.convertToProductBaseModel(object.productBase);
     return formulaProductBase;
   }
 
-  static convertProductBaseObject(object: any) {
+  static convertToProductBaseModel(object: any) {
     const productBase = new ProductBaseModel();
     productBase.productBaseId = object.productBaseId;
-    productBase.product = ConvertModelUtils.convertProductObject(object.product);
-    productBase.base = ConvertModelUtils.convertBaseObject(object.base);
+    productBase.product = ConvertModelUtils.convertToProductModel(object.product);
+    productBase.base = ConvertModelUtils.convertToBaseModel(object.base);
     productBase.rbgHex = object.rbgHex;
     productBase.density = object.density;
     return productBase;
   }
 
-  static convertProductObject(object: any) {
-    const product = new ProductModel();
-    product.productId = object.productId;
-    product.productCode = object.productCode;
-    product.productName = object.productName;
-    return product;
-  }
-
-  static convertBaseObject(object: any) {
+  static convertToBaseModel(object: any) {
     const base = new BaseModel();
     base.baseCode = object.baseCode;
     base.baseId = object.baseId;
@@ -158,19 +150,19 @@ export default class ConvertModelUtils {
     return machine;
   }
 
-  static convertToMachineColourant(object: any): MachineColourantModel {
+  static convertToMachineColourantModel(object: any): MachineColourantModel {
     const item = new MachineColourantModel();
     item.machineColourantId = object.machineColourantId;
-    item.colourant = ConvertModelUtils.convertToColourantObject(object.colourant);
+    item.colourant = ConvertModelUtils.convertToColourantModel(object.colourant);
     item.machine = ConvertModelUtils.convertToMachineModel(object.machine);
     item.quantity = object.quantity;
     return item;
   }
 
-  static convertToDispenseFormulaProductBase(object: any): MachineFormulaProductBaseLogModel {
+  static convertToDispenseFormulaProductBaseModel(object: any): MachineFormulaProductBaseLogModel {
     const item = new MachineFormulaProductBaseLogModel();
     item.machineFormulaProductBaseId = object.machineFormulaProductBaseId;
-    item.formulaProductBase = ConvertModelUtils.convertToFormulaProductBaseObject(object.formulaProductBase);
+    item.formulaProductBase = ConvertModelUtils.convertToFormulaProductBaseModel(object.formulaProductBase);
     item.machine = ConvertModelUtils.convertToMachineModel(object.machine);
     item.user = ConvertModelUtils.convertToUserModel(object.user);
     item.canSize = object.quantity;

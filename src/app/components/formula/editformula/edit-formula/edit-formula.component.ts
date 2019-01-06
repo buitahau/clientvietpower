@@ -9,6 +9,7 @@ import {ProductService} from '../../../../services/product/product.service';
 import {ProductModel} from '../../../../models/product';
 import {CollectionModel} from '../../../../models/collection';
 import {ColourantService} from '../../../../services/colorant/colorant.service';
+import {BaseModel} from '../../../../models/base';
 
 @Component({
   selector: 'app-edit-formula',
@@ -20,6 +21,7 @@ export class EditFormulaComponent implements OnInit {
   viewMode: string = null;
   dbItem: FormulaProductBaseModel = null;
   listProducts: ProductModel[] = null;
+  listProductBases: ProductBaseModel[] = null;
   listCollections: CollectionModel[] = null;
   listColourants: FormulaColourantModel[] = null;
 
@@ -75,6 +77,11 @@ export class EditFormulaComponent implements OnInit {
   }
 
   loadColourantDatas() {
+    this.listProductBases = [];
+    this.productService.getListBaseFromProduct(this.dbItem.productBase.product.productId).subscribe(datas => {
+      this.listProductBases = datas;
+    });
+
     this.colourantService.getListItems().subscribe(datas => {
       this.listColourants = [];
 

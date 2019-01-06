@@ -108,19 +108,74 @@
   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
     <div class="card filter-card">
       <div class="card-header">
-        List Colourants
+        Formula Detail
       </div>
 
       <div class="card-body">
         <form class="form form-horizontal form-detail">
           <div class="row">
-            <ng-container *ngFor="let colour of listColourants">
-              <label class="col-md-2 label-control">{{colour.colourant.colourantCode}} : {{colour.colourant.colourantName}}</label>
-
-              <div class="col-md-2">
-                <input type="number" [(ngModel)]="colour.quantity" class="form-control" [ngModelOptions]="{standalone: true}">
+            <div class="col-md-6">
+              <div class="row">
+                <div class="card-subtitle col-md-12">
+                  <h4>Contents</h4>
+                </div>
+                <div class="col-md-12">
+                  TABLE COLOURANTS
+                </div>
+                <div class="col-md-12">
+                  BASE CAN
+                </div>
               </div>
-            </ng-container>
+            </div>
+
+            <div class="col-md-6">
+              <div class="row">
+                <div class="card-subtitle col-md-12">
+                  <h4>Components</h4>
+                </div>
+
+                <div class="col-md-12">
+                  <div class="form-group row">
+                    <label class="col-md-4 label-control">Product</label>
+                    <div class="col-md-8">
+                      <select class="form-control form-control-sm select-sm" [(ngModel)]="dbItem.productBase.product.productId" [ngModelOptions]="{standalone: true}">
+                        <option [ngValue]="undefined">Choose Product</option>
+                        <option *ngFor="let c of listProducts" value="{{c.productId}}">{{c.productCode}}</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <label class="col-md-4 label-control">Base</label>
+                    <div class="col-md-8">
+                      <select class="form-control form-control-sm select-sm" [(ngModel)]="dbItem.productBase.productBaseId" [ngModelOptions]="{standalone: true}">
+                        <option [ngValue]="undefined">Choose Base</option>
+                        <option *ngFor="let pb of listProductBases" value="{{pb.productBaseId}}">{{pb.base.baseName}} ({{pb.base.baseCode}})</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="card-subtitle col-md-12">
+                  <h4>Colourants</h4>
+                </div>
+
+                <ng-container *ngFor="let colour of listColourants">
+                  <div class="col-md-6 colourant-group">
+                    <div class="row">
+                      <label class="col-md-8 label-control">
+                        <span class="colour-bar" [ngStyle]="{'background': colour.colourant.rbgHex}">{{colour.colourant.colourantCode}} : {{colour.colourant.colourantName}}</span>
+                      </label>
+                      <div class="col-md-4">
+                        <input type="number" [(ngModel)]="colour.quantity" class="form-control" [ngModelOptions]="{standalone: true}">
+                      </div>
+                    </div>
+                  </div>
+                </ng-container>
+              </div>
+            </div>
           </div>
         </form>
       </div>

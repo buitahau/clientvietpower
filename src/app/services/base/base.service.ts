@@ -17,7 +17,7 @@ export class BaseService {
         const listBases = [];
         if (data) {
           for (const base of data) {
-            listBases.push(ConvertModelUtils.convertBaseObject(base));
+            listBases.push(ConvertModelUtils.convertToBaseModel(base));
           }
         }
         return listBases;

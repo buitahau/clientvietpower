@@ -162,7 +162,7 @@ export class ViewFormulaComponent implements OnInit {
 
           this.machineService.recordDispenseFormulaProductBase(MAP_DISPENSE_TASK_STATE.IN_PROGRESS, this.currentTask.taskId,
             this.currentTask.taskData.formulaProductBase, this.currentTask.taskData.canSize).subscribe((data: any) => {
-            const item: MachineFormulaProductBaseLogModel = ConvertModelUtils.convertToDispenseFormulaProductBase(data);
+            const item: MachineFormulaProductBaseLogModel = ConvertModelUtils.convertToDispenseFormulaProductBaseModel(data);
             this.currentTask.taskId = item.machineFormulaProductBaseId;
             this.currentTask.status = item.status;
             this.currentTask.startTime = item.createdDate;

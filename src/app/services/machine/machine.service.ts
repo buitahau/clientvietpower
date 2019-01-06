@@ -39,7 +39,7 @@ export class MachineService {
         const result = [];
         if (data && data.length > 0) {
           for (const item of data) {
-            result.push(ConvertModelUtils.convertToMachineColourant(item));
+            result.push(ConvertModelUtils.convertToMachineColourantModel(item));
           }
         }
         return result;
@@ -72,7 +72,7 @@ export class MachineService {
         const result = [];
         if (data && data.length > 0) {
           for (const item of data) {
-            result.push(ConvertModelUtils.convertToMachineColourant(item));
+            result.push(ConvertModelUtils.convertToMachineColourantModel(item));
           }
         }
         return result;
@@ -117,7 +117,7 @@ export class MachineService {
         const listDispenseTaskLog = [];
         if (data) {
           for (const item of data) {
-            listDispenseTaskLog.push(ConvertModelUtils.convertToDispenseFormulaProductBase(item));
+            listDispenseTaskLog.push(ConvertModelUtils.convertToDispenseFormulaProductBaseModel(item));
           }
         }
         return listDispenseTaskLog;

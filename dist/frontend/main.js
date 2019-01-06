@@ -926,7 +926,7 @@ var ViewFormulaComponent = /** @class */ (function () {
         this.selectProductBase = null;
         // step 1. Get Formula By Id
         this.formulaService.findFormulaProductBaseById(this.formulaProductBaseId).subscribe(function (data) {
-            _this.dbItem = _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_7__["default"].convertToFormulaProductBaseObject(data);
+            _this.dbItem = _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_7__["default"].convertToFormulaProductBaseModel(data);
             _this.getRelativeData();
         });
     };
@@ -1004,7 +1004,7 @@ var ViewFormulaComponent = /** @class */ (function () {
                     listPumpingTask.push(stop_t);
                     _this.currentTask = new _models_dispense_task_model__WEBPACK_IMPORTED_MODULE_4__["DispenseTaskModel"]('Dispense', listPumpingTask, new _models_dispense_task_model__WEBPACK_IMPORTED_MODULE_4__["DispenseDataModel"](_this.dbItem, _this.selectProductBase, _this.canSize, _this.numberOfCan), null);
                     _this.machineService.recordDispenseFormulaProductBase(_models_dispense_task_model__WEBPACK_IMPORTED_MODULE_4__["MAP_DISPENSE_TASK_STATE"].IN_PROGRESS, _this.currentTask.taskId, _this.currentTask.taskData.formulaProductBase, _this.currentTask.taskData.canSize).subscribe(function (data) {
-                        var item = _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_7__["default"].convertToDispenseFormulaProductBase(data);
+                        var item = _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_7__["default"].convertToDispenseFormulaProductBaseModel(data);
                         _this.currentTask.taskId = item.machineFormulaProductBaseId;
                         _this.currentTask.status = item.status;
                         _this.currentTask.startTime = item.createdDate;
@@ -4272,7 +4272,7 @@ var BaseService = /** @class */ (function () {
             if (data) {
                 for (var _i = 0, data_1 = data; _i < data_1.length; _i++) {
                     var base = data_1[_i];
-                    listBases.push(_utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_4__["default"].convertBaseObject(base));
+                    listBases.push(_utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_4__["default"].convertToBaseModel(base));
                 }
             }
             return listBases;
@@ -4725,7 +4725,7 @@ var FormulaService = /** @class */ (function () {
             if (data) {
                 for (var _i = 0, data_1 = data; _i < data_1.length; _i++) {
                     var fpb = data_1[_i];
-                    listFormulaProductBase.push(_utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_4__["default"].convertFormulaProductBaseObject(fpb));
+                    listFormulaProductBase.push(_utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_4__["default"].convertFormulaProductBaseModel(fpb));
                 }
             }
             _this.listFormulaProductBase = listFormulaProductBase;
@@ -4741,7 +4741,7 @@ var FormulaService = /** @class */ (function () {
             if (data) {
                 for (var _i = 0, data_2 = data; _i < data_2.length; _i++) {
                     var formula = data_2[_i];
-                    result.push(_utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_4__["default"].convertToFormulaObject(formula));
+                    result.push(_utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_4__["default"].convertToFormulaModel(formula));
                 }
             }
             _this.listFormula = result;
@@ -4783,7 +4783,7 @@ var FormulaService = /** @class */ (function () {
             if (data) {
                 for (var _i = 0, data_3 = data; _i < data_3.length; _i++) {
                     var item = data_3[_i];
-                    result.push(_utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_4__["default"].convertToFormulaColourantObject(item));
+                    result.push(_utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_4__["default"].convertToFormulaColourantModel(item));
                 }
             }
             return result;
@@ -4798,7 +4798,7 @@ var FormulaService = /** @class */ (function () {
             if (data) {
                 for (var _i = 0, data_4 = data; _i < data_4.length; _i++) {
                     var item = data_4[_i];
-                    result.push(_utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_4__["default"].convertToProductBaseCanObject(item));
+                    result.push(_utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_4__["default"].convertToProductBaseCanModel(item));
                 }
             }
             return result;
@@ -4960,7 +4960,7 @@ var MachineService = /** @class */ (function () {
             if (data && data.length > 0) {
                 for (var _i = 0, data_1 = data; _i < data_1.length; _i++) {
                     var item = data_1[_i];
-                    result.push(_utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_3__["default"].convertToMachineColourant(item));
+                    result.push(_utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_3__["default"].convertToMachineColourantModel(item));
                 }
             }
             return result;
@@ -4985,7 +4985,7 @@ var MachineService = /** @class */ (function () {
             if (data && data.length > 0) {
                 for (var _i = 0, data_2 = data; _i < data_2.length; _i++) {
                     var item = data_2[_i];
-                    result.push(_utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_3__["default"].convertToMachineColourant(item));
+                    result.push(_utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_3__["default"].convertToMachineColourantModel(item));
                 }
             }
             return result;
@@ -5021,7 +5021,7 @@ var MachineService = /** @class */ (function () {
             if (data) {
                 for (var _i = 0, data_3 = data; _i < data_3.length; _i++) {
                     var item = data_3[_i];
-                    listDispenseTaskLog.push(_utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_3__["default"].convertToDispenseFormulaProductBase(item));
+                    listDispenseTaskLog.push(_utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_3__["default"].convertToDispenseFormulaProductBaseModel(item));
                 }
             }
             return listDispenseTaskLog;
@@ -5128,7 +5128,7 @@ var ProductService = /** @class */ (function () {
             if (data) {
                 for (var _i = 0, data_1 = data; _i < data_1.length; _i++) {
                     var item = data_1[_i];
-                    listItems.push(_utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_4__["default"].convertToProductObject(item));
+                    listItems.push(_utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_4__["default"].convertToProductModel(item));
                 }
             }
             return listItems;
@@ -5578,7 +5578,7 @@ var MAP_TASK_STATE = {
 var ConvertModelUtils = /** @class */ (function () {
     function ConvertModelUtils() {
     }
-    ConvertModelUtils.convertToFormulaObject = function (object) {
+    ConvertModelUtils.convertToFormulaModel = function (object) {
         var formula = new _models_formula__WEBPACK_IMPORTED_MODULE_0__["FormulaModel"]();
         formula.formulaId = object.formulaId;
         formula.formulaCode = object.formulaCode;
@@ -5589,7 +5589,7 @@ var ConvertModelUtils = /** @class */ (function () {
         formula.baseOnCan = object.baseOnCan;
         return formula;
     };
-    ConvertModelUtils.convertToProductObject = function (object) {
+    ConvertModelUtils.convertToProductModel = function (object) {
         var item = new _models_product__WEBPACK_IMPORTED_MODULE_4__["ProductModel"]();
         item.productId = object.productId;
         item.productCode = object.productCode;
@@ -5598,22 +5598,22 @@ var ConvertModelUtils = /** @class */ (function () {
         item.createBy = object.createBy;
         return item;
     };
-    ConvertModelUtils.convertToFormulaProductBaseObject = function (object) {
+    ConvertModelUtils.convertToFormulaProductBaseModel = function (object) {
         var item = new _models_formula_product_base__WEBPACK_IMPORTED_MODULE_2__["FormulaProductBaseModel"]();
         item.formulaProductBaseId = object.formulaProductBaseId;
-        item.productBase = ConvertModelUtils.convertProductBaseObject(object.productBase);
-        item.formula = ConvertModelUtils.convertToFormulaObject(object.formula);
+        item.productBase = ConvertModelUtils.convertToProductBaseModel(object.productBase);
+        item.formula = ConvertModelUtils.convertToFormulaModel(object.formula);
         return item;
     };
-    ConvertModelUtils.convertToFormulaColourantObject = function (object) {
+    ConvertModelUtils.convertToFormulaColourantModel = function (object) {
         var item = new _models_formula_product_base__WEBPACK_IMPORTED_MODULE_2__["FormulaColourantModel"]();
         item.formulaColourantId = object.formulaColourantId;
-        item.formula = ConvertModelUtils.convertToFormulaObject(object.formula);
-        item.colourant = ConvertModelUtils.convertToColourantObject(object.colourant);
+        item.formula = ConvertModelUtils.convertToFormulaModel(object.formula);
+        item.colourant = ConvertModelUtils.convertToColourantModel(object.colourant);
         item.quantity = object.quantity;
         return item;
     };
-    ConvertModelUtils.convertToColourantObject = function (object) {
+    ConvertModelUtils.convertToColourantModel = function (object) {
         var item = new _models_colorant__WEBPACK_IMPORTED_MODULE_6__["ColorantModel"]();
         item.colourantId = object.colourantId;
         item.colourantCode = object.colourantCode;
@@ -5625,7 +5625,7 @@ var ConvertModelUtils = /** @class */ (function () {
         item.kind = object.kind;
         return item;
     };
-    ConvertModelUtils.convertToProductBaseCanObject = function (object) {
+    ConvertModelUtils.convertToProductBaseCanModel = function (object) {
         var item = new _models_formula_product_base__WEBPACK_IMPORTED_MODULE_2__["ProductBaseCanModel"]();
         item.productBaseCanId = object.productBaseCanId;
         item.productBase = object.productBase;
@@ -5643,30 +5643,30 @@ var ConvertModelUtils = /** @class */ (function () {
         collection.description = object.description;
         return collection;
     };
-    ConvertModelUtils.convertFormulaProductBaseObject = function (object) {
+    ConvertModelUtils.convertFormulaProductBaseModel = function (object) {
         var formulaProductBase = new _models_formula_product_base__WEBPACK_IMPORTED_MODULE_2__["FormulaProductBaseModel"]();
         formulaProductBase.formulaProductBaseId = object.formulaProductBaseId;
-        formulaProductBase.formula = ConvertModelUtils.convertToFormulaObject(object.formula);
-        formulaProductBase.productBase = ConvertModelUtils.convertProductBaseObject(object.productBase);
+        formulaProductBase.formula = ConvertModelUtils.convertToFormulaModel(object.formula);
+        formulaProductBase.productBase = ConvertModelUtils.convertToProductBaseModel(object.productBase);
         return formulaProductBase;
     };
-    ConvertModelUtils.convertProductBaseObject = function (object) {
+    ConvertModelUtils.convertToProductBaseModel = function (object) {
         var productBase = new _models_product_base__WEBPACK_IMPORTED_MODULE_3__["ProductBaseModel"]();
         productBase.productBaseId = object.productBaseId;
-        productBase.product = ConvertModelUtils.convertProductObject(object.product);
-        productBase.base = ConvertModelUtils.convertBaseObject(object.base);
+        productBase.product = ConvertModelUtils.convertToProductModel(object.product);
+        productBase.base = ConvertModelUtils.convertToBaseModel(object.base);
         productBase.rbgHex = object.rbgHex;
         productBase.density = object.density;
         return productBase;
     };
-    ConvertModelUtils.convertProductObject = function (object) {
+    ConvertModelUtils.convertToProductModel = function (object) {
         var product = new _models_product__WEBPACK_IMPORTED_MODULE_4__["ProductModel"]();
         product.productId = object.productId;
         product.productCode = object.productCode;
         product.productName = object.productName;
         return product;
     };
-    ConvertModelUtils.convertBaseObject = function (object) {
+    ConvertModelUtils.convertToBaseModel = function (object) {
         var base = new _models_base__WEBPACK_IMPORTED_MODULE_5__["BaseModel"]();
         base.baseCode = object.baseCode;
         base.baseId = object.baseId;
@@ -5697,18 +5697,18 @@ var ConvertModelUtils = /** @class */ (function () {
         machine.maxQuantity = object.maxQuantity;
         return machine;
     };
-    ConvertModelUtils.convertToMachineColourant = function (object) {
+    ConvertModelUtils.convertToMachineColourantModel = function (object) {
         var item = new _models_user_model__WEBPACK_IMPORTED_MODULE_7__["MachineColourantModel"]();
         item.machineColourantId = object.machineColourantId;
-        item.colourant = ConvertModelUtils.convertToColourantObject(object.colourant);
+        item.colourant = ConvertModelUtils.convertToColourantModel(object.colourant);
         item.machine = ConvertModelUtils.convertToMachineModel(object.machine);
         item.quantity = object.quantity;
         return item;
     };
-    ConvertModelUtils.convertToDispenseFormulaProductBase = function (object) {
+    ConvertModelUtils.convertToDispenseFormulaProductBaseModel = function (object) {
         var item = new _models_dispense_task_model__WEBPACK_IMPORTED_MODULE_8__["MachineFormulaProductBaseLogModel"]();
         item.machineFormulaProductBaseId = object.machineFormulaProductBaseId;
-        item.formulaProductBase = ConvertModelUtils.convertToFormulaProductBaseObject(object.formulaProductBase);
+        item.formulaProductBase = ConvertModelUtils.convertToFormulaProductBaseModel(object.formulaProductBase);
         item.machine = ConvertModelUtils.convertToMachineModel(object.machine);
         item.user = ConvertModelUtils.convertToUserModel(object.user);
         item.canSize = object.quantity;

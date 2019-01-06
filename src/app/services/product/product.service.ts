@@ -5,6 +5,7 @@ import {catchError, map} from 'rxjs/internal/operators';
 import {HttpService} from '../../shared/http/services/http.service';
 import {ProductModel} from '../../models/product';
 import ConvertModelUtils from '../../utils/convert-models-utils';
+import {BaseModel} from '../../models/base';
 
 @Injectable({
   providedIn: 'root'
@@ -23,7 +24,7 @@ export class ProductService {
         const listItems = [];
         if (data) {
           for (const item of data) {
-            listItems.push(ConvertModelUtils.convertToProductObject(item));
+            listItems.push(ConvertModelUtils.convertToProductModel(item));
           }
         }
         return listItems;
@@ -58,4 +59,20 @@ export class ProductService {
     }
   }
 
+  getListBaseFromProduct(productId: number) {
+    return this.http.get(environment.settings.serverendpoint + 'product-base/findByProduct/' + productId).pipe(
+      map((data: Array<any>) => {
+        const listItems = [];
+        if (data) {
+          for (const item of data) {
+            listItems.push(ConvertModelUtils.convertToProductBaseModel(item));
+          }
+        }
+        return listItems;
+      }),
+      catchError(e => {
+        return [];
+      })
+    );
+  }
 }

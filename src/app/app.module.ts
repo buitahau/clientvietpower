@@ -75,6 +75,8 @@ import {ProductbaseComponent} from './components/setting/productbase/productbase
 import {DashboardService} from './services/dashboard/dashboard.service';
 import {StoreService} from './services/store/store.service';
 import {EditFormulaComponent} from './components/formula/editformula/edit-formula/edit-formula.component';
+import {TableColourantsComponent} from './directions/product/tablecolourant/table-colourants.component';
+import {BaseCanComponent} from './directions/product/base-can/base-can.component';
 
 
 const routes: Routes = [
@@ -124,6 +126,8 @@ const routes: Routes = [
 
     // import directions
     ModalComponent,
+    TableColourantsComponent,
+    BaseCanComponent,
 
     // page !!
     LoginComponent,

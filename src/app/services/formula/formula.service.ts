@@ -29,7 +29,7 @@ export class FormulaService {
         const listFormulaProductBase = [];
         if (data) {
           for (const fpb of data) {
-            listFormulaProductBase.push(ConvertModelUtils.convertFormulaProductBaseObject(fpb));
+            listFormulaProductBase.push(ConvertModelUtils.convertFormulaProductBaseModel(fpb));
           }
         }
 
@@ -48,7 +48,7 @@ export class FormulaService {
         const result = [];
         if (data) {
           for (const formula of data) {
-            result.push(ConvertModelUtils.convertToFormulaObject(formula));
+            result.push(ConvertModelUtils.convertToFormulaModel(formula));
           }
         }
         this.listFormula = result;
@@ -101,7 +101,7 @@ export class FormulaService {
         const result = [];
         if (data) {
           for (const item of data) {
-            result.push(ConvertModelUtils.convertToFormulaColourantObject(item));
+            result.push(ConvertModelUtils.convertToFormulaColourantModel(item));
           }
         }
         return result;
@@ -119,7 +119,7 @@ export class FormulaService {
         const result = [];
         if (data) {
           for (const item of data) {
-            result.push(ConvertModelUtils.convertToProductBaseCanObject(item));
+            result.push(ConvertModelUtils.convertToProductBaseCanModel(item));
           }
         }
         return result;
@@ -133,7 +133,7 @@ export class FormulaService {
   findFormulaProductBaseById(formulaProductBaseId: number) {
     return this.http.get(environment.settings.serverendpoint + 'formula_product_base/findById/' + formulaProductBaseId).pipe(
       map((data: any) => {
-        return ConvertModelUtils.convertToFormulaProductBaseObject(data);
+        return ConvertModelUtils.convertToFormulaProductBaseModel(data);
       })
     );
   }
