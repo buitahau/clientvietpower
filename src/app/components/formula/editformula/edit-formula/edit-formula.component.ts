@@ -54,8 +54,16 @@ export class EditFormulaComponent implements OnInit {
   }
 
   generateNewFormulaProductBase() {
+    const collection = new CollectionModel();
     const formula = new FormulaModel();
+    formula.collection = collection;
+    formula.baseOnCan = 1;
+
+    const product = new ProductModel();
+    const base = new BaseModel();
     const productBase = new ProductBaseModel();
+    productBase.product = product;
+    productBase.base = base;
 
     this.dbItem = new FormulaProductBaseModel();
     this.dbItem.formula = formula;
@@ -161,7 +169,6 @@ export class EditFormulaComponent implements OnInit {
   }
 
   saveOrUpdateFormula() {
-    console.log('..................');
     this.formulaService.saveOrUpdateFormulaData(this.dbItem.formulaProductBaseId, this.dbItem.formula, this.selectedProductBase,
       this.listColourants).subscribe((datas) => {
       console.log(datas);
