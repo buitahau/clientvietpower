@@ -67,7 +67,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<router-outlet></router-outlet>\r\n"
+module.exports = "<router-outlet></router-outlet>\n"
 
 /***/ }),
 
@@ -78,7 +78,7 @@ module.exports = "<router-outlet></router-outlet>\r\n"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/*!\r\n * Start Bootstrap - SB Admin v5.0.2 (https://startbootstrap.com/template-overviews/sb-admin)\r\n * Copyright 2013-2018 Start Bootstrap\r\n * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-sb-admin/blob/master/LICENSE)\r\n */\nhtml {\n  position: relative;\n  min-height: 100%; }\nbody {\n  height: 100%; }\n#wrapper {\n  display: flex; }\n#wrapper #content-wrapper {\n  overflow-x: hidden;\n  width: 100%;\n  padding-top: 1rem;\n  padding-bottom: 80px; }\nbody.fixed-nav #content-wrapper {\n  margin-top: 56px;\n  padding-left: 90px; }\nbody.fixed-nav.sidebar-toggled #content-wrapper {\n  padding-left: 0; }\n@media (min-width: 768px) {\n  body.fixed-nav #content-wrapper {\n    padding-left: 225px; }\n  body.fixed-nav.sidebar-toggled #content-wrapper {\n    padding-left: 90px; } }\n.scroll-to-top {\n  position: fixed;\n  right: 15px;\n  bottom: 15px;\n  display: none;\n  width: 50px;\n  height: 50px;\n  text-align: center;\n  color: #fff;\n  background: rgba(52, 58, 64, 0.5);\n  line-height: 46px; }\n.scroll-to-top:focus, .scroll-to-top:hover {\n  color: white; }\n.scroll-to-top:hover {\n  background: #343a40; }\n.scroll-to-top i {\n  font-weight: 800; }\n.smaller {\n  font-size: 0.7rem; }\n.o-hidden {\n  overflow: hidden !important; }\n.z-0 {\n  z-index: 0; }\n.z-1 {\n  z-index: 1; }\n.navbar-nav .form-inline .input-group {\n  width: 100%; }\n.navbar-nav .nav-item.active .nav-link {\n  color: #fff; }\n.navbar-nav .nav-item.dropdown .dropdown-toggle::after {\n  width: 1rem;\n  text-align: center;\n  float: right;\n  vertical-align: 0;\n  border: 0;\n  font-weight: 900;\n  content: '\\f105';\n  font-family: 'Font Awesome 5 Free'; }\n.navbar-nav .nav-item.dropdown.show .dropdown-toggle::after {\n  content: '\\f107'; }\n.navbar-nav .nav-item.dropdown.no-arrow .dropdown-toggle::after {\n  display: none; }\n.navbar-nav .nav-item .nav-link:focus {\n  outline: none; }\n.navbar-nav .nav-item .nav-link .badge {\n  position: absolute;\n  margin-left: 0.75rem;\n  top: 0.3rem;\n  font-weight: 400;\n  font-size: 0.5rem; }\n@media (min-width: 768px) {\n  .navbar-nav .form-inline .input-group {\n    width: auto; } }\n.sidebar {\n  width: 90px !important;\n  background-color: #212529;\n  min-height: calc(100vh - 56px); }\n.sidebar .nav-item:last-child {\n  margin-bottom: 1rem; }\n.sidebar .nav-item .nav-link {\n  text-align: center;\n  padding: 0.75rem 1rem;\n  width: 90px; }\n.sidebar .nav-item .nav-link span {\n  font-size: 0.65rem;\n  display: block; }\n.sidebar .nav-item .dropdown-menu {\n  position: absolute !important;\n  -webkit-transform: none !important;\n  transform: none !important;\n  left: calc(90px + 0.5rem) !important;\n  margin: 0; }\n.sidebar .nav-item .dropdown-menu.dropup {\n  bottom: 0;\n  top: auto !important; }\n.sidebar .nav-item.dropdown .dropdown-toggle::after {\n  display: none; }\n.sidebar .nav-item .nav-link {\n  color: rgba(255, 255, 255, 0.5); }\n.sidebar .nav-item .nav-link:active, .sidebar .nav-item .nav-link:focus, .sidebar .nav-item .nav-link:hover {\n  color: rgba(255, 255, 255, 0.75); }\n.sidebar.toggled {\n  width: 0 !important;\n  overflow: hidden; }\n@media (min-width: 768px) {\n  .sidebar {\n    width: 225px !important; }\n  .sidebar .nav-item .nav-link {\n    display: block;\n    width: 100%;\n    text-align: left;\n    padding: 1rem;\n    width: 225px; }\n  .sidebar .nav-item .nav-link span {\n    font-size: 1rem;\n    display: inline; }\n  .sidebar .nav-item .dropdown-menu {\n    position: static !important;\n    margin: 0 1rem;\n    top: 0; }\n  .sidebar .nav-item.dropdown .dropdown-toggle::after {\n    display: block; }\n  .sidebar.toggled {\n    overflow: visible;\n    width: 90px !important; }\n  .sidebar.toggled .nav-item:last-child {\n    margin-bottom: 1rem; }\n  .sidebar.toggled .nav-item .nav-link {\n    text-align: center;\n    padding: 0.75rem 1rem;\n    width: 90px; }\n  .sidebar.toggled .nav-item .nav-link span {\n    font-size: 0.65rem;\n    display: block; }\n  .sidebar.toggled .nav-item .dropdown-menu {\n    position: absolute !important;\n    -webkit-transform: none !important;\n    transform: none !important;\n    left: calc(90px + 0.5rem) !important;\n    margin: 0; }\n  .sidebar.toggled .nav-item .dropdown-menu.dropup {\n    bottom: 0;\n    top: auto !important; }\n  .sidebar.toggled .nav-item.dropdown .dropdown-toggle::after {\n    display: none; } }\n.sidebar.fixed-top {\n  top: 56px;\n  height: calc(100vh - 56px);\n  overflow-y: auto; }\n.card-body-icon {\n  position: absolute;\n  z-index: 0;\n  top: -1.25rem;\n  right: -1rem;\n  opacity: 0.4;\n  font-size: 5rem;\n  -webkit-transform: rotate(15deg);\n  transform: rotate(15deg); }\n@media (min-width: 576px) {\n  .card-columns {\n    -webkit-column-count: 1;\n    column-count: 1; } }\n@media (min-width: 768px) {\n  .card-columns {\n    -webkit-column-count: 2;\n    column-count: 2; } }\n@media (min-width: 1200px) {\n  .card-columns {\n    -webkit-column-count: 2;\n    column-count: 2; } }\n:root {\n  --input-padding-x: 0.75rem;\n  --input-padding-y: 0.75rem; }\n.card-login {\n  max-width: 25rem; }\n.card-register {\n  max-width: 40rem; }\n.form-label-group {\n  position: relative; }\n.form-label-group > input,\n.form-label-group > label {\n  padding: var(--input-padding-y) var(--input-padding-x);\n  height: auto; }\n.form-label-group > label {\n  position: absolute;\n  top: 0;\n  left: 0;\n  display: block;\n  width: 100%;\n  margin-bottom: 0;\n  /* Override default `<label>` margin */\n  line-height: 1.5;\n  color: #495057;\n  border: 1px solid transparent;\n  border-radius: 0.25rem;\n  transition: all 0.1s ease-in-out; }\n.form-label-group input::-webkit-input-placeholder {\n  color: transparent; }\n.form-label-group input:-ms-input-placeholder {\n  color: transparent; }\n.form-label-group input::-ms-input-placeholder {\n  color: transparent; }\n.form-label-group input::placeholder {\n  color: transparent; }\n.form-label-group input:not(:placeholder-shown) {\n  padding-top: calc(var(--input-padding-y) + var(--input-padding-y) * (2 / 3));\n  padding-bottom: calc(var(--input-padding-y) / 3); }\n.form-label-group input:not(:placeholder-shown) ~ label {\n  padding-top: calc(var(--input-padding-y) / 3);\n  padding-bottom: calc(var(--input-padding-y) / 3);\n  font-size: 12px;\n  color: #777; }\nfooter.sticky-footer {\n  display: flex;\n  position: absolute;\n  right: 0;\n  bottom: 0;\n  width: calc(100% - 90px);\n  height: 80px;\n  background-color: #e9ecef; }\nfooter.sticky-footer .copyright {\n  line-height: 1;\n  font-size: 0.8rem; }\n@media (min-width: 768px) {\n  footer.sticky-footer {\n    width: calc(100% - 225px); } }\nbody.sidebar-toggled footer.sticky-footer {\n  width: 100%; }\n@media (min-width: 768px) {\n  body.sidebar-toggled footer.sticky-footer {\n    width: calc(100% - 90px); } }\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvRDpcXFdvcmtzcGFjZVxcSERCU1xcY2xpZW50dmlldHBvd2VyL3NyY1xcYXBwXFxhcHAuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7R0FJRztBQUVIO0VBQ0UsbUJBQWtCO0VBQ2xCLGlCQUFnQixFQUNqQjtBQUVEO0VBQ0UsYUFBWSxFQUNiO0FBRUQ7RUFHRSxjQUFhLEVBQ2Q7QUFFRDtFQUNFLG1CQUFrQjtFQUNsQixZQUFXO0VBQ1gsa0JBQWlCO0VBQ2pCLHFCQUFvQixFQUNyQjtBQUVEO0VBQ0UsaUJBQWdCO0VBQ2hCLG1CQUFrQixFQUNuQjtBQUVEO0VBQ0UsZ0JBQWUsRUFDaEI7QUFFRDtFQUNFO0lBQ0Usb0JBQW1CLEVBQ3BCO0VBQ0Q7SUFDRSxtQkFBa0IsRUFDbkIsRUFBQTtBQUdIO0VBQ0UsZ0JBQWU7RUFDZixZQUFXO0VBQ1gsYUFBWTtFQUNaLGNBQWE7RUFDYixZQUFXO0VBQ1gsYUFBWTtFQUNaLG1CQUFrQjtFQUNsQixZQUFXO0VBQ1gsa0NBQWlDO0VBQ2pDLGtCQUFpQixFQUNsQjtBQUVEO0VBQ0UsYUFBWSxFQUNiO0FBRUQ7RUFDRSxvQkFBbUIsRUFDcEI7QUFFRDtFQUNFLGlCQUFnQixFQUNqQjtBQUVEO0VBQ0Usa0JBQWlCLEVBQ2xCO0FBRUQ7RUFDRSw0QkFBMkIsRUFDNUI7QUFFRDtFQUNFLFdBQVUsRUFDWDtBQUVEO0VBQ0UsV0FBVSxFQUNYO0FBRUQ7RUFDRSxZQUFXLEVBQ1o7QUFFRDtFQUNFLFlBQVcsRUFDWjtBQUVEO0VBQ0UsWUFBVztFQUNYLG1CQUFrQjtFQUNsQixhQUFZO0VBQ1osa0JBQWlCO0VBQ2pCLFVBQVM7RUFDVCxpQkFBZ0I7RUFDaEIsaUJBQWdCO0VBQ2hCLG1DQUFrQyxFQUNuQztBQUVEO0VBQ0UsaUJBQWdCLEVBQ2pCO0FBRUQ7RUFDRSxjQUFhLEVBQ2Q7QUFFRDtFQUNFLGNBQWEsRUFDZDtBQUVEO0VBQ0UsbUJBQWtCO0VBQ2xCLHFCQUFvQjtFQUNwQixZQUFXO0VBQ1gsaUJBQWdCO0VBQ2hCLGtCQUFpQixFQUNsQjtBQUVEO0VBQ0U7SUFDRSxZQUFXLEVBQ1osRUFBQTtBQUdIO0VBQ0UsdUJBQXNCO0VBQ3RCLDBCQUF5QjtFQUN6QiwrQkFBOEIsRUFDL0I7QUFFRDtFQUNFLG9CQUFtQixFQUNwQjtBQUVEO0VBQ0UsbUJBQWtCO0VBQ2xCLHNCQUFxQjtFQUNyQixZQUFXLEVBQ1o7QUFFRDtFQUNFLG1CQUFrQjtFQUNsQixlQUFjLEVBQ2Y7QUFFRDtFQUNFLDhCQUE2QjtFQUM3QixtQ0FBa0M7RUFDbEMsMkJBQTBCO0VBQzFCLHFDQUFvQztFQUNwQyxVQUFTLEVBQ1Y7QUFFRDtFQUNFLFVBQVM7RUFDVCxxQkFBb0IsRUFDckI7QUFFRDtFQUNFLGNBQWEsRUFDZDtBQUVEO0VBQ0UsZ0NBQStCLEVBQ2hDO0FBRUQ7RUFDRSxpQ0FBZ0MsRUFDakM7QUFFRDtFQUNFLG9CQUFtQjtFQUNuQixpQkFBZ0IsRUFDakI7QUFFRDtFQUNFO0lBQ0Usd0JBQXVCLEVBQ3hCO0VBQ0Q7SUFDRSxlQUFjO0lBQ2QsWUFBVztJQUNYLGlCQUFnQjtJQUNoQixjQUFhO0lBQ2IsYUFBWSxFQUNiO0VBQ0Q7SUFDRSxnQkFBZTtJQUNmLGdCQUFlLEVBQ2hCO0VBQ0Q7SUFDRSw0QkFBMkI7SUFDM0IsZUFBYztJQUNkLE9BQU0sRUFDUDtFQUNEO0lBQ0UsZUFBYyxFQUNmO0VBQ0Q7SUFDRSxrQkFBaUI7SUFDakIsdUJBQXNCLEVBQ3ZCO0VBQ0Q7SUFDRSxvQkFBbUIsRUFDcEI7RUFDRDtJQUNFLG1CQUFrQjtJQUNsQixzQkFBcUI7SUFDckIsWUFBVyxFQUNaO0VBQ0Q7SUFDRSxtQkFBa0I7SUFDbEIsZUFBYyxFQUNmO0VBQ0Q7SUFDRSw4QkFBNkI7SUFDN0IsbUNBQWtDO0lBQ2xDLDJCQUEwQjtJQUMxQixxQ0FBb0M7SUFDcEMsVUFBUyxFQUNWO0VBQ0Q7SUFDRSxVQUFTO0lBQ1QscUJBQW9CLEVBQ3JCO0VBQ0Q7SUFDRSxjQUFhLEVBQ2QsRUFBQTtBQUdIO0VBQ0UsVUFBUztFQUNULDJCQUEwQjtFQUMxQixpQkFBZ0IsRUFDakI7QUFFRDtFQUNFLG1CQUFrQjtFQUNsQixXQUFVO0VBQ1YsY0FBYTtFQUNiLGFBQVk7RUFDWixhQUFZO0VBQ1osZ0JBQWU7RUFDZixpQ0FBZ0M7RUFDaEMseUJBQXdCLEVBQ3pCO0FBRUQ7RUFDRTtJQUNFLHdCQUF1QjtJQUN2QixnQkFBZSxFQUNoQixFQUFBO0FBR0g7RUFDRTtJQUNFLHdCQUF1QjtJQUN2QixnQkFBZSxFQUNoQixFQUFBO0FBR0g7RUFDRTtJQUNFLHdCQUF1QjtJQUN2QixnQkFBZSxFQUNoQixFQUFBO0FBR0g7RUFDRSwyQkFBa0I7RUFDbEIsMkJBQWtCLEVBQ25CO0FBRUQ7RUFDRSxpQkFBZ0IsRUFDakI7QUFFRDtFQUNFLGlCQUFnQixFQUNqQjtBQUVEO0VBQ0UsbUJBQWtCLEVBQ25CO0FBRUQ7O0VBRUUsdURBQXNEO0VBQ3RELGFBQVksRUFDYjtBQUVEO0VBQ0UsbUJBQWtCO0VBQ2xCLE9BQU07RUFDTixRQUFPO0VBQ1AsZUFBYztFQUNkLFlBQVc7RUFDWCxpQkFBZ0I7RUFDaEIsdUNBQXVDO0VBQ3ZDLGlCQUFnQjtFQUNoQixlQUFjO0VBQ2QsOEJBQTZCO0VBQzdCLHVCQUFzQjtFQUV0QixpQ0FBZ0MsRUFDakM7QUFFRDtFQUNFLG1CQUFrQixFQUNuQjtBQUVEO0VBQ0UsbUJBQWtCLEVBQ25CO0FBRUQ7RUFDRSxtQkFBa0IsRUFDbkI7QUFFRDtFQUNFLG1CQUFrQixFQUNuQjtBQUVEO0VBQ0UsNkVBQTRFO0VBQzVFLGlEQUFnRCxFQUNqRDtBQUVEO0VBQ0UsOENBQTZDO0VBQzdDLGlEQUFnRDtFQUNoRCxnQkFBZTtFQUNmLFlBQVcsRUFDWjtBQUVEO0VBR0UsY0FBYTtFQUNiLG1CQUFrQjtFQUNsQixTQUFRO0VBQ1IsVUFBUztFQUNULHlCQUF3QjtFQUN4QixhQUFZO0VBQ1osMEJBQXlCLEVBQzFCO0FBRUQ7RUFDRSxlQUFjO0VBQ2Qsa0JBQWlCLEVBQ2xCO0FBRUQ7RUFDRTtJQUNFLDBCQUF5QixFQUMxQixFQUFBO0FBR0g7RUFDRSxZQUFXLEVBQ1o7QUFFRDtFQUNFO0lBQ0UseUJBQXdCLEVBQ3pCLEVBQUEiLCJmaWxlIjoic3JjL2FwcC9hcHAuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIvKiFcclxuICogU3RhcnQgQm9vdHN0cmFwIC0gU0IgQWRtaW4gdjUuMC4yIChodHRwczovL3N0YXJ0Ym9vdHN0cmFwLmNvbS90ZW1wbGF0ZS1vdmVydmlld3Mvc2ItYWRtaW4pXHJcbiAqIENvcHlyaWdodCAyMDEzLTIwMTggU3RhcnQgQm9vdHN0cmFwXHJcbiAqIExpY2Vuc2VkIHVuZGVyIE1JVCAoaHR0cHM6Ly9naXRodWIuY29tL0JsYWNrcm9ja0RpZ2l0YWwvc3RhcnRib290c3RyYXAtc2ItYWRtaW4vYmxvYi9tYXN0ZXIvTElDRU5TRSlcclxuICovXHJcblxyXG5odG1sIHtcclxuICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbiAgbWluLWhlaWdodDogMTAwJTtcclxufVxyXG5cclxuYm9keSB7XHJcbiAgaGVpZ2h0OiAxMDAlO1xyXG59XHJcblxyXG4jd3JhcHBlciB7XHJcbiAgZGlzcGxheTogLXdlYmtpdC1ib3g7XHJcbiAgZGlzcGxheTogLW1zLWZsZXhib3g7XHJcbiAgZGlzcGxheTogZmxleDtcclxufVxyXG5cclxuI3dyYXBwZXIgI2NvbnRlbnQtd3JhcHBlciB7XHJcbiAgb3ZlcmZsb3cteDogaGlkZGVuO1xyXG4gIHdpZHRoOiAxMDAlO1xyXG4gIHBhZGRpbmctdG9wOiAxcmVtO1xyXG4gIHBhZGRpbmctYm90dG9tOiA4MHB4O1xyXG59XHJcblxyXG5ib2R5LmZpeGVkLW5hdiAjY29udGVudC13cmFwcGVyIHtcclxuICBtYXJnaW4tdG9wOiA1NnB4O1xyXG4gIHBhZGRpbmctbGVmdDogOTBweDtcclxufVxyXG5cclxuYm9keS5maXhlZC1uYXYuc2lkZWJhci10b2dnbGVkICNjb250ZW50LXdyYXBwZXIge1xyXG4gIHBhZGRpbmctbGVmdDogMDtcclxufVxyXG5cclxuQG1lZGlhIChtaW4td2lkdGg6IDc2OHB4KSB7XHJcbiAgYm9keS5maXhlZC1uYXYgI2NvbnRlbnQtd3JhcHBlciB7XHJcbiAgICBwYWRkaW5nLWxlZnQ6IDIyNXB4O1xyXG4gIH1cclxuICBib2R5LmZpeGVkLW5hdi5zaWRlYmFyLXRvZ2dsZWQgI2NvbnRlbnQtd3JhcHBlciB7XHJcbiAgICBwYWRkaW5nLWxlZnQ6IDkwcHg7XHJcbiAgfVxyXG59XHJcblxyXG4uc2Nyb2xsLXRvLXRvcCB7XHJcbiAgcG9zaXRpb246IGZpeGVkO1xyXG4gIHJpZ2h0OiAxNXB4O1xyXG4gIGJvdHRvbTogMTVweDtcclxuICBkaXNwbGF5OiBub25lO1xyXG4gIHdpZHRoOiA1MHB4O1xyXG4gIGhlaWdodDogNTBweDtcclxuICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgY29sb3I6ICNmZmY7XHJcbiAgYmFja2dyb3VuZDogcmdiYSg1MiwgNTgsIDY0LCAwLjUpO1xyXG4gIGxpbmUtaGVpZ2h0OiA0NnB4O1xyXG59XHJcblxyXG4uc2Nyb2xsLXRvLXRvcDpmb2N1cywgLnNjcm9sbC10by10b3A6aG92ZXIge1xyXG4gIGNvbG9yOiB3aGl0ZTtcclxufVxyXG5cclxuLnNjcm9sbC10by10b3A6aG92ZXIge1xyXG4gIGJhY2tncm91bmQ6ICMzNDNhNDA7XHJcbn1cclxuXHJcbi5zY3JvbGwtdG8tdG9wIGkge1xyXG4gIGZvbnQtd2VpZ2h0OiA4MDA7XHJcbn1cclxuXHJcbi5zbWFsbGVyIHtcclxuICBmb250LXNpemU6IDAuN3JlbTtcclxufVxyXG5cclxuLm8taGlkZGVuIHtcclxuICBvdmVyZmxvdzogaGlkZGVuICFpbXBvcnRhbnQ7XHJcbn1cclxuXHJcbi56LTAge1xyXG4gIHotaW5kZXg6IDA7XHJcbn1cclxuXHJcbi56LTEge1xyXG4gIHotaW5kZXg6IDE7XHJcbn1cclxuXHJcbi5uYXZiYXItbmF2IC5mb3JtLWlubGluZSAuaW5wdXQtZ3JvdXAge1xyXG4gIHdpZHRoOiAxMDAlO1xyXG59XHJcblxyXG4ubmF2YmFyLW5hdiAubmF2LWl0ZW0uYWN0aXZlIC5uYXYtbGluayB7XHJcbiAgY29sb3I6ICNmZmY7XHJcbn1cclxuXHJcbi5uYXZiYXItbmF2IC5uYXYtaXRlbS5kcm9wZG93biAuZHJvcGRvd24tdG9nZ2xlOjphZnRlciB7XHJcbiAgd2lkdGg6IDFyZW07XHJcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gIGZsb2F0OiByaWdodDtcclxuICB2ZXJ0aWNhbC1hbGlnbjogMDtcclxuICBib3JkZXI6IDA7XHJcbiAgZm9udC13ZWlnaHQ6IDkwMDtcclxuICBjb250ZW50OiAnXFxmMTA1JztcclxuICBmb250LWZhbWlseTogJ0ZvbnQgQXdlc29tZSA1IEZyZWUnO1xyXG59XHJcblxyXG4ubmF2YmFyLW5hdiAubmF2LWl0ZW0uZHJvcGRvd24uc2hvdyAuZHJvcGRvd24tdG9nZ2xlOjphZnRlciB7XHJcbiAgY29udGVudDogJ1xcZjEwNyc7XHJcbn1cclxuXHJcbi5uYXZiYXItbmF2IC5uYXYtaXRlbS5kcm9wZG93bi5uby1hcnJvdyAuZHJvcGRvd24tdG9nZ2xlOjphZnRlciB7XHJcbiAgZGlzcGxheTogbm9uZTtcclxufVxyXG5cclxuLm5hdmJhci1uYXYgLm5hdi1pdGVtIC5uYXYtbGluazpmb2N1cyB7XHJcbiAgb3V0bGluZTogbm9uZTtcclxufVxyXG5cclxuLm5hdmJhci1uYXYgLm5hdi1pdGVtIC5uYXYtbGluayAuYmFkZ2Uge1xyXG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICBtYXJnaW4tbGVmdDogMC43NXJlbTtcclxuICB0b3A6IDAuM3JlbTtcclxuICBmb250LXdlaWdodDogNDAwO1xyXG4gIGZvbnQtc2l6ZTogMC41cmVtO1xyXG59XHJcblxyXG5AbWVkaWEgKG1pbi13aWR0aDogNzY4cHgpIHtcclxuICAubmF2YmFyLW5hdiAuZm9ybS1pbmxpbmUgLmlucHV0LWdyb3VwIHtcclxuICAgIHdpZHRoOiBhdXRvO1xyXG4gIH1cclxufVxyXG5cclxuLnNpZGViYXIge1xyXG4gIHdpZHRoOiA5MHB4ICFpbXBvcnRhbnQ7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogIzIxMjUyOTtcclxuICBtaW4taGVpZ2h0OiBjYWxjKDEwMHZoIC0gNTZweCk7XHJcbn1cclxuXHJcbi5zaWRlYmFyIC5uYXYtaXRlbTpsYXN0LWNoaWxkIHtcclxuICBtYXJnaW4tYm90dG9tOiAxcmVtO1xyXG59XHJcblxyXG4uc2lkZWJhciAubmF2LWl0ZW0gLm5hdi1saW5rIHtcclxuICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgcGFkZGluZzogMC43NXJlbSAxcmVtO1xyXG4gIHdpZHRoOiA5MHB4O1xyXG59XHJcblxyXG4uc2lkZWJhciAubmF2LWl0ZW0gLm5hdi1saW5rIHNwYW4ge1xyXG4gIGZvbnQtc2l6ZTogMC42NXJlbTtcclxuICBkaXNwbGF5OiBibG9jaztcclxufVxyXG5cclxuLnNpZGViYXIgLm5hdi1pdGVtIC5kcm9wZG93bi1tZW51IHtcclxuICBwb3NpdGlvbjogYWJzb2x1dGUgIWltcG9ydGFudDtcclxuICAtd2Via2l0LXRyYW5zZm9ybTogbm9uZSAhaW1wb3J0YW50O1xyXG4gIHRyYW5zZm9ybTogbm9uZSAhaW1wb3J0YW50O1xyXG4gIGxlZnQ6IGNhbGMoOTBweCArIDAuNXJlbSkgIWltcG9ydGFudDtcclxuICBtYXJnaW46IDA7XHJcbn1cclxuXHJcbi5zaWRlYmFyIC5uYXYtaXRlbSAuZHJvcGRvd24tbWVudS5kcm9wdXAge1xyXG4gIGJvdHRvbTogMDtcclxuICB0b3A6IGF1dG8gIWltcG9ydGFudDtcclxufVxyXG5cclxuLnNpZGViYXIgLm5hdi1pdGVtLmRyb3Bkb3duIC5kcm9wZG93bi10b2dnbGU6OmFmdGVyIHtcclxuICBkaXNwbGF5OiBub25lO1xyXG59XHJcblxyXG4uc2lkZWJhciAubmF2LWl0ZW0gLm5hdi1saW5rIHtcclxuICBjb2xvcjogcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjUpO1xyXG59XHJcblxyXG4uc2lkZWJhciAubmF2LWl0ZW0gLm5hdi1saW5rOmFjdGl2ZSwgLnNpZGViYXIgLm5hdi1pdGVtIC5uYXYtbGluazpmb2N1cywgLnNpZGViYXIgLm5hdi1pdGVtIC5uYXYtbGluazpob3ZlciB7XHJcbiAgY29sb3I6IHJnYmEoMjU1LCAyNTUsIDI1NSwgMC43NSk7XHJcbn1cclxuXHJcbi5zaWRlYmFyLnRvZ2dsZWQge1xyXG4gIHdpZHRoOiAwICFpbXBvcnRhbnQ7XHJcbiAgb3ZlcmZsb3c6IGhpZGRlbjtcclxufVxyXG5cclxuQG1lZGlhIChtaW4td2lkdGg6IDc2OHB4KSB7XHJcbiAgLnNpZGViYXIge1xyXG4gICAgd2lkdGg6IDIyNXB4ICFpbXBvcnRhbnQ7XHJcbiAgfVxyXG4gIC5zaWRlYmFyIC5uYXYtaXRlbSAubmF2LWxpbmsge1xyXG4gICAgZGlzcGxheTogYmxvY2s7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIHRleHQtYWxpZ246IGxlZnQ7XHJcbiAgICBwYWRkaW5nOiAxcmVtO1xyXG4gICAgd2lkdGg6IDIyNXB4O1xyXG4gIH1cclxuICAuc2lkZWJhciAubmF2LWl0ZW0gLm5hdi1saW5rIHNwYW4ge1xyXG4gICAgZm9udC1zaXplOiAxcmVtO1xyXG4gICAgZGlzcGxheTogaW5saW5lO1xyXG4gIH1cclxuICAuc2lkZWJhciAubmF2LWl0ZW0gLmRyb3Bkb3duLW1lbnUge1xyXG4gICAgcG9zaXRpb246IHN0YXRpYyAhaW1wb3J0YW50O1xyXG4gICAgbWFyZ2luOiAwIDFyZW07XHJcbiAgICB0b3A6IDA7XHJcbiAgfVxyXG4gIC5zaWRlYmFyIC5uYXYtaXRlbS5kcm9wZG93biAuZHJvcGRvd24tdG9nZ2xlOjphZnRlciB7XHJcbiAgICBkaXNwbGF5OiBibG9jaztcclxuICB9XHJcbiAgLnNpZGViYXIudG9nZ2xlZCB7XHJcbiAgICBvdmVyZmxvdzogdmlzaWJsZTtcclxuICAgIHdpZHRoOiA5MHB4ICFpbXBvcnRhbnQ7XHJcbiAgfVxyXG4gIC5zaWRlYmFyLnRvZ2dsZWQgLm5hdi1pdGVtOmxhc3QtY2hpbGQge1xyXG4gICAgbWFyZ2luLWJvdHRvbTogMXJlbTtcclxuICB9XHJcbiAgLnNpZGViYXIudG9nZ2xlZCAubmF2LWl0ZW0gLm5hdi1saW5rIHtcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICAgIHBhZGRpbmc6IDAuNzVyZW0gMXJlbTtcclxuICAgIHdpZHRoOiA5MHB4O1xyXG4gIH1cclxuICAuc2lkZWJhci50b2dnbGVkIC5uYXYtaXRlbSAubmF2LWxpbmsgc3BhbiB7XHJcbiAgICBmb250LXNpemU6IDAuNjVyZW07XHJcbiAgICBkaXNwbGF5OiBibG9jaztcclxuICB9XHJcbiAgLnNpZGViYXIudG9nZ2xlZCAubmF2LWl0ZW0gLmRyb3Bkb3duLW1lbnUge1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlICFpbXBvcnRhbnQ7XHJcbiAgICAtd2Via2l0LXRyYW5zZm9ybTogbm9uZSAhaW1wb3J0YW50O1xyXG4gICAgdHJhbnNmb3JtOiBub25lICFpbXBvcnRhbnQ7XHJcbiAgICBsZWZ0OiBjYWxjKDkwcHggKyAwLjVyZW0pICFpbXBvcnRhbnQ7XHJcbiAgICBtYXJnaW46IDA7XHJcbiAgfVxyXG4gIC5zaWRlYmFyLnRvZ2dsZWQgLm5hdi1pdGVtIC5kcm9wZG93bi1tZW51LmRyb3B1cCB7XHJcbiAgICBib3R0b206IDA7XHJcbiAgICB0b3A6IGF1dG8gIWltcG9ydGFudDtcclxuICB9XHJcbiAgLnNpZGViYXIudG9nZ2xlZCAubmF2LWl0ZW0uZHJvcGRvd24gLmRyb3Bkb3duLXRvZ2dsZTo6YWZ0ZXIge1xyXG4gICAgZGlzcGxheTogbm9uZTtcclxuICB9XHJcbn1cclxuXHJcbi5zaWRlYmFyLmZpeGVkLXRvcCB7XHJcbiAgdG9wOiA1NnB4O1xyXG4gIGhlaWdodDogY2FsYygxMDB2aCAtIDU2cHgpO1xyXG4gIG92ZXJmbG93LXk6IGF1dG87XHJcbn1cclxuXHJcbi5jYXJkLWJvZHktaWNvbiB7XHJcbiAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gIHotaW5kZXg6IDA7XHJcbiAgdG9wOiAtMS4yNXJlbTtcclxuICByaWdodDogLTFyZW07XHJcbiAgb3BhY2l0eTogMC40O1xyXG4gIGZvbnQtc2l6ZTogNXJlbTtcclxuICAtd2Via2l0LXRyYW5zZm9ybTogcm90YXRlKDE1ZGVnKTtcclxuICB0cmFuc2Zvcm06IHJvdGF0ZSgxNWRlZyk7XHJcbn1cclxuXHJcbkBtZWRpYSAobWluLXdpZHRoOiA1NzZweCkge1xyXG4gIC5jYXJkLWNvbHVtbnMge1xyXG4gICAgLXdlYmtpdC1jb2x1bW4tY291bnQ6IDE7XHJcbiAgICBjb2x1bW4tY291bnQ6IDE7XHJcbiAgfVxyXG59XHJcblxyXG5AbWVkaWEgKG1pbi13aWR0aDogNzY4cHgpIHtcclxuICAuY2FyZC1jb2x1bW5zIHtcclxuICAgIC13ZWJraXQtY29sdW1uLWNvdW50OiAyO1xyXG4gICAgY29sdW1uLWNvdW50OiAyO1xyXG4gIH1cclxufVxyXG5cclxuQG1lZGlhIChtaW4td2lkdGg6IDEyMDBweCkge1xyXG4gIC5jYXJkLWNvbHVtbnMge1xyXG4gICAgLXdlYmtpdC1jb2x1bW4tY291bnQ6IDI7XHJcbiAgICBjb2x1bW4tY291bnQ6IDI7XHJcbiAgfVxyXG59XHJcblxyXG46cm9vdCB7XHJcbiAgLS1pbnB1dC1wYWRkaW5nLXg6IDAuNzVyZW07XHJcbiAgLS1pbnB1dC1wYWRkaW5nLXk6IDAuNzVyZW07XHJcbn1cclxuXHJcbi5jYXJkLWxvZ2luIHtcclxuICBtYXgtd2lkdGg6IDI1cmVtO1xyXG59XHJcblxyXG4uY2FyZC1yZWdpc3RlciB7XHJcbiAgbWF4LXdpZHRoOiA0MHJlbTtcclxufVxyXG5cclxuLmZvcm0tbGFiZWwtZ3JvdXAge1xyXG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxufVxyXG5cclxuLmZvcm0tbGFiZWwtZ3JvdXAgPiBpbnB1dCxcclxuLmZvcm0tbGFiZWwtZ3JvdXAgPiBsYWJlbCB7XHJcbiAgcGFkZGluZzogdmFyKC0taW5wdXQtcGFkZGluZy15KSB2YXIoLS1pbnB1dC1wYWRkaW5nLXgpO1xyXG4gIGhlaWdodDogYXV0bztcclxufVxyXG5cclxuLmZvcm0tbGFiZWwtZ3JvdXAgPiBsYWJlbCB7XHJcbiAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gIHRvcDogMDtcclxuICBsZWZ0OiAwO1xyXG4gIGRpc3BsYXk6IGJsb2NrO1xyXG4gIHdpZHRoOiAxMDAlO1xyXG4gIG1hcmdpbi1ib3R0b206IDA7XHJcbiAgLyogT3ZlcnJpZGUgZGVmYXVsdCBgPGxhYmVsPmAgbWFyZ2luICovXHJcbiAgbGluZS1oZWlnaHQ6IDEuNTtcclxuICBjb2xvcjogIzQ5NTA1NztcclxuICBib3JkZXI6IDFweCBzb2xpZCB0cmFuc3BhcmVudDtcclxuICBib3JkZXItcmFkaXVzOiAwLjI1cmVtO1xyXG4gIC13ZWJraXQtdHJhbnNpdGlvbjogYWxsIDAuMXMgZWFzZS1pbi1vdXQ7XHJcbiAgdHJhbnNpdGlvbjogYWxsIDAuMXMgZWFzZS1pbi1vdXQ7XHJcbn1cclxuXHJcbi5mb3JtLWxhYmVsLWdyb3VwIGlucHV0Ojotd2Via2l0LWlucHV0LXBsYWNlaG9sZGVyIHtcclxuICBjb2xvcjogdHJhbnNwYXJlbnQ7XHJcbn1cclxuXHJcbi5mb3JtLWxhYmVsLWdyb3VwIGlucHV0Oi1tcy1pbnB1dC1wbGFjZWhvbGRlciB7XHJcbiAgY29sb3I6IHRyYW5zcGFyZW50O1xyXG59XHJcblxyXG4uZm9ybS1sYWJlbC1ncm91cCBpbnB1dDo6LW1zLWlucHV0LXBsYWNlaG9sZGVyIHtcclxuICBjb2xvcjogdHJhbnNwYXJlbnQ7XHJcbn1cclxuXHJcbi5mb3JtLWxhYmVsLWdyb3VwIGlucHV0OjpwbGFjZWhvbGRlciB7XHJcbiAgY29sb3I6IHRyYW5zcGFyZW50O1xyXG59XHJcblxyXG4uZm9ybS1sYWJlbC1ncm91cCBpbnB1dDpub3QoOnBsYWNlaG9sZGVyLXNob3duKSB7XHJcbiAgcGFkZGluZy10b3A6IGNhbGModmFyKC0taW5wdXQtcGFkZGluZy15KSArIHZhcigtLWlucHV0LXBhZGRpbmcteSkgKiAoMiAvIDMpKTtcclxuICBwYWRkaW5nLWJvdHRvbTogY2FsYyh2YXIoLS1pbnB1dC1wYWRkaW5nLXkpIC8gMyk7XHJcbn1cclxuXHJcbi5mb3JtLWxhYmVsLWdyb3VwIGlucHV0Om5vdCg6cGxhY2Vob2xkZXItc2hvd24pIH4gbGFiZWwge1xyXG4gIHBhZGRpbmctdG9wOiBjYWxjKHZhcigtLWlucHV0LXBhZGRpbmcteSkgLyAzKTtcclxuICBwYWRkaW5nLWJvdHRvbTogY2FsYyh2YXIoLS1pbnB1dC1wYWRkaW5nLXkpIC8gMyk7XHJcbiAgZm9udC1zaXplOiAxMnB4O1xyXG4gIGNvbG9yOiAjNzc3O1xyXG59XHJcblxyXG5mb290ZXIuc3RpY2t5LWZvb3RlciB7XHJcbiAgZGlzcGxheTogLXdlYmtpdC1ib3g7XHJcbiAgZGlzcGxheTogLW1zLWZsZXhib3g7XHJcbiAgZGlzcGxheTogZmxleDtcclxuICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgcmlnaHQ6IDA7XHJcbiAgYm90dG9tOiAwO1xyXG4gIHdpZHRoOiBjYWxjKDEwMCUgLSA5MHB4KTtcclxuICBoZWlnaHQ6IDgwcHg7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogI2U5ZWNlZjtcclxufVxyXG5cclxuZm9vdGVyLnN0aWNreS1mb290ZXIgLmNvcHlyaWdodCB7XHJcbiAgbGluZS1oZWlnaHQ6IDE7XHJcbiAgZm9udC1zaXplOiAwLjhyZW07XHJcbn1cclxuXHJcbkBtZWRpYSAobWluLXdpZHRoOiA3NjhweCkge1xyXG4gIGZvb3Rlci5zdGlja3ktZm9vdGVyIHtcclxuICAgIHdpZHRoOiBjYWxjKDEwMCUgLSAyMjVweCk7XHJcbiAgfVxyXG59XHJcblxyXG5ib2R5LnNpZGViYXItdG9nZ2xlZCBmb290ZXIuc3RpY2t5LWZvb3RlciB7XHJcbiAgd2lkdGg6IDEwMCU7XHJcbn1cclxuXHJcbkBtZWRpYSAobWluLXdpZHRoOiA3NjhweCkge1xyXG4gIGJvZHkuc2lkZWJhci10b2dnbGVkIGZvb3Rlci5zdGlja3ktZm9vdGVyIHtcclxuICAgIHdpZHRoOiBjYWxjKDEwMCUgLSA5MHB4KTtcclxuICB9XHJcbn1cclxuIl19 */"
+module.exports = "/*!\r\n * Start Bootstrap - SB Admin v5.0.2 (https://startbootstrap.com/template-overviews/sb-admin)\r\n * Copyright 2013-2018 Start Bootstrap\r\n * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-sb-admin/blob/master/LICENSE)\r\n */\nhtml {\n  position: relative;\n  min-height: 100%; }\nbody {\n  height: 100%; }\n#wrapper {\n  display: flex; }\n#wrapper #content-wrapper {\n  overflow-x: hidden;\n  width: 100%;\n  padding-top: 1rem;\n  padding-bottom: 80px; }\nbody.fixed-nav #content-wrapper {\n  margin-top: 56px;\n  padding-left: 90px; }\nbody.fixed-nav.sidebar-toggled #content-wrapper {\n  padding-left: 0; }\n@media (min-width: 768px) {\n  body.fixed-nav #content-wrapper {\n    padding-left: 225px; }\n  body.fixed-nav.sidebar-toggled #content-wrapper {\n    padding-left: 90px; } }\n.scroll-to-top {\n  position: fixed;\n  right: 15px;\n  bottom: 15px;\n  display: none;\n  width: 50px;\n  height: 50px;\n  text-align: center;\n  color: #fff;\n  background: rgba(52, 58, 64, 0.5);\n  line-height: 46px; }\n.scroll-to-top:focus, .scroll-to-top:hover {\n  color: white; }\n.scroll-to-top:hover {\n  background: #343a40; }\n.scroll-to-top i {\n  font-weight: 800; }\n.smaller {\n  font-size: 0.7rem; }\n.o-hidden {\n  overflow: hidden !important; }\n.z-0 {\n  z-index: 0; }\n.z-1 {\n  z-index: 1; }\n.navbar-nav .form-inline .input-group {\n  width: 100%; }\n.navbar-nav .nav-item.active .nav-link {\n  color: #fff; }\n.navbar-nav .nav-item.dropdown .dropdown-toggle::after {\n  width: 1rem;\n  text-align: center;\n  float: right;\n  vertical-align: 0;\n  border: 0;\n  font-weight: 900;\n  content: '\\f105';\n  font-family: 'Font Awesome 5 Free'; }\n.navbar-nav .nav-item.dropdown.show .dropdown-toggle::after {\n  content: '\\f107'; }\n.navbar-nav .nav-item.dropdown.no-arrow .dropdown-toggle::after {\n  display: none; }\n.navbar-nav .nav-item .nav-link:focus {\n  outline: none; }\n.navbar-nav .nav-item .nav-link .badge {\n  position: absolute;\n  margin-left: 0.75rem;\n  top: 0.3rem;\n  font-weight: 400;\n  font-size: 0.5rem; }\n@media (min-width: 768px) {\n  .navbar-nav .form-inline .input-group {\n    width: auto; } }\n.sidebar {\n  width: 90px !important;\n  background-color: #212529;\n  min-height: calc(100vh - 56px); }\n.sidebar .nav-item:last-child {\n  margin-bottom: 1rem; }\n.sidebar .nav-item .nav-link {\n  text-align: center;\n  padding: 0.75rem 1rem;\n  width: 90px; }\n.sidebar .nav-item .nav-link span {\n  font-size: 0.65rem;\n  display: block; }\n.sidebar .nav-item .dropdown-menu {\n  position: absolute !important;\n  -webkit-transform: none !important;\n  transform: none !important;\n  left: calc(90px + 0.5rem) !important;\n  margin: 0; }\n.sidebar .nav-item .dropdown-menu.dropup {\n  bottom: 0;\n  top: auto !important; }\n.sidebar .nav-item.dropdown .dropdown-toggle::after {\n  display: none; }\n.sidebar .nav-item .nav-link {\n  color: rgba(255, 255, 255, 0.5); }\n.sidebar .nav-item .nav-link:active, .sidebar .nav-item .nav-link:focus, .sidebar .nav-item .nav-link:hover {\n  color: rgba(255, 255, 255, 0.75); }\n.sidebar.toggled {\n  width: 0 !important;\n  overflow: hidden; }\n@media (min-width: 768px) {\n  .sidebar {\n    width: 225px !important; }\n  .sidebar .nav-item .nav-link {\n    display: block;\n    width: 100%;\n    text-align: left;\n    padding: 1rem;\n    width: 225px; }\n  .sidebar .nav-item .nav-link span {\n    font-size: 1rem;\n    display: inline; }\n  .sidebar .nav-item .dropdown-menu {\n    position: static !important;\n    margin: 0 1rem;\n    top: 0; }\n  .sidebar .nav-item.dropdown .dropdown-toggle::after {\n    display: block; }\n  .sidebar.toggled {\n    overflow: visible;\n    width: 90px !important; }\n  .sidebar.toggled .nav-item:last-child {\n    margin-bottom: 1rem; }\n  .sidebar.toggled .nav-item .nav-link {\n    text-align: center;\n    padding: 0.75rem 1rem;\n    width: 90px; }\n  .sidebar.toggled .nav-item .nav-link span {\n    font-size: 0.65rem;\n    display: block; }\n  .sidebar.toggled .nav-item .dropdown-menu {\n    position: absolute !important;\n    -webkit-transform: none !important;\n    transform: none !important;\n    left: calc(90px + 0.5rem) !important;\n    margin: 0; }\n  .sidebar.toggled .nav-item .dropdown-menu.dropup {\n    bottom: 0;\n    top: auto !important; }\n  .sidebar.toggled .nav-item.dropdown .dropdown-toggle::after {\n    display: none; } }\n.sidebar.fixed-top {\n  top: 56px;\n  height: calc(100vh - 56px);\n  overflow-y: auto; }\n.card-body-icon {\n  position: absolute;\n  z-index: 0;\n  top: -1.25rem;\n  right: -1rem;\n  opacity: 0.4;\n  font-size: 5rem;\n  -webkit-transform: rotate(15deg);\n  transform: rotate(15deg); }\n@media (min-width: 576px) {\n  .card-columns {\n    -webkit-column-count: 1;\n    column-count: 1; } }\n@media (min-width: 768px) {\n  .card-columns {\n    -webkit-column-count: 2;\n    column-count: 2; } }\n@media (min-width: 1200px) {\n  .card-columns {\n    -webkit-column-count: 2;\n    column-count: 2; } }\n:root {\n  --input-padding-x: 0.75rem;\n  --input-padding-y: 0.75rem; }\n.card-login {\n  max-width: 25rem; }\n.card-register {\n  max-width: 40rem; }\n.form-label-group {\n  position: relative; }\n.form-label-group > input,\n.form-label-group > label {\n  padding: var(--input-padding-y) var(--input-padding-x);\n  height: auto; }\n.form-label-group > label {\n  position: absolute;\n  top: 0;\n  left: 0;\n  display: block;\n  width: 100%;\n  margin-bottom: 0;\n  /* Override default `<label>` margin */\n  line-height: 1.5;\n  color: #495057;\n  border: 1px solid transparent;\n  border-radius: 0.25rem;\n  transition: all 0.1s ease-in-out; }\n.form-label-group input::-webkit-input-placeholder {\n  color: transparent; }\n.form-label-group input:-ms-input-placeholder {\n  color: transparent; }\n.form-label-group input::-ms-input-placeholder {\n  color: transparent; }\n.form-label-group input::placeholder {\n  color: transparent; }\n.form-label-group input:not(:placeholder-shown) {\n  padding-top: calc(var(--input-padding-y) + var(--input-padding-y) * (2 / 3));\n  padding-bottom: calc(var(--input-padding-y) / 3); }\n.form-label-group input:not(:placeholder-shown) ~ label {\n  padding-top: calc(var(--input-padding-y) / 3);\n  padding-bottom: calc(var(--input-padding-y) / 3);\n  font-size: 12px;\n  color: #777; }\nfooter.sticky-footer {\n  display: flex;\n  position: absolute;\n  right: 0;\n  bottom: 0;\n  width: calc(100% - 90px);\n  height: 80px;\n  background-color: #e9ecef; }\nfooter.sticky-footer .copyright {\n  line-height: 1;\n  font-size: 0.8rem; }\n@media (min-width: 768px) {\n  footer.sticky-footer {\n    width: calc(100% - 225px); } }\nbody.sidebar-toggled footer.sticky-footer {\n  width: 100%; }\n@media (min-width: 768px) {\n  body.sidebar-toggled footer.sticky-footer {\n    width: calc(100% - 90px); } }\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvRzpcXFdvcmtzcGFjZVxcY2xpZW50dmlldHBvd2VyL3NyY1xcYXBwXFxhcHAuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7R0FJRztBQUVIO0VBQ0UsbUJBQWtCO0VBQ2xCLGlCQUFnQixFQUNqQjtBQUVEO0VBQ0UsYUFBWSxFQUNiO0FBRUQ7RUFHRSxjQUFhLEVBQ2Q7QUFFRDtFQUNFLG1CQUFrQjtFQUNsQixZQUFXO0VBQ1gsa0JBQWlCO0VBQ2pCLHFCQUFvQixFQUNyQjtBQUVEO0VBQ0UsaUJBQWdCO0VBQ2hCLG1CQUFrQixFQUNuQjtBQUVEO0VBQ0UsZ0JBQWUsRUFDaEI7QUFFRDtFQUNFO0lBQ0Usb0JBQW1CLEVBQ3BCO0VBQ0Q7SUFDRSxtQkFBa0IsRUFDbkIsRUFBQTtBQUdIO0VBQ0UsZ0JBQWU7RUFDZixZQUFXO0VBQ1gsYUFBWTtFQUNaLGNBQWE7RUFDYixZQUFXO0VBQ1gsYUFBWTtFQUNaLG1CQUFrQjtFQUNsQixZQUFXO0VBQ1gsa0NBQWlDO0VBQ2pDLGtCQUFpQixFQUNsQjtBQUVEO0VBQ0UsYUFBWSxFQUNiO0FBRUQ7RUFDRSxvQkFBbUIsRUFDcEI7QUFFRDtFQUNFLGlCQUFnQixFQUNqQjtBQUVEO0VBQ0Usa0JBQWlCLEVBQ2xCO0FBRUQ7RUFDRSw0QkFBMkIsRUFDNUI7QUFFRDtFQUNFLFdBQVUsRUFDWDtBQUVEO0VBQ0UsV0FBVSxFQUNYO0FBRUQ7RUFDRSxZQUFXLEVBQ1o7QUFFRDtFQUNFLFlBQVcsRUFDWjtBQUVEO0VBQ0UsWUFBVztFQUNYLG1CQUFrQjtFQUNsQixhQUFZO0VBQ1osa0JBQWlCO0VBQ2pCLFVBQVM7RUFDVCxpQkFBZ0I7RUFDaEIsaUJBQWdCO0VBQ2hCLG1DQUFrQyxFQUNuQztBQUVEO0VBQ0UsaUJBQWdCLEVBQ2pCO0FBRUQ7RUFDRSxjQUFhLEVBQ2Q7QUFFRDtFQUNFLGNBQWEsRUFDZDtBQUVEO0VBQ0UsbUJBQWtCO0VBQ2xCLHFCQUFvQjtFQUNwQixZQUFXO0VBQ1gsaUJBQWdCO0VBQ2hCLGtCQUFpQixFQUNsQjtBQUVEO0VBQ0U7SUFDRSxZQUFXLEVBQ1osRUFBQTtBQUdIO0VBQ0UsdUJBQXNCO0VBQ3RCLDBCQUF5QjtFQUN6QiwrQkFBOEIsRUFDL0I7QUFFRDtFQUNFLG9CQUFtQixFQUNwQjtBQUVEO0VBQ0UsbUJBQWtCO0VBQ2xCLHNCQUFxQjtFQUNyQixZQUFXLEVBQ1o7QUFFRDtFQUNFLG1CQUFrQjtFQUNsQixlQUFjLEVBQ2Y7QUFFRDtFQUNFLDhCQUE2QjtFQUM3QixtQ0FBa0M7RUFDbEMsMkJBQTBCO0VBQzFCLHFDQUFvQztFQUNwQyxVQUFTLEVBQ1Y7QUFFRDtFQUNFLFVBQVM7RUFDVCxxQkFBb0IsRUFDckI7QUFFRDtFQUNFLGNBQWEsRUFDZDtBQUVEO0VBQ0UsZ0NBQStCLEVBQ2hDO0FBRUQ7RUFDRSxpQ0FBZ0MsRUFDakM7QUFFRDtFQUNFLG9CQUFtQjtFQUNuQixpQkFBZ0IsRUFDakI7QUFFRDtFQUNFO0lBQ0Usd0JBQXVCLEVBQ3hCO0VBQ0Q7SUFDRSxlQUFjO0lBQ2QsWUFBVztJQUNYLGlCQUFnQjtJQUNoQixjQUFhO0lBQ2IsYUFBWSxFQUNiO0VBQ0Q7SUFDRSxnQkFBZTtJQUNmLGdCQUFlLEVBQ2hCO0VBQ0Q7SUFDRSw0QkFBMkI7SUFDM0IsZUFBYztJQUNkLE9BQU0sRUFDUDtFQUNEO0lBQ0UsZUFBYyxFQUNmO0VBQ0Q7SUFDRSxrQkFBaUI7SUFDakIsdUJBQXNCLEVBQ3ZCO0VBQ0Q7SUFDRSxvQkFBbUIsRUFDcEI7RUFDRDtJQUNFLG1CQUFrQjtJQUNsQixzQkFBcUI7SUFDckIsWUFBVyxFQUNaO0VBQ0Q7SUFDRSxtQkFBa0I7SUFDbEIsZUFBYyxFQUNmO0VBQ0Q7SUFDRSw4QkFBNkI7SUFDN0IsbUNBQWtDO0lBQ2xDLDJCQUEwQjtJQUMxQixxQ0FBb0M7SUFDcEMsVUFBUyxFQUNWO0VBQ0Q7SUFDRSxVQUFTO0lBQ1QscUJBQW9CLEVBQ3JCO0VBQ0Q7SUFDRSxjQUFhLEVBQ2QsRUFBQTtBQUdIO0VBQ0UsVUFBUztFQUNULDJCQUEwQjtFQUMxQixpQkFBZ0IsRUFDakI7QUFFRDtFQUNFLG1CQUFrQjtFQUNsQixXQUFVO0VBQ1YsY0FBYTtFQUNiLGFBQVk7RUFDWixhQUFZO0VBQ1osZ0JBQWU7RUFDZixpQ0FBZ0M7RUFDaEMseUJBQXdCLEVBQ3pCO0FBRUQ7RUFDRTtJQUNFLHdCQUF1QjtJQUN2QixnQkFBZSxFQUNoQixFQUFBO0FBR0g7RUFDRTtJQUNFLHdCQUF1QjtJQUN2QixnQkFBZSxFQUNoQixFQUFBO0FBR0g7RUFDRTtJQUNFLHdCQUF1QjtJQUN2QixnQkFBZSxFQUNoQixFQUFBO0FBR0g7RUFDRSwyQkFBa0I7RUFDbEIsMkJBQWtCLEVBQ25CO0FBRUQ7RUFDRSxpQkFBZ0IsRUFDakI7QUFFRDtFQUNFLGlCQUFnQixFQUNqQjtBQUVEO0VBQ0UsbUJBQWtCLEVBQ25CO0FBRUQ7O0VBRUUsdURBQXNEO0VBQ3RELGFBQVksRUFDYjtBQUVEO0VBQ0UsbUJBQWtCO0VBQ2xCLE9BQU07RUFDTixRQUFPO0VBQ1AsZUFBYztFQUNkLFlBQVc7RUFDWCxpQkFBZ0I7RUFDaEIsdUNBQXVDO0VBQ3ZDLGlCQUFnQjtFQUNoQixlQUFjO0VBQ2QsOEJBQTZCO0VBQzdCLHVCQUFzQjtFQUV0QixpQ0FBZ0MsRUFDakM7QUFFRDtFQUNFLG1CQUFrQixFQUNuQjtBQUVEO0VBQ0UsbUJBQWtCLEVBQ25CO0FBRUQ7RUFDRSxtQkFBa0IsRUFDbkI7QUFFRDtFQUNFLG1CQUFrQixFQUNuQjtBQUVEO0VBQ0UsNkVBQTRFO0VBQzVFLGlEQUFnRCxFQUNqRDtBQUVEO0VBQ0UsOENBQTZDO0VBQzdDLGlEQUFnRDtFQUNoRCxnQkFBZTtFQUNmLFlBQVcsRUFDWjtBQUVEO0VBR0UsY0FBYTtFQUNiLG1CQUFrQjtFQUNsQixTQUFRO0VBQ1IsVUFBUztFQUNULHlCQUF3QjtFQUN4QixhQUFZO0VBQ1osMEJBQXlCLEVBQzFCO0FBRUQ7RUFDRSxlQUFjO0VBQ2Qsa0JBQWlCLEVBQ2xCO0FBRUQ7RUFDRTtJQUNFLDBCQUF5QixFQUMxQixFQUFBO0FBR0g7RUFDRSxZQUFXLEVBQ1o7QUFFRDtFQUNFO0lBQ0UseUJBQXdCLEVBQ3pCLEVBQUEiLCJmaWxlIjoic3JjL2FwcC9hcHAuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIvKiFcclxuICogU3RhcnQgQm9vdHN0cmFwIC0gU0IgQWRtaW4gdjUuMC4yIChodHRwczovL3N0YXJ0Ym9vdHN0cmFwLmNvbS90ZW1wbGF0ZS1vdmVydmlld3Mvc2ItYWRtaW4pXHJcbiAqIENvcHlyaWdodCAyMDEzLTIwMTggU3RhcnQgQm9vdHN0cmFwXHJcbiAqIExpY2Vuc2VkIHVuZGVyIE1JVCAoaHR0cHM6Ly9naXRodWIuY29tL0JsYWNrcm9ja0RpZ2l0YWwvc3RhcnRib290c3RyYXAtc2ItYWRtaW4vYmxvYi9tYXN0ZXIvTElDRU5TRSlcclxuICovXHJcblxyXG5odG1sIHtcclxuICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbiAgbWluLWhlaWdodDogMTAwJTtcclxufVxyXG5cclxuYm9keSB7XHJcbiAgaGVpZ2h0OiAxMDAlO1xyXG59XHJcblxyXG4jd3JhcHBlciB7XHJcbiAgZGlzcGxheTogLXdlYmtpdC1ib3g7XHJcbiAgZGlzcGxheTogLW1zLWZsZXhib3g7XHJcbiAgZGlzcGxheTogZmxleDtcclxufVxyXG5cclxuI3dyYXBwZXIgI2NvbnRlbnQtd3JhcHBlciB7XHJcbiAgb3ZlcmZsb3cteDogaGlkZGVuO1xyXG4gIHdpZHRoOiAxMDAlO1xyXG4gIHBhZGRpbmctdG9wOiAxcmVtO1xyXG4gIHBhZGRpbmctYm90dG9tOiA4MHB4O1xyXG59XHJcblxyXG5ib2R5LmZpeGVkLW5hdiAjY29udGVudC13cmFwcGVyIHtcclxuICBtYXJnaW4tdG9wOiA1NnB4O1xyXG4gIHBhZGRpbmctbGVmdDogOTBweDtcclxufVxyXG5cclxuYm9keS5maXhlZC1uYXYuc2lkZWJhci10b2dnbGVkICNjb250ZW50LXdyYXBwZXIge1xyXG4gIHBhZGRpbmctbGVmdDogMDtcclxufVxyXG5cclxuQG1lZGlhIChtaW4td2lkdGg6IDc2OHB4KSB7XHJcbiAgYm9keS5maXhlZC1uYXYgI2NvbnRlbnQtd3JhcHBlciB7XHJcbiAgICBwYWRkaW5nLWxlZnQ6IDIyNXB4O1xyXG4gIH1cclxuICBib2R5LmZpeGVkLW5hdi5zaWRlYmFyLXRvZ2dsZWQgI2NvbnRlbnQtd3JhcHBlciB7XHJcbiAgICBwYWRkaW5nLWxlZnQ6IDkwcHg7XHJcbiAgfVxyXG59XHJcblxyXG4uc2Nyb2xsLXRvLXRvcCB7XHJcbiAgcG9zaXRpb246IGZpeGVkO1xyXG4gIHJpZ2h0OiAxNXB4O1xyXG4gIGJvdHRvbTogMTVweDtcclxuICBkaXNwbGF5OiBub25lO1xyXG4gIHdpZHRoOiA1MHB4O1xyXG4gIGhlaWdodDogNTBweDtcclxuICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgY29sb3I6ICNmZmY7XHJcbiAgYmFja2dyb3VuZDogcmdiYSg1MiwgNTgsIDY0LCAwLjUpO1xyXG4gIGxpbmUtaGVpZ2h0OiA0NnB4O1xyXG59XHJcblxyXG4uc2Nyb2xsLXRvLXRvcDpmb2N1cywgLnNjcm9sbC10by10b3A6aG92ZXIge1xyXG4gIGNvbG9yOiB3aGl0ZTtcclxufVxyXG5cclxuLnNjcm9sbC10by10b3A6aG92ZXIge1xyXG4gIGJhY2tncm91bmQ6ICMzNDNhNDA7XHJcbn1cclxuXHJcbi5zY3JvbGwtdG8tdG9wIGkge1xyXG4gIGZvbnQtd2VpZ2h0OiA4MDA7XHJcbn1cclxuXHJcbi5zbWFsbGVyIHtcclxuICBmb250LXNpemU6IDAuN3JlbTtcclxufVxyXG5cclxuLm8taGlkZGVuIHtcclxuICBvdmVyZmxvdzogaGlkZGVuICFpbXBvcnRhbnQ7XHJcbn1cclxuXHJcbi56LTAge1xyXG4gIHotaW5kZXg6IDA7XHJcbn1cclxuXHJcbi56LTEge1xyXG4gIHotaW5kZXg6IDE7XHJcbn1cclxuXHJcbi5uYXZiYXItbmF2IC5mb3JtLWlubGluZSAuaW5wdXQtZ3JvdXAge1xyXG4gIHdpZHRoOiAxMDAlO1xyXG59XHJcblxyXG4ubmF2YmFyLW5hdiAubmF2LWl0ZW0uYWN0aXZlIC5uYXYtbGluayB7XHJcbiAgY29sb3I6ICNmZmY7XHJcbn1cclxuXHJcbi5uYXZiYXItbmF2IC5uYXYtaXRlbS5kcm9wZG93biAuZHJvcGRvd24tdG9nZ2xlOjphZnRlciB7XHJcbiAgd2lkdGg6IDFyZW07XHJcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gIGZsb2F0OiByaWdodDtcclxuICB2ZXJ0aWNhbC1hbGlnbjogMDtcclxuICBib3JkZXI6IDA7XHJcbiAgZm9udC13ZWlnaHQ6IDkwMDtcclxuICBjb250ZW50OiAnXFxmMTA1JztcclxuICBmb250LWZhbWlseTogJ0ZvbnQgQXdlc29tZSA1IEZyZWUnO1xyXG59XHJcblxyXG4ubmF2YmFyLW5hdiAubmF2LWl0ZW0uZHJvcGRvd24uc2hvdyAuZHJvcGRvd24tdG9nZ2xlOjphZnRlciB7XHJcbiAgY29udGVudDogJ1xcZjEwNyc7XHJcbn1cclxuXHJcbi5uYXZiYXItbmF2IC5uYXYtaXRlbS5kcm9wZG93bi5uby1hcnJvdyAuZHJvcGRvd24tdG9nZ2xlOjphZnRlciB7XHJcbiAgZGlzcGxheTogbm9uZTtcclxufVxyXG5cclxuLm5hdmJhci1uYXYgLm5hdi1pdGVtIC5uYXYtbGluazpmb2N1cyB7XHJcbiAgb3V0bGluZTogbm9uZTtcclxufVxyXG5cclxuLm5hdmJhci1uYXYgLm5hdi1pdGVtIC5uYXYtbGluayAuYmFkZ2Uge1xyXG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICBtYXJnaW4tbGVmdDogMC43NXJlbTtcclxuICB0b3A6IDAuM3JlbTtcclxuICBmb250LXdlaWdodDogNDAwO1xyXG4gIGZvbnQtc2l6ZTogMC41cmVtO1xyXG59XHJcblxyXG5AbWVkaWEgKG1pbi13aWR0aDogNzY4cHgpIHtcclxuICAubmF2YmFyLW5hdiAuZm9ybS1pbmxpbmUgLmlucHV0LWdyb3VwIHtcclxuICAgIHdpZHRoOiBhdXRvO1xyXG4gIH1cclxufVxyXG5cclxuLnNpZGViYXIge1xyXG4gIHdpZHRoOiA5MHB4ICFpbXBvcnRhbnQ7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogIzIxMjUyOTtcclxuICBtaW4taGVpZ2h0OiBjYWxjKDEwMHZoIC0gNTZweCk7XHJcbn1cclxuXHJcbi5zaWRlYmFyIC5uYXYtaXRlbTpsYXN0LWNoaWxkIHtcclxuICBtYXJnaW4tYm90dG9tOiAxcmVtO1xyXG59XHJcblxyXG4uc2lkZWJhciAubmF2LWl0ZW0gLm5hdi1saW5rIHtcclxuICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgcGFkZGluZzogMC43NXJlbSAxcmVtO1xyXG4gIHdpZHRoOiA5MHB4O1xyXG59XHJcblxyXG4uc2lkZWJhciAubmF2LWl0ZW0gLm5hdi1saW5rIHNwYW4ge1xyXG4gIGZvbnQtc2l6ZTogMC42NXJlbTtcclxuICBkaXNwbGF5OiBibG9jaztcclxufVxyXG5cclxuLnNpZGViYXIgLm5hdi1pdGVtIC5kcm9wZG93bi1tZW51IHtcclxuICBwb3NpdGlvbjogYWJzb2x1dGUgIWltcG9ydGFudDtcclxuICAtd2Via2l0LXRyYW5zZm9ybTogbm9uZSAhaW1wb3J0YW50O1xyXG4gIHRyYW5zZm9ybTogbm9uZSAhaW1wb3J0YW50O1xyXG4gIGxlZnQ6IGNhbGMoOTBweCArIDAuNXJlbSkgIWltcG9ydGFudDtcclxuICBtYXJnaW46IDA7XHJcbn1cclxuXHJcbi5zaWRlYmFyIC5uYXYtaXRlbSAuZHJvcGRvd24tbWVudS5kcm9wdXAge1xyXG4gIGJvdHRvbTogMDtcclxuICB0b3A6IGF1dG8gIWltcG9ydGFudDtcclxufVxyXG5cclxuLnNpZGViYXIgLm5hdi1pdGVtLmRyb3Bkb3duIC5kcm9wZG93bi10b2dnbGU6OmFmdGVyIHtcclxuICBkaXNwbGF5OiBub25lO1xyXG59XHJcblxyXG4uc2lkZWJhciAubmF2LWl0ZW0gLm5hdi1saW5rIHtcclxuICBjb2xvcjogcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjUpO1xyXG59XHJcblxyXG4uc2lkZWJhciAubmF2LWl0ZW0gLm5hdi1saW5rOmFjdGl2ZSwgLnNpZGViYXIgLm5hdi1pdGVtIC5uYXYtbGluazpmb2N1cywgLnNpZGViYXIgLm5hdi1pdGVtIC5uYXYtbGluazpob3ZlciB7XHJcbiAgY29sb3I6IHJnYmEoMjU1LCAyNTUsIDI1NSwgMC43NSk7XHJcbn1cclxuXHJcbi5zaWRlYmFyLnRvZ2dsZWQge1xyXG4gIHdpZHRoOiAwICFpbXBvcnRhbnQ7XHJcbiAgb3ZlcmZsb3c6IGhpZGRlbjtcclxufVxyXG5cclxuQG1lZGlhIChtaW4td2lkdGg6IDc2OHB4KSB7XHJcbiAgLnNpZGViYXIge1xyXG4gICAgd2lkdGg6IDIyNXB4ICFpbXBvcnRhbnQ7XHJcbiAgfVxyXG4gIC5zaWRlYmFyIC5uYXYtaXRlbSAubmF2LWxpbmsge1xyXG4gICAgZGlzcGxheTogYmxvY2s7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIHRleHQtYWxpZ246IGxlZnQ7XHJcbiAgICBwYWRkaW5nOiAxcmVtO1xyXG4gICAgd2lkdGg6IDIyNXB4O1xyXG4gIH1cclxuICAuc2lkZWJhciAubmF2LWl0ZW0gLm5hdi1saW5rIHNwYW4ge1xyXG4gICAgZm9udC1zaXplOiAxcmVtO1xyXG4gICAgZGlzcGxheTogaW5saW5lO1xyXG4gIH1cclxuICAuc2lkZWJhciAubmF2LWl0ZW0gLmRyb3Bkb3duLW1lbnUge1xyXG4gICAgcG9zaXRpb246IHN0YXRpYyAhaW1wb3J0YW50O1xyXG4gICAgbWFyZ2luOiAwIDFyZW07XHJcbiAgICB0b3A6IDA7XHJcbiAgfVxyXG4gIC5zaWRlYmFyIC5uYXYtaXRlbS5kcm9wZG93biAuZHJvcGRvd24tdG9nZ2xlOjphZnRlciB7XHJcbiAgICBkaXNwbGF5OiBibG9jaztcclxuICB9XHJcbiAgLnNpZGViYXIudG9nZ2xlZCB7XHJcbiAgICBvdmVyZmxvdzogdmlzaWJsZTtcclxuICAgIHdpZHRoOiA5MHB4ICFpbXBvcnRhbnQ7XHJcbiAgfVxyXG4gIC5zaWRlYmFyLnRvZ2dsZWQgLm5hdi1pdGVtOmxhc3QtY2hpbGQge1xyXG4gICAgbWFyZ2luLWJvdHRvbTogMXJlbTtcclxuICB9XHJcbiAgLnNpZGViYXIudG9nZ2xlZCAubmF2LWl0ZW0gLm5hdi1saW5rIHtcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICAgIHBhZGRpbmc6IDAuNzVyZW0gMXJlbTtcclxuICAgIHdpZHRoOiA5MHB4O1xyXG4gIH1cclxuICAuc2lkZWJhci50b2dnbGVkIC5uYXYtaXRlbSAubmF2LWxpbmsgc3BhbiB7XHJcbiAgICBmb250LXNpemU6IDAuNjVyZW07XHJcbiAgICBkaXNwbGF5OiBibG9jaztcclxuICB9XHJcbiAgLnNpZGViYXIudG9nZ2xlZCAubmF2LWl0ZW0gLmRyb3Bkb3duLW1lbnUge1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlICFpbXBvcnRhbnQ7XHJcbiAgICAtd2Via2l0LXRyYW5zZm9ybTogbm9uZSAhaW1wb3J0YW50O1xyXG4gICAgdHJhbnNmb3JtOiBub25lICFpbXBvcnRhbnQ7XHJcbiAgICBsZWZ0OiBjYWxjKDkwcHggKyAwLjVyZW0pICFpbXBvcnRhbnQ7XHJcbiAgICBtYXJnaW46IDA7XHJcbiAgfVxyXG4gIC5zaWRlYmFyLnRvZ2dsZWQgLm5hdi1pdGVtIC5kcm9wZG93bi1tZW51LmRyb3B1cCB7XHJcbiAgICBib3R0b206IDA7XHJcbiAgICB0b3A6IGF1dG8gIWltcG9ydGFudDtcclxuICB9XHJcbiAgLnNpZGViYXIudG9nZ2xlZCAubmF2LWl0ZW0uZHJvcGRvd24gLmRyb3Bkb3duLXRvZ2dsZTo6YWZ0ZXIge1xyXG4gICAgZGlzcGxheTogbm9uZTtcclxuICB9XHJcbn1cclxuXHJcbi5zaWRlYmFyLmZpeGVkLXRvcCB7XHJcbiAgdG9wOiA1NnB4O1xyXG4gIGhlaWdodDogY2FsYygxMDB2aCAtIDU2cHgpO1xyXG4gIG92ZXJmbG93LXk6IGF1dG87XHJcbn1cclxuXHJcbi5jYXJkLWJvZHktaWNvbiB7XHJcbiAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gIHotaW5kZXg6IDA7XHJcbiAgdG9wOiAtMS4yNXJlbTtcclxuICByaWdodDogLTFyZW07XHJcbiAgb3BhY2l0eTogMC40O1xyXG4gIGZvbnQtc2l6ZTogNXJlbTtcclxuICAtd2Via2l0LXRyYW5zZm9ybTogcm90YXRlKDE1ZGVnKTtcclxuICB0cmFuc2Zvcm06IHJvdGF0ZSgxNWRlZyk7XHJcbn1cclxuXHJcbkBtZWRpYSAobWluLXdpZHRoOiA1NzZweCkge1xyXG4gIC5jYXJkLWNvbHVtbnMge1xyXG4gICAgLXdlYmtpdC1jb2x1bW4tY291bnQ6IDE7XHJcbiAgICBjb2x1bW4tY291bnQ6IDE7XHJcbiAgfVxyXG59XHJcblxyXG5AbWVkaWEgKG1pbi13aWR0aDogNzY4cHgpIHtcclxuICAuY2FyZC1jb2x1bW5zIHtcclxuICAgIC13ZWJraXQtY29sdW1uLWNvdW50OiAyO1xyXG4gICAgY29sdW1uLWNvdW50OiAyO1xyXG4gIH1cclxufVxyXG5cclxuQG1lZGlhIChtaW4td2lkdGg6IDEyMDBweCkge1xyXG4gIC5jYXJkLWNvbHVtbnMge1xyXG4gICAgLXdlYmtpdC1jb2x1bW4tY291bnQ6IDI7XHJcbiAgICBjb2x1bW4tY291bnQ6IDI7XHJcbiAgfVxyXG59XHJcblxyXG46cm9vdCB7XHJcbiAgLS1pbnB1dC1wYWRkaW5nLXg6IDAuNzVyZW07XHJcbiAgLS1pbnB1dC1wYWRkaW5nLXk6IDAuNzVyZW07XHJcbn1cclxuXHJcbi5jYXJkLWxvZ2luIHtcclxuICBtYXgtd2lkdGg6IDI1cmVtO1xyXG59XHJcblxyXG4uY2FyZC1yZWdpc3RlciB7XHJcbiAgbWF4LXdpZHRoOiA0MHJlbTtcclxufVxyXG5cclxuLmZvcm0tbGFiZWwtZ3JvdXAge1xyXG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxufVxyXG5cclxuLmZvcm0tbGFiZWwtZ3JvdXAgPiBpbnB1dCxcclxuLmZvcm0tbGFiZWwtZ3JvdXAgPiBsYWJlbCB7XHJcbiAgcGFkZGluZzogdmFyKC0taW5wdXQtcGFkZGluZy15KSB2YXIoLS1pbnB1dC1wYWRkaW5nLXgpO1xyXG4gIGhlaWdodDogYXV0bztcclxufVxyXG5cclxuLmZvcm0tbGFiZWwtZ3JvdXAgPiBsYWJlbCB7XHJcbiAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gIHRvcDogMDtcclxuICBsZWZ0OiAwO1xyXG4gIGRpc3BsYXk6IGJsb2NrO1xyXG4gIHdpZHRoOiAxMDAlO1xyXG4gIG1hcmdpbi1ib3R0b206IDA7XHJcbiAgLyogT3ZlcnJpZGUgZGVmYXVsdCBgPGxhYmVsPmAgbWFyZ2luICovXHJcbiAgbGluZS1oZWlnaHQ6IDEuNTtcclxuICBjb2xvcjogIzQ5NTA1NztcclxuICBib3JkZXI6IDFweCBzb2xpZCB0cmFuc3BhcmVudDtcclxuICBib3JkZXItcmFkaXVzOiAwLjI1cmVtO1xyXG4gIC13ZWJraXQtdHJhbnNpdGlvbjogYWxsIDAuMXMgZWFzZS1pbi1vdXQ7XHJcbiAgdHJhbnNpdGlvbjogYWxsIDAuMXMgZWFzZS1pbi1vdXQ7XHJcbn1cclxuXHJcbi5mb3JtLWxhYmVsLWdyb3VwIGlucHV0Ojotd2Via2l0LWlucHV0LXBsYWNlaG9sZGVyIHtcclxuICBjb2xvcjogdHJhbnNwYXJlbnQ7XHJcbn1cclxuXHJcbi5mb3JtLWxhYmVsLWdyb3VwIGlucHV0Oi1tcy1pbnB1dC1wbGFjZWhvbGRlciB7XHJcbiAgY29sb3I6IHRyYW5zcGFyZW50O1xyXG59XHJcblxyXG4uZm9ybS1sYWJlbC1ncm91cCBpbnB1dDo6LW1zLWlucHV0LXBsYWNlaG9sZGVyIHtcclxuICBjb2xvcjogdHJhbnNwYXJlbnQ7XHJcbn1cclxuXHJcbi5mb3JtLWxhYmVsLWdyb3VwIGlucHV0OjpwbGFjZWhvbGRlciB7XHJcbiAgY29sb3I6IHRyYW5zcGFyZW50O1xyXG59XHJcblxyXG4uZm9ybS1sYWJlbC1ncm91cCBpbnB1dDpub3QoOnBsYWNlaG9sZGVyLXNob3duKSB7XHJcbiAgcGFkZGluZy10b3A6IGNhbGModmFyKC0taW5wdXQtcGFkZGluZy15KSArIHZhcigtLWlucHV0LXBhZGRpbmcteSkgKiAoMiAvIDMpKTtcclxuICBwYWRkaW5nLWJvdHRvbTogY2FsYyh2YXIoLS1pbnB1dC1wYWRkaW5nLXkpIC8gMyk7XHJcbn1cclxuXHJcbi5mb3JtLWxhYmVsLWdyb3VwIGlucHV0Om5vdCg6cGxhY2Vob2xkZXItc2hvd24pIH4gbGFiZWwge1xyXG4gIHBhZGRpbmctdG9wOiBjYWxjKHZhcigtLWlucHV0LXBhZGRpbmcteSkgLyAzKTtcclxuICBwYWRkaW5nLWJvdHRvbTogY2FsYyh2YXIoLS1pbnB1dC1wYWRkaW5nLXkpIC8gMyk7XHJcbiAgZm9udC1zaXplOiAxMnB4O1xyXG4gIGNvbG9yOiAjNzc3O1xyXG59XHJcblxyXG5mb290ZXIuc3RpY2t5LWZvb3RlciB7XHJcbiAgZGlzcGxheTogLXdlYmtpdC1ib3g7XHJcbiAgZGlzcGxheTogLW1zLWZsZXhib3g7XHJcbiAgZGlzcGxheTogZmxleDtcclxuICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgcmlnaHQ6IDA7XHJcbiAgYm90dG9tOiAwO1xyXG4gIHdpZHRoOiBjYWxjKDEwMCUgLSA5MHB4KTtcclxuICBoZWlnaHQ6IDgwcHg7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogI2U5ZWNlZjtcclxufVxyXG5cclxuZm9vdGVyLnN0aWNreS1mb290ZXIgLmNvcHlyaWdodCB7XHJcbiAgbGluZS1oZWlnaHQ6IDE7XHJcbiAgZm9udC1zaXplOiAwLjhyZW07XHJcbn1cclxuXHJcbkBtZWRpYSAobWluLXdpZHRoOiA3NjhweCkge1xyXG4gIGZvb3Rlci5zdGlja3ktZm9vdGVyIHtcclxuICAgIHdpZHRoOiBjYWxjKDEwMCUgLSAyMjVweCk7XHJcbiAgfVxyXG59XHJcblxyXG5ib2R5LnNpZGViYXItdG9nZ2xlZCBmb290ZXIuc3RpY2t5LWZvb3RlciB7XHJcbiAgd2lkdGg6IDEwMCU7XHJcbn1cclxuXHJcbkBtZWRpYSAobWluLXdpZHRoOiA3NjhweCkge1xyXG4gIGJvZHkuc2lkZWJhci10b2dnbGVkIGZvb3Rlci5zdGlja3ktZm9vdGVyIHtcclxuICAgIHdpZHRoOiBjYWxjKDEwMCUgLSA5MHB4KTtcclxuICB9XHJcbn1cclxuIl19 */"
 
 /***/ }),
 
@@ -181,6 +181,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_machine_machinesetting_machinesetting_component__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(/*! ./components/machine/machinesetting/machinesetting.component */ "./src/app/components/machine/machinesetting/machinesetting.component.ts");
 /* harmony import */ var _components_setting_productbase_productbase_component__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(/*! ./components/setting/productbase/productbase.component */ "./src/app/components/setting/productbase/productbase.component.ts");
 /* harmony import */ var _services_dashboard_dashboard_service__WEBPACK_IMPORTED_MODULE_51__ = __webpack_require__(/*! ./services/dashboard/dashboard.service */ "./src/app/services/dashboard/dashboard.service.ts");
+/* harmony import */ var _services_store_store_service__WEBPACK_IMPORTED_MODULE_52__ = __webpack_require__(/*! ./services/store/store.service */ "./src/app/services/store/store.service.ts");
+/* harmony import */ var _components_formula_editformula_edit_formula_edit_formula_component__WEBPACK_IMPORTED_MODULE_53__ = __webpack_require__(/*! ./components/formula/editformula/edit-formula/edit-formula.component */ "./src/app/components/formula/editformula/edit-formula/edit-formula.component.ts");
+/* harmony import */ var _directions_product_tablecolourant_table_colourants_component__WEBPACK_IMPORTED_MODULE_54__ = __webpack_require__(/*! ./directions/product/tablecolourant/table-colourants.component */ "./src/app/directions/product/tablecolourant/table-colourants.component.ts");
+/* harmony import */ var _directions_product_base_can_base_can_component__WEBPACK_IMPORTED_MODULE_55__ = __webpack_require__(/*! ./directions/product/base-can/base-can.component */ "./src/app/directions/product/base-can/base-can.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -244,6 +248,10 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
+
+
+
 var routes = [
     { 'path': '', redirectTo: 'login', pathMatch: 'full' },
     { 'path': 'index', component: _components_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_31__["DashboardComponent"] },
@@ -262,6 +270,8 @@ var routes = [
             // {path: 'product/view-detail/:id', component: ViewDetailComponent},
             { path: 'formula', component: _components_formula_listformula_formula_component__WEBPACK_IMPORTED_MODULE_41__["FormulaComponent"] },
             { path: 'view-formula/:id', component: _components_formula_viewformula_viewformula_component__WEBPACK_IMPORTED_MODULE_42__["ViewFormulaComponent"] },
+            { path: 'formula/add', component: _components_formula_editformula_edit_formula_edit_formula_component__WEBPACK_IMPORTED_MODULE_53__["EditFormulaComponent"] },
+            { path: 'formula/edit/:id', component: _components_formula_editformula_edit_formula_edit_formula_component__WEBPACK_IMPORTED_MODULE_53__["EditFormulaComponent"] },
             { path: 'job-status', component: _components_backgroundtask_backgroundtask_component__WEBPACK_IMPORTED_MODULE_36__["BackgroundTaskComponent"] },
             { path: 'maintenance', component: _components_formula_maintenance_maintenance_component__WEBPACK_IMPORTED_MODULE_43__["MaintenanceComponent"] },
             { path: 'machine', component: _components_machine_machinesetting_machinesetting_component__WEBPACK_IMPORTED_MODULE_49__["MachineSettingComponent"] },
@@ -284,6 +294,8 @@ var AppModule = /** @class */ (function () {
                 _app_component__WEBPACK_IMPORTED_MODULE_10__["AppComponent"],
                 // import directions
                 _directions_boostrap_modal_modal_component__WEBPACK_IMPORTED_MODULE_27__["ModalComponent"],
+                _directions_product_tablecolourant_table_colourants_component__WEBPACK_IMPORTED_MODULE_54__["TableColourantsComponent"],
+                _directions_product_base_can_base_can_component__WEBPACK_IMPORTED_MODULE_55__["BaseCanComponent"],
                 // page !!
                 _components_login_page_login_login_component__WEBPACK_IMPORTED_MODULE_28__["LoginComponent"],
                 _components_login_page_register_register_component__WEBPACK_IMPORTED_MODULE_29__["RegisterComponent"],
@@ -307,6 +319,7 @@ var AppModule = /** @class */ (function () {
                 // formula component
                 _components_formula_listformula_formula_component__WEBPACK_IMPORTED_MODULE_41__["FormulaComponent"],
                 _components_formula_viewformula_viewformula_component__WEBPACK_IMPORTED_MODULE_42__["ViewFormulaComponent"],
+                _components_formula_editformula_edit_formula_edit_formula_component__WEBPACK_IMPORTED_MODULE_53__["EditFormulaComponent"],
                 _components_formula_maintenance_maintenance_component__WEBPACK_IMPORTED_MODULE_43__["MaintenanceComponent"],
                 // machine component
                 _components_machine_machinesetting_machinesetting_component__WEBPACK_IMPORTED_MODULE_49__["MachineSettingComponent"],
@@ -336,6 +349,7 @@ var AppModule = /** @class */ (function () {
             ],
             providers: [
                 ng_cookie__WEBPACK_IMPORTED_MODULE_16__["CookieService"],
+                _services_store_store_service__WEBPACK_IMPORTED_MODULE_52__["StoreService"],
                 _services_dispensetask_dispensetask_service__WEBPACK_IMPORTED_MODULE_26__["DispenseTaskService"],
                 _services_boostrap_modal_service__WEBPACK_IMPORTED_MODULE_25__["ModalService"],
                 _services_dashboard_dashboard_service__WEBPACK_IMPORTED_MODULE_51__["DashboardService"],
@@ -365,7 +379,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"block-header\">\r\n  <h1>Dispense History</h1>\r\n</div>\r\n\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        Dispense History\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        <div class=\"table-responsive\">\r\n          <table class=\"table table-bordered\" matSort (matSortChange)=\"sortData($event)\">\r\n            <tr>\r\n              <th mat-sort-header=\"jobStatusId\">#Id</th>\r\n              <th mat-sort-header=\"type\">Formula Name</th>\r\n              <th mat-sort-header=\"status\">Collection</th>\r\n              <th mat-sort-header=\"process\">Product</th>\r\n              <th mat-sort-header=\"canSize\">Can Size</th>\r\n              <th mat-sort-header=\"stopTime\">Status</th>\r\n              <th mat-sort-header=\"createdDate\">Created Time</th>\r\n              <th mat-sort-header=\"finishedDate\">Finished Time</th>\r\n              <th>Action</th>\r\n            </tr>\r\n\r\n            <tr *ngFor=\"let item of listBackgroundTask\">\r\n              <td>{{item.machineFormulaProductBaseId}}</td>\r\n              <td>{{item.formulaProductBase.formula.formulaName}}</td>\r\n              <td>{{item.formulaProductBase.formula.collection.collectionName}}</td>\r\n              <td>{{item.formulaProductBase.productBase.product.productName}}</td>\r\n              <td>{{item.canSize}} L</td>\r\n              <td>{{item.status}}</td>\r\n              <td>{{item.createdDate | date: 'hh:mm:ss dd/MM/yyyy'}}</td>\r\n              <td>{{item.finishedDate | date: 'hh:mm:ss dd/MM/yyyy'}}</td>\r\n              <td><span (click)=\"viewCurrentTask(item.machineFormulaProductBaseId)\"><i class=\"fas fa-info-circle\"></i></span></td>\r\n            </tr>\r\n          </table>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n"
+module.exports = "<div class=\"block-header\">\n  <h1>Dispense History</h1>\n</div>\n\n\n<div class=\"row\">\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n    <div class=\"card\">\n      <div class=\"card-header\">\n        Dispense History\n      </div>\n\n      <div class=\"card-body\">\n        <div class=\"table-responsive\">\n          <table class=\"table table-bordered\" matSort (matSortChange)=\"sortData($event)\">\n            <tr>\n              <th mat-sort-header=\"jobStatusId\">#Id</th>\n              <th mat-sort-header=\"type\">Formula Name</th>\n              <th mat-sort-header=\"status\">Collection</th>\n              <th mat-sort-header=\"process\">Product</th>\n              <th mat-sort-header=\"canSize\">Can Size</th>\n              <th mat-sort-header=\"stopTime\">Status</th>\n              <th mat-sort-header=\"createdDate\">Created Time</th>\n              <th mat-sort-header=\"finishedDate\">Finished Time</th>\n              <th>Action</th>\n            </tr>\n\n            <tr *ngFor=\"let item of listBackgroundTask\">\n              <td>{{item.machineFormulaProductBaseId}}</td>\n              <td>{{item.formulaProductBase.formula.formulaName}}</td>\n              <td>{{item.formulaProductBase.formula.collection.collectionName}}</td>\n              <td>{{item.formulaProductBase.productBase.product.productName}}</td>\n              <td>{{item.canSize}} L</td>\n              <td>{{item.status}}</td>\n              <td>{{item.createdDate | date: 'hh:mm:ss dd/MM/yyyy'}}</td>\n              <td>{{item.finishedDate | date: 'hh:mm:ss dd/MM/yyyy'}}</td>\n              <td><span (click)=\"viewCurrentTask(item.machineFormulaProductBaseId)\"><i class=\"fas fa-info-circle\"></i></span></td>\n            </tr>\n          </table>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n"
 
 /***/ }),
 
@@ -454,7 +468,7 @@ module.exports = "<div class=\"task-content\" *ngIf=\"dispenseStepTask != null\"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".color-bar {\n  width: 100%;\n  display: inline-block;\n  position: relative;\n  height: 1em; }\n  .color-bar .color-select {\n    display: inline-block;\n    position: absolute;\n    top: 0px;\n    left: 0px;\n    bottom: 0px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9iYWNrZ3JvdW5kdGFzay92aWV3ZGlzcGVuc2V0YXNrL0Q6XFxXb3Jrc3BhY2VcXEhEQlNcXGNsaWVudHZpZXRwb3dlci9zcmNcXGFwcFxcY29tcG9uZW50c1xcYmFja2dyb3VuZHRhc2tcXHZpZXdkaXNwZW5zZXRhc2tcXHZpZXdkaXNwZW5zZXRhc2suY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxZQUFXO0VBQ1gsc0JBQXFCO0VBQ3JCLG1CQUFrQjtFQUNsQixZQUFXLEVBU1o7RUFiRDtJQU9JLHNCQUFxQjtJQUNyQixtQkFBa0I7SUFDbEIsU0FBUTtJQUNSLFVBQVM7SUFDVCxZQUFXLEVBQ1oiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL2JhY2tncm91bmR0YXNrL3ZpZXdkaXNwZW5zZXRhc2svdmlld2Rpc3BlbnNldGFzay5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jb2xvci1iYXJ7XHJcbiAgd2lkdGg6IDEwMCU7XHJcbiAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuICBoZWlnaHQ6IDFlbTtcclxuXHJcbiAgLmNvbG9yLXNlbGVjdHtcclxuICAgIGRpc3BsYXk6IGlubGluZS1ibG9jaztcclxuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgIHRvcDogMHB4O1xyXG4gICAgbGVmdDogMHB4O1xyXG4gICAgYm90dG9tOiAwcHg7XHJcbiAgfVxyXG59XHJcbiJdfQ== */"
+module.exports = ".color-bar {\n  width: 100%;\n  display: inline-block;\n  position: relative;\n  height: 1em; }\n  .color-bar .color-select {\n    display: inline-block;\n    position: absolute;\n    top: 0px;\n    left: 0px;\n    bottom: 0px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9iYWNrZ3JvdW5kdGFzay92aWV3ZGlzcGVuc2V0YXNrL0c6XFxXb3Jrc3BhY2VcXGNsaWVudHZpZXRwb3dlci9zcmNcXGFwcFxcY29tcG9uZW50c1xcYmFja2dyb3VuZHRhc2tcXHZpZXdkaXNwZW5zZXRhc2tcXHZpZXdkaXNwZW5zZXRhc2suY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxZQUFXO0VBQ1gsc0JBQXFCO0VBQ3JCLG1CQUFrQjtFQUNsQixZQUFXLEVBU1o7RUFiRDtJQU9JLHNCQUFxQjtJQUNyQixtQkFBa0I7SUFDbEIsU0FBUTtJQUNSLFVBQVM7SUFDVCxZQUFXLEVBQ1oiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL2JhY2tncm91bmR0YXNrL3ZpZXdkaXNwZW5zZXRhc2svdmlld2Rpc3BlbnNldGFzay5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jb2xvci1iYXJ7XHJcbiAgd2lkdGg6IDEwMCU7XHJcbiAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuICBoZWlnaHQ6IDFlbTtcclxuXHJcbiAgLmNvbG9yLXNlbGVjdHtcclxuICAgIGRpc3BsYXk6IGlubGluZS1ibG9jaztcclxuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgIHRvcDogMHB4O1xyXG4gICAgbGVmdDogMHB4O1xyXG4gICAgYm90dG9tOiAwcHg7XHJcbiAgfVxyXG59XHJcbiJdfQ== */"
 
 /***/ }),
 
@@ -527,7 +541,7 @@ var ViewDispenseTaskComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-header></app-header>\r\n<div id=\"wrapper\">\r\n  <div id=\"content-wrapper\">\r\n    <div class=\"container-fluid\">\r\n\r\n      <div class=\"container\">\r\n        <app-breadcrumb></app-breadcrumb>\r\n      </div>\r\n\r\n      <div class=\"container\">\r\n        <router-outlet></router-outlet>\r\n      </div>\r\n\r\n      <!--<section class=\"content\">-->\r\n      <!---->\r\n      <!--</section>-->\r\n<!---->\r\n      <!--<section class=\"content\">-->\r\n        <!---->\r\n      <!--</section>-->\r\n    </div>\r\n  </div>\r\n\r\n  <app-footer></app-footer>\r\n</div>\r\n"
+module.exports = "<app-header></app-header>\n<div id=\"wrapper\">\n  <div id=\"content-wrapper\">\n    <div class=\"container-fluid\">\n\n      <div class=\"container\">\n        <app-breadcrumb></app-breadcrumb>\n      </div>\n\n      <div class=\"container\">\n        <router-outlet></router-outlet>\n      </div>\n\n      <!--<section class=\"content\">-->\n      <!---->\n      <!--</section>-->\n<!---->\n      <!--<section class=\"content\">-->\n        <!---->\n      <!--</section>-->\n    </div>\n  </div>\n\n  <app-footer></app-footer>\n</div>\n"
 
 /***/ }),
 
@@ -590,6 +604,235 @@ var DashboardComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/components/formula/editformula/edit-formula/edit-formula.component.html":
+/*!*****************************************************************************************!*\
+  !*** ./src/app/components/formula/editformula/edit-formula/edit-formula.component.html ***!
+  \*****************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"block-header\">\n  <h1>{{viewMode}} Formula</h1>\n</div>\n\n<div class=\"row\" *ngIf=\"dbItem != null\">\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n    <div class=\"card filter-card\">\n      <div class=\"card-header\">\n        Standard Formula\n      </div>\n\n      <div class=\"card-body\">\n        <form class=\"form form-horizontal form-detail\">\n          <div class=\"form-body\">\n            <div class=\"form-group row\">\n              <label class=\"col-md-2 label-control\">Formula Code</label>\n              <div class=\"input-group input-group-sm col-md-4\">\n                <input type=\"text\" [(ngModel)]=\"dbItem.formula.formulaCode\" class=\"form-control\" [ngModelOptions]=\"{standalone: true}\">\n              </div>\n\n              <label class=\"col-md-2 label-control\">Formula name</label>\n              <div class=\"input-group input-group-sm col-md-4\">\n                <input type=\"text\" [(ngModel)]=\"dbItem.formula.formulaName\" class=\"form-control\" [ngModelOptions]=\"{standalone: true}\">\n              </div>\n            </div>\n\n            <div class=\"form-group row\">\n              <label class=\"col-md-2 label-control\">Collection</label>\n              <div class=\"col-md-4\">\n                <select class=\"form-control form-control-sm select-sm\" [(ngModel)]=\"dbItem.formula.collection.collectionId\" [ngModelOptions]=\"{standalone: true}\">\n                  <option [ngValue]=\"undefined\">Choose Collection</option>\n                  <option *ngFor=\"let c of listCollections\" value=\"{{c.collectionId}}\">{{c.collectionName}}</option>\n                </select>\n              </div>\n\n              <label class=\"col-md-2 label-control\">Product</label>\n              <div class=\"col-md-4\">\n                {{dbItem.productBase.product.productCode}} : {{dbItem.productBase.product.productName}}\n              </div>\n            </div>\n\n            <div class=\"form-group row\">\n              <label class=\"col-md-2 label-control\">Approximate color</label>\n              <div class=\"col-md-4\">\n                <input [(colorPicker)]=\"dbItem.productBase.rbgHex\" [style.background]=\"dbItem.productBase.rbgHex\">\n              </div>\n\n              <label class=\"col-md-2 label-control\">Formula Date</label>\n              <div class=\"col-md-4\">\n                {{dbItem.formula.createdDate | date : 'dd/MM/yyyy'}}\n              </div>\n            </div>\n\n            <div class=\"form-group row\">\n              <label class=\"col-md-2 label-control\">Substrate</label>\n              <div class=\"col-md-4\">\n\n              </div>\n\n              <label class=\"col-md-2 label-control\">Barcode</label>\n              <div class=\"col-md-4\">\n                <!--{{dbItem.productBase.product}}-->\n              </div>\n            </div>\n\n            <div class=\"form-group row\">\n              <label class=\"col-md-2 label-control\">Comment</label>\n              <div class=\"col-md-9\">\n                <textarea [(ngModel)]=\"dbItem.formula.comments\" [ngModelOptions]=\"{standalone: true}\" [ngStyle]=\"{'width': '100%', 'min-height': (1.2 * 4) +'em'}\">{{dbItem.formula.comments}}</textarea>\n              </div>\n            </div>\n          </div>\n        </form>\n      </div>\n\n      <div class=\"card-footer\">\n        <div class=\"row\">\n          <label class=\"col-md-3 label-control\"></label>\n          <div class=\"col-md-9\">\n            <button class=\"btn btn-primary mr-3\" (click)=\"saveOrUpdateFormula()\">\n              <span *ngIf=\"viewMode == 'Add'\">Save</span>\n              <span *ngIf=\"viewMode == 'Edit'\">Update</span>\n            </button>\n\n            <button class=\"btn btn-default mr-3\" (click)=\"goToFormulaPage()\">\n              Back\n            </button>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n\n<div class=\"row\" *ngIf=\"dbItem != null && listColourants != null\">\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n    <div class=\"card filter-card\">\n      <div class=\"card-header\">\n        Formula Detail\n      </div>\n\n      <div class=\"card-body\">\n        <form class=\"form form-horizontal form-detail\">\n          <div class=\"row\">\n            <div class=\"col-md-6\">\n              <div class=\"row\">\n                <div class=\"card-subtitle col-md-12\">\n                  <h4>Contents</h4>\n                </div>\n                <div class=\"col-md-12\">\n                  <app-table-colourants [listFormulaColorant]=\"listColourants\" [canSize]=\"1\" [baseOnCan]=\"dbItem.formula.baseOnCan\" [maxColorQuantity]=\"getMaxColourantValue(listColourants)\"></app-table-colourants>\n                </div>\n\n                <div class=\"col-md-12\">\n                  <hr />\n                </div>\n\n                <div class=\"col-md-12\">\n                  <app-base-can [productBase]=\"dbItem.productBase\" [canSize]=\"1\" [collection]=\"dbItem.formula.collection\"></app-base-can>\n                </div>\n              </div>\n            </div>\n\n            <div class=\"col-md-6\">\n              <div class=\"row\">\n                <div class=\"card-subtitle col-md-12\">\n                  <h4>Components</h4>\n                </div>\n\n                <div class=\"col-md-12\">\n                  <div class=\"form-group row\">\n                    <label class=\"col-md-4 label-control\">Product</label>\n                    <div class=\"col-md-8\">\n                      <select class=\"form-control form-control-sm select-sm\" [(ngModel)]=\"selectedProductId\" [ngModelOptions]=\"{standalone: true}\" (change)=\"getListProductBase()\">\n                        <option [ngValue]=\"undefined\">Choose Product</option>\n                        <option *ngFor=\"let c of listProducts\" value=\"{{c.productId}}\">{{c.productCode}}</option>\n                      </select>\n                    </div>\n                  </div>\n\n                  <div class=\"form-group row\">\n                    <label class=\"col-md-4 label-control\">Base</label>\n                    <div class=\"col-md-8\">\n                      <select class=\"form-control form-control-sm select-sm\" [(ngModel)]=\"selectedProductBaseId\" [ngModelOptions]=\"{standalone: true}\" (change)=\"updateCurrentProductBase()\">\n                        <option [ngValue]=\"undefined\">Choose Base</option>\n                        <option *ngFor=\"let pb of listProductBases\" value=\"{{pb.productBaseId}}\">{{pb.base.baseName}} ({{pb.base.baseCode}})</option>\n                      </select>\n                    </div>\n                  </div>\n                </div>\n              </div>\n\n              <div class=\"row\">\n                <div class=\"card-subtitle col-md-12\">\n                  <h4>Colourants</h4>\n                </div>\n\n                <ng-container *ngFor=\"let colour of listColourants\">\n                  <div class=\"col-md-6 colourant-group\">\n                    <div class=\"row\">\n                      <label class=\"col-md-8 label-control\">\n                        <span class=\"colour-bar\" [ngStyle]=\"{'background': colour.colourant.rbgHex}\">{{colour.colourant.colourantCode}} : {{colour.colourant.colourantName}}</span>\n                      </label>\n                      <div class=\"col-md-4\">\n                        <input type=\"number\" [(ngModel)]=\"colour.quantity\" class=\"form-control\" [ngModelOptions]=\"{standalone: true}\">\n                      </div>\n                    </div>\n                  </div>\n                </ng-container>\n              </div>\n            </div>\n          </div>\n        </form>\n      </div>\n    </div>\n  </div>\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/components/formula/editformula/edit-formula/edit-formula.component.scss":
+/*!*****************************************************************************************!*\
+  !*** ./src/app/components/formula/editformula/edit-formula/edit-formula.component.scss ***!
+  \*****************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".colourant-group {\n  margin-bottom: 10px; }\n  .colourant-group .colour-bar {\n    display: inline-block;\n    width: 100%;\n    min-height: 1em;\n    border: 1px solid #000;\n    padding: 3px 5px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9mb3JtdWxhL2VkaXRmb3JtdWxhL2VkaXQtZm9ybXVsYS9HOlxcV29ya3NwYWNlXFxjbGllbnR2aWV0cG93ZXIvc3JjXFxhcHBcXGNvbXBvbmVudHNcXGZvcm11bGFcXGVkaXRmb3JtdWxhXFxlZGl0LWZvcm11bGFcXGVkaXQtZm9ybXVsYS5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLG9CQUFtQixFQVNwQjtFQVZEO0lBSUksc0JBQXFCO0lBQ3JCLFlBQVc7SUFDWCxnQkFBZTtJQUNmLHVCQUFzQjtJQUN0QixpQkFBZ0IsRUFDakIiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL2Zvcm11bGEvZWRpdGZvcm11bGEvZWRpdC1mb3JtdWxhL2VkaXQtZm9ybXVsYS5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jb2xvdXJhbnQtZ3JvdXB7XHJcbiAgbWFyZ2luLWJvdHRvbTogMTBweDtcclxuXHJcbiAgLmNvbG91ci1iYXJ7XHJcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIG1pbi1oZWlnaHQ6IDFlbTtcclxuICAgIGJvcmRlcjogMXB4IHNvbGlkICMwMDA7XHJcbiAgICBwYWRkaW5nOiAzcHggNXB4O1xyXG4gIH1cclxufVxyXG4iXX0= */"
+
+/***/ }),
+
+/***/ "./src/app/components/formula/editformula/edit-formula/edit-formula.component.ts":
+/*!***************************************************************************************!*\
+  !*** ./src/app/components/formula/editformula/edit-formula/edit-formula.component.ts ***!
+  \***************************************************************************************/
+/*! exports provided: EditFormulaComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EditFormulaComponent", function() { return EditFormulaComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _models_formula_product_base__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../models/formula_product_base */ "./src/app/models/formula_product_base.ts");
+/* harmony import */ var _models_formula__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../models/formula */ "./src/app/models/formula.ts");
+/* harmony import */ var _models_product_base__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../models/product_base */ "./src/app/models/product_base.ts");
+/* harmony import */ var _services_collection_collection_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../services/collection/collection.service */ "./src/app/services/collection/collection.service.ts");
+/* harmony import */ var _services_formula_formula_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../services/formula/formula.service */ "./src/app/services/formula/formula.service.ts");
+/* harmony import */ var _services_product_product_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../services/product/product.service */ "./src/app/services/product/product.service.ts");
+/* harmony import */ var _models_product__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../models/product */ "./src/app/models/product.ts");
+/* harmony import */ var _models_collection__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../../models/collection */ "./src/app/models/collection.ts");
+/* harmony import */ var _services_colorant_colorant_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../../../services/colorant/colorant.service */ "./src/app/services/colorant/colorant.service.ts");
+/* harmony import */ var _models_base__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../../../models/base */ "./src/app/models/base.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+
+
+
+
+
+var EditFormulaComponent = /** @class */ (function () {
+    function EditFormulaComponent(router, route, colourantService, formulaService, collectionService, productService) {
+        this.router = router;
+        this.route = route;
+        this.colourantService = colourantService;
+        this.formulaService = formulaService;
+        this.collectionService = collectionService;
+        this.productService = productService;
+        this.viewMode = null;
+        this.dbItem = null;
+        this.listProducts = null;
+        this.listProductBases = null;
+        this.listCollections = null;
+        this.listColourants = null;
+    }
+    EditFormulaComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.route.params.subscribe(function (params) {
+            _this.formulaProductBaseId = params.id != null && params.id.trim() !== '' ? parseInt(params.id) : null;
+            if (_this.formulaProductBaseId != null && _this.formulaProductBaseId > 0) {
+                _this.viewMode = 'Edit';
+                _this.loadCurrentFormulaProductBase();
+            }
+            else {
+                _this.viewMode = 'Add';
+                _this.generateNewFormulaProductBase();
+            }
+            _this.loadRelativeData();
+        });
+    };
+    EditFormulaComponent.prototype.generateNewFormulaProductBase = function () {
+        var collection = new _models_collection__WEBPACK_IMPORTED_MODULE_9__["CollectionModel"]();
+        var formula = new _models_formula__WEBPACK_IMPORTED_MODULE_3__["FormulaModel"]();
+        formula.collection = collection;
+        formula.baseOnCan = 1;
+        var product = new _models_product__WEBPACK_IMPORTED_MODULE_8__["ProductModel"]();
+        var base = new _models_base__WEBPACK_IMPORTED_MODULE_11__["BaseModel"]();
+        var productBase = new _models_product_base__WEBPACK_IMPORTED_MODULE_4__["ProductBaseModel"]();
+        productBase.product = product;
+        productBase.base = base;
+        this.dbItem = new _models_formula_product_base__WEBPACK_IMPORTED_MODULE_2__["FormulaProductBaseModel"]();
+        this.dbItem.formula = formula;
+        this.dbItem.productBase = productBase;
+        this.loadColourantDatas();
+    };
+    EditFormulaComponent.prototype.loadCurrentFormulaProductBase = function () {
+        var _this = this;
+        this.formulaService.findFormulaProductBaseById(this.formulaProductBaseId).subscribe(function (data) {
+            _this.dbItem = data;
+            _this.selectedProductBase = _this.dbItem.productBase;
+            _this.selectedProduct = _this.dbItem.productBase.product;
+            _this.selectedProductBaseId = _this.selectedProductBase.productBaseId;
+            _this.selectedProductId = _this.selectedProduct.productId;
+            _this.getListProductBase();
+            _this.loadColourantDatas();
+        });
+    };
+    EditFormulaComponent.prototype.loadRelativeData = function () {
+        var _this = this;
+        this.listProducts = [];
+        this.productService.getListItems().subscribe(function (datas) {
+            _this.listProducts = datas;
+        });
+        this.listCollections = [];
+        this.collectionService.getListItems().subscribe(function (datas) {
+            _this.listCollections = datas;
+        });
+    };
+    EditFormulaComponent.prototype.getListProductBase = function () {
+        var _this = this;
+        var selectedProduct = this.listProducts.find(function (item) {
+            return item.productId == _this.selectedProductId;
+        });
+        if (selectedProduct != null) {
+            this.selectedProduct = selectedProduct;
+            this.dbItem.productBase.product = this.selectedProduct;
+        }
+        this.listProductBases = [];
+        this.productService.getListProductBaseFromProduct(this.selectedProductId).subscribe(function (datas) {
+            _this.listProductBases = datas;
+            console.log(_this.dbItem.productBase.product);
+        });
+    };
+    EditFormulaComponent.prototype.updateCurrentProductBase = function () {
+        var _this = this;
+        var selectedProductBase = this.listProductBases.find(function (item) {
+            return item.productBaseId == _this.selectedProductBaseId && item.product.productId == _this.selectedProductId;
+        });
+        if (selectedProductBase != null) {
+            this.selectedProductBase = selectedProductBase;
+            this.dbItem.productBase = this.selectedProductBase;
+        }
+    };
+    EditFormulaComponent.prototype.loadColourantDatas = function () {
+        var _this = this;
+        this.colourantService.getListItems().subscribe(function (datas) {
+            _this.listColourants = [];
+            for (var _i = 0, datas_1 = datas; _i < datas_1.length; _i++) {
+                var colour = datas_1[_i];
+                var formulaColourant = new _models_formula_product_base__WEBPACK_IMPORTED_MODULE_2__["FormulaColourantModel"]();
+                formulaColourant.colourant = colour;
+                formulaColourant.formula = _this.dbItem.formula;
+                formulaColourant.quantity = null;
+                _this.listColourants.push(formulaColourant);
+            }
+            if (_this.dbItem != null && _this.dbItem.formulaProductBaseId != null && _this.dbItem.formulaProductBaseId > 0) {
+                _this.formulaService.getListColorantOfFormula(_this.dbItem.formula.formulaId).subscribe(function (result) {
+                    var listColourantDb = result;
+                    var _loop_1 = function (colour) {
+                        var existColourantIndex = _this.listColourants.findIndex(function (item) {
+                            return item.colourant.colourantId === colour.colourant.colourantId;
+                        });
+                        if (existColourantIndex != null) {
+                            _this.listColourants[existColourantIndex].quantity = colour.quantity;
+                        }
+                    };
+                    for (var _i = 0, listColourantDb_1 = listColourantDb; _i < listColourantDb_1.length; _i++) {
+                        var colour = listColourantDb_1[_i];
+                        _loop_1(colour);
+                    }
+                });
+            }
+        });
+    };
+    EditFormulaComponent.prototype.getMaxColourantValue = function (listFormulaColorant) {
+        var maxQuantity = 0;
+        for (var _i = 0, listFormulaColorant_1 = listFormulaColorant; _i < listFormulaColorant_1.length; _i++) {
+            var c = listFormulaColorant_1[_i];
+            if (c.quantity != null && c.quantity > 0) {
+                if (maxQuantity == null || maxQuantity < c.quantity) {
+                    maxQuantity = c.quantity;
+                }
+            }
+        }
+        return maxQuantity;
+    };
+    EditFormulaComponent.prototype.saveOrUpdateFormula = function () {
+        this.formulaService.saveOrUpdateFormulaData(this.dbItem.formulaProductBaseId, this.dbItem.formula, this.selectedProductBase, this.listColourants).subscribe(function (datas) {
+            console.log(datas);
+        });
+    };
+    EditFormulaComponent.prototype.goToFormulaPage = function () {
+        this.router.navigate(["../dashboard/formula"]);
+    };
+    EditFormulaComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-edit-formula',
+            template: __webpack_require__(/*! ./edit-formula.component.html */ "./src/app/components/formula/editformula/edit-formula/edit-formula.component.html"),
+            styles: [__webpack_require__(/*! ./edit-formula.component.scss */ "./src/app/components/formula/editformula/edit-formula/edit-formula.component.scss")]
+        }),
+        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"],
+            _services_colorant_colorant_service__WEBPACK_IMPORTED_MODULE_10__["ColourantService"],
+            _services_formula_formula_service__WEBPACK_IMPORTED_MODULE_6__["FormulaService"],
+            _services_collection_collection_service__WEBPACK_IMPORTED_MODULE_5__["CollectionService"],
+            _services_product_product_service__WEBPACK_IMPORTED_MODULE_7__["ProductService"]])
+    ], EditFormulaComponent);
+    return EditFormulaComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/components/formula/listformula/formula.component.html":
 /*!***********************************************************************!*\
   !*** ./src/app/components/formula/listformula/formula.component.html ***!
@@ -597,7 +840,7 @@ var DashboardComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"block-header\">\r\n  <h1>Formula</h1>\r\n</div>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n    <div class=\"card filter-card\">\r\n      <div class=\"card-header\">\r\n        Filter\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        <form class=\"form form-horizontal form-detail\">\r\n          <div class=\"form-body\">\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-md-3 label-control\">Select Color</label>\r\n              <div class=\"input-group input-group-sm col-md-9\">\r\n                <select class=\"form-control form-control-sm select-sm select-color-field\" id=\"selectedFormulaFilter\" name=\"selectedFormulaFilter\" [(ngModel)]=\"filter.formulaId\" (ngModelChange)=\"onFilterChange($event)\">\r\n                  <option [ngValue]=\"undefined\">Choose Color</option>\r\n                  <option *ngFor=\"let f of listFormulas\" value=\"{{f.formulaId}}\">{{f.formulaName}}</option>\r\n                </select>\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-md-3 label-control\">Select Collection</label>\r\n              <div class=\"col-md-9\">\r\n                <select class=\"form-control form-control-sm select-sm select-color-field\" id=\"selectedCollectionFilter\" name=\"selectedCollectionFilter\" [(ngModel)]=\"filter.collectionId\" (ngModelChange)=\"onFilterChange($event)\">\r\n                  <option [ngValue]=\"undefined\">Choose Collection</option>\r\n                  <option *ngFor=\"let c of listCollections\" value=\"{{c._collectionId}}\">{{c._collectionName}}</option>\r\n                </select>\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-md-3 label-control\">Select Product</label>\r\n              <div class=\"col-md-9\">\r\n                <select class=\"form-control form-control-sm select-sm select-color-field\" id=\"selectedProductFilter\" name=\"selectedProductFilter\" [(ngModel)]=\"filter.productId\" (ngModelChange)=\"onFilterChange($event)\">\r\n                  <option [ngValue]=\"undefined\">Choose Product</option>\r\n                  <option *ngFor=\"let c of listProducts\" value=\"{{c._productId}}\">{{c._productCode}}</option>\r\n                </select>\r\n              </div>\r\n            </div>\r\n          </div>\r\n\r\n          <div class=\"form-actions text-center\">\r\n            <button class=\"btn btn-primary mr-3\" (click)=\"refresh()\">Search</button>\r\n            <button class=\"btn btn-default\" (click)=\"reset()\">Reset</button>\r\n          </div>\r\n        </form>\r\n      </div>\r\n\r\n      <!--<div class=\"card-footer\">-->\r\n\r\n      <!--</div>-->\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        List Colorant\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        <div class=\"table-responsive\">\r\n          <table class=\"table table-bordered\" matSort (matSortChange)=\"sortData($event)\" > <!---->\r\n            <tr>\r\n              <th mat-sort-header=\"formulaCode\">Formula Code</th>\r\n              <th mat-sort-header=\"formulaName\">Formula Name</th>\r\n              <th mat-sort-header=\"collection\">Collection\r\n              <th mat-sort-header=\"product\">Product</th>\r\n              <th mat-sort-header=\"createdDate\">Created Date</th>\r\n              <th mat-sort-header=\"createdBy\">Created By</th>\r\n              <th>Action</th>\r\n            </tr>\r\n\r\n            <tr *ngFor=\"let item of pagenationMode.listItems\">\r\n              <td>{{item.formula.formulaCode}}</td>\r\n              <td>{{item.formula.formulaName}}</td>\r\n              <td>{{item.formula.collection.collectionName}}</td>\r\n              <td>{{item.productBase.product.productName}}</td>\r\n              <td></td>\r\n              <td></td>\r\n              <td>\r\n                <button class=\"btn btn-primary\" (click)=\"viewFormula(item.formulaProductBaseId)\"><i class=\"fas fa-info-circle\"></i> View</button>\r\n            </tr>\r\n            <tfoot>\r\n            <tr>\r\n              <td colspan=\"100%\">\r\n                Show {{pagenationMode.listItems.length}} of  {{pagenationMode.totalItem}} items.\r\n\r\n                <span class=\"pagenation-footer\" style=\"float: right\">\r\n                  <span *ngIf=\"pagenationMode.pageIndex > 0\" (click)=\"goToPage(pagenationMode.pageIndex - 1)\" class=\"btn-action\">previous</span>\r\n                  <span>{{pagenationMode.pageIndex + 1}}</span>\r\n                  <span *ngIf=\"pagenationMode.pageIndex * pagenationMode.maxPageItem + pagenationMode.maxPageItem < pagenationMode.totalItem\"  (click)=\"goToPage(pagenationMode.pageIndex + 1)\" class=\"btn-action\">next</span>\r\n                </span>\r\n              </td>\r\n            </tr>\r\n            </tfoot>\r\n          </table>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class=\"block-header\">\r\n  <h1>Formula</h1>\r\n</div>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n    <div class=\"card filter-card\">\r\n      <div class=\"card-header\">\r\n        Filter\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        <form class=\"form form-horizontal form-detail\">\r\n          <div class=\"form-body\">\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-md-3 label-control\">Select Color</label>\r\n              <div class=\"input-group input-group-sm col-md-9\">\r\n                <select class=\"form-control form-control-sm select-sm select-color-field\" id=\"selectedFormulaFilter\" name=\"selectedFormulaFilter\" [(ngModel)]=\"filter.formulaId\" (ngModelChange)=\"onFilterChange($event)\">\r\n                  <option [ngValue]=\"undefined\">Choose Color</option>\r\n                  <option *ngFor=\"let f of listFormulas\" value=\"{{f.formulaId}}\">{{f.formulaName}}</option>\r\n                </select>\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-md-3 label-control\">Select Collection</label>\r\n              <div class=\"col-md-9\">\r\n                <select class=\"form-control form-control-sm select-sm select-color-field\" id=\"selectedCollectionFilter\" name=\"selectedCollectionFilter\" [(ngModel)]=\"filter.collectionId\" (ngModelChange)=\"onFilterChange($event)\">\r\n                  <option [ngValue]=\"undefined\">Choose Collection</option>\r\n                  <option *ngFor=\"let c of listCollections\" value=\"{{c._collectionId}}\">{{c._collectionName}}</option>\r\n                </select>\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-md-3 label-control\">Select Product</label>\r\n              <div class=\"col-md-9\">\r\n                <select class=\"form-control form-control-sm select-sm select-color-field\" id=\"selectedProductFilter\" name=\"selectedProductFilter\" [(ngModel)]=\"filter.productId\" (ngModelChange)=\"onFilterChange($event)\">\r\n                  <option [ngValue]=\"undefined\">Choose Product</option>\r\n                  <option *ngFor=\"let c of listProducts\" value=\"{{c._productId}}\">{{c._productCode}}</option>\r\n                </select>\r\n              </div>\r\n            </div>\r\n          </div>\r\n\r\n          <div class=\"form-actions text-center\">\r\n            <button class=\"btn btn-primary mr-3\" (click)=\"refresh()\">Search</button>\r\n            <button class=\"btn btn-default\" (click)=\"reset()\">Reset</button>\r\n          </div>\r\n        </form>\r\n      </div>\r\n\r\n      <!--<div class=\"card-footer\">-->\r\n\r\n      <!--</div>-->\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        List Colorant\r\n\r\n        <button class=\"close\" (click)=\"addNewFormula()\" matTooltip=\"Add Formula\" aria-label=\"Add Formula\"><i class=\"fas fa-plus-square\"></i></button>\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        <div class=\"table-responsive\">\r\n          <table class=\"table table-bordered\" matSort (matSortChange)=\"sortData($event)\">\r\n            <tr>\r\n              <th mat-sort-header=\"formulaCode\">Formula Code</th>\r\n              <th mat-sort-header=\"formulaName\">Formula Name</th>\r\n              <th mat-sort-header=\"collection\">Collection\r\n              <th mat-sort-header=\"product\">Product</th>\r\n              <th mat-sort-header=\"createdDate\">Created Date</th>\r\n              <th mat-sort-header=\"createdBy\">Created By</th>\r\n              <th>Action</th>\r\n            </tr>\r\n\r\n            <tr *ngFor=\"let item of pagenationMode.listItems\">\r\n              <td>{{item.formula.formulaCode}}</td>\r\n              <td>{{item.formula.formulaName}}</td>\r\n              <td>{{item.formula.collection.collectionName}}</td>\r\n              <td>{{item.productBase.product.productName}}</td>\r\n              <td></td>\r\n\r\n              <td>\r\n\r\n              </td>\r\n              <td>\r\n                <button type=\"button\" class=\"btn btn-default\" matTooltip=\"View Formula\" aria-label=\"View Formula\" (click)=\"viewFormula(item.formulaProductBaseId)\">\r\n                  <i class=\"fas fa-info-circle\"></i>\r\n                </button>\r\n\r\n                <ng-container *ngIf=\"item.formula.machine != null && item.formula.machine.machineId > 0\">\r\n                  <span class=\"vertical-separate-line\"></span>\r\n                  <button type=\"button\" class=\"btn btn-default\" matTooltip=\"Edit Formula\" aria-label=\"Edit Formula\" (click)=\"editTheFormula(item.formulaProductBaseId)\">\r\n                    <i class=\"fas fa-edit\"></i>\r\n                  </button>\r\n                </ng-container>\r\n            </tr>\r\n\r\n            <tfoot>\r\n            <tr>\r\n              <td colspan=\"100%\">\r\n                Show {{pagenationMode.listItems.length}} of  {{pagenationMode.totalItem}} items.\r\n\r\n                <span class=\"pagenation-footer\" style=\"float: right\">\r\n                  <span *ngIf=\"pagenationMode.pageIndex > 0\" (click)=\"goToPage(pagenationMode.pageIndex - 1)\" class=\"btn-action\">previous</span>\r\n                  <span>{{pagenationMode.pageIndex + 1}}</span>\r\n                  <span *ngIf=\"pagenationMode.pageIndex * pagenationMode.maxPageItem + pagenationMode.maxPageItem < pagenationMode.totalItem\"  (click)=\"goToPage(pagenationMode.pageIndex + 1)\" class=\"btn-action\">next</span>\r\n                </span>\r\n              </td>\r\n            </tr>\r\n            </tfoot>\r\n          </table>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -608,7 +851,7 @@ module.exports = "<div class=\"block-header\">\r\n  <h1>Formula</h1>\r\n</div>\r
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".select-color-field {\n  width: 100%; }\n\n.select2.select2-container {\n  min-width: 300px;\n  width: 100%; }\n\n.pagenation-footer {\n  float: right; }\n\n.pagenation-footer span {\n    display: inline-block;\n    min-width: 50px;\n    text-align: center;\n    padding: 5px 10px; }\n\n.pagenation-footer span.btn-action {\n      border: 1px solid #ccc;\n      cursor: pointer; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9mb3JtdWxhL2xpc3Rmb3JtdWxhL0Q6XFxXb3Jrc3BhY2VcXEhEQlNcXGNsaWVudHZpZXRwb3dlci9zcmNcXGFwcFxcY29tcG9uZW50c1xcZm9ybXVsYVxcbGlzdGZvcm11bGFcXGZvcm11bGEuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxZQUFXLEVBQ1o7O0FBRUQ7RUFDRSxpQkFBZ0I7RUFDaEIsWUFBVyxFQUNaOztBQUdEO0VBQ0UsYUFBWSxFQWFiOztBQWREO0lBR0ssc0JBQXFCO0lBRXJCLGdCQUFlO0lBQ2YsbUJBQWtCO0lBQ2xCLGtCQUFpQixFQU1sQjs7QUFiSjtNQVVPLHVCQUFzQjtNQUN0QixnQkFBZSxFQUNoQiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvZm9ybXVsYS9saXN0Zm9ybXVsYS9mb3JtdWxhLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnNlbGVjdC1jb2xvci1maWVsZHtcclxuICB3aWR0aDogMTAwJTtcclxufVxyXG5cclxuLnNlbGVjdDIuc2VsZWN0Mi1jb250YWluZXJ7XHJcbiAgbWluLXdpZHRoOiAzMDBweDtcclxuICB3aWR0aDogMTAwJTtcclxufVxyXG5cclxuXHJcbi5wYWdlbmF0aW9uLWZvb3RlcntcclxuICBmbG9hdDogcmlnaHQ7XHJcbiAgIHNwYW57XHJcbiAgICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG5cclxuICAgICBtaW4td2lkdGg6IDUwcHg7XHJcbiAgICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gICAgIHBhZGRpbmc6IDVweCAxMHB4O1xyXG5cclxuICAgICAmLmJ0bi1hY3Rpb257XHJcbiAgICAgICBib3JkZXI6IDFweCBzb2xpZCAjY2NjO1xyXG4gICAgICAgY3Vyc29yOiBwb2ludGVyO1xyXG4gICAgIH1cclxuICAgfVxyXG59XHJcbiJdfQ== */"
+module.exports = ".select-color-field {\n  width: 100%; }\n\n.select2.select2-container {\n  min-width: 300px;\n  width: 100%; }\n\n.pagenation-footer {\n  float: right; }\n\n.pagenation-footer span {\n    display: inline-block;\n    min-width: 50px;\n    text-align: center;\n    padding: 5px 10px; }\n\n.pagenation-footer span.btn-action {\n      border: 1px solid #ccc;\n      cursor: pointer; }\n\n.vertical-separate-line {\n  margin-left: 0.25em;\n  margin-right: 0.25em; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9mb3JtdWxhL2xpc3Rmb3JtdWxhL0c6XFxXb3Jrc3BhY2VcXGNsaWVudHZpZXRwb3dlci9zcmNcXGFwcFxcY29tcG9uZW50c1xcZm9ybXVsYVxcbGlzdGZvcm11bGFcXGZvcm11bGEuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxZQUFXLEVBQ1o7O0FBRUQ7RUFDRSxpQkFBZ0I7RUFDaEIsWUFBVyxFQUNaOztBQUdEO0VBQ0UsYUFBWSxFQWFiOztBQWREO0lBR0ssc0JBQXFCO0lBRXJCLGdCQUFlO0lBQ2YsbUJBQWtCO0lBQ2xCLGtCQUFpQixFQU1sQjs7QUFiSjtNQVVPLHVCQUFzQjtNQUN0QixnQkFBZSxFQUNoQjs7QUFLTjtFQUNFLG9CQUFtQjtFQUNuQixxQkFBb0IsRUFDckIiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL2Zvcm11bGEvbGlzdGZvcm11bGEvZm9ybXVsYS5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5zZWxlY3QtY29sb3ItZmllbGR7XHJcbiAgd2lkdGg6IDEwMCU7XHJcbn1cclxuXHJcbi5zZWxlY3QyLnNlbGVjdDItY29udGFpbmVye1xyXG4gIG1pbi13aWR0aDogMzAwcHg7XHJcbiAgd2lkdGg6IDEwMCU7XHJcbn1cclxuXHJcblxyXG4ucGFnZW5hdGlvbi1mb290ZXJ7XHJcbiAgZmxvYXQ6IHJpZ2h0O1xyXG4gICBzcGFue1xyXG4gICAgIGRpc3BsYXk6IGlubGluZS1ibG9jaztcclxuXHJcbiAgICAgbWluLXdpZHRoOiA1MHB4O1xyXG4gICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICAgICBwYWRkaW5nOiA1cHggMTBweDtcclxuXHJcbiAgICAgJi5idG4tYWN0aW9ue1xyXG4gICAgICAgYm9yZGVyOiAxcHggc29saWQgI2NjYztcclxuICAgICAgIGN1cnNvcjogcG9pbnRlcjtcclxuICAgICB9XHJcbiAgIH1cclxufVxyXG5cclxuXHJcbi52ZXJ0aWNhbC1zZXBhcmF0ZS1saW5le1xyXG4gIG1hcmdpbi1sZWZ0OiAwLjI1ZW07XHJcbiAgbWFyZ2luLXJpZ2h0OiAwLjI1ZW07XHJcbn1cclxuIl19 */"
 
 /***/ }),
 
@@ -747,6 +990,12 @@ var FormulaComponent = /** @class */ (function () {
         this.pagenationMode.pageIndex = pageIndex;
         this.updatePagenationMode();
     };
+    FormulaComponent.prototype.addNewFormula = function () {
+        this.router.navigate(["../dashboard/formula/add"]);
+    };
+    FormulaComponent.prototype.editTheFormula = function (formulaId) {
+        this.router.navigate(["../dashboard/formula/edit/" + formulaId]);
+    };
     FormulaComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-formula',
@@ -772,7 +1021,7 @@ var FormulaComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"block-header\">\r\n  <h1>Maintenance</h1>\r\n</div>\r\n"
+module.exports = "<div class=\"block-header\">\n  <h1>Maintenance</h1>\n</div>\n"
 
 /***/ }),
 
@@ -846,7 +1095,7 @@ module.exports = "<div class=\"block-header\">\r\n  <h1>Standard Formula</h1>\r\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".color-bar {\n  width: 100%;\n  display: inline-block;\n  position: relative;\n  height: 1em; }\n  .color-bar .color-select {\n    display: inline-block;\n    position: absolute;\n    top: 0px;\n    left: 0px;\n    bottom: 0px; }\n  .text-error {\n  color: red; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9mb3JtdWxhL3ZpZXdmb3JtdWxhL0Q6XFxXb3Jrc3BhY2VcXEhEQlNcXGNsaWVudHZpZXRwb3dlci9zcmNcXGFwcFxcY29tcG9uZW50c1xcZm9ybXVsYVxcdmlld2Zvcm11bGFcXHZpZXdmb3JtdWxhLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsWUFBVztFQUNYLHNCQUFxQjtFQUNyQixtQkFBa0I7RUFDbEIsWUFBVyxFQVNaO0VBYkQ7SUFPSSxzQkFBcUI7SUFDckIsbUJBQWtCO0lBQ2xCLFNBQVE7SUFDUixVQUFTO0lBQ1QsWUFBVyxFQUNaO0VBRUg7RUFDRSxXQUFVLEVBQ1giLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL2Zvcm11bGEvdmlld2Zvcm11bGEvdmlld2Zvcm11bGEuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY29sb3ItYmFye1xyXG4gIHdpZHRoOiAxMDAlO1xyXG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcclxuICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbiAgaGVpZ2h0OiAxZW07XHJcblxyXG4gIC5jb2xvci1zZWxlY3R7XHJcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XHJcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICB0b3A6IDBweDtcclxuICAgIGxlZnQ6IDBweDtcclxuICAgIGJvdHRvbTogMHB4O1xyXG4gIH1cclxufVxyXG4udGV4dC1lcnJvcntcclxuICBjb2xvcjogcmVkO1xyXG59XHJcbiJdfQ== */"
+module.exports = ".color-bar {\n  width: 100%;\n  display: inline-block;\n  position: relative;\n  height: 1em; }\n  .color-bar .color-select {\n    display: inline-block;\n    position: absolute;\n    top: 0px;\n    left: 0px;\n    bottom: 0px; }\n  .text-error {\n  color: red; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9mb3JtdWxhL3ZpZXdmb3JtdWxhL0c6XFxXb3Jrc3BhY2VcXGNsaWVudHZpZXRwb3dlci9zcmNcXGFwcFxcY29tcG9uZW50c1xcZm9ybXVsYVxcdmlld2Zvcm11bGFcXHZpZXdmb3JtdWxhLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsWUFBVztFQUNYLHNCQUFxQjtFQUNyQixtQkFBa0I7RUFDbEIsWUFBVyxFQVNaO0VBYkQ7SUFPSSxzQkFBcUI7SUFDckIsbUJBQWtCO0lBQ2xCLFNBQVE7SUFDUixVQUFTO0lBQ1QsWUFBVyxFQUNaO0VBRUg7RUFDRSxXQUFVLEVBQ1giLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL2Zvcm11bGEvdmlld2Zvcm11bGEvdmlld2Zvcm11bGEuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY29sb3ItYmFye1xyXG4gIHdpZHRoOiAxMDAlO1xyXG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcclxuICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbiAgaGVpZ2h0OiAxZW07XHJcblxyXG4gIC5jb2xvci1zZWxlY3R7XHJcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XHJcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICB0b3A6IDBweDtcclxuICAgIGxlZnQ6IDBweDtcclxuICAgIGJvdHRvbTogMHB4O1xyXG4gIH1cclxufVxyXG4udGV4dC1lcnJvcntcclxuICBjb2xvcjogcmVkO1xyXG59XHJcbiJdfQ== */"
 
 /***/ }),
 
@@ -926,7 +1175,7 @@ var ViewFormulaComponent = /** @class */ (function () {
         this.selectProductBase = null;
         // step 1. Get Formula By Id
         this.formulaService.findFormulaProductBaseById(this.formulaProductBaseId).subscribe(function (data) {
-            _this.dbItem = _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_7__["default"].convertToFormulaProductBaseModel(data);
+            _this.dbItem = data;
             _this.getRelativeData();
         });
     };
@@ -1067,7 +1316,7 @@ var ViewFormulaComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<section class=\"container\">\r\n  <h2>Hướng dẫn setup git nếu commit ko được</h2>\r\n  <div class=\"content\">\r\n    <p>Khi gặp lỗi này: </p>\r\n    <blockquote>\r\n      Failed with error: unable to access 'https://github.com/buitahau/demoson.git/': The requested URL returned error: 403\r\n    </blockquote>\r\n\r\n    <p>Ta cần làm như sau: Vào folder .git/config, edit lại cái url như sau :</p>\r\n\r\n    <p>url = https://github.com/buitahau/demoson.git</p>\r\n\r\n    <p>url = https://bluesky020990:xxxxxxxxxxx@github.com/buitahau/demoson.git</p>\r\n\r\n    <p>Vẫn ko được :( Do ko đc share !!</p>\r\n  </div>\r\n</section>\r\n\r\n<section class=\"container\">\r\n  <h2>Hướng dẫn cài đặt angular</h2>\r\n\r\n  <div class=\"content\">\r\n    <p>Để cài đặt angular, đầu tiên ta new 1 cái angular project</p>\r\n\r\n    <blockquote>\r\n      ng new frontend\r\n    </blockquote>\r\n\r\n    <p>Sau khi khởi tạo nó rồi, đơn giản là ta sẽ start nó thôi đúng ko</p>\r\n\r\n    <blockquote>\r\n      ng serve --open\r\n    </blockquote>\r\n\r\n    <p>--open khai báo tự open cái browser lên để show cái page.</p>\r\n\r\n\r\n    <p>Các npm cần install để làm việc trong project này bao gồm:</p>\r\n    <ol>\r\n      <li>material </li>\r\n      <li>boostrap</li>\r\n      <li>node sass (để generate scss files)</li>\r\n    </ol>\r\n\r\n    <p>Sau đó, ta add material cho cái project này</p>\r\n\r\n    <blockquote>\r\n      ng add @angular/material\r\n    </blockquote>\r\n\r\n\r\n    <p>Add luon cai boostrap</p>\r\n\r\n    <p>Install boostrap</p>\r\n\r\n    <blockquote>\r\n      npm install ngx-bootstrap --save\r\n    </blockquote>\r\n\r\n    <p>Add boostrap to project </p>\r\n\r\n    <blockquote>\r\n      ng add ngx-bootstrap\r\n    </blockquote>\r\n\r\n    <p>Xem hướng dẫn install bootstrap cho angular tai  : <a href=\"https://medium.com/@tomastrajan/how-to-build-responsive-layouts-with-bootstrap-4-and-angular-6-cfbb108d797b\">đây</a> </p>\r\n\r\n    <p>Install node sass để generate scss file. Nếu ko cài cái này thì style trong file scss sẽ ko được generate ra đâu</p>\r\n\r\n    <blockquote>\r\n      npm install -g node-sass\r\n    </blockquote>\r\n  </div>\r\n</section>\r\n\r\n<section class=\"container\">\r\n  <h2>Hướng dẫn tạo component và khai báo routers</h2>\r\n\r\n  <div class=\"content\">\r\n    <p>Để tạo một component tự động, ta làm như sau : ** Khuyến khích xài command line vì generate thủ công\r\n    rất dễ sai và đôi khi xảy ra những sai sót ko đáng có.</p>\r\n\r\n    <ol>\r\n      <li>cd vào folder cài đặt angular, folder chứa file package.json (ở đây là front-end)</li>\r\n      <li>Dùng command line sau để tạo component một cách tự động:\r\n        <blockquote>\r\n          ng g c components/help\r\n        </blockquote>\r\n\r\n        <p>Giải thích  thêm : g - generate, c - component, components/help : tạo component Help ở folder /components</p>\r\n      </li>\r\n    </ol>\r\n\r\n    <img src=\"../../../assets/help/add_components.JPG\" width=\"989\" height=\"837\" class=\"img-fluid\"/>\r\n\r\n    <p>Đối với component, luôn có 2 phần, 1 là annotation @component và 2 là export class. 2 Cái này luôn đi với nhau, như hình:</p>\r\n\r\n    <img src=\"../../../assets/help/component_note_1.JPG\" width=\"1492\" height=\"1235\" class=\"img-fluid\"/>\r\n  </div>\r\n\r\n  <div class=\"content\">\r\n    <p>Quan trọng nhất của angular là các router. Ta phải khai báo các router này để định tuyến các request tới\r\n    các Component tương ứng.</p>\r\n\r\n    <p>Trong file app.module.ts, ta khai báo routers như sau: Xem image</p>\r\n\r\n    <img src=\"../../../assets/help/config_routers.jpg\" width=\"1884\" height=\"1453\"/>\r\n  </div>\r\n</section>\r\n\r\n<section class=\"container\">\r\n  <h2>Những lưu ý khi sử dụng các components trong Angular.</h2>\r\n\r\n  <div class=\"content\">\r\n    <p>Nếu một tag chưa được khai báo, thì nó sẽ báo lỗi biên dịch. Ví dụ thêm vào < mat-toolbar>&lt;/> thì ngay lập tức nó báo lỗi.</p>\r\n    <p>Khi import một module vào, thì phải thêm nó ở trong imports</p>\r\n\r\n    <img src=\"../../../assets/help/add_module.JPG\" width=\"1432\" height=\"1467\" class=\"img-fluid\"/>\r\n\r\n  </div>\r\n</section>\r\n\r\n\r\n<section class=\"container\">\r\n  <h2>Tạo service trong Angular </h2>\r\n\r\n  <div class=\"content\">\r\n    <p>Việc tạo service cũng như tạo component, tốt nhất nên generate tự động.</p>\r\n\r\n    <blockquote>\r\n      ng g s issue\r\n    </blockquote>\r\n\r\n    <p>Khác với component, sau khi generate xong ta phải khao báo trong declarations của app.module, thì service phải được khai báo trong providers.</p>\r\n\r\n    <img src=\"../../../assets/help/add_service.JPG\" width=\"2134\" height=\"1700\" class=\"img-fluid\"/>\r\n\r\n    <p>Như vậy, trước mắt ta có các lưu ý sau:</p>\r\n\r\n    <ol>\r\n      <li>Component khai báo trong declarations</li>\r\n      <li>Service khai báo trong providers</li>\r\n      <li>Module khai báo trong imports</li>\r\n    </ol>\r\n  </div>\r\n</section>\r\n\r\n"
+module.exports = "<section class=\"container\">\n  <h2>Hướng dẫn setup git nếu commit ko được</h2>\n  <div class=\"content\">\n    <p>Khi gặp lỗi này: </p>\n    <blockquote>\n      Failed with error: unable to access 'https://github.com/buitahau/demoson.git/': The requested URL returned error: 403\n    </blockquote>\n\n    <p>Ta cần làm như sau: Vào folder .git/config, edit lại cái url như sau :</p>\n\n    <p>url = https://github.com/buitahau/demoson.git</p>\n\n    <p>url = https://bluesky020990:xxxxxxxxxxx@github.com/buitahau/demoson.git</p>\n\n    <p>Vẫn ko được :( Do ko đc share !!</p>\n  </div>\n</section>\n\n<section class=\"container\">\n  <h2>Hướng dẫn cài đặt angular</h2>\n\n  <div class=\"content\">\n    <p>Để cài đặt angular, đầu tiên ta new 1 cái angular project</p>\n\n    <blockquote>\n      ng new frontend\n    </blockquote>\n\n    <p>Sau khi khởi tạo nó rồi, đơn giản là ta sẽ start nó thôi đúng ko</p>\n\n    <blockquote>\n      ng serve --open\n    </blockquote>\n\n    <p>--open khai báo tự open cái browser lên để show cái page.</p>\n\n\n    <p>Các npm cần install để làm việc trong project này bao gồm:</p>\n    <ol>\n      <li>material </li>\n      <li>boostrap</li>\n      <li>node sass (để generate scss files)</li>\n    </ol>\n\n    <p>Sau đó, ta add material cho cái project này</p>\n\n    <blockquote>\n      ng add @angular/material\n    </blockquote>\n\n\n    <p>Add luon cai boostrap</p>\n\n    <p>Install boostrap</p>\n\n    <blockquote>\n      npm install ngx-bootstrap --save\n    </blockquote>\n\n    <p>Add boostrap to project </p>\n\n    <blockquote>\n      ng add ngx-bootstrap\n    </blockquote>\n\n    <p>Xem hướng dẫn install bootstrap cho angular tai  : <a href=\"https://medium.com/@tomastrajan/how-to-build-responsive-layouts-with-bootstrap-4-and-angular-6-cfbb108d797b\">đây</a> </p>\n\n    <p>Install node sass để generate scss file. Nếu ko cài cái này thì style trong file scss sẽ ko được generate ra đâu</p>\n\n    <blockquote>\n      npm install -g node-sass\n    </blockquote>\n  </div>\n</section>\n\n<section class=\"container\">\n  <h2>Hướng dẫn tạo component và khai báo routers</h2>\n\n  <div class=\"content\">\n    <p>Để tạo một component tự động, ta làm như sau : ** Khuyến khích xài command line vì generate thủ công\n    rất dễ sai và đôi khi xảy ra những sai sót ko đáng có.</p>\n\n    <ol>\n      <li>cd vào folder cài đặt angular, folder chứa file package.json (ở đây là front-end)</li>\n      <li>Dùng command line sau để tạo component một cách tự động:\n        <blockquote>\n          ng g c components/help\n        </blockquote>\n\n        <p>Giải thích  thêm : g - generate, c - component, components/help : tạo component Help ở folder /components</p>\n      </li>\n    </ol>\n\n    <img src=\"../../../assets/help/add_components.JPG\" width=\"989\" height=\"837\" class=\"img-fluid\"/>\n\n    <p>Đối với component, luôn có 2 phần, 1 là annotation @component và 2 là export class. 2 Cái này luôn đi với nhau, như hình:</p>\n\n    <img src=\"../../../assets/help/component_note_1.JPG\" width=\"1492\" height=\"1235\" class=\"img-fluid\"/>\n  </div>\n\n  <div class=\"content\">\n    <p>Quan trọng nhất của angular là các router. Ta phải khai báo các router này để định tuyến các request tới\n    các Component tương ứng.</p>\n\n    <p>Trong file app.module.ts, ta khai báo routers như sau: Xem image</p>\n\n    <img src=\"../../../assets/help/config_routers.jpg\" width=\"1884\" height=\"1453\"/>\n  </div>\n</section>\n\n<section class=\"container\">\n  <h2>Những lưu ý khi sử dụng các components trong Angular.</h2>\n\n  <div class=\"content\">\n    <p>Nếu một tag chưa được khai báo, thì nó sẽ báo lỗi biên dịch. Ví dụ thêm vào < mat-toolbar>&lt;/> thì ngay lập tức nó báo lỗi.</p>\n    <p>Khi import một module vào, thì phải thêm nó ở trong imports</p>\n\n    <img src=\"../../../assets/help/add_module.JPG\" width=\"1432\" height=\"1467\" class=\"img-fluid\"/>\n\n  </div>\n</section>\n\n\n<section class=\"container\">\n  <h2>Tạo service trong Angular </h2>\n\n  <div class=\"content\">\n    <p>Việc tạo service cũng như tạo component, tốt nhất nên generate tự động.</p>\n\n    <blockquote>\n      ng g s issue\n    </blockquote>\n\n    <p>Khác với component, sau khi generate xong ta phải khao báo trong declarations của app.module, thì service phải được khai báo trong providers.</p>\n\n    <img src=\"../../../assets/help/add_service.JPG\" width=\"2134\" height=\"1700\" class=\"img-fluid\"/>\n\n    <p>Như vậy, trước mắt ta có các lưu ý sau:</p>\n\n    <ol>\n      <li>Component khai báo trong declarations</li>\n      <li>Service khai báo trong providers</li>\n      <li>Module khai báo trong imports</li>\n    </ol>\n  </div>\n</section>\n\n"
 
 /***/ }),
 
@@ -1078,7 +1327,7 @@ module.exports = "<section class=\"container\">\r\n  <h2>Hướng dẫn setup gi
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "app-help blockquote {\n  border: 1px solid #ccc;\n  padding: 5px; }\n\napp-help img {\n  max-width: 50% !important;\n  height: auto !important; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9oZWxwL0Q6XFxXb3Jrc3BhY2VcXEhEQlNcXGNsaWVudHZpZXRwb3dlci9zcmNcXGFwcFxcY29tcG9uZW50c1xcaGVscFxcaGVscC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUVJLHVCQUFzQjtFQUN0QixhQUFZLEVBQ2I7O0FBSkg7RUFPSSwwQkFBeUI7RUFDekIsd0JBQXVCLEVBQ3hCIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50cy9oZWxwL2hlbHAuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJhcHAtaGVscHtcclxuICBibG9ja3F1b3Rle1xyXG4gICAgYm9yZGVyOiAxcHggc29saWQgI2NjYztcclxuICAgIHBhZGRpbmc6IDVweDtcclxuICB9XHJcblxyXG4gIGltZ3tcclxuICAgIG1heC13aWR0aDogNTAlICFpbXBvcnRhbnQ7XHJcbiAgICBoZWlnaHQ6IGF1dG8gIWltcG9ydGFudDtcclxuICB9XHJcbn1cclxuIl19 */"
+module.exports = "app-help blockquote {\n  border: 1px solid #ccc;\n  padding: 5px; }\n\napp-help img {\n  max-width: 50% !important;\n  height: auto !important; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9oZWxwL0c6XFxXb3Jrc3BhY2VcXGNsaWVudHZpZXRwb3dlci9zcmNcXGFwcFxcY29tcG9uZW50c1xcaGVscFxcaGVscC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUVJLHVCQUFzQjtFQUN0QixhQUFZLEVBQ2I7O0FBSkg7RUFPSSwwQkFBeUI7RUFDekIsd0JBQXVCLEVBQ3hCIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50cy9oZWxwL2hlbHAuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJhcHAtaGVscHtcclxuICBibG9ja3F1b3Rle1xyXG4gICAgYm9yZGVyOiAxcHggc29saWQgI2NjYztcclxuICAgIHBhZGRpbmc6IDVweDtcclxuICB9XHJcblxyXG4gIGltZ3tcclxuICAgIG1heC13aWR0aDogNTAlICFpbXBvcnRhbnQ7XHJcbiAgICBoZWlnaHQ6IGF1dG8gIWltcG9ydGFudDtcclxuICB9XHJcbn1cclxuIl19 */"
 
 /***/ }),
 
@@ -1130,7 +1379,7 @@ var HelpComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"block-header\">\r\n  <h1>Angular language</h1>\r\n</div>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        Làm việc với kiểu dữ liệu trong angular.\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        <p>Danh sách các vấn đề cần quan tâm bao gồm :</p>\r\n\r\n        <ul>\r\n          <li>Show 1 biến ra màn hình</li>\r\n          <li>Gán giá trị local trong template</li>\r\n          <li>Câu điều kiện if else</li>\r\n          <li>Vòng lặp</li>\r\n        </ul>\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        <h4>Overview</h4>\r\n\r\n        <p>Trong angular, để set các biến cho các component để sử dụng bên html page, thì ta phải khai báo nó trong method export component.</p>\r\n\r\n        <p>Mỗi languge có những vấn đề khác nhau, ở đây ta sẽ tìm hiểu về việc show cái giá trị biến, gán giá trị, so sánh\r\n          điều kiện if  else if, else, các vòng lặp for, while (nếu có), cũng như các hashtag khác.</p>\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        <h4>Show 1 biến ra màn hình</h4>\r\n\r\n        <p>Biến trong angular được export trong đoạn block code cuối cùng của component. Ví dụ ta có biến pageTitle.</p>\r\n\r\n        <p>Để show nó ra màn hình ta sử dụng cặp dấu \"{{'{'}}\" \"{{ '{' }}\" \"{{ '}' }}\" \"{{ '}' }}\" này nhé.</p>\r\n\r\n        <p>(Lưu ý là show nó, còn sử dụng thì ko cần cặp dấu  \"{{'{'}}\" \"{{ '}' }}\" này đâu nhé. Xem file colorant.component.html để biết thêm chi tiết)</p>\r\n\r\n        <blockquote>\r\n          Content này lấy từ pageTitle : {{ pageTitle | uppercase }}\r\n        </blockquote>\r\n\r\n        <p>Màu của biến nó sẽ khác với màu của mấy thằng còn lại nên sẽ rất dễ xem.</p>\r\n\r\n        <p>Để gán giá trị của biến, ta cần sử dụng ngInit</p>\r\n\r\n        <blockquote>\r\n          *ngInit\r\n        </blockquote>\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        <h4>Gán giá trị local trong template.</h4>\r\n\r\n        <p>để khai báo 1 biến, ta sử dụng từ khóa ngInit</p>\r\n\r\n        <p>Xem thêm ở đây <a href=\"https://www.guru99.com/angularjs-expressions.html\" target=\"_blank\">Click to view</a></p>\r\n\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        <h4>Câu điều kiện if else</h4>\r\n\r\n        <p>Đây là 1 ví dụ của câu điều kiện if</p>\r\n\r\n        <blockquote>\r\n          &lt;p *ngIf=\"heroes.length > 3\">There are many heroes!&lt;/p&gt;`\r\n        </blockquote>\r\n\r\n        <p *ngIf=\"test_if_value  == true\">There are many heroes!</p>\r\n\r\n        <p>Xem thêm ở đây <a href=\"https://angular.io/guide/template-syntax#ngIf\" target=\"_blank\">Click to view</a> </p>\r\n\r\n      </div>\r\n\r\n\r\n\r\n\r\n      <div class=\"card-body\">\r\n        <h4>Làm việc với biến.</h4>\r\n\r\n        <p>Biến trong angular được export trong đoạn block code cuối cùng của component. Ví dụ ta có biến pageTitle.</p>\r\n\r\n        <p>Để sử dụng nó, ta sử dụng cặp dấu \"{{'{'}}\" \"{{ '{' }}\" \"{{ '}' }}\" \"{{ '}' }}\" này nhé.</p>\r\n\r\n        <blockquote>\r\n          Content này lấy từ pageTitle : {{ pageTitle }}\r\n        </blockquote>\r\n\r\n        <p>Màu của biến nó sẽ khác với màu của mấy thằng còn lại nên sẽ rất dễ xem.</p>\r\n      </div>\r\n\r\n\r\n\r\n      *ngIf=\"heroes.length > 3\"\r\n\r\n\r\n      <div class=\"card-body\">\r\n        <h4>Làm việc với mảng.</h4>\r\n\r\n        <p>Duyệt các phần tử của mảng : sử dụng * ngFor=\"let item of listItem\" </p>\r\n\r\n        <blockquote>\r\n          <ul *ngFor=\"let item of listItems\">\r\n            <li>{{item}}</li>\r\n          </ul>\r\n        </blockquote>\r\n      </div>\r\n\r\n\r\n      <div class=\"card-body\">\r\n        <h4>Style trong angular</h4>\r\n\r\n        <p>Xem tai link sau : <a href=\"https://alligator.io/angular/style-binding-ngstyle-angular/\" target=\"_blank\">Click to view </a></p>\r\n      </div>\r\n\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n\r\n<!---->\r\n"
+module.exports = "<div class=\"block-header\">\n  <h1>Angular language</h1>\n</div>\n\n<div class=\"row\">\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n    <div class=\"card\">\n      <div class=\"card-header\">\n        Làm việc với kiểu dữ liệu trong angular.\n      </div>\n\n      <div class=\"card-body\">\n        <p>Danh sách các vấn đề cần quan tâm bao gồm :</p>\n\n        <ul>\n          <li>Show 1 biến ra màn hình</li>\n          <li>Gán giá trị local trong template</li>\n          <li>Câu điều kiện if else</li>\n          <li>Vòng lặp</li>\n        </ul>\n      </div>\n\n      <div class=\"card-body\">\n        <h4>Overview</h4>\n\n        <p>Trong angular, để set các biến cho các component để sử dụng bên html page, thì ta phải khai báo nó trong method export component.</p>\n\n        <p>Mỗi languge có những vấn đề khác nhau, ở đây ta sẽ tìm hiểu về việc show cái giá trị biến, gán giá trị, so sánh\n          điều kiện if  else if, else, các vòng lặp for, while (nếu có), cũng như các hashtag khác.</p>\n      </div>\n\n      <div class=\"card-body\">\n        <h4>Show 1 biến ra màn hình</h4>\n\n        <p>Biến trong angular được export trong đoạn block code cuối cùng của component. Ví dụ ta có biến pageTitle.</p>\n\n        <p>Để show nó ra màn hình ta sử dụng cặp dấu \"{{'{'}}\" \"{{ '{' }}\" \"{{ '}' }}\" \"{{ '}' }}\" này nhé.</p>\n\n        <p>(Lưu ý là show nó, còn sử dụng thì ko cần cặp dấu  \"{{'{'}}\" \"{{ '}' }}\" này đâu nhé. Xem file colorant.component.html để biết thêm chi tiết)</p>\n\n        <blockquote>\n          Content này lấy từ pageTitle : {{ pageTitle | uppercase }}\n        </blockquote>\n\n        <p>Màu của biến nó sẽ khác với màu của mấy thằng còn lại nên sẽ rất dễ xem.</p>\n\n        <p>Để gán giá trị của biến, ta cần sử dụng ngInit</p>\n\n        <blockquote>\n          *ngInit\n        </blockquote>\n      </div>\n\n      <div class=\"card-body\">\n        <h4>Gán giá trị local trong template.</h4>\n\n        <p>để khai báo 1 biến, ta sử dụng từ khóa ngInit</p>\n\n        <p>Xem thêm ở đây <a href=\"https://www.guru99.com/angularjs-expressions.html\" target=\"_blank\">Click to view</a></p>\n\n      </div>\n\n      <div class=\"card-body\">\n        <h4>Câu điều kiện if else</h4>\n\n        <p>Đây là 1 ví dụ của câu điều kiện if</p>\n\n        <blockquote>\n          &lt;p *ngIf=\"heroes.length > 3\">There are many heroes!&lt;/p&gt;`\n        </blockquote>\n\n        <p *ngIf=\"test_if_value  == true\">There are many heroes!</p>\n\n        <p>Xem thêm ở đây <a href=\"https://angular.io/guide/template-syntax#ngIf\" target=\"_blank\">Click to view</a> </p>\n\n      </div>\n\n\n\n\n      <div class=\"card-body\">\n        <h4>Làm việc với biến.</h4>\n\n        <p>Biến trong angular được export trong đoạn block code cuối cùng của component. Ví dụ ta có biến pageTitle.</p>\n\n        <p>Để sử dụng nó, ta sử dụng cặp dấu \"{{'{'}}\" \"{{ '{' }}\" \"{{ '}' }}\" \"{{ '}' }}\" này nhé.</p>\n\n        <blockquote>\n          Content này lấy từ pageTitle : {{ pageTitle }}\n        </blockquote>\n\n        <p>Màu của biến nó sẽ khác với màu của mấy thằng còn lại nên sẽ rất dễ xem.</p>\n      </div>\n\n\n\n      *ngIf=\"heroes.length > 3\"\n\n\n      <div class=\"card-body\">\n        <h4>Làm việc với mảng.</h4>\n\n        <p>Duyệt các phần tử của mảng : sử dụng * ngFor=\"let item of listItem\" </p>\n\n        <blockquote>\n          <ul *ngFor=\"let item of listItems\">\n            <li>{{item}}</li>\n          </ul>\n        </blockquote>\n      </div>\n\n\n      <div class=\"card-body\">\n        <h4>Style trong angular</h4>\n\n        <p>Xem tai link sau : <a href=\"https://alligator.io/angular/style-binding-ngstyle-angular/\" target=\"_blank\">Click to view </a></p>\n      </div>\n\n    </div>\n  </div>\n</div>\n\n\n<!---->\n"
 
 /***/ }),
 
@@ -1196,7 +1445,7 @@ var LanguageComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"block-header\">\r\n  <h1>Help</h1>\r\n</div>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        How to use this app...\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        Content .....\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        How to use this app...\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        Content .....\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        How to use this app...\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        Content .....\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        How to use this app...\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        Content .....\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        How to use this app...\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        Content .....\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class=\"block-header\">\n  <h1>Help</h1>\n</div>\n\n<div class=\"row\">\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n    <div class=\"card\">\n      <div class=\"card-header\">\n        How to use this app...\n      </div>\n\n      <div class=\"card-body\">\n        Content .....\n      </div>\n    </div>\n  </div>\n</div>\n\n\n<div class=\"row\">\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n    <div class=\"card\">\n      <div class=\"card-header\">\n        How to use this app...\n      </div>\n\n      <div class=\"card-body\">\n        Content .....\n      </div>\n    </div>\n  </div>\n</div>\n\n\n<div class=\"row\">\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n    <div class=\"card\">\n      <div class=\"card-header\">\n        How to use this app...\n      </div>\n\n      <div class=\"card-body\">\n        Content .....\n      </div>\n    </div>\n  </div>\n</div>\n\n\n<div class=\"row\">\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n    <div class=\"card\">\n      <div class=\"card-header\">\n        How to use this app...\n      </div>\n\n      <div class=\"card-body\">\n        Content .....\n      </div>\n    </div>\n  </div>\n</div>\n\n\n<div class=\"row\">\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n    <div class=\"card\">\n      <div class=\"card-header\">\n        How to use this app...\n      </div>\n\n      <div class=\"card-body\">\n        Content .....\n      </div>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -1259,7 +1508,7 @@ var QuestionComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"block-header\">\r\n  <h1>Structure HTML & Boostrap</h1>\r\n</div>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        Overview\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        <p>Cái nào cùng vậy, đã là web thì kiểu gì cũng phải xài boostrap. Boostrap không những giúp code nhanh hơn, mà hơn\r\n        hết, cái thư viện css và js của nó rất đẹp. Nên nếu biết sử dụng đúng cách thì ko cần biết về css cũng có thể làm được.</p>\r\n\r\n        <p>Bản chất của boostrap là quy định các template. Chỉ cần khai báo đúng template là đc. Riêng vấn đề này đòi hỏi ta phải làm\r\n        nhiều mới nhớ được.</p>\r\n\r\n        <p>Đối với bất cứ việc design một cái website nào cũng vậy, theo yêu cầu khách hàng, ta nên search trên mạng để tìm 1 cái layout cho hợp lý\r\n        sau đó mang về chỉnh sửa lại css custom theo ý ta muốn. Tất nhiên, để custom thì chắc chắn phải biết 1 chút về css và các layout của boostrap rồi, đúng ko?</p>\r\n\r\n        <p>Boostrap ra đời lâu rồi. Cái này xài boostrap 4. Ngày xưa boostrap chạy với js, thì giờ ta phải sửa lại để nó cũng chạy với angula.</p>\r\n\r\n        <p>Trong cái này, sẽ bỏ vào từ từ các template của angular và boostrap.</p>\r\n\r\n        <p>Đối với việc chuyển từ js sang angular, nó phức tạp hơn những gì ta tưởng. Tuy nhiên, may mắn thay là đã có những plugin (library) hỗ trợ\r\n          ta làm cái đó. Bài viết này chủ yếu list các trường hợp như vậy thôi</p>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        Boostrap modal\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        <p>Boostrap modal là 1 component thường gặp nhất. Nó show các boostbox nhưu confirm, alert, và các modal để tương tác.</p>\r\n\r\n        <p>Hướng dãn thêm boostrap modal vào, ta xem ở đây <a href=\"http://eriktufvesson.github.io/ngbootbox/\" target=\"_blank\">Click to view</a> </p>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class=\"block-header\">\n  <h1>Structure HTML & Boostrap</h1>\n</div>\n\n<div class=\"row\">\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n    <div class=\"card\">\n      <div class=\"card-header\">\n        Overview\n      </div>\n\n      <div class=\"card-body\">\n        <p>Cái nào cùng vậy, đã là web thì kiểu gì cũng phải xài boostrap. Boostrap không những giúp code nhanh hơn, mà hơn\n        hết, cái thư viện css và js của nó rất đẹp. Nên nếu biết sử dụng đúng cách thì ko cần biết về css cũng có thể làm được.</p>\n\n        <p>Bản chất của boostrap là quy định các template. Chỉ cần khai báo đúng template là đc. Riêng vấn đề này đòi hỏi ta phải làm\n        nhiều mới nhớ được.</p>\n\n        <p>Đối với bất cứ việc design một cái website nào cũng vậy, theo yêu cầu khách hàng, ta nên search trên mạng để tìm 1 cái layout cho hợp lý\n        sau đó mang về chỉnh sửa lại css custom theo ý ta muốn. Tất nhiên, để custom thì chắc chắn phải biết 1 chút về css và các layout của boostrap rồi, đúng ko?</p>\n\n        <p>Boostrap ra đời lâu rồi. Cái này xài boostrap 4. Ngày xưa boostrap chạy với js, thì giờ ta phải sửa lại để nó cũng chạy với angula.</p>\n\n        <p>Trong cái này, sẽ bỏ vào từ từ các template của angular và boostrap.</p>\n\n        <p>Đối với việc chuyển từ js sang angular, nó phức tạp hơn những gì ta tưởng. Tuy nhiên, may mắn thay là đã có những plugin (library) hỗ trợ\n          ta làm cái đó. Bài viết này chủ yếu list các trường hợp như vậy thôi</p>\n      </div>\n    </div>\n  </div>\n</div>\n\n\n<div class=\"row\">\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n    <div class=\"card\">\n      <div class=\"card-header\">\n        Boostrap modal\n      </div>\n\n      <div class=\"card-body\">\n        <p>Boostrap modal là 1 component thường gặp nhất. Nó show các boostbox nhưu confirm, alert, và các modal để tương tác.</p>\n\n        <p>Hướng dãn thêm boostrap modal vào, ta xem ở đây <a href=\"http://eriktufvesson.github.io/ngbootbox/\" target=\"_blank\">Click to view</a> </p>\n      </div>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -1322,7 +1571,7 @@ var StructureComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\r\n  create works!\r\n</p>\r\n"
+module.exports = "<p>\n  create works!\n</p>\n"
 
 /***/ }),
 
@@ -1388,7 +1637,7 @@ var CreateComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\r\n  edit works!\r\n</p>\r\n"
+module.exports = "<p>\n  edit works!\n</p>\n"
 
 /***/ }),
 
@@ -1454,7 +1703,7 @@ var EditComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\r\n  list works!\r\n</p>\r\n"
+module.exports = "<p>\n  list works!\n</p>\n"
 
 /***/ }),
 
@@ -1524,7 +1773,7 @@ var ListComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ol class=\"breadcrumb\">\r\n  <li class=\"breadcrumb-item\">\r\n    <a href=\"index.html\">Dashboard</a>\r\n  </li>\r\n  <li class=\"breadcrumb-item active\">Sample</li>\r\n</ol>\r\n"
+module.exports = "<ol class=\"breadcrumb\">\n  <li class=\"breadcrumb-item\">\n    <a href=\"index.html\">Dashboard</a>\n  </li>\n  <li class=\"breadcrumb-item active\">Sample</li>\n</ol>\n"
 
 /***/ }),
 
@@ -1587,7 +1836,7 @@ var BreadcrumbComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<footer class=\"sticky-footer\">\r\n  <div class=\"container my-auto\">\r\n    <div class=\"copyright text-center my-auto\">\r\n      <span>Copyright © VietPower 2018</span>\r\n    </div>\r\n  </div>\r\n</footer>\r\n"
+module.exports = "<footer class=\"sticky-footer\">\n  <div class=\"container my-auto\">\n    <div class=\"copyright text-center my-auto\">\n      <span>Copyright © VietPower 2018</span>\n    </div>\n  </div>\n</footer>\n"
 
 /***/ }),
 
@@ -1661,7 +1910,7 @@ module.exports = "<nav class=\"navbar navbar-expand static-top\">\r\n  <div clas
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".navbar.navbar-expand {\n  position: fixed;\n  left: 0;\n  top: 0;\n  right: 0;\n  transition: all 0.5s;\n  z-index: 997;\n  background: #fff;\n  box-shadow: -21.213px 21.213px 30px 0px rgba(158, 158, 158, 0.3);\n  display: flex;\n  justify-content: space-between !important;\n  margin-bottom: 10px; }\n  .navbar.navbar-expand .page-menu {\n    float: right; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9sYXlvdXQvaGVhZGVyL0Q6XFxXb3Jrc3BhY2VcXEhEQlNcXGNsaWVudHZpZXRwb3dlci9zcmNcXGFwcFxcY29tcG9uZW50c1xcbGF5b3V0XFxoZWFkZXJcXGhlYWRlci5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGdCQUFlO0VBQ2YsUUFBTztFQUNQLE9BQU07RUFDTixTQUFRO0VBQ1IscUJBQW9CO0VBQ3BCLGFBQVk7RUFDWixpQkFBZ0I7RUFFaEIsaUVBQWdFO0VBRWhFLGNBQWE7RUFDYiwwQ0FBeUM7RUFDekMsb0JBQW1CLEVBTXBCO0VBbkJEO0lBaUJJLGFBQVksRUFDYiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvbGF5b3V0L2hlYWRlci9oZWFkZXIuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubmF2YmFyLm5hdmJhci1leHBhbmR7XHJcbiAgcG9zaXRpb246IGZpeGVkO1xyXG4gIGxlZnQ6IDA7XHJcbiAgdG9wOiAwO1xyXG4gIHJpZ2h0OiAwO1xyXG4gIHRyYW5zaXRpb246IGFsbCAwLjVzO1xyXG4gIHotaW5kZXg6IDk5NztcclxuICBiYWNrZ3JvdW5kOiAjZmZmO1xyXG4gIC8vdHJhbnNpdGlvbjogYWxsIDAuNXM7XHJcbiAgYm94LXNoYWRvdzogLTIxLjIxM3B4IDIxLjIxM3B4IDMwcHggMHB4IHJnYmEoMTU4LCAxNTgsIDE1OCwgMC4zKTtcclxuICAvL1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbiAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuICFpbXBvcnRhbnQ7XHJcbiAgbWFyZ2luLWJvdHRvbTogMTBweDtcclxuXHJcblxyXG4gIC5wYWdlLW1lbnV7XHJcbiAgICBmbG9hdDogcmlnaHQ7XHJcbiAgfVxyXG59XHJcbiJdfQ== */"
+module.exports = ".navbar.navbar-expand {\n  position: fixed;\n  left: 0;\n  top: 0;\n  right: 0;\n  transition: all 0.5s;\n  z-index: 997;\n  background: #fff;\n  box-shadow: -21.213px 21.213px 30px 0px rgba(158, 158, 158, 0.3);\n  display: flex;\n  justify-content: space-between !important;\n  margin-bottom: 10px; }\n  .navbar.navbar-expand .page-menu {\n    float: right; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9sYXlvdXQvaGVhZGVyL0c6XFxXb3Jrc3BhY2VcXGNsaWVudHZpZXRwb3dlci9zcmNcXGFwcFxcY29tcG9uZW50c1xcbGF5b3V0XFxoZWFkZXJcXGhlYWRlci5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGdCQUFlO0VBQ2YsUUFBTztFQUNQLE9BQU07RUFDTixTQUFRO0VBQ1IscUJBQW9CO0VBQ3BCLGFBQVk7RUFDWixpQkFBZ0I7RUFFaEIsaUVBQWdFO0VBRWhFLGNBQWE7RUFDYiwwQ0FBeUM7RUFDekMsb0JBQW1CLEVBTXBCO0VBbkJEO0lBaUJJLGFBQVksRUFDYiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvbGF5b3V0L2hlYWRlci9oZWFkZXIuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubmF2YmFyLm5hdmJhci1leHBhbmR7XHJcbiAgcG9zaXRpb246IGZpeGVkO1xyXG4gIGxlZnQ6IDA7XHJcbiAgdG9wOiAwO1xyXG4gIHJpZ2h0OiAwO1xyXG4gIHRyYW5zaXRpb246IGFsbCAwLjVzO1xyXG4gIHotaW5kZXg6IDk5NztcclxuICBiYWNrZ3JvdW5kOiAjZmZmO1xyXG4gIC8vdHJhbnNpdGlvbjogYWxsIDAuNXM7XHJcbiAgYm94LXNoYWRvdzogLTIxLjIxM3B4IDIxLjIxM3B4IDMwcHggMHB4IHJnYmEoMTU4LCAxNTgsIDE1OCwgMC4zKTtcclxuICAvL1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbiAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuICFpbXBvcnRhbnQ7XHJcbiAgbWFyZ2luLWJvdHRvbTogMTBweDtcclxuXHJcblxyXG4gIC5wYWdlLW1lbnV7XHJcbiAgICBmbG9hdDogcmlnaHQ7XHJcbiAgfVxyXG59XHJcbiJdfQ== */"
 
 /***/ }),
 
@@ -1724,7 +1973,7 @@ module.exports = "<ul class=\"navbar-nav navigation-bar\">\r\n\r\n  <li class=\"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".navigation-bar .nav-item {\n  margin-left: 25px;\n  color: #00417b;\n  text-align: center; }\n  .navigation-bar .nav-item > .nav-link {\n    color: #00417b; }\n  .navigation-bar .nav-item > .nav-link > i.fas {\n      font-size: 42px;\n      color: #00417b; }\n  .navigation-bar .nav-item.dropdown .dropdown-toggle::after {\n    display: none; }\n  .navigation-bar span.menu-item {\n  font-size: 14px !important;\n  white-space: nowrap;\n  display: block; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9sYXlvdXQvbmF2aWdhdGlvbi9EOlxcV29ya3NwYWNlXFxIREJTXFxjbGllbnR2aWV0cG93ZXIvc3JjXFxhcHBcXGNvbXBvbmVudHNcXGxheW91dFxcbmF2aWdhdGlvblxcbmF2aWdhdGlvbi5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUVJLGtCQUFpQjtFQUNqQixlQUFlO0VBQ2YsbUJBQWtCLEVBZ0JuQjtFQXBCSDtJQU9NLGVBQWUsRUFNaEI7RUFiTDtNQVVRLGdCQUFlO01BQ2YsZUFBZSxFQUNoQjtFQVpQO0lBaUJRLGNBQWEsRUFDZjtFQWxCTjtFQXNCSSwyQkFBMEI7RUFDMUIsb0JBQW1CO0VBQ25CLGVBQWMsRUFFZiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvbGF5b3V0L25hdmlnYXRpb24vbmF2aWdhdGlvbi5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5uYXZpZ2F0aW9uLWJhcntcclxuICAubmF2LWl0ZW17XHJcbiAgICBtYXJnaW4tbGVmdDogMjVweDtcclxuICAgIGNvbG9yOiAgIzAwNDE3YjtcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxuXHJcbiAgICA+IC5uYXYtbGlua3tcclxuICAgICAgY29sb3I6ICAjMDA0MTdiO1xyXG5cclxuICAgICAgPiBpLmZhc3tcclxuICAgICAgICBmb250LXNpemU6IDQycHg7XHJcbiAgICAgICAgY29sb3I6ICAjMDA0MTdiO1xyXG4gICAgICB9XHJcbiAgICB9XHJcblxyXG4gICAgJi5kcm9wZG93bntcclxuICAgICAuZHJvcGRvd24tdG9nZ2xlOjphZnRlcntcclxuICAgICAgICBkaXNwbGF5OiBub25lO1xyXG4gICAgIH1cclxuICAgIH1cclxuICB9XHJcbiAgc3Bhbi5tZW51LWl0ZW0ge1xyXG4gICAgZm9udC1zaXplOiAxNHB4ICFpbXBvcnRhbnQ7XHJcbiAgICB3aGl0ZS1zcGFjZTogbm93cmFwO1xyXG4gICAgZGlzcGxheTogYmxvY2s7XHJcblxyXG4gIH1cclxufVxyXG4iXX0= */"
+module.exports = ".navigation-bar .nav-item {\n  margin-left: 25px;\n  color: #00417b;\n  text-align: center; }\n  .navigation-bar .nav-item > .nav-link {\n    color: #00417b; }\n  .navigation-bar .nav-item > .nav-link > i.fas {\n      font-size: 42px;\n      color: #00417b; }\n  .navigation-bar .nav-item.dropdown .dropdown-toggle::after {\n    display: none; }\n  .navigation-bar span.menu-item {\n  font-size: 14px !important;\n  white-space: nowrap;\n  display: block; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9sYXlvdXQvbmF2aWdhdGlvbi9HOlxcV29ya3NwYWNlXFxjbGllbnR2aWV0cG93ZXIvc3JjXFxhcHBcXGNvbXBvbmVudHNcXGxheW91dFxcbmF2aWdhdGlvblxcbmF2aWdhdGlvbi5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUVJLGtCQUFpQjtFQUNqQixlQUFlO0VBQ2YsbUJBQWtCLEVBZ0JuQjtFQXBCSDtJQU9NLGVBQWUsRUFNaEI7RUFiTDtNQVVRLGdCQUFlO01BQ2YsZUFBZSxFQUNoQjtFQVpQO0lBaUJRLGNBQWEsRUFDZjtFQWxCTjtFQXNCSSwyQkFBMEI7RUFDMUIsb0JBQW1CO0VBQ25CLGVBQWMsRUFFZiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvbGF5b3V0L25hdmlnYXRpb24vbmF2aWdhdGlvbi5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5uYXZpZ2F0aW9uLWJhcntcclxuICAubmF2LWl0ZW17XHJcbiAgICBtYXJnaW4tbGVmdDogMjVweDtcclxuICAgIGNvbG9yOiAgIzAwNDE3YjtcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxuXHJcbiAgICA+IC5uYXYtbGlua3tcclxuICAgICAgY29sb3I6ICAjMDA0MTdiO1xyXG5cclxuICAgICAgPiBpLmZhc3tcclxuICAgICAgICBmb250LXNpemU6IDQycHg7XHJcbiAgICAgICAgY29sb3I6ICAjMDA0MTdiO1xyXG4gICAgICB9XHJcbiAgICB9XHJcblxyXG4gICAgJi5kcm9wZG93bntcclxuICAgICAuZHJvcGRvd24tdG9nZ2xlOjphZnRlcntcclxuICAgICAgICBkaXNwbGF5OiBub25lO1xyXG4gICAgIH1cclxuICAgIH1cclxuICB9XHJcbiAgc3Bhbi5tZW51LWl0ZW0ge1xyXG4gICAgZm9udC1zaXplOiAxNHB4ICFpbXBvcnRhbnQ7XHJcbiAgICB3aGl0ZS1zcGFjZTogbm93cmFwO1xyXG4gICAgZGlzcGxheTogYmxvY2s7XHJcblxyXG4gIH1cclxufVxyXG4iXX0= */"
 
 /***/ }),
 
@@ -1804,7 +2053,7 @@ var NavigationComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\r\n  <div class=\"card card-login mx-auto mt-5\">\r\n    <div class=\"card-header\">Reset Password</div>\r\n    <div class=\"card-body\">\r\n      <div class=\"text-center mb-4\">\r\n        <h4>Forgot your password?</h4>\r\n        <p>Enter your email address and we will send you instructions on how to reset your password.</p>\r\n      </div>\r\n      <form>\r\n        <div class=\"form-group\">\r\n          <div class=\"form-label-group\">\r\n            <input type=\"email\" id=\"inputEmail\" class=\"form-control\" placeholder=\"Enter email address\" required=\"required\" autofocus=\"autofocus\">\r\n            <label for=\"inputEmail\">Enter email address</label>\r\n          </div>\r\n        </div>\r\n        <a class=\"btn btn-primary btn-block\" [routerLink]=\"['../login']\">Reset Password</a>\r\n      </form>\r\n      <div class=\"text-center\">\r\n        <a class=\"d-block small mt-3\" [routerLink]=\"['../register']\">Register an Account</a>\r\n        <a class=\"d-block small\" [routerLink]=\"['../login']\">Login Page</a>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class=\"container\">\n  <div class=\"card card-login mx-auto mt-5\">\n    <div class=\"card-header\">Reset Password</div>\n    <div class=\"card-body\">\n      <div class=\"text-center mb-4\">\n        <h4>Forgot your password?</h4>\n        <p>Enter your email address and we will send you instructions on how to reset your password.</p>\n      </div>\n      <form>\n        <div class=\"form-group\">\n          <div class=\"form-label-group\">\n            <input type=\"email\" id=\"inputEmail\" class=\"form-control\" placeholder=\"Enter email address\" required=\"required\" autofocus=\"autofocus\">\n            <label for=\"inputEmail\">Enter email address</label>\n          </div>\n        </div>\n        <a class=\"btn btn-primary btn-block\" [routerLink]=\"['../login']\">Reset Password</a>\n      </form>\n      <div class=\"text-center\">\n        <a class=\"d-block small mt-3\" [routerLink]=\"['../register']\">Register an Account</a>\n        <a class=\"d-block small\" [routerLink]=\"['../login']\">Login Page</a>\n      </div>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -1878,7 +2127,7 @@ module.exports = "<div class=\"container\">\r\n  <div class=\"card card-login mx
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".login-component {\n  width: 800px;\n  margin: 80px auto;\n  font-size: 20px; }\n  .login-component .login-container {\n    display: flex;\n    flex-direction: column; }\n  .login-component .login-container > * {\n      width: 100%; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9sb2dpbi1wYWdlL2xvZ2luL0Q6XFxXb3Jrc3BhY2VcXEhEQlNcXGNsaWVudHZpZXRwb3dlci9zcmNcXGFwcFxcY29tcG9uZW50c1xcbG9naW4tcGFnZVxcbG9naW5cXGxvZ2luLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsYUFBWTtFQUNaLGtCQUFpQjtFQUNqQixnQkFBZSxFQVVoQjtFQWJEO0lBTUksY0FBYTtJQUNiLHVCQUFzQixFQUt2QjtFQVpIO01BVU0sWUFBVyxFQUNaIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50cy9sb2dpbi1wYWdlL2xvZ2luL2xvZ2luLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmxvZ2luLWNvbXBvbmVudHtcclxuICB3aWR0aDogODAwcHg7XHJcbiAgbWFyZ2luOiA4MHB4IGF1dG87XHJcbiAgZm9udC1zaXplOiAyMHB4O1xyXG5cclxuICAubG9naW4tY29udGFpbmVyIHtcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xyXG5cclxuICAgID4gKntcclxuICAgICAgd2lkdGg6IDEwMCU7XHJcbiAgICB9XHJcbiAgfVxyXG59XHJcblxyXG5cclxuIl19 */"
+module.exports = ".login-component {\n  width: 800px;\n  margin: 80px auto;\n  font-size: 20px; }\n  .login-component .login-container {\n    display: flex;\n    flex-direction: column; }\n  .login-component .login-container > * {\n      width: 100%; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9sb2dpbi1wYWdlL2xvZ2luL0c6XFxXb3Jrc3BhY2VcXGNsaWVudHZpZXRwb3dlci9zcmNcXGFwcFxcY29tcG9uZW50c1xcbG9naW4tcGFnZVxcbG9naW5cXGxvZ2luLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsYUFBWTtFQUNaLGtCQUFpQjtFQUNqQixnQkFBZSxFQVVoQjtFQWJEO0lBTUksY0FBYTtJQUNiLHVCQUFzQixFQUt2QjtFQVpIO01BVU0sWUFBVyxFQUNaIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50cy9sb2dpbi1wYWdlL2xvZ2luL2xvZ2luLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmxvZ2luLWNvbXBvbmVudHtcclxuICB3aWR0aDogODAwcHg7XHJcbiAgbWFyZ2luOiA4MHB4IGF1dG87XHJcbiAgZm9udC1zaXplOiAyMHB4O1xyXG5cclxuICAubG9naW4tY29udGFpbmVyIHtcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xyXG5cclxuICAgID4gKntcclxuICAgICAgd2lkdGg6IDEwMCU7XHJcbiAgICB9XHJcbiAgfVxyXG59XHJcblxyXG5cclxuIl19 */"
 
 /***/ }),
 
@@ -1945,7 +2194,7 @@ var LoginComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\r\n  <div class=\"card card-register mx-auto mt-5\">\r\n    <div class=\"card-header\">Register an Account</div>\r\n    <div class=\"card-body\">\r\n      <form>\r\n        <div class=\"form-group\">\r\n          <div class=\"form-row\">\r\n            <div class=\"col-md-6\">\r\n              <div class=\"form-label-group\">\r\n                <input type=\"text\" id=\"firstName\" class=\"form-control\" placeholder=\"First name\" required=\"required\" autofocus=\"autofocus\">\r\n                <label for=\"firstName\">First name</label>\r\n              </div>\r\n            </div>\r\n            <div class=\"col-md-6\">\r\n              <div class=\"form-label-group\">\r\n                <input type=\"text\" id=\"lastName\" class=\"form-control\" placeholder=\"Last name\" required=\"required\">\r\n                <label for=\"lastName\">Last name</label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n        </div>\r\n        <div class=\"form-group\">\r\n          <div class=\"form-label-group\">\r\n            <input type=\"email\" id=\"inputEmail\" class=\"form-control\" placeholder=\"Email address\" required=\"required\">\r\n            <label for=\"inputEmail\">Email address</label>\r\n          </div>\r\n        </div>\r\n        <div class=\"form-group\">\r\n          <div class=\"form-row\">\r\n            <div class=\"col-md-6\">\r\n              <div class=\"form-label-group\">\r\n                <input type=\"password\" id=\"inputPassword\" class=\"form-control\" placeholder=\"Password\" required=\"required\">\r\n                <label for=\"inputPassword\">Password</label>\r\n              </div>\r\n            </div>\r\n            <div class=\"col-md-6\">\r\n              <div class=\"form-label-group\">\r\n                <input type=\"password\" id=\"confirmPassword\" class=\"form-control\" placeholder=\"Confirm password\" required=\"required\">\r\n                <label for=\"confirmPassword\">Confirm password</label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n        </div>\r\n        <a class=\"btn btn-primary btn-block\" [routerLink]=\"['../login']\">Register</a>\r\n      </form>\r\n\r\n      <div class=\"text-center\">\r\n        <a class=\"d-block small mt-3\" [routerLink]=\"['../login']\">Login Page</a>\r\n        <a class=\"d-block small\" [routerLink]=\"['../forgot-password']\">Forgot Password?</a>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class=\"container\">\n  <div class=\"card card-register mx-auto mt-5\">\n    <div class=\"card-header\">Register an Account</div>\n    <div class=\"card-body\">\n      <form>\n        <div class=\"form-group\">\n          <div class=\"form-row\">\n            <div class=\"col-md-6\">\n              <div class=\"form-label-group\">\n                <input type=\"text\" id=\"firstName\" class=\"form-control\" placeholder=\"First name\" required=\"required\" autofocus=\"autofocus\">\n                <label for=\"firstName\">First name</label>\n              </div>\n            </div>\n            <div class=\"col-md-6\">\n              <div class=\"form-label-group\">\n                <input type=\"text\" id=\"lastName\" class=\"form-control\" placeholder=\"Last name\" required=\"required\">\n                <label for=\"lastName\">Last name</label>\n              </div>\n            </div>\n          </div>\n        </div>\n        <div class=\"form-group\">\n          <div class=\"form-label-group\">\n            <input type=\"email\" id=\"inputEmail\" class=\"form-control\" placeholder=\"Email address\" required=\"required\">\n            <label for=\"inputEmail\">Email address</label>\n          </div>\n        </div>\n        <div class=\"form-group\">\n          <div class=\"form-row\">\n            <div class=\"col-md-6\">\n              <div class=\"form-label-group\">\n                <input type=\"password\" id=\"inputPassword\" class=\"form-control\" placeholder=\"Password\" required=\"required\">\n                <label for=\"inputPassword\">Password</label>\n              </div>\n            </div>\n            <div class=\"col-md-6\">\n              <div class=\"form-label-group\">\n                <input type=\"password\" id=\"confirmPassword\" class=\"form-control\" placeholder=\"Confirm password\" required=\"required\">\n                <label for=\"confirmPassword\">Confirm password</label>\n              </div>\n            </div>\n          </div>\n        </div>\n        <a class=\"btn btn-primary btn-block\" [routerLink]=\"['../login']\">Register</a>\n      </form>\n\n      <div class=\"text-center\">\n        <a class=\"d-block small mt-3\" [routerLink]=\"['../login']\">Login Page</a>\n        <a class=\"d-block small\" [routerLink]=\"['../forgot-password']\">Forgot Password?</a>\n      </div>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -2008,7 +2257,7 @@ var RegisterComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"block-header\">\r\n  <h1>Machine Setting</h1>\r\n</div>\r\n\r\n<div class=\"row\" *ngIf=\"machine != null\">\r\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        Colorant Machine {{ machine.name + '(' + machine.code + ')'}}\r\n\r\n        <ng-container *ngIf=\"! openSetting\">\r\n          <button class=\"close\" (click)=\"openSettingMachine()\"><i class=\"fas fa-sliders-h\"></i></button>\r\n        </ng-container>\r\n\r\n        <ng-container *ngIf=\"openSetting\">\r\n          <button class=\"close\" (click)=\"closeSettingMachine()\"><i class=\"fas fa-window-close\"></i></button>\r\n        </ng-container>\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        <div class=\"machine-colourant-group\" [attr.actionType]=\"openSetting ? 'open-setting': ''\">\r\n          <div class=\"machine-background\">\r\n            <ng-container *ngIf=\"openSetting == true\">\r\n              <div class=\"machine-background-setting\">\r\n                <mat-slider class=\"machine-range-slider\" [tickInterval]=\"100 / 20\" [max]=\"maxQuantity\" [min]=\"0\" [step]=\"50\" [(ngModel)]=\"warningQuantity\" [vertical]=\"true\" [thumbLabel]=\"true\" (change)=\"updateMachineDataSlider('warning')\"></mat-slider>\r\n                <mat-slider class=\"machine-range-slider\" [tickInterval]=\"100 / 20\" [max]=\"maxQuantity\" [min]=\"0\" [step]=\"50\" [(ngModel)]=\"minQuantity\" [vertical]=\"true\" [thumbLabel]=\"true\" (change)=\"updateMachineDataSlider('min')\"></mat-slider>\r\n              </div>\r\n            </ng-container>\r\n\r\n            <span class=\"machine-colourant-max-range\" [ngStyle]=\"{'height': '100%'}\"><span class=\"step-label\">{{maxQuantity}}</span></span>\r\n            <span class=\"machine-colourant-warning-range\" [ngStyle]=\"{'height': (warningQuantity / maxQuantity) * 100 + '%'}\"><span class=\"step-label\">{{warningQuantity}}</span></span>\r\n            <span class=\"machine-colourant-min-range\" [ngStyle]=\"{'height': (minQuantity / maxQuantity) * 100 + '%'}\"><span class=\"step-label\">{{minQuantity}}</span></span>\r\n            <span class=\"machine-colourant-zero-range\" [ngStyle]=\"{'height': '0%'}\"><span class=\"step-label\">0</span></span>\r\n          </div>\r\n\r\n          <ng-container *ngFor=\"let machineColourant of listMachineColourant\">\r\n            <div class=\"machine-colourant-item\" (click)=\"selectMachineColourant(machineColourant.colourant.colourantId)\">\r\n              <span *ngIf=\"selectedMachineColourant != null && selectedMachineColourant.colourant.colourantId == machineColourant.colourant.colourantId\" class=\"selected-colourant-bgr\"></span>\r\n              <span class=\"machine-colourant-bgr\">\r\n                <span class=\"machine-colourant-current-range\" [ngStyle]=\"{'height': (machineColourant.quantity / maxQuantity) * 100 + '%', 'background-color': machineColourant.colourant.rbgHex, 'border': '1px solid #' + machineColourant.colourant.rbgHex}\"></span>\r\n              </span>\r\n              <span class=\"colourant-name\">{{machineColourant.colourant.colourantName}}</span>\r\n              <span class=\"colourant-code\">{{machineColourant.colourant.colourantCode}}</span>\r\n            </div>\r\n          </ng-container>\r\n        </div>\r\n      </div>\r\n      <ng-container *ngIf=\"minQuantity != initMinQuantity || warningQuantity != initWarningQuantity\">\r\n        <div class=\"card-footer\">\r\n          <button class=\"btn btn-primary\" (click)=\"updateSettingMachine()\">Update</button>\r\n        </div>\r\n      </ng-container>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<ng-container *ngIf=\"errorType != null\">\r\n  <pp-modal id=\"warning-colourants-machine-modal\" class=\"modal warning-colourants-machine-modal\">\r\n    <div class=\"modal-content\" [attr.type]=\"errorType\" >\r\n      <div class=\"modal-header\">\r\n        <h5 class=\"modal-title\">{{errorType}}</h5>\r\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\" (click)=\"closeModal('warning-colourants-machine-modal')\">\r\n          <span aria-hidden=\"true\">×</span>\r\n        </button>\r\n      </div>\r\n\r\n      <div class=\"modal-body\">\r\n        {{errorMessage}}\r\n      </div>\r\n\r\n      <div class=\"modal-footer\">\r\n        <button type=\"button\" class=\"btn btn-primary\" (click)=\"closeModal('warning-colourants-machine-modal')\">Close</button>\r\n      </div>\r\n    </div>\r\n  </pp-modal>\r\n</ng-container>\r\n\r\n\r\n\r\n<ng-container *ngIf=\"selectedMachineColourant != null\">\r\n  <pp-modal id=\"view-selected-colourant-machine-modal\" class=\"modal machine-colourant-single-item\">\r\n    <div class=\"modal-content\">\r\n      <div class=\"modal-header\">\r\n        <h5 class=\"modal-title\">Canister Refill</h5>\r\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\" (click)=\"closeModal('view-selected-colourant-machine-modal')\">\r\n          <span aria-hidden=\"true\">×</span>\r\n        </button>\r\n      </div>\r\n\r\n      <div class=\"modal-body\">\r\n        <div class=\"row\">\r\n          <div class=\"col-lg-2 col-md-2 col-sm-3 col-xs-3\">\r\n            <div class=\"machine-colorant-slider-group\">\r\n              <mat-slider class=\"machine-colourant-slider\" [tickInterval]=\"maxQuantity / 20\" [max]=\"maxQuantity\" [min]=\"0\" [step]=\"1\" [(ngModel)]=\"updateAmount\" [vertical]=\"true\" [thumbLabel]=\"true\" (change)=\"updateAmountBySlider()\"></mat-slider>\r\n            </div>\r\n          </div>\r\n\r\n          <div class=\"col-lg-2 col-md-2 col-sm-3 col-xs-3\">\r\n            <div class=\"machine-colourant-group\">\r\n              <div class=\"machine-background\">\r\n                <span class=\"machine-colourant-max-range\" [ngStyle]=\"{'height': '100%'}\"><span class=\"step-label\">{{maxQuantity}}</span></span>\r\n                <span class=\"machine-colourant-warning-range\" [ngStyle]=\"{'height': (minQuantity / maxQuantity) * 100 + '%'}\"><span class=\"step-label\">{{minQuantity}}</span></span>\r\n                <span class=\"machine-colourant-min-range\" [ngStyle]=\"{'height': '0%'}\"><span class=\"step-label\">0</span></span>\r\n              </div>\r\n              <div class=\"machine-colourant-item\">\r\n                <span class=\"machine-colourant-bgr\">\r\n                  <span class=\"machine-colourant-update-range\"  [ngStyle]=\"{'height': ((selectedMachineColourant.quantity + addedAmount) / maxQuantity) * 100 + '%', 'background-color': selectedMachineColourant.colourant.rbgHex, 'border': '1px solid #' + selectedMachineColourant.colourant.rbgHex}\"></span>\r\n                  <span class=\"machine-colourant-current-range\" [ngStyle]=\"{'height': (selectedMachineColourant.quantity / maxQuantity) * 100 + '%', 'background-color': selectedMachineColourant.colourant.rbgHex, 'border': '1px solid #' + selectedMachineColourant.colourant.rbgHex}\"></span>\r\n                </span>\r\n                <span class=\"colourant-name\">{{selectedMachineColourant.colourant.colourantName}}</span>\r\n                <span class=\"colourant-code\">{{selectedMachineColourant.colourant.colourantCode}}</span>\r\n              </div>\r\n            </div>\r\n          </div>\r\n\r\n          <div class=\"col-lg-8 col-md-8 col-sm-6 col-xs-6\">\r\n            <div class=\"machine-colourant-info form-detail\">\r\n              <div class=\"row form-group\">\r\n                <label class=\"col-md-4 label-control\">Amount:</label>\r\n                <div class=\"col-md-6\">\r\n                  <div class=\"input-group\">\r\n                    <!--<input type=\"number\" [(ngModel)]=\"addedAmount\" class=\"form-control\" required=\"required\" [ngModelOptions]=\"{standalone: true}\" (change)=\"updateAddedAmount('amount')\">-->\r\n                    <input type=\"number\" [(ngModel)]=\"addedAmount\" class=\"form-control\" required=\"required\" [ngModelOptions]=\"{standalone: true}\" (change)=\"updateAddedAmount('amount')\">\r\n                    <div class=\"input-group-append\">\r\n                      <span class=\"input-group-text\">ml</span>\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n\r\n              <div class=\"row form-group\">\r\n                <label class=\"col-md-4 label-control\">\r\n\r\n                </label>\r\n                <div class=\"col-md-8\">\r\n                  <button class=\"btn btn-dark\" (click)=\"fillByPercent(100);\">Fill to 100%</button>\r\n                </div>\r\n              </div>\r\n\r\n              <div class=\"row form-group\">\r\n                <label class=\"col-md-4 label-control\">Canister</label>\r\n                <div class=\"col-md-8\">\r\n                  {{selectedMachineColourant.colourant.colourantId}}\r\n                </div>\r\n              </div>\r\n\r\n              <div class=\"row form-group\">\r\n                <label class=\"col-md-4 label-control\">Component</label>\r\n                <div class=\"col-md-8\">\r\n                  {{selectedMachineColourant.colourant.colourantCode}}\r\n                </div>\r\n              </div>\r\n\r\n              <div class=\"row form-group\">\r\n                <label class=\"col-md-4 label-control\">Current</label>\r\n                <div class=\"col-md-8\">\r\n                  {{selectedMachineColourant.quantity / 1000}} L\r\n                </div>\r\n              </div>\r\n\r\n              <div class=\"row form-group\">\r\n                <label class=\"col-md-4 label-control\">Maximum</label>\r\n                <div class=\"col-md-8\">\r\n                  {{maxQuantity / 1000}} L\r\n                </div>\r\n              </div>\r\n\r\n              <div class=\"row form-group\">\r\n                <label class=\"col-md-4 label-control\">Minimum</label>\r\n                <div class=\"col-md-8\">\r\n                  {{minQuantity / 1000}} L\r\n                </div>\r\n              </div>\r\n\r\n              <div class=\"row form-group\">\r\n                <label class=\"col-md-4 label-control\">Density</label>\r\n                <div class=\"col-md-8\">\r\n                  {{selectedMachineColourant.colourant.density}} kg/L\r\n                </div>\r\n              </div>\r\n\r\n              <div class=\"row form-group\">\r\n                View Usage >>\r\n              </div>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n\r\n      <div class=\"modal-footer\">\r\n        <button type=\"button\" class=\"btn btn-success\" (click)=\"updateAndSaving('view-selected-colourant-machine-modal')\">Update</button>\r\n        <button type=\"button\" class=\"btn btn-default\" (click)=\"closeModal('view-selected-colourant-machine-modal')\">Cancel</button>\r\n      </div>\r\n    </div>\r\n  </pp-modal>\r\n</ng-container>\r\n"
+module.exports = "<div class=\"block-header\">\n  <h1>Machine Setting</h1>\n</div>\n\n<div class=\"row\" *ngIf=\"machine != null\">\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n    <div class=\"card\">\n      <div class=\"card-header\">\n        Colorant Machine {{ machine.name + '(' + machine.code + ')'}}\n\n        <ng-container *ngIf=\"! openSetting\">\n          <button class=\"close\" (click)=\"openSettingMachine()\"><i class=\"fas fa-sliders-h\"></i></button>\n        </ng-container>\n\n        <ng-container *ngIf=\"openSetting\">\n          <button class=\"close\" (click)=\"closeSettingMachine()\"><i class=\"fas fa-window-close\"></i></button>\n        </ng-container>\n      </div>\n\n      <div class=\"card-body\">\n        <div class=\"machine-colourant-group\" [attr.actionType]=\"openSetting ? 'open-setting': ''\">\n          <div class=\"machine-background\">\n            <ng-container *ngIf=\"openSetting == true\">\n              <div class=\"machine-background-setting\">\n                <mat-slider class=\"machine-range-slider\" [tickInterval]=\"100 / 20\" [max]=\"maxQuantity\" [min]=\"0\" [step]=\"50\" [(ngModel)]=\"warningQuantity\" [vertical]=\"true\" [thumbLabel]=\"true\" (change)=\"updateMachineDataSlider('warning')\"></mat-slider>\n                <mat-slider class=\"machine-range-slider\" [tickInterval]=\"100 / 20\" [max]=\"maxQuantity\" [min]=\"0\" [step]=\"50\" [(ngModel)]=\"minQuantity\" [vertical]=\"true\" [thumbLabel]=\"true\" (change)=\"updateMachineDataSlider('min')\"></mat-slider>\n              </div>\n            </ng-container>\n\n            <span class=\"machine-colourant-max-range\" [ngStyle]=\"{'height': '100%'}\"><span class=\"step-label\">{{maxQuantity}}</span></span>\n            <span class=\"machine-colourant-warning-range\" [ngStyle]=\"{'height': (warningQuantity / maxQuantity) * 100 + '%'}\"><span class=\"step-label\">{{warningQuantity}}</span></span>\n            <span class=\"machine-colourant-min-range\" [ngStyle]=\"{'height': (minQuantity / maxQuantity) * 100 + '%'}\"><span class=\"step-label\">{{minQuantity}}</span></span>\n            <span class=\"machine-colourant-zero-range\" [ngStyle]=\"{'height': '0%'}\"><span class=\"step-label\">0</span></span>\n          </div>\n\n          <ng-container *ngFor=\"let machineColourant of listMachineColourant\">\n            <div class=\"machine-colourant-item\" (click)=\"selectMachineColourant(machineColourant.colourant.colourantId)\">\n              <span *ngIf=\"selectedMachineColourant != null && selectedMachineColourant.colourant.colourantId == machineColourant.colourant.colourantId\" class=\"selected-colourant-bgr\"></span>\n              <span class=\"machine-colourant-bgr\">\n                <span class=\"machine-colourant-current-range\" [ngStyle]=\"{'height': (machineColourant.quantity / maxQuantity) * 100 + '%', 'background-color': machineColourant.colourant.rbgHex, 'border': '1px solid #' + machineColourant.colourant.rbgHex}\"></span>\n              </span>\n              <span class=\"colourant-name\">{{machineColourant.colourant.colourantName}}</span>\n              <span class=\"colourant-code\">{{machineColourant.colourant.colourantCode}}</span>\n            </div>\n          </ng-container>\n        </div>\n      </div>\n      <ng-container *ngIf=\"minQuantity != initMinQuantity || warningQuantity != initWarningQuantity\">\n        <div class=\"card-footer\">\n          <button class=\"btn btn-primary\" (click)=\"updateSettingMachine()\">Update</button>\n        </div>\n      </ng-container>\n    </div>\n  </div>\n</div>\n\n<ng-container *ngIf=\"errorType != null\">\n  <pp-modal id=\"warning-colourants-machine-modal\" class=\"modal warning-colourants-machine-modal\">\n    <div class=\"modal-content\" [attr.type]=\"errorType\" >\n      <div class=\"modal-header\">\n        <h5 class=\"modal-title\">{{errorType}}</h5>\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\" (click)=\"closeModal('warning-colourants-machine-modal')\">\n          <span aria-hidden=\"true\">×</span>\n        </button>\n      </div>\n\n      <div class=\"modal-body\">\n        {{errorMessage}}\n      </div>\n\n      <div class=\"modal-footer\">\n        <button type=\"button\" class=\"btn btn-primary\" (click)=\"closeModal('warning-colourants-machine-modal')\">Close</button>\n      </div>\n    </div>\n  </pp-modal>\n</ng-container>\n\n\n\n<ng-container *ngIf=\"selectedMachineColourant != null\">\n  <pp-modal id=\"view-selected-colourant-machine-modal\" class=\"modal machine-colourant-single-item\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <h5 class=\"modal-title\">Canister Refill</h5>\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\" (click)=\"closeModal('view-selected-colourant-machine-modal')\">\n          <span aria-hidden=\"true\">×</span>\n        </button>\n      </div>\n\n      <div class=\"modal-body\">\n        <div class=\"row\">\n          <div class=\"col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n            <div class=\"machine-colorant-slider-group\">\n              <mat-slider class=\"machine-colourant-slider\" [tickInterval]=\"maxQuantity / 20\" [max]=\"maxQuantity\" [min]=\"0\" [step]=\"1\" [(ngModel)]=\"updateAmount\" [vertical]=\"true\" [thumbLabel]=\"true\" (change)=\"updateAmountBySlider()\"></mat-slider>\n            </div>\n          </div>\n\n          <div class=\"col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n            <div class=\"machine-colourant-group\">\n              <div class=\"machine-background\">\n                <span class=\"machine-colourant-max-range\" [ngStyle]=\"{'height': '100%'}\"><span class=\"step-label\">{{maxQuantity}}</span></span>\n                <span class=\"machine-colourant-warning-range\" [ngStyle]=\"{'height': (minQuantity / maxQuantity) * 100 + '%'}\"><span class=\"step-label\">{{minQuantity}}</span></span>\n                <span class=\"machine-colourant-min-range\" [ngStyle]=\"{'height': '0%'}\"><span class=\"step-label\">0</span></span>\n              </div>\n              <div class=\"machine-colourant-item\">\n                <span class=\"machine-colourant-bgr\">\n                  <span class=\"machine-colourant-update-range\"  [ngStyle]=\"{'height': ((selectedMachineColourant.quantity + addedAmount) / maxQuantity) * 100 + '%', 'background-color': selectedMachineColourant.colourant.rbgHex, 'border': '1px solid #' + selectedMachineColourant.colourant.rbgHex}\"></span>\n                  <span class=\"machine-colourant-current-range\" [ngStyle]=\"{'height': (selectedMachineColourant.quantity / maxQuantity) * 100 + '%', 'background-color': selectedMachineColourant.colourant.rbgHex, 'border': '1px solid #' + selectedMachineColourant.colourant.rbgHex}\"></span>\n                </span>\n                <span class=\"colourant-name\">{{selectedMachineColourant.colourant.colourantName}}</span>\n                <span class=\"colourant-code\">{{selectedMachineColourant.colourant.colourantCode}}</span>\n              </div>\n            </div>\n          </div>\n\n          <div class=\"col-lg-8 col-md-8 col-sm-6 col-xs-6\">\n            <div class=\"machine-colourant-info form-detail\">\n              <div class=\"row form-group\">\n                <label class=\"col-md-4 label-control\">Amount:</label>\n                <div class=\"col-md-6\">\n                  <div class=\"input-group\">\n                    <!--<input type=\"number\" [(ngModel)]=\"addedAmount\" class=\"form-control\" required=\"required\" [ngModelOptions]=\"{standalone: true}\" (change)=\"updateAddedAmount('amount')\">-->\n                    <input type=\"number\" [(ngModel)]=\"addedAmount\" class=\"form-control\" required=\"required\" [ngModelOptions]=\"{standalone: true}\" (change)=\"updateAddedAmount('amount')\">\n                    <div class=\"input-group-append\">\n                      <span class=\"input-group-text\">ml</span>\n                    </div>\n                  </div>\n                </div>\n              </div>\n\n              <div class=\"row form-group\">\n                <label class=\"col-md-4 label-control\">\n\n                </label>\n                <div class=\"col-md-8\">\n                  <button class=\"btn btn-dark\" (click)=\"fillByPercent(100);\">Fill to 100%</button>\n                </div>\n              </div>\n\n              <div class=\"row form-group\">\n                <label class=\"col-md-4 label-control\">Canister</label>\n                <div class=\"col-md-8\">\n                  {{selectedMachineColourant.colourant.colourantId}}\n                </div>\n              </div>\n\n              <div class=\"row form-group\">\n                <label class=\"col-md-4 label-control\">Component</label>\n                <div class=\"col-md-8\">\n                  {{selectedMachineColourant.colourant.colourantCode}}\n                </div>\n              </div>\n\n              <div class=\"row form-group\">\n                <label class=\"col-md-4 label-control\">Current</label>\n                <div class=\"col-md-8\">\n                  {{selectedMachineColourant.quantity / 1000}} L\n                </div>\n              </div>\n\n              <div class=\"row form-group\">\n                <label class=\"col-md-4 label-control\">Maximum</label>\n                <div class=\"col-md-8\">\n                  {{maxQuantity / 1000}} L\n                </div>\n              </div>\n\n              <div class=\"row form-group\">\n                <label class=\"col-md-4 label-control\">Minimum</label>\n                <div class=\"col-md-8\">\n                  {{minQuantity / 1000}} L\n                </div>\n              </div>\n\n              <div class=\"row form-group\">\n                <label class=\"col-md-4 label-control\">Density</label>\n                <div class=\"col-md-8\">\n                  {{selectedMachineColourant.colourant.density}} kg/L\n                </div>\n              </div>\n\n              <!--<div class=\"row form-group\">-->\n                <!--View Usage >>-->\n              <!--</div>-->\n            </div>\n          </div>\n        </div>\n      </div>\n\n      <div class=\"modal-footer\">\n        <button type=\"button\" class=\"btn btn-success\" (click)=\"updateAndSaving('view-selected-colourant-machine-modal')\">Update</button>\n        <button type=\"button\" class=\"btn btn-default\" (click)=\"closeModal('view-selected-colourant-machine-modal')\">Cancel</button>\n      </div>\n    </div>\n  </pp-modal>\n</ng-container>\n"
 
 /***/ }),
 
@@ -2019,7 +2268,7 @@ module.exports = "<div class=\"block-header\">\r\n  <h1>Machine Setting</h1>\r\n
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".machine-colourant-group {\n  margin: 30px 20px 50px 70px;\n  position: relative;\n  display: flex; }\n  .machine-colourant-group[actiontype=\"open-setting\"] .machine-background {\n    left: -25px; }\n  .machine-colourant-group[actiontype=\"open-setting\"] .machine-background-setting {\n    position: absolute;\n    top: 0px;\n    left: -10px;\n    bottom: 0px; }\n  .machine-colourant-group[actiontype=\"open-setting\"] .machine-background-setting .machine-range-slider {\n      top: -8px;\n      bottom: -8px;\n      position: absolute; }\n  .machine-colourant-group[actiontype=\"open-setting\"] .machine-colourant-min-range .step-label,\n  .machine-colourant-group[actiontype=\"open-setting\"] .machine-colourant-warning-range .step-label {\n    opacity: 0.8; }\n  .machine-colourant-single-item .machine-colourant-group {\n  margin: 0px; }\n  .machine-colourant-single-item .machine-colourant-item {\n  min-width: 60px; }\n  .machine-colourant-single-item .machine-colourant-zero-range .step-label,\n.machine-colourant-single-item .machine-colourant-min-range .step-label,\n.machine-colourant-single-item .machine-colourant-warning-range .step-label,\n.machine-colourant-single-item .machine-colourant-max-range .step-label {\n  display: none; }\n  .machine-background {\n  position: absolute;\n  top: 0px;\n  left: 0px;\n  bottom: 0px;\n  right: 0px; }\n  .machine-background .machine-colourant-zero-range,\n  .machine-background .machine-colourant-min-range,\n  .machine-background .machine-colourant-warning-range,\n  .machine-background .machine-colourant-max-range {\n    width: 100%;\n    position: absolute;\n    left: 0px;\n    right: 0px;\n    bottom: 0px;\n    opacity: 0.5; }\n  .machine-background .machine-colourant-zero-range .step-label,\n    .machine-background .machine-colourant-min-range .step-label,\n    .machine-background .machine-colourant-warning-range .step-label,\n    .machine-background .machine-colourant-max-range .step-label {\n      position: absolute;\n      top: 0px;\n      left: -5px;\n      -webkit-transform: translate(-100%, -50%);\n      transform: translate(-100%, -50%); }\n  .machine-background .machine-colourant-zero-range {\n    border-top: 1px dashed #333333; }\n  .machine-background .machine-colourant-zero-range .step-label {\n      color: #333333; }\n  .machine-background .machine-colourant-warning-range {\n    border-top: 1px dashed darkorange; }\n  .machine-background .machine-colourant-warning-range .step-label {\n      color: darkorange; }\n  .machine-background .machine-colourant-min-range {\n    border-top: 1px dashed red; }\n  .machine-background .machine-colourant-min-range .step-label {\n      color: red; }\n  .machine-background .machine-colourant-max-range {\n    border-top: 1px dashed green; }\n  .machine-background .machine-colourant-max-range .step-label {\n      color: green; }\n  .machine-colorant-slider-group {\n  padding-left: 20px; }\n  .machine-colorant-slider-group .machine-colourant-slider {\n    height: 416px;\n    margin-top: -8px;\n    padding: 8px; }\n  .machine-colourant-item {\n  width: 6.25%;\n  display: inline-block;\n  height: 400px;\n  padding-left: 5px;\n  padding-right: 5px;\n  position: relative; }\n  .machine-colourant-item .machine-colourant-bgr {\n    position: absolute;\n    top: 0px;\n    bottom: 0px;\n    left: 15px;\n    right: 15px;\n    border: 1px solid #333333; }\n  .machine-colourant-item .machine-colourant-bgr .machine-colourant-update-range,\n    .machine-colourant-item .machine-colourant-bgr .machine-colourant-current-range {\n      position: absolute;\n      display: inline-block;\n      left: 0px;\n      right: 0px;\n      bottom: 0px;\n      border-top: 1px solid #000000; }\n  .machine-colourant-item .machine-colourant-bgr .machine-colourant-update-range {\n      opacity: 0.5; }\n  .machine-colourant-item .selected-colourant-bgr {\n    position: absolute;\n    outline: 2px solid #00417b;\n    top: -15px;\n    left: 0px;\n    right: 0px;\n    bottom: -15px; }\n  .machine-colourant-item .colourant-name {\n    position: absolute;\n    width: 100%;\n    display: inline-block;\n    -webkit-transform: rotate(-90deg);\n            transform: rotate(-90deg);\n    -webkit-transform-origin: left center;\n            transform-origin: left center;\n    left: 50%;\n    bottom: 0px;\n    white-space: nowrap; }\n  .machine-colourant-item .colourant-code {\n    font-weight: bold;\n    font-size: 120%;\n    position: absolute;\n    bottom: 0px;\n    left: 50%;\n    -webkit-transform: translate(-50%, 45px);\n            transform: translate(-50%, 45px); }\n  .warning-colourants-machine-modal .modal-content[type=\"Warning\"] .modal-header,\n.warning-colourants-machine-modal .modal-content[type=\"Warning\"] .modal-body {\n  color: darkorange; }\n  .warning-colourants-machine-modal .modal-content[type=\"Danger\"] .modal-header,\n.warning-colourants-machine-modal .modal-content[type=\"Danger\"] .modal-body {\n  color: red; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9tYWNoaW5lL21hY2hpbmVzZXR0aW5nL0Q6XFxXb3Jrc3BhY2VcXEhEQlNcXGNsaWVudHZpZXRwb3dlci9zcmNcXGFwcFxcY29tcG9uZW50c1xcbWFjaGluZVxcbWFjaGluZXNldHRpbmdcXG1hY2hpbmVzZXR0aW5nLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsNEJBQTJCO0VBQzNCLG1CQUFrQjtFQUNsQixjQUFhLEVBMkJkO0VBOUJEO0lBT00sWUFBVyxFQUNaO0VBUkw7SUFXTSxtQkFBa0I7SUFDbEIsU0FBUTtJQUNSLFlBQVc7SUFDWCxZQUFXLEVBT1o7RUFyQkw7TUFpQlEsVUFBUztNQUNULGFBQVk7TUFDWixtQkFBa0IsRUFDbkI7RUFwQlA7O0lBMEJRLGFBQVksRUFDYjtFQU1QO0VBRUksWUFBVyxFQUNaO0VBSEg7RUFNSSxnQkFBZSxFQUNoQjtFQVBIOzs7O0VBY00sY0FBYSxFQUNkO0VBSUw7RUFDRSxtQkFBa0I7RUFDbEIsU0FBUTtFQUNSLFVBQVM7RUFDVCxZQUFXO0VBQ1gsV0FBVSxFQW9EWDtFQXpERDs7OztJQVdJLFlBQVc7SUFDWCxtQkFBa0I7SUFDbEIsVUFBUztJQUNULFdBQVU7SUFDVixZQUFXO0lBQ1gsYUFBWSxFQVliO0VBNUJIOzs7O01BbUJNLG1CQUFrQjtNQUNsQixTQUFRO01BQ1IsV0FBVTtNQUNWLDBDQUF5QztNQUl6QyxrQ0FBaUMsRUFDbEM7RUEzQkw7SUErQkksK0JBQThCLEVBSS9CO0VBbkNIO01BaUNNLGVBQWMsRUFDZjtFQWxDTDtJQXNDSSxrQ0FBaUMsRUFJbEM7RUExQ0g7TUF3Q00sa0JBQWlCLEVBQ2xCO0VBekNMO0lBNkNJLDJCQUEwQixFQUkzQjtFQWpESDtNQStDTSxXQUFVLEVBQ1g7RUFoREw7SUFvREksNkJBQTRCLEVBSTdCO0VBeERIO01Bc0RNLGFBQVksRUFDYjtFQUlMO0VBQ0UsbUJBQWtCLEVBUW5CO0VBVEQ7SUFLSSxjQUFtQztJQUNuQyxpQkFBaUM7SUFDakMsYUFKbUIsRUFLcEI7RUFHSDtFQUNFLGFBQXlCO0VBQ3pCLHNCQUFxQjtFQUNyQixjQUFhO0VBQ2Isa0JBQWlCO0VBQ2pCLG1CQUFrQjtFQUNsQixtQkFBa0IsRUFnRW5CO0VBdEVEO0lBU0ksbUJBQWtCO0lBQ2xCLFNBQVE7SUFDUixZQUFXO0lBQ1gsV0FBVTtJQUNWLFlBQVc7SUFDWCwwQkFBeUIsRUEwQjFCO0VBeENIOztNQTZCTSxtQkFBa0I7TUFDbEIsc0JBQXFCO01BQ3JCLFVBQVM7TUFDVCxXQUFVO01BQ1YsWUFBVztNQUNYLDhCQUE2QixFQUM5QjtFQW5DTDtNQXNDTSxhQUFZLEVBQ2I7RUF2Q0w7SUEyQ0ksbUJBQWtCO0lBQ2xCLDJCQUEwQjtJQUMxQixXQUFVO0lBQ1YsVUFBUztJQUNULFdBQVU7SUFDVixjQUFhLEVBQ2Q7RUFqREg7SUFvREksbUJBQWtCO0lBQ2xCLFlBQVc7SUFDWCxzQkFBcUI7SUFDckIsa0NBQXlCO1lBQXpCLDBCQUF5QjtJQUN6QixzQ0FBNkI7WUFBN0IsOEJBQTZCO0lBQzdCLFVBQVM7SUFDVCxZQUFXO0lBQ1gsb0JBQW1CLEVBQ3BCO0VBNURIO0lBK0RJLGtCQUFpQjtJQUNqQixnQkFBZTtJQUNmLG1CQUFrQjtJQUNsQixZQUFXO0lBQ1gsVUFBUztJQUNULHlDQUFnQztZQUFoQyxpQ0FBZ0MsRUFDakM7RUFHSDs7RUFLUSxrQkFBaUIsRUFDbEI7RUFOUDs7RUFZUSxXQUFVLEVBQ1giLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL21hY2hpbmUvbWFjaGluZXNldHRpbmcvbWFjaGluZXNldHRpbmcuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubWFjaGluZS1jb2xvdXJhbnQtZ3JvdXB7XHJcbiAgbWFyZ2luOiAzMHB4IDIwcHggNTBweCA3MHB4O1xyXG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuICBkaXNwbGF5OiBmbGV4O1xyXG5cclxuICAmW2FjdGlvbnR5cGU9XCJvcGVuLXNldHRpbmdcIl17XHJcbiAgICAubWFjaGluZS1iYWNrZ3JvdW5ke1xyXG4gICAgICBsZWZ0OiAtMjVweDtcclxuICAgIH1cclxuXHJcbiAgICAubWFjaGluZS1iYWNrZ3JvdW5kLXNldHRpbmd7XHJcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgICAgdG9wOiAwcHg7XHJcbiAgICAgIGxlZnQ6IC0xMHB4O1xyXG4gICAgICBib3R0b206IDBweDtcclxuXHJcbiAgICAgIC5tYWNoaW5lLXJhbmdlLXNsaWRlcntcclxuICAgICAgICB0b3A6IC04cHg7XHJcbiAgICAgICAgYm90dG9tOiAtOHB4O1xyXG4gICAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgICAgfVxyXG4gICAgfVxyXG5cclxuICAgIC5tYWNoaW5lLWNvbG91cmFudC1taW4tcmFuZ2UsXHJcbiAgICAubWFjaGluZS1jb2xvdXJhbnQtd2FybmluZy1yYW5nZXtcclxuICAgICAgLnN0ZXAtbGFiZWx7XHJcbiAgICAgICAgb3BhY2l0eTogMC44O1xyXG4gICAgICB9XHJcbiAgICB9XHJcbiAgfVxyXG59XHJcblxyXG5cclxuLm1hY2hpbmUtY29sb3VyYW50LXNpbmdsZS1pdGVte1xyXG4gIC5tYWNoaW5lLWNvbG91cmFudC1ncm91cHtcclxuICAgIG1hcmdpbjogMHB4O1xyXG4gIH1cclxuXHJcbiAgLm1hY2hpbmUtY29sb3VyYW50LWl0ZW17XHJcbiAgICBtaW4td2lkdGg6IDYwcHg7XHJcbiAgfVxyXG5cclxuICAubWFjaGluZS1jb2xvdXJhbnQtemVyby1yYW5nZSxcclxuICAubWFjaGluZS1jb2xvdXJhbnQtbWluLXJhbmdlLFxyXG4gIC5tYWNoaW5lLWNvbG91cmFudC13YXJuaW5nLXJhbmdlLFxyXG4gIC5tYWNoaW5lLWNvbG91cmFudC1tYXgtcmFuZ2V7XHJcbiAgICAuc3RlcC1sYWJlbHtcclxuICAgICAgZGlzcGxheTogbm9uZTtcclxuICAgIH1cclxuICB9XHJcbn1cclxuXHJcbi5tYWNoaW5lLWJhY2tncm91bmR7XHJcbiAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gIHRvcDogMHB4O1xyXG4gIGxlZnQ6IDBweDtcclxuICBib3R0b206IDBweDtcclxuICByaWdodDogMHB4O1xyXG5cclxuICAubWFjaGluZS1jb2xvdXJhbnQtemVyby1yYW5nZSxcclxuICAubWFjaGluZS1jb2xvdXJhbnQtbWluLXJhbmdlLFxyXG4gIC5tYWNoaW5lLWNvbG91cmFudC13YXJuaW5nLXJhbmdlLFxyXG4gIC5tYWNoaW5lLWNvbG91cmFudC1tYXgtcmFuZ2V7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgIGxlZnQ6IDBweDtcclxuICAgIHJpZ2h0OiAwcHg7XHJcbiAgICBib3R0b206IDBweDtcclxuICAgIG9wYWNpdHk6IDAuNTtcclxuXHJcbiAgICAuc3RlcC1sYWJlbHtcclxuICAgICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgICB0b3A6IDBweDtcclxuICAgICAgbGVmdDogLTVweDtcclxuICAgICAgLXdlYmtpdC10cmFuc2Zvcm06IHRyYW5zbGF0ZSgtMTAwJSwgLTUwJSk7XHJcbiAgICAgIC1tb3otdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTEwMCUsIC01MCUpO1xyXG4gICAgICAtbXMtdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTEwMCUsIC01MCUpO1xyXG4gICAgICAtby10cmFuc2Zvcm06IHRyYW5zbGF0ZSgtMTAwJSwgLTUwJSk7XHJcbiAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC0xMDAlLCAtNTAlKTtcclxuICAgIH1cclxuICB9XHJcblxyXG4gIC5tYWNoaW5lLWNvbG91cmFudC16ZXJvLXJhbmdle1xyXG4gICAgYm9yZGVyLXRvcDogMXB4IGRhc2hlZCAjMzMzMzMzO1xyXG4gICAgLnN0ZXAtbGFiZWx7XHJcbiAgICAgIGNvbG9yOiAjMzMzMzMzO1xyXG4gICAgfVxyXG4gIH1cclxuXHJcbiAgLm1hY2hpbmUtY29sb3VyYW50LXdhcm5pbmctcmFuZ2V7XHJcbiAgICBib3JkZXItdG9wOiAxcHggZGFzaGVkIGRhcmtvcmFuZ2U7XHJcbiAgICAuc3RlcC1sYWJlbHtcclxuICAgICAgY29sb3I6IGRhcmtvcmFuZ2U7XHJcbiAgICB9XHJcbiAgfVxyXG5cclxuICAubWFjaGluZS1jb2xvdXJhbnQtbWluLXJhbmdle1xyXG4gICAgYm9yZGVyLXRvcDogMXB4IGRhc2hlZCByZWQ7XHJcbiAgICAuc3RlcC1sYWJlbHtcclxuICAgICAgY29sb3I6IHJlZDtcclxuICAgIH1cclxuICB9XHJcblxyXG4gIC5tYWNoaW5lLWNvbG91cmFudC1tYXgtcmFuZ2V7XHJcbiAgICBib3JkZXItdG9wOiAxcHggZGFzaGVkIGdyZWVuO1xyXG4gICAgLnN0ZXAtbGFiZWx7XHJcbiAgICAgIGNvbG9yOiBncmVlbjtcclxuICAgIH1cclxuICB9XHJcbn1cclxuXHJcbi5tYWNoaW5lLWNvbG9yYW50LXNsaWRlci1ncm91cHtcclxuICBwYWRkaW5nLWxlZnQ6IDIwcHg7XHJcblxyXG4gICRzbGlkZXJfcGFkZGluZyA6IDhweDtcclxuICAubWFjaGluZS1jb2xvdXJhbnQtc2xpZGVye1xyXG4gICAgaGVpZ2h0OiA0MDBweCArICRzbGlkZXJfcGFkZGluZyAqIDI7XHJcbiAgICBtYXJnaW4tdG9wOiAwcHggLSAkc2xpZGVyX3BhZGRpbmc7XHJcbiAgICBwYWRkaW5nOiAkc2xpZGVyX3BhZGRpbmc7XHJcbiAgfVxyXG59XHJcblxyXG4ubWFjaGluZS1jb2xvdXJhbnQtaXRlbXtcclxuICB3aWR0aDogcGVyY2VudGFnZSgxIC8gMTYpO1xyXG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcclxuICBoZWlnaHQ6IDQwMHB4O1xyXG4gIHBhZGRpbmctbGVmdDogNXB4O1xyXG4gIHBhZGRpbmctcmlnaHQ6IDVweDtcclxuICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcblxyXG4gIC5tYWNoaW5lLWNvbG91cmFudC1iZ3J7XHJcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICB0b3A6IDBweDtcclxuICAgIGJvdHRvbTogMHB4O1xyXG4gICAgbGVmdDogMTVweDtcclxuICAgIHJpZ2h0OiAxNXB4O1xyXG4gICAgYm9yZGVyOiAxcHggc29saWQgIzMzMzMzMztcclxuXHJcbiAgICAmOmFmdGVye1xyXG4gICAgICAvL2NvbnRlbnQ6IFwiXCI7XHJcbiAgICAgIC8vZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG4gICAgICAvL3Bvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgICAgLy90b3A6IDBweDtcclxuICAgICAgLy9sZWZ0OiAwcHg7XHJcbiAgICAgIC8vcmlnaHQ6IDBweDtcclxuICAgICAgLy9ib3R0b206IDBweDtcclxuICAgICAgLy9iYWNrZ3JvdW5kLWltYWdlOiBsaW5lYXItZ3JhZGllbnQodG8gcmlnaHQsIHJnYmEoMjU1LCAyNTUsIDI1NSwgMC4wKSwgcmdiYSgyMDQsIDIwNCwgMjA0LCAwLjIpLCAgcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjEpLCByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMDUpLCByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMCkpO1xyXG4gICAgfVxyXG5cclxuICAgIC5tYWNoaW5lLWNvbG91cmFudC11cGRhdGUtcmFuZ2UsXHJcbiAgICAubWFjaGluZS1jb2xvdXJhbnQtY3VycmVudC1yYW5nZSB7XHJcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG4gICAgICBsZWZ0OiAwcHg7XHJcbiAgICAgIHJpZ2h0OiAwcHg7XHJcbiAgICAgIGJvdHRvbTogMHB4O1xyXG4gICAgICBib3JkZXItdG9wOiAxcHggc29saWQgIzAwMDAwMDtcclxuICAgIH1cclxuXHJcbiAgICAubWFjaGluZS1jb2xvdXJhbnQtdXBkYXRlLXJhbmdle1xyXG4gICAgICBvcGFjaXR5OiAwLjU7XHJcbiAgICB9XHJcbiAgfVxyXG5cclxuICAuc2VsZWN0ZWQtY29sb3VyYW50LWJncntcclxuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgIG91dGxpbmU6IDJweCBzb2xpZCAjMDA0MTdiO1xyXG4gICAgdG9wOiAtMTVweDtcclxuICAgIGxlZnQ6IDBweDtcclxuICAgIHJpZ2h0OiAwcHg7XHJcbiAgICBib3R0b206IC0xNXB4O1xyXG4gIH1cclxuXHJcbiAgLmNvbG91cmFudC1uYW1le1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XHJcbiAgICB0cmFuc2Zvcm06IHJvdGF0ZSgtOTBkZWcpO1xyXG4gICAgdHJhbnNmb3JtLW9yaWdpbjogbGVmdCBjZW50ZXI7XHJcbiAgICBsZWZ0OiA1MCU7XHJcbiAgICBib3R0b206IDBweDtcclxuICAgIHdoaXRlLXNwYWNlOiBub3dyYXA7XHJcbiAgfVxyXG5cclxuICAuY29sb3VyYW50LWNvZGUge1xyXG4gICAgZm9udC13ZWlnaHQ6IGJvbGQ7XHJcbiAgICBmb250LXNpemU6IDEyMCU7XHJcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICBib3R0b206IDBweDtcclxuICAgIGxlZnQ6IDUwJTtcclxuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIDQ1cHgpO1xyXG4gIH1cclxufVxyXG5cclxuLndhcm5pbmctY29sb3VyYW50cy1tYWNoaW5lLW1vZGFse1xyXG4gIC5tb2RhbC1jb250ZW50e1xyXG4gICAgJlt0eXBlPVwiV2FybmluZ1wiXXtcclxuICAgICAgLm1vZGFsLWhlYWRlcixcclxuICAgICAgLm1vZGFsLWJvZHl7XHJcbiAgICAgICAgY29sb3I6IGRhcmtvcmFuZ2U7XHJcbiAgICAgIH1cclxuICAgIH1cclxuXHJcbiAgICAmW3R5cGU9XCJEYW5nZXJcIl17XHJcbiAgICAgIC5tb2RhbC1oZWFkZXIsXHJcbiAgICAgIC5tb2RhbC1ib2R5e1xyXG4gICAgICAgIGNvbG9yOiByZWQ7XHJcbiAgICAgIH1cclxuICAgIH1cclxuICB9XHJcblxyXG59XHJcbiJdfQ== */"
+module.exports = ".machine-colourant-group {\n  margin: 30px 20px 50px 70px;\n  position: relative;\n  display: flex; }\n  .machine-colourant-group[actiontype=\"open-setting\"] .machine-background {\n    left: -25px; }\n  .machine-colourant-group[actiontype=\"open-setting\"] .machine-background-setting {\n    position: absolute;\n    top: 0px;\n    left: -10px;\n    bottom: 0px; }\n  .machine-colourant-group[actiontype=\"open-setting\"] .machine-background-setting .machine-range-slider {\n      top: -8px;\n      bottom: -8px;\n      position: absolute; }\n  .machine-colourant-group[actiontype=\"open-setting\"] .machine-colourant-min-range .step-label,\n  .machine-colourant-group[actiontype=\"open-setting\"] .machine-colourant-warning-range .step-label {\n    opacity: 0.8; }\n  .machine-colourant-single-item .machine-colourant-group {\n  margin: 0px; }\n  .machine-colourant-single-item .machine-colourant-item {\n  min-width: 60px; }\n  .machine-colourant-single-item .machine-colourant-zero-range .step-label,\n.machine-colourant-single-item .machine-colourant-min-range .step-label,\n.machine-colourant-single-item .machine-colourant-warning-range .step-label,\n.machine-colourant-single-item .machine-colourant-max-range .step-label {\n  display: none; }\n  .machine-background {\n  position: absolute;\n  top: 0px;\n  left: 0px;\n  bottom: 0px;\n  right: 0px; }\n  .machine-background .machine-colourant-zero-range,\n  .machine-background .machine-colourant-min-range,\n  .machine-background .machine-colourant-warning-range,\n  .machine-background .machine-colourant-max-range {\n    width: 100%;\n    position: absolute;\n    left: 0px;\n    right: 0px;\n    bottom: 0px;\n    opacity: 0.5; }\n  .machine-background .machine-colourant-zero-range .step-label,\n    .machine-background .machine-colourant-min-range .step-label,\n    .machine-background .machine-colourant-warning-range .step-label,\n    .machine-background .machine-colourant-max-range .step-label {\n      position: absolute;\n      top: 0px;\n      left: -5px;\n      -webkit-transform: translate(-100%, -50%);\n      transform: translate(-100%, -50%); }\n  .machine-background .machine-colourant-zero-range {\n    border-top: 1px dashed #333333; }\n  .machine-background .machine-colourant-zero-range .step-label {\n      color: #333333; }\n  .machine-background .machine-colourant-warning-range {\n    border-top: 1px dashed darkorange; }\n  .machine-background .machine-colourant-warning-range .step-label {\n      color: darkorange; }\n  .machine-background .machine-colourant-min-range {\n    border-top: 1px dashed red; }\n  .machine-background .machine-colourant-min-range .step-label {\n      color: red; }\n  .machine-background .machine-colourant-max-range {\n    border-top: 1px dashed green; }\n  .machine-background .machine-colourant-max-range .step-label {\n      color: green; }\n  .machine-colorant-slider-group {\n  padding-left: 20px; }\n  .machine-colorant-slider-group .machine-colourant-slider {\n    height: 416px;\n    margin-top: -8px;\n    padding: 8px; }\n  .machine-colourant-item {\n  width: 6.25%;\n  display: inline-block;\n  height: 400px;\n  padding-left: 5px;\n  padding-right: 5px;\n  position: relative; }\n  .machine-colourant-item .machine-colourant-bgr {\n    position: absolute;\n    top: 0px;\n    bottom: 0px;\n    left: 15px;\n    right: 15px;\n    border: 1px solid #333333; }\n  .machine-colourant-item .machine-colourant-bgr .machine-colourant-update-range,\n    .machine-colourant-item .machine-colourant-bgr .machine-colourant-current-range {\n      position: absolute;\n      display: inline-block;\n      left: 0px;\n      right: 0px;\n      bottom: 0px;\n      border-top: 1px solid #000000; }\n  .machine-colourant-item .machine-colourant-bgr .machine-colourant-update-range {\n      opacity: 0.5; }\n  .machine-colourant-item .selected-colourant-bgr {\n    position: absolute;\n    outline: 2px solid #00417b;\n    top: -15px;\n    left: 0px;\n    right: 0px;\n    bottom: -15px; }\n  .machine-colourant-item .colourant-name {\n    position: absolute;\n    width: 100%;\n    display: inline-block;\n    -webkit-transform: rotate(-90deg);\n            transform: rotate(-90deg);\n    -webkit-transform-origin: left center;\n            transform-origin: left center;\n    left: 50%;\n    bottom: 0px;\n    white-space: nowrap; }\n  .machine-colourant-item .colourant-code {\n    font-weight: bold;\n    font-size: 120%;\n    position: absolute;\n    bottom: 0px;\n    left: 50%;\n    -webkit-transform: translate(-50%, 45px);\n            transform: translate(-50%, 45px); }\n  .warning-colourants-machine-modal .modal-content[type=\"Warning\"] .modal-header,\n.warning-colourants-machine-modal .modal-content[type=\"Warning\"] .modal-body {\n  color: darkorange; }\n  .warning-colourants-machine-modal .modal-content[type=\"Danger\"] .modal-header,\n.warning-colourants-machine-modal .modal-content[type=\"Danger\"] .modal-body {\n  color: red; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9tYWNoaW5lL21hY2hpbmVzZXR0aW5nL0c6XFxXb3Jrc3BhY2VcXGNsaWVudHZpZXRwb3dlci9zcmNcXGFwcFxcY29tcG9uZW50c1xcbWFjaGluZVxcbWFjaGluZXNldHRpbmdcXG1hY2hpbmVzZXR0aW5nLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsNEJBQTJCO0VBQzNCLG1CQUFrQjtFQUNsQixjQUFhLEVBMkJkO0VBOUJEO0lBT00sWUFBVyxFQUNaO0VBUkw7SUFXTSxtQkFBa0I7SUFDbEIsU0FBUTtJQUNSLFlBQVc7SUFDWCxZQUFXLEVBT1o7RUFyQkw7TUFpQlEsVUFBUztNQUNULGFBQVk7TUFDWixtQkFBa0IsRUFDbkI7RUFwQlA7O0lBMEJRLGFBQVksRUFDYjtFQU1QO0VBRUksWUFBVyxFQUNaO0VBSEg7RUFNSSxnQkFBZSxFQUNoQjtFQVBIOzs7O0VBY00sY0FBYSxFQUNkO0VBSUw7RUFDRSxtQkFBa0I7RUFDbEIsU0FBUTtFQUNSLFVBQVM7RUFDVCxZQUFXO0VBQ1gsV0FBVSxFQW9EWDtFQXpERDs7OztJQVdJLFlBQVc7SUFDWCxtQkFBa0I7SUFDbEIsVUFBUztJQUNULFdBQVU7SUFDVixZQUFXO0lBQ1gsYUFBWSxFQVliO0VBNUJIOzs7O01BbUJNLG1CQUFrQjtNQUNsQixTQUFRO01BQ1IsV0FBVTtNQUNWLDBDQUF5QztNQUl6QyxrQ0FBaUMsRUFDbEM7RUEzQkw7SUErQkksK0JBQThCLEVBSS9CO0VBbkNIO01BaUNNLGVBQWMsRUFDZjtFQWxDTDtJQXNDSSxrQ0FBaUMsRUFJbEM7RUExQ0g7TUF3Q00sa0JBQWlCLEVBQ2xCO0VBekNMO0lBNkNJLDJCQUEwQixFQUkzQjtFQWpESDtNQStDTSxXQUFVLEVBQ1g7RUFoREw7SUFvREksNkJBQTRCLEVBSTdCO0VBeERIO01Bc0RNLGFBQVksRUFDYjtFQUlMO0VBQ0UsbUJBQWtCLEVBUW5CO0VBVEQ7SUFLSSxjQUFtQztJQUNuQyxpQkFBaUM7SUFDakMsYUFKbUIsRUFLcEI7RUFHSDtFQUNFLGFBQXlCO0VBQ3pCLHNCQUFxQjtFQUNyQixjQUFhO0VBQ2Isa0JBQWlCO0VBQ2pCLG1CQUFrQjtFQUNsQixtQkFBa0IsRUFnRW5CO0VBdEVEO0lBU0ksbUJBQWtCO0lBQ2xCLFNBQVE7SUFDUixZQUFXO0lBQ1gsV0FBVTtJQUNWLFlBQVc7SUFDWCwwQkFBeUIsRUEwQjFCO0VBeENIOztNQTZCTSxtQkFBa0I7TUFDbEIsc0JBQXFCO01BQ3JCLFVBQVM7TUFDVCxXQUFVO01BQ1YsWUFBVztNQUNYLDhCQUE2QixFQUM5QjtFQW5DTDtNQXNDTSxhQUFZLEVBQ2I7RUF2Q0w7SUEyQ0ksbUJBQWtCO0lBQ2xCLDJCQUEwQjtJQUMxQixXQUFVO0lBQ1YsVUFBUztJQUNULFdBQVU7SUFDVixjQUFhLEVBQ2Q7RUFqREg7SUFvREksbUJBQWtCO0lBQ2xCLFlBQVc7SUFDWCxzQkFBcUI7SUFDckIsa0NBQXlCO1lBQXpCLDBCQUF5QjtJQUN6QixzQ0FBNkI7WUFBN0IsOEJBQTZCO0lBQzdCLFVBQVM7SUFDVCxZQUFXO0lBQ1gsb0JBQW1CLEVBQ3BCO0VBNURIO0lBK0RJLGtCQUFpQjtJQUNqQixnQkFBZTtJQUNmLG1CQUFrQjtJQUNsQixZQUFXO0lBQ1gsVUFBUztJQUNULHlDQUFnQztZQUFoQyxpQ0FBZ0MsRUFDakM7RUFHSDs7RUFLUSxrQkFBaUIsRUFDbEI7RUFOUDs7RUFZUSxXQUFVLEVBQ1giLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL21hY2hpbmUvbWFjaGluZXNldHRpbmcvbWFjaGluZXNldHRpbmcuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubWFjaGluZS1jb2xvdXJhbnQtZ3JvdXB7XHJcbiAgbWFyZ2luOiAzMHB4IDIwcHggNTBweCA3MHB4O1xyXG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuICBkaXNwbGF5OiBmbGV4O1xyXG5cclxuICAmW2FjdGlvbnR5cGU9XCJvcGVuLXNldHRpbmdcIl17XHJcbiAgICAubWFjaGluZS1iYWNrZ3JvdW5ke1xyXG4gICAgICBsZWZ0OiAtMjVweDtcclxuICAgIH1cclxuXHJcbiAgICAubWFjaGluZS1iYWNrZ3JvdW5kLXNldHRpbmd7XHJcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgICAgdG9wOiAwcHg7XHJcbiAgICAgIGxlZnQ6IC0xMHB4O1xyXG4gICAgICBib3R0b206IDBweDtcclxuXHJcbiAgICAgIC5tYWNoaW5lLXJhbmdlLXNsaWRlcntcclxuICAgICAgICB0b3A6IC04cHg7XHJcbiAgICAgICAgYm90dG9tOiAtOHB4O1xyXG4gICAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgICAgfVxyXG4gICAgfVxyXG5cclxuICAgIC5tYWNoaW5lLWNvbG91cmFudC1taW4tcmFuZ2UsXHJcbiAgICAubWFjaGluZS1jb2xvdXJhbnQtd2FybmluZy1yYW5nZXtcclxuICAgICAgLnN0ZXAtbGFiZWx7XHJcbiAgICAgICAgb3BhY2l0eTogMC44O1xyXG4gICAgICB9XHJcbiAgICB9XHJcbiAgfVxyXG59XHJcblxyXG5cclxuLm1hY2hpbmUtY29sb3VyYW50LXNpbmdsZS1pdGVte1xyXG4gIC5tYWNoaW5lLWNvbG91cmFudC1ncm91cHtcclxuICAgIG1hcmdpbjogMHB4O1xyXG4gIH1cclxuXHJcbiAgLm1hY2hpbmUtY29sb3VyYW50LWl0ZW17XHJcbiAgICBtaW4td2lkdGg6IDYwcHg7XHJcbiAgfVxyXG5cclxuICAubWFjaGluZS1jb2xvdXJhbnQtemVyby1yYW5nZSxcclxuICAubWFjaGluZS1jb2xvdXJhbnQtbWluLXJhbmdlLFxyXG4gIC5tYWNoaW5lLWNvbG91cmFudC13YXJuaW5nLXJhbmdlLFxyXG4gIC5tYWNoaW5lLWNvbG91cmFudC1tYXgtcmFuZ2V7XHJcbiAgICAuc3RlcC1sYWJlbHtcclxuICAgICAgZGlzcGxheTogbm9uZTtcclxuICAgIH1cclxuICB9XHJcbn1cclxuXHJcbi5tYWNoaW5lLWJhY2tncm91bmR7XHJcbiAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gIHRvcDogMHB4O1xyXG4gIGxlZnQ6IDBweDtcclxuICBib3R0b206IDBweDtcclxuICByaWdodDogMHB4O1xyXG5cclxuICAubWFjaGluZS1jb2xvdXJhbnQtemVyby1yYW5nZSxcclxuICAubWFjaGluZS1jb2xvdXJhbnQtbWluLXJhbmdlLFxyXG4gIC5tYWNoaW5lLWNvbG91cmFudC13YXJuaW5nLXJhbmdlLFxyXG4gIC5tYWNoaW5lLWNvbG91cmFudC1tYXgtcmFuZ2V7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgIGxlZnQ6IDBweDtcclxuICAgIHJpZ2h0OiAwcHg7XHJcbiAgICBib3R0b206IDBweDtcclxuICAgIG9wYWNpdHk6IDAuNTtcclxuXHJcbiAgICAuc3RlcC1sYWJlbHtcclxuICAgICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgICB0b3A6IDBweDtcclxuICAgICAgbGVmdDogLTVweDtcclxuICAgICAgLXdlYmtpdC10cmFuc2Zvcm06IHRyYW5zbGF0ZSgtMTAwJSwgLTUwJSk7XHJcbiAgICAgIC1tb3otdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTEwMCUsIC01MCUpO1xyXG4gICAgICAtbXMtdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTEwMCUsIC01MCUpO1xyXG4gICAgICAtby10cmFuc2Zvcm06IHRyYW5zbGF0ZSgtMTAwJSwgLTUwJSk7XHJcbiAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC0xMDAlLCAtNTAlKTtcclxuICAgIH1cclxuICB9XHJcblxyXG4gIC5tYWNoaW5lLWNvbG91cmFudC16ZXJvLXJhbmdle1xyXG4gICAgYm9yZGVyLXRvcDogMXB4IGRhc2hlZCAjMzMzMzMzO1xyXG4gICAgLnN0ZXAtbGFiZWx7XHJcbiAgICAgIGNvbG9yOiAjMzMzMzMzO1xyXG4gICAgfVxyXG4gIH1cclxuXHJcbiAgLm1hY2hpbmUtY29sb3VyYW50LXdhcm5pbmctcmFuZ2V7XHJcbiAgICBib3JkZXItdG9wOiAxcHggZGFzaGVkIGRhcmtvcmFuZ2U7XHJcbiAgICAuc3RlcC1sYWJlbHtcclxuICAgICAgY29sb3I6IGRhcmtvcmFuZ2U7XHJcbiAgICB9XHJcbiAgfVxyXG5cclxuICAubWFjaGluZS1jb2xvdXJhbnQtbWluLXJhbmdle1xyXG4gICAgYm9yZGVyLXRvcDogMXB4IGRhc2hlZCByZWQ7XHJcbiAgICAuc3RlcC1sYWJlbHtcclxuICAgICAgY29sb3I6IHJlZDtcclxuICAgIH1cclxuICB9XHJcblxyXG4gIC5tYWNoaW5lLWNvbG91cmFudC1tYXgtcmFuZ2V7XHJcbiAgICBib3JkZXItdG9wOiAxcHggZGFzaGVkIGdyZWVuO1xyXG4gICAgLnN0ZXAtbGFiZWx7XHJcbiAgICAgIGNvbG9yOiBncmVlbjtcclxuICAgIH1cclxuICB9XHJcbn1cclxuXHJcbi5tYWNoaW5lLWNvbG9yYW50LXNsaWRlci1ncm91cHtcclxuICBwYWRkaW5nLWxlZnQ6IDIwcHg7XHJcblxyXG4gICRzbGlkZXJfcGFkZGluZyA6IDhweDtcclxuICAubWFjaGluZS1jb2xvdXJhbnQtc2xpZGVye1xyXG4gICAgaGVpZ2h0OiA0MDBweCArICRzbGlkZXJfcGFkZGluZyAqIDI7XHJcbiAgICBtYXJnaW4tdG9wOiAwcHggLSAkc2xpZGVyX3BhZGRpbmc7XHJcbiAgICBwYWRkaW5nOiAkc2xpZGVyX3BhZGRpbmc7XHJcbiAgfVxyXG59XHJcblxyXG4ubWFjaGluZS1jb2xvdXJhbnQtaXRlbXtcclxuICB3aWR0aDogcGVyY2VudGFnZSgxIC8gMTYpO1xyXG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcclxuICBoZWlnaHQ6IDQwMHB4O1xyXG4gIHBhZGRpbmctbGVmdDogNXB4O1xyXG4gIHBhZGRpbmctcmlnaHQ6IDVweDtcclxuICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcblxyXG4gIC5tYWNoaW5lLWNvbG91cmFudC1iZ3J7XHJcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICB0b3A6IDBweDtcclxuICAgIGJvdHRvbTogMHB4O1xyXG4gICAgbGVmdDogMTVweDtcclxuICAgIHJpZ2h0OiAxNXB4O1xyXG4gICAgYm9yZGVyOiAxcHggc29saWQgIzMzMzMzMztcclxuXHJcbiAgICAmOmFmdGVye1xyXG4gICAgICAvL2NvbnRlbnQ6IFwiXCI7XHJcbiAgICAgIC8vZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG4gICAgICAvL3Bvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgICAgLy90b3A6IDBweDtcclxuICAgICAgLy9sZWZ0OiAwcHg7XHJcbiAgICAgIC8vcmlnaHQ6IDBweDtcclxuICAgICAgLy9ib3R0b206IDBweDtcclxuICAgICAgLy9iYWNrZ3JvdW5kLWltYWdlOiBsaW5lYXItZ3JhZGllbnQodG8gcmlnaHQsIHJnYmEoMjU1LCAyNTUsIDI1NSwgMC4wKSwgcmdiYSgyMDQsIDIwNCwgMjA0LCAwLjIpLCAgcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjEpLCByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMDUpLCByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMCkpO1xyXG4gICAgfVxyXG5cclxuICAgIC5tYWNoaW5lLWNvbG91cmFudC11cGRhdGUtcmFuZ2UsXHJcbiAgICAubWFjaGluZS1jb2xvdXJhbnQtY3VycmVudC1yYW5nZSB7XHJcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG4gICAgICBsZWZ0OiAwcHg7XHJcbiAgICAgIHJpZ2h0OiAwcHg7XHJcbiAgICAgIGJvdHRvbTogMHB4O1xyXG4gICAgICBib3JkZXItdG9wOiAxcHggc29saWQgIzAwMDAwMDtcclxuICAgIH1cclxuXHJcbiAgICAubWFjaGluZS1jb2xvdXJhbnQtdXBkYXRlLXJhbmdle1xyXG4gICAgICBvcGFjaXR5OiAwLjU7XHJcbiAgICB9XHJcbiAgfVxyXG5cclxuICAuc2VsZWN0ZWQtY29sb3VyYW50LWJncntcclxuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgIG91dGxpbmU6IDJweCBzb2xpZCAjMDA0MTdiO1xyXG4gICAgdG9wOiAtMTVweDtcclxuICAgIGxlZnQ6IDBweDtcclxuICAgIHJpZ2h0OiAwcHg7XHJcbiAgICBib3R0b206IC0xNXB4O1xyXG4gIH1cclxuXHJcbiAgLmNvbG91cmFudC1uYW1le1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XHJcbiAgICB0cmFuc2Zvcm06IHJvdGF0ZSgtOTBkZWcpO1xyXG4gICAgdHJhbnNmb3JtLW9yaWdpbjogbGVmdCBjZW50ZXI7XHJcbiAgICBsZWZ0OiA1MCU7XHJcbiAgICBib3R0b206IDBweDtcclxuICAgIHdoaXRlLXNwYWNlOiBub3dyYXA7XHJcbiAgfVxyXG5cclxuICAuY29sb3VyYW50LWNvZGUge1xyXG4gICAgZm9udC13ZWlnaHQ6IGJvbGQ7XHJcbiAgICBmb250LXNpemU6IDEyMCU7XHJcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICBib3R0b206IDBweDtcclxuICAgIGxlZnQ6IDUwJTtcclxuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIDQ1cHgpO1xyXG4gIH1cclxufVxyXG5cclxuLndhcm5pbmctY29sb3VyYW50cy1tYWNoaW5lLW1vZGFse1xyXG4gIC5tb2RhbC1jb250ZW50e1xyXG4gICAgJlt0eXBlPVwiV2FybmluZ1wiXXtcclxuICAgICAgLm1vZGFsLWhlYWRlcixcclxuICAgICAgLm1vZGFsLWJvZHl7XHJcbiAgICAgICAgY29sb3I6IGRhcmtvcmFuZ2U7XHJcbiAgICAgIH1cclxuICAgIH1cclxuXHJcbiAgICAmW3R5cGU9XCJEYW5nZXJcIl17XHJcbiAgICAgIC5tb2RhbC1oZWFkZXIsXHJcbiAgICAgIC5tb2RhbC1ib2R5e1xyXG4gICAgICAgIGNvbG9yOiByZWQ7XHJcbiAgICAgIH1cclxuICAgIH1cclxuICB9XHJcblxyXG59XHJcbiJdfQ== */"
 
 /***/ }),
 
@@ -2035,8 +2284,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MachineSettingComponent", function() { return MachineSettingComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _services_machine_machine_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../services/machine/machine.service */ "./src/app/services/machine/machine.service.ts");
-/* harmony import */ var _services_colorant_colorant_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../services/colorant/colorant.service */ "./src/app/services/colorant/colorant.service.ts");
-/* harmony import */ var _services_boostrap_modal_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../services/boostrap/modal.service */ "./src/app/services/boostrap/modal.service.ts");
+/* harmony import */ var _services_boostrap_modal_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../services/boostrap/modal.service */ "./src/app/services/boostrap/modal.service.ts");
+/* harmony import */ var _services_store_store_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../services/store/store.service */ "./src/app/services/store/store.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2051,10 +2300,10 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 var MachineSettingComponent = /** @class */ (function () {
-    function MachineSettingComponent(modalService, machineService, colourantService) {
+    function MachineSettingComponent(modalService, machineService, storeService) {
         this.modalService = modalService;
         this.machineService = machineService;
-        this.colourantService = colourantService;
+        this.storeService = storeService;
         this.selectedMachineColourant = null;
     }
     MachineSettingComponent.prototype.ngOnInit = function () {
@@ -2065,7 +2314,7 @@ var MachineSettingComponent = /** @class */ (function () {
     };
     MachineSettingComponent.prototype.fetchData = function () {
         var _this = this;
-        this.machine = this.machineService.getCurrentMachine();
+        this.machine = this.storeService.getMachineData();
         if (this.machine != null) {
             this.minQuantity = this.machine.minQuantity;
             this.maxQuantity = this.machine.maxQuantity;
@@ -2198,9 +2447,9 @@ var MachineSettingComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./machinesetting.component.html */ "./src/app/components/machine/machinesetting/machinesetting.component.html"),
             styles: [__webpack_require__(/*! ./machinesetting.component.scss */ "./src/app/components/machine/machinesetting/machinesetting.component.scss")]
         }),
-        __metadata("design:paramtypes", [_services_boostrap_modal_service__WEBPACK_IMPORTED_MODULE_3__["ModalService"],
+        __metadata("design:paramtypes", [_services_boostrap_modal_service__WEBPACK_IMPORTED_MODULE_2__["ModalService"],
             _services_machine_machine_service__WEBPACK_IMPORTED_MODULE_1__["MachineService"],
-            _services_colorant_colorant_service__WEBPACK_IMPORTED_MODULE_2__["ColourantService"]])
+            _services_store_store_service__WEBPACK_IMPORTED_MODULE_3__["StoreService"]])
     ], MachineSettingComponent);
     return MachineSettingComponent;
 }());
@@ -2298,7 +2547,7 @@ var BaseComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        List Collection\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        <div class=\"table-responsive\">\r\n          <table class=\"table table-bordered\" matSort (matSortChange)=\"sortData($event)\">\r\n            <tr>\r\n              <th mat-sort-header=\"collectionName\">Collection Name</th>\r\n              <th mat-sort-header=\"description\">Description</th>\r\n              <th mat-sort-header=\"createdDate\">Created Date</th>\r\n              <th mat-sort-header=\"createBy\">Created By</th>\r\n            </tr>\r\n\r\n            <tr *ngFor=\"let item of listItems\">\r\n              <td>{{item.collectionName}}</td>\r\n              <td>{{item.description}}</td>\r\n              <td>{{item.createdDate |  date: 'dd/MM/yyyy'}}</td>\r\n              <td>\r\n                <p *ngIf=\"item.createBy == null\">System</p>\r\n                <p *ngIf=\"item.createBy != null\">Me</p>\r\n              </td>\r\n            </tr>\r\n          </table>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class=\"row\">\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n    <div class=\"card\">\n      <div class=\"card-header\">\n        List Collection\n\n        <button class=\"close\" (click)=\"addCollection()\"><i class=\"fas fa-plus-square\"></i></button>\n      </div>\n\n      <div class=\"card-body\">\n        <ng-container *ngIf=\"responseMessage != null && responseMessage.type == 'success'\">\n          <div class=\"alert alert-success\">\n            <button class=\"close\" data-dismiss=\"alert\" aria-label=\"close\" (click)=\"clearResponseMessage()\">&times;</button>\n            {{responseMessage.message}}\n          </div>\n        </ng-container>\n\n        <ng-container *ngIf=\"responseMessage != null && responseMessage.type == 'error'\">\n          <div class=\"alert alert-danger\">\n            <button class=\"close\" data-dismiss=\"alert\" aria-label=\"close\" (click)=\"clearResponseMessage()\">&times;</button>\n            {{responseMessage.message}}\n          </div>\n        </ng-container>\n\n\n        <div class=\"table-responsive\">\n          <table class=\"table table-bordered\" matSort (matSortChange)=\"sortData($event)\">\n            <tr>\n              <th mat-sort-header=\"collectionName\">Collection Name</th>\n              <th mat-sort-header=\"description\">Description</th>\n              <th mat-sort-header=\"createdDate\">Created Date</th>\n              <th mat-sort-header=\"createBy\">Created By</th>\n              <th class=\"text-center\">Action</th>\n            </tr>\n\n            <tr *ngFor=\"let item of listItems\">\n              <td>{{item.collectionName}}</td>\n              <td>{{item.description}}</td>\n              <td>{{item.createdDate |  date: 'dd/MM/yyyy'}}</td>\n              <td>\n                <p *ngIf=\"item.machine == null\">System</p>\n                <p *ngIf=\"item.machine != null\">Me</p>\n              </td>\n              <td class=\"text-center\">\n                <ng-container *ngIf=\"item.machine != null && item.machine.machineId != null && item.machine.machineId > 0\">\n                  <button mat-raised-button\n                          matTooltip=\"Edit Collection\"\n                          aria-label=\"Edit Collection\"\n                          (click)=\"viewCollection(item.collectionId)\">\n                          <i class=\"fas fa-edit\"></i>\n                  </button>\n\n                  <button mat-raised-button\n                          matTooltip=\"Delete Collection\"\n                          aria-label=\"Delete Collection\"\n                          (click)=\"confirmDeleteCollection(item.collectionId)\">\n                    <i class=\"fas fa-trash-alt\"></i>\n                  </button>\n                </ng-container>\n              </td>\n            </tr>\n          </table>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n\n\n<ng-container *ngIf=\"dbItem != null\">\n  <pp-modal id=\"view-detail-collection\" class=\"modal view-detail-collection\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <h5 class=\"modal-title\">{{dbItem.collectionId > 0 ? 'Edit Collection':  'Add Collection'}}</h5>\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\" (click)=\"closeModal('view-detail-collection')\">\n          <span aria-hidden=\"true\">×</span>\n        </button>\n      </div>\n\n      <div class=\"modal-body\">\n        <form class=\"form form-horizontal form-detail\">\n          <div class=\"form-body\">\n            <div class=\"form-group row\">\n              <label class=\"col-md-3 label-control\">Collection Name</label>\n              <div class=\"col-md-8\">\n                <input type=\"text\" [(ngModel)]=\"dbItem.collectionName\" class=\"form-control\" [ngModelOptions]=\"{standalone: true}\">\n              </div>\n            </div>\n\n            <div class=\"form-group row\">\n              <label class=\"col-md-3 label-control\">Description</label>\n              <div class=\"col-md-8\">\n                <textarea [(ngModel)]=\"dbItem.description\" class=\"form-control\" [ngModelOptions]=\"{standalone: true}\"></textarea>\n              </div>\n            </div>\n          </div>\n          <input type=\"hidden\" [(ngModel)]=\"dbItem.collectionId\" [ngModelOptions]=\"{standalone: true}\">\n        </form>\n      </div>\n\n      <div class=\"modal-footer\">\n        <button type=\"button\" class=\"btn btn-default\" (click)=\"closeModal('view-detail-collection')\">Cancel</button>\n        <button type=\"button\" class=\"btn btn-primary\" (click)=\"updateOrSavingCollection()\">Save</button>\n      </div>\n    </div>\n  </pp-modal>\n</ng-container>\n\n\n\n<ng-container *ngIf=\"collectionId != null && collectionId > 0\">\n  <pp-modal id=\"confirm-remove-collection-model\" class=\"modal confirm-remove-collection-model\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <h5 class=\"modal-title\">Confirm</h5>\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\" (click)=\"closeModal('confirm-remove-collection-model')\">\n          <span aria-hidden=\"true\">×</span>\n        </button>\n      </div>\n\n      <div class=\"modal-body\">\n        Do you want to delete this collection ?\n      </div>\n\n      <div class=\"modal-footer\">\n        <button type=\"button\" class=\"btn btn-default\" (click)=\"closeModal('view-detail-collection')\">Cancel</button>\n        <button type=\"button\" class=\"btn btn-primary\" (click)=\"deleteCollection(collectionId)\">Ok</button>\n      </div>\n    </div>\n  </pp-modal>\n</ng-container>\n"
 
 /***/ }),
 
@@ -2309,7 +2558,7 @@ module.exports = "<div class=\"row\">\r\n  <div class=\"col-lg-12 col-md-12 col-
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvc2V0dGluZy9jb2xsZWN0aW9uL2NvbGxlY3Rpb24uY29tcG9uZW50LnNjc3MifQ== */"
+module.exports = ".view-detail-collection .modal-dialog {\n  width: 800px !important;\n  max-width: 800px !important; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9zZXR0aW5nL2NvbGxlY3Rpb24vRzpcXFdvcmtzcGFjZVxcY2xpZW50dmlldHBvd2VyL3NyY1xcYXBwXFxjb21wb25lbnRzXFxzZXR0aW5nXFxjb2xsZWN0aW9uXFxjb2xsZWN0aW9uLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBRUksd0JBQXVCO0VBQ3ZCLDRCQUEyQixFQUM1QiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvc2V0dGluZy9jb2xsZWN0aW9uL2NvbGxlY3Rpb24uY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIudmlldy1kZXRhaWwtY29sbGVjdGlvbntcclxuICAubW9kYWwtZGlhbG9ne1xyXG4gICAgd2lkdGg6IDgwMHB4ICFpbXBvcnRhbnQ7XHJcbiAgICBtYXgtd2lkdGg6IDgwMHB4ICFpbXBvcnRhbnQ7XHJcbiAgfVxyXG59XHJcbiJdfQ== */"
 
 /***/ }),
 
@@ -2325,6 +2574,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CollectionComponent", function() { return CollectionComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _services_collection_collection_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../services/collection/collection.service */ "./src/app/services/collection/collection.service.ts");
+/* harmony import */ var _models_collection__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../models/collection */ "./src/app/models/collection.ts");
+/* harmony import */ var _services_boostrap_modal_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../services/boostrap/modal.service */ "./src/app/services/boostrap/modal.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2336,12 +2587,19 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 };
 
 
+
+
 var CollectionComponent = /** @class */ (function () {
-    function CollectionComponent(collectionService) {
+    function CollectionComponent(collectionService, modalService) {
         this.collectionService = collectionService;
+        this.modalService = modalService;
+        this.machine = null;
+        this.collectionId = null;
+        this.dbItem = null;
         this.collectionCode = null;
         this.collectionName = null;
         this.sortedData = null;
+        this.responseMessage = null;
     }
     CollectionComponent.prototype.ngOnInit = function () {
         this.fetchData();
@@ -2373,13 +2631,63 @@ var CollectionComponent = /** @class */ (function () {
             _this.listItems = data;
         });
     };
+    CollectionComponent.prototype.addCollection = function () {
+        var _this = this;
+        this.dbItem = new _models_collection__WEBPACK_IMPORTED_MODULE_2__["CollectionModel"]();
+        setTimeout(function () {
+            _this.openModal('view-detail-collection');
+        }, 100);
+    };
+    CollectionComponent.prototype.viewCollection = function (collectionId) {
+        var _this = this;
+        this.collectionService.findById(collectionId).subscribe(function (data) {
+            _this.dbItem = data;
+            setTimeout(function () {
+                _this.openModal('view-detail-collection');
+            }, 100);
+        });
+    };
+    CollectionComponent.prototype.confirmDeleteCollection = function (collectionId) {
+        var _this = this;
+        this.collectionId = collectionId;
+        setTimeout(function () {
+            _this.openModal('confirm-remove-collection-model');
+        }, 100);
+    };
+    CollectionComponent.prototype.deleteCollection = function (collectionId) {
+        var _this = this;
+        this.collectionService.deleteCollection(collectionId).subscribe(function (data) {
+            _this.responseMessage = data;
+            _this.collectionId = null;
+            _this.closeModal('confirm-remove-collection-model');
+            _this.fetchData();
+        });
+    };
+    CollectionComponent.prototype.updateOrSavingCollection = function () {
+        var _this = this;
+        this.collectionService.updateOrSavingCollection(this.dbItem).subscribe(function (data) {
+            _this.dbItem = data;
+            _this.closeModal('view-detail-collection');
+            _this.dbItem = null;
+            _this.fetchData();
+        });
+    };
+    CollectionComponent.prototype.clearResponseMessage = function () {
+        this.responseMessage = null;
+    };
+    CollectionComponent.prototype.openModal = function (id) {
+        this.modalService.open(id);
+    };
+    CollectionComponent.prototype.closeModal = function (id) {
+        this.modalService.close(id);
+    };
     CollectionComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-collection',
             template: __webpack_require__(/*! ./collection.component.html */ "./src/app/components/setting/collection/collection.component.html"),
             styles: [__webpack_require__(/*! ./collection.component.scss */ "./src/app/components/setting/collection/collection.component.scss")]
         }),
-        __metadata("design:paramtypes", [_services_collection_collection_service__WEBPACK_IMPORTED_MODULE_1__["CollectionService"]])
+        __metadata("design:paramtypes", [_services_collection_collection_service__WEBPACK_IMPORTED_MODULE_1__["CollectionService"], _services_boostrap_modal_service__WEBPACK_IMPORTED_MODULE_3__["ModalService"]])
     ], CollectionComponent);
     return CollectionComponent;
 }());
@@ -2395,7 +2703,7 @@ var CollectionComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"block-header\">\r\n  <h1>Colorant Manager</h1>\r\n</div>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n    <div class=\"card filter-card\">\r\n      <div class=\"card-header\">\r\n        Filter\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        <form class=\"form form-horizontal form-detail\">\r\n          <div class=\"form-body\">\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-md-3 label-control\">Colourant Code</label>\r\n              <div class=\"col-md-5\">\r\n                <input type=\"text\" [(ngModel)]=\"code\" class=\"form-control\">\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-md-3 label-control\">Colourant Name</label>\r\n              <div class=\"col-md-5\">\r\n                <input type=\"text\" [(ngModel)]=\"name\" class=\"form-control\">\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"form-group row text-center\">\r\n              <button class=\"btn btn-primary\" (click)=\"filter()\">Search</button>\r\n              <button class=\"btn btn-default\" (click)=\"resetFilter()\">Reset</button>\r\n            </div>\r\n          </div>\r\n        </form>\r\n        <div class=\"form-group rng ow\">\r\n\r\n        </div>\r\n\r\n        <div class=\"row\">\r\n          <div class=\"col-lg-6 col-md-6 col-sm-6 col-xs-12\">\r\n\r\n          </div>\r\n\r\n          <div class=\"col-lg-6 col-md-6 col-sm-6 col-xs-12\">\r\n\r\n          </div>\r\n        </div>\r\n      </div>\r\n\r\n      <div class=\"card-footer\">\r\n        <!--<mat-card-actions>-->\r\n\r\n        <!--</mat-card-actions>-->\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n\r\n<div class=\"row\" ng-init=\"testInput='value'\">\r\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        List Colorant\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        <div class=\"table-responsive\">\r\n          <table class=\"table table-bordered\" matSort (matSortChange)=\"sortData($event)\">\r\n            <tr>\r\n              <th mat-sort-header=\"code\">Colourant Code</th>\r\n              <th mat-sort-header=\"name\">Colourant Name</th>\r\n              <th mat-sort-header=\"density\">Density</th>\r\n              <th mat-sort-header=\"redV\">Price Per Unit</th>\r\n              <th mat-sort-header=\"greenV\">Surcharge</th>\r\n              <th mat-sort-header=\"blueV\">Blue</th>\r\n              <th mat-sort-header=\"color\">kind</th>\r\n            </tr>\r\n\r\n            <tr *ngFor=\"let colorant of sortedData\">\r\n              <td>{{colorant.colourantCode}}</td>\r\n              <td>{{colorant.colourantName}}</td>\r\n              <td>{{colorant.density}}</td>\r\n              <td>{{colorant.pricePerUnit}}</td>\r\n              <td>{{colorant.surcharge}}</td>\r\n              <td><span [ngStyle]=\"{'background': colorant.rbgHex, 'display': 'inline-block', 'width': '30px', 'height': '30px', 'border': '1px solid #333'}\"></span></td>\r\n              <td>{{colorant.kind}}</td>\r\n            </tr>\r\n          </table>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class=\"block-header\">\n  <h1>Colorant Manager</h1>\n</div>\n\n<div class=\"row\">\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n    <div class=\"card filter-card\">\n      <div class=\"card-header\">\n        Filter\n      </div>\n\n      <div class=\"card-body\">\n        <form class=\"form form-horizontal form-detail\">\n          <div class=\"form-body\">\n            <div class=\"form-group row\">\n              <label class=\"col-md-3 label-control\">Colourant Code</label>\n              <div class=\"col-md-5\">\n                <input type=\"text\" [(ngModel)]=\"code\" class=\"form-control\">\n              </div>\n            </div>\n\n            <div class=\"form-group row\">\n              <label class=\"col-md-3 label-control\">Colourant Name</label>\n              <div class=\"col-md-5\">\n                <input type=\"text\" [(ngModel)]=\"name\" class=\"form-control\">\n              </div>\n            </div>\n\n            <div class=\"form-group row text-center\">\n              <button class=\"btn btn-primary\" (click)=\"filter()\">Search</button>\n              <button class=\"btn btn-default\" (click)=\"resetFilter()\">Reset</button>\n            </div>\n          </div>\n        </form>\n        <div class=\"form-group rng ow\">\n\n        </div>\n\n        <div class=\"row\">\n          <div class=\"col-lg-6 col-md-6 col-sm-6 col-xs-12\">\n\n          </div>\n\n          <div class=\"col-lg-6 col-md-6 col-sm-6 col-xs-12\">\n\n          </div>\n        </div>\n      </div>\n\n      <div class=\"card-footer\">\n        <!--<mat-card-actions>-->\n\n        <!--</mat-card-actions>-->\n      </div>\n    </div>\n  </div>\n</div>\n\n\n<div class=\"row\" ng-init=\"testInput='value'\">\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n    <div class=\"card\">\n      <div class=\"card-header\">\n        List Colorant\n      </div>\n\n      <div class=\"card-body\">\n        <div class=\"table-responsive\">\n          <table class=\"table table-bordered\" matSort (matSortChange)=\"sortData($event)\">\n            <tr>\n              <th mat-sort-header=\"code\">Colourant Code</th>\n              <th mat-sort-header=\"name\">Colourant Name</th>\n              <th mat-sort-header=\"density\">Density</th>\n              <th mat-sort-header=\"redV\">Price Per Unit</th>\n              <th mat-sort-header=\"greenV\">Surcharge</th>\n              <th mat-sort-header=\"blueV\">Blue</th>\n              <th mat-sort-header=\"color\">kind</th>\n            </tr>\n\n            <tr *ngFor=\"let colorant of sortedData\">\n              <td>{{colorant.colourantCode}}</td>\n              <td>{{colorant.colourantName}}</td>\n              <td>{{colorant.density}}</td>\n              <td>{{colorant.pricePerUnit}}</td>\n              <td>{{colorant.surcharge}}</td>\n              <td><span [ngStyle]=\"{'background': colorant.rbgHex, 'display': 'inline-block', 'width': '30px', 'height': '30px', 'border': '1px solid #333'}\"></span></td>\n              <td>{{colorant.kind}}</td>\n            </tr>\n          </table>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -2406,7 +2714,7 @@ module.exports = "<div class=\"block-header\">\r\n  <h1>Colorant Manager</h1>\r\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".mat-form-field {\n  width: 100%; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9zZXR0aW5nL2NvbG9yYW50L0Q6XFxXb3Jrc3BhY2VcXEhEQlNcXGNsaWVudHZpZXRwb3dlci9zcmNcXGFwcFxcY29tcG9uZW50c1xcc2V0dGluZ1xcY29sb3JhbnRcXGNvbG9yYW50LmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsWUFBVyxFQUNaIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50cy9zZXR0aW5nL2NvbG9yYW50L2NvbG9yYW50LmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLm1hdC1mb3JtLWZpZWxkIHtcclxuICB3aWR0aDogMTAwJTtcclxufVxyXG4iXX0= */"
+module.exports = ".mat-form-field {\n  width: 100%; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9zZXR0aW5nL2NvbG9yYW50L0c6XFxXb3Jrc3BhY2VcXGNsaWVudHZpZXRwb3dlci9zcmNcXGFwcFxcY29tcG9uZW50c1xcc2V0dGluZ1xcY29sb3JhbnRcXGNvbG9yYW50LmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsWUFBVyxFQUNaIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50cy9zZXR0aW5nL2NvbG9yYW50L2NvbG9yYW50LmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLm1hdC1mb3JtLWZpZWxkIHtcclxuICB3aWR0aDogMTAwJTtcclxufVxyXG4iXX0= */"
 
 /***/ }),
 
@@ -2479,7 +2787,7 @@ var ColorantComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"block-header\">\r\n  <h1>Product Manager</h1>\r\n</div>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        List Product\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        <div class=\"table-responsive\">\r\n          <table class=\"table table-bordered\">\r\n            <tr>\r\n              <th>#</th>\r\n              <th>Product Code</th>\r\n              <th>Product Name</th>\r\n              <th>Created Date</th>\r\n              <th>Created By</th>\r\n            </tr>\r\n\r\n            <ng-container *ngFor=\"let item of sortedData let i=index\">\r\n              <tr>\r\n                <td>\r\n                  <span *ngIf=\"currentProductViewer == item.productId\" (click)=\"showProductDetail(-1)\"><i class=\"fas fa-minus\"></i></span>\r\n                  <span *ngIf=\"currentProductViewer != item.productId\" (click)=\"showProductDetail(item.productId)\"><i class=\"fas fa-plus\"></i></span>\r\n                </td>\r\n                <td>{{item.productCode}}</td>\r\n                <td>{{item.productName}}</td>\r\n                <td>{{item.createdDate | date : 'dd/MM/yyyy'}}</td>\r\n                <td>\r\n                  <span *ngIf=\"item.createBy == null\">\r\n                    System\r\n                  </span>\r\n\r\n                  <span *ngIf=\"item.createBy != null\">\r\n                    Me\r\n                  </span>\r\n                </td>\r\n              </tr>\r\n\r\n              <tr *ngIf=\"currentProductViewer == item.productId\" selected class=\"product-detail-row\">\r\n                <td></td>\r\n                <td colspan=\"4\">\r\n                  <app-viewdetail [productId]=\"item.productId\"></app-viewdetail>\r\n                </td>\r\n              </tr>\r\n            </ng-container>\r\n          </table>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class=\"block-header\">\n  <h1>Product Manager</h1>\n</div>\n\n<div class=\"row\">\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n    <div class=\"card\">\n      <div class=\"card-header\">\n        List Product\n      </div>\n\n      <div class=\"card-body\">\n        <div class=\"table-responsive\">\n          <table class=\"table table-bordered\">\n            <tr>\n              <th>#</th>\n              <th>Product Code</th>\n              <th>Product Name</th>\n              <th>Created Date</th>\n              <th>Created By</th>\n            </tr>\n\n            <ng-container *ngFor=\"let item of sortedData let i=index\">\n              <tr>\n                <td>\n                  <span *ngIf=\"currentProductViewer == item.productId\" (click)=\"showProductDetail(-1)\"><i class=\"fas fa-minus\"></i></span>\n                  <span *ngIf=\"currentProductViewer != item.productId\" (click)=\"showProductDetail(item.productId)\"><i class=\"fas fa-plus\"></i></span>\n                </td>\n                <td>{{item.productCode}}</td>\n                <td>{{item.productName}}</td>\n                <td>{{item.createdDate | date : 'dd/MM/yyyy'}}</td>\n                <td>\n                  <span *ngIf=\"item.createBy == null\">\n                    System\n                  </span>\n\n                  <span *ngIf=\"item.createBy != null\">\n                    Me\n                  </span>\n                </td>\n              </tr>\n\n              <tr *ngIf=\"currentProductViewer == item.productId\" selected class=\"product-detail-row\">\n                <td></td>\n                <td colspan=\"4\">\n                  <app-viewdetail [productId]=\"item.productId\"></app-viewdetail>\n                </td>\n              </tr>\n            </ng-container>\n          </table>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -2573,7 +2881,7 @@ var ProductComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\r\n  productbase works!\r\n</p>\r\n"
+module.exports = "<p>\n  productbase works!\n</p>\n"
 
 /***/ }),
 
@@ -2636,7 +2944,7 @@ var ProductbaseComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"pp-modal modal-dialog modal-dialog-centered\">\r\n  <ng-content></ng-content>\r\n</div>\r\n\r\n<div class=\"modal-backdrop fade show\"></div>\r\n"
+module.exports = "<div class=\"pp-modal modal-dialog modal-dialog-centered\">\n  <ng-content></ng-content>\n</div>\n\n<div class=\"modal-backdrop fade show\"></div>\n"
 
 /***/ }),
 
@@ -2732,6 +3040,186 @@ var ModalComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/directions/product/base-can/base-can.component.html":
+/*!*********************************************************************!*\
+  !*** ./src/app/directions/product/base-can/base-can.component.html ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<ng-container *ngIf=\"productBase != null\">\n  <div class=\"base-can-information\">\n    <div class=\"base-can-empty\">\n    <span class=\"base-can-background\">\n      <span class=\"base-can-volume\" [ngStyle]=\"{'background-color': productBase.rbgHex, 'height': '100%'}\">\n        <span class=\"can-base-info\">\n          <span class=\"base-type\">Base : {{productBase.base.baseCode}}</span>\n          <span class=\"base-volume\">{{canSize + \" Liter\" }}</span>\n          <span class=\"base-name\">{{collection.collectionName}}</span>\n        </span>\n      </span>\n    </span>\n    </div>\n  </div>\n</ng-container>\n"
+
+/***/ }),
+
+/***/ "./src/app/directions/product/base-can/base-can.component.scss":
+/*!*********************************************************************!*\
+  !*** ./src/app/directions/product/base-can/base-can.component.scss ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".base-can-information {\n  text-align: center; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZGlyZWN0aW9ucy9wcm9kdWN0L2Jhc2UtY2FuL0c6XFxXb3Jrc3BhY2VcXGNsaWVudHZpZXRwb3dlci9zcmNcXGFwcFxcZGlyZWN0aW9uc1xccHJvZHVjdFxcYmFzZS1jYW5cXGJhc2UtY2FuLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsbUJBQWtCLEVBQ25CIiwiZmlsZSI6InNyYy9hcHAvZGlyZWN0aW9ucy9wcm9kdWN0L2Jhc2UtY2FuL2Jhc2UtY2FuLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmJhc2UtY2FuLWluZm9ybWF0aW9ue1xyXG4gIHRleHQtYWxpZ246IGNlbnRlcjtcclxufVxyXG4iXX0= */"
+
+/***/ }),
+
+/***/ "./src/app/directions/product/base-can/base-can.component.ts":
+/*!*******************************************************************!*\
+  !*** ./src/app/directions/product/base-can/base-can.component.ts ***!
+  \*******************************************************************/
+/*! exports provided: BaseCanComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BaseCanComponent", function() { return BaseCanComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _models_product_base__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../models/product_base */ "./src/app/models/product_base.ts");
+/* harmony import */ var _models_collection__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../models/collection */ "./src/app/models/collection.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var BaseCanComponent = /** @class */ (function () {
+    function BaseCanComponent() {
+    }
+    BaseCanComponent.prototype.ngOnInit = function () {
+    };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", _models_product_base__WEBPACK_IMPORTED_MODULE_1__["ProductBaseModel"])
+    ], BaseCanComponent.prototype, "productBase", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Number)
+    ], BaseCanComponent.prototype, "canSize", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", _models_collection__WEBPACK_IMPORTED_MODULE_2__["CollectionModel"])
+    ], BaseCanComponent.prototype, "collection", void 0);
+    BaseCanComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-base-can',
+            template: __webpack_require__(/*! ./base-can.component.html */ "./src/app/directions/product/base-can/base-can.component.html"),
+            styles: [__webpack_require__(/*! ./base-can.component.scss */ "./src/app/directions/product/base-can/base-can.component.scss")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], BaseCanComponent);
+    return BaseCanComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/directions/product/tablecolourant/table-colourants.component.html":
+/*!***********************************************************************************!*\
+  !*** ./src/app/directions/product/tablecolourant/table-colourants.component.html ***!
+  \***********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<ng-container *ngIf=\"listFormulaColorant != null\">\n  <div class=\"table-responsive\">\n    <table class=\"table table-bordered\" >\n      <tr>\n        <th style=\"width: 30%\">Component</th>\n        <th style=\"width: 20%\">ml</th>\n        <th style=\"width: 50%\">Color\n      </tr>\n\n      <ng-container *ngFor=\"let colorantItem of listFormulaColorant\">\n        <tr *ngIf=\"colorantItem.quantity != null && colorantItem.quantity > 0\">\n          <td>{{colorantItem.colourant.colourantName}}</td>\n          <td>{{roundNumber((colorantItem.quantity / baseOnCan) * canSize)}}</td>\n          <td>\n          <span class=\"color-bar\" >\n            <span class=\"color-select\" [ngStyle]=\"{'background': colorantItem.colourant.rbgHex, 'width': (colorantItem.quantity / maxColorQuantity) * 100 + '%'}\"></span>\n          </span>\n          </td>\n        </tr>\n      </ng-container>\n    </table>\n  </div>\n</ng-container>\n\n"
+
+/***/ }),
+
+/***/ "./src/app/directions/product/tablecolourant/table-colourants.component.scss":
+/*!***********************************************************************************!*\
+  !*** ./src/app/directions/product/tablecolourant/table-colourants.component.scss ***!
+  \***********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".color-bar {\n  width: 100%;\n  display: inline-block;\n  position: relative;\n  height: 1em; }\n  .color-bar .color-select {\n    display: inline-block;\n    position: absolute;\n    top: 0px;\n    left: 0px;\n    bottom: 0px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZGlyZWN0aW9ucy9wcm9kdWN0L3RhYmxlY29sb3VyYW50L0c6XFxXb3Jrc3BhY2VcXGNsaWVudHZpZXRwb3dlci9zcmNcXGFwcFxcZGlyZWN0aW9uc1xccHJvZHVjdFxcdGFibGVjb2xvdXJhbnRcXHRhYmxlLWNvbG91cmFudHMuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxZQUFXO0VBQ1gsc0JBQXFCO0VBQ3JCLG1CQUFrQjtFQUNsQixZQUFXLEVBU1o7RUFiRDtJQU9JLHNCQUFxQjtJQUNyQixtQkFBa0I7SUFDbEIsU0FBUTtJQUNSLFVBQVM7SUFDVCxZQUFXLEVBQ1oiLCJmaWxlIjoic3JjL2FwcC9kaXJlY3Rpb25zL3Byb2R1Y3QvdGFibGVjb2xvdXJhbnQvdGFibGUtY29sb3VyYW50cy5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jb2xvci1iYXJ7XHJcbiAgd2lkdGg6IDEwMCU7XHJcbiAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuICBoZWlnaHQ6IDFlbTtcclxuXHJcbiAgLmNvbG9yLXNlbGVjdHtcclxuICAgIGRpc3BsYXk6IGlubGluZS1ibG9jaztcclxuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgIHRvcDogMHB4O1xyXG4gICAgbGVmdDogMHB4O1xyXG4gICAgYm90dG9tOiAwcHg7XHJcbiAgfVxyXG59XHJcbiJdfQ== */"
+
+/***/ }),
+
+/***/ "./src/app/directions/product/tablecolourant/table-colourants.component.ts":
+/*!*********************************************************************************!*\
+  !*** ./src/app/directions/product/tablecolourant/table-colourants.component.ts ***!
+  \*********************************************************************************/
+/*! exports provided: TableColourantsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TableColourantsComponent", function() { return TableColourantsComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var TableColourantsComponent = /** @class */ (function () {
+    function TableColourantsComponent() {
+    }
+    TableColourantsComponent.prototype.ngOnInit = function () {
+    };
+    TableColourantsComponent.prototype.ngOnChanges = function (changes) {
+        console.log(changes);
+        var baseOnCanChange = changes.baseOnCan;
+        if (baseOnCanChange != null) {
+            this._baseOnCan = baseOnCanChange.currentValue;
+        }
+        var canSizeChange = changes.canSize;
+        if (canSizeChange != null) {
+            this._canSize = canSizeChange.currentValue;
+        }
+        var listFormulaColorantChange = changes.listFormulaColorant;
+        if (listFormulaColorantChange != null) {
+            this._listFormulaColorant = listFormulaColorantChange.currentValue;
+        }
+        var maxColorQuantityChange = changes.maxColorQuantity;
+        if (maxColorQuantityChange != null) {
+            this._maxColorQuantity = maxColorQuantityChange.currentValue;
+        }
+    };
+    TableColourantsComponent.prototype.roundNumber = function (num) {
+        return Math.round(num * 100) / 100;
+    };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Number)
+    ], TableColourantsComponent.prototype, "baseOnCan", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Number)
+    ], TableColourantsComponent.prototype, "canSize", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Array)
+    ], TableColourantsComponent.prototype, "listFormulaColorant", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Number)
+    ], TableColourantsComponent.prototype, "maxColorQuantity", void 0);
+    TableColourantsComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-table-colourants',
+            template: __webpack_require__(/*! ./table-colourants.component.html */ "./src/app/directions/product/tablecolourant/table-colourants.component.html"),
+            styles: [__webpack_require__(/*! ./table-colourants.component.scss */ "./src/app/directions/product/tablecolourant/table-colourants.component.scss")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], TableColourantsComponent);
+    return TableColourantsComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/directions/product/viewdetail/viewdetail.component.html":
 /*!*************************************************************************!*\
   !*** ./src/app/directions/product/viewdetail/viewdetail.component.html ***!
@@ -2739,7 +3227,7 @@ var ModalComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"table-responsive\">\r\n  <table class=\"table table-borderless\">\r\n    <thead>\r\n    <tr>\r\n      <th>Base</th>\r\n      <th>Density</th>\r\n      <th>Color</th>\r\n    </tr>\r\n    </thead>\r\n    <tr *ngFor=\"let item of listProductBaseCan let i=index\">\r\n      <td>{{item.base.baseName}}</td>\r\n      <td>{{item.density}}</td>\r\n      <td>\r\n        <span [ngStyle]=\"{'background': item.rbgHex, 'display': 'inline-block', 'width': '30px', 'height': '30px', 'border': '1px solid #333'}\"></span>\r\n      </td>\r\n    </tr>\r\n  </table>\r\n</div>\r\n"
+module.exports = "<div class=\"table-responsive\">\n  <table class=\"table table-borderless\">\n    <thead>\n    <tr>\n      <th>Base</th>\n      <th>Density</th>\n      <th>Color</th>\n    </tr>\n    </thead>\n    <tr *ngFor=\"let item of listProductBaseCan let i=index\">\n      <td>{{item.base.baseName}}</td>\n      <td>{{item.density}}</td>\n      <td>\n        <span [ngStyle]=\"{'background': item.rbgHex, 'display': 'inline-block', 'width': '30px', 'height': '30px', 'border': '1px solid #333'}\"></span>\n      </td>\n    </tr>\n  </table>\n</div>\n"
 
 /***/ }),
 
@@ -2823,13 +3311,15 @@ var ViewDetailComponent = /** @class */ (function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MaterialModule", function() { return MaterialModule; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var ngx_color_picker__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ngx-color-picker */ "./node_modules/ngx-color-picker/dist/ngx-color-picker.es5.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 var MaterialModule = /** @class */ (function () {
@@ -2860,12 +3350,17 @@ var MaterialModule = /** @class */ (function () {
                 // MatSelectModule,
                 // MatSidenavModule,
                 // MatSlideToggleModule,
-                _angular_material__WEBPACK_IMPORTED_MODULE_1__["MatSliderModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatSliderModule"],
                 // MatSnackBarModule,
                 // MatStepperModule,
-                _angular_material__WEBPACK_IMPORTED_MODULE_1__["MatTableModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_1__["MatSortModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_1__["MatFormFieldModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatTableModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatSortModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatFormFieldModule"],
+                // MatTabsModule,
+                // MatToolbarModule,
+                _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatTooltipModule"],
+                // MatNativeDateModule,
+                ngx_color_picker__WEBPACK_IMPORTED_MODULE_1__["ColorPickerModule"]
             ],
             exports: [
                 // Material
@@ -2890,12 +3385,17 @@ var MaterialModule = /** @class */ (function () {
                 // MatSelectModule,
                 // MatSidenavModule,
                 // MatSlideToggleModule,
-                _angular_material__WEBPACK_IMPORTED_MODULE_1__["MatSliderModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatSliderModule"],
                 // MatSnackBarModule,
                 // MatStepperModule,
-                _angular_material__WEBPACK_IMPORTED_MODULE_1__["MatTableModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_1__["MatSortModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_1__["MatFormFieldModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatTableModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatSortModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatFormFieldModule"],
+                // MatTabsModule,
+                // MatToolbarModule,
+                _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatTooltipModule"],
+                // MatNativeDateModule,
+                ngx_color_picker__WEBPACK_IMPORTED_MODULE_1__["ColorPickerModule"]
             ]
         })
     ], MaterialModule);
@@ -3009,12 +3509,12 @@ var CollectionModel = /** @class */ (function () {
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(CollectionModel.prototype, "createBy", {
+    Object.defineProperty(CollectionModel.prototype, "machine", {
         get: function () {
-            return this._createBy;
+            return this._machine;
         },
         set: function (value) {
-            this._createBy = value;
+            this._machine = value;
         },
         enumerable: true,
         configurable: true
@@ -3646,6 +4146,16 @@ var FormulaModel = /** @class */ (function () {
         enumerable: true,
         configurable: true
     });
+    Object.defineProperty(FormulaModel.prototype, "machine", {
+        get: function () {
+            return this._machine;
+        },
+        set: function (value) {
+            this._machine = value;
+        },
+        enumerable: true,
+        configurable: true
+    });
     return FormulaModel;
 }());
 
@@ -4035,7 +4545,7 @@ var ProductBaseModel = /** @class */ (function () {
 /*!**************************************!*\
   !*** ./src/app/models/user.model.ts ***!
   \**************************************/
-/*! exports provided: MachineModel, RoleModel, UserModel, MachineColourantModel */
+/*! exports provided: MachineModel, RoleModel, UserModel, MachineColourantModel, ResponseMessageModel */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4044,6 +4554,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RoleModel", function() { return RoleModel; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UserModel", function() { return UserModel; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MachineColourantModel", function() { return MachineColourantModel; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ResponseMessageModel", function() { return ResponseMessageModel; });
 var MachineModel = /** @class */ (function () {
     function MachineModel() {
     }
@@ -4228,6 +4739,32 @@ var MachineColourantModel = /** @class */ (function () {
     return MachineColourantModel;
 }());
 
+var ResponseMessageModel = /** @class */ (function () {
+    function ResponseMessageModel() {
+    }
+    Object.defineProperty(ResponseMessageModel.prototype, "type", {
+        get: function () {
+            return this._type;
+        },
+        set: function (value) {
+            this._type = value;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(ResponseMessageModel.prototype, "message", {
+        get: function () {
+            return this._message;
+        },
+        set: function (value) {
+            this._message = value;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    return ResponseMessageModel;
+}());
+
 
 
 /***/ }),
@@ -4363,6 +4900,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _shared_http_services_http_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../shared/http/services/http.service */ "./src/app/shared/http/services/http.service.ts");
 /* harmony import */ var _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../utils/convert-models-utils */ "./src/app/utils/convert-models-utils.ts");
+/* harmony import */ var _store_store_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../store/store.service */ "./src/app/services/store/store.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4377,9 +4915,11 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
 var CollectionService = /** @class */ (function () {
-    function CollectionService(http) {
+    function CollectionService(http, storeService) {
         this.http = http;
+        this.storeService = storeService;
     }
     CollectionService.prototype.getListItems = function () {
         return this.http.get(_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].settings.serverendpoint + 'collection/getAll').pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (data) {
@@ -4395,11 +4935,33 @@ var CollectionService = /** @class */ (function () {
             return [];
         }));
     };
+    CollectionService.prototype.findById = function (collectionId) {
+        return this.http.get(_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].settings.serverendpoint + 'collection/findById/' + collectionId).pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (data) {
+            return _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_4__["default"].convertCollectionModel(data);
+        }));
+    };
+    CollectionService.prototype.updateOrSavingCollection = function (collection) {
+        var machine = this.storeService.getMachineData();
+        var dt = {
+            collectionId: collection.collectionId,
+            collectionName: collection.collectionName,
+            description: collection.description,
+            machine: { machineId: machine.machineId }
+        };
+        return this.http.post(_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].settings.serverendpoint + 'collection/save', dt).pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (data) {
+            return _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_4__["default"].convertToMachineModel(data);
+        }));
+    };
+    CollectionService.prototype.deleteCollection = function (collectionId) {
+        return this.http.get(_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].settings.serverendpoint + 'collection/delete/' + collectionId).pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (data) {
+            return _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_4__["default"].convertToResponseMessageModel(data);
+        }));
+    };
     CollectionService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
             providedIn: 'root'
         }),
-        __metadata("design:paramtypes", [_shared_http_services_http_service__WEBPACK_IMPORTED_MODULE_3__["HttpService"]])
+        __metadata("design:paramtypes", [_shared_http_services_http_service__WEBPACK_IMPORTED_MODULE_3__["HttpService"], _store_store_service__WEBPACK_IMPORTED_MODULE_5__["StoreService"]])
     ], CollectionService);
     return CollectionService;
 }());
@@ -4502,6 +5064,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _machine_machine_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../machine/machine.service */ "./src/app/services/machine/machine.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _store_store_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../store/store.service */ "./src/app/services/store/store.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4514,14 +5077,16 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
 var DashboardService = /** @class */ (function () {
-    function DashboardService(router, machineService) {
+    function DashboardService(router, storeService, machineService) {
         this.router = router;
+        this.storeService = storeService;
         this.machineService = machineService;
     }
     DashboardService.prototype.validateMachineData = function () {
         var _this = this;
-        var machine = this.machineService.getCurrentMachine();
+        var machine = this.storeService.getMachineData();
         if (machine != null) {
             this.machineService.fetchDataFromServer().subscribe(function (data) {
                 var isLowColourant = false;
@@ -4552,7 +5117,7 @@ var DashboardService = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
             providedIn: 'root'
         }),
-        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _machine_machine_service__WEBPACK_IMPORTED_MODULE_1__["MachineService"]])
+        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _store_store_service__WEBPACK_IMPORTED_MODULE_3__["StoreService"], _machine_machine_service__WEBPACK_IMPORTED_MODULE_1__["MachineService"]])
     ], DashboardService);
     return DashboardService;
 }());
@@ -4693,6 +5258,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/internal/operators */ "./node_modules/rxjs/internal/operators/index.js");
 /* harmony import */ var rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../utils/convert-models-utils */ "./src/app/utils/convert-models-utils.ts");
+/* harmony import */ var _store_store_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../store/store.service */ "./src/app/services/store/store.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4707,9 +5273,11 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
 var FormulaService = /** @class */ (function () {
-    function FormulaService(http) {
+    function FormulaService(http, storeService) {
         this.http = http;
+        this.storeService = storeService;
         this.listFormula = [];
         this.listFormulaProductBase = [];
         this.fetchData();
@@ -4750,26 +5318,31 @@ var FormulaService = /** @class */ (function () {
             return [];
         }));
     };
-    FormulaService.prototype.postData = function () {
-        var dt = {
-            username: "Haukute",
-            password: "123456"
-        };
-        debugger;
-        this.http.post(_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].settings.serverendpoint + 'login', dt).pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (datas) {
-            console.log(datas);
-        })).subscribe();
-    };
-    FormulaService.prototype.postData1 = function () {
-        var dt = {
-            username: "Haukute",
-            password: "123456"
-        };
-        debugger;
-        this.http.post(_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].settings.serverendpoint + 'login_test', dt).pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (datas) {
-            console.log(datas);
-        })).subscribe();
-    };
+    // postData() {
+    //   const dt = {
+    //     username: "Haukute",
+    //     password: "123456"
+    //   };
+    //   debugger;
+    //   this.http.post(environment.settings.serverendpoint + 'login', dt).pipe(
+    //     map(datas => {
+    //       console.log(datas);
+    //     }),
+    //   ).subscribe();
+    // }
+    //
+    // postData1() {
+    //   const dt = {
+    //     username: "Haukute",
+    //     password: "123456"
+    //   };
+    //   debugger;
+    //   this.http.post(environment.settings.serverendpoint + 'login_test', dt).pipe(
+    //     map(datas => {
+    //       console.log(datas);
+    //     }),
+    //   ).subscribe();
+    // }
     FormulaService.prototype.findById = function (formulaId) {
         var result = this.listFormula.filter(filterById);
         return result != null && result.length > 0 ? Object.assign({}, result[0]) : null;
@@ -4807,13 +5380,22 @@ var FormulaService = /** @class */ (function () {
         }));
     };
     FormulaService.prototype.findFormulaProductBaseById = function (formulaProductBaseId) {
-        return this.http.get(_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].settings.serverendpoint + 'formula_product_base/findById/' + formulaProductBaseId);
+        return this.http.get(_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].settings.serverendpoint + 'formula_product_base/findById/' + formulaProductBaseId).pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (data) {
+            return _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_4__["default"].convertToFormulaProductBaseModel(data);
+        }));
+    };
+    FormulaService.prototype.saveOrUpdateFormulaData = function (formulaProductBaseId, formula, productBase, listColourants) {
+        var savingItem = _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_4__["default"].convertToSavingFormulaProductBaseDBItem(formulaProductBaseId, formula, productBase, this.storeService.getMachineData(), listColourants);
+        return this.http.post(_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].settings.serverendpoint + 'machine_formula/saveOrUpdate', savingItem).pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (data) {
+            console.log(data);
+            return data;
+        }));
     };
     FormulaService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
             providedIn: 'root'
         }),
-        __metadata("design:paramtypes", [_shared_http_services_http_service__WEBPACK_IMPORTED_MODULE_1__["HttpService"]])
+        __metadata("design:paramtypes", [_shared_http_services_http_service__WEBPACK_IMPORTED_MODULE_1__["HttpService"], _store_store_service__WEBPACK_IMPORTED_MODULE_5__["StoreService"]])
     ], FormulaService);
     return FormulaService;
 }());
@@ -4915,12 +5497,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MachineService", function() { return MachineService; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _shared_http_services_http_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../shared/http/services/http.service */ "./src/app/shared/http/services/http.service.ts");
-/* harmony import */ var _user_user_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../user/user.service */ "./src/app/services/user/user.service.ts");
-/* harmony import */ var _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../utils/convert-models-utils */ "./src/app/utils/convert-models-utils.ts");
-/* harmony import */ var rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/internal/operators */ "./node_modules/rxjs/internal/operators/index.js");
-/* harmony import */ var rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../environments/environment */ "./src/environments/environment.ts");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../utils/convert-models-utils */ "./src/app/utils/convert-models-utils.ts");
+/* harmony import */ var rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/internal/operators */ "./node_modules/rxjs/internal/operators/index.js");
+/* harmony import */ var rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../environments/environment */ "./src/environments/environment.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _store_store_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../store/store.service */ "./src/app/services/store/store.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4938,16 +5520,16 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 var MachineService = /** @class */ (function () {
-    function MachineService(http, userService, router) {
+    function MachineService(http, storeService, router) {
         this.http = http;
-        this.userService = userService;
+        this.storeService = storeService;
         this.router = router;
         this.machine = null;
         this.fetchData();
     }
     MachineService.prototype.fetchData = function () {
         var _this = this;
-        this.machine = this.userService.getLoginUser().machine;
+        this.machine = this.storeService.getMachineData();
         if (this.machine != null) {
             this.fetchDataFromServer().subscribe(function (data) {
                 _this.listMachineColourants = data;
@@ -4955,16 +5537,17 @@ var MachineService = /** @class */ (function () {
         }
     };
     MachineService.prototype.fetchDataFromServer = function () {
-        return this.http.get(_environments_environment__WEBPACK_IMPORTED_MODULE_5__["environment"].settings.serverendpoint + 'machine/getColourants/' + this.machine.machineId).pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (data) {
+        this.getCurrentMachine();
+        return this.http.get(_environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].settings.serverendpoint + 'machine/getColourants/' + this.machine.machineId).pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (data) {
             var result = [];
             if (data && data.length > 0) {
                 for (var _i = 0, data_1 = data; _i < data_1.length; _i++) {
                     var item = data_1[_i];
-                    result.push(_utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_3__["default"].convertToMachineColourantModel(item));
+                    result.push(_utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_2__["default"].convertToMachineColourantModel(item));
                 }
             }
             return result;
-        }), Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(function (e) {
+        }), Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(function (e) {
             return [];
         }));
     };
@@ -4972,6 +5555,9 @@ var MachineService = /** @class */ (function () {
         return this.listMachineColourants;
     };
     MachineService.prototype.getCurrentMachine = function () {
+        if (this.machine == null) {
+            this.machine = this.storeService.getMachineData();
+        }
         return this.machine;
     };
     MachineService.prototype.updateColourantMachineData = function (machine, colourant, addedAmount) {
@@ -4980,16 +5566,16 @@ var MachineService = /** @class */ (function () {
             colourant: { colourantId: colourant.colourantId },
             quantity: addedAmount
         };
-        return this.http.post(_environments_environment__WEBPACK_IMPORTED_MODULE_5__["environment"].settings.serverendpoint + 'machine_colour/update', dt).pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (data) {
+        return this.http.post(_environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].settings.serverendpoint + 'machine_colour/update', dt).pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (data) {
             var result = [];
             if (data && data.length > 0) {
                 for (var _i = 0, data_2 = data; _i < data_2.length; _i++) {
                     var item = data_2[_i];
-                    result.push(_utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_3__["default"].convertToMachineColourantModel(item));
+                    result.push(_utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_2__["default"].convertToMachineColourantModel(item));
                 }
             }
             return result;
-        }), Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(function (e) {
+        }), Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(function (e) {
             return [];
         }));
     };
@@ -5000,11 +5586,11 @@ var MachineService = /** @class */ (function () {
             colourant: { colourantId: colorant.colourantId },
             quantity: quantity
         };
-        this.http.post(_environments_environment__WEBPACK_IMPORTED_MODULE_5__["environment"].settings.serverendpoint + 'machine_colour/subtraction', dt).pipe().subscribe();
+        this.http.post(_environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].settings.serverendpoint + 'machine_colour/subtraction', dt).pipe().subscribe();
     };
     MachineService.prototype.recordDispenseFormulaProductBase = function (status, taskId, formulaProductBase, quantity) {
-        var machine = this.getCurrentMachine();
-        var user = this.userService.getLoginUser();
+        var machine = this.storeService.getMachineData();
+        var user = this.storeService.getLoginUserData();
         var dt = {
             machineFormulaProductBaseId: taskId,
             formulaProductBase: { formulaProductBaseId: formulaProductBase.formulaProductBaseId },
@@ -5013,24 +5599,25 @@ var MachineService = /** @class */ (function () {
             quantity: quantity,
             status: status
         };
-        return this.http.post(_environments_environment__WEBPACK_IMPORTED_MODULE_5__["environment"].settings.serverendpoint + 'machine_formula/record', dt);
+        return this.http.post(_environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].settings.serverendpoint + 'machine_formula/record', dt);
     };
     MachineService.prototype.findAllDispenseTask = function () {
-        return this.http.get(_environments_environment__WEBPACK_IMPORTED_MODULE_5__["environment"].settings.serverendpoint + 'machine_formula/findAll/' + this.machine.machineId).pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (data) {
+        this.getCurrentMachine();
+        return this.http.get(_environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].settings.serverendpoint + 'machine_formula/findAll/' + this.machine.machineId).pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (data) {
             var listDispenseTaskLog = [];
             if (data) {
                 for (var _i = 0, data_3 = data; _i < data_3.length; _i++) {
                     var item = data_3[_i];
-                    listDispenseTaskLog.push(_utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_3__["default"].convertToDispenseFormulaProductBaseModel(item));
+                    listDispenseTaskLog.push(_utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_2__["default"].convertToDispenseFormulaProductBaseModel(item));
                 }
             }
             return listDispenseTaskLog;
-        }), Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(function (e) {
+        }), Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(function (e) {
             return [];
         }));
     };
     MachineService.prototype.findDispenseTaskById = function (taskId) {
-        return this.http.get(_environments_environment__WEBPACK_IMPORTED_MODULE_5__["environment"].settings.serverendpoint + 'machine_formula/findById/' + taskId);
+        return this.http.get(_environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].settings.serverendpoint + 'machine_formula/findById/' + taskId);
     };
     /**
      * Validate số lượng colourant của machine có còn đủ để pha màu với cansize này hay không
@@ -5038,9 +5625,10 @@ var MachineService = /** @class */ (function () {
      * canSize: số lít
      */
     MachineService.prototype.validateQuantityColourant = function (canSize, listFormulaColorant, formular) {
+        this.getCurrentMachine();
         var machineId = this.machine.machineId;
         var baseOnCan = formular.baseOnCan ? formular.baseOnCan : 1; // nếu undefined thì default là 1;
-        return this.http.get(_environments_environment__WEBPACK_IMPORTED_MODULE_5__["environment"].settings.serverendpoint + 'machine/getColourants/' + machineId).pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (mColours) {
+        return this.http.get(_environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].settings.serverendpoint + 'machine/getColourants/' + machineId).pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (mColours) {
             // list colourant hiện có của machine
             var res = []; // kết quả trả về, danh sách màu không đủ
             var mapExistColours = {}; // tạo map colour với key là colourcode, value là số lượng còn lại
@@ -5060,24 +5648,25 @@ var MachineService = /** @class */ (function () {
         }));
     };
     MachineService.prototype.updateSettingMachine = function (minQuantity, warningQuantity) {
+        this.getCurrentMachine();
         var dt = {
             machineId: this.machine.machineId,
             minQuantity: minQuantity,
             warningQuantity: warningQuantity,
         };
-        return this.http.post(_environments_environment__WEBPACK_IMPORTED_MODULE_5__["environment"].settings.serverendpoint + 'machine/update', dt).pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (data) {
-            return _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_3__["default"].convertToMachineModel(data);
+        return this.http.post(_environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].settings.serverendpoint + 'machine/update', dt).pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (data) {
+            return _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_2__["default"].convertToMachineModel(data);
         }));
     };
     MachineService.prototype.updateMachineLocal = function (machine) {
         this.machine = machine;
-        this.userService.updateMachineLocal(this.machine);
+        this.storeService.updateMachineData(this.machine);
     };
     MachineService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
             providedIn: 'root'
         }),
-        __metadata("design:paramtypes", [_shared_http_services_http_service__WEBPACK_IMPORTED_MODULE_1__["HttpService"], _user_user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"], _angular_router__WEBPACK_IMPORTED_MODULE_6__["Router"]])
+        __metadata("design:paramtypes", [_shared_http_services_http_service__WEBPACK_IMPORTED_MODULE_1__["HttpService"], _store_store_service__WEBPACK_IMPORTED_MODULE_6__["StoreService"], _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"]])
     ], MachineService);
     return MachineService;
 }());
@@ -5156,6 +5745,20 @@ var ProductService = /** @class */ (function () {
             return (a < b ? -1 : 1) * (isAsc ? 1 : -1);
         }
     };
+    ProductService.prototype.getListProductBaseFromProduct = function (productId) {
+        return this.http.get(_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].settings.serverendpoint + 'product-base/findByProduct/' + productId).pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (data) {
+            var listItems = [];
+            if (data) {
+                for (var _i = 0, data_2 = data; _i < data_2.length; _i++) {
+                    var item = data_2[_i];
+                    listItems.push(_utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_4__["default"].convertToProductBaseModel(item));
+                }
+            }
+            return listItems;
+        }), Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])(function (e) {
+            return [];
+        }));
+    };
     ProductService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
             providedIn: 'root'
@@ -5209,6 +5812,57 @@ var ProductBaseService = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/services/store/store.service.ts":
+/*!*************************************************!*\
+  !*** ./src/app/services/store/store.service.ts ***!
+  \*************************************************/
+/*! exports provided: StoreService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StoreService", function() { return StoreService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var StoreService = /** @class */ (function () {
+    function StoreService() {
+        this.loginUser = null;
+        this.machine = null;
+    }
+    StoreService.prototype.updateLoginUserData = function (loginUser) {
+        this.loginUser = loginUser;
+    };
+    StoreService.prototype.updateMachineData = function (machine) {
+        this.machine = machine;
+    };
+    StoreService.prototype.getLoginUserData = function () {
+        return this.loginUser;
+    };
+    StoreService.prototype.getMachineData = function () {
+        return this.machine;
+    };
+    StoreService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+            providedIn: 'root'
+        }),
+        __metadata("design:paramtypes", [])
+    ], StoreService);
+    return StoreService;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/services/user/user.service.ts":
 /*!***********************************************!*\
   !*** ./src/app/services/user/user.service.ts ***!
@@ -5228,6 +5882,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../environments/environment */ "./src/environments/environment.ts");
 /* harmony import */ var _shared_http_services_http_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../shared/http/services/http.service */ "./src/app/shared/http/services/http.service.ts");
 /* harmony import */ var _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../utils/convert-models-utils */ "./src/app/utils/convert-models-utils.ts");
+/* harmony import */ var _store_store_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../store/store.service */ "./src/app/services/store/store.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -5244,11 +5899,13 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
 var UserService = /** @class */ (function () {
-    function UserService(http, router, cookieService) {
+    function UserService(http, router, cookieService, storeService) {
         this.http = http;
         this.router = router;
         this.cookieService = cookieService;
+        this.storeService = storeService;
         this.isLogin = false;
         this.userDTO = null;
         this.isAuthenticated();
@@ -5268,6 +5925,8 @@ var UserService = /** @class */ (function () {
             if (datas != null) {
                 _this.isLogin = true;
                 _this.userDTO = _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_6__["default"].convertToUserModel(datas);
+                _this.storeService.updateLoginUserData(_this.userDTO);
+                _this.storeService.updateMachineData(_this.userDTO.machine);
                 _this.cookieService.set_cookie('username', userName, 1);
                 _this.cookieService.set_cookie('password', password, 1);
                 _this.router.navigate(['/dashboard']);
@@ -5294,16 +5953,11 @@ var UserService = /** @class */ (function () {
         this.cookieService.delete_cookie('username');
         this.cookieService.delete_cookie('token');
     };
-    UserService.prototype.updateMachineLocal = function (machine) {
-        if (this.userDTO != null) {
-            this.userDTO.machine = machine;
-        }
-    };
     UserService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
             providedIn: 'root'
         }),
-        __metadata("design:paramtypes", [_shared_http_services_http_service__WEBPACK_IMPORTED_MODULE_5__["HttpService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], ng_cookie__WEBPACK_IMPORTED_MODULE_1__["CookieService"]])
+        __metadata("design:paramtypes", [_shared_http_services_http_service__WEBPACK_IMPORTED_MODULE_5__["HttpService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], ng_cookie__WEBPACK_IMPORTED_MODULE_1__["CookieService"], _store_store_service__WEBPACK_IMPORTED_MODULE_7__["StoreService"]])
     ], UserService);
     return UserService;
 }());
@@ -5587,6 +6241,7 @@ var ConvertModelUtils = /** @class */ (function () {
         formula.createdDate = object.createdDate;
         formula.createBy = object.createBy;
         formula.baseOnCan = object.baseOnCan;
+        formula.machine = object.machine != null ? ConvertModelUtils.convertToMachineModel(object.machine) : null;
         return formula;
     };
     ConvertModelUtils.convertToProductModel = function (object) {
@@ -5641,6 +6296,7 @@ var ConvertModelUtils = /** @class */ (function () {
         collection.collectionId = object.collectionId;
         collection.collectionName = object.collectionName;
         collection.description = object.description;
+        collection.machine = object.machine != null ? ConvertModelUtils.convertToMachineModel(object.machine) : null;
         return collection;
     };
     ConvertModelUtils.convertFormulaProductBaseModel = function (object) {
@@ -5658,13 +6314,6 @@ var ConvertModelUtils = /** @class */ (function () {
         productBase.rbgHex = object.rbgHex;
         productBase.density = object.density;
         return productBase;
-    };
-    ConvertModelUtils.convertToProductModel = function (object) {
-        var product = new _models_product__WEBPACK_IMPORTED_MODULE_4__["ProductModel"]();
-        product.productId = object.productId;
-        product.productCode = object.productCode;
-        product.productName = object.productName;
-        return product;
     };
     ConvertModelUtils.convertToBaseModel = function (object) {
         var base = new _models_base__WEBPACK_IMPORTED_MODULE_5__["BaseModel"]();
@@ -5716,6 +6365,51 @@ var ConvertModelUtils = /** @class */ (function () {
         item.finishedDate = object.finishedDate;
         item.status = object.status;
         return item;
+    };
+    ConvertModelUtils.convertToResponseMessageModel = function (object) {
+        var item = new _models_user_model__WEBPACK_IMPORTED_MODULE_7__["ResponseMessageModel"]();
+        item.type = object.type;
+        item.message = object.message;
+        return item;
+    };
+    ConvertModelUtils.convertToSavingFormulaProductBaseDBItem = function (formulaProductBaseId, formula, productBase, machine, formulaColourantList) {
+        var machineDbItem = {
+            machineId: machine.machineId
+        };
+        var formulaProductBaseDBItem = {
+            formulaProductBaseId: formulaProductBaseId,
+            formula: ConvertModelUtils.convertToFormulaDBItem(formula),
+            productBase: { productBaseId: productBase.productBaseId }
+        };
+        var formulaColourantListDBItem = [];
+        for (var _i = 0, formulaColourantList_1 = formulaColourantList; _i < formulaColourantList_1.length; _i++) {
+            var item = formulaColourantList_1[_i];
+            if (item.quantity != null && item.quantity > 0) {
+                formulaColourantListDBItem.push(ConvertModelUtils.convertToFormulaColourantDBItem(item));
+            }
+        }
+        return {
+            formulaProductBase: formulaProductBaseDBItem,
+            machine: machineDbItem,
+            formulaColourantList: formulaColourantListDBItem,
+        };
+    };
+    ConvertModelUtils.convertToFormulaDBItem = function (formula) {
+        return {
+            formulaId: formula.formulaId,
+            formulaCode: formula.formulaCode,
+            formulaName: formula.formulaName,
+            collection: { collectionId: formula.collection.collectionId },
+            baseOnCan: formula.baseOnCan,
+        };
+    };
+    ConvertModelUtils.convertToFormulaColourantDBItem = function (formulaColourant) {
+        return {
+            formulaColourantId: formulaColourant.formulaColourantId,
+            colourant: { colourantId: formulaColourant.colourant.colourantId },
+            formula: { formulaId: formulaColourant.formula.formulaId },
+            quantity: formulaColourant.quantity,
+        };
     };
     return ConvertModelUtils;
 }());
@@ -5806,7 +6500,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\Workspace\HDBS\clientvietpower\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! G:\Workspace\clientvietpower\src\main.ts */"./src/main.ts");
 
 
 /***/ })
