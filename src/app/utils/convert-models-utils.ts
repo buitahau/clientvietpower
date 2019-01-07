@@ -33,6 +33,7 @@ export default class ConvertModelUtils {
     formula.createdDate = object.createdDate;
     formula.createBy = object.createBy;
     formula.baseOnCan = object.baseOnCan;
+    formula.machine = object.machine != null ? ConvertModelUtils.convertToMachineModel(object.machine) : null;
     return formula;
   }
 
@@ -222,8 +223,8 @@ export default class ConvertModelUtils {
     return {
       formulaColourantId: formulaColourant.formulaColourantId,
       colourant: {colourantId: formulaColourant.colourant.colourantId},
-      formula : {formulaId: formulaColourant.formula.formulaId},
-      quantity : formulaColourant.quantity,
+      formula: {formulaId: formulaColourant.formula.formulaId},
+      quantity: formulaColourant.quantity,
     };
   }
 }

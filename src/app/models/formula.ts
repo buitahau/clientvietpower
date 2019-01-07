@@ -1,4 +1,5 @@
 import {CollectionModel} from './collection';
+import {MachineModel} from './user.model';
 
 export class FormulaModel {
   private _formulaId: number;
@@ -8,6 +9,7 @@ export class FormulaModel {
   private _createdDate: Date;
   private _createBy: any | null;
   private _baseOnCan: number | 1;
+  private _machine: MachineModel;
 
   get baseOnCan(): number {
     return this._baseOnCan;
@@ -64,5 +66,13 @@ export class FormulaModel {
 
   set createBy(value: any | null) {
     this._createBy = value;
+  }
+
+  get machine(): MachineModel {
+    return this._machine;
+  }
+
+  set machine(value: MachineModel) {
+    this._machine = value;
   }
 }
