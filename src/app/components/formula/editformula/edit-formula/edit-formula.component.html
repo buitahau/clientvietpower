@@ -132,7 +132,7 @@
                   <div class="form-group row">
                     <label class="col-md-4 label-control">Product</label>
                     <div class="col-md-8">
-                      <select class="form-control form-control-sm select-sm" [(ngModel)]="dbItem.productBase.product.productId" [ngModelOptions]="{standalone: true}" (change)="getListProductBase()">
+                      <select class="form-control form-control-sm select-sm" [(ngModel)]="selectedProductId" [ngModelOptions]="{standalone: true}" (change)="getListProductBase()">
                         <option [ngValue]="undefined">Choose Product</option>
                         <option *ngFor="let c of listProducts" value="{{c.productId}}">{{c.productCode}}</option>
                       </select>

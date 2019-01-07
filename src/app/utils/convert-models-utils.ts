@@ -179,7 +179,9 @@ export default class ConvertModelUtils {
     return item;
   }
 
-  static convertToSavingFormulaProductBaseDBItem(formulaProductBase: FormulaProductBaseModel,
+  static convertToSavingFormulaProductBaseDBItem(formulaProductBaseId: number,
+                                                 formula: FormulaModel,
+                                                 productBase: ProductBaseModel,
                                                  machine: MachineModel,
                                                  formulaColourantList: FormulaColourantModel[]) {
     const machineDbItem = {
@@ -187,9 +189,9 @@ export default class ConvertModelUtils {
     };
 
     const formulaProductBaseDBItem = {
-      formulaProductBaseId: formulaProductBase.formulaProductBaseId,
-      formula: ConvertModelUtils.convertToFormulaDBItem(formulaProductBase.formula),
-      productBase: {productBaseId: formulaProductBase.productBase.productBaseId}
+      formulaProductBaseId: formulaProductBaseId,
+      formula: ConvertModelUtils.convertToFormulaDBItem(formula),
+      productBase: {productBaseId: productBase.productBaseId}
     };
 
     const formulaColourantListDBItem = [];

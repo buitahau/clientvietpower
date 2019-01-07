@@ -20,6 +20,10 @@ export class EditFormulaComponent implements OnInit {
   formulaProductBaseId: number;
   selectedProductId: number;
   selectedProductBaseId: number;
+
+  selectedProduct: ProductModel;
+  selectedProductBase: ProductBaseModel;
+
   viewMode: string = null;
   dbItem: FormulaProductBaseModel = null;
   listProducts: ProductModel[] = null;
@@ -62,8 +66,11 @@ export class EditFormulaComponent implements OnInit {
   loadCurrentFormulaProductBase() {
     this.formulaService.findFormulaProductBaseById(this.formulaProductBaseId).subscribe((data: any) => {
       this.dbItem = data;
-      this.selectedProductBaseId = this.dbItem.productBase.productBaseId;
-      this.selectedProductId = this.dbItem.productBase.product;
+      this.selectedProductBase = this.dbItem.productBase;
+      this.selectedProduct = this.dbItem.productBase.product;
+
+      this.selectedProductBaseId = this.selectedProductBase.productBaseId;
+      this.selectedProductId = this.selectedProduct.productId;
 
       this.getListProductBase();
       this.loadColourantDatas();
@@ -82,29 +89,31 @@ export class EditFormulaComponent implements OnInit {
     });
   }
 
-  updateCurrentProduct() {
-    const selected = this.listProductBases.filter((item) => {
-      return item.productBaseId == this.selectedProductBaseId && item.product.productId === this.dbItem.productBase.product.productId;
-    });
-  }
-
   getListProductBase() {
+    const selectedProduct = this.listProducts.find((item) => {
+      return item.productId == this.selectedProductId;
+    });
+
+    if (selectedProduct != null) {
+      this.selectedProduct = selectedProduct;
+      this.dbItem.productBase.product = this.selectedProduct;
+    }
+
     this.listProductBases = [];
-    this.productService.getListProductBaseFromProduct(this.dbItem.productBase.product.productId).subscribe(datas => {
+    this.productService.getListProductBaseFromProduct(this.selectedProductId).subscribe(datas => {
       this.listProductBases = datas;
       console.log(this.dbItem.productBase.product);
     });
   }
 
   updateCurrentProductBase() {
-    const selected = this.listProductBases.filter((item) => {
-      return item.productBaseId == this.selectedProductBaseId && item.product.productId === this.dbItem.productBase.product.productId;
+    const selectedProductBase = this.listProductBases.find((item) => {
+      return item.productBaseId == this.selectedProductBaseId && item.product.productId == this.selectedProductId;
     });
 
-    if (selected != null && selected.length > 0) {
-      console.log(selected);
-
-      this.dbItem.productBase = selected[0];
+    if (selectedProductBase != null) {
+      this.selectedProductBase = selectedProductBase;
+      this.dbItem.productBase = this.selectedProductBase;
     }
   }
 
@@ -149,21 +158,12 @@ export class EditFormulaComponent implements OnInit {
       }
     }
     return maxQuantity;
-    //
-    // return listFormulaColorant.reduce(function (p: FormulaColourantModel, v: FormulaColourantModel) {
-    //   const p_quantity = p.quantity == null ? 0 : p.quantity;
-    //   const v_quantity = v.quantity == null ? 0 : v.quantity;
-    //   return (p_quantity >= v_quantity ? p_quantity : v_quantity );
-    // });
-  }
-
-  logChangeValue() {
-    console.log(this.dbItem);
-    console.log(this.listColourants);
   }
 
   saveOrUpdateFormula() {
-    this.formulaService.saveOrUpdateFormulaData(this.dbItem, this.listColourants).subscribe((datas) => {
+    console.log('..................');
+    this.formulaService.saveOrUpdateFormulaData(this.dbItem.formulaProductBaseId, this.dbItem.formula, this.selectedProductBase,
+      this.listColourants).subscribe((datas) => {
       console.log(datas);
     });
   }

@@ -6,6 +6,7 @@ import ConvertModelUtils from '../../utils/convert-models-utils';
 import {FormulaModel} from '../../models/formula';
 import {FormulaColourantModel, FormulaProductBaseModel} from '../../models/formula_product_base';
 import {StoreService} from '../store/store.service';
+import {ProductBaseModel} from '../../models/product_base';
 
 @Injectable({
   providedIn: 'root'
@@ -139,8 +140,8 @@ export class FormulaService {
     );
   }
 
-  saveOrUpdateFormulaData(dbItem: FormulaProductBaseModel, listColourants: FormulaColourantModel[]) {
-    const savingItem = ConvertModelUtils.convertToSavingFormulaProductBaseDBItem(dbItem, this.storeService.getMachineData(), listColourants);
+  saveOrUpdateFormulaData(formulaProductBaseId: number, formula: FormulaModel, productBase: ProductBaseModel, listColourants: FormulaColourantModel[]) {
+    const savingItem = ConvertModelUtils.convertToSavingFormulaProductBaseDBItem(formulaProductBaseId, formula, productBase, this.storeService.getMachineData(), listColourants);
 
     return this.http.post(environment.settings.serverendpoint + 'machine_formula/saveOrUpdate', savingItem).pipe(
       map((data: any) => {
