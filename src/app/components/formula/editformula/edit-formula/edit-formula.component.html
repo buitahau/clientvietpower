@@ -15,22 +15,32 @@
             <div class="form-group row">
               <label class="col-md-2 label-control">Formula Code</label>
               <div class="input-group input-group-sm col-md-4">
-                <input type="text" [(ngModel)]="dbItem.formula.formulaCode" class="form-control" [ngModelOptions]="{standalone: true}">
+                <input type="text" [(ngModel)]="dbItem.formula.formulaCode" class="form-control" [ngModelOptions]="{standalone: true}" (change)="clearErrorField('formulaCode')">
+                <ng-container *ngIf="errorValidation['formulaCode'] != null">
+                  <span class="error-label">{{errorValidation['formulaCode']}}</span>
+                </ng-container>
               </div>
 
               <label class="col-md-2 label-control">Formula name</label>
               <div class="input-group input-group-sm col-md-4">
-                <input type="text" [(ngModel)]="dbItem.formula.formulaName" class="form-control" [ngModelOptions]="{standalone: true}">
+                <input type="text" [(ngModel)]="dbItem.formula.formulaName" class="form-control" [ngModelOptions]="{standalone: true}" (change)="clearErrorField('formulaName')">
+                <ng-container *ngIf="errorValidation['formulaName'] != null">
+                  <span class="error-label">{{errorValidation['formulaName']}}</span>
+                </ng-container>
               </div>
             </div>
 
             <div class="form-group row">
               <label class="col-md-2 label-control">Collection</label>
               <div class="col-md-4">
-                <select class="form-control form-control-sm select-sm" [(ngModel)]="dbItem.formula.collection.collectionId" [ngModelOptions]="{standalone: true}">
+                <select class="form-control form-control-sm select-sm" [(ngModel)]="dbItem.formula.collection.collectionId" [ngModelOptions]="{standalone: true}"  (change)="clearErrorField('collectionId')">
                   <option [ngValue]="undefined">Choose Collection</option>
-                  <option *ngFor="let c of listCollections" value="{{c.collectionId}}">{{c.collectionName}}</option>
+                  <option *ngFor="let c of listCollections" [ngValue]="c.collectionId">{{c.collectionName}}</option>
                 </select>
+
+                <ng-container *ngIf="errorValidation['collectionId'] != null">
+                  <span class="error-label">{{errorValidation['collectionId']}}</span>
+                </ng-container>
               </div>
 
               <label class="col-md-2 label-control">Product</label>
@@ -42,7 +52,11 @@
             <div class="form-group row">
               <label class="col-md-2 label-control">Approximate color</label>
               <div class="col-md-4">
-                <input [(colorPicker)]="dbItem.formula.approximateColor" [style.background]="dbItem.formula.approximateColor">
+                <input [value]="dbItem.formula.approximateColor" [style.background]="dbItem.formula.approximateColor" [(colorPicker)]="dbItem.formula.approximateColor" (colorPickerChange)="clearErrorField('approximateColor')"/>
+
+                <ng-container *ngIf="errorValidation['approximateColor'] != null">
+                  <span class="error-label">{{errorValidation['approximateColor']}}</span>
+                </ng-container>
               </div>
 
               <label class="col-md-2 label-control">Formula Date</label>
@@ -109,11 +123,15 @@
                   <h4>Contents</h4>
                 </div>
                 <div class="col-md-12">
+                  <ng-container *ngIf="errorValidation['listColourants'] != null">
+                    <span class="error-label">{{errorValidation['listColourants']}}</span>
+                  </ng-container>
                   <app-table-colourants [listFormulaColorant]="listColourants" [canSize]="1" [baseOnCan]="dbItem.formula.baseOnCan" [maxColorQuantity]="getMaxColourantValue(listColourants)"></app-table-colourants>
                 </div>
 
                 <div class="col-md-12">
-                  <hr />
+                  <br />
+                  <br />
                 </div>
 
                 <div class="col-md-12">
@@ -132,20 +150,40 @@
                   <div class="form-group row">
                     <label class="col-md-4 label-control">Product</label>
                     <div class="col-md-8">
-                      <select class="form-control form-control-sm select-sm" [(ngModel)]="selectedProductId" [ngModelOptions]="{standalone: true}" (change)="getListProductBase()">
+                      <select class="form-control form-control-sm select-sm" [(ngModel)]="selectedProductId" [ngModelOptions]="{standalone: true}" (change)="getListProductBase(); clearErrorField('productId')">
                         <option [ngValue]="undefined">Choose Product</option>
-                        <option *ngFor="let c of listProducts" value="{{c.productId}}">{{c.productCode}}</option>
+                        <option *ngFor="let c of listProducts" [ngValue]="c.productId">{{c.productCode}}</option>
                       </select>
+
+                      <ng-container *ngIf="errorValidation['productId'] != null">
+                        <span class="error-label">{{errorValidation['productId']}}</span>
+                      </ng-container>
                     </div>
                   </div>
 
                   <div class="form-group row">
                     <label class="col-md-4 label-control">Base</label>
                     <div class="col-md-8">
-                      <select class="form-control form-control-sm select-sm" [(ngModel)]="selectedProductBaseId" [ngModelOptions]="{standalone: true}" (change)="updateCurrentProductBase()">
+                      <select class="form-control form-control-sm select-sm" [(ngModel)]="selectedProductBaseId" [ngModelOptions]="{standalone: true}" (change)="updateCurrentProductBase(); clearErrorField('baseId')">
                         <option [ngValue]="undefined">Choose Base</option>
-                        <option *ngFor="let pb of listProductBases" value="{{pb.productBaseId}}">{{pb.base.baseName}} ({{pb.base.baseCode}})</option>
+                        <option *ngFor="let pb of listProductBases" [ngValue]="pb.productBaseId">{{pb.base.baseName}} ({{pb.base.baseCode}})</option>
                       </select>
+
+                      <ng-container *ngIf="errorValidation['baseId'] != null">
+                        <span class="error-label">{{errorValidation['baseId']}}</span>
+                      </ng-container>
+                    </div>
+                  </div>
+
+
+                  <div class="form-group row">
+                    <label class="col-md-4 label-control">Base On Can</label>
+                    <div class="col-md-8">
+                      <input type="number" [(ngModel)]="dbItem.formula.baseOnCan" [ngModelOptions]="{standalone: true}"  (change)="updateCurrentProductBase(); clearErrorField('baseOnCan')"/>
+
+                      <ng-container *ngIf="errorValidation['baseOnCan'] != null">
+                        <span class="error-label">{{errorValidation['baseOnCan']}}</span>
+                      </ng-container>
                     </div>
                   </div>
                 </div>
@@ -163,7 +201,7 @@
                         <span class="colour-bar" [ngStyle]="{'background': colour.colourant.rbgHex}">{{colour.colourant.colourantCode}} : {{colour.colourant.colourantName}}</span>
                       </label>
                       <div class="col-md-4">
-                        <input type="number" [(ngModel)]="colour.quantity" class="form-control" [ngModelOptions]="{standalone: true}">
+                        <input type="number" [(ngModel)]="colour.quantity" class="form-control" [ngModelOptions]="{standalone: true}"  (change)="clearErrorField('listColourants')">
                       </div>
                     </div>
                   </div>
@@ -176,3 +214,31 @@
     </div>
   </div>
 </div>
+
+
+<ng-container *ngIf="updateMessage != null">
+  <pp-modal id="show-update-formula-model" class="modal show-update-formula-model">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">{{updateMessage.title}}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="closeModal('show-update-formula-model')">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        {{updateMessage.message}}
+      </div>
+
+      <div class="modal-footer">
+        <ng-container *ngIf="updateMessage.title == 'Error'">
+          <button type="button" class="btn btn-default" (click)="closeModal('show-update-formula-model')">Close</button>
+        </ng-container>
+
+        <ng-container *ngIf="updateMessage.title != 'Error'">
+          <button type="button" class="btn btn-primary" (click)="closeModal('show-update-formula-model')">OK</button>
+        </ng-container>
+      </div>
+    </div>
+  </pp-modal>
+</ng-container>

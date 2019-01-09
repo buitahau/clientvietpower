@@ -219,6 +219,9 @@ export default class ConvertModelUtils {
       formulaName: formula.formulaName,
       collection: {collectionId: formula.collection.collectionId},
       baseOnCan: formula.baseOnCan,
+      approximateColor: formula.approximateColor,
+      substrate: formula.substrate,
+      comment: formula.comment,
     };
   }
 
