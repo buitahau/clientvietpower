@@ -42,7 +42,7 @@
             <div class="form-group row">
               <label class="col-md-2 label-control">Approximate color</label>
               <div class="col-md-4">
-                <input [(colorPicker)]="dbItem.productBase.rbgHex" [style.background]="dbItem.productBase.rbgHex">
+                <input [(colorPicker)]="dbItem.formula.approximateColor" [style.background]="dbItem.formula.approximateColor">
               </div>
 
               <label class="col-md-2 label-control">Formula Date</label>
@@ -54,7 +54,7 @@
             <div class="form-group row">
               <label class="col-md-2 label-control">Substrate</label>
               <div class="col-md-4">
-
+                <input type="text" [(ngModel)]="dbItem.formula.substrate" class="form-control" [ngModelOptions]="{standalone: true}">
               </div>
 
               <label class="col-md-2 label-control">Barcode</label>
@@ -66,7 +66,7 @@
             <div class="form-group row">
               <label class="col-md-2 label-control">Comment</label>
               <div class="col-md-9">
-                <textarea [(ngModel)]="dbItem.formula.comments" [ngModelOptions]="{standalone: true}" [ngStyle]="{'width': '100%', 'min-height': (1.2 * 4) +'em'}">{{dbItem.formula.comments}}</textarea>
+                <textarea [(ngModel)]="dbItem.formula.comment" [ngModelOptions]="{standalone: true}" [ngStyle]="{'width': '100%', 'min-height': (1.2 * 4) +'em'}">{{dbItem.formula.comment}}</textarea>
               </div>
             </div>
           </div>

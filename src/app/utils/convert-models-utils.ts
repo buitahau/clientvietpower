@@ -34,6 +34,9 @@ export default class ConvertModelUtils {
     formula.createBy = object.createBy;
     formula.baseOnCan = object.baseOnCan;
     formula.machine = object.machine != null ? ConvertModelUtils.convertToMachineModel(object.machine) : null;
+    formula.approximateColor = object.approximateColor;
+    formula.comment = object.comment;
+    formula.substrate = object.substrate;
     return formula;
   }
 

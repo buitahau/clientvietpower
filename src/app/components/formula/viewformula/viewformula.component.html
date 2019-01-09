@@ -27,7 +27,7 @@
         <div class="form-group row">
           <label class="col-md-4 label-control">Approximate Color</label>
           <div class="col-md-8">
-            <span [ngStyle]="{'background': dbItem.productBase.rbgHex, 'display': 'inline-block', 'width': '30px', 'height': '30px', 'border': '1px solid #333'}"></span>
+            <span [ngStyle]="{'background': dbItem.formula.approximateColor, 'display': 'inline-block', 'width': '30px', 'height': '30px', 'border': '1px solid #333'}"></span>
           </div>
         </div>
 
@@ -48,14 +48,14 @@
         <div class="form-group row">
           <label class="col-md-4 label-control">Substrate</label>
           <div class="col-md-8">
-            substrate???/
+            {{dbItem.formula.substrate}}
           </div>
         </div>
 
         <div class="form-group row">
-          <label class="col-md-4 label-control">Comments</label>
+          <label class="col-md-4 label-control">Comment</label>
           <div class="col-md-8">
-            {{dbItem.formula.comments}}
+            {{dbItem.formula.comment}}
           </div>
         </div>
 

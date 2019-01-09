@@ -10,6 +10,9 @@ export class FormulaModel {
   private _createBy: any | null;
   private _baseOnCan: number | 1;
   private _machine: MachineModel;
+  private _approximateColor: string;
+  private _substrate: string;
+  private _comment: string;
 
   get baseOnCan(): number {
     return this._baseOnCan;
@@ -74,5 +77,29 @@ export class FormulaModel {
 
   set machine(value: MachineModel) {
     this._machine = value;
+  }
+
+  get approximateColor(): string {
+    return this._approximateColor;
+  }
+
+  set approximateColor(value: string) {
+    this._approximateColor = value;
+  }
+
+  get substrate(): string {
+    return this._substrate;
+  }
+
+  set substrate(value: string) {
+    this._substrate = value;
+  }
+
+  get comment(): string {
+    return this._comment;
+  }
+
+  set comment(value: string) {
+    this._comment = value;
   }
 }
