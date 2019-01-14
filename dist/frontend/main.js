@@ -185,6 +185,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_formula_editformula_edit_formula_edit_formula_component__WEBPACK_IMPORTED_MODULE_53__ = __webpack_require__(/*! ./components/formula/editformula/edit-formula/edit-formula.component */ "./src/app/components/formula/editformula/edit-formula/edit-formula.component.ts");
 /* harmony import */ var _directions_product_tablecolourant_table_colourants_component__WEBPACK_IMPORTED_MODULE_54__ = __webpack_require__(/*! ./directions/product/tablecolourant/table-colourants.component */ "./src/app/directions/product/tablecolourant/table-colourants.component.ts");
 /* harmony import */ var _directions_product_base_can_base_can_component__WEBPACK_IMPORTED_MODULE_55__ = __webpack_require__(/*! ./directions/product/base-can/base-can.component */ "./src/app/directions/product/base-can/base-can.component.ts");
+/* harmony import */ var _components_setting_customer_customer_component__WEBPACK_IMPORTED_MODULE_56__ = __webpack_require__(/*! ./components/setting/customer/customer.component */ "./src/app/components/setting/customer/customer.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -252,6 +253,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
 var routes = [
     { 'path': '', redirectTo: 'login', pathMatch: 'full' },
     { 'path': 'index', component: _components_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_31__["DashboardComponent"] },
@@ -267,6 +269,7 @@ var routes = [
             { path: 'base', component: _components_setting_base_base_component__WEBPACK_IMPORTED_MODULE_38__["BaseComponent"] },
             { path: 'collection', component: _components_setting_collection_collection_component__WEBPACK_IMPORTED_MODULE_39__["CollectionComponent"] },
             { path: 'product', component: _components_setting_product_product_component__WEBPACK_IMPORTED_MODULE_40__["ProductComponent"] },
+            { path: 'customer', component: _components_setting_customer_customer_component__WEBPACK_IMPORTED_MODULE_56__["CustomerComponent"] },
             // {path: 'product/view-detail/:id', component: ViewDetailComponent},
             { path: 'formula', component: _components_formula_listformula_formula_component__WEBPACK_IMPORTED_MODULE_41__["FormulaComponent"] },
             { path: 'view-formula/:id', component: _components_formula_viewformula_viewformula_component__WEBPACK_IMPORTED_MODULE_42__["ViewFormulaComponent"] },
@@ -314,6 +317,7 @@ var AppModule = /** @class */ (function () {
                 _components_setting_base_base_component__WEBPACK_IMPORTED_MODULE_38__["BaseComponent"],
                 _components_setting_collection_collection_component__WEBPACK_IMPORTED_MODULE_39__["CollectionComponent"],
                 _components_setting_product_product_component__WEBPACK_IMPORTED_MODULE_40__["ProductComponent"],
+                _components_setting_customer_customer_component__WEBPACK_IMPORTED_MODULE_56__["CustomerComponent"],
                 _components_setting_productbase_productbase_component__WEBPACK_IMPORTED_MODULE_50__["ProductbaseComponent"],
                 _directions_product_viewdetail_viewdetail_component__WEBPACK_IMPORTED_MODULE_47__["ViewDetailComponent"],
                 // formula component
@@ -611,7 +615,7 @@ var DashboardComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"block-header\">\n  <h1>{{viewMode}} Formula</h1>\n</div>\n\n<div class=\"row\" *ngIf=\"dbItem != null\">\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n    <div class=\"card filter-card\">\n      <div class=\"card-header\">\n        Standard Formula\n      </div>\n\n      <div class=\"card-body\">\n        <form class=\"form form-horizontal form-detail\">\n          <div class=\"form-body\">\n            <div class=\"form-group row\">\n              <label class=\"col-md-2 label-control\">Formula Code</label>\n              <div class=\"input-group input-group-sm col-md-4\">\n                <input type=\"text\" [(ngModel)]=\"dbItem.formula.formulaCode\" class=\"form-control\" [ngModelOptions]=\"{standalone: true}\">\n              </div>\n\n              <label class=\"col-md-2 label-control\">Formula name</label>\n              <div class=\"input-group input-group-sm col-md-4\">\n                <input type=\"text\" [(ngModel)]=\"dbItem.formula.formulaName\" class=\"form-control\" [ngModelOptions]=\"{standalone: true}\">\n              </div>\n            </div>\n\n            <div class=\"form-group row\">\n              <label class=\"col-md-2 label-control\">Collection</label>\n              <div class=\"col-md-4\">\n                <select class=\"form-control form-control-sm select-sm\" [(ngModel)]=\"dbItem.formula.collection.collectionId\" [ngModelOptions]=\"{standalone: true}\">\n                  <option [ngValue]=\"undefined\">Choose Collection</option>\n                  <option *ngFor=\"let c of listCollections\" value=\"{{c.collectionId}}\">{{c.collectionName}}</option>\n                </select>\n              </div>\n\n              <label class=\"col-md-2 label-control\">Product</label>\n              <div class=\"col-md-4\">\n                {{dbItem.productBase.product.productCode}} : {{dbItem.productBase.product.productName}}\n              </div>\n            </div>\n\n            <div class=\"form-group row\">\n              <label class=\"col-md-2 label-control\">Approximate color</label>\n              <div class=\"col-md-4\">\n                <input [(colorPicker)]=\"dbItem.productBase.rbgHex\" [style.background]=\"dbItem.productBase.rbgHex\">\n              </div>\n\n              <label class=\"col-md-2 label-control\">Formula Date</label>\n              <div class=\"col-md-4\">\n                {{dbItem.formula.createdDate | date : 'dd/MM/yyyy'}}\n              </div>\n            </div>\n\n            <div class=\"form-group row\">\n              <label class=\"col-md-2 label-control\">Substrate</label>\n              <div class=\"col-md-4\">\n\n              </div>\n\n              <label class=\"col-md-2 label-control\">Barcode</label>\n              <div class=\"col-md-4\">\n                <!--{{dbItem.productBase.product}}-->\n              </div>\n            </div>\n\n            <div class=\"form-group row\">\n              <label class=\"col-md-2 label-control\">Comment</label>\n              <div class=\"col-md-9\">\n                <textarea [(ngModel)]=\"dbItem.formula.comments\" [ngModelOptions]=\"{standalone: true}\" [ngStyle]=\"{'width': '100%', 'min-height': (1.2 * 4) +'em'}\">{{dbItem.formula.comments}}</textarea>\n              </div>\n            </div>\n          </div>\n        </form>\n      </div>\n\n      <div class=\"card-footer\">\n        <div class=\"row\">\n          <label class=\"col-md-3 label-control\"></label>\n          <div class=\"col-md-9\">\n            <button class=\"btn btn-primary mr-3\" (click)=\"saveOrUpdateFormula()\">\n              <span *ngIf=\"viewMode == 'Add'\">Save</span>\n              <span *ngIf=\"viewMode == 'Edit'\">Update</span>\n            </button>\n\n            <button class=\"btn btn-default mr-3\" (click)=\"goToFormulaPage()\">\n              Back\n            </button>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n\n<div class=\"row\" *ngIf=\"dbItem != null && listColourants != null\">\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n    <div class=\"card filter-card\">\n      <div class=\"card-header\">\n        Formula Detail\n      </div>\n\n      <div class=\"card-body\">\n        <form class=\"form form-horizontal form-detail\">\n          <div class=\"row\">\n            <div class=\"col-md-6\">\n              <div class=\"row\">\n                <div class=\"card-subtitle col-md-12\">\n                  <h4>Contents</h4>\n                </div>\n                <div class=\"col-md-12\">\n                  <app-table-colourants [listFormulaColorant]=\"listColourants\" [canSize]=\"1\" [baseOnCan]=\"dbItem.formula.baseOnCan\" [maxColorQuantity]=\"getMaxColourantValue(listColourants)\"></app-table-colourants>\n                </div>\n\n                <div class=\"col-md-12\">\n                  <hr />\n                </div>\n\n                <div class=\"col-md-12\">\n                  <app-base-can [productBase]=\"dbItem.productBase\" [canSize]=\"1\" [collection]=\"dbItem.formula.collection\"></app-base-can>\n                </div>\n              </div>\n            </div>\n\n            <div class=\"col-md-6\">\n              <div class=\"row\">\n                <div class=\"card-subtitle col-md-12\">\n                  <h4>Components</h4>\n                </div>\n\n                <div class=\"col-md-12\">\n                  <div class=\"form-group row\">\n                    <label class=\"col-md-4 label-control\">Product</label>\n                    <div class=\"col-md-8\">\n                      <select class=\"form-control form-control-sm select-sm\" [(ngModel)]=\"selectedProductId\" [ngModelOptions]=\"{standalone: true}\" (change)=\"getListProductBase()\">\n                        <option [ngValue]=\"undefined\">Choose Product</option>\n                        <option *ngFor=\"let c of listProducts\" value=\"{{c.productId}}\">{{c.productCode}}</option>\n                      </select>\n                    </div>\n                  </div>\n\n                  <div class=\"form-group row\">\n                    <label class=\"col-md-4 label-control\">Base</label>\n                    <div class=\"col-md-8\">\n                      <select class=\"form-control form-control-sm select-sm\" [(ngModel)]=\"selectedProductBaseId\" [ngModelOptions]=\"{standalone: true}\" (change)=\"updateCurrentProductBase()\">\n                        <option [ngValue]=\"undefined\">Choose Base</option>\n                        <option *ngFor=\"let pb of listProductBases\" value=\"{{pb.productBaseId}}\">{{pb.base.baseName}} ({{pb.base.baseCode}})</option>\n                      </select>\n                    </div>\n                  </div>\n                </div>\n              </div>\n\n              <div class=\"row\">\n                <div class=\"card-subtitle col-md-12\">\n                  <h4>Colourants</h4>\n                </div>\n\n                <ng-container *ngFor=\"let colour of listColourants\">\n                  <div class=\"col-md-6 colourant-group\">\n                    <div class=\"row\">\n                      <label class=\"col-md-8 label-control\">\n                        <span class=\"colour-bar\" [ngStyle]=\"{'background': colour.colourant.rbgHex}\">{{colour.colourant.colourantCode}} : {{colour.colourant.colourantName}}</span>\n                      </label>\n                      <div class=\"col-md-4\">\n                        <input type=\"number\" [(ngModel)]=\"colour.quantity\" class=\"form-control\" [ngModelOptions]=\"{standalone: true}\">\n                      </div>\n                    </div>\n                  </div>\n                </ng-container>\n              </div>\n            </div>\n          </div>\n        </form>\n      </div>\n    </div>\n  </div>\n</div>\n"
+module.exports = "<div class=\"block-header\">\n  <h1>{{viewMode}} Formula</h1>\n</div>\n\n<div class=\"row\" *ngIf=\"dbItem != null\">\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n    <div class=\"card filter-card\">\n      <div class=\"card-header\">\n        Standard Formula\n      </div>\n\n      <div class=\"card-body\">\n        <form class=\"form form-horizontal form-detail\">\n          <div class=\"form-body\">\n            <div class=\"form-group row\">\n              <label class=\"col-md-2 label-control\">Formula Code</label>\n              <div class=\"input-group input-group-sm col-md-4\">\n                <input type=\"text\" [(ngModel)]=\"dbItem.formula.formulaCode\" class=\"form-control\" [ngModelOptions]=\"{standalone: true}\" (change)=\"clearErrorField('formulaCode')\">\n                <ng-container *ngIf=\"errorValidation['formulaCode'] != null\">\n                  <span class=\"error-label\">{{errorValidation['formulaCode']}}</span>\n                </ng-container>\n              </div>\n\n              <label class=\"col-md-2 label-control\">Formula name</label>\n              <div class=\"input-group input-group-sm col-md-4\">\n                <input type=\"text\" [(ngModel)]=\"dbItem.formula.formulaName\" class=\"form-control\" [ngModelOptions]=\"{standalone: true}\" (change)=\"clearErrorField('formulaName')\">\n                <ng-container *ngIf=\"errorValidation['formulaName'] != null\">\n                  <span class=\"error-label\">{{errorValidation['formulaName']}}</span>\n                </ng-container>\n              </div>\n            </div>\n\n            <div class=\"form-group row\">\n              <label class=\"col-md-2 label-control\">Collection</label>\n              <div class=\"col-md-4\">\n                <select class=\"form-control form-control-sm select-sm\" [(ngModel)]=\"dbItem.formula.collection.collectionId\" [ngModelOptions]=\"{standalone: true}\"  (change)=\"clearErrorField('collectionId')\">\n                  <option [ngValue]=\"undefined\">Choose Collection</option>\n                  <option *ngFor=\"let c of listCollections\" [ngValue]=\"c.collectionId\">{{c.collectionName}}</option>\n                </select>\n\n                <ng-container *ngIf=\"errorValidation['collectionId'] != null\">\n                  <span class=\"error-label\">{{errorValidation['collectionId']}}</span>\n                </ng-container>\n              </div>\n\n              <label class=\"col-md-2 label-control\">Product</label>\n              <div class=\"col-md-4\">\n                {{dbItem.productBase.product.productCode}} : {{dbItem.productBase.product.productName}}\n              </div>\n            </div>\n\n            <div class=\"form-group row\">\n              <label class=\"col-md-2 label-control\">Approximate color</label>\n              <div class=\"col-md-4\">\n                <input [value]=\"dbItem.formula.approximateColor\" [style.background]=\"dbItem.formula.approximateColor\" [(colorPicker)]=\"dbItem.formula.approximateColor\" (colorPickerChange)=\"clearErrorField('approximateColor')\"/>\n\n                <ng-container *ngIf=\"errorValidation['approximateColor'] != null\">\n                  <span class=\"error-label\">{{errorValidation['approximateColor']}}</span>\n                </ng-container>\n              </div>\n\n              <label class=\"col-md-2 label-control\">Formula Date</label>\n              <div class=\"col-md-4\">\n                {{dbItem.formula.createdDate | date : 'dd/MM/yyyy'}}\n              </div>\n            </div>\n\n            <div class=\"form-group row\">\n              <label class=\"col-md-2 label-control\">Substrate</label>\n              <div class=\"col-md-4\">\n                <input type=\"text\" [(ngModel)]=\"dbItem.formula.substrate\" class=\"form-control\" [ngModelOptions]=\"{standalone: true}\">\n              </div>\n\n              <label class=\"col-md-2 label-control\">Barcode</label>\n              <div class=\"col-md-4\">\n                <!--{{dbItem.productBase.product}}-->\n              </div>\n            </div>\n\n            <div class=\"form-group row\">\n              <label class=\"col-md-2 label-control\">Comment</label>\n              <div class=\"col-md-9\">\n                <textarea [(ngModel)]=\"dbItem.formula.comment\" [ngModelOptions]=\"{standalone: true}\" [ngStyle]=\"{'width': '100%', 'min-height': (1.2 * 4) +'em'}\">{{dbItem.formula.comment}}</textarea>\n              </div>\n            </div>\n          </div>\n        </form>\n      </div>\n\n      <div class=\"card-footer\">\n        <div class=\"row\">\n          <label class=\"col-md-3 label-control\"></label>\n          <div class=\"col-md-9\">\n            <button class=\"btn btn-primary mr-3\" (click)=\"saveOrUpdateFormula()\">\n              <span *ngIf=\"viewMode == 'Add'\">Save</span>\n              <span *ngIf=\"viewMode == 'Edit'\">Update</span>\n            </button>\n\n            <button class=\"btn btn-default mr-3\" (click)=\"goToFormulaPage()\">\n              Back\n            </button>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n\n<div class=\"row\" *ngIf=\"dbItem != null && listColourants != null\">\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n    <div class=\"card filter-card\">\n      <div class=\"card-header\">\n        Formula Detail\n      </div>\n\n      <div class=\"card-body\">\n        <form class=\"form form-horizontal form-detail\">\n          <div class=\"row\">\n            <div class=\"col-md-6\">\n              <div class=\"row\">\n                <div class=\"card-subtitle col-md-12\">\n                  <h4>Contents</h4>\n                </div>\n                <div class=\"col-md-12\">\n                  <ng-container *ngIf=\"errorValidation['listColourants'] != null\">\n                    <span class=\"error-label\">{{errorValidation['listColourants']}}</span>\n                  </ng-container>\n                  <app-table-colourants [listFormulaColorant]=\"listColourants\" [canSize]=\"1\" [baseOnCan]=\"dbItem.formula.baseOnCan\" [maxColorQuantity]=\"getMaxColourantValue(listColourants)\"></app-table-colourants>\n                </div>\n\n                <div class=\"col-md-12\">\n                  <br />\n                  <br />\n                </div>\n\n                <div class=\"col-md-12\">\n                  <app-base-can [productBase]=\"dbItem.productBase\" [canSize]=\"1\" [collection]=\"dbItem.formula.collection\"></app-base-can>\n                </div>\n              </div>\n            </div>\n\n            <div class=\"col-md-6\">\n              <div class=\"row\">\n                <div class=\"card-subtitle col-md-12\">\n                  <h4>Components</h4>\n                </div>\n\n                <div class=\"col-md-12\">\n                  <div class=\"form-group row\">\n                    <label class=\"col-md-4 label-control\">Product</label>\n                    <div class=\"col-md-8\">\n                      <select class=\"form-control form-control-sm select-sm\" [(ngModel)]=\"selectedProductId\" [ngModelOptions]=\"{standalone: true}\" (change)=\"getListProductBase(); clearErrorField('productId')\">\n                        <option [ngValue]=\"undefined\">Choose Product</option>\n                        <option *ngFor=\"let c of listProducts\" [ngValue]=\"c.productId\">{{c.productCode}}</option>\n                      </select>\n\n                      <ng-container *ngIf=\"errorValidation['productId'] != null\">\n                        <span class=\"error-label\">{{errorValidation['productId']}}</span>\n                      </ng-container>\n                    </div>\n                  </div>\n\n                  <div class=\"form-group row\">\n                    <label class=\"col-md-4 label-control\">Base</label>\n                    <div class=\"col-md-8\">\n                      <select class=\"form-control form-control-sm select-sm\" [(ngModel)]=\"selectedProductBaseId\" [ngModelOptions]=\"{standalone: true}\" (change)=\"updateCurrentProductBase(); clearErrorField('baseId')\">\n                        <option [ngValue]=\"undefined\">Choose Base</option>\n                        <option *ngFor=\"let pb of listProductBases\" [ngValue]=\"pb.productBaseId\">{{pb.base.baseName}} ({{pb.base.baseCode}})</option>\n                      </select>\n\n                      <ng-container *ngIf=\"errorValidation['baseId'] != null\">\n                        <span class=\"error-label\">{{errorValidation['baseId']}}</span>\n                      </ng-container>\n                    </div>\n                  </div>\n\n\n                  <div class=\"form-group row\">\n                    <label class=\"col-md-4 label-control\">Base On Can</label>\n                    <div class=\"col-md-8\">\n                      <input type=\"number\" [(ngModel)]=\"dbItem.formula.baseOnCan\" [ngModelOptions]=\"{standalone: true}\"  (change)=\"updateCurrentProductBase(); clearErrorField('baseOnCan')\"/>\n\n                      <ng-container *ngIf=\"errorValidation['baseOnCan'] != null\">\n                        <span class=\"error-label\">{{errorValidation['baseOnCan']}}</span>\n                      </ng-container>\n                    </div>\n                  </div>\n                </div>\n              </div>\n\n              <div class=\"row\">\n                <div class=\"card-subtitle col-md-12\">\n                  <h4>Colourants</h4>\n                </div>\n\n                <ng-container *ngFor=\"let colour of listColourants\">\n                  <div class=\"col-md-6 colourant-group\">\n                    <div class=\"row\">\n                      <label class=\"col-md-8 label-control\">\n                        <span class=\"colour-bar\" [ngStyle]=\"{'background': colour.colourant.rbgHex}\">{{colour.colourant.colourantCode}} : {{colour.colourant.colourantName}}</span>\n                      </label>\n                      <div class=\"col-md-4\">\n                        <input type=\"number\" [(ngModel)]=\"colour.quantity\" class=\"form-control\" [ngModelOptions]=\"{standalone: true}\"  (change)=\"clearErrorField('listColourants')\">\n                      </div>\n                    </div>\n                  </div>\n                </ng-container>\n              </div>\n            </div>\n          </div>\n        </form>\n      </div>\n    </div>\n  </div>\n</div>\n\n\n<ng-container *ngIf=\"updateMessage != null\">\n  <pp-modal id=\"show-update-formula-model\" class=\"modal show-update-formula-model\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <h5 class=\"modal-title\">{{updateMessage.title}}</h5>\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\" (click)=\"closeModal('show-update-formula-model')\">\n          <span aria-hidden=\"true\">×</span>\n        </button>\n      </div>\n\n      <div class=\"modal-body\">\n        {{updateMessage.message}}\n      </div>\n\n      <div class=\"modal-footer\">\n        <ng-container *ngIf=\"updateMessage.title == 'Error'\">\n          <button type=\"button\" class=\"btn btn-default\" (click)=\"closeModal('show-update-formula-model')\">Close</button>\n        </ng-container>\n\n        <ng-container *ngIf=\"updateMessage.title != 'Error'\">\n          <button type=\"button\" class=\"btn btn-primary\" (click)=\"closeModal('show-update-formula-model')\">OK</button>\n        </ng-container>\n      </div>\n    </div>\n  </pp-modal>\n</ng-container>\n"
 
 /***/ }),
 
@@ -648,6 +652,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _models_collection__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../../models/collection */ "./src/app/models/collection.ts");
 /* harmony import */ var _services_colorant_colorant_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../../../services/colorant/colorant.service */ "./src/app/services/colorant/colorant.service.ts");
 /* harmony import */ var _models_base__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../../../models/base */ "./src/app/models/base.ts");
+/* harmony import */ var _services_boostrap_modal_service__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../../../services/boostrap/modal.service */ "./src/app/services/boostrap/modal.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -669,10 +674,12 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
 var EditFormulaComponent = /** @class */ (function () {
-    function EditFormulaComponent(router, route, colourantService, formulaService, collectionService, productService) {
+    function EditFormulaComponent(router, route, modalService, colourantService, formulaService, collectionService, productService) {
         this.router = router;
         this.route = route;
+        this.modalService = modalService;
         this.colourantService = colourantService;
         this.formulaService = formulaService;
         this.collectionService = collectionService;
@@ -683,9 +690,13 @@ var EditFormulaComponent = /** @class */ (function () {
         this.listProductBases = null;
         this.listCollections = null;
         this.listColourants = null;
+        this.errorValidation = null;
+        this.updateMessage = null;
     }
     EditFormulaComponent.prototype.ngOnInit = function () {
         var _this = this;
+        this.updateMessage = null;
+        this.errorValidation = {};
         this.route.params.subscribe(function (params) {
             _this.formulaProductBaseId = params.id != null && params.id.trim() !== '' ? parseInt(params.id) : null;
             if (_this.formulaProductBaseId != null && _this.formulaProductBaseId > 0) {
@@ -702,6 +713,7 @@ var EditFormulaComponent = /** @class */ (function () {
     EditFormulaComponent.prototype.generateNewFormulaProductBase = function () {
         var collection = new _models_collection__WEBPACK_IMPORTED_MODULE_9__["CollectionModel"]();
         var formula = new _models_formula__WEBPACK_IMPORTED_MODULE_3__["FormulaModel"]();
+        formula.approximateColor = '';
         formula.collection = collection;
         formula.baseOnCan = 1;
         var product = new _models_product__WEBPACK_IMPORTED_MODULE_8__["ProductModel"]();
@@ -739,23 +751,25 @@ var EditFormulaComponent = /** @class */ (function () {
     };
     EditFormulaComponent.prototype.getListProductBase = function () {
         var _this = this;
-        var selectedProduct = this.listProducts.find(function (item) {
-            return item.productId == _this.selectedProductId;
-        });
-        if (selectedProduct != null) {
-            this.selectedProduct = selectedProduct;
-            this.dbItem.productBase.product = this.selectedProduct;
+        if (this.selectedProductId != null && this.selectedProductId !== undefined) {
+            var selectedProduct = this.listProducts.find(function (item) {
+                return item.productId === _this.selectedProductId;
+            });
+            if (selectedProduct != null) {
+                this.selectedProduct = selectedProduct;
+                this.dbItem.productBase.product = this.selectedProduct;
+            }
+            this.listProductBases = [];
+            this.productService.getListProductBaseFromProduct(this.selectedProductId).subscribe(function (datas) {
+                _this.listProductBases = datas;
+                console.log(_this.dbItem.productBase.product);
+            });
         }
-        this.listProductBases = [];
-        this.productService.getListProductBaseFromProduct(this.selectedProductId).subscribe(function (datas) {
-            _this.listProductBases = datas;
-            console.log(_this.dbItem.productBase.product);
-        });
     };
     EditFormulaComponent.prototype.updateCurrentProductBase = function () {
         var _this = this;
         var selectedProductBase = this.listProductBases.find(function (item) {
-            return item.productBaseId == _this.selectedProductBaseId && item.product.productId == _this.selectedProductId;
+            return item.productBaseId === _this.selectedProductBaseId && item.product.productId === _this.selectedProductId;
         });
         if (selectedProductBase != null) {
             this.selectedProductBase = selectedProductBase;
@@ -805,13 +819,108 @@ var EditFormulaComponent = /** @class */ (function () {
         }
         return maxQuantity;
     };
+    EditFormulaComponent.prototype.validateDataBeforeSubmit = function () {
+        var hasError = false;
+        var mapErrors = {};
+        if (this.dbItem.formula.formulaCode == null || this.dbItem.formula.formulaCode.trim() === '') {
+            hasError = true;
+            mapErrors['formulaCode'] = 'Please enter the formula code';
+        }
+        if (this.dbItem.formula.formulaName == null || this.dbItem.formula.formulaName.trim() === '') {
+            hasError = true;
+            mapErrors['formulaName'] = 'Please enter the formula name';
+        }
+        if (this.dbItem.formula.collection == null || this.dbItem.formula.collection.collectionId == null) {
+            hasError = true;
+            mapErrors['collectionId'] = 'Please select the collection';
+        }
+        if (this.dbItem.formula.approximateColor == null || this.dbItem.formula.approximateColor.trim() === '') {
+            hasError = true;
+            mapErrors['approximateColor'] = 'Please select the collection';
+        }
+        if (this.selectedProductBase == null || this.selectedProductBase.product == null
+            || this.selectedProductBase.product.productId == null) {
+            hasError = true;
+            mapErrors['productId'] = 'Please select the product';
+        }
+        if (this.selectedProductBase == null || this.selectedProductBase.base == null || this.selectedProductBase.base.baseId == null) {
+            hasError = true;
+            mapErrors['baseId'] = 'Please select the base';
+        }
+        if (this.dbItem.formula.baseOnCan == null) {
+            hasError = true;
+            mapErrors['baseOnCan'] = 'Please enter the base on can (Default 1)';
+        }
+        if (this.listColourants == null || this.listColourants.length === 0) {
+            hasError = true;
+            mapErrors['listColourants'] = 'Please add colourants detail.';
+        }
+        else {
+            var listColourant = this.listColourants.filter(function (item) {
+                return item.quantity > 0;
+            });
+            if (listColourant == null || listColourant.length == 0) {
+                hasError = true;
+                mapErrors['listColourants'] = 'Please add colourants detail.';
+            }
+        }
+        return {
+            hasError: hasError, mapErrors: mapErrors
+        };
+    };
+    EditFormulaComponent.prototype.clearErrorField = function (field) {
+        this.errorValidation[field] = null;
+    };
     EditFormulaComponent.prototype.saveOrUpdateFormula = function () {
-        this.formulaService.saveOrUpdateFormulaData(this.dbItem.formulaProductBaseId, this.dbItem.formula, this.selectedProductBase, this.listColourants).subscribe(function (datas) {
-            console.log(datas);
-        });
+        var _this = this;
+        this.errorValidation = {};
+        this.updateMessage = null;
+        var validateData = this.validateDataBeforeSubmit();
+        if (!validateData.hasError) {
+            this.formulaService.saveOrUpdateFormulaData(this.dbItem.formulaProductBaseId, this.dbItem.formula, this.selectedProductBase, this.listColourants).subscribe(function (datas) {
+                if (datas.formulaProductBaseId != null) {
+                    if (_this.dbItem.formulaProductBaseId == null) {
+                        _this.updateMessage = {
+                            title: 'Save',
+                            message: 'Saving the formula successful!.'
+                        };
+                    }
+                    else {
+                        _this.updateMessage = {
+                            title: 'Update',
+                            message: 'Update the formula successful!.'
+                        };
+                    }
+                }
+                else {
+                    _this.updateMessage = {
+                        title: 'Error',
+                        message: 'Have problem when saving the formula. Please retry.'
+                    };
+                }
+                setTimeout(function () {
+                    _this.openModal('show-update-formula-model');
+                }, 1);
+            });
+        }
+        else {
+            this.errorValidation = validateData.mapErrors;
+        }
     };
     EditFormulaComponent.prototype.goToFormulaPage = function () {
         this.router.navigate(["../dashboard/formula"]);
+    };
+    EditFormulaComponent.prototype.openModal = function (id) {
+        this.modalService.open(id);
+    };
+    EditFormulaComponent.prototype.closeModal = function (id) {
+        if (this.updateMessage != null && this.updateMessage.title != null && this.updateMessage.title !== 'Error') {
+            this.router.navigate(["../dashboard/formula"]);
+        }
+        else {
+            this.updateMessage = null;
+            this.modalService.close(id);
+        }
     };
     EditFormulaComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -821,6 +930,7 @@ var EditFormulaComponent = /** @class */ (function () {
         }),
         __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"],
             _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"],
+            _services_boostrap_modal_service__WEBPACK_IMPORTED_MODULE_12__["ModalService"],
             _services_colorant_colorant_service__WEBPACK_IMPORTED_MODULE_10__["ColourantService"],
             _services_formula_formula_service__WEBPACK_IMPORTED_MODULE_6__["FormulaService"],
             _services_collection_collection_service__WEBPACK_IMPORTED_MODULE_5__["CollectionService"],
@@ -840,7 +950,7 @@ var EditFormulaComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"block-header\">\r\n  <h1>Formula</h1>\r\n</div>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n    <div class=\"card filter-card\">\r\n      <div class=\"card-header\">\r\n        Filter\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        <form class=\"form form-horizontal form-detail\">\r\n          <div class=\"form-body\">\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-md-3 label-control\">Select Color</label>\r\n              <div class=\"input-group input-group-sm col-md-9\">\r\n                <select class=\"form-control form-control-sm select-sm select-color-field\" id=\"selectedFormulaFilter\" name=\"selectedFormulaFilter\" [(ngModel)]=\"filter.formulaId\" (ngModelChange)=\"onFilterChange($event)\">\r\n                  <option [ngValue]=\"undefined\">Choose Color</option>\r\n                  <option *ngFor=\"let f of listFormulas\" value=\"{{f.formulaId}}\">{{f.formulaName}}</option>\r\n                </select>\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-md-3 label-control\">Select Collection</label>\r\n              <div class=\"col-md-9\">\r\n                <select class=\"form-control form-control-sm select-sm select-color-field\" id=\"selectedCollectionFilter\" name=\"selectedCollectionFilter\" [(ngModel)]=\"filter.collectionId\" (ngModelChange)=\"onFilterChange($event)\">\r\n                  <option [ngValue]=\"undefined\">Choose Collection</option>\r\n                  <option *ngFor=\"let c of listCollections\" value=\"{{c._collectionId}}\">{{c._collectionName}}</option>\r\n                </select>\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-md-3 label-control\">Select Product</label>\r\n              <div class=\"col-md-9\">\r\n                <select class=\"form-control form-control-sm select-sm select-color-field\" id=\"selectedProductFilter\" name=\"selectedProductFilter\" [(ngModel)]=\"filter.productId\" (ngModelChange)=\"onFilterChange($event)\">\r\n                  <option [ngValue]=\"undefined\">Choose Product</option>\r\n                  <option *ngFor=\"let c of listProducts\" value=\"{{c._productId}}\">{{c._productCode}}</option>\r\n                </select>\r\n              </div>\r\n            </div>\r\n          </div>\r\n\r\n          <div class=\"form-actions text-center\">\r\n            <button class=\"btn btn-primary mr-3\" (click)=\"refresh()\">Search</button>\r\n            <button class=\"btn btn-default\" (click)=\"reset()\">Reset</button>\r\n          </div>\r\n        </form>\r\n      </div>\r\n\r\n      <!--<div class=\"card-footer\">-->\r\n\r\n      <!--</div>-->\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        List Colorant\r\n\r\n        <button class=\"close\" (click)=\"addNewFormula()\" matTooltip=\"Add Formula\" aria-label=\"Add Formula\"><i class=\"fas fa-plus-square\"></i></button>\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        <div class=\"table-responsive\">\r\n          <table class=\"table table-bordered\" matSort (matSortChange)=\"sortData($event)\">\r\n            <tr>\r\n              <th mat-sort-header=\"formulaCode\">Formula Code</th>\r\n              <th mat-sort-header=\"formulaName\">Formula Name</th>\r\n              <th mat-sort-header=\"collection\">Collection\r\n              <th mat-sort-header=\"product\">Product</th>\r\n              <th mat-sort-header=\"createdDate\">Created Date</th>\r\n              <th mat-sort-header=\"createdBy\">Created By</th>\r\n              <th>Action</th>\r\n            </tr>\r\n\r\n            <tr *ngFor=\"let item of pagenationMode.listItems\">\r\n              <td>{{item.formula.formulaCode}}</td>\r\n              <td>{{item.formula.formulaName}}</td>\r\n              <td>{{item.formula.collection.collectionName}}</td>\r\n              <td>{{item.productBase.product.productName}}</td>\r\n              <td></td>\r\n\r\n              <td>\r\n\r\n              </td>\r\n              <td>\r\n                <button type=\"button\" class=\"btn btn-default\" matTooltip=\"View Formula\" aria-label=\"View Formula\" (click)=\"viewFormula(item.formulaProductBaseId)\">\r\n                  <i class=\"fas fa-info-circle\"></i>\r\n                </button>\r\n\r\n                <ng-container *ngIf=\"item.formula.machine != null && item.formula.machine.machineId > 0\">\r\n                  <span class=\"vertical-separate-line\"></span>\r\n                  <button type=\"button\" class=\"btn btn-default\" matTooltip=\"Edit Formula\" aria-label=\"Edit Formula\" (click)=\"editTheFormula(item.formulaProductBaseId)\">\r\n                    <i class=\"fas fa-edit\"></i>\r\n                  </button>\r\n                </ng-container>\r\n            </tr>\r\n\r\n            <tfoot>\r\n            <tr>\r\n              <td colspan=\"100%\">\r\n                Show {{pagenationMode.listItems.length}} of  {{pagenationMode.totalItem}} items.\r\n\r\n                <span class=\"pagenation-footer\" style=\"float: right\">\r\n                  <span *ngIf=\"pagenationMode.pageIndex > 0\" (click)=\"goToPage(pagenationMode.pageIndex - 1)\" class=\"btn-action\">previous</span>\r\n                  <span>{{pagenationMode.pageIndex + 1}}</span>\r\n                  <span *ngIf=\"pagenationMode.pageIndex * pagenationMode.maxPageItem + pagenationMode.maxPageItem < pagenationMode.totalItem\"  (click)=\"goToPage(pagenationMode.pageIndex + 1)\" class=\"btn-action\">next</span>\r\n                </span>\r\n              </td>\r\n            </tr>\r\n            </tfoot>\r\n          </table>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class=\"block-header\">\r\n  <h1>Formula</h1>\r\n</div>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n    <div class=\"card filter-card\">\r\n      <div class=\"card-header\">\r\n        Filter\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        <form class=\"form form-horizontal form-detail\">\r\n          <div class=\"form-body\">\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-md-3 label-control\">Select Color</label>\r\n              <div class=\"input-group input-group-sm col-md-9\">\r\n                <select class=\"form-control form-control-sm select-sm select-color-field\" id=\"selectedFormulaFilter\" name=\"selectedFormulaFilter\" [(ngModel)]=\"filter.formulaId\" (ngModelChange)=\"onFilterChange($event)\">\r\n                  <option [ngValue]=\"undefined\">Choose Color</option>\r\n                  <option *ngFor=\"let f of listFormulas\" value=\"{{f.formulaId}}\">{{f.formulaName}}</option>\r\n                </select>\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-md-3 label-control\">Select Collection</label>\r\n              <div class=\"col-md-9\">\r\n                <select class=\"form-control form-control-sm select-sm select-color-field\" id=\"selectedCollectionFilter\" name=\"selectedCollectionFilter\" [(ngModel)]=\"filter.collectionId\" (ngModelChange)=\"onFilterChange($event)\">\r\n                  <option [ngValue]=\"undefined\">Choose Collection</option>\r\n                  <option *ngFor=\"let c of listCollections\" value=\"{{c._collectionId}}\">{{c._collectionName}}</option>\r\n                </select>\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-md-3 label-control\">Select Product</label>\r\n              <div class=\"col-md-9\">\r\n                <select class=\"form-control form-control-sm select-sm select-color-field\" id=\"selectedProductFilter\" name=\"selectedProductFilter\" [(ngModel)]=\"filter.productId\" (ngModelChange)=\"onFilterChange($event)\">\r\n                  <option [ngValue]=\"undefined\">Choose Product</option>\r\n                  <option *ngFor=\"let c of listProducts\" value=\"{{c._productId}}\">{{c._productCode}}</option>\r\n                </select>\r\n              </div>\r\n            </div>\r\n          </div>\r\n\r\n          <div class=\"form-actions text-center\">\r\n            <button class=\"btn btn-primary mr-3\" (click)=\"refresh()\">Search</button>\r\n            <button class=\"btn btn-default\" (click)=\"reset()\">Reset</button>\r\n          </div>\r\n        </form>\r\n      </div>\r\n\r\n      <!--<div class=\"card-footer\">-->\r\n\r\n      <!--</div>-->\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        List Colorant\r\n\r\n        <button class=\"close\" (click)=\"addNewFormula()\" matTooltip=\"Add Formula\" aria-label=\"Add Formula\"><i class=\"fas fa-plus-square\"></i></button>\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        <div class=\"table-responsive\">\r\n          <table class=\"table table-bordered\" matSort (matSortChange)=\"sortData($event)\">\r\n            <tr>\r\n              <th mat-sort-header=\"formulaCode\">Formula Code</th>\r\n              <th mat-sort-header=\"formulaName\">Formula Name</th>\r\n              <th mat-sort-header=\"approximateColor\">Approximate Color</th>\r\n              <th mat-sort-header=\"collection\">Collection\r\n              <th mat-sort-header=\"product\">Product</th>\r\n              <th mat-sort-header=\"createdDate\">Created Date</th>\r\n              <th mat-sort-header=\"createdBy\">Created By</th>\r\n              <th>Action</th>\r\n            </tr>\r\n\r\n            <tr *ngFor=\"let item of pagenationMode.listItems\">\r\n              <td>{{item.formula.formulaCode}}</td>\r\n              <td>{{item.formula.formulaName}}</td>\r\n              <td><span [ngStyle]=\"{'background': item.formula.approximateColor, 'display': 'inline-block', 'width': '30px', 'height': '30px', 'border': '1px solid #333'}\"></span></td>\r\n              <td>{{item.formula.collection.collectionName}}</td>\r\n              <td>{{item.productBase.product.productName}}</td>\r\n              <td></td>\r\n\r\n              <td>\r\n\r\n              </td>\r\n              <td>\r\n                <button type=\"button\" class=\"btn btn-default\" matTooltip=\"View Formula\" aria-label=\"View Formula\" (click)=\"viewFormula(item.formulaProductBaseId)\">\r\n                  <i class=\"fas fa-info-circle\"></i>\r\n                </button>\r\n\r\n                <!--<ng-container *ngIf=\"item.formula.machine != null && item.formula.machine.machineId > 0\">-->\r\n                  <span class=\"vertical-separate-line\"></span>\r\n                  <button type=\"button\" class=\"btn btn-default\" matTooltip=\"Edit Formula\" aria-label=\"Edit Formula\" (click)=\"editTheFormula(item.formulaProductBaseId)\">\r\n                    <i class=\"fas fa-edit\"></i>\r\n                  </button>\r\n                <!--</ng-container>-->\r\n            </tr>\r\n\r\n            <tfoot>\r\n            <tr>\r\n              <td colspan=\"100%\">\r\n                Show {{pagenationMode.listItems.length}} of  {{pagenationMode.totalItem}} items.\r\n\r\n                <span class=\"pagenation-footer\" style=\"float: right\">\r\n                  <span *ngIf=\"pagenationMode.pageIndex > 0\" (click)=\"goToPage(pagenationMode.pageIndex - 1)\" class=\"btn-action\">previous</span>\r\n                  <span>{{pagenationMode.pageIndex + 1}}</span>\r\n                  <span *ngIf=\"pagenationMode.pageIndex * pagenationMode.maxPageItem + pagenationMode.maxPageItem < pagenationMode.totalItem\"  (click)=\"goToPage(pagenationMode.pageIndex + 1)\" class=\"btn-action\">next</span>\r\n                </span>\r\n              </td>\r\n            </tr>\r\n            </tfoot>\r\n          </table>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -1084,7 +1194,7 @@ var MaintenanceComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"block-header\">\r\n  <h1>Standard Formula</h1>\r\n</div>\r\n\r\n<div class=\"row\" *ngIf=\"dbItem != null\">\r\n  <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        Information\r\n      </div>\r\n\r\n      <div class=\"card-body form-detail\">\r\n        <div class=\"form-group row\">\r\n          <label class=\"col-md-4 label-control\">Color</label>\r\n          <div class=\"col-md-8\">\r\n            {{dbItem.formula.formulaCode}}\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"form-group row\">\r\n          <label class=\"col-md-4 label-control\">Collection</label>\r\n          <div class=\"col-md-8\">\r\n            {{dbItem.formula.collection.collectionName}}\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"form-group row\">\r\n          <label class=\"col-md-4 label-control\">Approximate Color</label>\r\n          <div class=\"col-md-8\">\r\n            <span [ngStyle]=\"{'background': dbItem.productBase.rbgHex, 'display': 'inline-block', 'width': '30px', 'height': '30px', 'border': '1px solid #333'}\"></span>\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"form-group row\">\r\n          <label class=\"col-md-4 label-control\">Product</label>\r\n          <div class=\"col-md-8\">\r\n            {{dbItem.productBase.product.productName}}\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"form-group row\">\r\n          <label class=\"col-md-4 label-control\">Formula Date</label>\r\n          <div class=\"col-md-8\">\r\n            {{dbItem.formula.createdDate | date : 'dd/MM/yyyy'}}\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"form-group row\">\r\n          <label class=\"col-md-4 label-control\">Substrate</label>\r\n          <div class=\"col-md-8\">\r\n            substrate???/\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"form-group row\">\r\n          <label class=\"col-md-4 label-control\">Comments</label>\r\n          <div class=\"col-md-8\">\r\n            {{dbItem.formula.comments}}\r\n          </div>\r\n        </div>\r\n\r\n\r\n        <div class=\"form-group row\">\r\n          <label class=\"col-md-4 label-control\">Barcode</label>\r\n          <div class=\"col-md-8\">\r\n            <span *ngIf=\"selectProductBase != null\">\r\n              {{selectProductBase.barCode}}\r\n            </span>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n\r\n  </div>\r\n\r\n  <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        Component colors\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        <div class=\"table-responsive\">\r\n          <table class=\"table table-bordered\" >\r\n            <tr>\r\n              <th style=\"width: 30%\">Component</th>\r\n              <th style=\"width: 20%\">ml</th>\r\n              <th style=\"width: 50%\">Color\r\n            </tr>\r\n\r\n            <tr *ngFor=\"let colorantItem of listFormulaColorant\">\r\n              <td>{{colorantItem.colourant.colourantName}}</td>\r\n              <td>{{roundNumber((colorantItem.quantity / dbItem.formula.baseOnCan) * canSize)}}</td>\r\n              <td>\r\n                <span class=\"color-bar\" >\r\n                  <span class=\"color-select\" [ngStyle]=\"{'background': colorantItem.colourant.rbgHex, 'width': (colorantItem.quantity / maxColorQuantity) * 100 + '%'}\"></span>\r\n                </span>\r\n              </td>\r\n            </tr>\r\n          </table>\r\n        </div>\r\n\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n\r\n<div class=\"row\" *ngIf=\"dbItem != null\">\r\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        Mixed\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        <div class=\"row\"  *ngIf=\"errorMessage != null && errorMessage != ''\">\r\n          <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n            <div class=\"alert alert-danger\">\r\n              <button class=\"close\" data-dismiss=\"alert\" aria-label=\"close\" (click)=\"clearErrorMessage()\">&times;</button>\r\n              {{errorMessage}}\r\n            </div>\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"row\">\r\n          <div class=\"col-lg-6 col-md-6 col-sm-16 col-xs-12 text-right\">\r\n\r\n             <span class=\"base-can-empty\" *ngIf=\"selectProductBase != null\">\r\n                <span class=\"base-can-background\">\r\n                  <span class=\"base-can-volume\" [ngStyle]=\"{'background-color': selectProductBase.productBase.rbgHex, 'height': selectProductBase.percentage + '%'}\">\r\n                    <span class=\"can-base-info\">\r\n                      <span class=\"base-type\">Base : {{selectProductBase.productBase.base.baseCode}}</span>\r\n                      <span class=\"base-volume\">{{canSize + \" \" + selectProductBase.unit}}</span>\r\n                      <span class=\"base-name\">{{selectProductBase.productBase.product.productName}}</span>\r\n                    </span>\r\n                  </span>\r\n                </span>\r\n              </span>\r\n          </div>\r\n\r\n          <div class=\"col-lg-6 col-md-6 col-sm-126 col-xs-12 form-detail\">\r\n            <div class=\"row form-group\">\r\n              <label class=\"col-md-4 label-control\">Number of cans : </label>\r\n              <div class=\"col-md-8\">\r\n                <input type=\"number\" [(ngModel)]=\"numberOfCan\" class=\"form-control\" required=\"required\" [ngModelOptions]=\"{standalone: true}\" [ngStyle]=\"{'width': '200px'}\">\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"row form-group\">\r\n              <label class=\"col-md-4 label-control\">Can size:</label>\r\n              <div class=\"col-md-8\">\r\n                <input type=\"number\" [(ngModel)]=\"canSize\" class=\"form-control\" required=\"required\" [ngModelOptions]=\"{standalone: true}\" [ngStyle]=\"{'width': '200px'}\">\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"row form-group\">\r\n              <label class=\"col-md-4 label-control\">Or select:</label>\r\n              <div class=\"col-md-8\">\r\n                <ng-select2 class=\"select-color-field\" [(ngModel)]=\"canSize\" [data]=\"listProductBase\" [value]=\"canSize\" [placeholder]=\"'Choose Can Size'\" [width]=\"200\" (valueChanged)=\"changedCanSize($event)\"></ng-select2>\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"row form-group\">\r\n              <label class=\"col-md-4 label-control\"></label>\r\n\r\n              <div class=\"col-md-8\">\r\n                <button class=\"btn btn-primary\" (click)=\"beginDispense('view-dispense-task-modal')\">\r\n                  <i class=\"fas fa-fill-drip\"></i>\r\n                  <span *ngIf=\"inProgress\">In Progress</span>\r\n                  <span *ngIf=\"! inProgress\">Dispense</span>\r\n                </button>\r\n              </div>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<pp-modal id=\"view-dispense-task-modal\" class=\"modal dispense-job-status-modal\" [style]=\"{'display': 'none'}\">\r\n  <div class=\"modal-content\">\r\n    <ng-container *ngIf=\"errorMessage == null || errorMessage == ''\">\r\n      <div class=\"modal-header\">\r\n        <h5 class=\"modal-title\">Dispense Job Status</h5>\r\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\" (click)=\"closeModal('view-dispense-task-modal')\">\r\n          <span aria-hidden=\"true\">×</span>\r\n        </button>\r\n      </div>\r\n\r\n      <div class=\"modal-body\">\r\n        <ng-container *ngIf=\"dbItem != null && currentTask != null && currentTask.taskId != null && currentTask.taskId > 0\">\r\n          <app-viewdispensetask [dispenseTask]=\"currentTask\" [dispenseStepTask]=\"currentTaskStep\" [listColorantUsed]=\"listColorant\" [maxColorQuantity]=\"maxColorQuantity\"></app-viewdispensetask>\r\n        </ng-container>\r\n      </div>\r\n    </ng-container>\r\n\r\n    <div class=\"modal-footer\">\r\n      <button type=\"button\" class=\"btn btn-primary\" (click)=\"closeModal('view-dispense-task-modal')\">Hide</button>\r\n    </div>\r\n  </div>\r\n</pp-modal>\r\n\r\n<pp-modal id=\"print-formula-modal\" class=\"modal print-formula-modal\" [style]=\"{'display': 'none'}\">\r\n  <div class=\"modal-content\">\r\n    <div class=\"modal-header\">\r\n      <h5 class=\"modal-title\">Print</h5>\r\n      <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\" (click)=\"closeModal('print-formula-modal')\">\r\n        <span aria-hidden=\"true\">×</span>\r\n      </button>\r\n    </div>\r\n\r\n    <div class=\"modal-body\">\r\n      <div class=\"row text-center\" *ngIf=\"dbItem != null\">\r\n        <div class=\"col-md-12 formula-color-info\"><h3>{{dbItem.formula.formulaCode}}</h3></div>\r\n        <div class=\"col-md-12 collection-info\"><h4>{{dbItem.formula.collection.collectionName}}</h4></div>\r\n        <div class=\"col-md-12 shop-info\"><h5>Paintshop \"Demo\"</h5></div>\r\n        <div class=\"col-md-12 street-info\"><h5>Demostreet 1</h5></div>\r\n        <div class=\"col-md-12 ville-info\"><h5>Demo ville</h5></div>\r\n        <div class=\"col-md-12 substrate-info\"><p>Substrate recommendation Universal primer Grey</p></div>\r\n        <div class=\"col-md-12 bar-code-info \"><p><span class=\"bar-code-sample\"></span></p></div>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"modal-footer\">\r\n      <button type=\"button\" class=\"btn btn-default\" (click)=\"closeDispenseModel()\">Close</button>\r\n      <button type=\"button\" class=\"btn btn-primary\" (click)=\"closeDispenseModel()\">Print</button>\r\n    </div>\r\n  </div>\r\n</pp-modal>\r\n\r\n"
+module.exports = "<div class=\"block-header\">\r\n  <h1>Standard Formula</h1>\r\n</div>\r\n\r\n<div class=\"row\" *ngIf=\"dbItem != null\">\r\n  <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        Information\r\n      </div>\r\n\r\n      <div class=\"card-body form-detail\">\r\n        <div class=\"form-group row\">\r\n          <label class=\"col-md-4 label-control\">Color</label>\r\n          <div class=\"col-md-8\">\r\n            {{dbItem.formula.formulaCode}}\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"form-group row\">\r\n          <label class=\"col-md-4 label-control\">Collection</label>\r\n          <div class=\"col-md-8\">\r\n            {{dbItem.formula.collection.collectionName}}\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"form-group row\">\r\n          <label class=\"col-md-4 label-control\">Approximate Color</label>\r\n          <div class=\"col-md-8\">\r\n            <span [ngStyle]=\"{'background': dbItem.formula.approximateColor, 'display': 'inline-block', 'width': '30px', 'height': '30px', 'border': '1px solid #333'}\"></span>\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"form-group row\">\r\n          <label class=\"col-md-4 label-control\">Product</label>\r\n          <div class=\"col-md-8\">\r\n            {{dbItem.productBase.product.productName}}\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"form-group row\">\r\n          <label class=\"col-md-4 label-control\">Formula Date</label>\r\n          <div class=\"col-md-8\">\r\n            {{dbItem.formula.createdDate | date : 'dd/MM/yyyy'}}\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"form-group row\">\r\n          <label class=\"col-md-4 label-control\">Substrate</label>\r\n          <div class=\"col-md-8\">\r\n            {{dbItem.formula.substrate}}\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"form-group row\">\r\n          <label class=\"col-md-4 label-control\">Comment</label>\r\n          <div class=\"col-md-8\">\r\n            {{dbItem.formula.comment}}\r\n          </div>\r\n        </div>\r\n\r\n\r\n        <div class=\"form-group row\">\r\n          <label class=\"col-md-4 label-control\">Barcode</label>\r\n          <div class=\"col-md-8\">\r\n            <span *ngIf=\"selectProductBase != null\">\r\n              {{selectProductBase.barCode}}\r\n            </span>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n\r\n  </div>\r\n\r\n  <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        Component colors\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        <div class=\"table-responsive\">\r\n          <table class=\"table table-bordered\" >\r\n            <tr>\r\n              <th style=\"width: 30%\">Component</th>\r\n              <th style=\"width: 20%\">ml</th>\r\n              <th style=\"width: 50%\">Color\r\n            </tr>\r\n\r\n            <tr *ngFor=\"let colorantItem of listFormulaColorant\">\r\n              <td>{{colorantItem.colourant.colourantName}}</td>\r\n              <td>{{roundNumber((colorantItem.quantity / dbItem.formula.baseOnCan) * canSize)}}</td>\r\n              <td>\r\n                <span class=\"color-bar\" >\r\n                  <span class=\"color-select\" [ngStyle]=\"{'background': colorantItem.colourant.rbgHex, 'width': (colorantItem.quantity / maxColorQuantity) * 100 + '%'}\"></span>\r\n                </span>\r\n              </td>\r\n            </tr>\r\n          </table>\r\n        </div>\r\n\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n\r\n<div class=\"row\" *ngIf=\"dbItem != null\">\r\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        Mixed\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        <div class=\"row\"  *ngIf=\"errorMessage != null && errorMessage != ''\">\r\n          <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n            <div class=\"alert alert-danger\">\r\n              <button class=\"close\" data-dismiss=\"alert\" aria-label=\"close\" (click)=\"clearErrorMessage()\">&times;</button>\r\n              {{errorMessage}}\r\n            </div>\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"row\">\r\n          <div class=\"col-lg-6 col-md-6 col-sm-16 col-xs-12 text-right\">\r\n\r\n             <span class=\"base-can-empty\" *ngIf=\"selectProductBase != null\">\r\n                <span class=\"base-can-background\">\r\n                  <span class=\"base-can-volume\" [ngStyle]=\"{'background-color': selectProductBase.productBase.rbgHex, 'height': selectProductBase.percentage + '%'}\">\r\n                    <span class=\"can-base-info\">\r\n                      <span class=\"base-type\">Base : {{selectProductBase.productBase.base.baseCode}}</span>\r\n                      <span class=\"base-volume\">{{canSize + \" \" + selectProductBase.unit}}</span>\r\n                      <span class=\"base-name\">{{selectProductBase.productBase.product.productName}}</span>\r\n                    </span>\r\n                  </span>\r\n                </span>\r\n              </span>\r\n          </div>\r\n\r\n          <div class=\"col-lg-6 col-md-6 col-sm-126 col-xs-12 form-detail\">\r\n            <div class=\"row form-group\">\r\n              <label class=\"col-md-4 label-control\">Number of cans : </label>\r\n              <div class=\"col-md-8\">\r\n                <input type=\"number\" [(ngModel)]=\"numberOfCan\" class=\"form-control\" required=\"required\" [ngModelOptions]=\"{standalone: true}\" [ngStyle]=\"{'width': '200px'}\">\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"row form-group\">\r\n              <label class=\"col-md-4 label-control\">Can size:</label>\r\n              <div class=\"col-md-8\">\r\n                <input type=\"number\" [(ngModel)]=\"canSize\" class=\"form-control\" required=\"required\" [ngModelOptions]=\"{standalone: true}\" [ngStyle]=\"{'width': '200px'}\">\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"row form-group\">\r\n              <label class=\"col-md-4 label-control\">Or select:</label>\r\n              <div class=\"col-md-8\">\r\n                <ng-select2 class=\"select-color-field\" [(ngModel)]=\"canSize\" [data]=\"listProductBase\" [value]=\"canSize\" [placeholder]=\"'Choose Can Size'\" [width]=\"200\" (valueChanged)=\"changedCanSize($event)\"></ng-select2>\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"row form-group\">\r\n              <label class=\"col-md-4 label-control\"></label>\r\n\r\n              <div class=\"col-md-8\">\r\n                <button class=\"btn btn-primary\" (click)=\"beginDispense('view-dispense-task-modal')\">\r\n                  <i class=\"fas fa-fill-drip\"></i>\r\n                  <span *ngIf=\"inProgress\">In Progress</span>\r\n                  <span *ngIf=\"! inProgress\">Dispense</span>\r\n                </button>\r\n              </div>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<pp-modal id=\"view-dispense-task-modal\" class=\"modal dispense-job-status-modal\" [style]=\"{'display': 'none'}\">\r\n  <div class=\"modal-content\">\r\n    <ng-container *ngIf=\"errorMessage == null || errorMessage == ''\">\r\n      <div class=\"modal-header\">\r\n        <h5 class=\"modal-title\">Dispense Job Status</h5>\r\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\" (click)=\"closeModal('view-dispense-task-modal')\">\r\n          <span aria-hidden=\"true\">×</span>\r\n        </button>\r\n      </div>\r\n\r\n      <div class=\"modal-body\">\r\n        <ng-container *ngIf=\"dbItem != null && currentTask != null && currentTask.taskId != null && currentTask.taskId > 0\">\r\n          <app-viewdispensetask [dispenseTask]=\"currentTask\" [dispenseStepTask]=\"currentTaskStep\" [listColorantUsed]=\"listColorant\" [maxColorQuantity]=\"maxColorQuantity\"></app-viewdispensetask>\r\n        </ng-container>\r\n      </div>\r\n    </ng-container>\r\n\r\n    <div class=\"modal-footer\">\r\n      <button type=\"button\" class=\"btn btn-primary\" (click)=\"closeModal('view-dispense-task-modal')\">Hide</button>\r\n    </div>\r\n  </div>\r\n</pp-modal>\r\n\r\n<pp-modal id=\"print-formula-modal\" class=\"modal print-formula-modal\" [style]=\"{'display': 'none'}\">\r\n  <div class=\"modal-content\">\r\n    <div class=\"modal-header\">\r\n      <h5 class=\"modal-title\">Print</h5>\r\n      <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\" (click)=\"closeModal('print-formula-modal')\">\r\n        <span aria-hidden=\"true\">×</span>\r\n      </button>\r\n    </div>\r\n\r\n    <div class=\"modal-body\">\r\n      <div class=\"row text-center\" *ngIf=\"dbItem != null\">\r\n        <div class=\"col-md-12 formula-color-info\"><h3>{{dbItem.formula.formulaCode}}</h3></div>\r\n        <div class=\"col-md-12 collection-info\"><h4>{{dbItem.formula.collection.collectionName}}</h4></div>\r\n        <div class=\"col-md-12 shop-info\"><h5>Paintshop \"Demo\"</h5></div>\r\n        <div class=\"col-md-12 street-info\"><h5>Demostreet 1</h5></div>\r\n        <div class=\"col-md-12 ville-info\"><h5>Demo ville</h5></div>\r\n        <div class=\"col-md-12 substrate-info\"><p>Substrate recommendation Universal primer Grey</p></div>\r\n        <div class=\"col-md-12 bar-code-info \"><p><span class=\"bar-code-sample\"></span></p></div>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"modal-footer\">\r\n      <button type=\"button\" class=\"btn btn-default\" (click)=\"closeDispenseModel()\">Close</button>\r\n      <button type=\"button\" class=\"btn btn-primary\" (click)=\"closeDispenseModel()\">Print</button>\r\n    </div>\r\n  </div>\r\n</pp-modal>\r\n\r\n"
 
 /***/ }),
 
@@ -1962,7 +2072,7 @@ var HeaderComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ul class=\"navbar-nav navigation-bar\">\r\n\r\n  <li class=\"nav-item dropdown\" *ngIf=\"currentUser != null && currentUser.role.roleName == USER_ROLE.SHOP\">\r\n    <a class=\"nav-link dropdown-toggle\" id=\"user-dropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\" (click)=\"updateCurrentMode(userMode)\" [attr.aria-expanded]=\"currentMode == userMode\" aria-controls=\"collapseExample\">\r\n      <i class=\"fas fa-users-cog\"></i>\r\n      <span class=\"menu-item\">User Setting</span>\r\n    </a>\r\n\r\n    <div class=\"dropdown-menu\" aria-labelledby=\"setting-dropdown\" [ngbCollapse]=\"currentMode != userMode\" (click)=\"updateCurrentMode('hide')\">\r\n      <a class=\"dropdown-item\" [routerLink]=\"['../dashboard/colorant']\">User Manager</a>\r\n      <a class=\"dropdown-item\" [routerLink]=\"['../dashboard/colorant']\">Customer Manager</a>\r\n    </div>\r\n  </li>\r\n\r\n  <li class=\"nav-item dropdown\" *ngIf=\"currentUser != null && (currentUser.role.roleName == USER_ROLE.SHOP || currentUser.role.roleName == USER_ROLE.ADMIN)\">\r\n    <a class=\"nav-link dropdown-toggle\" id=\"setting-dropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\" (click)=\"updateCurrentMode(settingMode)\" [attr.aria-expanded]=\"currentMode == settingMode\" aria-controls=\"collapseExample\">\r\n      <i class=\"fas fa-cogs\"></i>\r\n      <span class=\"menu-item\">Setting</span>\r\n    </a>\r\n\r\n    <div class=\"dropdown-menu\" aria-labelledby=\"setting-dropdown\" [ngbCollapse]=\"currentMode != settingMode\" (click)=\"updateCurrentMode('hide')\">\r\n      <!--<h6 class=\"dropdown-header\">System setting:</h6>-->\r\n\r\n      <a class=\"dropdown-item\" [routerLink]=\"['../dashboard/colorant']\">Colorant</a>\r\n      <a class=\"dropdown-item\" [routerLink]=\"['../dashboard/base']\">Base</a>\r\n      <a class=\"dropdown-item\" [routerLink]=\"['../dashboard/collection']\">Collection</a>\r\n      <a class=\"dropdown-item\" [routerLink]=\"['../dashboard/product']\">Product</a>\r\n\r\n      <ng-container *ngIf=\"currentUser != null && currentUser.role.roleName == USER_ROLE.SHOP\">\r\n        <div class=\"dropdown-divider\"></div>\r\n        <h6 class=\"dropdown-header\">Machine Setting:</h6>\r\n        <a class=\"dropdown-item\" [routerLink]=\"['../dashboard/machine']\">Machine</a>\r\n      </ng-container>\r\n    </div>\r\n  </li>\r\n\r\n  <li class=\"nav-item\" (click)=\"updateCurrentMode('formula')\">\r\n    <a class=\"nav-link\" [routerLink]=\"['../dashboard/formula']\">\r\n      <i class=\"fas fa-palette\"></i>\r\n      <span class=\"menu-item\">Formula</span></a>\r\n  </li>\r\n\r\n  <li class=\"nav-item\">\r\n    <a class=\"nav-link\" [routerLink]=\"['../dashboard/job-status']\">\r\n      <i class=\"fas fa-file-contract\"></i>\r\n      <span class=\"menu-item\">Job status</span>\r\n    </a>\r\n  </li>\r\n\r\n  <li class=\"nav-item\" (click)=\"updateCurrentMode('maintenance')\" *ngIf=\"currentUser != null && (currentUser.role.roleName == USER_ROLE.ADMIN && currentUser.role.roleName == USER_ROLE.MAINTENANCE)\">\r\n    <a class=\"nav-link\" [routerLink]=\"['../dashboard/maintenance']\">\r\n      <i class=\"fas fa-hammer\"></i>\r\n      <span class=\"menu-item\">Maintenance</span></a>\r\n  </li>\r\n\r\n  <li class=\"nav-item\" (click)=\"updateCurrentMode('question')\">\r\n    <a class=\"nav-link\" [routerLink]=\"['../dashboard/question']\">\r\n      <i class=\"fas fa-question-circle\"></i>\r\n      <span class=\"menu-item\">Help</span></a>\r\n  </li>\r\n\r\n  <li class=\"nav-item\" (click)=\"logOut()\">\r\n    <a class=\"nav-link\">\r\n      <i class=\"fas fa-sign-out-alt\"></i>\r\n      <span class=\"menu-item\">Logout</span></a>\r\n  </li>\r\n\r\n  <!--<li class=\"nav-item dropdown\">-->\r\n    <!--<a class=\"nav-link dropdown-toggle\" id=\"developer-dropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\" (click)=\"updateCurrentMode(devMode)\" [attr.aria-expanded]=\"currentMode == devMode\" aria-controls=\"collapseExample\">-->\r\n      <!--<i class=\"fab fa-dev\"></i>-->\r\n      <!--<span class=\"menu-item\">Developer</span>-->\r\n    <!--</a>-->\r\n\r\n    <!--<div class=\"dropdown-menu\" aria-labelledby=\"developer-dropdown\" [ngbCollapse]=\"currentMode != devMode\" (click)=\"updateCurrentMode('hide')\">-->\r\n      <!--<h6 class=\"dropdown-header\">Document :</h6>-->\r\n      <!--<a class=\"dropdown-item\" [routerLink]=\"['../dashboard/help/overview']\">Overview</a>-->\r\n      <!--<div class=\"dropdown-divider\"></div>-->\r\n      <!--<a class=\"dropdown-item\" [routerLink]=\"['../dashboard/help/language']\">Language</a>-->\r\n      <!--<a class=\"dropdown-item\" [routerLink]=\"['../dashboard/help/boostrap']\">Boostrap Template</a>-->\r\n    <!--</div>-->\r\n  <!--</li>-->\r\n</ul>\r\n"
+module.exports = "<ul class=\"navbar-nav navigation-bar\">\r\n\r\n  <li class=\"nav-item dropdown\" *ngIf=\"currentUser != null && currentUser.role.roleName == USER_ROLE.SHOP\">\r\n    <a class=\"nav-link dropdown-toggle\" id=\"user-dropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\" (click)=\"updateCurrentMode(userMode)\" [attr.aria-expanded]=\"currentMode == userMode\" aria-controls=\"collapseExample\">\r\n      <i class=\"fas fa-users-cog\"></i>\r\n      <span class=\"menu-item\">User Setting</span>\r\n    </a>\r\n\r\n    <div class=\"dropdown-menu\" aria-labelledby=\"setting-dropdown\" [ngbCollapse]=\"currentMode != userMode\" (click)=\"updateCurrentMode('hide')\">\r\n      <a class=\"dropdown-item\" [routerLink]=\"['../dashboard/colorant']\">User Manager</a>\r\n      <a class=\"dropdown-item\" [routerLink]=\"['../dashboard/colorant']\">Customer Manager</a>\r\n    </div>\r\n  </li>\r\n\r\n  <li class=\"nav-item dropdown\" *ngIf=\"currentUser != null && (currentUser.role.roleName == USER_ROLE.SHOP || currentUser.role.roleName == USER_ROLE.ADMIN)\">\r\n    <a class=\"nav-link dropdown-toggle\" id=\"setting-dropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\" (click)=\"updateCurrentMode(settingMode)\" [attr.aria-expanded]=\"currentMode == settingMode\" aria-controls=\"collapseExample\">\r\n      <i class=\"fas fa-cogs\"></i>\r\n      <span class=\"menu-item\">Setting</span>\r\n    </a>\r\n\r\n    <div class=\"dropdown-menu\" aria-labelledby=\"setting-dropdown\" [ngbCollapse]=\"currentMode != settingMode\" (click)=\"updateCurrentMode('hide')\">\r\n      <!--<h6 class=\"dropdown-header\">System setting:</h6>-->\r\n\r\n      <a class=\"dropdown-item\" [routerLink]=\"['../dashboard/colorant']\">Colorant</a>\r\n      <a class=\"dropdown-item\" [routerLink]=\"['../dashboard/base']\">Base</a>\r\n      <a class=\"dropdown-item\" [routerLink]=\"['../dashboard/collection']\">Collection</a>\r\n      <a class=\"dropdown-item\" [routerLink]=\"['../dashboard/product']\">Product</a>\r\n      <ng-container *ngIf=\"currentUser != null && currentUser.role.roleName == USER_ROLE.SHOP\">\r\n        <a class=\"dropdown-item\" [routerLink]=\"['../dashboard/customer']\">Customer</a>\r\n\r\n        <div class=\"dropdown-divider\"></div>\r\n        <h6 class=\"dropdown-header\">Machine Setting:</h6>\r\n        <a class=\"dropdown-item\" [routerLink]=\"['../dashboard/machine']\">Machine</a>\r\n      </ng-container>\r\n    </div>\r\n  </li>\r\n\r\n  <li class=\"nav-item\" (click)=\"updateCurrentMode('formula')\">\r\n    <a class=\"nav-link\" [routerLink]=\"['../dashboard/formula']\">\r\n      <i class=\"fas fa-palette\"></i>\r\n      <span class=\"menu-item\">Formula</span></a>\r\n  </li>\r\n\r\n  <li class=\"nav-item\">\r\n    <a class=\"nav-link\" [routerLink]=\"['../dashboard/job-status']\">\r\n      <i class=\"fas fa-file-contract\"></i>\r\n      <span class=\"menu-item\">Job status</span>\r\n    </a>\r\n  </li>\r\n\r\n  <li class=\"nav-item\" (click)=\"updateCurrentMode('maintenance')\" *ngIf=\"currentUser != null && (currentUser.role.roleName == USER_ROLE.ADMIN && currentUser.role.roleName == USER_ROLE.MAINTENANCE)\">\r\n    <a class=\"nav-link\" [routerLink]=\"['../dashboard/maintenance']\">\r\n      <i class=\"fas fa-hammer\"></i>\r\n      <span class=\"menu-item\">Maintenance</span></a>\r\n  </li>\r\n\r\n  <li class=\"nav-item\" (click)=\"updateCurrentMode('question')\">\r\n    <a class=\"nav-link\" [routerLink]=\"['../dashboard/question']\">\r\n      <i class=\"fas fa-question-circle\"></i>\r\n      <span class=\"menu-item\">Help</span></a>\r\n  </li>\r\n\r\n  <li class=\"nav-item\" (click)=\"logOut()\">\r\n    <a class=\"nav-link\">\r\n      <i class=\"fas fa-sign-out-alt\"></i>\r\n      <span class=\"menu-item\">Logout</span></a>\r\n  </li>\r\n\r\n  <!--<li class=\"nav-item dropdown\">-->\r\n    <!--<a class=\"nav-link dropdown-toggle\" id=\"developer-dropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\" (click)=\"updateCurrentMode(devMode)\" [attr.aria-expanded]=\"currentMode == devMode\" aria-controls=\"collapseExample\">-->\r\n      <!--<i class=\"fab fa-dev\"></i>-->\r\n      <!--<span class=\"menu-item\">Developer</span>-->\r\n    <!--</a>-->\r\n\r\n    <!--<div class=\"dropdown-menu\" aria-labelledby=\"developer-dropdown\" [ngbCollapse]=\"currentMode != devMode\" (click)=\"updateCurrentMode('hide')\">-->\r\n      <!--<h6 class=\"dropdown-header\">Document :</h6>-->\r\n      <!--<a class=\"dropdown-item\" [routerLink]=\"['../dashboard/help/overview']\">Overview</a>-->\r\n      <!--<div class=\"dropdown-divider\"></div>-->\r\n      <!--<a class=\"dropdown-item\" [routerLink]=\"['../dashboard/help/language']\">Language</a>-->\r\n      <!--<a class=\"dropdown-item\" [routerLink]=\"['../dashboard/help/boostrap']\">Boostrap Template</a>-->\r\n    <!--</div>-->\r\n  <!--</li>-->\r\n</ul>\r\n"
 
 /***/ }),
 
@@ -2665,12 +2775,29 @@ var CollectionComponent = /** @class */ (function () {
     };
     CollectionComponent.prototype.updateOrSavingCollection = function () {
         var _this = this;
-        this.collectionService.updateOrSavingCollection(this.dbItem).subscribe(function (data) {
-            _this.dbItem = data;
-            _this.closeModal('view-detail-collection');
-            _this.dbItem = null;
-            _this.fetchData();
-        });
+        var errorData = this.validateDataBeforeSubmit();
+        if (!errorData.hasError) {
+            this.collectionService.updateOrSavingCollection(this.dbItem).subscribe(function (data) {
+                _this.dbItem = data;
+                _this.closeModal('view-detail-collection');
+                _this.dbItem = null;
+                _this.fetchData();
+            });
+        }
+        else {
+            this.mapErrors = errorData;
+        }
+    };
+    CollectionComponent.prototype.validateDataBeforeSubmit = function () {
+        var hasError = false;
+        var mapErrors = {};
+        if (this.dbItem.collectionName == null || this.dbItem.collectionName.trim() === '') {
+            hasError = true;
+            mapErrors['collectionName'] = 'Please enter the collection name!';
+        }
+        return {
+            hasError: hasError, mapErrors: mapErrors
+        };
     };
     CollectionComponent.prototype.clearResponseMessage = function () {
         this.responseMessage = null;
@@ -2774,6 +2901,166 @@ var ColorantComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [_services_colorant_colorant_service__WEBPACK_IMPORTED_MODULE_1__["ColourantService"]])
     ], ColorantComponent);
     return ColorantComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/setting/customer/customer.component.html":
+/*!*********************************************************************!*\
+  !*** ./src/app/components/setting/customer/customer.component.html ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"block-header\">\n  <h1>Customer Manager</h1>\n</div>\n\n<div class=\"row\">\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n    <div class=\"card\">\n      <div class=\"card-header\">\n        List Customers\n\n        <button class=\"close\" (click)=\"addCustomer()\"><i class=\"fas fa-plus-square\"></i></button>\n      </div>\n\n      <div class=\"card-body\">\n        <ng-container *ngIf=\"responseMessage != null && responseMessage.type == 'success'\">\n          <div class=\"alert alert-success\">\n            <button class=\"close\" data-dismiss=\"alert\" aria-label=\"close\" (click)=\"clearResponseMessage()\">&times;</button>\n            {{responseMessage.message}}\n          </div>\n        </ng-container>\n\n        <ng-container *ngIf=\"responseMessage != null && responseMessage.type == 'error'\">\n          <div class=\"alert alert-danger\">\n            <button class=\"close\" data-dismiss=\"alert\" aria-label=\"close\" (click)=\"clearResponseMessage()\">&times;</button>\n            {{responseMessage.message}}\n          </div>\n        </ng-container>\n\n        <div class=\"table-responsive\">\n          <table class=\"table table-bordered\" matSort (matSortChange)=\"sortData($event)\">\n            <tr>\n              <th mat-sort-header=\"name\">Name</th>\n              <th mat-sort-header=\"phone\">Phone Number</th>\n              <th mat-sort-header=\"email\">Email</th>\n              <th mat-sort-header=\"address\">Address</th>\n              <th mat-sort-header=\"note\">Note</th>\n              <th>Action</th>\n            </tr>\n\n            <tr *ngFor=\"let customer of sortedData\">\n              <td>{{customer.name}}</td>\n              <td>{{customer.phone}}</td>\n              <td>{{customer.email}}</td>\n              <td>{{customer.address}}</td>\n              <td>{{customer.note}}</td>\n              <td>\n                <button mat-raised-button\n                        matTooltip=\"Edit Collection\"\n                        aria-label=\"Edit Collection\"\n                        (click)=\"viewCustomer(customer)\">\n                  <i class=\"fas fa-edit\"></i>\n                </button>\n\n                <button mat-raised-button\n                        matTooltip=\"Delete Collection\"\n                        aria-label=\"Delete Collection\"\n                        (click)=\"confirmDeleteCustomer(customer)\">\n                  <i class=\"fas fa-trash-alt\"></i>\n                </button>\n              </td>\n            </tr>\n          </table>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n\n<ng-container *ngIf=\"dbItem != null\">\n  <pp-modal id=\"view-detail-customer\" class=\"modal view-detail-customer\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <h5 class=\"modal-title\">{{dbItem.customerId > 0 ? 'Edit Customer':  'Add Customer'}}</h5>\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\" (click)=\"closeModal('view-detail-customer')\">\n          <span aria-hidden=\"true\">×</span>\n        </button>\n      </div>\n\n      <div class=\"modal-body\">\n        <form class=\"form form-horizontal form-detail\">\n          <div class=\"form-body\">\n            <div class=\"form-group row\">\n              <label class=\"col-md-3 label-control\">Name</label>\n              <div class=\"col-md-8\">\n                <input type=\"text\" [(ngModel)]=\"dbItem.name\" class=\"form-control\" [ngModelOptions]=\"{standalone: true}\">\n              </div>\n            </div>\n\n            <div class=\"form-group row\">\n              <label class=\"col-md-3 label-control\">Phone Number</label>\n              <div class=\"col-md-8\">\n                <input type=\"text\" [(ngModel)]=\"dbItem.phone\" class=\"form-control\" [ngModelOptions]=\"{standalone: true}\">\n              </div>\n            </div>\n\n            <div class=\"form-group row\">\n              <label class=\"col-md-3 label-control\">Email</label>\n              <div class=\"col-md-8\">\n                <input type=\"text\" [(ngModel)]=\"dbItem.email\" class=\"form-control\" [ngModelOptions]=\"{standalone: true}\">\n              </div>\n            </div>\n\n            <div class=\"form-group row\">\n              <label class=\"col-md-3 label-control\">Address</label>\n              <div class=\"col-md-8\">\n                <textarea [(ngModel)]=\"dbItem.address\" class=\"form-control\" [ngModelOptions]=\"{standalone: true}\"></textarea>\n              </div>\n            </div>\n\n            <div class=\"form-group row\">\n              <label class=\"col-md-3 label-control\">Note</label>\n              <div class=\"col-md-8\">\n                <textarea [(ngModel)]=\"dbItem.note\" class=\"form-control\" [ngModelOptions]=\"{standalone: true}\"></textarea>\n              </div>\n            </div>\n          </div>\n        </form>\n      </div>\n\n      <div class=\"modal-footer\">\n        <button type=\"button\" class=\"btn btn-default\" (click)=\"closeModal('view-detail-customer')\">Cancel</button>\n        <button type=\"button\" class=\"btn btn-primary\" (click)=\"updateOrSavingCustomer()\">Save</button>\n      </div>\n    </div>\n  </pp-modal>\n</ng-container>\n\n<ng-container *ngIf=\"selectedCustomerId != null && selectedCustomerId > 0\">\n  <pp-modal id=\"confirm-remove-customer-model\" class=\"modal confirm-remove-customer-model\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <h5 class=\"modal-title\">Confirm</h5>\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\" (click)=\"closeModal('confirm-remove-customer-model')\">\n          <span aria-hidden=\"true\">×</span>\n        </button>\n      </div>\n\n      <div class=\"modal-body\">\n        Do you want to delete this customer?\n      </div>\n\n      <div class=\"modal-footer\">\n        <button type=\"button\" class=\"btn btn-default\" (click)=\"closeModal('confirm-remove-customer-model')\">Cancel</button>\n        <button type=\"button\" class=\"btn btn-primary\" (click)=\"deleteCustomer()\">Ok</button>\n      </div>\n    </div>\n  </pp-modal>\n</ng-container>\n"
+
+/***/ }),
+
+/***/ "./src/app/components/setting/customer/customer.component.scss":
+/*!*********************************************************************!*\
+  !*** ./src/app/components/setting/customer/customer.component.scss ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvc2V0dGluZy9jdXN0b21lci9jdXN0b21lci5jb21wb25lbnQuc2NzcyJ9 */"
+
+/***/ }),
+
+/***/ "./src/app/components/setting/customer/customer.component.ts":
+/*!*******************************************************************!*\
+  !*** ./src/app/components/setting/customer/customer.component.ts ***!
+  \*******************************************************************/
+/*! exports provided: CustomerComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CustomerComponent", function() { return CustomerComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _models_customer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../models/customer */ "./src/app/models/customer.ts");
+/* harmony import */ var _services_customer_customer_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../services/customer/customer.service */ "./src/app/services/customer/customer.service.ts");
+/* harmony import */ var _services_boostrap_modal_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../services/boostrap/modal.service */ "./src/app/services/boostrap/modal.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var CustomerComponent = /** @class */ (function () {
+    function CustomerComponent(customerService, modalService) {
+        this.customerService = customerService;
+        this.modalService = modalService;
+        this.responseMessage = null;
+    }
+    CustomerComponent.prototype.ngOnInit = function () {
+        this.responseMessage = null;
+        this.dbItem = null;
+        this.selectedCustomerId = null;
+        this.fetchData();
+    };
+    CustomerComponent.prototype.fetchData = function () {
+        var _this = this;
+        this.customerService.findAll().subscribe(function (data) {
+            _this.dbItems = data;
+            _this.sortedData = _this.dbItems;
+        });
+    };
+    CustomerComponent.prototype.addCustomer = function () {
+        var _this = this;
+        this.dbItem = new _models_customer__WEBPACK_IMPORTED_MODULE_1__["CustomerModel"]();
+        setTimeout(function () {
+            _this.openModal('view-detail-customer');
+        }, 100);
+    };
+    CustomerComponent.prototype.viewCustomer = function (customer) {
+        var _this = this;
+        this.dbItem = customer;
+        setTimeout(function () {
+            _this.openModal('view-detail-customer');
+        }, 100);
+    };
+    CustomerComponent.prototype.validateDataBeforeSubmit = function () {
+        var hasError = false;
+        var mapErrors = {};
+        if (this.dbItem.name == null || this.dbItem.name.trim() === '') {
+            hasError = true;
+            mapErrors['name'] = 'Please enter the customer name!';
+        }
+        if (this.dbItem.phone == null || this.dbItem.phone.trim() === '') {
+            hasError = true;
+            mapErrors['phone'] = 'Please enter the customer phone number!';
+        }
+        if (this.dbItem.address == null || this.dbItem.address.trim() === '') {
+            hasError = true;
+            mapErrors['address'] = 'Please enter the customer address!';
+        }
+        if (this.dbItem.email == null || this.dbItem.email.trim() === '') {
+            hasError = true;
+            mapErrors['email'] = 'Please enter the customer email!';
+        }
+        return {
+            hasError: hasError, mapErrors: mapErrors
+        };
+    };
+    CustomerComponent.prototype.updateOrSavingCustomer = function () {
+        var _this = this;
+        var errorData = this.validateDataBeforeSubmit();
+        if (!errorData.hasError) {
+            this.customerService.saveOrUpdate(this.dbItem).subscribe(function (data) {
+                _this.dbItem = data;
+                _this.closeModal('view-detail-customer');
+                _this.dbItem = null;
+                _this.fetchData();
+            });
+        }
+        else {
+            this.mapErrors = errorData.mapErrors;
+        }
+    };
+    CustomerComponent.prototype.confirmDeleteCustomer = function (customer) {
+        var _this = this;
+        this.selectedCustomerId = customer.customerId;
+        setTimeout(function () {
+            _this.openModal('confirm-remove-customer-model');
+        }, 100);
+    };
+    CustomerComponent.prototype.deleteCustomer = function () {
+        var _this = this;
+        this.customerService.deleteCustomer(this.selectedCustomerId).subscribe(function (data) {
+            _this.responseMessage = data;
+            _this.selectedCustomerId = null;
+            _this.closeModal('confirm-remove-customer-model');
+            _this.fetchData();
+        });
+    };
+    CustomerComponent.prototype.clearResponseMessage = function () {
+        this.responseMessage = null;
+    };
+    CustomerComponent.prototype.openModal = function (id) {
+        this.modalService.open(id);
+    };
+    CustomerComponent.prototype.closeModal = function (id) {
+        this.modalService.close(id);
+    };
+    CustomerComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-customer',
+            template: __webpack_require__(/*! ./customer.component.html */ "./src/app/components/setting/customer/customer.component.html"),
+            styles: [__webpack_require__(/*! ./customer.component.scss */ "./src/app/components/setting/customer/customer.component.scss")]
+        }),
+        __metadata("design:paramtypes", [_services_customer_customer_service__WEBPACK_IMPORTED_MODULE_2__["CustomerService"], _services_boostrap_modal_service__WEBPACK_IMPORTED_MODULE_3__["ModalService"]])
+    ], CustomerComponent);
+    return CustomerComponent;
 }());
 
 
@@ -3646,6 +3933,96 @@ var USER_ROLE = {
 
 /***/ }),
 
+/***/ "./src/app/models/customer.ts":
+/*!************************************!*\
+  !*** ./src/app/models/customer.ts ***!
+  \************************************/
+/*! exports provided: CustomerModel */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CustomerModel", function() { return CustomerModel; });
+var CustomerModel = /** @class */ (function () {
+    function CustomerModel() {
+    }
+    Object.defineProperty(CustomerModel.prototype, "customerId", {
+        get: function () {
+            return this._customerId;
+        },
+        set: function (value) {
+            this._customerId = value;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(CustomerModel.prototype, "phone", {
+        get: function () {
+            return this._phone;
+        },
+        set: function (value) {
+            this._phone = value;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(CustomerModel.prototype, "email", {
+        get: function () {
+            return this._email;
+        },
+        set: function (value) {
+            this._email = value;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(CustomerModel.prototype, "address", {
+        get: function () {
+            return this._address;
+        },
+        set: function (value) {
+            this._address = value;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(CustomerModel.prototype, "note", {
+        get: function () {
+            return this._note;
+        },
+        set: function (value) {
+            this._note = value;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(CustomerModel.prototype, "machine", {
+        get: function () {
+            return this._machine;
+        },
+        set: function (value) {
+            this._machine = value;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(CustomerModel.prototype, "name", {
+        get: function () {
+            return this._name;
+        },
+        set: function (value) {
+            this._name = value;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    return CustomerModel;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/models/dispense.task.model.ts":
 /*!***********************************************!*\
   !*** ./src/app/models/dispense.task.model.ts ***!
@@ -4152,6 +4529,36 @@ var FormulaModel = /** @class */ (function () {
         },
         set: function (value) {
             this._machine = value;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(FormulaModel.prototype, "approximateColor", {
+        get: function () {
+            return this._approximateColor;
+        },
+        set: function (value) {
+            this._approximateColor = value;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(FormulaModel.prototype, "substrate", {
+        get: function () {
+            return this._substrate;
+        },
+        set: function (value) {
+            this._substrate = value;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(FormulaModel.prototype, "comment", {
+        get: function () {
+            return this._comment;
+        },
+        set: function (value) {
+            this._comment = value;
         },
         enumerable: true,
         configurable: true
@@ -5045,6 +5452,91 @@ var ColourantService = /** @class */ (function () {
         __metadata("design:paramtypes", [_shared_http_services_http_service__WEBPACK_IMPORTED_MODULE_4__["HttpService"]])
     ], ColourantService);
     return ColourantService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/services/customer/customer.service.ts":
+/*!*******************************************************!*\
+  !*** ./src/app/services/customer/customer.service.ts ***!
+  \*******************************************************/
+/*! exports provided: CustomerService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CustomerService", function() { return CustomerService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../environments/environment */ "./src/environments/environment.ts");
+/* harmony import */ var rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/internal/operators */ "./node_modules/rxjs/internal/operators/index.js");
+/* harmony import */ var rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _shared_http_services_http_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../shared/http/services/http.service */ "./src/app/shared/http/services/http.service.ts");
+/* harmony import */ var _store_store_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../store/store.service */ "./src/app/services/store/store.service.ts");
+/* harmony import */ var _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../utils/convert-models-utils */ "./src/app/utils/convert-models-utils.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+var CustomerService = /** @class */ (function () {
+    function CustomerService(http, storeService) {
+        this.http = http;
+        this.storeService = storeService;
+    }
+    CustomerService.prototype.findAll = function () {
+        var machine = this.storeService.getMachineData();
+        if (machine != null && machine.machineId > 0) {
+            return this.http.get(_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].settings.serverendpoint + 'customer/findAll/' + machine.machineId).pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (data) {
+                var listCustomer = [];
+                if (data) {
+                    for (var _i = 0, data_1 = data; _i < data_1.length; _i++) {
+                        var customer = data_1[_i];
+                        listCustomer.push(_utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_5__["default"].convertToCustomerModel(customer));
+                    }
+                }
+                return listCustomer;
+            }), Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])(function (e) {
+                return [];
+            }));
+        }
+    };
+    CustomerService.prototype.saveOrUpdate = function (dbItem) {
+        var machine = this.storeService.getMachineData();
+        var dt = _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_5__["default"].convertToCustomerDBItem(dbItem, machine);
+        return this.http.post(_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].settings.serverendpoint + 'customer/save', dt).pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (data) {
+            return _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_5__["default"].convertToMachineModel(data);
+        }));
+    };
+    CustomerService.prototype.deleteCustomer = function (customerId) {
+        var machine = this.storeService.getMachineData();
+        var dt = {
+            customerId: customerId,
+            machine: { machineId: machine.machineId }
+        };
+        return this.http.post(_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].settings.serverendpoint + 'customer/delete', dt).pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (data) {
+            console.log(data);
+            return _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_5__["default"].convertToResponseMessageModel(data);
+        }));
+    };
+    CustomerService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+            providedIn: 'root'
+        }),
+        __metadata("design:paramtypes", [_shared_http_services_http_service__WEBPACK_IMPORTED_MODULE_3__["HttpService"], _store_store_service__WEBPACK_IMPORTED_MODULE_4__["StoreService"]])
+    ], CustomerService);
+    return CustomerService;
 }());
 
 
@@ -6215,6 +6707,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _models_colorant__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../models/colorant */ "./src/app/models/colorant.ts");
 /* harmony import */ var _models_user_model__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../models/user.model */ "./src/app/models/user.model.ts");
 /* harmony import */ var _models_dispense_task_model__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../models/dispense.task.model */ "./src/app/models/dispense.task.model.ts");
+/* harmony import */ var _models_customer__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../models/customer */ "./src/app/models/customer.ts");
+
 
 
 
@@ -6242,6 +6736,9 @@ var ConvertModelUtils = /** @class */ (function () {
         formula.createBy = object.createBy;
         formula.baseOnCan = object.baseOnCan;
         formula.machine = object.machine != null ? ConvertModelUtils.convertToMachineModel(object.machine) : null;
+        formula.approximateColor = object.approximateColor;
+        formula.comment = object.comment;
+        formula.substrate = object.substrate;
         return formula;
     };
     ConvertModelUtils.convertToProductModel = function (object) {
@@ -6366,6 +6863,17 @@ var ConvertModelUtils = /** @class */ (function () {
         item.status = object.status;
         return item;
     };
+    ConvertModelUtils.convertToCustomerModel = function (customer) {
+        var item = new _models_customer__WEBPACK_IMPORTED_MODULE_9__["CustomerModel"]();
+        item.customerId = customer.customerId;
+        item.name = customer.name;
+        item.phone = customer.phone;
+        item.email = customer.email;
+        item.address = customer.address;
+        item.note = customer.note;
+        item.machine = customer.machine != null ? ConvertModelUtils.convertToMachineModel(customer.machine) : null;
+        return item;
+    };
     ConvertModelUtils.convertToResponseMessageModel = function (object) {
         var item = new _models_user_model__WEBPACK_IMPORTED_MODULE_7__["ResponseMessageModel"]();
         item.type = object.type;
@@ -6401,6 +6909,9 @@ var ConvertModelUtils = /** @class */ (function () {
             formulaName: formula.formulaName,
             collection: { collectionId: formula.collection.collectionId },
             baseOnCan: formula.baseOnCan,
+            approximateColor: formula.approximateColor,
+            substrate: formula.substrate,
+            comment: formula.comment,
         };
     };
     ConvertModelUtils.convertToFormulaColourantDBItem = function (formulaColourant) {
@@ -6409,6 +6920,17 @@ var ConvertModelUtils = /** @class */ (function () {
             colourant: { colourantId: formulaColourant.colourant.colourantId },
             formula: { formulaId: formulaColourant.formula.formulaId },
             quantity: formulaColourant.quantity,
+        };
+    };
+    ConvertModelUtils.convertToCustomerDBItem = function (dbItem, machine) {
+        return {
+            customerId: dbItem.customerId,
+            name: dbItem.name,
+            phone: dbItem.phone,
+            email: dbItem.email,
+            address: dbItem.address,
+            note: dbItem.note,
+            machine: { machineId: machine.machineId },
         };
     };
     return ConvertModelUtils;
