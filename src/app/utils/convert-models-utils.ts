@@ -7,6 +7,7 @@ import {BaseModel} from '../models/base';
 import {ColorantModel} from '../models/colorant';
 import {MachineColourantModel, MachineModel, ResponseMessageModel, RoleModel, UserModel} from '../models/user.model';
 import {MachineFormulaProductBaseLogModel} from '../models/dispense.task.model';
+import {CustomerModel} from '../models/customer';
 
 export interface TaskInterface {
   taskId: number;
@@ -176,6 +177,19 @@ export default class ConvertModelUtils {
     return item;
   }
 
+
+  static convertToCustomerModel(customer: any): CustomerModel {
+    const item = new CustomerModel();
+    item.customerId = customer.customerId;
+    item.name = customer.name;
+    item.phone = customer.phone;
+    item.email = customer.email;
+    item.address = customer.address;
+    item.note = customer.note;
+    item.machine = customer.machine != null ? ConvertModelUtils.convertToMachineModel(customer.machine) : null;
+    return item;
+  }
+
   static convertToResponseMessageModel(object: any): ResponseMessageModel {
     const item = new ResponseMessageModel();
     item.type = object.type;
@@ -231,6 +245,18 @@ export default class ConvertModelUtils {
       colourant: {colourantId: formulaColourant.colourant.colourantId},
       formula: {formulaId: formulaColourant.formula.formulaId},
       quantity: formulaColourant.quantity,
+    };
+  }
+
+  static convertToCustomerDBItem(dbItem: CustomerModel, machine: MachineModel) {
+    return {
+      customerId: dbItem.customerId,
+      name: dbItem.name,
+      phone: dbItem.phone,
+      email: dbItem.email,
+      address: dbItem.address,
+      note: dbItem.note,
+      machine: {machineId: machine.machineId},
     };
   }
 }

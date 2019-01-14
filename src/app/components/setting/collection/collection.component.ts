@@ -22,6 +22,7 @@ export class CollectionComponent implements OnInit {
   listItems: Array<any>;
   sortedData: CollectionModel[] = null;
   responseMessage: ResponseMessageModel = null;
+  mapErrors: any;
 
   constructor(private collectionService: CollectionService, private modalService: ModalService) {
 
@@ -96,12 +97,32 @@ export class CollectionComponent implements OnInit {
   }
 
   updateOrSavingCollection(): void {
-    this.collectionService.updateOrSavingCollection(this.dbItem).subscribe((data: any) => {
-      this.dbItem = data;
-      this.closeModal('view-detail-collection');
-      this.dbItem = null;
-      this.fetchData();
-    });
+    const errorData = this.validateDataBeforeSubmit();
+
+    if (!errorData.hasError) {
+      this.collectionService.updateOrSavingCollection(this.dbItem).subscribe((data: any) => {
+        this.dbItem = data;
+        this.closeModal('view-detail-collection');
+        this.dbItem = null;
+        this.fetchData();
+      });
+    } else {
+      this.mapErrors = errorData;
+    }
+  }
+
+  validateDataBeforeSubmit() {
+    let hasError = false;
+    const mapErrors = {};
+
+    if (this.dbItem.collectionName == null || this.dbItem.collectionName.trim() === '') {
+      hasError = true;
+      mapErrors['collectionName'] = 'Please enter the collection name!';
+    }
+
+    return {
+      hasError: hasError, mapErrors: mapErrors
+    };
   }
 
   clearResponseMessage(): void {

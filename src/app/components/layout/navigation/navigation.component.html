@@ -25,8 +25,9 @@
       <a class="dropdown-item" [routerLink]="['../dashboard/base']">Base</a>
       <a class="dropdown-item" [routerLink]="['../dashboard/collection']">Collection</a>
       <a class="dropdown-item" [routerLink]="['../dashboard/product']">Product</a>
-
       <ng-container *ngIf="currentUser != null && currentUser.role.roleName == USER_ROLE.SHOP">
+        <a class="dropdown-item" [routerLink]="['../dashboard/customer']">Customer</a>
+
         <div class="dropdown-divider"></div>
         <h6 class="dropdown-header">Machine Setting:</h6>
         <a class="dropdown-item" [routerLink]="['../dashboard/machine']">Machine</a>

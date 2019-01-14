@@ -77,6 +77,7 @@ import {StoreService} from './services/store/store.service';
 import {EditFormulaComponent} from './components/formula/editformula/edit-formula/edit-formula.component';
 import {TableColourantsComponent} from './directions/product/tablecolourant/table-colourants.component';
 import {BaseCanComponent} from './directions/product/base-can/base-can.component';
+import {CustomerComponent} from './components/setting/customer/customer.component';
 
 
 const routes: Routes = [
@@ -95,6 +96,7 @@ const routes: Routes = [
       {path: 'base', component: BaseComponent},
       {path: 'collection', component: CollectionComponent},
       {path: 'product', component: ProductComponent},
+      {path: 'customer', component: CustomerComponent},
       // {path: 'product/view-detail/:id', component: ViewDetailComponent},
 
       {path: 'formula', component: FormulaComponent},
@@ -151,6 +153,7 @@ const routes: Routes = [
     BaseComponent,
     CollectionComponent,
     ProductComponent,
+    CustomerComponent,
     ProductbaseComponent,
     ViewDetailComponent,
 

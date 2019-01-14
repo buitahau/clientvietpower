@@ -1,0 +1,149 @@
+<div class="block-header">
+  <h1>Customer Manager</h1>
+</div>
+
+<div class="row">
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <div class="card">
+      <div class="card-header">
+        List Customers
+
+        <button class="close" (click)="addCustomer()"><i class="fas fa-plus-square"></i></button>
+      </div>
+
+      <div class="card-body">
+        <ng-container *ngIf="responseMessage != null && responseMessage.type == 'success'">
+          <div class="alert alert-success">
+            <button class="close" data-dismiss="alert" aria-label="close" (click)="clearResponseMessage()">&times;</button>
+            {{responseMessage.message}}
+          </div>
+        </ng-container>
+
+        <ng-container *ngIf="responseMessage != null && responseMessage.type == 'error'">
+          <div class="alert alert-danger">
+            <button class="close" data-dismiss="alert" aria-label="close" (click)="clearResponseMessage()">&times;</button>
+            {{responseMessage.message}}
+          </div>
+        </ng-container>
+
+        <div class="table-responsive">
+          <table class="table table-bordered" matSort (matSortChange)="sortData($event)">
+            <tr>
+              <th mat-sort-header="name">name</th>
+              <th mat-sort-header="phone">phone</th>
+              <th mat-sort-header="email">email</th>
+              <th mat-sort-header="address">address</th>
+              <th mat-sort-header="note">note</th>
+              <th>Action</th>
+            </tr>
+
+            <tr *ngFor="let customer of sortedData">
+              <td>{{customer.name}}</td>
+              <td>{{customer.phone}}</td>
+              <td>{{customer.email}}</td>
+              <td>{{customer.address}}</td>
+              <td>{{customer.note}}</td>
+              <td>
+                <button mat-raised-button
+                        matTooltip="Edit Collection"
+                        aria-label="Edit Collection"
+                        (click)="viewCustomer(customer)">
+                  <i class="fas fa-edit"></i>
+                </button>
+
+                <button mat-raised-button
+                        matTooltip="Delete Collection"
+                        aria-label="Delete Collection"
+                        (click)="confirmDeleteCustomer(customer)">
+                  <i class="fas fa-trash-alt"></i>
+                </button>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<ng-container *ngIf="dbItem != null">
+  <pp-modal id="view-detail-customer" class="modal view-detail-customer">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">{{dbItem.customerId > 0 ? 'Edit Customer':  'Add Customer'}}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="closeModal('view-detail-customer')">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <form class="form form-horizontal form-detail">
+          <div class="form-body">
+            <div class="form-group row">
+              <label class="col-md-3 label-control">name</label>
+              <div class="col-md-8">
+                <input type="text" [(ngModel)]="dbItem.name" class="form-control" [ngModelOptions]="{standalone: true}">
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label class="col-md-3 label-control">phone</label>
+              <div class="col-md-8">
+                <input type="text" [(ngModel)]="dbItem.phone" class="form-control" [ngModelOptions]="{standalone: true}">
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label class="col-md-3 label-control">email</label>
+              <div class="col-md-8">
+                <input type="text" [(ngModel)]="dbItem.email" class="form-control" [ngModelOptions]="{standalone: true}">
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label class="col-md-3 label-control">address</label>
+              <div class="col-md-8">
+                <textarea [(ngModel)]="dbItem.address" class="form-control" [ngModelOptions]="{standalone: true}"></textarea>
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label class="col-md-3 label-control">note</label>
+              <div class="col-md-8">
+                <textarea [(ngModel)]="dbItem.note" class="form-control" [ngModelOptions]="{standalone: true}"></textarea>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" (click)="closeModal('view-detail-customer')">Cancel</button>
+        <button type="button" class="btn btn-primary" (click)="updateOrSavingCustomer()">Save</button>
+      </div>
+    </div>
+  </pp-modal>
+</ng-container>
+
+<ng-container *ngIf="selectedCustomerId != null && selectedCustomerId > 0">
+  <pp-modal id="confirm-remove-customer-model" class="modal confirm-remove-customer-model">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Confirm</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="closeModal('confirm-remove-customer-model')">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        Do you want to delete this customer ?
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" (click)="closeModal('confirm-remove-customer-model')">Cancel</button>
+        <button type="button" class="btn btn-primary" (click)="deleteCustomer()">Ok</button>
+      </div>
+    </div>
+  </pp-modal>
+</ng-container>
