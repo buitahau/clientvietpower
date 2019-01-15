@@ -66,7 +66,7 @@ export class DispenseTaskService {
       } else if (this.currentTaskStep.type === MAP_DISPENSE_TASK_STEP_TYPE.PUMPING) {
         this.currentTaskStep.status = MAP_DISPENSE_TASK_STATE.DONE;
 
-        this.recordDispenseTaskLog(this.currentTaskStep.type, this.currentTaskStep);
+        this.recordDispenseTaskLog(this.currentTaskStep.type, this.currentTaskStep, this.currentTask.taskId);
 
         if (this.currentTaskStep.callBackFunction != null) {
           this.currentTaskStep.callBackFunction(this.currentTask, this.currentTaskStep);
@@ -81,9 +81,9 @@ export class DispenseTaskService {
     }
   }
 
-  recordDispenseTaskLog(type: string, data: DispenseTaskStepModel): void {
+  recordDispenseTaskLog(type: string, data: DispenseTaskStepModel, taskId: number): void {
     if (type === MAP_DISPENSE_TASK_STEP_TYPE.PUMPING) {
-      this.machineService.subtractionColourantMachine(data.taskData.colorant, data.taskData.quantity);
+      this.machineService.subtractionColourantMachine(data.taskData.colorant, data.taskData.quantity, taskId);
     }
   }
 

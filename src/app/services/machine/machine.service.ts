@@ -82,13 +82,14 @@ export class MachineService {
     );
   }
 
-  subtractionColourantMachine(colorant: ColorantModel, quantity: number) {
+  subtractionColourantMachine(colorant: ColorantModel, quantity: number, taskId: number) {
     const machine = this.getCurrentMachine();
 
     const dt = {
       machine: {machineId: machine.machineId},
       colourant: {colourantId: colorant.colourantId},
-      quantity: quantity
+      quantity: quantity,
+      machineFormulaProductBaseId: taskId
     };
     this.http.post(environment.settings.serverendpoint + 'machine_colour/subtraction', dt).pipe().subscribe();
   }

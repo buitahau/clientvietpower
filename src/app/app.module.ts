@@ -100,6 +100,7 @@ const routes: Routes = [
       // {path: 'product/view-detail/:id', component: ViewDetailComponent},
 
       {path: 'formula', component: FormulaComponent},
+      // {path: 'formula', loadChildren: './components/formula/'},
       {path: 'view-formula/:id', component: ViewFormulaComponent},
       {path: 'formula/add', component: EditFormulaComponent},
       {path: 'formula/edit/:id', component: EditFormulaComponent},
