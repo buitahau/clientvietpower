@@ -205,4 +205,13 @@ export class ViewFormulaComponent implements OnInit {
   closeDispenseModel() {
     this.closeModal('print-formula-modal');
   }
+
+  printFormulaDispense() {
+    document.body.classList.add('print-mode');
+    window.print();
+
+    setTimeout(() => {
+      document.body.classList.remove('print-mode');
+    }, 2000);
+  }
 }

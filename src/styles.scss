@@ -272,3 +272,43 @@ span.error-label {
   width: 100%;
   color: red;
 }
+
+
+body.print-mode{
+  > *{
+    display: none !important;
+  }
+
+  &.modal-open{
+    .modal:not(.print-formula-modal){
+      display: none !important;
+    }
+  }
+
+  .print-formula-modal{
+    display: block !important;
+
+    .modal-dialog{
+      margin: 0px 0px;
+      width: 100%;
+      max-width: 100%;
+      min-height: 100%;
+      max-height: 100%;
+    }
+
+    .modal-content{
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+      max-width: 100%;
+      width: 100%;
+    }
+
+    .modal-header, .modal-footer{
+      display: none;
+    }
+
+  }
+}
