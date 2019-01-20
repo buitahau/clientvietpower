@@ -7,7 +7,8 @@ import {BaseModel} from '../models/base';
 import {ColorantModel} from '../models/colorant';
 import {MachineColourantModel, MachineModel, ResponseMessageModel, RoleModel, UserModel} from '../models/user.model';
 import {MachineFormulaProductBaseLogModel} from '../models/dispense.task.model';
-import {CustomerModel} from '../models/customer';
+import {CustomerModel, CustomerSelectedModel} from '../models/customer';
+import {FormulaCustomerModel} from '../models/formulacustomer';
 
 export interface TaskInterface {
   taskId: number;
@@ -39,6 +40,14 @@ export default class ConvertModelUtils {
     formula.comment = object.comment;
     formula.substrate = object.substrate;
     return formula;
+  }
+
+  static convertToFormulaCustomerModel(object: any): FormulaCustomerModel {
+    const formulaCustomer = new FormulaCustomerModel();
+    formulaCustomer.formulaCustomerId = object.formulaCustomerId;
+    formulaCustomer.formula = ConvertModelUtils.convertToFormulaModel(object.formula);
+    formulaCustomer.customer = ConvertModelUtils.convertToCustomerModel(object.customer);
+    return formulaCustomer;
   }
 
   static convertToProductModel(object: any): ProductModel {
@@ -201,7 +210,8 @@ export default class ConvertModelUtils {
                                                  formula: FormulaModel,
                                                  productBase: ProductBaseModel,
                                                  machine: MachineModel,
-                                                 formulaColourantList: FormulaColourantModel[]) {
+                                                 formulaColourantList: FormulaColourantModel[],
+                                                 listCustomerSelected: CustomerSelectedModel[]) {
     const machineDbItem = {
       machineId: machine.machineId
     };
@@ -219,10 +229,18 @@ export default class ConvertModelUtils {
       }
     }
 
+    const _listCustomerSelected = [];
+    for (const customerSelect of listCustomerSelected) {
+      if (customerSelect.checked) {
+        _listCustomerSelected.push(customerSelect.customer.customerId);
+      }
+    }
+
     return {
       formulaProductBase: formulaProductBaseDBItem,
       machine: machineDbItem,
       formulaColourantList: formulaColourantListDBItem,
+      listCustomer : _listCustomerSelected
     };
   }
 

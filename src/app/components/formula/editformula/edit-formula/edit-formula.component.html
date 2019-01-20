@@ -85,6 +85,30 @@
             </div>
           </div>
         </form>
+
+        <div class="row" *ngIf="listCustomerSelected != null && listCustomerSelected.length > 0">
+          <div class="col-md-12">
+            <table class="table table-bordered">
+              <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Phone Number</th>
+                <th>Email</th>
+                <th>Address</th>
+              </tr>
+
+              <tr *ngFor="let customerSelected of listCustomerSelected">
+                <td>
+                  <mat-checkbox class="example-margin" [(ngModel)]="customerSelected.checked"></mat-checkbox>
+                </td>
+                <td>{{customerSelected.customer.name}}</td>
+                <td>{{customerSelected.customer.phone}}</td>
+                <td>{{customerSelected.customer.email}}</td>
+                <td>{{customerSelected.customer.address}}</td>
+              </tr>
+            </table>
+          </div>
+        </div>
       </div>
 
       <div class="card-footer">

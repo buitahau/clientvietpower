@@ -16,6 +16,7 @@ import {FormulaColourantModel, FormulaProductBaseModel, ProductBaseCanModel} fro
 import {ProductBaseService} from '../../../services/productbase/productbase.service';
 import ConvertModelUtils from '../../../utils/convert-models-utils';
 import {MachineService} from '../../../services/machine/machine.service';
+import {FormulaCustomerModel} from '../../../models/formulacustomer';
 
 @Component({
   selector: 'app-viewformula',
@@ -112,7 +113,7 @@ export class ViewFormulaComponent implements OnInit {
 
         if (this.selectProductBase == null && this.listProductBaseCan.length > 0) {
           this.selectProductBase = this.listProductBaseCan[0];
-          this.canSize = this.selectProductBase.can;
+          this.canSize = this.dbItem.formula.baseOnCan;
         }
       });
     }

@@ -7,6 +7,7 @@ import {FormulaModel} from '../../models/formula';
 import {FormulaColourantModel, FormulaProductBaseModel} from '../../models/formula_product_base';
 import {StoreService} from '../store/store.service';
 import {ProductBaseModel} from '../../models/product_base';
+import {CustomerSelectedModel} from '../../models/customer';
 
 @Injectable({
   providedIn: 'root'
@@ -54,6 +55,26 @@ export class FormulaService {
           }
         }
         this.listFormula = result;
+        return result;
+      }),
+      catchError(e => {
+        return [];
+      })
+    );
+  }
+
+
+  findAllByCustomer() {
+    const machine = this.storeService.getMachineData();
+    return this.http.get(environment.settings.serverendpoint + 'formula-customer/getAll/' + machine.machineId).pipe(
+      map((data: Array<any>) => {
+        console.log(data);
+        const result = [];
+        if (data) {
+          for (const formula of data) {
+            result.push(ConvertModelUtils.convertToFormulaCustomerModel(formula));
+          }
+        }
         return result;
       }),
       catchError(e => {
@@ -140,8 +161,10 @@ export class FormulaService {
     );
   }
 
-  saveOrUpdateFormulaData(formulaProductBaseId: number, formula: FormulaModel, productBase: ProductBaseModel, listColourants: FormulaColourantModel[]) {
-    const savingItem = ConvertModelUtils.convertToSavingFormulaProductBaseDBItem(formulaProductBaseId, formula, productBase, this.storeService.getMachineData(), listColourants);
+  saveOrUpdateFormulaData(formulaProductBaseId: number, formula: FormulaModel, productBase: ProductBaseModel,
+                          listColourants: FormulaColourantModel[], listCustomerSelected: CustomerSelectedModel[]) {
+    const savingItem = ConvertModelUtils.convertToSavingFormulaProductBaseDBItem(formulaProductBaseId, formula, productBase,
+      this.storeService.getMachineData(), listColourants, listCustomerSelected);
 
     return this.http.post(environment.settings.serverendpoint + 'machine_formula/saveOrUpdate', savingItem).pipe(
       map((data: any) => {

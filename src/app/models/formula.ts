@@ -1,5 +1,6 @@
 import {CollectionModel} from './collection';
 import {MachineModel} from './user.model';
+import {CustomerModel} from './customer';
 
 export class FormulaModel {
   private _formulaId: number;
@@ -13,6 +14,7 @@ export class FormulaModel {
   private _approximateColor: string;
   private _substrate: string;
   private _comment: string;
+  private _listCustomer: CustomerModel[];
 
   get baseOnCan(): number {
     return this._baseOnCan;
@@ -101,5 +103,13 @@ export class FormulaModel {
 
   set comment(value: string) {
     this._comment = value;
+  }
+
+  get listCustomer(): CustomerModel[] {
+    return this._listCustomer;
+  }
+
+  set listCustomer(value: CustomerModel[]) {
+    this._listCustomer = value;
   }
 }

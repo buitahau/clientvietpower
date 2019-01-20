@@ -65,3 +65,25 @@ export class CustomerModel {
     this._name = value;
   }
 }
+
+export class CustomerSelectedModel {
+  private _customer: CustomerModel;
+  private _checked: boolean;
+
+
+  get checked(): boolean {
+    return this._checked;
+  }
+
+  set checked(value: boolean) {
+    this._checked = value;
+  }
+
+  get customer(): CustomerModel {
+    return this._customer;
+  }
+
+  set customer(value: CustomerModel) {
+    this._customer = value;
+  }
+}

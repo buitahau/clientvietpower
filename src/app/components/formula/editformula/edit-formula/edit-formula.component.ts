@@ -11,6 +11,9 @@ import {CollectionModel} from '../../../../models/collection';
 import {ColourantService} from '../../../../services/colorant/colorant.service';
 import {BaseModel} from '../../../../models/base';
 import {ModalService} from '../../../../services/boostrap/modal.service';
+import {CustomerModel, CustomerSelectedModel} from '../../../../models/customer';
+import {FormulaCustomerModel} from '../../../../models/formulacustomer';
+import {CustomerService} from '../../../../services/customer/customer.service';
 
 @Component({
   selector: 'app-edit-formula',
@@ -32,6 +35,9 @@ export class EditFormulaComponent implements OnInit {
   listCollections: CollectionModel[] = null;
   listColourants: FormulaColourantModel[] = null;
 
+  listCustomerSelected: CustomerSelectedModel[] = [];
+  listFormulaCustomer: FormulaCustomerModel[] = [];
+
   errorValidation: any = null;
   updateMessage: any = null;
 
@@ -40,6 +46,7 @@ export class EditFormulaComponent implements OnInit {
               private modalService: ModalService,
               private colourantService: ColourantService,
               private formulaService: FormulaService,
+              private customerService: CustomerService,
               private collectionService: CollectionService,
               private productService: ProductService) {
   }
@@ -103,6 +110,32 @@ export class EditFormulaComponent implements OnInit {
     this.collectionService.getListItems().subscribe(datas => {
       this.listCollections = datas;
     });
+
+    this.listCustomerSelected = [];
+    this.customerService.findAll().subscribe(datas => {
+      datas.map(c => {
+        const customerSelected = new CustomerSelectedModel();
+        customerSelected.customer = c;
+        customerSelected.checked = false;
+        this.listCustomerSelected.push(customerSelected);
+      });
+    });
+
+    this.listFormulaCustomer = [];
+    this.formulaService.findAllByCustomer().subscribe(datas => {
+      this.listFormulaCustomer = datas;
+      if (this.listFormulaCustomer != null && this.listFormulaCustomer.length > 0) {
+        for (const formulaCustomer of this.listFormulaCustomer) {
+          const filterCustomerIdx = this.listCustomerSelected.findIndex(item => {
+            return item.customer.customerId === formulaCustomer.customer.customerId;
+          });
+
+          if (filterCustomerIdx != null && filterCustomerIdx > -1) {
+            this.listCustomerSelected[filterCustomerIdx].checked = true;
+          }
+        }
+      }
+    });
   }
 
   getListProductBase() {
@@ -119,7 +152,6 @@ export class EditFormulaComponent implements OnInit {
       this.listProductBases = [];
       this.productService.getListProductBaseFromProduct(this.selectedProductId).subscribe(datas => {
         this.listProductBases = datas;
-        console.log(this.dbItem.productBase.product);
       });
     }
   }
@@ -248,7 +280,7 @@ export class EditFormulaComponent implements OnInit {
     const validateData = this.validateDataBeforeSubmit();
     if (! validateData.hasError) {
       this.formulaService.saveOrUpdateFormulaData(this.dbItem.formulaProductBaseId, this.dbItem.formula, this.selectedProductBase,
-        this.listColourants).subscribe((datas) => {
+        this.listColourants, this.listCustomerSelected).subscribe((datas) => {
         if (datas.formulaProductBaseId != null) {
 
           if (this.dbItem.formulaProductBaseId == null) {
@@ -279,6 +311,11 @@ export class EditFormulaComponent implements OnInit {
   }
 
   goToFormulaPage() {
+    try {
+      this.closeModal('show-update-formula-model');
+    } catch (e) {
+
+    }
     this.router.navigate([`../dashboard/formula`]);
   }
 
@@ -287,11 +324,11 @@ export class EditFormulaComponent implements OnInit {
   }
 
   closeModal(id: string) {
+    this.updateMessage = null;
+    this.modalService.close(id);
+
     if (this.updateMessage != null && this.updateMessage.title != null && this.updateMessage.title !== 'Error') {
       this.router.navigate([`../dashboard/formula`]);
-    } else {
-      this.updateMessage = null;
-      this.modalService.close(id);
     }
   }
 }

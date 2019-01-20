@@ -27,7 +27,7 @@
               <div class="col-md-9">
                 <select class="form-control form-control-sm select-sm select-color-field" id="selectedCollectionFilter" name="selectedCollectionFilter" [(ngModel)]="filter.collectionId" (ngModelChange)="onFilterChange($event)">
                   <option [ngValue]="undefined">Choose Collection</option>
-                  <option *ngFor="let c of listCollections" value="{{c._collectionId}}">{{c._collectionName}}</option>
+                  <option *ngFor="let c of listCollections" value="{{c.collectionId}}">{{c.collectionName}}</option>
                 </select>
               </div>
             </div>
@@ -37,7 +37,17 @@
               <div class="col-md-9">
                 <select class="form-control form-control-sm select-sm select-color-field" id="selectedProductFilter" name="selectedProductFilter" [(ngModel)]="filter.productId" (ngModelChange)="onFilterChange($event)">
                   <option [ngValue]="undefined">Choose Product</option>
-                  <option *ngFor="let c of listProducts" value="{{c._productId}}">{{c._productCode}}</option>
+                  <option *ngFor="let c of listProducts" value="{{c.productId}}">{{c.productCode}}</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label class="col-md-3 label-control">Select Customer</label>
+              <div class="col-md-9">
+                <select class="form-control form-control-sm select-sm select-color-field" id="selectedCustomerFilter" name="selectedProductFilter" [(ngModel)]="filter.customerId" (ngModelChange)="onFilterChange($event)">
+                  <option [ngValue]="undefined">Choose Customer</option>
+                  <option *ngFor="let c of listCustomer" value="{{c.customerId}}">{{c.name}}</option>
                 </select>
               </div>
             </div>
