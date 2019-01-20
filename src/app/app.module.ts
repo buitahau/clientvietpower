@@ -78,6 +78,7 @@ import {EditFormulaComponent} from './components/formula/editformula/edit-formul
 import {TableColourantsComponent} from './directions/product/tablecolourant/table-colourants.component';
 import {BaseCanComponent} from './directions/product/base-can/base-can.component';
 import {CustomerComponent} from './components/setting/customer/customer.component';
+import {UserComponent} from './components/user/user.component';
 
 
 const routes: Routes = [
@@ -150,6 +151,7 @@ const routes: Routes = [
     ViewDispenseTaskComponent,
 
     // setting component
+    UserComponent,
     ColorantComponent,
     BaseComponent,
     CollectionComponent,

@@ -149,7 +149,7 @@ export class FormulaComponent implements OnInit {
     this.router.navigate([`../dashboard/view-formula/${formulaProductBaseId}`]);
   }
 
-  onFilterChange() {
+  onFilterChange(event) {
     this.refresh();
   }
 

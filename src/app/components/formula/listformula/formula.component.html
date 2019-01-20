@@ -79,7 +79,8 @@
 
       <div class="card-body">
         <div class="table-responsive">
-          <table class="table table-bordered" matSort (matSortChange)="sortData($event)">
+          <!--matSort (matSortChange)="sortData($event)"-->
+          <table class="table table-bordered">
             <tr>
               <th mat-sort-header="formulaCode">Formula Code</th>
               <th mat-sort-header="formulaName">Formula Name</th>
@@ -102,17 +103,18 @@
               <td>
 
               </td>
-              <td>
-                <button type="button" class="btn btn-default" matTooltip="View Formula" aria-label="View Formula" (click)="viewFormula(item.formulaProductBaseId)">
+              <td [ngStyle]="{'white-space': 'nowrap'}">
+                <button type="button" class="btn" matTooltip="View Formula" aria-label="View Formula" (click)="viewFormula(item.formulaProductBaseId)">
                   <i class="fas fa-info-circle"></i>
                 </button>
 
-                <!--<ng-container *ngIf="item.formula.machine != null && item.formula.machine.machineId > 0">-->
-                  <span class="vertical-separate-line"></span>
-                  <button type="button" class="btn btn-default" matTooltip="Edit Formula" aria-label="Edit Formula" (click)="editTheFormula(item.formulaProductBaseId)">
+                <ng-container *ngIf="item.formula.machine != null && item.formula.machine.machineId > 0">
+                  <span class="vertical-separate-line">&nbsp;</span>
+
+                  <button type="button" class="btn" matTooltip="Edit Formula" aria-label="Edit Formula" (click)="editTheFormula(item.formulaProductBaseId)">
                     <i class="fas fa-edit"></i>
                   </button>
-                <!--</ng-container>-->
+                </ng-container>
             </tr>
 
             <tfoot>

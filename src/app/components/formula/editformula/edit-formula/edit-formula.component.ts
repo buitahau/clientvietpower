@@ -324,11 +324,13 @@ export class EditFormulaComponent implements OnInit {
   }
 
   closeModal(id: string) {
-    this.updateMessage = null;
-    this.modalService.close(id);
-
     if (this.updateMessage != null && this.updateMessage.title != null && this.updateMessage.title !== 'Error') {
+      this.modalService.close(id);
+      this.updateMessage = null;
       this.router.navigate([`../dashboard/formula`]);
+    } else {
+      this.modalService.close(id);
+      this.updateMessage = null;
     }
   }
 }
