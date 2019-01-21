@@ -168,7 +168,7 @@ const routes: Routes = [
 
     // machine component
     MachineSettingComponent,
-
+    UserComponent,
     // test component
     ListComponent,
     CreateComponent,

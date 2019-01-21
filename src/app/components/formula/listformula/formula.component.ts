@@ -127,6 +127,10 @@ export class FormulaComponent implements OnInit {
     }
   }
 
+  sortData = function(e) {
+
+  }
+
   updatePagenationMode = function () {
     const listItem = this.listItems;
     const currentPage = this.pagenationMode.pageIndex;
