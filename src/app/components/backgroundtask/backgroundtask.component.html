@@ -13,7 +13,7 @@
       <div class="card-body">
         <div class="table-responsive">
           <!--(matSortChange)="sortData($event)"-->
-          <table class="table table-bordered">
+          <table class="table table-bordered" matSort (matSortChange)="sortData($event)">
             <tr>
               <th mat-sort-header="jobStatusId">#Id</th>
               <th mat-sort-header="type">Formula Name</th>
