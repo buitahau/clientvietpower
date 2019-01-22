@@ -12,6 +12,7 @@ import {MaterialModule} from './material.module';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {FormsModule} from '@angular/forms';
 import {NgSelect2Module} from 'ng-select2';
+import { NgxBarcodeModule } from 'ngx-barcode';
 
 
 import {AppComponent} from './app.component';
@@ -195,6 +196,7 @@ const routes: Routes = [
     // import boostrap
     NgbModule,
     NgSelect2Module,
+    NgxBarcodeModule,
 
     // IMPORT MATERIAL
     MaterialModule

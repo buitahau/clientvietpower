@@ -22,7 +22,7 @@ export class CollectionComponent implements OnInit {
   listItems: Array<any>;
   sortedData: CollectionModel[] = null;
   responseMessage: ResponseMessageModel = null;
-  mapErrors: any;
+  errorValidation: any;
 
   constructor(private collectionService: CollectionService, private modalService: ModalService) {
 
@@ -107,7 +107,7 @@ export class CollectionComponent implements OnInit {
         this.fetchData();
       });
     } else {
-      this.mapErrors = errorData;
+      this.errorValidation = errorData.mapErrors;
     }
   }
 

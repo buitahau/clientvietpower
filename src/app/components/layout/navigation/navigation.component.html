@@ -23,8 +23,8 @@
 
       <a class="dropdown-item" [routerLink]="['../dashboard/colorant']">Colorant</a>
       <a class="dropdown-item" [routerLink]="['../dashboard/base']">Base</a>
-      <a class="dropdown-item" [routerLink]="['../dashboard/collection']">Collection</a>
       <a class="dropdown-item" [routerLink]="['../dashboard/product']">Product</a>
+      <a class="dropdown-item" [routerLink]="['../dashboard/collection']">Collection</a>
       <ng-container *ngIf="currentUser != null && currentUser.role.roleName == USER_ROLE.SHOP">
         <a class="dropdown-item" [routerLink]="['../dashboard/customer']">Customer</a>
 

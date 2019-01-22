@@ -179,54 +179,63 @@
   </div>
 </div>
 
-<pp-modal id="view-dispense-task-modal" class="modal dispense-job-status-modal" [style]="{'display': 'none'}">
-  <div class="modal-content">
-    <ng-container *ngIf="errorMessage == null || errorMessage == ''">
+<ng-container *ngIf="stateMachine != null && stateMachine == 'DISPENSE' && (errorMessage == null || errorMessage == '') && dbItem != null && currentTask != null && currentTask.taskId != null && currentTask.taskId > 0">
+  <pp-modal id="view-dispense-task-modal" class="modal dispense-job-status-modal" [ngStyle]="{'display': 'none'}">
+    <div class="modal-content">
+      <ng-container *ngIf="errorMessage == null || errorMessage == ''">
+        <div class="modal-header">
+          <h5 class="modal-title">Dispense Job Status</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="closeModal('view-dispense-task-modal')">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+
+        <div class="modal-body">
+          <ng-container *ngIf="dbItem != null && currentTask != null && currentTask.taskId != null && currentTask.taskId > 0">
+            <app-viewdispensetask [dispenseTask]="currentTask" [dispenseStepTask]="currentTaskStep" [listColorantUsed]="listColorant" [maxColorQuantity]="maxColorQuantity"></app-viewdispensetask>
+          </ng-container>
+        </div>
+      </ng-container>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" (click)="closeModal('view-dispense-task-modal')">Hide</button>
+      </div>
+    </div>
+  </pp-modal>
+</ng-container>
+
+<ng-container *ngIf="stateMachine != null && stateMachine == 'PRINT' && dbItem != null">
+  <pp-modal id="print-formula-modal" class="modal print-formula-modal" [ngStyle]="{'display': 'none'}">
+    <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Dispense Job Status</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="closeModal('view-dispense-task-modal')">
+        <h5 class="modal-title">Print</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="closeModal('print-formula-modal')">
           <span aria-hidden="true">×</span>
         </button>
       </div>
 
       <div class="modal-body">
-        <ng-container *ngIf="dbItem != null && currentTask != null && currentTask.taskId != null && currentTask.taskId > 0">
-          <app-viewdispensetask [dispenseTask]="currentTask" [dispenseStepTask]="currentTaskStep" [listColorantUsed]="listColorant" [maxColorQuantity]="maxColorQuantity"></app-viewdispensetask>
-        </ng-container>
+        <div class="row text-center">
+          <div class="col-md-12 formula-color-info"><h3>{{dbItem.formula.formulaCode}}</h3></div>
+          <div class="col-md-12 collection-info"><h4>{{dbItem.formula.collection.collectionName}}</h4></div>
+          <div class="col-md-12 shop-info"><h5>Paintshop "Demo"</h5></div>
+          <div class="col-md-12 street-info"><h5>Demostreet 1</h5></div>
+          <div class="col-md-12 ville-info"><h5>Demo ville</h5></div>
+          <div class="col-md-12 substrate-info"><p>Substrate recommendation Universal primer Grey</p></div>
+          <div class="col-md-12 bar-code-info">
+             <span *ngIf="selectProductBase != null">
+              <ngx-barcode [bc-value]="selectProductBase.barCode" [bc-display-value]="true"></ngx-barcode>
+            </span>
+          </div>
+        </div>
       </div>
-    </ng-container>
 
-    <div class="modal-footer">
-      <button type="button" class="btn btn-primary" (click)="closeModal('view-dispense-task-modal')">Hide</button>
-    </div>
-  </div>
-</pp-modal>
-
-<pp-modal id="print-formula-modal" class="modal print-formula-modal" [style]="{'display': 'none'}">
-  <div class="modal-content">
-    <div class="modal-header">
-      <h5 class="modal-title">Print</h5>
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="closeModal('print-formula-modal')">
-        <span aria-hidden="true">×</span>
-      </button>
-    </div>
-
-    <div class="modal-body">
-      <div class="row text-center" *ngIf="dbItem != null">
-        <div class="col-md-12 formula-color-info"><h3>{{dbItem.formula.formulaCode}}</h3></div>
-        <div class="col-md-12 collection-info"><h4>{{dbItem.formula.collection.collectionName}}</h4></div>
-        <div class="col-md-12 shop-info"><h5>Paintshop "Demo"</h5></div>
-        <div class="col-md-12 street-info"><h5>Demostreet 1</h5></div>
-        <div class="col-md-12 ville-info"><h5>Demo ville</h5></div>
-        <div class="col-md-12 substrate-info"><p>Substrate recommendation Universal primer Grey</p></div>
-        <div class="col-md-12 bar-code-info "><p><span class="bar-code-sample"></span></p></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" (click)="closeDispenseModel()">Close</button>
+        <button type="button" class="btn btn-primary" (click)="printFormulaDispense()">Print</button>
       </div>
     </div>
+  </pp-modal>
+</ng-container>
 
-    <div class="modal-footer">
-      <button type="button" class="btn btn-default" (click)="closeDispenseModel()">Close</button>
-      <button type="button" class="btn btn-primary" (click)="printFormulaDispense()">Print</button>
-    </div>
-  </div>
-</pp-modal>
 

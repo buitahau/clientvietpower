@@ -45,6 +45,8 @@ export class ViewFormulaComponent implements OnInit {
   listColorant: any[] = null;
   errorMessage: string = null;
 
+  stateMachine: string = null;
+
   constructor(private formulaService: FormulaService,
               private productBaseService: ProductBaseService,
               private modalService: ModalService,
@@ -124,6 +126,8 @@ export class ViewFormulaComponent implements OnInit {
   }
 
   beginDispense(modalId: string): void {
+    this.stateMachine = null;
+
     this.machineService.validateQuantityColourant(this.canSize, this.listFormulaColorant, this.dbItem.formula).subscribe(res => {
       if (res.length === 0) {
         // create when not current task in process or task is done !!!!;
@@ -151,6 +155,9 @@ export class ViewFormulaComponent implements OnInit {
             if (this.numberOfCan > 0) {
               this.beginDispense(modalId);
             }
+
+            this.stateMachine = 'PRINT';
+
             setTimeout(() => {
               this.openModal('print-formula-modal');
             }, 500);
@@ -169,6 +176,7 @@ export class ViewFormulaComponent implements OnInit {
             this.currentTask.startTime = item.createdDate;
 
             this.dispenseTaskService.runDispenseTask(this.currentTask);
+            this.stateMachine = 'DISPENSE';
           });
         }
 
@@ -205,6 +213,7 @@ export class ViewFormulaComponent implements OnInit {
 
   closeDispenseModel() {
     this.closeModal('print-formula-modal');
+    this.stateMachine = null;
   }
 
   printFormulaDispense() {
@@ -213,6 +222,7 @@ export class ViewFormulaComponent implements OnInit {
 
     setTimeout(() => {
       document.body.classList.remove('print-mode');
+      this.stateMachine = 'PRINT';
     }, 2000);
   }
 }
