@@ -12,32 +12,23 @@
 
       <div class="card-body">
         <div class="table-responsive">
-          <!--(matSortChange)="sortData($event)"-->
-          <!--<table class="table table-bordered" matSort (matSortChange)="sortData($event)">-->
-          <table class="table table-bordered">
+          <table class="table table-bordered" matSort (matSortChange)="sortData($event)">
             <tr>
-              <!--<th mat-sort-header="jobStatusId">#Id</th>-->
-              <!--<th mat-sort-header="type">Formula Name</th>-->
-              <!--<th mat-sort-header="status">Collection</th>-->
-              <!--<th mat-sort-header="process">Product</th>-->
-              <!--<th mat-sort-header="canSize">Can Size</th>-->
-              <!--<th mat-sort-header="stopTime">Status</th>-->
-              <!--<th mat-sort-header="createdDate">Created Time</th>-->
-              <!--<th mat-sort-header="finishedDate">Finished Time</th>-->
-
-              <th>#Id</th>
-              <th>Formula Name</th>
-              <th>Collection</th>
-              <th>Product</th>
-              <th>Can Size</th>
-              <th>Status</th>
-              <th>Created Time</th>
-              <th>Finished Time</th>
+              <th mat-sort-header="machineFormulaProductBaseId">#Id</th>
+              <th mat-sort-header="approximateColor">Color</th>
+              <th mat-sort-header="formulaName">Formula Name</th>
+              <th mat-sort-header="collectionName">Collection</th>
+              <th mat-sort-header="productName">Product</th>
+              <th mat-sort-header="canSize">Can Size</th>
+              <th mat-sort-header="status">Status</th>
+              <th mat-sort-header="createdDate">Created Time</th>
+              <th mat-sort-header="finishedDate">Finished Time</th>
               <th>Action</th>
             </tr>
 
             <tr *ngFor="let item of listBackgroundTask">
               <td>{{item.machineFormulaProductBaseId}}</td>
+              <td class="text-center"><span [ngStyle]="{'background': item.formulaProductBase.formula.approximateColor, 'display': 'inline-block', 'width': '30px', 'height': '30px', 'border': '1px solid #333'}"></span></td>
               <td>{{item.formulaProductBase.formula.formulaName}}</td>
               <td>{{item.formulaProductBase.formula.collection.collectionName}}</td>
               <td>{{item.formulaProductBase.productBase.product.productName}}</td>
@@ -45,7 +36,7 @@
               <td>{{item.status}}</td>
               <td>{{item.createdDate | date: 'hh:mm:ss dd/MM/yyyy'}}</td>
               <td>{{item.finishedDate | date: 'hh:mm:ss dd/MM/yyyy'}}</td>
-              <td><span (click)="viewCurrentTask(item.machineFormulaProductBaseId)"><i class="fas fa-info-circle"></i></span></td>
+              <td><span (click)="viewCurrentTask(item)"><i class="fas fa-info-circle"></i></span></td>
             </tr>
           </table>
         </div>

@@ -129,7 +129,11 @@ export class MachineService {
   }
 
   findDispenseTaskById(taskId: number) {
-    return this.http.get(environment.settings.serverendpoint + 'machine_formula/findById/' + taskId);
+    return this.http.get(environment.settings.serverendpoint + 'machine_formula/findById/' + taskId).pipe(
+      map((data: any) => {
+        return ConvertModelUtils.convertToFormulaProductBaseModel(data);
+      })
+    );
   }
 
   /**

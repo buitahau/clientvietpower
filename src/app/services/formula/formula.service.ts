@@ -136,8 +136,6 @@ export class FormulaService {
   getListProductBaseCan(productBaseId: number) {
     return this.http.get(environment.settings.serverendpoint + 'product_base_can/findById/' + productBaseId).pipe(
       map((data: Array<any>) => {
-        console.log(data);
-
         const result = [];
         if (data) {
           for (const item of data) {

@@ -7,7 +7,7 @@
     </a>
 
     <div class="dropdown-menu" aria-labelledby="setting-dropdown" [ngbCollapse]="currentMode != userMode" (click)="updateCurrentMode('hide')">
-      <a class="dropdown-item" >User Manager</a>
+      <!--<a class="dropdown-item" >User Manager</a>-->
       <a class="dropdown-item" [routerLink]="['../dashboard/customer']">Customer Manager</a>
     </div>
   </li>
@@ -19,16 +19,16 @@
     </a>
 
     <div class="dropdown-menu" aria-labelledby="setting-dropdown" [ngbCollapse]="currentMode != settingMode" (click)="updateCurrentMode('hide')">
-      <!--<h6 class="dropdown-header">System setting:</h6>-->
+      <h6 class="dropdown-header">Metadata Setting:</h6>
 
       <a class="dropdown-item" [routerLink]="['../dashboard/colorant']">Colorant</a>
       <a class="dropdown-item" [routerLink]="['../dashboard/base']">Base</a>
       <a class="dropdown-item" [routerLink]="['../dashboard/product']">Product</a>
       <a class="dropdown-item" [routerLink]="['../dashboard/collection']">Collection</a>
+
       <ng-container *ngIf="currentUser != null && currentUser.role.roleName == USER_ROLE.SHOP">
-
-
         <div class="dropdown-divider"></div>
+
         <h6 class="dropdown-header">Machine Setting:</h6>
         <a class="dropdown-item" [routerLink]="['../dashboard/machine']">Machine</a>
       </ng-container>
