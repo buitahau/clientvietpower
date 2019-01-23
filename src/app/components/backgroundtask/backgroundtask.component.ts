@@ -28,7 +28,7 @@ export class BackgroundTaskComponent implements OnInit {
 
   viewCurrentTask(taskId: number) {
     this.machineService.findDispenseTaskById(taskId).subscribe((datas) => {
-
+      console.log(datas);
     });
   }
 }

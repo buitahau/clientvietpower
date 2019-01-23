@@ -68,7 +68,6 @@ export class FormulaService {
     const machine = this.storeService.getMachineData();
     return this.http.get(environment.settings.serverendpoint + 'formula-customer/getAll/' + machine.machineId).pipe(
       map((data: Array<any>) => {
-        console.log(data);
         const result = [];
         if (data) {
           for (const formula of data) {
