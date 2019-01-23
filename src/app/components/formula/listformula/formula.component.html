@@ -84,7 +84,7 @@
             <tr>
               <th mat-sort-header="formulaCode">Formula Code</th>
               <th mat-sort-header="formulaName">Formula Name</th>
-              <th mat-sort-header="approximateColor">Approximate Color</th>
+              <th mat-sort-header="approximateColor">Approximate<br />Color</th>
               <th mat-sort-header="collection">Collection
               <th mat-sort-header="product">Product</th>
               <th mat-sort-header="createdDate">Created Date</th>
@@ -95,27 +95,20 @@
             <tr *ngFor="let item of pagenationMode.listItems">
               <td>{{item.formula.formulaCode}}</td>
               <td>{{item.formula.formulaName}}</td>
-              <td><span [ngStyle]="{'background': item.formula.approximateColor, 'display': 'inline-block', 'width': '30px', 'height': '30px', 'border': '1px solid #333'}"></span></td>
+              <td class="text-center"><span [ngStyle]="{'background': item.formula.approximateColor, 'display': 'inline-block', 'width': '30px', 'height': '30px', 'border': '1px solid #333'}"></span></td>
               <td>{{item.formula.collection.collectionName}}</td>
               <td>{{item.productBase.product.productName}}</td>
-              <td></td>
-
-              <td>
-
-              </td>
+              <td>{{item.formula.createdDate | date: 'dd/MM/yyyy'}}</td>
+              <td> {{item.formula.createBy == null ? 'System' : 'Me'}}</td>
               <td [ngStyle]="{'white-space': 'nowrap'}">
-                <button mat-raised-button
-                        matTooltip="View Formula"
-                        aria-label="View Formula"
-                        (click)="viewFormula(item.formulaProductBaseId)">
+                <button mat-raised-button matTooltip="View Formula" aria-label="View Formula" (click)="viewFormula(item.formulaProductBaseId)">
                   <i class="fas fa-info-circle"></i>
                 </button>
+
                 <ng-container *ngIf="item.formula.machine != null && item.formula.machine.machineId > 0">
                   <span class="vertical-separate-line">&nbsp;</span>
-                  <button mat-raised-button
-                          matTooltip="Edit Formula"
-                          aria-label="Edit Formula"
-                          (click)="editTheFormula(item.formulaProductBaseId)">
+
+                  <button mat-raised-button matTooltip="Edit Formula" aria-label="Edit Formula" (click)="editTheFormula(item.formulaProductBaseId)">
                     <i class="fas fa-edit"></i>
                   </button>
                 </ng-container>
@@ -127,9 +120,9 @@
                 Show {{pagenationMode.listItems.length}} of  {{pagenationMode.totalItem}} items.
 
                 <span class="pagenation-footer" style="float: right">
-                  <span *ngIf="pagenationMode.pageIndex > 0" (click)="goToPage(pagenationMode.pageIndex - 1)" class="btn-action">previous</span>
+                  <span *ngIf="pagenationMode.pageIndex > 0" (click)="goToPage(pagenationMode.pageIndex - 1)" class="btn-action"><</span>
                   <span>{{pagenationMode.pageIndex + 1}}</span>
-                  <span *ngIf="pagenationMode.pageIndex * pagenationMode.maxPageItem + pagenationMode.maxPageItem < pagenationMode.totalItem"  (click)="goToPage(pagenationMode.pageIndex + 1)" class="btn-action">next</span>
+                  <span *ngIf="pagenationMode.pageIndex * pagenationMode.maxPageItem + pagenationMode.maxPageItem < pagenationMode.totalItem"  (click)="goToPage(pagenationMode.pageIndex + 1)" class="btn-action">></span>
                 </span>
               </td>
             </tr>

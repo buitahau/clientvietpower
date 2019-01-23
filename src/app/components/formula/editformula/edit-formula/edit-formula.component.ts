@@ -131,6 +131,7 @@ export class EditFormulaComponent implements OnInit {
           });
 
           if (filterCustomerIdx != null && filterCustomerIdx > -1) {
+            console.log(filterCustomerIdx);
             this.listCustomerSelected[filterCustomerIdx].checked = true;
           }
         }

@@ -10,10 +10,9 @@ import {FormulaModel} from '../../../models/formula';
 import {CollectionModel} from '../../../models/collection';
 import {ProductModel} from '../../../models/product';
 import {CustomerService} from '../../../services/customer/customer.service';
-import {CustomerModel, CustomerSelectedModel} from '../../../models/customer';
-import {fbind} from 'q';
-import {MachineModel} from '../../../models/user.model';
+import {CustomerModel} from '../../../models/customer';
 import {StoreService} from '../../../services/store/store.service';
+import {Sort} from '@angular/material';
 
 @Component({
   selector: 'app-formula',
@@ -23,6 +22,8 @@ import {StoreService} from '../../../services/store/store.service';
 
 export class FormulaComponent implements OnInit {
   listItems: FormulaProductBaseModel[] = [];
+  sortedData: FormulaProductBaseModel[] = [];
+  currentSort: Sort = null;
   listOriginal = [];
 
   listFormulas: FormulaModel[] = [];
@@ -127,9 +128,10 @@ export class FormulaComponent implements OnInit {
     }
   }
 
-  sortData = function(e) {
-
-  }
+  sortData = function(sort: Sort) {
+    this.currentSort = sort;
+    this.refresh();
+  };
 
   updatePagenationMode = function () {
     const listItem = this.listItems;
@@ -199,8 +201,30 @@ export class FormulaComponent implements OnInit {
 
     this.listItems = resFilter;
 
+    if (this.currentSort == null || !this.currentSort.active || this.currentSort.direction === '') {
+      this.listItems = resFilter;
+    } else {
+      this.listItems = resFilter.sort((a, b) => {
+        const isAsc = this.currentSort.direction === 'asc';
+        switch (this.currentSort.active) {
+          case 'formulaCode': return compare(a.formula.formulaCode, b.formula.formulaCode, isAsc);
+          case 'formulaName': return compare(a.formula.formulaName, b.formula.formulaName, isAsc);
+          case 'approximateColor': return compare(a.formula.approximateColor, b.formula.approximateColor, isAsc);
+          case 'collection': return compare(a.formula.collection.collectionName, b.formula.collection.collectionName, isAsc);
+          case 'product': return compare(a.productBase.product.productName, b.productBase.product.productName, isAsc);
+          case 'createdDate': return compare(a.formula.createdDate, b.formula.createdDate, isAsc);
+          case 'createdBy': return compare(a.formula.machine != null ? 1 : 0 , b.formula.machine != null ? 1 : 0, isAsc);
+          default: return 0;
+        }
+      });
+    }
+
     this.pagenationMode.pageIndex = 0;
     this.updatePagenationMode();
+
+    function compare(a: number | string, b: number | string, isAsc: boolean) {
+      return (a < b ? -1 : 1) * (isAsc ? 1 : -1);
+    }
   }
 
   goToPage(pageIndex: number) {
