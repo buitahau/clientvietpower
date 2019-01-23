@@ -3,6 +3,7 @@ import {CustomerModel} from '../../../models/customer';
 import {CustomerService} from '../../../services/customer/customer.service';
 import {ModalService} from '../../../services/boostrap/modal.service';
 import {ResponseMessageModel} from '../../../models/user.model';
+import {Sort} from '@angular/material';
 
 @Component({
   selector: 'app-customer',
@@ -123,5 +124,28 @@ export class CustomerComponent implements OnInit {
 
   closeModal(id: string) {
     this.modalService.close(id);
+  }
+
+  sortData(sort: Sort) {
+    if (! sort.active || sort.direction === '') {
+      this.sortedData = this.dbItems;
+      return;
+    }
+
+    this.sortedData = this.dbItems.sort((a, b) => {
+      const isAsc = sort.direction === 'asc';
+      switch (sort.active) {
+        case 'name': return compare(a.name, b.name, isAsc);
+        case 'phone': return compare(a.phone, b.phone, isAsc);
+        case 'email': return compare(a.email, b.email, isAsc);
+        case 'address': return compare(a.address, b.address, isAsc);
+        case 'note': return compare(a.note, b.note, isAsc);
+        default: return 0;
+      }
+    });
+
+    function compare(a: number | string, b: number | string, isAsc: boolean) {
+      return (a < b ? -1 : 1) * (isAsc ? 1 : -1);
+    }
   }
 }

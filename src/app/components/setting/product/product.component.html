@@ -11,13 +11,13 @@
 
       <div class="card-body">
         <div class="table-responsive">
-          <table class="table table-bordered">
+          <table class="table table-bordered" matSort (matSortChange)="sortData($event)">
             <tr>
               <th>#</th>
-              <th>Product Code</th>
-              <th>Product Name</th>
-              <th>Created Date</th>
-              <th>Created By</th>
+              <th mat-sort-header="productCode">Product Code</th>
+              <th mat-sort-header="productName">Product Name</th>
+              <th mat-sort-header="createdDate">Created Date</th>
+              <th mat-sort-header="createBy">Created By</th>
             </tr>
 
             <ng-container *ngFor="let item of sortedData let i=index">

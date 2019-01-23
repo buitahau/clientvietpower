@@ -14,6 +14,7 @@ export class ColorantComponent implements OnInit {
   name: string = null;
 
   sortedData: ColorantModel[];
+  dbItems: ColorantModel[];
 
   constructor(private colourantService: ColourantService) {
 
@@ -27,7 +28,8 @@ export class ColorantComponent implements OnInit {
 
   filter() {
     this.colourantService.getListItems().subscribe((data: any) => {
-      this.sortedData = data;
+      this.dbItems = data;
+      this.sortedData = this.dbItems;
     });
   }
 
@@ -37,6 +39,25 @@ export class ColorantComponent implements OnInit {
   }
 
   sortData(sort: Sort) {
-    this.filter();
+    if (! sort.active || sort.direction === '') {
+      this.sortedData = this.dbItems;
+      return;
+    }
+
+    this.sortedData = this.dbItems.sort((a, b) => {
+      const isAsc = sort.direction === 'asc';
+      switch (sort.active) {
+        case 'colourantCode': return compare(a.colourantCode, b.colourantCode, isAsc);
+        case 'colourantName': return compare(a.colourantName, b.colourantName, isAsc);
+        case 'density': return compare(a.density, b.density, isAsc);
+        case 'pricePerUnit': return compare(a.pricePerUnit, b.pricePerUnit, isAsc);
+        case 'surcharge': return compare(a.surcharge, b.surcharge, isAsc);
+        default: return 0;
+      }
+    });
+
+    function compare(a: number | string, b: number | string, isAsc: boolean) {
+      return (a < b ? -1 : 1) * (isAsc ? 1 : -1);
+    }
   }
 }

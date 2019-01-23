@@ -45,12 +45,9 @@ export class ProductService {
     this.sortedData = data.sort((a, b) => {
       const isAsc = sort.direction === 'asc';
       switch (sort.active) {
-        case 'productCode':
-          return compare(a.productCode, b.productCode, isAsc);
-        case 'productName':
-          return compare(a.productName, b.productName, isAsc);
-        default:
-          return 0;
+        case 'productCode': return compare(a.productCode, b.productCode, isAsc);
+        case 'productName': return compare(a.productName, b.productName, isAsc);
+        default: return 0;
       }
     });
 

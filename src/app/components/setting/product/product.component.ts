@@ -37,12 +37,28 @@ export class ProductComponent implements OnInit {
   }
 
   sortData(sort: Sort) {
-    return this.productService.sortData(sort);
+    const data = this.listItems.slice();
+
+    this.sortedData = data.sort((a, b) => {
+      const isAsc = sort.direction === 'asc';
+      switch (sort.active) {
+        case 'productCode': return compare(a.productCode, b.productCode, isAsc);
+        case 'productName': return compare(a.productName, b.productName, isAsc);
+        case 'createdDate': return compare(a.createdDate, b.createdDate, isAsc);
+        case 'createBy': return compare(a.createBy == null ? 0 : 1, b.createBy  == null ? 0 : 1, isAsc);
+        default: return 0;
+      }
+    });
+
+    function compare(a: string | number, b: string | number, isAsc) {
+      return (a < b ? -1 : 1) * (isAsc ? 1 : -1);
+    }
   }
 
   fletchData() {
     this.productService.getListItems().subscribe((data: any) => {
-      this.sortedData = data;
+      this.listItems = data;
+      this.sortedData = this.listItems;
     });
   }
 

@@ -13,13 +13,13 @@
         <div class="table-responsive">
           <table class="table table-bordered" matSort (matSortChange)="sortData($event)">
             <tr>
-              <th mat-sort-header="code">Colourant Code</th>
-              <th mat-sort-header="name">Colourant Name</th>
+              <th mat-sort-header="colourantCode">Colourant Code</th>
+              <th mat-sort-header="colourantName">Colourant Name</th>
               <th mat-sort-header="density">Density</th>
-              <th mat-sort-header="redV">Price Per Unit</th>
-              <th mat-sort-header="greenV">Surcharge</th>
-              <th mat-sort-header="blueV">Blue</th>
-              <th mat-sort-header="color">kind</th>
+              <th mat-sort-header="pricePerUnit">Price Per Unit</th>
+              <th mat-sort-header="surcharge">Surcharge</th>
+              <th>Color</th>
+              <th>Kind</th>
             </tr>
 
             <tr *ngFor="let colorant of sortedData">

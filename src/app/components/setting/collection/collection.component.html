@@ -28,15 +28,15 @@
             <tr>
               <th mat-sort-header="collectionName">Collection Name</th>
               <th mat-sort-header="description">Description</th>
-              <th mat-sort-header="createdDate">Created Date</th>
-              <th mat-sort-header="createBy">Created By</th>
+              <th>Created Date</th>
+              <th>Created By</th>
               <th class="text-center">Action</th>
             </tr>
 
-            <tr *ngFor="let item of listItems">
+            <tr *ngFor="let item of sortedData">
               <td>{{item.collectionName}}</td>
               <td>{{item.description}}</td>
-              <td>{{item.createdDate |  date: 'dd/MM/yyyy'}}</td>
+              <td>{{item.createdDate | date: 'dd/MM/yyyy'}}</td>
               <td>
                 <p *ngIf="item.machine == null">System</p>
                 <p *ngIf="item.machine != null">Me</p>
