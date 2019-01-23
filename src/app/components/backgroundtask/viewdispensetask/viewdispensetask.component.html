@@ -40,11 +40,11 @@
       <div *ngIf="dispenseTask.childrenTask != null && dispenseTask.childrenTask.length > 0" >
 
         <div  *ngIf="'prepare' == dispenseStepTask.type" class="formula-animation preparing-animation text-center">
-          <img src="../../../../assets/videos/Preparing.gif" width="250" height="250"/>
+          <img src="/assets/videos/Preparing.gif" width="250" height="250"/>
         </div>
 
         <div *ngIf="'pumping' == dispenseStepTask.type" class="formula-animation pumping-animation text-center">
-          <img src="../../../../assets/videos/Pumping.gif" width="250" height="250"/>
+          <img src="/assets/videos/Pumping.gif" width="250" height="250"/>
         </div>
 
         <div *ngIf="'finished' == dispenseStepTask.type" class="text-center">
