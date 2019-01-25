@@ -99,7 +99,7 @@
               <td>{{item.formula.collection.collectionName}}</td>
               <td>{{item.productBase.product.productName}}</td>
               <td>{{item.formula.createdDate | date: 'dd/MM/yyyy'}}</td>
-              <td> {{item.formula.createBy == null ? 'System' : 'Me'}}</td>
+              <td> {{item.formula.machine != null && item.formula.machine.machineId > 0 ? 'Me' : 'System'}}</td>
               <td [ngStyle]="{'white-space': 'nowrap'}">
                 <button mat-raised-button matTooltip="View Formula" aria-label="View Formula" (click)="viewFormula(item.formulaProductBaseId)">
                   <i class="fas fa-info-circle"></i>
