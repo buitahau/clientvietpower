@@ -154,10 +154,11 @@ export class ViewFormulaComponent implements OnInit {
             this.numberOfCan -= 1;
             if (this.numberOfCan > 0) {
               this.beginDispense(modalId);
+            } else {
+              this.numberOfCan = 1;
             }
 
             this.stateMachine = 'PRINT';
-
             setTimeout(() => {
               this.openModal('print-formula-modal');
             }, 500);
@@ -177,12 +178,12 @@ export class ViewFormulaComponent implements OnInit {
 
             this.dispenseTaskService.runDispenseTask(this.currentTask);
             this.stateMachine = 'DISPENSE';
+
+            setTimeout(() => {
+              this.openModal(modalId);
+            }, 200);
           });
         }
-
-        setTimeout(() => {
-          this.openModal(modalId);
-        }, 200);
       } else {
         this.errorMessage = 'Not enough colorant quantity to dispense.';
         this.currentTask == null;
