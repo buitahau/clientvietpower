@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, EventEmitter, Output } from '@angular/core';
+import {Component, Input, OnInit, EventEmitter, Output} from '@angular/core';
 import {FormulaProductBaseModel} from '../../../models/formula_product_base';
 import {CollectionModel} from '../../../models/collection';
 import {FormulaModel} from '../../../models/formula';
@@ -14,6 +14,7 @@ import {ProductModel} from '../../../models/product';
 import {Sort} from '@angular/material';
 import {PagenationModel} from '../../../models/pagination.model';
 import {ProductBaseModel} from '../../../models/product_base';
+import {BaseModel} from '../../../models/base';
 
 @Component({
   selector: 'app-list-formula',
@@ -24,15 +25,15 @@ import {ProductBaseModel} from '../../../models/product_base';
 export class ListFormulaComponent implements OnInit {
   @Output() selectedFormula = new EventEmitter<FormulaProductBaseModel>();
 
-  listItems: FormulaProductBaseModel[] = [];
-  sortedData: FormulaProductBaseModel[] = [];
+  listItems: FormulaProductBaseModel[];
+  sortedData: FormulaProductBaseModel[];
+  listOriginal: FormulaProductBaseModel[];
   currentSort: Sort = null;
-  listOriginal = [];
 
   listFormulas: FormulaModel[] = [];
   listCollections: CollectionModel[] = [];
   listProducts: ProductModel[] = [];
-  listProductBase: ProductBaseModel[];
+  listBases: BaseModel[];
   listCustomer: CustomerModel[] = [];
   listFormulaCustomer: FormulaCustomerModel[] = [];
 
@@ -40,8 +41,9 @@ export class ListFormulaComponent implements OnInit {
 
   filter: {
     formulaId: number,
-    productId: number,
     collectionId: number,
+    productId: number,
+    baseId: number,
     customerId: number
   };
 
@@ -61,8 +63,9 @@ export class ListFormulaComponent implements OnInit {
 
     this.filter = {
       formulaId: undefined,
-      productId: undefined,
       collectionId: undefined,
+      baseId: undefined,
+      productId: undefined,
       customerId: undefined
     };
 
@@ -72,44 +75,20 @@ export class ListFormulaComponent implements OnInit {
   }
 
   initMetadata() {
-    // this.formulaService.postData();
-    // this.formulaService.postData1();
-    const me = this;
-
-    this.listFormulas = [];
-    this.formulaService.getALl().subscribe(datas => {
-      this.listFormulas = datas;
-    });
-
-    this.listProducts = [];
-    this.productService.getListItems().subscribe(datas => {
-      this.listProducts = datas;
-    });
-
-    this.listCollections = [];
-    this.collectionService.getListItems().subscribe(datas => {
-      me.listCollections = datas;
-    });
-
-    this.listProductBase = [];
-    this.productService.getListProductBase().subscribe(datas => {
-      me.listProductBase = datas;
-    });
-
     // get list formula product base
     this.listItems = [];
     this.listOriginal = [];
 
     this.formulaService.getAllFormulaProductBase().subscribe(datas => {
       datas.map(fpb => {
-        me.listItems.push(fpb);
-        me.listOriginal.push(fpb);
+        this.listItems.push(fpb);
+        this.listOriginal.push(fpb);
       });
 
+      this.updateRelativeData();
       this.updateCustomerForFormula();
       this.updatePagenationMode();
     });
-
 
     this.listCustomer = [];
     this.customerService.findAll().subscribe(datas => {
@@ -121,6 +100,35 @@ export class ListFormulaComponent implements OnInit {
       this.listFormulaCustomer = _datas;
       this.updateCustomerForFormula();
     });
+  }
+
+  updateRelativeData(): void {
+    this.listFormulas = [];
+    this.listCollections = [];
+    this.listProducts = [];
+    this.listBases = [];
+
+    for (const item of this.listItems) {
+      const exitsFormula = this.listFormulas.filter(_item => _item.formulaId === item.formula.formulaId);
+      if (exitsFormula == null || exitsFormula.length === 0) {
+        this.listFormulas.push(item.formula);
+      }
+
+      const exitsCollection = this.listCollections.filter(_item => _item.collectionId === item.formula.collection.collectionId);
+      if (exitsCollection == null || exitsCollection.length === 0) {
+        this.listCollections.push(item.formula.collection);
+      }
+
+      const exitsProduct = this.listProducts.filter(_item => _item.productId === item.productBase.product.productId);
+      if (exitsProduct == null || exitsProduct.length === 0) {
+        this.listProducts.push(item.productBase.product);
+      }
+
+      const existBase = this.listBases.filter(_item => _item.baseId === item.productBase.base.baseId);
+      if (existBase == null || existBase.length === 0) {
+        this.listBases.push(item.productBase.base);
+      }
+    }
   }
 
   updateCustomerForFormula(): void {
@@ -183,19 +191,25 @@ export class ListFormulaComponent implements OnInit {
 
     if (this.filter.formulaId) {
       resFilter = resFilter.filter(fpb => {
-        return fpb.formula.formulaId.toString() === this.filter.formulaId.toString();
+        return fpb.formula.formulaId === this.filter.formulaId;
       });
     }
 
     if (this.filter.collectionId) {
       resFilter = resFilter.filter(fpb => {
-        return fpb.formula.collection.collectionId.toString() === this.filter.collectionId.toString();
+        return fpb.formula.collection.collectionId === this.filter.collectionId;
       });
     }
 
     if (this.filter.productId) {
       resFilter = resFilter.filter(fpb => {
-        return fpb.productBase.product.productId.toString() === this.filter.productId.toString();
+        return fpb.productBase.product.productId === this.filter.productId;
+      });
+    }
+
+    if (this.filter.baseId) {
+      resFilter = resFilter.filter(fpb => {
+        return fpb.productBase.base.baseId === this.filter.baseId;
       });
     }
 
@@ -204,7 +218,7 @@ export class ListFormulaComponent implements OnInit {
         let isExis = false;
         if (fpb.formula.listCustomer != null && fpb.formula.listCustomer.length > 0) {
           const index = fpb.formula.listCustomer.findIndex(customer => {
-            return customer.customerId.toString() === this.filter.customerId.toString();
+            return customer.customerId === this.filter.customerId;
           });
           if (index != null && index > -1) {
             isExis = true;
@@ -215,6 +229,7 @@ export class ListFormulaComponent implements OnInit {
     }
 
     this.listItems = resFilter;
+    this.updateRelativeData();
 
     if (this.currentSort == null || !this.currentSort.active || this.currentSort.direction === '') {
       this.listItems = resFilter;

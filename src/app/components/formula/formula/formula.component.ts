@@ -17,7 +17,7 @@ export class FormulaComponent implements OnInit {
     this.dbItem = selectedFormula;
   }
 
-  clearSelectedFormula(){
+  clearSelectedFormula() {
     this.dbItem = null;
   }
 }

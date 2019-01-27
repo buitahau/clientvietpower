@@ -17,7 +17,7 @@
               <div class="input-group input-group-sm col-md-9">
                 <select class="form-control form-control-sm select-sm select-color-field" id="selectedFormulaFilter" name="selectedFormulaFilter" [(ngModel)]="filter.formulaId" (ngModelChange)="onFilterChange($event)">
                   <option [ngValue]="undefined">Choose Color</option>
-                  <option *ngFor="let f of listFormulas" value="{{f.formulaId}}">{{f.formulaName}}</option>
+                  <option *ngFor="let f of listFormulas" [ngValue]="f.formulaId">{{f.formulaName}}</option>
                 </select>
               </div>
             </div>
@@ -27,7 +27,7 @@
               <div class="col-md-9">
                 <select class="form-control form-control-sm select-sm select-color-field" id="selectedCollectionFilter" name="selectedCollectionFilter" [(ngModel)]="filter.collectionId" (ngModelChange)="onFilterChange($event)">
                   <option [ngValue]="undefined">Choose Collection</option>
-                  <option *ngFor="let c of listCollections" value="{{c.collectionId}}">{{c.collectionName}}</option>
+                  <option *ngFor="let c of listCollections" [ngValue]="c.collectionId">{{c.collectionName}}</option>
                 </select>
               </div>
             </div>
@@ -37,17 +37,17 @@
               <div class="col-md-9">
                 <select class="form-control form-control-sm select-sm select-color-field" id="selectedProductFilter" name="selectedProductFilter" [(ngModel)]="filter.productId" (ngModelChange)="onFilterChange($event)">
                   <option [ngValue]="undefined">Choose Product</option>
-                  <option *ngFor="let c of listProducts" value="{{c.productId}}">{{c.productCode}}</option>
+                  <option *ngFor="let c of listProducts" [ngValue]="c.productId">{{c.productCode}}</option>
                 </select>
               </div>
             </div>
 
-            <div class="form-group row" *ngIf="listProductBase">
+            <div class="form-group row" *ngIf="listBases">
               <label class="col-md-3 label-control">Select Base</label>
               <div class="col-md-9">
-                <select class="form-control form-control-sm select-sm select-color-field" id="selectedProductBaseFilter" name="selectedProductFilter" [(ngModel)]="filter.productBaseId" (ngModelChange)="onFilterChange($event)">
+                <select class="form-control form-control-sm select-sm select-color-field" id="selectedProductBaseFilter" name="selectedProductFilter" [(ngModel)]="filter.baseId" (ngModelChange)="onFilterChange($event)">
                   <option [ngValue]="undefined">Choose Base</option>
-                  <option *ngFor="let c of listProductBase" value="{{c.productBaseId}}">{{c.base.baseName}}</option>
+                  <option *ngFor="let c of listBases" [ngValue]="c.baseId">{{c.baseName}}</option>
                 </select>
               </div>
             </div>
@@ -57,7 +57,7 @@
               <div class="col-md-9">
                 <select class="form-control form-control-sm select-sm select-color-field" id="selectedCustomerFilter" name="selectedProductFilter" [(ngModel)]="filter.customerId" (ngModelChange)="onFilterChange($event)">
                   <option [ngValue]="undefined">Choose Customer</option>
-                  <option *ngFor="let c of listCustomer" value="{{c.customerId}}">{{c.name}}</option>
+                  <option *ngFor="let c of listCustomer" [ngValue]="c.customerId">{{c.name}}</option>
                 </select>
               </div>
             </div>
