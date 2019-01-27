@@ -42,6 +42,16 @@
               </div>
             </div>
 
+            <div class="form-group row" *ngIf="listProductBase">
+              <label class="col-md-3 label-control">Select Base</label>
+              <div class="col-md-9">
+                <select class="form-control form-control-sm select-sm select-color-field" id="selectedProductBaseFilter" name="selectedProductFilter" [(ngModel)]="filter.productBaseId" (ngModelChange)="onFilterChange($event)">
+                  <option [ngValue]="undefined">Choose Base</option>
+                  <option *ngFor="let c of listProductBase" value="{{c.productBaseId}}">{{c.base.baseName}}</option>
+                </select>
+              </div>
+            </div>
+
             <div class="form-group row" *ngIf="listCustomer">
               <label class="col-md-3 label-control">Select Customer</label>
               <div class="col-md-9">

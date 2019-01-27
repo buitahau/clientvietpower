@@ -13,6 +13,7 @@ import {CustomerModel} from '../../../models/customer';
 import {ProductModel} from '../../../models/product';
 import {Sort} from '@angular/material';
 import {PagenationModel} from '../../../models/pagination.model';
+import {ProductBaseModel} from '../../../models/product_base';
 
 @Component({
   selector: 'app-list-formula',
@@ -31,6 +32,7 @@ export class ListFormulaComponent implements OnInit {
   listFormulas: FormulaModel[] = [];
   listCollections: CollectionModel[] = [];
   listProducts: ProductModel[] = [];
+  listProductBase: ProductBaseModel[];
   listCustomer: CustomerModel[] = [];
   listFormulaCustomer: FormulaCustomerModel[] = [];
 
@@ -53,7 +55,6 @@ export class ListFormulaComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log('........................ init list component !!!');
     this.listItems = [];
     this.listOriginal = [];
     this.sortedData = [];
@@ -67,7 +68,6 @@ export class ListFormulaComponent implements OnInit {
 
     if (this.storeService.getMachineData() != null && this.storeService.getMachineData().machineId > 0) {
       this.initMetadata();
-      console.log('........................ init metadata component !!!');
     }
   }
 
@@ -78,23 +78,22 @@ export class ListFormulaComponent implements OnInit {
 
     this.listFormulas = [];
     this.formulaService.getALl().subscribe(datas => {
-      datas.map(c => {
-        me.listFormulas.push(c);
-      });
+      this.listFormulas = datas;
     });
 
     this.listProducts = [];
     this.productService.getListItems().subscribe(datas => {
-      datas.map(p => {
-        me.listProducts.push(p);
-      });
+      this.listProducts = datas;
     });
 
     this.listCollections = [];
     this.collectionService.getListItems().subscribe(datas => {
-      datas.map(c => {
-        me.listCollections.push(c);
-      });
+      me.listCollections = datas;
+    });
+
+    this.listProductBase = [];
+    this.productService.getListProductBase().subscribe(datas => {
+      me.listProductBase = datas;
     });
 
     // get list formula product base
@@ -102,7 +101,6 @@ export class ListFormulaComponent implements OnInit {
     this.listOriginal = [];
 
     this.formulaService.getAllFormulaProductBase().subscribe(datas => {
-
       datas.map(fpb => {
         me.listItems.push(fpb);
         me.listOriginal.push(fpb);
@@ -111,6 +109,7 @@ export class ListFormulaComponent implements OnInit {
       this.updateCustomerForFormula();
       this.updatePagenationMode();
     });
+
 
     this.listCustomer = [];
     this.customerService.findAll().subscribe(datas => {

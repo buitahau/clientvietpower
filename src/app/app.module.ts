@@ -58,8 +58,8 @@ import {BaseComponent} from './components/setting/base/base.component';
 import {CollectionComponent} from './components/setting/collection/collection.component';
 import {ProductComponent} from './components/setting/product/product.component';
 
-// formula
-import {FormulaComponent} from './components/formula/listformula/formula.component';
+import {FormulaComponent} from './components/formula/formula/formula.component';
+import {ListFormulaComponent} from './components/formula/list-formula/list-formula.component';
 import {ViewFormulaComponent} from './components/formula/viewformula/viewformula.component';
 
 import {MaintenanceComponent} from './components/formula/maintenance/maintenance.component';
@@ -75,11 +75,12 @@ import {MachineSettingComponent} from './components/machine/machinesetting/machi
 import {ProductbaseComponent} from './components/setting/productbase/productbase.component';
 import {DashboardService} from './services/dashboard/dashboard.service';
 import {StoreService} from './services/store/store.service';
-import {EditFormulaComponent} from './components/formula/editformula/edit-formula/edit-formula.component';
+import {EditFormulaComponent} from './components/formula/edit-formula/edit-formula.component';
 import {TableColourantsComponent} from './directions/product/tablecolourant/table-colourants.component';
 import {BaseCanComponent} from './directions/product/base-can/base-can.component';
 import {CustomerComponent} from './components/setting/customer/customer.component';
 import {UserComponent} from './components/user/user.component';
+
 
 
 const routes: Routes = [
@@ -163,6 +164,8 @@ const routes: Routes = [
 
     // formula component
     FormulaComponent,
+    ListFormulaComponent,
+
     ViewFormulaComponent,
     EditFormulaComponent,
     MaintenanceComponent,

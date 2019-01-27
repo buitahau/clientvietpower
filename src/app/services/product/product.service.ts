@@ -56,6 +56,23 @@ export class ProductService {
     }
   }
 
+  getListProductBase() {
+    return this.http.get(environment.settings.serverendpoint + 'product-base/findAll').pipe(
+      map((data: Array<any>) => {
+        const listItems = [];
+        if (data) {
+          for (const item of data) {
+            listItems.push(ConvertModelUtils.convertToProductBaseModel(item));
+          }
+        }
+        return listItems;
+      }),
+      catchError(e => {
+        return [];
+      })
+    );
+  }
+
   getListProductBaseFromProduct(productId: number) {
     return this.http.get(environment.settings.serverendpoint + 'product-base/findByProduct/' + productId).pipe(
       map((data: Array<any>) => {

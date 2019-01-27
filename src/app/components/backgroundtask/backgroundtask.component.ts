@@ -1,11 +1,12 @@
-import {Component, OnInit} from '@angular/core';
-import {DispenseTaskService} from '../../services/dispensetask/dispensetask.service';
-import {DispenseTaskModel, MachineFormulaProductBaseLogModel} from '../../models/dispense.task.model';
+import {Component, Input, OnInit} from '@angular/core';
+import {MachineFormulaProductBaseLogModel} from '../../models/dispense.task.model';
 import {MachineService} from '../../services/machine/machine.service';
 import {Sort} from '@angular/material';
 import {Router} from '@angular/router';
 import {MachineModel} from '../../models/user.model';
 import {StoreService} from '../../services/store/store.service';
+import {FormulaProductBaseModel} from '../../models/formula_product_base';
+
 
 @Component({
   selector: 'app-backgroundtask',
@@ -13,6 +14,7 @@ import {StoreService} from '../../services/store/store.service';
   styleUrls: ['./backgroundtask.component.scss']
 })
 export class BackgroundTaskComponent implements OnInit {
+  selectedFormula: FormulaProductBaseModel;
 
   listItems: MachineFormulaProductBaseLogModel [] | any;
   listBackgroundTask: MachineFormulaProductBaseLogModel [] | any;
@@ -40,7 +42,12 @@ export class BackgroundTaskComponent implements OnInit {
 
   viewCurrentTask(task: MachineFormulaProductBaseLogModel) {
     this.currentBackgroundTask = task;
-    this.router.navigate([`../dashboard/view-formula/${task.formulaProductBase.formulaProductBaseId}`]);
+    this.selectedFormula = this.currentBackgroundTask.formulaProductBase;
+  }
+
+  clearSelectedFormula() {
+    this.currentBackgroundTask = null;
+    this.selectedFormula = null;
   }
 
   sortData(sort: Sort) {
