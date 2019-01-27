@@ -10,18 +10,18 @@
 
 .pagenation-footer{
   float: right;
-   span{
-     display: inline-block;
+  span{
+    display: inline-block;
 
-     min-width: 50px;
-     text-align: center;
-     padding: 5px 10px;
+    min-width: 50px;
+    text-align: center;
+    padding: 5px 10px;
 
-     &.btn-action{
-       border: 1px solid #ccc;
-       cursor: pointer;
-     }
-   }
+    &.btn-action{
+      border: 1px solid #ccc;
+      cursor: pointer;
+    }
+  }
 }
 
 

@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {FormulaService} from '../../../services/formula/formula.service';
 import {ActivatedRoute, Router} from '@angular/router';
 import {Select2Item} from '../../../models/colorant.model';
@@ -25,9 +25,9 @@ import {FormulaCustomerModel} from '../../../models/formulacustomer';
 })
 
 export class ViewFormulaComponent implements OnInit {
-  formulaProductBaseId: number;
+  @Input() dbItem: FormulaProductBaseModel;
 
-  dbItem: FormulaProductBaseModel = null;
+  formulaProductBaseId: number;
   listFormulaColorant: FormulaColourantModel[] = null;
   listProductBaseCan: ProductBaseCanModel[] = null;
 
@@ -56,22 +56,14 @@ export class ViewFormulaComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.route.params.subscribe(params => {
-      this.formulaProductBaseId = parseInt(params.id);
-      this.listFormulaColorant = [];
-      this.listProductBaseCan = [];
-      this.fetchDBItem();
-    });
+    this.listFormulaColorant = [];
+    this.listProductBaseCan = [];
+    this.fetchDBItem();
   }
 
   fetchDBItem() {
     this.selectProductBase = null;
-
-    // step 1. Get Formula By Id
-    this.formulaService.findFormulaProductBaseById(this.formulaProductBaseId).subscribe((data: any) => {
-      this.dbItem = data;
-      this.getRelativeData();
-    });
+    this.getRelativeData();
   }
 
   roundNumber(num: number) {

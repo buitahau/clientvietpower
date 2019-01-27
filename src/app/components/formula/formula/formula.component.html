@@ -1,0 +1,16 @@
+
+<div [ngStyle]="{'display' : dbItem != null ? 'none': 'block'}">
+  <app-list-formula (selectedFormula)="selectFormula($event)"></app-list-formula>
+</div>
+
+<ng-container *ngIf="dbItem">
+  <app-viewformula [dbItem]="dbItem"></app-viewformula>
+</ng-container>
+
+<ng-container *ngIf="dbItem">
+  <div class="row">
+    <div class="col-12">
+      <button class="btn btn-primary push-left" (click)="clearSelectedFormula()"><i class="fas fa-arrow-circle-left"></i> Back</button>
+    </div>
+  </div>
+</ng-container>

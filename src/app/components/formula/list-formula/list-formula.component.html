@@ -1,5 +1,5 @@
 <div class="block-header">
-  <h1>Formula</h1>
+  <h1>List Formula</h1>
 </div>
 
 <div class="row">
@@ -12,7 +12,7 @@
       <div class="card-body">
         <form class="form form-horizontal form-detail">
           <div class="form-body">
-            <div class="form-group row">
+            <div class="form-group row" *ngIf="listFormulas">
               <label class="col-md-3 label-control">Select Color</label>
               <div class="input-group input-group-sm col-md-9">
                 <select class="form-control form-control-sm select-sm select-color-field" id="selectedFormulaFilter" name="selectedFormulaFilter" [(ngModel)]="filter.formulaId" (ngModelChange)="onFilterChange($event)">
@@ -22,7 +22,7 @@
               </div>
             </div>
 
-            <div class="form-group row">
+            <div class="form-group row" *ngIf="listCollections">
               <label class="col-md-3 label-control">Select Collection</label>
               <div class="col-md-9">
                 <select class="form-control form-control-sm select-sm select-color-field" id="selectedCollectionFilter" name="selectedCollectionFilter" [(ngModel)]="filter.collectionId" (ngModelChange)="onFilterChange($event)">
@@ -32,7 +32,7 @@
               </div>
             </div>
 
-            <div class="form-group row">
+            <div class="form-group row" *ngIf="listProducts">
               <label class="col-md-3 label-control">Select Product</label>
               <div class="col-md-9">
                 <select class="form-control form-control-sm select-sm select-color-field" id="selectedProductFilter" name="selectedProductFilter" [(ngModel)]="filter.productId" (ngModelChange)="onFilterChange($event)">
@@ -42,7 +42,7 @@
               </div>
             </div>
 
-            <div class="form-group row">
+            <div class="form-group row" *ngIf="listCustomer">
               <label class="col-md-3 label-control">Select Customer</label>
               <div class="col-md-9">
                 <select class="form-control form-control-sm select-sm select-color-field" id="selectedCustomerFilter" name="selectedProductFilter" [(ngModel)]="filter.customerId" (ngModelChange)="onFilterChange($event)">
@@ -59,16 +59,12 @@
           </div>
         </form>
       </div>
-
-      <!--<div class="card-footer">-->
-
-      <!--</div>-->
     </div>
   </div>
 </div>
 
 
-<div class="row">
+<div class="row" *ngIf="pagenationMode">
   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
     <div class="card">
       <div class="card-header">
@@ -101,7 +97,7 @@
               <td>{{item.formula.createdDate | date: 'dd/MM/yyyy'}}</td>
               <td> {{item.formula.machine != null && item.formula.machine.machineId > 0 ? 'Me' : 'System'}}</td>
               <td [ngStyle]="{'white-space': 'nowrap'}">
-                <button mat-raised-button matTooltip="View Formula" aria-label="View Formula" (click)="viewFormula(item.formulaProductBaseId)">
+                <button mat-raised-button matTooltip="View Formula" aria-label="View Formula" (click)="viewFormula(item)">
                   <i class="fas fa-info-circle"></i>
                 </button>
 

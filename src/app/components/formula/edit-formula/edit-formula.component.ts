@@ -1,19 +1,20 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
-import {FormulaColourantModel, FormulaProductBaseModel} from '../../../../models/formula_product_base';
-import {FormulaModel} from '../../../../models/formula';
-import {ProductBaseModel} from '../../../../models/product_base';
-import {CollectionService} from '../../../../services/collection/collection.service';
-import {FormulaService} from '../../../../services/formula/formula.service';
-import {ProductService} from '../../../../services/product/product.service';
-import {ProductModel} from '../../../../models/product';
-import {CollectionModel} from '../../../../models/collection';
-import {ColourantService} from '../../../../services/colorant/colorant.service';
-import {BaseModel} from '../../../../models/base';
-import {ModalService} from '../../../../services/boostrap/modal.service';
-import {CustomerModel, CustomerSelectedModel} from '../../../../models/customer';
-import {FormulaCustomerModel} from '../../../../models/formulacustomer';
-import {CustomerService} from '../../../../services/customer/customer.service';
+import {FormulaColourantModel, FormulaProductBaseModel} from '../../../models/formula_product_base';
+import {FormulaModel} from '../../../models/formula';
+import {ProductBaseModel} from '../../../models/product_base';
+import {CollectionService} from '../../../services/collection/collection.service';
+import {FormulaService} from '../../../services/formula/formula.service';
+import {ProductService} from '../../../services/product/product.service';
+import {ProductModel} from '../../../models/product';
+import {CollectionModel} from '../../../models/collection';
+import {ColourantService} from '../../../services/colorant/colorant.service';
+import {BaseModel} from '../../../models/base';
+import {ModalService} from '../../../services/boostrap/modal.service';
+import {CustomerModel, CustomerSelectedModel} from '../../../models/customer';
+import {FormulaCustomerModel} from '../../../models/formulacustomer';
+import {CustomerService} from '../../../services/customer/customer.service';
+import {DispenseTaskModel} from '../../../models/dispense.task.model';
 
 @Component({
   selector: 'app-edit-formula',

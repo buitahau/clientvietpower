@@ -6,11 +6,82 @@
   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
     <div class="card">
       <div class="card-header">
-        How to use this app...
+        Task process
       </div>
 
       <div class="card-body">
-        Content .....
+        <div class="detail-status">
+          <span class="not-start">Not start</span> <span class="vertical-separate-line"></span>
+          <span class="in-progress">In progress</span> <span class="vertical-separate-line"></span>
+          <span class="done">Done</span>
+        </div>
+
+        <h3>Server</h3>
+        <ol>
+          <li class="not-start">Upload cái structure database</li>
+
+          <li class="not-start">validate dữ liệu trước khi import (Import == CLEAR)
+            <ul>
+              <li>Dữ liệu không được trùng, các field là duy nhất (cho cả 4 sheets)</li>
+
+              <li>Validate data không hợp lệ (ví dụ check colourant trong formula, product, base...)</li>
+
+              <li>Đảm bảo import dữ liệu. Hiện tại quy tắc là import vào 1 cái sheet mới thì delete toàn bộ data cũ có liên quan.</li>
+            </ul>
+          </li>
+
+          <li class="not-start">Thêm phần quản lý machine</li>
+
+          <li class="not-start">Sau khi build App phải có phần communicate với app khác, và tiến hành ghi dữ liệu vào 1 folder được chia sẻ cùng.</li>
+          <li class="not-start">Nếu đóng gói 2 app lại 1 thì tự config, còn ko thì lúc cài đặt cần chọn folder để copy file vào đó.</li>
+        </ol>
+
+        <h3>Client</h3>
+        <ol>
+          <li class="not-start">
+            Setting Machine Page
+            <ul>
+              <li>Chuyển phần config setting từ machine sang admin.</li>
+              <li>Chuyển từ alert sang warning bằng icon</li>
+              <li>Validate mức màu trước lúc dispense không cho phép dưới min. Nếu sau khi pha xong mà màu dưới min thì không cho nó pha.</li>
+            </ul>
+
+          </li>
+
+          <li class="not-start">
+            Adjust Canister Fill Page
+
+            <ul>
+              <li>Bỏ phần set 100%</li>
+              <li>Thêm vào số điều chỉnh, ví dụ bình tỉ lệ thực là 1000ml, số lượng thực chỉ có 95% (5% dính ở đáy bình chẳng hạn)</li>
+            </ul>
+          </li>
+
+          <li class="not-start">Formula Page
+            <ul>
+              <li>Thêm Base cho phần filter</li>
+              <li class="done">Add back navigator</li>
+            </ul>
+          </li>
+
+          <li class="not-start">
+            Print function
+
+            <ul>
+              <li>Show custom data</li>
+              <li>Show dung tích, ngày giờ</li>
+            </ul>
+          </li>
+
+          <li class="not-start">
+            Dispense manual
+
+            <ul>
+              <li>Show custom data</li>
+              <li>Show dung tích, ngày giờ</li>
+            </ul>
+          </li>
+        </ol>
       </div>
     </div>
   </div>

@@ -1,26 +1,28 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, Input, OnInit, EventEmitter, Output } from '@angular/core';
+import {FormulaProductBaseModel} from '../../../models/formula_product_base';
+import {CollectionModel} from '../../../models/collection';
+import {FormulaModel} from '../../../models/formula';
+import {StoreService} from '../../../services/store/store.service';
+import {CollectionService} from '../../../services/collection/collection.service';
 import {FormulaService} from '../../../services/formula/formula.service';
 import {Router} from '@angular/router';
-import {CollectionService} from '../../../services/collection/collection.service';
 import {ProductService} from '../../../services/product/product.service';
-import {PagenationModel} from '../../../models/pagination.model';
-import {FormulaProductBaseModel} from '../../../models/formula_product_base';
 import {FormulaCustomerModel} from '../../../models/formulacustomer';
-import {FormulaModel} from '../../../models/formula';
-import {CollectionModel} from '../../../models/collection';
-import {ProductModel} from '../../../models/product';
 import {CustomerService} from '../../../services/customer/customer.service';
 import {CustomerModel} from '../../../models/customer';
-import {StoreService} from '../../../services/store/store.service';
+import {ProductModel} from '../../../models/product';
 import {Sort} from '@angular/material';
+import {PagenationModel} from '../../../models/pagination.model';
 
 @Component({
-  selector: 'app-formula',
-  templateUrl: './formula.component.html',
-  styleUrls: ['./formula.component.scss']
+  selector: 'app-list-formula',
+  templateUrl: './list-formula.component.html',
+  styleUrls: ['./list-formula.component.scss']
 })
 
-export class FormulaComponent implements OnInit {
+export class ListFormulaComponent implements OnInit {
+  @Output() selectedFormula = new EventEmitter<FormulaProductBaseModel>();
+
   listItems: FormulaProductBaseModel[] = [];
   sortedData: FormulaProductBaseModel[] = [];
   currentSort: Sort = null;
@@ -34,6 +36,13 @@ export class FormulaComponent implements OnInit {
 
   pagenationMode: PagenationModel = new PagenationModel([], 0, 0, 15);
 
+  filter: {
+    formulaId: number,
+    productId: number,
+    collectionId: number,
+    customerId: number
+  };
+
   constructor(
     private storeService: StoreService,
     private formulaService: FormulaService,
@@ -43,16 +52,22 @@ export class FormulaComponent implements OnInit {
     private router: Router) {
   }
 
-  filter = {
-    formulaId: undefined,
-    productId: undefined,
-    collectionId: undefined,
-    customerId: undefined
-  };
-
   ngOnInit() {
+    console.log('........................ init list component !!!');
+    this.listItems = [];
+    this.listOriginal = [];
+    this.sortedData = [];
+
+    this.filter = {
+      formulaId: undefined,
+      productId: undefined,
+      collectionId: undefined,
+      customerId: undefined
+    };
+
     if (this.storeService.getMachineData() != null && this.storeService.getMachineData().machineId > 0) {
       this.initMetadata();
+      console.log('........................ init metadata component !!!');
     }
   }
 
@@ -128,7 +143,7 @@ export class FormulaComponent implements OnInit {
     }
   }
 
-  sortData = function(sort: Sort) {
+  sortData = function (sort: Sort) {
     this.currentSort = sort;
     this.refresh();
   };
@@ -151,8 +166,9 @@ export class FormulaComponent implements OnInit {
     this.pagenationMode.totalItem = listItem.length;
   };
 
-  viewFormula(formulaProductBaseId) {
-    this.router.navigate([`../dashboard/view-formula/${formulaProductBaseId}`]);
+  viewFormula(selectItem: FormulaProductBaseModel) {
+    this.selectedFormula.emit(selectItem);
+    // this.router.navigate([`../dashboard/view-formula/${formulaProductBaseId}`]);
   }
 
   onFilterChange(event) {
@@ -207,14 +223,22 @@ export class FormulaComponent implements OnInit {
       this.listItems = resFilter.sort((a, b) => {
         const isAsc = this.currentSort.direction === 'asc';
         switch (this.currentSort.active) {
-          case 'formulaCode': return compare(a.formula.formulaCode, b.formula.formulaCode, isAsc);
-          case 'formulaName': return compare(a.formula.formulaName, b.formula.formulaName, isAsc);
-          case 'approximateColor': return compare(a.formula.approximateColor, b.formula.approximateColor, isAsc);
-          case 'collection': return compare(a.formula.collection.collectionName, b.formula.collection.collectionName, isAsc);
-          case 'product': return compare(a.productBase.product.productName, b.productBase.product.productName, isAsc);
-          case 'createdDate': return compare(a.formula.createdDate, b.formula.createdDate, isAsc);
-          case 'createdBy': return compare(a.formula.machine != null ? 1 : 0 , b.formula.machine != null ? 1 : 0, isAsc);
-          default: return 0;
+          case 'formulaCode':
+            return compare(a.formula.formulaCode, b.formula.formulaCode, isAsc);
+          case 'formulaName':
+            return compare(a.formula.formulaName, b.formula.formulaName, isAsc);
+          case 'approximateColor':
+            return compare(a.formula.approximateColor, b.formula.approximateColor, isAsc);
+          case 'collection':
+            return compare(a.formula.collection.collectionName, b.formula.collection.collectionName, isAsc);
+          case 'product':
+            return compare(a.productBase.product.productName, b.productBase.product.productName, isAsc);
+          case 'createdDate':
+            return compare(a.formula.createdDate, b.formula.createdDate, isAsc);
+          case 'createdBy':
+            return compare(a.formula.machine != null ? 1 : 0, b.formula.machine != null ? 1 : 0, isAsc);
+          default:
+            return 0;
         }
       });
     }
