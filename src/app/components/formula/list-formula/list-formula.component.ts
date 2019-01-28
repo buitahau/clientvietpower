@@ -158,7 +158,7 @@ export class ListFormulaComponent implements OnInit {
   };
 
   testElectron() {
-    fileService.saveFile();
+    this.fileService.saveFile();
   }
 
   updatePagenationMode = function () {
