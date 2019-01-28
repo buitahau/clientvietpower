@@ -171,23 +171,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_setting_base_base_component__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./components/setting/base/base.component */ "./src/app/components/setting/base/base.component.ts");
 /* harmony import */ var _components_setting_collection_collection_component__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./components/setting/collection/collection.component */ "./src/app/components/setting/collection/collection.component.ts");
 /* harmony import */ var _components_setting_product_product_component__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./components/setting/product/product.component */ "./src/app/components/setting/product/product.component.ts");
-/* harmony import */ var _components_formula_listformula_formula_component__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ./components/formula/listformula/formula.component */ "./src/app/components/formula/listformula/formula.component.ts");
-/* harmony import */ var _components_formula_viewformula_viewformula_component__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ./components/formula/viewformula/viewformula.component */ "./src/app/components/formula/viewformula/viewformula.component.ts");
-/* harmony import */ var _components_formula_maintenance_maintenance_component__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! ./components/formula/maintenance/maintenance.component */ "./src/app/components/formula/maintenance/maintenance.component.ts");
-/* harmony import */ var _components_help_language_language_component__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! ./components/help/language/language.component */ "./src/app/components/help/language/language.component.ts");
-/* harmony import */ var _components_help_question_question_component__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(/*! ./components/help/question/question.component */ "./src/app/components/help/question/question.component.ts");
-/* harmony import */ var _shared_http_http_module__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(/*! ./shared/http/http.module */ "./src/app/shared/http/http.module.ts");
-/* harmony import */ var _directions_product_viewdetail_viewdetail_component__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(/*! ./directions/product/viewdetail/viewdetail.component */ "./src/app/directions/product/viewdetail/viewdetail.component.ts");
-/* harmony import */ var _components_backgroundtask_viewdispensetask_viewdispensetask_component__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(/*! ./components/backgroundtask/viewdispensetask/viewdispensetask.component */ "./src/app/components/backgroundtask/viewdispensetask/viewdispensetask.component.ts");
-/* harmony import */ var _components_machine_machinesetting_machinesetting_component__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(/*! ./components/machine/machinesetting/machinesetting.component */ "./src/app/components/machine/machinesetting/machinesetting.component.ts");
-/* harmony import */ var _components_setting_productbase_productbase_component__WEBPACK_IMPORTED_MODULE_51__ = __webpack_require__(/*! ./components/setting/productbase/productbase.component */ "./src/app/components/setting/productbase/productbase.component.ts");
-/* harmony import */ var _services_dashboard_dashboard_service__WEBPACK_IMPORTED_MODULE_52__ = __webpack_require__(/*! ./services/dashboard/dashboard.service */ "./src/app/services/dashboard/dashboard.service.ts");
-/* harmony import */ var _services_store_store_service__WEBPACK_IMPORTED_MODULE_53__ = __webpack_require__(/*! ./services/store/store.service */ "./src/app/services/store/store.service.ts");
-/* harmony import */ var _components_formula_editformula_edit_formula_edit_formula_component__WEBPACK_IMPORTED_MODULE_54__ = __webpack_require__(/*! ./components/formula/editformula/edit-formula/edit-formula.component */ "./src/app/components/formula/editformula/edit-formula/edit-formula.component.ts");
-/* harmony import */ var _directions_product_tablecolourant_table_colourants_component__WEBPACK_IMPORTED_MODULE_55__ = __webpack_require__(/*! ./directions/product/tablecolourant/table-colourants.component */ "./src/app/directions/product/tablecolourant/table-colourants.component.ts");
-/* harmony import */ var _directions_product_base_can_base_can_component__WEBPACK_IMPORTED_MODULE_56__ = __webpack_require__(/*! ./directions/product/base-can/base-can.component */ "./src/app/directions/product/base-can/base-can.component.ts");
-/* harmony import */ var _components_setting_customer_customer_component__WEBPACK_IMPORTED_MODULE_57__ = __webpack_require__(/*! ./components/setting/customer/customer.component */ "./src/app/components/setting/customer/customer.component.ts");
-/* harmony import */ var _components_user_user_component__WEBPACK_IMPORTED_MODULE_58__ = __webpack_require__(/*! ./components/user/user.component */ "./src/app/components/user/user.component.ts");
+/* harmony import */ var _components_formula_formula_formula_component__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ./components/formula/formula/formula.component */ "./src/app/components/formula/formula/formula.component.ts");
+/* harmony import */ var _components_formula_list_formula_list_formula_component__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ./components/formula/list-formula/list-formula.component */ "./src/app/components/formula/list-formula/list-formula.component.ts");
+/* harmony import */ var _components_formula_viewformula_viewformula_component__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! ./components/formula/viewformula/viewformula.component */ "./src/app/components/formula/viewformula/viewformula.component.ts");
+/* harmony import */ var _components_formula_maintenance_maintenance_component__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! ./components/formula/maintenance/maintenance.component */ "./src/app/components/formula/maintenance/maintenance.component.ts");
+/* harmony import */ var _components_help_language_language_component__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(/*! ./components/help/language/language.component */ "./src/app/components/help/language/language.component.ts");
+/* harmony import */ var _components_help_question_question_component__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(/*! ./components/help/question/question.component */ "./src/app/components/help/question/question.component.ts");
+/* harmony import */ var _shared_http_http_module__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(/*! ./shared/http/http.module */ "./src/app/shared/http/http.module.ts");
+/* harmony import */ var _directions_product_viewdetail_viewdetail_component__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(/*! ./directions/product/viewdetail/viewdetail.component */ "./src/app/directions/product/viewdetail/viewdetail.component.ts");
+/* harmony import */ var _components_backgroundtask_viewdispensetask_viewdispensetask_component__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(/*! ./components/backgroundtask/viewdispensetask/viewdispensetask.component */ "./src/app/components/backgroundtask/viewdispensetask/viewdispensetask.component.ts");
+/* harmony import */ var _components_machine_machinesetting_machinesetting_component__WEBPACK_IMPORTED_MODULE_51__ = __webpack_require__(/*! ./components/machine/machinesetting/machinesetting.component */ "./src/app/components/machine/machinesetting/machinesetting.component.ts");
+/* harmony import */ var _components_setting_productbase_productbase_component__WEBPACK_IMPORTED_MODULE_52__ = __webpack_require__(/*! ./components/setting/productbase/productbase.component */ "./src/app/components/setting/productbase/productbase.component.ts");
+/* harmony import */ var _services_dashboard_dashboard_service__WEBPACK_IMPORTED_MODULE_53__ = __webpack_require__(/*! ./services/dashboard/dashboard.service */ "./src/app/services/dashboard/dashboard.service.ts");
+/* harmony import */ var _services_store_store_service__WEBPACK_IMPORTED_MODULE_54__ = __webpack_require__(/*! ./services/store/store.service */ "./src/app/services/store/store.service.ts");
+/* harmony import */ var _components_formula_edit_formula_edit_formula_component__WEBPACK_IMPORTED_MODULE_55__ = __webpack_require__(/*! ./components/formula/edit-formula/edit-formula.component */ "./src/app/components/formula/edit-formula/edit-formula.component.ts");
+/* harmony import */ var _directions_product_tablecolourant_table_colourants_component__WEBPACK_IMPORTED_MODULE_56__ = __webpack_require__(/*! ./directions/product/tablecolourant/table-colourants.component */ "./src/app/directions/product/tablecolourant/table-colourants.component.ts");
+/* harmony import */ var _directions_product_base_can_base_can_component__WEBPACK_IMPORTED_MODULE_57__ = __webpack_require__(/*! ./directions/product/base-can/base-can.component */ "./src/app/directions/product/base-can/base-can.component.ts");
+/* harmony import */ var _components_setting_customer_customer_component__WEBPACK_IMPORTED_MODULE_58__ = __webpack_require__(/*! ./components/setting/customer/customer.component */ "./src/app/components/setting/customer/customer.component.ts");
+/* harmony import */ var _components_user_user_component__WEBPACK_IMPORTED_MODULE_59__ = __webpack_require__(/*! ./components/user/user.component */ "./src/app/components/user/user.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -239,7 +240,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
-// formula
+
 
 
 
@@ -273,19 +274,19 @@ var routes = [
             { path: 'base', component: _components_setting_base_base_component__WEBPACK_IMPORTED_MODULE_39__["BaseComponent"] },
             { path: 'collection', component: _components_setting_collection_collection_component__WEBPACK_IMPORTED_MODULE_40__["CollectionComponent"] },
             { path: 'product', component: _components_setting_product_product_component__WEBPACK_IMPORTED_MODULE_41__["ProductComponent"] },
-            { path: 'customer', component: _components_setting_customer_customer_component__WEBPACK_IMPORTED_MODULE_57__["CustomerComponent"] },
+            { path: 'customer', component: _components_setting_customer_customer_component__WEBPACK_IMPORTED_MODULE_58__["CustomerComponent"] },
             // {path: 'product/view-detail/:id', component: ViewDetailComponent},
-            { path: 'formula', component: _components_formula_listformula_formula_component__WEBPACK_IMPORTED_MODULE_42__["FormulaComponent"] },
+            { path: 'formula', component: _components_formula_formula_formula_component__WEBPACK_IMPORTED_MODULE_42__["FormulaComponent"] },
             // {path: 'formula', loadChildren: './components/formula/'},
-            { path: 'view-formula/:id', component: _components_formula_viewformula_viewformula_component__WEBPACK_IMPORTED_MODULE_43__["ViewFormulaComponent"] },
-            { path: 'formula/add', component: _components_formula_editformula_edit_formula_edit_formula_component__WEBPACK_IMPORTED_MODULE_54__["EditFormulaComponent"] },
-            { path: 'formula/edit/:id', component: _components_formula_editformula_edit_formula_edit_formula_component__WEBPACK_IMPORTED_MODULE_54__["EditFormulaComponent"] },
+            { path: 'view-formula/:id', component: _components_formula_viewformula_viewformula_component__WEBPACK_IMPORTED_MODULE_44__["ViewFormulaComponent"] },
+            { path: 'formula/add', component: _components_formula_edit_formula_edit_formula_component__WEBPACK_IMPORTED_MODULE_55__["EditFormulaComponent"] },
+            { path: 'formula/edit/:id', component: _components_formula_edit_formula_edit_formula_component__WEBPACK_IMPORTED_MODULE_55__["EditFormulaComponent"] },
             { path: 'job-status', component: _components_backgroundtask_backgroundtask_component__WEBPACK_IMPORTED_MODULE_37__["BackgroundTaskComponent"] },
-            { path: 'maintenance', component: _components_formula_maintenance_maintenance_component__WEBPACK_IMPORTED_MODULE_44__["MaintenanceComponent"] },
-            { path: 'machine', component: _components_machine_machinesetting_machinesetting_component__WEBPACK_IMPORTED_MODULE_50__["MachineSettingComponent"] },
-            { path: 'question', component: _components_help_question_question_component__WEBPACK_IMPORTED_MODULE_46__["QuestionComponent"] },
+            { path: 'maintenance', component: _components_formula_maintenance_maintenance_component__WEBPACK_IMPORTED_MODULE_45__["MaintenanceComponent"] },
+            { path: 'machine', component: _components_machine_machinesetting_machinesetting_component__WEBPACK_IMPORTED_MODULE_51__["MachineSettingComponent"] },
+            { path: 'question', component: _components_help_question_question_component__WEBPACK_IMPORTED_MODULE_47__["QuestionComponent"] },
             { path: 'help/overview', component: _components_help_help_component__WEBPACK_IMPORTED_MODULE_15__["HelpComponent"] },
-            { path: 'help/language', component: _components_help_language_language_component__WEBPACK_IMPORTED_MODULE_45__["LanguageComponent"] },
+            { path: 'help/language', component: _components_help_language_language_component__WEBPACK_IMPORTED_MODULE_46__["LanguageComponent"] },
             { path: 'help/boostrap', component: _components_help_structure_structure_component__WEBPACK_IMPORTED_MODULE_16__["StructureComponent"] },
             { path: 'create', component: _components_issue_create_create_component__WEBPACK_IMPORTED_MODULE_13__["CreateComponent"] },
             { path: 'edit/:id', component: _components_issue_edit_edit_component__WEBPACK_IMPORTED_MODULE_14__["EditComponent"] },
@@ -302,8 +303,8 @@ var AppModule = /** @class */ (function () {
                 _app_component__WEBPACK_IMPORTED_MODULE_11__["AppComponent"],
                 // import directions
                 _directions_boostrap_modal_modal_component__WEBPACK_IMPORTED_MODULE_28__["ModalComponent"],
-                _directions_product_tablecolourant_table_colourants_component__WEBPACK_IMPORTED_MODULE_55__["TableColourantsComponent"],
-                _directions_product_base_can_base_can_component__WEBPACK_IMPORTED_MODULE_56__["BaseCanComponent"],
+                _directions_product_tablecolourant_table_colourants_component__WEBPACK_IMPORTED_MODULE_56__["TableColourantsComponent"],
+                _directions_product_base_can_base_can_component__WEBPACK_IMPORTED_MODULE_57__["BaseCanComponent"],
                 // page !!
                 _components_login_page_login_login_component__WEBPACK_IMPORTED_MODULE_29__["LoginComponent"],
                 _components_login_page_register_register_component__WEBPACK_IMPORTED_MODULE_30__["RegisterComponent"],
@@ -316,32 +317,33 @@ var AppModule = /** @class */ (function () {
                 _components_layout_breadcrumb_breadcrumb_component__WEBPACK_IMPORTED_MODULE_35__["BreadcrumbComponent"],
                 _components_layout_footer_footer_component__WEBPACK_IMPORTED_MODULE_36__["FooterComponent"],
                 _components_backgroundtask_backgroundtask_component__WEBPACK_IMPORTED_MODULE_37__["BackgroundTaskComponent"],
-                _components_backgroundtask_viewdispensetask_viewdispensetask_component__WEBPACK_IMPORTED_MODULE_49__["ViewDispenseTaskComponent"],
+                _components_backgroundtask_viewdispensetask_viewdispensetask_component__WEBPACK_IMPORTED_MODULE_50__["ViewDispenseTaskComponent"],
                 // setting component
-                _components_user_user_component__WEBPACK_IMPORTED_MODULE_58__["UserComponent"],
+                _components_user_user_component__WEBPACK_IMPORTED_MODULE_59__["UserComponent"],
                 _components_setting_colorant_colorant_component__WEBPACK_IMPORTED_MODULE_38__["ColorantComponent"],
                 _components_setting_base_base_component__WEBPACK_IMPORTED_MODULE_39__["BaseComponent"],
                 _components_setting_collection_collection_component__WEBPACK_IMPORTED_MODULE_40__["CollectionComponent"],
                 _components_setting_product_product_component__WEBPACK_IMPORTED_MODULE_41__["ProductComponent"],
-                _components_setting_customer_customer_component__WEBPACK_IMPORTED_MODULE_57__["CustomerComponent"],
-                _components_setting_productbase_productbase_component__WEBPACK_IMPORTED_MODULE_51__["ProductbaseComponent"],
-                _directions_product_viewdetail_viewdetail_component__WEBPACK_IMPORTED_MODULE_48__["ViewDetailComponent"],
+                _components_setting_customer_customer_component__WEBPACK_IMPORTED_MODULE_58__["CustomerComponent"],
+                _components_setting_productbase_productbase_component__WEBPACK_IMPORTED_MODULE_52__["ProductbaseComponent"],
+                _directions_product_viewdetail_viewdetail_component__WEBPACK_IMPORTED_MODULE_49__["ViewDetailComponent"],
                 // formula component
-                _components_formula_listformula_formula_component__WEBPACK_IMPORTED_MODULE_42__["FormulaComponent"],
-                _components_formula_viewformula_viewformula_component__WEBPACK_IMPORTED_MODULE_43__["ViewFormulaComponent"],
-                _components_formula_editformula_edit_formula_edit_formula_component__WEBPACK_IMPORTED_MODULE_54__["EditFormulaComponent"],
-                _components_formula_maintenance_maintenance_component__WEBPACK_IMPORTED_MODULE_44__["MaintenanceComponent"],
+                _components_formula_formula_formula_component__WEBPACK_IMPORTED_MODULE_42__["FormulaComponent"],
+                _components_formula_list_formula_list_formula_component__WEBPACK_IMPORTED_MODULE_43__["ListFormulaComponent"],
+                _components_formula_viewformula_viewformula_component__WEBPACK_IMPORTED_MODULE_44__["ViewFormulaComponent"],
+                _components_formula_edit_formula_edit_formula_component__WEBPACK_IMPORTED_MODULE_55__["EditFormulaComponent"],
+                _components_formula_maintenance_maintenance_component__WEBPACK_IMPORTED_MODULE_45__["MaintenanceComponent"],
                 // machine component
-                _components_machine_machinesetting_machinesetting_component__WEBPACK_IMPORTED_MODULE_50__["MachineSettingComponent"],
-                _components_user_user_component__WEBPACK_IMPORTED_MODULE_58__["UserComponent"],
+                _components_machine_machinesetting_machinesetting_component__WEBPACK_IMPORTED_MODULE_51__["MachineSettingComponent"],
+                _components_user_user_component__WEBPACK_IMPORTED_MODULE_59__["UserComponent"],
                 // test component
                 _components_issue_list_list_component__WEBPACK_IMPORTED_MODULE_12__["ListComponent"],
                 _components_issue_create_create_component__WEBPACK_IMPORTED_MODULE_13__["CreateComponent"],
                 _components_issue_edit_edit_component__WEBPACK_IMPORTED_MODULE_14__["EditComponent"],
                 // help page
-                _components_help_question_question_component__WEBPACK_IMPORTED_MODULE_46__["QuestionComponent"],
+                _components_help_question_question_component__WEBPACK_IMPORTED_MODULE_47__["QuestionComponent"],
                 _components_help_help_component__WEBPACK_IMPORTED_MODULE_15__["HelpComponent"],
-                _components_help_language_language_component__WEBPACK_IMPORTED_MODULE_45__["LanguageComponent"],
+                _components_help_language_language_component__WEBPACK_IMPORTED_MODULE_46__["LanguageComponent"],
                 _components_help_structure_structure_component__WEBPACK_IMPORTED_MODULE_16__["StructureComponent"],
             ],
             imports: [
@@ -349,7 +351,7 @@ var AppModule = /** @class */ (function () {
                 _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_4__["BrowserAnimationsModule"],
                 _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClientModule"],
-                _shared_http_http_module__WEBPACK_IMPORTED_MODULE_47__["HttpModule"].forRoot(),
+                _shared_http_http_module__WEBPACK_IMPORTED_MODULE_48__["HttpModule"].forRoot(),
                 _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forRoot(routes),
                 _angular_forms__WEBPACK_IMPORTED_MODULE_8__["FormsModule"],
                 // import boostrap
@@ -361,10 +363,10 @@ var AppModule = /** @class */ (function () {
             ],
             providers: [
                 ng_cookie__WEBPACK_IMPORTED_MODULE_17__["CookieService"],
-                _services_store_store_service__WEBPACK_IMPORTED_MODULE_53__["StoreService"],
+                _services_store_store_service__WEBPACK_IMPORTED_MODULE_54__["StoreService"],
                 _services_dispensetask_dispensetask_service__WEBPACK_IMPORTED_MODULE_27__["DispenseTaskService"],
                 _services_boostrap_modal_service__WEBPACK_IMPORTED_MODULE_26__["ModalService"],
-                _services_dashboard_dashboard_service__WEBPACK_IMPORTED_MODULE_52__["DashboardService"],
+                _services_dashboard_dashboard_service__WEBPACK_IMPORTED_MODULE_53__["DashboardService"],
                 _services_issues_issue_service__WEBPACK_IMPORTED_MODULE_18__["IssueService"],
                 _services_colorant_colorant_service__WEBPACK_IMPORTED_MODULE_19__["ColourantService"],
                 _services_product_product_service__WEBPACK_IMPORTED_MODULE_20__["ProductService"],
@@ -391,7 +393,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"block-header\">\r\n  <h1>Dispense History</h1>\r\n</div>\r\n\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        Dispense History\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        <div class=\"table-responsive\">\r\n          <table class=\"table table-bordered\" matSort (matSortChange)=\"sortData($event)\">\r\n            <tr>\r\n              <th mat-sort-header=\"machineFormulaProductBaseId\">#Id</th>\r\n              <th mat-sort-header=\"approximateColor\">Color</th>\r\n              <th mat-sort-header=\"formulaName\">Formula Name</th>\r\n              <th mat-sort-header=\"collectionName\">Collection</th>\r\n              <th mat-sort-header=\"productName\">Product</th>\r\n              <th mat-sort-header=\"canSize\">Can Size</th>\r\n              <th mat-sort-header=\"status\">Status</th>\r\n              <th mat-sort-header=\"createdDate\">Created Time</th>\r\n              <th mat-sort-header=\"finishedDate\">Finished Time</th>\r\n              <th>Action</th>\r\n            </tr>\r\n\r\n            <tr *ngFor=\"let item of listBackgroundTask\">\r\n              <td>{{item.machineFormulaProductBaseId}}</td>\r\n              <td class=\"text-center\"><span [ngStyle]=\"{'background': item.formulaProductBase.formula.approximateColor, 'display': 'inline-block', 'width': '30px', 'height': '30px', 'border': '1px solid #333'}\"></span></td>\r\n              <td>{{item.formulaProductBase.formula.formulaName}}</td>\r\n              <td>{{item.formulaProductBase.formula.collection.collectionName}}</td>\r\n              <td>{{item.formulaProductBase.productBase.product.productName}}</td>\r\n              <td>{{item.canSize}} L</td>\r\n              <td>{{item.status}}</td>\r\n              <td>{{item.createdDate | date: 'hh:mm:ss dd/MM/yyyy'}}</td>\r\n              <td>{{item.finishedDate | date: 'hh:mm:ss dd/MM/yyyy'}}</td>\r\n              <td><span (click)=\"viewCurrentTask(item)\"><i class=\"fas fa-info-circle\"></i></span></td>\r\n            </tr>\r\n          </table>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n"
+module.exports = "<div [ngStyle]=\"{'display' : selectedFormula != null ? 'none': 'block'}\">\r\n  <div class=\"block-header\">\r\n    <h1>Dispense History</h1>\r\n  </div>\r\n\r\n  <div class=\"row\">\r\n    <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n      <div class=\"card\">\r\n        <div class=\"card-header\">\r\n          Dispense History\r\n        </div>\r\n\r\n        <div class=\"card-body\">\r\n          <div class=\"table-responsive\">\r\n            <table class=\"table table-bordered\" matSort (matSortChange)=\"sortData($event)\">\r\n              <tr>\r\n                <th mat-sort-header=\"machineFormulaProductBaseId\">#Id</th>\r\n                <th mat-sort-header=\"approximateColor\">Color</th>\r\n                <th mat-sort-header=\"formulaName\">Formula Name</th>\r\n                <th mat-sort-header=\"collectionName\">Collection</th>\r\n                <th mat-sort-header=\"productName\">Product</th>\r\n                <th mat-sort-header=\"canSize\">Can Size</th>\r\n                <th mat-sort-header=\"status\">Status</th>\r\n                <th mat-sort-header=\"createdDate\">Created Time</th>\r\n                <th mat-sort-header=\"finishedDate\">Finished Time</th>\r\n                <th>Action</th>\r\n              </tr>\r\n\r\n              <tr *ngFor=\"let item of listBackgroundTask\">\r\n                <td>{{item.machineFormulaProductBaseId}}</td>\r\n                <td class=\"text-center\"><span [ngStyle]=\"{'background': item.formulaProductBase.formula.approximateColor, 'display': 'inline-block', 'width': '30px', 'height': '30px', 'border': '1px solid #333'}\"></span></td>\r\n                <td>{{item.formulaProductBase.formula.formulaName}}</td>\r\n                <td>{{item.formulaProductBase.formula.collection.collectionName}}</td>\r\n                <td>{{item.formulaProductBase.productBase.product.productName}}</td>\r\n                <td>{{item.canSize}} L</td>\r\n                <td>{{item.status}}</td>\r\n                <td>{{item.createdDate | date: 'hh:mm:ss dd/MM/yyyy'}}</td>\r\n                <td>{{item.finishedDate | date: 'hh:mm:ss dd/MM/yyyy'}}</td>\r\n                <td><span (click)=\"viewCurrentTask(item)\"><i class=\"fas fa-info-circle\"></i></span></td>\r\n              </tr>\r\n            </table>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n\r\n<ng-container *ngIf=\"selectedFormula\">\r\n  <app-viewformula [dbItem]=\"selectedFormula\"></app-viewformula>\r\n</ng-container>\r\n\r\n<ng-container *ngIf=\"selectedFormula\">\r\n  <div class=\"row\">\r\n    <div class=\"col-12\">\r\n      <button class=\"btn btn-primary push-left\" (click)=\"clearSelectedFormula()\"><i class=\"fas fa-arrow-circle-left\"></i> Back</button>\r\n    </div>\r\n  </div>\r\n</ng-container>\r\n\r\n\r\n"
 
 /***/ }),
 
@@ -455,7 +457,11 @@ var BackgroundTaskComponent = /** @class */ (function () {
     };
     BackgroundTaskComponent.prototype.viewCurrentTask = function (task) {
         this.currentBackgroundTask = task;
-        this.router.navigate(["../dashboard/view-formula/" + task.formulaProductBase.formulaProductBaseId]);
+        this.selectedFormula = this.currentBackgroundTask.formulaProductBase;
+    };
+    BackgroundTaskComponent.prototype.clearSelectedFormula = function () {
+        this.currentBackgroundTask = null;
+        this.selectedFormula = null;
     };
     BackgroundTaskComponent.prototype.sortData = function (sort) {
         var data = this.listItems.slice();
@@ -663,10 +669,10 @@ var DashboardComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/components/formula/editformula/edit-formula/edit-formula.component.html":
-/*!*****************************************************************************************!*\
-  !*** ./src/app/components/formula/editformula/edit-formula/edit-formula.component.html ***!
-  \*****************************************************************************************/
+/***/ "./src/app/components/formula/edit-formula/edit-formula.component.html":
+/*!*****************************************************************************!*\
+  !*** ./src/app/components/formula/edit-formula/edit-formula.component.html ***!
+  \*****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -674,21 +680,21 @@ module.exports = "<div class=\"block-header\">\r\n  <h1>{{viewMode}} Formula</h1
 
 /***/ }),
 
-/***/ "./src/app/components/formula/editformula/edit-formula/edit-formula.component.scss":
-/*!*****************************************************************************************!*\
-  !*** ./src/app/components/formula/editformula/edit-formula/edit-formula.component.scss ***!
-  \*****************************************************************************************/
+/***/ "./src/app/components/formula/edit-formula/edit-formula.component.scss":
+/*!*****************************************************************************!*\
+  !*** ./src/app/components/formula/edit-formula/edit-formula.component.scss ***!
+  \*****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".colourant-group {\n  margin-bottom: 10px; }\n  .colourant-group .colour-bar {\n    display: inline-block;\n    width: 100%;\n    min-height: 1em;\n    border: 1px solid #000;\n    padding: 3px 5px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9mb3JtdWxhL2VkaXRmb3JtdWxhL2VkaXQtZm9ybXVsYS9YOlxcd3NfbGVhcm5pbmdcXGNsaWVudHZpZXRwb3dlci9zcmNcXGFwcFxcY29tcG9uZW50c1xcZm9ybXVsYVxcZWRpdGZvcm11bGFcXGVkaXQtZm9ybXVsYVxcZWRpdC1mb3JtdWxhLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0Usb0JBQW1CLEVBU3BCO0VBVkQ7SUFJSSxzQkFBcUI7SUFDckIsWUFBVztJQUNYLGdCQUFlO0lBQ2YsdUJBQXNCO0lBQ3RCLGlCQUFnQixFQUNqQiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvZm9ybXVsYS9lZGl0Zm9ybXVsYS9lZGl0LWZvcm11bGEvZWRpdC1mb3JtdWxhLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmNvbG91cmFudC1ncm91cHtcclxuICBtYXJnaW4tYm90dG9tOiAxMHB4O1xyXG5cclxuICAuY29sb3VyLWJhcntcclxuICAgIGRpc3BsYXk6IGlubGluZS1ibG9jaztcclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgbWluLWhlaWdodDogMWVtO1xyXG4gICAgYm9yZGVyOiAxcHggc29saWQgIzAwMDtcclxuICAgIHBhZGRpbmc6IDNweCA1cHg7XHJcbiAgfVxyXG59XHJcbiJdfQ== */"
+module.exports = ".colourant-group {\n  margin-bottom: 10px; }\n  .colourant-group .colour-bar {\n    display: inline-block;\n    width: 100%;\n    min-height: 1em;\n    border: 1px solid #000;\n    padding: 3px 5px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9mb3JtdWxhL2VkaXQtZm9ybXVsYS9YOlxcd3NfbGVhcm5pbmdcXGNsaWVudHZpZXRwb3dlci9zcmNcXGFwcFxcY29tcG9uZW50c1xcZm9ybXVsYVxcZWRpdC1mb3JtdWxhXFxlZGl0LWZvcm11bGEuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxvQkFBbUIsRUFTcEI7RUFWRDtJQUlJLHNCQUFxQjtJQUNyQixZQUFXO0lBQ1gsZ0JBQWU7SUFDZix1QkFBc0I7SUFDdEIsaUJBQWdCLEVBQ2pCIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50cy9mb3JtdWxhL2VkaXQtZm9ybXVsYS9lZGl0LWZvcm11bGEuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY29sb3VyYW50LWdyb3Vwe1xyXG4gIG1hcmdpbi1ib3R0b206IDEwcHg7XHJcblxyXG4gIC5jb2xvdXItYmFye1xyXG4gICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbiAgICBtaW4taGVpZ2h0OiAxZW07XHJcbiAgICBib3JkZXI6IDFweCBzb2xpZCAjMDAwO1xyXG4gICAgcGFkZGluZzogM3B4IDVweDtcclxuICB9XHJcbn1cclxuIl19 */"
 
 /***/ }),
 
-/***/ "./src/app/components/formula/editformula/edit-formula/edit-formula.component.ts":
-/*!***************************************************************************************!*\
-  !*** ./src/app/components/formula/editformula/edit-formula/edit-formula.component.ts ***!
-  \***************************************************************************************/
+/***/ "./src/app/components/formula/edit-formula/edit-formula.component.ts":
+/*!***************************************************************************!*\
+  !*** ./src/app/components/formula/edit-formula/edit-formula.component.ts ***!
+  \***************************************************************************/
 /*! exports provided: EditFormulaComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -697,19 +703,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EditFormulaComponent", function() { return EditFormulaComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _models_formula_product_base__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../models/formula_product_base */ "./src/app/models/formula_product_base.ts");
-/* harmony import */ var _models_formula__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../models/formula */ "./src/app/models/formula.ts");
-/* harmony import */ var _models_product_base__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../models/product_base */ "./src/app/models/product_base.ts");
-/* harmony import */ var _services_collection_collection_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../services/collection/collection.service */ "./src/app/services/collection/collection.service.ts");
-/* harmony import */ var _services_formula_formula_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../services/formula/formula.service */ "./src/app/services/formula/formula.service.ts");
-/* harmony import */ var _services_product_product_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../services/product/product.service */ "./src/app/services/product/product.service.ts");
-/* harmony import */ var _models_product__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../models/product */ "./src/app/models/product.ts");
-/* harmony import */ var _models_collection__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../../models/collection */ "./src/app/models/collection.ts");
-/* harmony import */ var _services_colorant_colorant_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../../../services/colorant/colorant.service */ "./src/app/services/colorant/colorant.service.ts");
-/* harmony import */ var _models_base__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../../../models/base */ "./src/app/models/base.ts");
-/* harmony import */ var _services_boostrap_modal_service__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../../../services/boostrap/modal.service */ "./src/app/services/boostrap/modal.service.ts");
-/* harmony import */ var _models_customer__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../../../models/customer */ "./src/app/models/customer.ts");
-/* harmony import */ var _services_customer_customer_service__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../../../services/customer/customer.service */ "./src/app/services/customer/customer.service.ts");
+/* harmony import */ var _models_formula_product_base__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../models/formula_product_base */ "./src/app/models/formula_product_base.ts");
+/* harmony import */ var _models_formula__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../models/formula */ "./src/app/models/formula.ts");
+/* harmony import */ var _models_product_base__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../models/product_base */ "./src/app/models/product_base.ts");
+/* harmony import */ var _services_collection_collection_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../services/collection/collection.service */ "./src/app/services/collection/collection.service.ts");
+/* harmony import */ var _services_formula_formula_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../services/formula/formula.service */ "./src/app/services/formula/formula.service.ts");
+/* harmony import */ var _services_product_product_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../services/product/product.service */ "./src/app/services/product/product.service.ts");
+/* harmony import */ var _models_product__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../models/product */ "./src/app/models/product.ts");
+/* harmony import */ var _models_collection__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../models/collection */ "./src/app/models/collection.ts");
+/* harmony import */ var _services_colorant_colorant_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../../services/colorant/colorant.service */ "./src/app/services/colorant/colorant.service.ts");
+/* harmony import */ var _models_base__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../../models/base */ "./src/app/models/base.ts");
+/* harmony import */ var _services_boostrap_modal_service__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../../services/boostrap/modal.service */ "./src/app/services/boostrap/modal.service.ts");
+/* harmony import */ var _models_customer__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../../models/customer */ "./src/app/models/customer.ts");
+/* harmony import */ var _services_customer_customer_service__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../../services/customer/customer.service */ "./src/app/services/customer/customer.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1021,8 +1027,8 @@ var EditFormulaComponent = /** @class */ (function () {
     EditFormulaComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-edit-formula',
-            template: __webpack_require__(/*! ./edit-formula.component.html */ "./src/app/components/formula/editformula/edit-formula/edit-formula.component.html"),
-            styles: [__webpack_require__(/*! ./edit-formula.component.scss */ "./src/app/components/formula/editformula/edit-formula/edit-formula.component.scss")]
+            template: __webpack_require__(/*! ./edit-formula.component.html */ "./src/app/components/formula/edit-formula/edit-formula.component.html"),
+            styles: [__webpack_require__(/*! ./edit-formula.component.scss */ "./src/app/components/formula/edit-formula/edit-formula.component.scss")]
         }),
         __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"],
             _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"],
@@ -1040,32 +1046,32 @@ var EditFormulaComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/components/formula/listformula/formula.component.html":
-/*!***********************************************************************!*\
-  !*** ./src/app/components/formula/listformula/formula.component.html ***!
-  \***********************************************************************/
+/***/ "./src/app/components/formula/formula/formula.component.html":
+/*!*******************************************************************!*\
+  !*** ./src/app/components/formula/formula/formula.component.html ***!
+  \*******************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"block-header\">\r\n  <h1>Formula</h1>\r\n</div>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n    <div class=\"card filter-card\">\r\n      <div class=\"card-header\">\r\n        Filter\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        <form class=\"form form-horizontal form-detail\">\r\n          <div class=\"form-body\">\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-md-3 label-control\">Select Color</label>\r\n              <div class=\"input-group input-group-sm col-md-9\">\r\n                <select class=\"form-control form-control-sm select-sm select-color-field\" id=\"selectedFormulaFilter\" name=\"selectedFormulaFilter\" [(ngModel)]=\"filter.formulaId\" (ngModelChange)=\"onFilterChange($event)\">\r\n                  <option [ngValue]=\"undefined\">Choose Color</option>\r\n                  <option *ngFor=\"let f of listFormulas\" value=\"{{f.formulaId}}\">{{f.formulaName}}</option>\r\n                </select>\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-md-3 label-control\">Select Collection</label>\r\n              <div class=\"col-md-9\">\r\n                <select class=\"form-control form-control-sm select-sm select-color-field\" id=\"selectedCollectionFilter\" name=\"selectedCollectionFilter\" [(ngModel)]=\"filter.collectionId\" (ngModelChange)=\"onFilterChange($event)\">\r\n                  <option [ngValue]=\"undefined\">Choose Collection</option>\r\n                  <option *ngFor=\"let c of listCollections\" value=\"{{c.collectionId}}\">{{c.collectionName}}</option>\r\n                </select>\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-md-3 label-control\">Select Product</label>\r\n              <div class=\"col-md-9\">\r\n                <select class=\"form-control form-control-sm select-sm select-color-field\" id=\"selectedProductFilter\" name=\"selectedProductFilter\" [(ngModel)]=\"filter.productId\" (ngModelChange)=\"onFilterChange($event)\">\r\n                  <option [ngValue]=\"undefined\">Choose Product</option>\r\n                  <option *ngFor=\"let c of listProducts\" value=\"{{c.productId}}\">{{c.productCode}}</option>\r\n                </select>\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-md-3 label-control\">Select Customer</label>\r\n              <div class=\"col-md-9\">\r\n                <select class=\"form-control form-control-sm select-sm select-color-field\" id=\"selectedCustomerFilter\" name=\"selectedProductFilter\" [(ngModel)]=\"filter.customerId\" (ngModelChange)=\"onFilterChange($event)\">\r\n                  <option [ngValue]=\"undefined\">Choose Customer</option>\r\n                  <option *ngFor=\"let c of listCustomer\" value=\"{{c.customerId}}\">{{c.name}}</option>\r\n                </select>\r\n              </div>\r\n            </div>\r\n          </div>\r\n\r\n          <div class=\"form-actions text-center\">\r\n            <button class=\"btn btn-primary mr-3\" (click)=\"refresh()\">Search</button>\r\n            <button class=\"btn btn-default\" (click)=\"reset()\">Reset</button>\r\n          </div>\r\n        </form>\r\n      </div>\r\n\r\n      <!--<div class=\"card-footer\">-->\r\n\r\n      <!--</div>-->\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        List Colorant\r\n\r\n        <button class=\"close\" (click)=\"addNewFormula()\" matTooltip=\"Add Formula\" aria-label=\"Add Formula\"><i class=\"fas fa-plus-square\"></i></button>\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        <div class=\"table-responsive\">\r\n          <!--matSort (matSortChange)=\"sortData($event)\"-->\r\n          <table class=\"table table-bordered\" matSort (matSortChange)=\"sortData($event)\">\r\n            <tr>\r\n              <th mat-sort-header=\"formulaCode\">Formula Code</th>\r\n              <th mat-sort-header=\"formulaName\">Formula Name</th>\r\n              <th mat-sort-header=\"approximateColor\">Approximate<br />Color</th>\r\n              <th mat-sort-header=\"collection\">Collection\r\n              <th mat-sort-header=\"product\">Product</th>\r\n              <th mat-sort-header=\"createdDate\">Created Date</th>\r\n              <th mat-sort-header=\"createdBy\">Created By</th>\r\n              <th>Action</th>\r\n            </tr>\r\n\r\n            <tr *ngFor=\"let item of pagenationMode.listItems\">\r\n              <td>{{item.formula.formulaCode}}</td>\r\n              <td>{{item.formula.formulaName}}</td>\r\n              <td class=\"text-center\"><span [ngStyle]=\"{'background': item.formula.approximateColor, 'display': 'inline-block', 'width': '30px', 'height': '30px', 'border': '1px solid #333'}\"></span></td>\r\n              <td>{{item.formula.collection.collectionName}}</td>\r\n              <td>{{item.productBase.product.productName}}</td>\r\n              <td>{{item.formula.createdDate | date: 'dd/MM/yyyy'}}</td>\r\n              <td> {{item.formula.machine != null && item.formula.machine.machineId > 0 ? 'Me' : 'System'}}</td>\r\n              <td [ngStyle]=\"{'white-space': 'nowrap'}\">\r\n                <button mat-raised-button matTooltip=\"View Formula\" aria-label=\"View Formula\" (click)=\"viewFormula(item.formulaProductBaseId)\">\r\n                  <i class=\"fas fa-info-circle\"></i>\r\n                </button>\r\n\r\n                <ng-container *ngIf=\"item.formula.machine != null && item.formula.machine.machineId > 0\">\r\n                  <span class=\"vertical-separate-line\">&nbsp;</span>\r\n\r\n                  <button mat-raised-button matTooltip=\"Edit Formula\" aria-label=\"Edit Formula\" (click)=\"editTheFormula(item.formulaProductBaseId)\">\r\n                    <i class=\"fas fa-edit\"></i>\r\n                  </button>\r\n                </ng-container>\r\n            </tr>\r\n\r\n            <tfoot>\r\n            <tr>\r\n              <td colspan=\"100%\">\r\n                Show {{pagenationMode.listItems.length}} of  {{pagenationMode.totalItem}} items.\r\n\r\n                <span class=\"pagenation-footer\" style=\"float: right\">\r\n                  <span *ngIf=\"pagenationMode.pageIndex > 0\" (click)=\"goToPage(pagenationMode.pageIndex - 1)\" class=\"btn-action\"><</span>\r\n                  <span>{{pagenationMode.pageIndex + 1}}</span>\r\n                  <span *ngIf=\"pagenationMode.pageIndex * pagenationMode.maxPageItem + pagenationMode.maxPageItem < pagenationMode.totalItem\"  (click)=\"goToPage(pagenationMode.pageIndex + 1)\" class=\"btn-action\">></span>\r\n                </span>\r\n              </td>\r\n            </tr>\r\n            </tfoot>\r\n          </table>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+module.exports = "\r\n<div [ngStyle]=\"{'display' : dbItem != null ? 'none': 'block'}\">\r\n  <app-list-formula (selectedFormula)=\"selectFormula($event)\"></app-list-formula>\r\n</div>\r\n\r\n<ng-container *ngIf=\"dbItem\">\r\n  <app-viewformula [dbItem]=\"dbItem\"></app-viewformula>\r\n</ng-container>\r\n\r\n<ng-container *ngIf=\"dbItem\">\r\n  <div class=\"row\">\r\n    <div class=\"col-12\">\r\n      <button class=\"btn btn-primary push-left\" (click)=\"clearSelectedFormula()\"><i class=\"fas fa-arrow-circle-left\"></i> Back</button>\r\n    </div>\r\n  </div>\r\n</ng-container>\r\n"
 
 /***/ }),
 
-/***/ "./src/app/components/formula/listformula/formula.component.scss":
-/*!***********************************************************************!*\
-  !*** ./src/app/components/formula/listformula/formula.component.scss ***!
-  \***********************************************************************/
+/***/ "./src/app/components/formula/formula/formula.component.scss":
+/*!*******************************************************************!*\
+  !*** ./src/app/components/formula/formula/formula.component.scss ***!
+  \*******************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".select-color-field {\n  width: 100%; }\n\n.select2.select2-container {\n  min-width: 300px;\n  width: 100%; }\n\n.pagenation-footer {\n  float: right; }\n\n.pagenation-footer span {\n    display: inline-block;\n    min-width: 50px;\n    text-align: center;\n    padding: 5px 10px; }\n\n.pagenation-footer span.btn-action {\n      border: 1px solid #ccc;\n      cursor: pointer; }\n\n.vertical-separate-line {\n  margin-left: 0.25em;\n  margin-right: 0.25em; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9mb3JtdWxhL2xpc3Rmb3JtdWxhL1g6XFx3c19sZWFybmluZ1xcY2xpZW50dmlldHBvd2VyL3NyY1xcYXBwXFxjb21wb25lbnRzXFxmb3JtdWxhXFxsaXN0Zm9ybXVsYVxcZm9ybXVsYS5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLFlBQVcsRUFDWjs7QUFFRDtFQUNFLGlCQUFnQjtFQUNoQixZQUFXLEVBQ1o7O0FBR0Q7RUFDRSxhQUFZLEVBYWI7O0FBZEQ7SUFHSyxzQkFBcUI7SUFFckIsZ0JBQWU7SUFDZixtQkFBa0I7SUFDbEIsa0JBQWlCLEVBTWxCOztBQWJKO01BVU8sdUJBQXNCO01BQ3RCLGdCQUFlLEVBQ2hCOztBQUtOO0VBQ0Usb0JBQW1CO0VBQ25CLHFCQUFvQixFQUNyQiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvZm9ybXVsYS9saXN0Zm9ybXVsYS9mb3JtdWxhLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnNlbGVjdC1jb2xvci1maWVsZHtcclxuICB3aWR0aDogMTAwJTtcclxufVxyXG5cclxuLnNlbGVjdDIuc2VsZWN0Mi1jb250YWluZXJ7XHJcbiAgbWluLXdpZHRoOiAzMDBweDtcclxuICB3aWR0aDogMTAwJTtcclxufVxyXG5cclxuXHJcbi5wYWdlbmF0aW9uLWZvb3RlcntcclxuICBmbG9hdDogcmlnaHQ7XHJcbiAgIHNwYW57XHJcbiAgICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG5cclxuICAgICBtaW4td2lkdGg6IDUwcHg7XHJcbiAgICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gICAgIHBhZGRpbmc6IDVweCAxMHB4O1xyXG5cclxuICAgICAmLmJ0bi1hY3Rpb257XHJcbiAgICAgICBib3JkZXI6IDFweCBzb2xpZCAjY2NjO1xyXG4gICAgICAgY3Vyc29yOiBwb2ludGVyO1xyXG4gICAgIH1cclxuICAgfVxyXG59XHJcblxyXG5cclxuLnZlcnRpY2FsLXNlcGFyYXRlLWxpbmV7XHJcbiAgbWFyZ2luLWxlZnQ6IDAuMjVlbTtcclxuICBtYXJnaW4tcmlnaHQ6IDAuMjVlbTtcclxufVxyXG4iXX0= */"
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvZm9ybXVsYS9mb3JtdWxhL2Zvcm11bGEuY29tcG9uZW50LnNjc3MifQ== */"
 
 /***/ }),
 
-/***/ "./src/app/components/formula/listformula/formula.component.ts":
-/*!*********************************************************************!*\
-  !*** ./src/app/components/formula/listformula/formula.component.ts ***!
-  \*********************************************************************/
+/***/ "./src/app/components/formula/formula/formula.component.ts":
+/*!*****************************************************************!*\
+  !*** ./src/app/components/formula/formula/formula.component.ts ***!
+  \*****************************************************************/
 /*! exports provided: FormulaComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1073,13 +1079,84 @@ module.exports = ".select-color-field {\n  width: 100%; }\n\n.select2.select2-co
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FormulaComponent", function() { return FormulaComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _services_formula_formula_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../services/formula/formula.service */ "./src/app/services/formula/formula.service.ts");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _services_collection_collection_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../services/collection/collection.service */ "./src/app/services/collection/collection.service.ts");
-/* harmony import */ var _services_product_product_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../services/product/product.service */ "./src/app/services/product/product.service.ts");
-/* harmony import */ var _models_pagination_model__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../models/pagination.model */ "./src/app/models/pagination.model.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var FormulaComponent = /** @class */ (function () {
+    function FormulaComponent() {
+        this.dbItem = null;
+    }
+    FormulaComponent.prototype.ngOnInit = function () {
+    };
+    FormulaComponent.prototype.selectFormula = function (selectedFormula) {
+        this.dbItem = selectedFormula;
+    };
+    FormulaComponent.prototype.clearSelectedFormula = function () {
+        this.dbItem = null;
+    };
+    FormulaComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-formula',
+            template: __webpack_require__(/*! ./formula.component.html */ "./src/app/components/formula/formula/formula.component.html"),
+            styles: [__webpack_require__(/*! ./formula.component.scss */ "./src/app/components/formula/formula/formula.component.scss")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], FormulaComponent);
+    return FormulaComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/formula/list-formula/list-formula.component.html":
+/*!*****************************************************************************!*\
+  !*** ./src/app/components/formula/list-formula/list-formula.component.html ***!
+  \*****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"block-header\">\r\n  <h1>List Formula</h1>\r\n</div>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n    <div class=\"card filter-card\">\r\n      <div class=\"card-header\">\r\n        Filter\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        <form class=\"form form-horizontal form-detail\">\r\n          <div class=\"form-body\">\r\n            <div class=\"form-group row\" *ngIf=\"listFormulas\">\r\n              <label class=\"col-md-3 label-control\">Select Color</label>\r\n              <div class=\"input-group input-group-sm col-md-9\">\r\n                <select class=\"form-control form-control-sm select-sm select-color-field\" id=\"selectedFormulaFilter\" name=\"selectedFormulaFilter\" [(ngModel)]=\"filter.formulaId\" (ngModelChange)=\"onFilterChange($event)\">\r\n                  <option [ngValue]=\"undefined\">Choose Color</option>\r\n                  <option *ngFor=\"let f of listFormulas\" value=\"{{f.formulaId}}\">{{f.formulaName}}</option>\r\n                </select>\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"form-group row\" *ngIf=\"listCollections\">\r\n              <label class=\"col-md-3 label-control\">Select Collection</label>\r\n              <div class=\"col-md-9\">\r\n                <select class=\"form-control form-control-sm select-sm select-color-field\" id=\"selectedCollectionFilter\" name=\"selectedCollectionFilter\" [(ngModel)]=\"filter.collectionId\" (ngModelChange)=\"onFilterChange($event)\">\r\n                  <option [ngValue]=\"undefined\">Choose Collection</option>\r\n                  <option *ngFor=\"let c of listCollections\" value=\"{{c.collectionId}}\">{{c.collectionName}}</option>\r\n                </select>\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"form-group row\" *ngIf=\"listProducts\">\r\n              <label class=\"col-md-3 label-control\">Select Product</label>\r\n              <div class=\"col-md-9\">\r\n                <select class=\"form-control form-control-sm select-sm select-color-field\" id=\"selectedProductFilter\" name=\"selectedProductFilter\" [(ngModel)]=\"filter.productId\" (ngModelChange)=\"onFilterChange($event)\">\r\n                  <option [ngValue]=\"undefined\">Choose Product</option>\r\n                  <option *ngFor=\"let c of listProducts\" value=\"{{c.productId}}\">{{c.productCode}}</option>\r\n                </select>\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"form-group row\" *ngIf=\"listProductBase\">\r\n              <label class=\"col-md-3 label-control\">Select Base</label>\r\n              <div class=\"col-md-9\">\r\n                <select class=\"form-control form-control-sm select-sm select-color-field\" id=\"selectedProductBaseFilter\" name=\"selectedProductFilter\" [(ngModel)]=\"filter.productBaseId\" (ngModelChange)=\"onFilterChange($event)\">\r\n                  <option [ngValue]=\"undefined\">Choose Base</option>\r\n                  <option *ngFor=\"let c of listProductBase\" value=\"{{c.productBaseId}}\">{{c.base.baseName}}</option>\r\n                </select>\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"form-group row\" *ngIf=\"listCustomer\">\r\n              <label class=\"col-md-3 label-control\">Select Customer</label>\r\n              <div class=\"col-md-9\">\r\n                <select class=\"form-control form-control-sm select-sm select-color-field\" id=\"selectedCustomerFilter\" name=\"selectedProductFilter\" [(ngModel)]=\"filter.customerId\" (ngModelChange)=\"onFilterChange($event)\">\r\n                  <option [ngValue]=\"undefined\">Choose Customer</option>\r\n                  <option *ngFor=\"let c of listCustomer\" value=\"{{c.customerId}}\">{{c.name}}</option>\r\n                </select>\r\n              </div>\r\n            </div>\r\n          </div>\r\n\r\n          <div class=\"form-actions text-center\">\r\n            <button class=\"btn btn-primary mr-3\" (click)=\"refresh()\">Search</button>\r\n            <button class=\"btn btn-default\" (click)=\"reset()\">Reset</button>\r\n            <button class=\"btn btn-default\" (click)=\"testElectron()\">Electron</button>\r\n          </div>\r\n        </form>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n\r\n<div class=\"row\" *ngIf=\"pagenationMode\">\r\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        List Colorant\r\n\r\n        <button class=\"close\" (click)=\"addNewFormula()\" matTooltip=\"Add Formula\" aria-label=\"Add Formula\"><i class=\"fas fa-plus-square\"></i></button>\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        <div class=\"table-responsive\">\r\n          <!--matSort (matSortChange)=\"sortData($event)\"-->\r\n          <table class=\"table table-bordered\" matSort (matSortChange)=\"sortData($event)\">\r\n            <tr>\r\n              <th mat-sort-header=\"formulaCode\">Formula Code</th>\r\n              <th mat-sort-header=\"formulaName\">Formula Name</th>\r\n              <th mat-sort-header=\"approximateColor\">Approximate<br />Color</th>\r\n              <th mat-sort-header=\"collection\">Collection\r\n              <th mat-sort-header=\"product\">Product</th>\r\n              <th mat-sort-header=\"createdDate\">Created Date</th>\r\n              <th mat-sort-header=\"createdBy\">Created By</th>\r\n              <th>Action</th>\r\n            </tr>\r\n\r\n            <tr *ngFor=\"let item of pagenationMode.listItems\">\r\n              <td>{{item.formula.formulaCode}}</td>\r\n              <td>{{item.formula.formulaName}}</td>\r\n              <td class=\"text-center\"><span [ngStyle]=\"{'background': item.formula.approximateColor, 'display': 'inline-block', 'width': '30px', 'height': '30px', 'border': '1px solid #333'}\"></span></td>\r\n              <td>{{item.formula.collection.collectionName}}</td>\r\n              <td>{{item.productBase.product.productName}}</td>\r\n              <td>{{item.formula.createdDate | date: 'dd/MM/yyyy'}}</td>\r\n              <td> {{item.formula.machine != null && item.formula.machine.machineId > 0 ? 'Me' : 'System'}}</td>\r\n              <td [ngStyle]=\"{'white-space': 'nowrap'}\">\r\n                <button mat-raised-button matTooltip=\"View Formula\" aria-label=\"View Formula\" (click)=\"viewFormula(item)\">\r\n                  <i class=\"fas fa-info-circle\"></i>\r\n                </button>\r\n\r\n                <ng-container *ngIf=\"item.formula.machine != null && item.formula.machine.machineId > 0\">\r\n                  <span class=\"vertical-separate-line\">&nbsp;</span>\r\n\r\n                  <button mat-raised-button matTooltip=\"Edit Formula\" aria-label=\"Edit Formula\" (click)=\"editTheFormula(item.formulaProductBaseId)\">\r\n                    <i class=\"fas fa-edit\"></i>\r\n                  </button>\r\n                </ng-container>\r\n            </tr>\r\n\r\n            <tfoot>\r\n            <tr>\r\n              <td colspan=\"100%\">\r\n                Show {{pagenationMode.listItems.length}} of  {{pagenationMode.totalItem}} items.\r\n\r\n                <span class=\"pagenation-footer\" style=\"float: right\">\r\n                  <span *ngIf=\"pagenationMode.pageIndex > 0\" (click)=\"goToPage(pagenationMode.pageIndex - 1)\" class=\"btn-action\"><</span>\r\n                  <span>{{pagenationMode.pageIndex + 1}}</span>\r\n                  <span *ngIf=\"pagenationMode.pageIndex * pagenationMode.maxPageItem + pagenationMode.maxPageItem < pagenationMode.totalItem\"  (click)=\"goToPage(pagenationMode.pageIndex + 1)\" class=\"btn-action\">></span>\r\n                </span>\r\n              </td>\r\n            </tr>\r\n            </tfoot>\r\n          </table>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+
+/***/ }),
+
+/***/ "./src/app/components/formula/list-formula/list-formula.component.scss":
+/*!*****************************************************************************!*\
+  !*** ./src/app/components/formula/list-formula/list-formula.component.scss ***!
+  \*****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".select-color-field {\n  width: 100%; }\n\n.select2.select2-container {\n  min-width: 300px;\n  width: 100%; }\n\n.pagenation-footer {\n  float: right; }\n\n.pagenation-footer span {\n    display: inline-block;\n    min-width: 50px;\n    text-align: center;\n    padding: 5px 10px; }\n\n.pagenation-footer span.btn-action {\n      border: 1px solid #ccc;\n      cursor: pointer; }\n\n.vertical-separate-line {\n  margin-left: 0.25em;\n  margin-right: 0.25em; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9mb3JtdWxhL2xpc3QtZm9ybXVsYS9YOlxcd3NfbGVhcm5pbmdcXGNsaWVudHZpZXRwb3dlci9zcmNcXGFwcFxcY29tcG9uZW50c1xcZm9ybXVsYVxcbGlzdC1mb3JtdWxhXFxsaXN0LWZvcm11bGEuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxZQUFXLEVBQ1o7O0FBRUQ7RUFDRSxpQkFBZ0I7RUFDaEIsWUFBVyxFQUNaOztBQUdEO0VBQ0UsYUFBWSxFQWFiOztBQWREO0lBR0ksc0JBQXFCO0lBRXJCLGdCQUFlO0lBQ2YsbUJBQWtCO0lBQ2xCLGtCQUFpQixFQU1sQjs7QUFiSDtNQVVNLHVCQUFzQjtNQUN0QixnQkFBZSxFQUNoQjs7QUFLTDtFQUNFLG9CQUFtQjtFQUNuQixxQkFBb0IsRUFDckIiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL2Zvcm11bGEvbGlzdC1mb3JtdWxhL2xpc3QtZm9ybXVsYS5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5zZWxlY3QtY29sb3ItZmllbGR7XHJcbiAgd2lkdGg6IDEwMCU7XHJcbn1cclxuXHJcbi5zZWxlY3QyLnNlbGVjdDItY29udGFpbmVye1xyXG4gIG1pbi13aWR0aDogMzAwcHg7XHJcbiAgd2lkdGg6IDEwMCU7XHJcbn1cclxuXHJcblxyXG4ucGFnZW5hdGlvbi1mb290ZXJ7XHJcbiAgZmxvYXQ6IHJpZ2h0O1xyXG4gIHNwYW57XHJcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XHJcblxyXG4gICAgbWluLXdpZHRoOiA1MHB4O1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gICAgcGFkZGluZzogNXB4IDEwcHg7XHJcblxyXG4gICAgJi5idG4tYWN0aW9ue1xyXG4gICAgICBib3JkZXI6IDFweCBzb2xpZCAjY2NjO1xyXG4gICAgICBjdXJzb3I6IHBvaW50ZXI7XHJcbiAgICB9XHJcbiAgfVxyXG59XHJcblxyXG5cclxuLnZlcnRpY2FsLXNlcGFyYXRlLWxpbmV7XHJcbiAgbWFyZ2luLWxlZnQ6IDAuMjVlbTtcclxuICBtYXJnaW4tcmlnaHQ6IDAuMjVlbTtcclxufVxyXG4iXX0= */"
+
+/***/ }),
+
+/***/ "./src/app/components/formula/list-formula/list-formula.component.ts":
+/*!***************************************************************************!*\
+  !*** ./src/app/components/formula/list-formula/list-formula.component.ts ***!
+  \***************************************************************************/
+/*! exports provided: ListFormulaComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ListFormulaComponent", function() { return ListFormulaComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_store_store_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../services/store/store.service */ "./src/app/services/store/store.service.ts");
+/* harmony import */ var _services_collection_collection_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../services/collection/collection.service */ "./src/app/services/collection/collection.service.ts");
+/* harmony import */ var _services_formula_formula_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../services/formula/formula.service */ "./src/app/services/formula/formula.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _services_product_product_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../services/product/product.service */ "./src/app/services/product/product.service.ts");
 /* harmony import */ var _services_customer_customer_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../services/customer/customer.service */ "./src/app/services/customer/customer.service.ts");
-/* harmony import */ var _services_store_store_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../services/store/store.service */ "./src/app/services/store/store.service.ts");
+/* harmony import */ var _models_pagination_model__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../models/pagination.model */ "./src/app/models/pagination.model.ts");
+/* harmony import */ var _file_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../file.service */ "./src/app/file.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1097,14 +1174,17 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
-var FormulaComponent = /** @class */ (function () {
-    function FormulaComponent(storeService, formulaService, collectionService, productService, customerService, router) {
+
+var ListFormulaComponent = /** @class */ (function () {
+    function ListFormulaComponent(storeService, formulaService, collectionService, productService, customerService, fileService, router) {
         this.storeService = storeService;
         this.formulaService = formulaService;
         this.collectionService = collectionService;
         this.productService = productService;
         this.customerService = customerService;
+        this.fileService = fileService;
         this.router = router;
+        this.selectedFormula = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         this.listItems = [];
         this.sortedData = [];
         this.currentSort = null;
@@ -1114,13 +1194,7 @@ var FormulaComponent = /** @class */ (function () {
         this.listProducts = [];
         this.listCustomer = [];
         this.listFormulaCustomer = [];
-        this.pagenationMode = new _models_pagination_model__WEBPACK_IMPORTED_MODULE_5__["PagenationModel"]([], 0, 0, 15);
-        this.filter = {
-            formulaId: undefined,
-            productId: undefined,
-            collectionId: undefined,
-            customerId: undefined
-        };
+        this.pagenationMode = new _models_pagination_model__WEBPACK_IMPORTED_MODULE_7__["PagenationModel"]([], 0, 0, 15);
         this.sortData = function (sort) {
             this.currentSort = sort;
             this.refresh();
@@ -1141,33 +1215,40 @@ var FormulaComponent = /** @class */ (function () {
             this.pagenationMode.totalItem = listItem.length;
         };
     }
-    FormulaComponent.prototype.ngOnInit = function () {
+    ListFormulaComponent.prototype.ngOnInit = function () {
+        this.listItems = [];
+        this.listOriginal = [];
+        this.sortedData = [];
+        this.filter = {
+            formulaId: undefined,
+            productId: undefined,
+            collectionId: undefined,
+            customerId: undefined
+        };
         if (this.storeService.getMachineData() != null && this.storeService.getMachineData().machineId > 0) {
             this.initMetadata();
         }
     };
-    FormulaComponent.prototype.initMetadata = function () {
+    ListFormulaComponent.prototype.initMetadata = function () {
         var _this = this;
         // this.formulaService.postData();
         // this.formulaService.postData1();
         var me = this;
         this.listFormulas = [];
         this.formulaService.getALl().subscribe(function (datas) {
-            datas.map(function (c) {
-                me.listFormulas.push(c);
-            });
+            _this.listFormulas = datas;
         });
         this.listProducts = [];
         this.productService.getListItems().subscribe(function (datas) {
-            datas.map(function (p) {
-                me.listProducts.push(p);
-            });
+            _this.listProducts = datas;
         });
         this.listCollections = [];
         this.collectionService.getListItems().subscribe(function (datas) {
-            datas.map(function (c) {
-                me.listCollections.push(c);
-            });
+            me.listCollections = datas;
+        });
+        this.listProductBase = [];
+        this.productService.getListProductBase().subscribe(function (datas) {
+            me.listProductBase = datas;
         });
         // get list formula product base
         this.listItems = [];
@@ -1190,7 +1271,7 @@ var FormulaComponent = /** @class */ (function () {
             _this.updateCustomerForFormula();
         });
     };
-    FormulaComponent.prototype.updateCustomerForFormula = function () {
+    ListFormulaComponent.prototype.updateCustomerForFormula = function () {
         if (this.listFormulaCustomer != null && this.listFormulaCustomer.length > 0 && this.listItems != null && this.listItems.length > 0) {
             var _loop_1 = function (formulaCustomer) {
                 var listFormulaBase = this_1.listItems.filter(function (item) {
@@ -1213,15 +1294,19 @@ var FormulaComponent = /** @class */ (function () {
             }
         }
     };
-    FormulaComponent.prototype.viewFormula = function (formulaProductBaseId) {
-        this.router.navigate(["../dashboard/view-formula/" + formulaProductBaseId]);
+    ListFormulaComponent.prototype.viewFormula = function (selectItem) {
+        this.selectedFormula.emit(selectItem);
+        // this.router.navigate([`../dashboard/view-formula/${formulaProductBaseId}`]);
     };
-    FormulaComponent.prototype.onFilterChange = function (event) {
+    ListFormulaComponent.prototype.onFilterChange = function (event) {
         this.refresh();
     };
-    FormulaComponent.prototype.reset = function () {
+    ListFormulaComponent.prototype.reset = function () {
     };
-    FormulaComponent.prototype.refresh = function () {
+    ListFormulaComponent.prototype.testElectron = function () {
+        this.fileService.saveFile();
+    };
+    ListFormulaComponent.prototype.refresh = function () {
         var _this = this;
         var resFilter = this.listOriginal;
         if (this.filter.formulaId) {
@@ -1261,14 +1346,22 @@ var FormulaComponent = /** @class */ (function () {
             this.listItems = resFilter.sort(function (a, b) {
                 var isAsc = _this.currentSort.direction === 'asc';
                 switch (_this.currentSort.active) {
-                    case 'formulaCode': return compare(a.formula.formulaCode, b.formula.formulaCode, isAsc);
-                    case 'formulaName': return compare(a.formula.formulaName, b.formula.formulaName, isAsc);
-                    case 'approximateColor': return compare(a.formula.approximateColor, b.formula.approximateColor, isAsc);
-                    case 'collection': return compare(a.formula.collection.collectionName, b.formula.collection.collectionName, isAsc);
-                    case 'product': return compare(a.productBase.product.productName, b.productBase.product.productName, isAsc);
-                    case 'createdDate': return compare(a.formula.createdDate, b.formula.createdDate, isAsc);
-                    case 'createdBy': return compare(a.formula.machine != null ? 1 : 0, b.formula.machine != null ? 1 : 0, isAsc);
-                    default: return 0;
+                    case 'formulaCode':
+                        return compare(a.formula.formulaCode, b.formula.formulaCode, isAsc);
+                    case 'formulaName':
+                        return compare(a.formula.formulaName, b.formula.formulaName, isAsc);
+                    case 'approximateColor':
+                        return compare(a.formula.approximateColor, b.formula.approximateColor, isAsc);
+                    case 'collection':
+                        return compare(a.formula.collection.collectionName, b.formula.collection.collectionName, isAsc);
+                    case 'product':
+                        return compare(a.productBase.product.productName, b.productBase.product.productName, isAsc);
+                    case 'createdDate':
+                        return compare(a.formula.createdDate, b.formula.createdDate, isAsc);
+                    case 'createdBy':
+                        return compare(a.formula.machine != null ? 1 : 0, b.formula.machine != null ? 1 : 0, isAsc);
+                    default:
+                        return 0;
                 }
             });
         }
@@ -1278,30 +1371,35 @@ var FormulaComponent = /** @class */ (function () {
             return (a < b ? -1 : 1) * (isAsc ? 1 : -1);
         }
     };
-    FormulaComponent.prototype.goToPage = function (pageIndex) {
+    ListFormulaComponent.prototype.goToPage = function (pageIndex) {
         this.pagenationMode.pageIndex = pageIndex;
         this.updatePagenationMode();
     };
-    FormulaComponent.prototype.addNewFormula = function () {
+    ListFormulaComponent.prototype.addNewFormula = function () {
         this.router.navigate(["../dashboard/formula/add"]);
     };
-    FormulaComponent.prototype.editTheFormula = function (formulaId) {
+    ListFormulaComponent.prototype.editTheFormula = function (formulaId) {
         this.router.navigate(["../dashboard/formula/edit/" + formulaId]);
     };
-    FormulaComponent = __decorate([
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"])(),
+        __metadata("design:type", Object)
+    ], ListFormulaComponent.prototype, "selectedFormula", void 0);
+    ListFormulaComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: 'app-formula',
-            template: __webpack_require__(/*! ./formula.component.html */ "./src/app/components/formula/listformula/formula.component.html"),
-            styles: [__webpack_require__(/*! ./formula.component.scss */ "./src/app/components/formula/listformula/formula.component.scss")]
+            selector: 'app-list-formula',
+            template: __webpack_require__(/*! ./list-formula.component.html */ "./src/app/components/formula/list-formula/list-formula.component.html"),
+            styles: [__webpack_require__(/*! ./list-formula.component.scss */ "./src/app/components/formula/list-formula/list-formula.component.scss")]
         }),
-        __metadata("design:paramtypes", [_services_store_store_service__WEBPACK_IMPORTED_MODULE_7__["StoreService"],
-            _services_formula_formula_service__WEBPACK_IMPORTED_MODULE_1__["FormulaService"],
-            _services_collection_collection_service__WEBPACK_IMPORTED_MODULE_3__["CollectionService"],
-            _services_product_product_service__WEBPACK_IMPORTED_MODULE_4__["ProductService"],
+        __metadata("design:paramtypes", [_services_store_store_service__WEBPACK_IMPORTED_MODULE_1__["StoreService"],
+            _services_formula_formula_service__WEBPACK_IMPORTED_MODULE_3__["FormulaService"],
+            _services_collection_collection_service__WEBPACK_IMPORTED_MODULE_2__["CollectionService"],
+            _services_product_product_service__WEBPACK_IMPORTED_MODULE_5__["ProductService"],
             _services_customer_customer_service__WEBPACK_IMPORTED_MODULE_6__["CustomerService"],
-            _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])
-    ], FormulaComponent);
-    return FormulaComponent;
+            _file_service__WEBPACK_IMPORTED_MODULE_8__["FileService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]])
+    ], ListFormulaComponent);
+    return ListFormulaComponent;
 }());
 
 
@@ -1409,9 +1507,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_boostrap_modal_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../services/boostrap/modal.service */ "./src/app/services/boostrap/modal.service.ts");
 /* harmony import */ var _models_dispense_task_model__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../models/dispense.task.model */ "./src/app/models/dispense.task.model.ts");
 /* harmony import */ var _services_dispensetask_dispensetask_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../services/dispensetask/dispensetask.service */ "./src/app/services/dispensetask/dispensetask.service.ts");
-/* harmony import */ var _services_productbase_productbase_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../services/productbase/productbase.service */ "./src/app/services/productbase/productbase.service.ts");
-/* harmony import */ var _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../utils/convert-models-utils */ "./src/app/utils/convert-models-utils.ts");
-/* harmony import */ var _services_machine_machine_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../services/machine/machine.service */ "./src/app/services/machine/machine.service.ts");
+/* harmony import */ var _models_formula_product_base__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../models/formula_product_base */ "./src/app/models/formula_product_base.ts");
+/* harmony import */ var _services_productbase_productbase_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../services/productbase/productbase.service */ "./src/app/services/productbase/productbase.service.ts");
+/* harmony import */ var _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../utils/convert-models-utils */ "./src/app/utils/convert-models-utils.ts");
+/* harmony import */ var _services_machine_machine_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../services/machine/machine.service */ "./src/app/services/machine/machine.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1431,6 +1530,7 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
 var ViewFormulaComponent = /** @class */ (function () {
     function ViewFormulaComponent(formulaService, productBaseService, modalService, dispenseTaskService, machineService, router, route) {
         this.formulaService = formulaService;
@@ -1440,7 +1540,6 @@ var ViewFormulaComponent = /** @class */ (function () {
         this.machineService = machineService;
         this.router = router;
         this.route = route;
-        this.dbItem = null;
         this.listFormulaColorant = null;
         this.listProductBaseCan = null;
         this.maxColorQuantity = 0;
@@ -1457,22 +1556,13 @@ var ViewFormulaComponent = /** @class */ (function () {
         this.stateMachine = null;
     }
     ViewFormulaComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this.route.params.subscribe(function (params) {
-            _this.formulaProductBaseId = parseInt(params.id);
-            _this.listFormulaColorant = [];
-            _this.listProductBaseCan = [];
-            _this.fetchDBItem();
-        });
+        this.listFormulaColorant = [];
+        this.listProductBaseCan = [];
+        this.fetchDBItem();
     };
     ViewFormulaComponent.prototype.fetchDBItem = function () {
-        var _this = this;
         this.selectProductBase = null;
-        // step 1. Get Formula By Id
-        this.formulaService.findFormulaProductBaseById(this.formulaProductBaseId).subscribe(function (data) {
-            _this.dbItem = data;
-            _this.getRelativeData();
-        });
+        this.getRelativeData();
     };
     ViewFormulaComponent.prototype.roundNumber = function (num) {
         return Math.round(num * 100) / 100;
@@ -1553,7 +1643,7 @@ var ViewFormulaComponent = /** @class */ (function () {
                     listPumpingTask.push(stop_t);
                     _this.currentTask = new _models_dispense_task_model__WEBPACK_IMPORTED_MODULE_4__["DispenseTaskModel"]('Dispense', listPumpingTask, new _models_dispense_task_model__WEBPACK_IMPORTED_MODULE_4__["DispenseDataModel"](_this.dbItem, _this.selectProductBase, _this.canSize, _this.numberOfCan), null);
                     _this.machineService.recordDispenseFormulaProductBase(_models_dispense_task_model__WEBPACK_IMPORTED_MODULE_4__["MAP_DISPENSE_TASK_STATE"].IN_PROGRESS, _this.currentTask.taskId, _this.currentTask.taskData.formulaProductBase, _this.currentTask.taskData.canSize).subscribe(function (data) {
-                        var item = _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_7__["default"].convertToDispenseFormulaProductBaseModel(data);
+                        var item = _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_8__["default"].convertToDispenseFormulaProductBaseModel(data);
                         _this.currentTask.taskId = item.machineFormulaProductBaseId;
                         _this.currentTask.status = item.status;
                         _this.currentTask.startTime = item.createdDate;
@@ -1600,6 +1690,10 @@ var ViewFormulaComponent = /** @class */ (function () {
             _this.stateMachine = 'PRINT';
         }, 2000);
     };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", _models_formula_product_base__WEBPACK_IMPORTED_MODULE_6__["FormulaProductBaseModel"])
+    ], ViewFormulaComponent.prototype, "dbItem", void 0);
     ViewFormulaComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-viewformula',
@@ -1607,10 +1701,10 @@ var ViewFormulaComponent = /** @class */ (function () {
             styles: [__webpack_require__(/*! ./viewformula.component.scss */ "./src/app/components/formula/viewformula/viewformula.component.scss")]
         }),
         __metadata("design:paramtypes", [_services_formula_formula_service__WEBPACK_IMPORTED_MODULE_1__["FormulaService"],
-            _services_productbase_productbase_service__WEBPACK_IMPORTED_MODULE_6__["ProductBaseService"],
+            _services_productbase_productbase_service__WEBPACK_IMPORTED_MODULE_7__["ProductBaseService"],
             _services_boostrap_modal_service__WEBPACK_IMPORTED_MODULE_3__["ModalService"],
             _services_dispensetask_dispensetask_service__WEBPACK_IMPORTED_MODULE_5__["DispenseTaskService"],
-            _services_machine_machine_service__WEBPACK_IMPORTED_MODULE_8__["MachineService"],
+            _services_machine_machine_service__WEBPACK_IMPORTED_MODULE_9__["MachineService"],
             _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"]])
     ], ViewFormulaComponent);
     return ViewFormulaComponent;
@@ -1756,7 +1850,7 @@ var LanguageComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"block-header\">\r\n  <h1>Help</h1>\r\n</div>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        How to use this app...\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        Content .....\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        How to use this app...\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        Content .....\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        How to use this app...\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        Content .....\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        How to use this app...\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        Content .....\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        How to use this app...\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        Content .....\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class=\"block-header\">\r\n  <h1>Help</h1>\r\n</div>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        Task process\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        <div class=\"detail-status\">\r\n          <span class=\"not-start\">Not start</span> <span class=\"vertical-separate-line\"></span>\r\n          <span class=\"in-progress\">In progress</span> <span class=\"vertical-separate-line\"></span>\r\n          <span class=\"done\">Done</span>\r\n        </div>\r\n\r\n        <h3>Server</h3>\r\n        <ol>\r\n          <li class=\"not-start\">Upload cái structure database</li>\r\n\r\n          <li class=\"not-start\">validate dữ liệu trước khi import (Import == CLEAR)\r\n            <ul>\r\n              <li>Dữ liệu không được trùng, các field là duy nhất (cho cả 4 sheets)</li>\r\n\r\n              <li>Validate data không hợp lệ (ví dụ check colourant trong formula, product, base...)</li>\r\n\r\n              <li>Đảm bảo import dữ liệu. Hiện tại quy tắc là import vào 1 cái sheet mới thì delete toàn bộ data cũ có liên quan.</li>\r\n            </ul>\r\n          </li>\r\n\r\n          <li class=\"not-start\">Thêm phần quản lý machine</li>\r\n\r\n          <li class=\"not-start\">Sau khi build App phải có phần communicate với app khác, và tiến hành ghi dữ liệu vào 1 folder được chia sẻ cùng.</li>\r\n          <li class=\"not-start\">Nếu đóng gói 2 app lại 1 thì tự config, còn ko thì lúc cài đặt cần chọn folder để copy file vào đó.</li>\r\n        </ol>\r\n\r\n        <h3>Client</h3>\r\n        <ol>\r\n          <li class=\"not-start\">\r\n            Setting Machine Page\r\n            <ul>\r\n              <li>Chuyển phần config setting từ machine sang admin.</li>\r\n              <li>Chuyển từ alert sang warning bằng icon</li>\r\n              <li>Validate mức màu trước lúc dispense không cho phép dưới min. Nếu sau khi pha xong mà màu dưới min thì không cho nó pha.</li>\r\n            </ul>\r\n\r\n          </li>\r\n\r\n          <li class=\"not-start\">\r\n            Adjust Canister Fill Page\r\n\r\n            <ul>\r\n              <li>Bỏ phần set 100%</li>\r\n              <li>Thêm vào số điều chỉnh, ví dụ bình tỉ lệ thực là 1000ml, số lượng thực chỉ có 95% (5% dính ở đáy bình chẳng hạn)</li>\r\n            </ul>\r\n          </li>\r\n\r\n          <li class=\"not-start\">Formula Page\r\n            <ul>\r\n              <li>Thêm Base cho phần filter</li>\r\n              <li class=\"done\">Add back navigator</li>\r\n            </ul>\r\n          </li>\r\n\r\n          <li class=\"not-start\">\r\n            Print function\r\n\r\n            <ul>\r\n              <li>Show custom data</li>\r\n              <li>Show dung tích, ngày giờ</li>\r\n            </ul>\r\n          </li>\r\n\r\n          <li class=\"not-start\">\r\n            Dispense manual\r\n\r\n            <ul>\r\n              <li>Show custom data</li>\r\n              <li>Show dung tích, ngày giờ</li>\r\n            </ul>\r\n          </li>\r\n        </ol>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        How to use this app...\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        Content .....\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        How to use this app...\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        Content .....\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        How to use this app...\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        Content .....\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        How to use this app...\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        Content .....\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -1767,7 +1861,7 @@ module.exports = "<div class=\"block-header\">\r\n  <h1>Help</h1>\r\n</div>\r\n\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvaGVscC9xdWVzdGlvbi9xdWVzdGlvbi5jb21wb25lbnQuc2NzcyJ9 */"
+module.exports = ".not-start {\n  color: grey; }\n\n.in-progress {\n  color: orange; }\n\n.done {\n  color: darkgreen; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9oZWxwL3F1ZXN0aW9uL1g6XFx3c19sZWFybmluZ1xcY2xpZW50dmlldHBvd2VyL3NyY1xcYXBwXFxjb21wb25lbnRzXFxoZWxwXFxxdWVzdGlvblxccXVlc3Rpb24uY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxZQUFXLEVBQ1o7O0FBRUQ7RUFDRSxjQUFhLEVBQ2Q7O0FBRUQ7RUFDRSxpQkFBZ0IsRUFDakIiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL2hlbHAvcXVlc3Rpb24vcXVlc3Rpb24uY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubm90LXN0YXJ0e1xyXG4gIGNvbG9yOiBncmV5O1xyXG59XHJcblxyXG4uaW4tcHJvZ3Jlc3N7XHJcbiAgY29sb3I6IG9yYW5nZTtcclxufVxyXG5cclxuLmRvbmV7XHJcbiAgY29sb3I6IGRhcmtncmVlbjtcclxufVxyXG4iXX0= */"
 
 /***/ }),
 
@@ -2221,7 +2315,7 @@ module.exports = "<nav class=\"navbar navbar-expand static-top\">\r\n  <div clas
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".navbar.navbar-expand {\n  position: fixed;\n  left: 0;\n  top: 0;\n  right: 0;\n  transition: all 0.5s;\n  z-index: 997;\n  background: #fff;\n  box-shadow: -21.213px 21.213px 30px 0px rgba(158, 158, 158, 0.3);\n  display: flex;\n  justify-content: space-between !important;\n  margin-bottom: 10px; }\n  .navbar.navbar-expand .page-menu {\n    float: right; }\n  .background_logo {\n  background: url(\"/assets/images/logo.png\") center center/100% 100% no-repeat;\n  display: inline-block; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9sYXlvdXQvaGVhZGVyL1g6XFx3c19sZWFybmluZ1xcY2xpZW50dmlldHBvd2VyL3NyY1xcYXBwXFxjb21wb25lbnRzXFxsYXlvdXRcXGhlYWRlclxcaGVhZGVyLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsZ0JBQWU7RUFDZixRQUFPO0VBQ1AsT0FBTTtFQUNOLFNBQVE7RUFDUixxQkFBb0I7RUFDcEIsYUFBWTtFQUNaLGlCQUFnQjtFQUVoQixpRUFBZ0U7RUFFaEUsY0FBYTtFQUNiLDBDQUF5QztFQUN6QyxvQkFBbUIsRUFPcEI7RUFwQkQ7SUFpQkksYUFBWSxFQUNiO0VBSUg7RUFDRSw2RUFBNEU7RUFDNUUsc0JBQW9CLEVBQ3JCIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50cy9sYXlvdXQvaGVhZGVyL2hlYWRlci5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5uYXZiYXIubmF2YmFyLWV4cGFuZHtcclxuICBwb3NpdGlvbjogZml4ZWQ7XHJcbiAgbGVmdDogMDtcclxuICB0b3A6IDA7XHJcbiAgcmlnaHQ6IDA7XHJcbiAgdHJhbnNpdGlvbjogYWxsIDAuNXM7XHJcbiAgei1pbmRleDogOTk3O1xyXG4gIGJhY2tncm91bmQ6ICNmZmY7XHJcbiAgLy90cmFuc2l0aW9uOiBhbGwgMC41cztcclxuICBib3gtc2hhZG93OiAtMjEuMjEzcHggMjEuMjEzcHggMzBweCAwcHggcmdiYSgxNTgsIDE1OCwgMTU4LCAwLjMpO1xyXG4gIC8vXHJcbiAgZGlzcGxheTogZmxleDtcclxuICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW4gIWltcG9ydGFudDtcclxuICBtYXJnaW4tYm90dG9tOiAxMHB4O1xyXG5cclxuXHJcbiAgLnBhZ2UtbWVudXtcclxuICAgIGZsb2F0OiByaWdodDtcclxuICB9XHJcblxyXG59XHJcblxyXG4uYmFja2dyb3VuZF9sb2dvIHtcclxuICBiYWNrZ3JvdW5kOiB1cmwoJy9hc3NldHMvaW1hZ2VzL2xvZ28ucG5nJykgY2VudGVyIGNlbnRlci8xMDAlIDEwMCUgbm8tcmVwZWF0O1xyXG4gIGRpc3BsYXk6aW5saW5lLWJsb2NrO1xyXG59XHJcbiJdfQ== */"
+module.exports = ".navbar.navbar-expand {\n  position: fixed;\n  left: 0;\n  top: 0;\n  right: 0;\n  transition: all 0.5s;\n  z-index: 997;\n  background: #fff;\n  box-shadow: -21.213px 21.213px 30px 0px rgba(158, 158, 158, 0.3);\n  display: flex;\n  justify-content: space-between !important;\n  margin-bottom: 10px; }\n  .navbar.navbar-expand .page-menu {\n    float: right; }\n  .background_logo {\n  background: url('/./assets/images/logo.png') center center/100% 100% no-repeat;\n  display: inline-block; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9sYXlvdXQvaGVhZGVyL1g6XFx3c19sZWFybmluZ1xcY2xpZW50dmlldHBvd2VyL3NyY1xcYXBwXFxjb21wb25lbnRzXFxsYXlvdXRcXGhlYWRlclxcaGVhZGVyLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsZ0JBQWU7RUFDZixRQUFPO0VBQ1AsT0FBTTtFQUNOLFNBQVE7RUFDUixxQkFBb0I7RUFDcEIsYUFBWTtFQUNaLGlCQUFnQjtFQUVoQixpRUFBZ0U7RUFFaEUsY0FBYTtFQUNiLDBDQUF5QztFQUN6QyxvQkFBbUIsRUFPcEI7RUFwQkQ7SUFpQkksYUFBWSxFQUNiO0VBSUg7RUFDRSwrRUFBNEU7RUFDNUUsc0JBQW9CLEVBQ3JCIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50cy9sYXlvdXQvaGVhZGVyL2hlYWRlci5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5uYXZiYXIubmF2YmFyLWV4cGFuZHtcclxuICBwb3NpdGlvbjogZml4ZWQ7XHJcbiAgbGVmdDogMDtcclxuICB0b3A6IDA7XHJcbiAgcmlnaHQ6IDA7XHJcbiAgdHJhbnNpdGlvbjogYWxsIDAuNXM7XHJcbiAgei1pbmRleDogOTk3O1xyXG4gIGJhY2tncm91bmQ6ICNmZmY7XHJcbiAgLy90cmFuc2l0aW9uOiBhbGwgMC41cztcclxuICBib3gtc2hhZG93OiAtMjEuMjEzcHggMjEuMjEzcHggMzBweCAwcHggcmdiYSgxNTgsIDE1OCwgMTU4LCAwLjMpO1xyXG4gIC8vXHJcbiAgZGlzcGxheTogZmxleDtcclxuICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW4gIWltcG9ydGFudDtcclxuICBtYXJnaW4tYm90dG9tOiAxMHB4O1xyXG5cclxuXHJcbiAgLnBhZ2UtbWVudXtcclxuICAgIGZsb2F0OiByaWdodDtcclxuICB9XHJcblxyXG59XHJcblxyXG4uYmFja2dyb3VuZF9sb2dvIHtcclxuICBiYWNrZ3JvdW5kOiB1cmwoJy9hc3NldHMvaW1hZ2VzL2xvZ28ucG5nJykgY2VudGVyIGNlbnRlci8xMDAlIDEwMCUgbm8tcmVwZWF0O1xyXG4gIGRpc3BsYXk6aW5saW5lLWJsb2NrO1xyXG59XHJcbiJdfQ== */"
 
 /***/ }),
 
@@ -3897,6 +3991,63 @@ var ViewDetailComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [_services_product_product_service__WEBPACK_IMPORTED_MODULE_1__["ProductService"]])
     ], ViewDetailComponent);
     return ViewDetailComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/file.service.ts":
+/*!*********************************!*\
+  !*** ./src/app/file.service.ts ***!
+  \*********************************/
+/*! exports provided: FileService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FileService", function() { return FileService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var FileService = /** @class */ (function () {
+    function FileService() {
+        if (window.require) {
+            try {
+                this.ipc = window.require('electron').ipcRenderer;
+            }
+            catch (error) {
+                throw error;
+            }
+        }
+        else {
+            console.warn('Could not load electron ipc');
+        }
+    }
+    FileService.prototype.saveFile = function () {
+        // return new Promise<string[]>((resolve, reject) => {
+        //   this.ipc.once("getFilesResponse", (event, arg) => {
+        //     resolve(arg);
+        //   });
+        //   this.ipc.send("getFiles");
+        // });
+        this.ipc.send('saveFile', { data: 'test' });
+    };
+    FileService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+            providedIn: 'root'
+        }),
+        __metadata("design:paramtypes", [])
+    ], FileService);
+    return FileService;
 }());
 
 
@@ -6654,12 +6805,26 @@ var ProductService = /** @class */ (function () {
             return (a < b ? -1 : 1) * (isAsc ? 1 : -1);
         }
     };
-    ProductService.prototype.getListProductBaseFromProduct = function (productId) {
-        return this.http.get(_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].settings.serverendpoint + 'product-base/findByProduct/' + productId).pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (data) {
+    ProductService.prototype.getListProductBase = function () {
+        return this.http.get(_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].settings.serverendpoint + 'product-base/findAll').pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (data) {
             var listItems = [];
             if (data) {
                 for (var _i = 0, data_2 = data; _i < data_2.length; _i++) {
                     var item = data_2[_i];
+                    listItems.push(_utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_4__["default"].convertToProductBaseModel(item));
+                }
+            }
+            return listItems;
+        }), Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])(function (e) {
+            return [];
+        }));
+    };
+    ProductService.prototype.getListProductBaseFromProduct = function (productId) {
+        return this.http.get(_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].settings.serverendpoint + 'product-base/findByProduct/' + productId).pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (data) {
+            var listItems = [];
+            if (data) {
+                for (var _i = 0, data_3 = data; _i < data_3.length; _i++) {
+                    var item = data_3[_i];
                     listItems.push(_utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_4__["default"].convertToProductBaseModel(item));
                 }
             }

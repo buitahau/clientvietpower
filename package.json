@@ -37,7 +37,8 @@
     "ngx-color-picker": "^7.2.2",
     "rxjs": "~6.3.3",
     "select2": "^4.0.6-rc.1",
-    "zone.js": "~0.8.26"
+    "zone.js": "~0.8.26",
+    "electron": "latest"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.10.0",
