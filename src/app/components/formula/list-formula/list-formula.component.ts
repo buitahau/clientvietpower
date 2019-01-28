@@ -15,6 +15,7 @@ import {Sort} from '@angular/material';
 import {PagenationModel} from '../../../models/pagination.model';
 import {ProductBaseModel} from '../../../models/product_base';
 import {BaseModel} from '../../../models/base';
+import {FileService} from '../../../file.service';
 
 @Component({
   selector: 'app-list-formula',
@@ -53,6 +54,7 @@ export class ListFormulaComponent implements OnInit {
     private collectionService: CollectionService,
     private productService: ProductService,
     private customerService: CustomerService,
+    private fileService: FileService,
     private router: Router) {
   }
 
@@ -154,6 +156,10 @@ export class ListFormulaComponent implements OnInit {
     this.currentSort = sort;
     this.refresh();
   };
+
+  testElectron() {
+    fileService.saveFile();
+  }
 
   updatePagenationMode = function () {
     const listItem = this.listItems;
