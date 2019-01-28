@@ -22,6 +22,7 @@ import {DispenseTaskModel} from '../../../models/dispense.task.model';
   styleUrls: ['./edit-formula.component.scss']
 })
 export class EditFormulaComponent implements OnInit {
+  @Input() dbItem: FormulaProductBaseModel;
   formulaProductBaseId: number;
   selectedProductId: number;
   selectedProductBaseId: number;
@@ -30,7 +31,6 @@ export class EditFormulaComponent implements OnInit {
   selectedProductBase: ProductBaseModel;
 
   viewMode: string = null;
-  dbItem: FormulaProductBaseModel = null;
   listProducts: ProductModel[] = null;
   listProductBases: ProductBaseModel[] = null;
   listCollections: CollectionModel[] = null;
@@ -55,6 +55,7 @@ export class EditFormulaComponent implements OnInit {
   ngOnInit() {
     this.updateMessage = null;
     this.errorValidation = {};
+
     this.route.params.subscribe(params => {
       this.formulaProductBaseId = params.id != null && params.id.trim() !== '' ? parseInt(params.id) : null;
       if (this.formulaProductBaseId != null && this.formulaProductBaseId > 0) {

@@ -7,17 +7,19 @@ import {FormulaProductBaseModel} from '../../../models/formula_product_base';
   styleUrls: ['./formula.component.scss']
 })
 export class FormulaComponent implements OnInit {
-  dbItem: FormulaProductBaseModel = null;
+  viewItem: FormulaProductBaseModel = null;
+  editItem: FormulaProductBaseModel = null;
+  addItem: FormulaProductBaseModel = null;
   constructor() { }
 
   ngOnInit() {
   }
 
   selectFormula(selectedFormula) {
-    this.dbItem = selectedFormula;
+    this.viewItem = selectedFormula;
   }
 
   clearSelectedFormula() {
-    this.dbItem = null;
+    this.viewItem = null;
   }
 }

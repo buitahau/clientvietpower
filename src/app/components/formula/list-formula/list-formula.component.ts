@@ -260,7 +260,7 @@ export class ListFormulaComponent implements OnInit {
     this.pagenationMode.pageIndex = 0;
     this.updatePagenationMode();
 
-    function compare(a: number | string, b: number | string, isAsc: boolean) {
+    function compare(a: number | string | Date, b: number | string | Date, isAsc: boolean) {
       return (a < b ? -1 : 1) * (isAsc ? 1 : -1);
     }
   }

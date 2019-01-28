@@ -15,6 +15,6 @@ export class DashboardComponent implements OnInit {
   }
 
   validateMachineData() {
-    this.dashboardService.validateMachineData();
+
   }
 }

@@ -1,10 +1,22 @@
 
-<div [ngStyle]="{'display' : dbItem != null ? 'none': 'block'}">
+<div [ngStyle]="{'display' : viewItem != null ? 'none': 'block'}">
   <app-list-formula (selectedFormula)="selectFormula($event)"></app-list-formula>
 </div>
 
-<ng-container *ngIf="dbItem">
-  <app-viewformula [dbItem]="dbItem"></app-viewformula>
+<ng-container *ngIf="viewItem">
+  <app-viewformula [dbItem]="viewItem"></app-viewformula>
+</ng-container>
+
+<ng-container *ngIf="editItem">
+  <app-viewformula [dbItem]="editItem"></app-viewformula>
+</ng-container>
+
+<ng-container *ngIf="editItem">
+  <app-edit-formula [dbItem]="editItem"></app-edit-formula>
+</ng-container>
+
+<ng-container *ngIf="addItem">
+  <app-edit-formula [dbItem]="addItem"></app-edit-formula>
 </ng-container>
 
 <ng-container *ngIf="dbItem">

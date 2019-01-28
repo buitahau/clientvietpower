@@ -4,6 +4,26 @@
     color:  #00417b;
     text-align: center;
 
+    &[type="danger"]{
+      color: red;
+      > .nav-link{
+        color: red;
+        > i.fas{
+          color: red;
+        }
+      }
+    }
+
+    &[type="warning"]{
+      color: darkorange;
+      > .nav-link{
+        color: darkorange;
+        > i.fas{
+          color: darkorange;
+        }
+      }
+    }
+
     > .nav-link{
       color:  #00417b;
 
