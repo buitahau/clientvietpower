@@ -99,8 +99,9 @@
             <div class="machine-colourant-group">
               <div class="machine-background">
                 <span class="machine-colourant-max-range" [ngStyle]="{'height': '100%'}"><span class="step-label">{{maxQuantity}}</span></span>
-                <span class="machine-colourant-warning-range" [ngStyle]="{'height': (minQuantity / maxQuantity) * 100 + '%'}"><span class="step-label">{{minQuantity}}</span></span>
-                <span class="machine-colourant-min-range" [ngStyle]="{'height': '0%'}"><span class="step-label">0</span></span>
+                <span class="machine-colourant-warning-range" [ngStyle]="{'height': (warningQuantity / maxQuantity) * 100 + '%'}"><span class="step-label">{{warningQuantity}}</span></span>
+                <span class="machine-colourant-min-range" [ngStyle]="{'height': (minQuantity / maxQuantity) * 100 + '%'}"><span class="step-label">{{minQuantity}}</span></span>
+                <span class="machine-colourant-zero-range" [ngStyle]="{'height': '0%'}"><span class="step-label">0</span></span>
               </div>
               <div class="machine-colourant-item">
                 <span class="machine-colourant-bgr">
@@ -119,7 +120,6 @@
                 <label class="col-md-4 label-control">Amount:</label>
                 <div class="col-md-6">
                   <div class="input-group">
-                    <!--<input type="number" [(ngModel)]="addedAmount" class="form-control" required="required" [ngModelOptions]="{standalone: true}" (change)="updateAddedAmount('amount')">-->
                     <input type="number" [(ngModel)]="addedAmount" class="form-control" required="required" [ngModelOptions]="{standalone: true}" (change)="updateAddedAmount('amount')">
                     <div class="input-group-append">
                       <span class="input-group-text">ml</span>
@@ -129,11 +129,20 @@
               </div>
 
               <div class="row form-group">
-                <label class="col-md-4 label-control">
+                <label class="col-md-4 label-control">Refill Factor:</label>
+                <div class="col-md-6">
+                  <div class="input-group">
+                    <input type="number" [(ngModel)]="refillFactor" class="form-control" required="required" [ngModelOptions]="{standalone: true}" (change)="updateAddedAmount('refillFactor')">
+                    <div class="input-group-append">
+                      <span class="input-group-text">%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-                </label>
-                <div class="col-md-8">
-                  <button class="btn btn-dark" (click)="fillByPercent(100);">Fill to 100%</button>
+              <div class="row form-group">
+                <div class="col-md-12">
+                  &nbsp;
                 </div>
               </div>
 

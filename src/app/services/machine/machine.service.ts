@@ -60,11 +60,14 @@ export class MachineService {
     return this.machine;
   }
 
-  updateColourantMachineData(machine: MachineModel, colourant: ColorantModel, addedAmount: number) {
+  updateColourantMachineData(colourant: ColorantModel, addedAmount: number, refillFactor: number) {
+    const machine = this.getCurrentMachine();
+
     const dt = {
       machine: {machineId: machine.machineId},
       colourant: {colourantId: colourant.colourantId},
-      quantity: addedAmount
+      quantity: addedAmount,
+      refillFactor: refillFactor
     };
 
     return this.http.post(environment.settings.serverendpoint + 'machine_colour/update', dt).pipe(
@@ -141,11 +144,12 @@ export class MachineService {
    * listFormulaColorant: là default colourant khi chọn formula, chưa nhân cansize
    * canSize: số lít
    */
-  validateQuantityColourant(canSize: number, listFormulaColorant: FormulaColourantModel[], formular: FormulaModel) {
+  validateQuantityColourant(canSize: number, listFormulaColorant: FormulaColourantModel[], formula: FormulaModel) {
     this.getCurrentMachine();
 
     const machineId = this.machine.machineId;
-    const baseOnCan = formular.baseOnCan ? formular.baseOnCan : 1; // nếu undefined thì default là 1;
+    const baseOnCan = formula.baseOnCan ? formula.baseOnCan : 1; // nếu undefined thì default là 1;
+
     return this.http.get(environment.settings.serverendpoint + 'machine/getColourants/' + machineId).pipe(
       map((mColours: Array<any>) => {
         // list colourant hiện có của machine
@@ -154,12 +158,13 @@ export class MachineService {
         mColours.map(c => {
           mapExistColours[c.colourant.colourantCode] = c.quantity;
         });
+
         listFormulaColorant.map(lf => {
           const colourCode = lf.colourant.colourantCode;
           // số lượng mong đợi: lấy số ml cần có, chia cho baseOnCan của formula và nhân cho số lit cansize
           const expectQuantity = ((lf.quantity / baseOnCan) * canSize).toFixed(2);
           // nếu trong máy không còn màu này, hoặc còn nhưng nhỏ hơn số lượng mong đợi
-          if (!mapExistColours[colourCode] || mapExistColours[colourCode] < expectQuantity) {
+          if (!mapExistColours[colourCode] || (+mapExistColours[colourCode] - +expectQuantity < this.machine.minQuantity)) {
             res.push(colourCode);
           }
         });

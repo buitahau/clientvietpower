@@ -123,6 +123,7 @@ export class MachineColourantModel {
   private _machine: MachineModel;
   private _colourant: ColorantModel;
   private _quantity: number;
+  private _refillFactor: number;
 
   get machineColourantId(): number {
     return this._machineColourantId;
@@ -154,6 +155,14 @@ export class MachineColourantModel {
 
   set quantity(value: number) {
     this._quantity = value;
+  }
+
+  get refillFactor(): number {
+    return this._refillFactor;
+  }
+
+  set refillFactor(value: number) {
+    this._refillFactor = value;
   }
 }
 

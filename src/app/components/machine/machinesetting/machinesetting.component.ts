@@ -22,6 +22,7 @@ export class MachineSettingComponent implements OnInit {
   currentAmount: number;
   updateAmount: number;
   addedAmount: number;
+  refillFactor: number;
   // addedAmountPercent: number;
   openSetting: boolean;
 
@@ -97,6 +98,7 @@ export class MachineSettingComponent implements OnInit {
 
       this.selectedMachineColourant = listFilter.length > 0 ? listFilter[0] : null;
       this.currentAmount = this.selectedMachineColourant != null ? this.selectedMachineColourant.quantity : 0;
+      this.refillFactor = this.selectedMachineColourant != null ? this.selectedMachineColourant.refillFactor : 100;
       this.addedAmount = 0;
       // this.addedAmountPercent = 0;
       this.updateAmount = this.currentAmount + this.addedAmount;
@@ -108,19 +110,20 @@ export class MachineSettingComponent implements OnInit {
   }
 
   updateAddedAmount(type: string) {
+    let maxQuantity = this.maxQuantity;
     if (type === 'amount') {
-      this.updateAmount = this.currentAmount + this.addedAmount;
+    } else if (type === 'refillFactor') {
+      maxQuantity = this.maxQuantity * this.refillFactor;
+    }
 
-      if (this.updateAmount > this.maxQuantity) {
-        this.updateAmount = this.maxQuantity;
-        this.addedAmount = this.maxQuantity - this.updateAmount;
-      } else if (this.updateAmount < 0) {
-        this.updateAmount = 0;
-        this.addedAmount = this.updateAmount - this.currentAmount;
-      }
-      // this.addedAmountPercent = (this.addedAmount / this.maxQuantity) * 100;
-    } else if (type === 'percent') {
-      // this.addedAmount = (this.addedAmountPercent - (this.currentAmount / this.maxQuantity)) * this.maxQuantity;
+    this.updateAmount = this.currentAmount + this.addedAmount;
+
+    if (this.updateAmount > maxQuantity) {
+      this.updateAmount = maxQuantity;
+      this.addedAmount = maxQuantity - this.updateAmount;
+    } else if (this.updateAmount < 0) {
+      this.updateAmount = 0;
+      this.addedAmount = this.updateAmount - this.currentAmount;
     }
   }
 
@@ -170,7 +173,7 @@ export class MachineSettingComponent implements OnInit {
   }
 
   updateAndSaving(id: string) {
-    this.machineService.updateColourantMachineData(this.machine, this.selectedMachineColourant.colourant, this.addedAmount)
+    this.machineService.updateColourantMachineData(this.selectedMachineColourant.colourant, this.addedAmount, this.refillFactor)
       .subscribe((datas) => {
         this.processListColourantData(datas, 'update');
         this.modalService.close(id);

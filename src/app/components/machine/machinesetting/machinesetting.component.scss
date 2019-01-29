@@ -40,12 +40,17 @@
     min-width: 60px;
   }
 
+  .machine-colorant-slider-group{
+    padding-right: 20px;
+    padding-left: 0px;
+  }
+
   .machine-colourant-zero-range,
   .machine-colourant-min-range,
   .machine-colourant-warning-range,
   .machine-colourant-max-range{
     .step-label{
-      display: none;
+      font-size: 80%;
     }
   }
 }
