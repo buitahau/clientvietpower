@@ -7,6 +7,7 @@ import {HttpService} from '../../shared/http/services/http.service';
 import ConvertModelUtils from '../../utils/convert-models-utils';
 import {UserModel} from '../../models/user.model';
 import {StoreService} from '../store/store.service';
+import {CompanyModel} from '../../models/company.model';
 
 @Injectable({
   providedIn: 'root'
@@ -54,6 +55,25 @@ export class UserService {
     ).subscribe();
   }
 
+  updateCompanyInfo(dbItem: CompanyModel) {
+    const dt = {
+      companyId: dbItem.companyId,
+      code : dbItem.code,
+      name: dbItem.name,
+      phone: dbItem.phone,
+      website: dbItem.website,
+      email: dbItem.email,
+      address: dbItem.address,
+      city: dbItem.city,
+    };
+
+    return this.http.post(environment.settings.serverendpoint + 'company/save', dt).pipe(
+      map((data: any) => {
+        return ConvertModelUtils.convertToCompanyModel(data);
+      })
+    );
+  }
+
   getLoginUser(): UserModel | null {
     return this.userDTO;
   }
@@ -69,4 +89,6 @@ export class UserService {
     this.cookieService.delete_cookie('username');
     this.cookieService.delete_cookie('token');
   }
+
+
 }

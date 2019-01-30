@@ -80,7 +80,7 @@ import {TableColourantsComponent} from './directions/product/tablecolourant/tabl
 import {BaseCanComponent} from './directions/product/base-can/base-can.component';
 import {CustomerComponent} from './components/setting/customer/customer.component';
 import {UserComponent} from './components/user/user.component';
-
+import {CompanyComponent} from './components/company/company.component';
 
 
 const routes: Routes = [
@@ -100,6 +100,8 @@ const routes: Routes = [
       {path: 'collection', component: CollectionComponent},
       {path: 'product', component: ProductComponent},
       {path: 'customer', component: CustomerComponent},
+      {path: 'company', component: CompanyComponent},
+
       // {path: 'product/view-detail/:id', component: ViewDetailComponent},
 
       {path: 'formula', component: FormulaComponent},
@@ -173,6 +175,7 @@ const routes: Routes = [
     // machine component
     MachineSettingComponent,
     UserComponent,
+    CompanyComponent,
     // test component
     ListComponent,
     CreateComponent,

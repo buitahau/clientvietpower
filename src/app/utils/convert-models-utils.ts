@@ -151,8 +151,10 @@ export default class ConvertModelUtils {
   static convertToCompanyModel(object: any): CompanyModel {
     const company = new CompanyModel();
     company.companyId = object.companyId;
+    company.code = object.code;
     company.name = object.name;
     company.phone = object.phone;
+    company.email = object.email;
     company.website = object.website;
     company.address = object.address;
     company.city = object.city;

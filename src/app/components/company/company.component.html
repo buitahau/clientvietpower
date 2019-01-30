@@ -1,0 +1,89 @@
+<div class="block-header" *ngIf="dbItem != null">
+  <h1>Company {{dbItem.code}}</h1>
+</div>
+
+<div class="row" *ngIf="dbItem != null">
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <div class="card">
+      <div class="card-header">
+        Company {{dbItem.code}} Information
+      </div>
+
+      <div class="card-body">
+        <form class="form form-horizontal form-detail">
+          <div class="form-body">
+            <div class="form-group row">
+              <label class="col-md-3 label-control">Company Name</label>
+              <div class="col-md-8">
+                <input type="text" [(ngModel)]="dbItem.name" class="form-control" [ngModelOptions]="{standalone: true}">
+
+                <ng-container *ngIf="errorValidation != null && errorValidation['name'] != null">
+                  <span class="error-label">{{errorValidation['name']}}</span>
+                </ng-container>
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label class="col-md-3 label-control">Phone Number</label>
+              <div class="col-md-8">
+                <input type="text" [(ngModel)]="dbItem.phone" class="form-control" [ngModelOptions]="{standalone: true}">
+
+                <ng-container *ngIf="errorValidation != null && errorValidation['phone'] != null">
+                  <span class="error-label">{{errorValidation['phone']}}</span>
+                </ng-container>
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label class="col-md-3 label-control">website</label>
+              <div class="col-md-8">
+                <input type="text" [(ngModel)]="dbItem.website" class="form-control" [ngModelOptions]="{standalone: true}">
+
+                <ng-container *ngIf="errorValidation != null && errorValidation['website'] != null">
+                  <span class="error-label">{{errorValidation['website']}}</span>
+                </ng-container>
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label class="col-md-3 label-control">email</label>
+              <div class="col-md-8">
+                <input type="text" [(ngModel)]="dbItem.email" class="form-control" [ngModelOptions]="{standalone: true}">
+
+                <ng-container *ngIf="errorValidation != null && errorValidation['email'] != null">
+                  <span class="error-label">{{errorValidation['email']}}</span>
+                </ng-container>
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label class="col-md-3 label-control">address</label>
+              <div class="col-md-8">
+                <input type="text" [(ngModel)]="dbItem.address" class="form-control" [ngModelOptions]="{standalone: true}">
+
+                <ng-container *ngIf="errorValidation != null && errorValidation['address'] != null">
+                  <span class="error-label">{{errorValidation['address']}}</span>
+                </ng-container>
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label class="col-md-3 label-control">city</label>
+              <div class="col-md-8">
+                <input type="text" [(ngModel)]="dbItem.city" class="form-control" [ngModelOptions]="{standalone: true}">
+
+                <ng-container *ngIf="errorValidation != null && errorValidation['city'] != null">
+                  <span class="error-label">{{errorValidation['city']}}</span>
+                </ng-container>
+              </div>
+            </div>
+          </div>
+          <input type="hidden" [(ngModel)]="dbItem.companyId" [ngModelOptions]="{standalone: true}">
+        </form>
+      </div>
+      <div class="card-footer">
+        <button class="btn btn-primary" (click)="updateCompanyInfo()">Update</button>
+      </div>
+    </div>
+  </div>
+</div>

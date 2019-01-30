@@ -2,6 +2,7 @@ import {MachineModel} from './user.model';
 
 export class CompanyModel {
   private _companyId: number;
+  private _code: string;
   private _name: string;
   private _phone: string;
   private _website: string;
@@ -63,5 +64,13 @@ export class CompanyModel {
 
   set city(value: string) {
     this._city = value;
+  }
+
+  get code(): string {
+    return this._code;
+  }
+
+  set code(value: string) {
+    this._code = value;
   }
 }

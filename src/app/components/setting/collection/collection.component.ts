@@ -3,7 +3,6 @@ import {Sort} from '@angular/material';
 import {CollectionService} from '../../../services/collection/collection.service';
 import {CollectionModel} from '../../../models/collection';
 import {ModalService} from '../../../services/boostrap/modal.service';
-import {MachineService} from '../../../services/machine/machine.service';
 import {MachineModel, ResponseMessageModel} from '../../../models/user.model';
 
 
