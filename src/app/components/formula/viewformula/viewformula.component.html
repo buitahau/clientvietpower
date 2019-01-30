@@ -218,10 +218,14 @@
         <div class="row text-center">
           <div class="col-md-12 formula-color-info"><h3>{{dbItem.formula.formulaCode}}</h3></div>
           <div class="col-md-12 collection-info"><h4>{{dbItem.formula.collection.collectionName}}</h4></div>
-          <div class="col-md-12 shop-info"><h5>Paintshop "Demo"</h5></div>
-          <div class="col-md-12 street-info"><h5>Demostreet 1</h5></div>
-          <div class="col-md-12 ville-info"><h5>Demo ville</h5></div>
-          <div class="col-md-12 substrate-info"><p>Substrate recommendation Universal primer Grey</p></div>
+          <div class="col-md-12 collection-info"><h5>{{canSize}} Liter</h5></div>
+          <div class="col-md-12 collection-info"><h5>Created Date: {{currentTask.startTime | date: 'dd/MM/yyyy'}}</h5></div>
+          <div class="col-md-12 shop-info"><h5>Company: {{userInfo.company.name}}</h5></div>
+          <div class="col-md-12 street-info"><h5>Address: {{userInfo.company.address}}</h5></div>
+          <div class="col-md-12 ville-info"><h5>City: {{userInfo.company.city}}</h5></div>
+          <div class="col-md-12 ville-info"><h5>Website: {{userInfo.company.website}}</h5></div>
+          <div class="col-md-12 ville-info"><h5>Phone: {{userInfo.company.phone}}</h5></div>
+          <div class="col-md-12 substrate-info"><p>{{dbItem.formula.substrate}}</p></div>
           <div class="col-md-12 bar-code-info">
              <span *ngIf="selectProductBase != null">
               <ngx-barcode [bc-value]="selectProductBase.barCode" [bc-display-value]="true"></ngx-barcode>

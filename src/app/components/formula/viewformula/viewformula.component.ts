@@ -17,6 +17,8 @@ import {ProductBaseService} from '../../../services/productbase/productbase.serv
 import ConvertModelUtils from '../../../utils/convert-models-utils';
 import {MachineService} from '../../../services/machine/machine.service';
 import {FormulaCustomerModel} from '../../../models/formulacustomer';
+import {StoreService} from '../../../services/store/store.service';
+import {UserModel} from '../../../models/user.model';
 
 @Component({
   selector: 'app-viewformula',
@@ -27,6 +29,7 @@ import {FormulaCustomerModel} from '../../../models/formulacustomer';
 export class ViewFormulaComponent implements OnInit {
   @Input() dbItem: FormulaProductBaseModel;
 
+  userInfo: UserModel;
   formulaProductBaseId: number;
   listFormulaColorant: FormulaColourantModel[] = null;
   listProductBaseCan: ProductBaseCanModel[] = null;
@@ -52,6 +55,7 @@ export class ViewFormulaComponent implements OnInit {
               private modalService: ModalService,
               private dispenseTaskService: DispenseTaskService,
               private machineService: MachineService,
+              private storeService: StoreService,
               private router: Router, private route: ActivatedRoute) {
   }
 
@@ -72,6 +76,7 @@ export class ViewFormulaComponent implements OnInit {
 
   getRelativeData() {
     if (this.dbItem != null) {
+      this.userInfo = this.storeService.getLoginUserData();
       // Step 2. Get list Colorant of Formula
       this.formulaService.getListColorantOfFormula(this.dbItem.formula.formulaId).subscribe((data: FormulaColourantModel[]) => {
         this.listFormulaColorant = data;

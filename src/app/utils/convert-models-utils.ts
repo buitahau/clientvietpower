@@ -9,6 +9,7 @@ import {MachineColourantModel, MachineModel, ResponseMessageModel, RoleModel, Us
 import {MachineFormulaProductBaseLogModel} from '../models/dispense.task.model';
 import {CustomerModel, CustomerSelectedModel} from '../models/customer';
 import {FormulaCustomerModel} from '../models/formulacustomer';
+import {CompanyModel} from '../models/company.model';
 
 export interface TaskInterface {
   taskId: number;
@@ -143,7 +144,19 @@ export default class ConvertModelUtils {
     user.userName = object.userName;
     user.role = object.role != null ? ConvertModelUtils.convertToRoleModel(object.role) : null;
     user.machine = object.machine != null ? ConvertModelUtils.convertToMachineModel(object.machine) : null;
+    user.company = object.company != null ? ConvertModelUtils.convertToCompanyModel(object.company) : null;
     return user;
+  }
+
+  static convertToCompanyModel(object: any): CompanyModel {
+    const company = new CompanyModel();
+    company.companyId = object.companyId;
+    company.name = object.name;
+    company.phone = object.phone;
+    company.website = object.website;
+    company.address = object.address;
+    company.city = object.city;
+    return company;
   }
 
   static convertToRoleModel(object: any): RoleModel {

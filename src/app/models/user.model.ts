@@ -1,4 +1,5 @@
 import {ColorantModel} from './colorant';
+import {CompanyModel} from './company.model';
 
 export class MachineModel {
   private _machineId: number;
@@ -84,6 +85,7 @@ export class UserModel {
   private _userName: string;
   private _role: RoleModel;
   private _machine: MachineModel;
+  private _company: CompanyModel | null;
 
   get userId(): string {
     return this._userId;
@@ -115,6 +117,14 @@ export class UserModel {
 
   set machine(value: MachineModel) {
     this._machine = value;
+  }
+
+  get company(): CompanyModel | null {
+    return this._company;
+  }
+
+  set company(value: CompanyModel | null) {
+    this._company = value;
   }
 }
 

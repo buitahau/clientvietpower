@@ -14,6 +14,7 @@
 
     <div class="dropdown-menu" aria-labelledby="setting-dropdown" [ngbCollapse]="currentMode != userMode" (click)="updateCurrentMode('hide')">
       <!--<a class="dropdown-item" >User Manager</a>-->
+      <a class="dropdown-item" [routerLink]="['../dashboard/company']">Company Manager</a>
       <a class="dropdown-item" [routerLink]="['../dashboard/customer']">Customer Manager</a>
     </div>
   </li>
