@@ -62,11 +62,24 @@ export class ViewFormulaComponent implements OnInit {
   ngOnInit() {
     this.listFormulaColorant = [];
     this.listProductBaseCan = [];
-    this.fetchDBItem();
+
+    this.route.params.subscribe(params => {
+      const formulaProductBaseId = +params.id;
+      if (formulaProductBaseId != null && formulaProductBaseId > 0) {
+        this.formulaProductBaseId = formulaProductBaseId;
+        this.formulaService.findFormulaProductBaseById(this.formulaProductBaseId).subscribe((data: any) => {
+          this.dbItem = data;
+          this.selectProductBase = null;
+          this.getRelativeData();
+        });
+      } else {
+        this.selectProductBase = null;
+        this.fetchDBItem();
+      }
+    });
   }
 
   fetchDBItem() {
-    this.selectProductBase = null;
     this.getRelativeData();
   }
 
@@ -112,6 +125,8 @@ export class ViewFormulaComponent implements OnInit {
 
         if (this.selectProductBase == null && this.listProductBaseCan.length > 0) {
           this.selectProductBase = this.listProductBaseCan[0];
+          this.canSize = this.dbItem.formula.baseOnCan;
+        } else {
           this.canSize = this.dbItem.formula.baseOnCan;
         }
       });

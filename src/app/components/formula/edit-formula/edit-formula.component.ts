@@ -213,28 +213,36 @@ export class EditFormulaComponent implements OnInit {
     return maxQuantity;
   }
 
-  validateDataBeforeSubmit() {
+  validateDataBeforeSubmit(type) {
     let hasError = false;
     const mapErrors = {};
 
-    if (this.dbItem.formula.formulaCode == null || this.dbItem.formula.formulaCode.trim() === '') {
-      hasError = true;
-      mapErrors['formulaCode'] = 'Please enter the formula code';
+    // when type is saving --> validate the formula
+    if (type === 'saving') {
+      if (this.dbItem.formula.formulaCode == null || this.dbItem.formula.formulaCode.trim() === '') {
+        hasError = true;
+        mapErrors['formulaCode'] = 'Please enter the formula code';
+      }
+
+      if (this.dbItem.formula.formulaName == null || this.dbItem.formula.formulaName.trim() === '') {
+        hasError = true;
+        mapErrors['formulaName'] = 'Please enter the formula name';
+      }
+
+      if (this.dbItem.formula.collection == null || this.dbItem.formula.collection.collectionId == null) {
+        hasError = true;
+        mapErrors['collectionId'] = 'Please select the collection';
+      }
+
+      if (this.dbItem.formula.approximateColor == null || this.dbItem.formula.approximateColor.trim() === '') {
+        hasError = true;
+        mapErrors['approximateColor'] = 'Please select the collection';
+      }
     }
 
-    if (this.dbItem.formula.formulaName == null || this.dbItem.formula.formulaName.trim() === '') {
+    if (this.dbItem.formula.baseOnCan == null) {
       hasError = true;
-      mapErrors['formulaName'] = 'Please enter the formula name';
-    }
-
-    if (this.dbItem.formula.collection == null || this.dbItem.formula.collection.collectionId == null) {
-      hasError = true;
-      mapErrors['collectionId'] = 'Please select the collection';
-    }
-
-    if (this.dbItem.formula.approximateColor == null || this.dbItem.formula.approximateColor.trim() === '') {
-      hasError = true;
-      mapErrors['approximateColor'] = 'Please select the collection';
+      mapErrors['baseOnCan'] = 'Please enter the base on can (Default 1)';
     }
 
     if (this.selectedProductBase == null || this.selectedProductBase.product == null
@@ -248,11 +256,6 @@ export class EditFormulaComponent implements OnInit {
       mapErrors['baseId'] = 'Please select the base';
     }
 
-    if (this.dbItem.formula.baseOnCan == null) {
-      hasError = true;
-      mapErrors['baseOnCan'] = 'Please enter the base on can (Default 1)';
-    }
-
     if (this.listColourants == null || this.listColourants.length === 0) {
       hasError = true;
       mapErrors['listColourants'] = 'Please add colourants detail.';
@@ -261,7 +264,7 @@ export class EditFormulaComponent implements OnInit {
         return item.quantity > 0;
       });
 
-      if (listColourant == null || listColourant.length == 0) {
+      if (listColourant == null || listColourant.length === 0) {
         hasError = true;
         mapErrors['listColourants'] = 'Please add colourants detail.';
       }
@@ -276,41 +279,53 @@ export class EditFormulaComponent implements OnInit {
     this.errorValidation[field] = null;
   }
 
-  saveOrUpdateFormula() {
+  saveOrUpdateFormula(type) {
     this.errorValidation = {};
     this.updateMessage = null;
 
-    const validateData = this.validateDataBeforeSubmit();
-    if (! validateData.hasError) {
-      this.formulaService.saveOrUpdateFormulaData(this.dbItem.formulaProductBaseId, this.dbItem.formula, this.selectedProductBase,
-        this.listColourants, this.listCustomerSelected).subscribe((datas) => {
-        if (datas.formulaProductBaseId != null) {
+    const validateData = this.validateDataBeforeSubmit(type);
 
-          if (this.dbItem.formulaProductBaseId == null) {
-            this.updateMessage = {
-              title: 'Save',
-              message: 'Saving the formula successful!.'
-            };
-          } else {
-            this.updateMessage = {
-              title: 'Update',
-              message: 'Update the formula successful!.'
-            };
-          }
-        } else {
-          this.updateMessage = {
-            title: 'Error',
-            message: 'Have problem when saving the formula. Please retry.'
-          };
-        }
-
-        setTimeout(() => {
-          this.openModal('show-update-formula-model');
-        }, 1);
-      });
+    if (!validateData.hasError) {
+      this.updateOrSavingDispenseFormula(type);
     } else {
       this.errorValidation = validateData.mapErrors;
     }
+  }
+
+  updateOrSavingDispenseFormula(type) {
+    if (type === 'template') {
+      this.dbItem.formula.formulaCode = 'TEMPLATE FORMULA';
+    }
+
+    this.formulaService.saveOrUpdateFormulaData(this.dbItem.formulaProductBaseId, this.dbItem.formula, this.selectedProductBase,
+      this.listColourants, this.listCustomerSelected).subscribe((datas) => {
+      if (datas.formulaProductBaseId != null) {
+        if (this.dbItem.formulaProductBaseId == null) {
+          this.updateMessage = {
+            title: 'Save',
+            message: 'Saving the formula successful!.'
+          };
+        } else {
+          this.updateMessage = {
+            title: 'Update',
+            message: 'Update the formula successful!.'
+          };
+        }
+      } else {
+        this.updateMessage = {
+          title: 'Error',
+          message: 'Have problem when saving the formula. Please retry.'
+        };
+      }
+
+      if (type === 'saving') {
+        setTimeout(() => {
+          this.openModal('show-update-formula-model');
+        }, 1);
+      } else {
+        this.router.navigate([`../dashboard/view-formula/${datas.formulaProductBaseId}`]);
+      }
+    });
   }
 
   goToFormulaPage() {

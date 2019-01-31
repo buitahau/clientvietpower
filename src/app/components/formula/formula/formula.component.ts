@@ -21,5 +21,7 @@ export class FormulaComponent implements OnInit {
 
   clearSelectedFormula() {
     this.viewItem = null;
+    this.editItem = null;
+    this.addItem = null;
   }
 }

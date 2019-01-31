@@ -115,7 +115,7 @@
         <div class="row">
           <label class="col-md-3 label-control"></label>
           <div class="col-md-9">
-            <button class="btn btn-primary mr-3" (click)="saveOrUpdateFormula()">
+            <button class="btn btn-primary mr-3" (click)="saveOrUpdateFormula('saving')">
               <span *ngIf="viewMode == 'Add'">Save</span>
               <span *ngIf="viewMode == 'Edit'">Update</span>
             </button>
@@ -160,6 +160,17 @@
 
                 <div class="col-md-12">
                   <app-base-can [productBase]="dbItem.productBase" [canSize]="1" [collection]="dbItem.formula.collection"></app-base-can>
+                </div>
+              </div>
+
+              <div class="col-md-12">
+                <br />
+                <br />
+              </div>
+
+              <div class="row text-center" *ngIf="dbItem.formula == null || dbItem.formula.formulaId == null">
+                <div class="col-md-12">
+                  <button type="button" class="btn btn-primary" (click)="saveOrUpdateFormula('template')">Dispense Manual</button>
                 </div>
               </div>
             </div>

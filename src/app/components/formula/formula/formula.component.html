@@ -8,10 +8,6 @@
 </ng-container>
 
 <ng-container *ngIf="editItem">
-  <app-viewformula [dbItem]="editItem"></app-viewformula>
-</ng-container>
-
-<ng-container *ngIf="editItem">
   <app-edit-formula [dbItem]="editItem"></app-edit-formula>
 </ng-container>
 
@@ -19,7 +15,7 @@
   <app-edit-formula [dbItem]="addItem"></app-edit-formula>
 </ng-container>
 
-<ng-container *ngIf="dbItem">
+<ng-container *ngIf="viewItem">
   <div class="row">
     <div class="col-12">
       <button class="btn btn-primary push-left" (click)="clearSelectedFormula()"><i class="fas fa-arrow-circle-left"></i> Back</button>
