@@ -4,12 +4,13 @@ import {environment} from '../../../environments/environment';
 import {catchError, map} from 'rxjs/internal/operators';
 import {ColorantModel} from '../../models/colorant';
 import {HttpService} from '../../shared/http/services/http.service';
+import {GlobalVariable} from '../../global';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ColourantService {
-  constructor(private http: HttpService) {
+  constructor(private http: HttpService, private globalVariable: GlobalVariable) {
   }
 
   search(code: string, name: string) {
@@ -23,7 +24,7 @@ export class ColourantService {
   }
 
   getListItems() {
-    return this.http.get(environment.settings.serverendpoint + 'colourant/getAll').pipe(
+    return this.http.get(this.globalVariable.getBaseApiUrl() + 'colourant/getAll').pipe(
       map((data: Array<any>) => {
         const listColourant = [];
         if (data) {

@@ -8,6 +8,7 @@ import {FormulaColourantModel, FormulaProductBaseModel} from '../../models/formu
 import {StoreService} from '../store/store.service';
 import {ProductBaseModel} from '../../models/product_base';
 import {CustomerSelectedModel} from '../../models/customer';
+import {GlobalVariable} from '../../global';
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +18,7 @@ export class FormulaService {
   listFormula: FormulaModel[] = [];
   listFormulaProductBase: FormulaProductBaseModel[] = [];
 
-  constructor(private http: HttpService, private storeService: StoreService) {
+  constructor(private http: HttpService, private storeService: StoreService, private globalVariable: GlobalVariable) {
     this.fetchData();
   }
 
@@ -27,7 +28,7 @@ export class FormulaService {
   }
 
   getAllFormulaProductBase() {
-    return this.http.get(environment.settings.serverendpoint + 'formula_product_base/getAll').pipe(
+    return this.http.get(this.globalVariable.getBaseApiUrl() + 'formula_product_base/getAll').pipe(
       map((data: Array<any>) => {
         const listFormulaProductBase = [];
         if (data) {
@@ -46,7 +47,7 @@ export class FormulaService {
   }
 
   getALl() {
-    return this.http.get(environment.settings.serverendpoint + 'formula/getAll').pipe(
+    return this.http.get(this.globalVariable.getBaseApiUrl() + 'formula/getAll').pipe(
       map((data: Array<any>) => {
         const result = [];
         if (data) {
@@ -66,7 +67,7 @@ export class FormulaService {
 
   findAllByCustomer() {
     const machine = this.storeService.getMachineData();
-    return this.http.get(environment.settings.serverendpoint + 'formula-customer/getAll/' + machine.machineId).pipe(
+    return this.http.get(this.globalVariable.getBaseApiUrl() + 'formula-customer/getAll/' + machine.machineId).pipe(
       map((data: Array<any>) => {
         const result = [];
         if (data) {
@@ -118,7 +119,7 @@ export class FormulaService {
   }
 
   getListColorantOfFormula(formulaId: number) {
-    return this.http.get(environment.settings.serverendpoint + 'formula/getColourants/' + formulaId).pipe(
+    return this.http.get(this.globalVariable.getBaseApiUrl() + 'formula/getColourants/' + formulaId).pipe(
       map((data: Array<any>) => {
         const result = [];
         if (data) {
@@ -134,7 +135,7 @@ export class FormulaService {
   }
 
   getListProductBaseCan(productBaseId: number) {
-    return this.http.get(environment.settings.serverendpoint + 'product_base_can/findById/' + productBaseId).pipe(
+    return this.http.get(this.globalVariable.getBaseApiUrl() + 'product_base_can/findById/' + productBaseId).pipe(
       map((data: Array<any>) => {
         const result = [];
         if (data) {
@@ -151,7 +152,7 @@ export class FormulaService {
   }
 
   findFormulaProductBaseById(formulaProductBaseId: number) {
-    return this.http.get(environment.settings.serverendpoint + 'formula_product_base/findById/' + formulaProductBaseId).pipe(
+    return this.http.get(this.globalVariable.getBaseApiUrl() + 'formula_product_base/findById/' + formulaProductBaseId).pipe(
       map((data: any) => {
         return ConvertModelUtils.convertToFormulaProductBaseModel(data);
       })
@@ -163,7 +164,7 @@ export class FormulaService {
     const savingItem = ConvertModelUtils.convertToSavingFormulaProductBaseDBItem(formulaProductBaseId, formula, productBase,
       this.storeService.getMachineData(), listColourants, listCustomerSelected);
 
-    return this.http.post(environment.settings.serverendpoint + 'machine_formula/saveOrUpdate', savingItem).pipe(
+    return this.http.post(this.globalVariable.getBaseApiUrl() + 'machine_formula/saveOrUpdate', savingItem).pipe(
       map((data: any) => {
         console.log(data);
 

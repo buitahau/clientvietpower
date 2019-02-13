@@ -6,17 +6,18 @@ import ConvertModelUtils from '../../utils/convert-models-utils';
 import {CollectionModel} from '../../models/collection';
 import {MachineModel, UserModel} from '../../models/user.model';
 import {StoreService} from '../store/store.service';
+import {GlobalVariable} from '../../global';
 
 @Injectable({
   providedIn: 'root'
 })
 
 export class CollectionService {
-  constructor(private http: HttpService, private storeService: StoreService) {
+  constructor(private http: HttpService, private storeService: StoreService, private globalVariable: GlobalVariable) {
   }
 
   getListItems() {
-    return this.http.get(environment.settings.serverendpoint + 'collection/getAll').pipe(
+    return this.http.get(this.globalVariable.getBaseApiUrl() + 'collection/getAll').pipe(
       map((data: Array<any>) => {
         const listItems = [];
         if (data) {
@@ -32,7 +33,7 @@ export class CollectionService {
   }
 
   findById(collectionId) {
-    return this.http.get(environment.settings.serverendpoint + 'collection/findById/' + collectionId).pipe(
+    return this.http.get(this.globalVariable.getBaseApiUrl() + 'collection/findById/' + collectionId).pipe(
       map((data: any) => {
         return ConvertModelUtils.convertCollectionModel(data);
       })
@@ -48,7 +49,7 @@ export class CollectionService {
       machine: {machineId: machine.machineId}
     };
 
-    return this.http.post(environment.settings.serverendpoint + 'collection/save', dt).pipe(
+    return this.http.post(this.globalVariable.getBaseApiUrl() + 'collection/save', dt).pipe(
       map((data: any) => {
         return ConvertModelUtils.convertToMachineModel(data);
       })
@@ -56,7 +57,7 @@ export class CollectionService {
   }
 
   deleteCollection(collectionId: number) {
-    return this.http.get(environment.settings.serverendpoint + 'collection/delete/' + collectionId).pipe(
+    return this.http.get(this.globalVariable.getBaseApiUrl() + 'collection/delete/' + collectionId).pipe(
       map((data: any) => {
         return ConvertModelUtils.convertToResponseMessageModel(data);
       })

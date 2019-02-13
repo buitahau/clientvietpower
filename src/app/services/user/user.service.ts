@@ -8,6 +8,7 @@ import ConvertModelUtils from '../../utils/convert-models-utils';
 import {UserModel} from '../../models/user.model';
 import {StoreService} from '../store/store.service';
 import {CompanyModel} from '../../models/company.model';
+import {GlobalVariable} from '../../global';
 
 @Injectable({
   providedIn: 'root'
@@ -18,7 +19,7 @@ export class UserService {
   userDTO: UserModel = null;
   errorMessage: string;
 
-  constructor(private http: HttpService, private router: Router, private cookieService: CookieService, private storeService: StoreService) {
+  constructor(private http: HttpService, private router: Router, private globalVariable: GlobalVariable, private cookieService: CookieService, private storeService: StoreService) {
     this.isAuthenticated();
   }
 
@@ -34,7 +35,7 @@ export class UserService {
       password: password,
     };
 
-    this.http.post(environment.settings.serverendpoint + 'login_test', dt).pipe(
+    this.http.post(this.globalVariable.getBaseApiUrl() + 'login_test', dt).pipe(
       map(datas => {
         if (datas != null) {
           this.isLogin = true;
@@ -67,7 +68,7 @@ export class UserService {
       city: dbItem.city,
     };
 
-    return this.http.post(environment.settings.serverendpoint + 'company/save', dt).pipe(
+    return this.http.post(this.globalVariable.getBaseApiUrl() + 'company/save', dt).pipe(
       map((data: any) => {
         return ConvertModelUtils.convertToCompanyModel(data);
       })

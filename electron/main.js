@@ -31,8 +31,7 @@ function createWindow () {
   // load the dist folder from Angular
   mainWindow.loadURL(
     url.format({
-      // pathname: path.join(__dirname, `../dist/frontend/index.html`),
-      pathname: path.join('', `X://ws_learning/clientvietpower/dist/frontend/index.html`),
+      // pathname: path.join(__dirname, `./dist/index.html`),
       protocol: "file:",
       slashes: true
     })

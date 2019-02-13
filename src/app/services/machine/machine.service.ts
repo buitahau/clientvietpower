@@ -9,6 +9,7 @@ import {ColorantModel} from '../../models/colorant';
 import {FormulaColourantModel, FormulaProductBaseModel} from '../../models/formula_product_base';
 import {FormulaModel} from '../../models/formula';
 import {StoreService} from '../store/store.service';
+import {GlobalVariable} from '../../global';
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +18,7 @@ export class MachineService {
   machine: MachineModel = null;
   listMachineColourants: MachineColourantModel[];
 
-  constructor(private http: HttpService, private storeService: StoreService, private router: Router) {
+  constructor(private http: HttpService, private storeService: StoreService, private globalVariable: GlobalVariable, private router: Router) {
     this.fetchData();
   }
 
@@ -34,7 +35,7 @@ export class MachineService {
   fetchDataFromServer() {
    this.getCurrentMachine();
 
-    return this.http.get(environment.settings.serverendpoint + 'machine/getColourants/' + this.machine.machineId).pipe(
+    return this.http.get(this.globalVariable.getBaseApiUrl() + 'machine/getColourants/' + this.machine.machineId).pipe(
       map((data: Array<any>) => {
         const result = [];
         if (data && data.length > 0) {
@@ -70,7 +71,7 @@ export class MachineService {
       refillFactor: refillFactor
     };
 
-    return this.http.post(environment.settings.serverendpoint + 'machine_colour/update', dt).pipe(
+    return this.http.post(this.globalVariable.getBaseApiUrl() + 'machine_colour/update', dt).pipe(
       map((data: Array<any>) => {
         const result = [];
         if (data && data.length > 0) {
@@ -94,7 +95,7 @@ export class MachineService {
       quantity: quantity,
       machineFormulaProductBaseId: taskId
     };
-    this.http.post(environment.settings.serverendpoint + 'machine_colour/subtraction', dt).pipe().subscribe();
+    this.http.post(this.globalVariable.getBaseApiUrl() + 'machine_colour/subtraction', dt).pipe().subscribe();
   }
 
   recordDispenseFormulaProductBase(status: string, taskId, formulaProductBase: FormulaProductBaseModel, quantity: number) {
@@ -110,13 +111,13 @@ export class MachineService {
       status: status
     };
 
-    return this.http.post(environment.settings.serverendpoint + 'machine_formula/record', dt);
+    return this.http.post(this.globalVariable.getBaseApiUrl() + 'machine_formula/record', dt);
   }
 
   findAllDispenseTask() {
     this.getCurrentMachine();
 
-    return this.http.get(environment.settings.serverendpoint + 'machine_formula/findAll/' + this.machine.machineId).pipe(
+    return this.http.get(this.globalVariable.getBaseApiUrl() + 'machine_formula/findAll/' + this.machine.machineId).pipe(
       map((data: Array<any>) => {
         const listDispenseTaskLog = [];
         if (data) {
@@ -132,7 +133,7 @@ export class MachineService {
   }
 
   findDispenseTaskById(taskId: number) {
-    return this.http.get(environment.settings.serverendpoint + 'machine_formula/findById/' + taskId).pipe(
+    return this.http.get(this.globalVariable.getBaseApiUrl() + 'machine_formula/findById/' + taskId).pipe(
       map((data: any) => {
         return ConvertModelUtils.convertToFormulaProductBaseModel(data);
       })
@@ -150,7 +151,7 @@ export class MachineService {
     const machineId = this.machine.machineId;
     const baseOnCan = formula.baseOnCan ? formula.baseOnCan : 1; // nếu undefined thì default là 1;
 
-    return this.http.get(environment.settings.serverendpoint + 'machine/getColourants/' + machineId).pipe(
+    return this.http.get(this.globalVariable.getBaseApiUrl() + 'machine/getColourants/' + machineId).pipe(
       map((mColours: Array<any>) => {
         // list colourant hiện có của machine
         const res = []; // kết quả trả về, danh sách màu không đủ
@@ -182,7 +183,7 @@ export class MachineService {
       warningQuantity: warningQuantity,
     };
 
-    return this.http.post(environment.settings.serverendpoint + 'machine/update', dt).pipe(
+    return this.http.post(this.globalVariable.getBaseApiUrl() + 'machine/update', dt).pipe(
       map((data: any) => {
         return ConvertModelUtils.convertToMachineModel(data);
       })

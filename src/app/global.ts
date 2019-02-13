@@ -1,4 +1,6 @@
 import {Injectable} from '@angular/core';
+// const fs = require('fs');
+import {environment} from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +17,7 @@ export class GlobalVariable {
     if (this.BASE_API_URL) {
       res = this.BASE_API_URL;
     } else {
-      res = 'http://localhost:3000';
+      res = environment.settings.serverendpoint;
       this.BASE_API_URL = res;
     }
 

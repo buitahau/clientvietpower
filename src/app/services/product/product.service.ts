@@ -6,6 +6,7 @@ import {HttpService} from '../../shared/http/services/http.service';
 import {ProductModel} from '../../models/product';
 import ConvertModelUtils from '../../utils/convert-models-utils';
 import {BaseModel} from '../../models/base';
+import {GlobalVariable} from '../../global';
 
 @Injectable({
   providedIn: 'root'
@@ -15,11 +16,11 @@ export class ProductService {
   listItems: ProductModel[] = [];
   sortedData: ProductModel[] = null;
 
-  constructor(private http: HttpService) {
+  constructor(private http: HttpService, private globalVariable: GlobalVariable) {
   }
 
   getListItems() {
-    return this.http.get(environment.settings.serverendpoint + 'product/getAll').pipe(
+    return this.http.get(this.globalVariable.getBaseApiUrl() + 'product/getAll').pipe(
       map((data: Array<any>) => {
         const listItems = [];
         if (data) {
@@ -36,7 +37,7 @@ export class ProductService {
   }
 
   viewProductDetail(productId: number): any {
-    return this.http.get(environment.settings.serverendpoint + 'product/view-detail/' + productId);
+    return this.http.get(this.globalVariable.getBaseApiUrl() + 'product/view-detail/' + productId);
   }
 
   sortData(sort: Sort) {
@@ -57,7 +58,7 @@ export class ProductService {
   }
 
   getListProductBase() {
-    return this.http.get(environment.settings.serverendpoint + 'product-base/findAll').pipe(
+    return this.http.get(this.globalVariable.getBaseApiUrl() + 'product-base/findAll').pipe(
       map((data: Array<any>) => {
         const listItems = [];
         if (data) {
@@ -74,7 +75,7 @@ export class ProductService {
   }
 
   getListProductBaseFromProduct(productId: number) {
-    return this.http.get(environment.settings.serverendpoint + 'product-base/findByProduct/' + productId).pipe(
+    return this.http.get(this.globalVariable.getBaseApiUrl() + 'product-base/findByProduct/' + productId).pipe(
       map((data: Array<any>) => {
         const listItems = [];
         if (data) {
