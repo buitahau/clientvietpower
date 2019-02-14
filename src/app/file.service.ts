@@ -45,8 +45,6 @@ export class FileService {
       formulaColourants: this.convertFormulaColourantData(formulaColourants, baseOnCan, canSize)
     };
 
-    console.log(dispenseTaskData);
-
     this.ipc.send('saveFile', dispenseTaskData);
   }
 
