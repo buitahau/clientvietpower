@@ -68,16 +68,27 @@ app.on('activate', function () {
 });
 
 ipcMain.on("saveFile", function(event, arg){
-    var txt = JSON.stringify(arg);
-   console.log(txt);
-    fs.writeFile("/tmp/testhaukute.txt", txt, function(err) {
-      if(err) {
-        return console.log(err);
-      }
+  var txt = JSON.stringify(arg);
+  console.log("data receive: " + txt);
+  fs.readFile('./config.json', function read(err, data) {
+    if (err) {
+      throw err;
+    }
+    console.log("read config: " + data);
+    content = JSON.parse(data);
+    console.log("url save: " + content.saveTo);
+    if(content.saveTo){
+      fs.writeFile(content.saveTo, txt, function(err) {
+        if(err) {
+          return console.log(err);
+        }
 
-      console.log("The file was saved!");
-    });
+        console.log("The file was saved!");
+      });
+    }
+  });
 });
+
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
