@@ -82,8 +82,37 @@ app.on('activate', function () {
 });
 
 ipcMain.on("saveFile", function(event, arg){
-  var txt = JSON.stringify(arg);
-  console.log("data receive: " + txt);
+  arg = {
+    baseCode: 'PNB',
+    canSize: 0.75,
+    formulaColourants: [
+      {colourantCode: "NS", quantity: 0.185357},
+      {colourantCode: "LS", quantity: 0.185357},
+      {colourantCode: "TS", quantity: 0.185357},
+    ]
+  };
+
+  var formulaLog = [];
+  for(var i = 0; i < arg.formulaColourants.length; i++){
+    var formulaData = arg.formulaColourants[i];
+    formulaLog.push(`"${formulaData.colourantCode}"`);
+    formulaLog.push(`${formulaData.quantity}`);
+  }
+
+var flinkData =
+`@RUN
+@WGH 0
+@UNT 1.0 1.0
+@LQT 1
+@PRD "INT" "GCS INTERIOR ENV.WHITE"
+@BAS "${arg.baseCode}"
+@CLR "NCS S 0500-N"
+@CAN "${arg.canSize}L" 712
+@FRM 712
+@CNT ${formulaLog.join(' ')}
+@LOG "F";"WB000";"INT";"NCS S 0500-N";"";49016559;"PNB";712;"${arg.canSize}L";1;"";43432.489;3;${formulaLog.join(';')}
+@END`;
+
   fs.readFile('./config.json', function read(err, data) {
     if (err) {
       throw err;
@@ -92,7 +121,7 @@ ipcMain.on("saveFile", function(event, arg){
     content = JSON.parse(data);
     console.log("url save: " + content.saveTo);
     if(content.saveTo){
-      fs.writeFile(content.saveTo, txt, function(err) {
+      fs.writeFile(content.saveTo, flinkData, function(err) {
         if(err) {
           return console.log(err);
         }

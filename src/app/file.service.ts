@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { IpcRenderer } from 'electron';
+import {FormulaColourantModel} from './models/formula_product_base';
 
 @Injectable({
   providedIn: 'root'
@@ -37,4 +38,24 @@ export class FileService {
     });
   }
 
+  saveDispenseTask(baseCode: string, baseOnCan: number, canSize: number, formulaColourants: FormulaColourantModel[]) {
+    const dispenseTaskData = {
+      baseCode: baseCode,
+      canSize: canSize,
+      formulaColourants: this.convertFormulaColourantData(formulaColourants, baseOnCan, canSize)
+    };
+
+    console.log(dispenseTaskData);
+
+    this.ipc.send('saveFile', dispenseTaskData);
+  }
+
+
+  convertFormulaColourantData(formulaColourants: FormulaColourantModel[], baseOnCan, canSize) {
+    const result = [];
+    for (const fcData of formulaColourants) {
+      result.push({colourantCode: fcData.colourant.colourantCode, quantity: fcData.quantity / baseOnCan * canSize});
+    }
+    return result;
+  }
 }

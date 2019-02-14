@@ -67,7 +67,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<router-outlet></router-outlet>\r\n"
+module.exports = "<router-outlet></router-outlet>\n"
 
 /***/ }),
 
@@ -78,7 +78,7 @@ module.exports = "<router-outlet></router-outlet>\r\n"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/*!\r\n * Start Bootstrap - SB Admin v5.0.2 (https://startbootstrap.com/template-overviews/sb-admin)\r\n * Copyright 2013-2018 Start Bootstrap\r\n * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-sb-admin/blob/master/LICENSE)\r\n */\nhtml {\n  position: relative;\n  min-height: 100%; }\nbody {\n  height: 100%; }\n#wrapper {\n  display: flex; }\n#wrapper #content-wrapper {\n  overflow-x: hidden;\n  width: 100%;\n  padding-top: 1rem;\n  padding-bottom: 80px; }\nbody.fixed-nav #content-wrapper {\n  margin-top: 56px;\n  padding-left: 90px; }\nbody.fixed-nav.sidebar-toggled #content-wrapper {\n  padding-left: 0; }\n@media (min-width: 768px) {\n  body.fixed-nav #content-wrapper {\n    padding-left: 225px; }\n  body.fixed-nav.sidebar-toggled #content-wrapper {\n    padding-left: 90px; } }\n.scroll-to-top {\n  position: fixed;\n  right: 15px;\n  bottom: 15px;\n  display: none;\n  width: 50px;\n  height: 50px;\n  text-align: center;\n  color: #fff;\n  background: rgba(52, 58, 64, 0.5);\n  line-height: 46px; }\n.scroll-to-top:focus, .scroll-to-top:hover {\n  color: white; }\n.scroll-to-top:hover {\n  background: #343a40; }\n.scroll-to-top i {\n  font-weight: 800; }\n.smaller {\n  font-size: 0.7rem; }\n.o-hidden {\n  overflow: hidden !important; }\n.z-0 {\n  z-index: 0; }\n.z-1 {\n  z-index: 1; }\n.navbar-nav .form-inline .input-group {\n  width: 100%; }\n.navbar-nav .nav-item.active .nav-link {\n  color: #fff; }\n.navbar-nav .nav-item.dropdown .dropdown-toggle::after {\n  width: 1rem;\n  text-align: center;\n  float: right;\n  vertical-align: 0;\n  border: 0;\n  font-weight: 900;\n  content: '\\f105';\n  font-family: 'Font Awesome 5 Free'; }\n.navbar-nav .nav-item.dropdown.show .dropdown-toggle::after {\n  content: '\\f107'; }\n.navbar-nav .nav-item.dropdown.no-arrow .dropdown-toggle::after {\n  display: none; }\n.navbar-nav .nav-item .nav-link:focus {\n  outline: none; }\n.navbar-nav .nav-item .nav-link .badge {\n  position: absolute;\n  margin-left: 0.75rem;\n  top: 0.3rem;\n  font-weight: 400;\n  font-size: 0.5rem; }\n@media (min-width: 768px) {\n  .navbar-nav .form-inline .input-group {\n    width: auto; } }\n.sidebar {\n  width: 90px !important;\n  background-color: #212529;\n  min-height: calc(100vh - 56px); }\n.sidebar .nav-item:last-child {\n  margin-bottom: 1rem; }\n.sidebar .nav-item .nav-link {\n  text-align: center;\n  padding: 0.75rem 1rem;\n  width: 90px; }\n.sidebar .nav-item .nav-link span {\n  font-size: 0.65rem;\n  display: block; }\n.sidebar .nav-item .dropdown-menu {\n  position: absolute !important;\n  -webkit-transform: none !important;\n  transform: none !important;\n  left: calc(90px + 0.5rem) !important;\n  margin: 0; }\n.sidebar .nav-item .dropdown-menu.dropup {\n  bottom: 0;\n  top: auto !important; }\n.sidebar .nav-item.dropdown .dropdown-toggle::after {\n  display: none; }\n.sidebar .nav-item .nav-link {\n  color: rgba(255, 255, 255, 0.5); }\n.sidebar .nav-item .nav-link:active, .sidebar .nav-item .nav-link:focus, .sidebar .nav-item .nav-link:hover {\n  color: rgba(255, 255, 255, 0.75); }\n.sidebar.toggled {\n  width: 0 !important;\n  overflow: hidden; }\n@media (min-width: 768px) {\n  .sidebar {\n    width: 225px !important; }\n  .sidebar .nav-item .nav-link {\n    display: block;\n    width: 100%;\n    text-align: left;\n    padding: 1rem;\n    width: 225px; }\n  .sidebar .nav-item .nav-link span {\n    font-size: 1rem;\n    display: inline; }\n  .sidebar .nav-item .dropdown-menu {\n    position: static !important;\n    margin: 0 1rem;\n    top: 0; }\n  .sidebar .nav-item.dropdown .dropdown-toggle::after {\n    display: block; }\n  .sidebar.toggled {\n    overflow: visible;\n    width: 90px !important; }\n  .sidebar.toggled .nav-item:last-child {\n    margin-bottom: 1rem; }\n  .sidebar.toggled .nav-item .nav-link {\n    text-align: center;\n    padding: 0.75rem 1rem;\n    width: 90px; }\n  .sidebar.toggled .nav-item .nav-link span {\n    font-size: 0.65rem;\n    display: block; }\n  .sidebar.toggled .nav-item .dropdown-menu {\n    position: absolute !important;\n    -webkit-transform: none !important;\n    transform: none !important;\n    left: calc(90px + 0.5rem) !important;\n    margin: 0; }\n  .sidebar.toggled .nav-item .dropdown-menu.dropup {\n    bottom: 0;\n    top: auto !important; }\n  .sidebar.toggled .nav-item.dropdown .dropdown-toggle::after {\n    display: none; } }\n.sidebar.fixed-top {\n  top: 56px;\n  height: calc(100vh - 56px);\n  overflow-y: auto; }\n.card-body-icon {\n  position: absolute;\n  z-index: 0;\n  top: -1.25rem;\n  right: -1rem;\n  opacity: 0.4;\n  font-size: 5rem;\n  -webkit-transform: rotate(15deg);\n  transform: rotate(15deg); }\n@media (min-width: 576px) {\n  .card-columns {\n    -webkit-column-count: 1;\n    column-count: 1; } }\n@media (min-width: 768px) {\n  .card-columns {\n    -webkit-column-count: 2;\n    column-count: 2; } }\n@media (min-width: 1200px) {\n  .card-columns {\n    -webkit-column-count: 2;\n    column-count: 2; } }\n:root {\n  --input-padding-x: 0.75rem;\n  --input-padding-y: 0.75rem; }\n.card-login {\n  max-width: 25rem; }\n.card-register {\n  max-width: 40rem; }\n.form-label-group {\n  position: relative; }\n.form-label-group > input,\n.form-label-group > label {\n  padding: var(--input-padding-y) var(--input-padding-x);\n  height: auto; }\n.form-label-group > label {\n  position: absolute;\n  top: 0;\n  left: 0;\n  display: block;\n  width: 100%;\n  margin-bottom: 0;\n  /* Override default `<label>` margin */\n  line-height: 1.5;\n  color: #495057;\n  border: 1px solid transparent;\n  border-radius: 0.25rem;\n  transition: all 0.1s ease-in-out; }\n.form-label-group input::-webkit-input-placeholder {\n  color: transparent; }\n.form-label-group input:-ms-input-placeholder {\n  color: transparent; }\n.form-label-group input::-ms-input-placeholder {\n  color: transparent; }\n.form-label-group input::placeholder {\n  color: transparent; }\n.form-label-group input:not(:placeholder-shown) {\n  padding-top: calc(var(--input-padding-y) + var(--input-padding-y) * (2 / 3));\n  padding-bottom: calc(var(--input-padding-y) / 3); }\n.form-label-group input:not(:placeholder-shown) ~ label {\n  padding-top: calc(var(--input-padding-y) / 3);\n  padding-bottom: calc(var(--input-padding-y) / 3);\n  font-size: 12px;\n  color: #777; }\nfooter.sticky-footer {\n  display: flex;\n  position: absolute;\n  right: 0;\n  bottom: 0;\n  width: calc(100% - 90px);\n  height: 80px;\n  background-color: #e9ecef; }\nfooter.sticky-footer .copyright {\n  line-height: 1;\n  font-size: 0.8rem; }\n@media (min-width: 768px) {\n  footer.sticky-footer {\n    width: calc(100% - 225px); } }\nbody.sidebar-toggled footer.sticky-footer {\n  width: 100%; }\n@media (min-width: 768px) {\n  body.sidebar-toggled footer.sticky-footer {\n    width: calc(100% - 90px); } }\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvWDpcXHdzX2xlYXJuaW5nXFxjbGllbnR2aWV0cG93ZXIvc3JjXFxhcHBcXGFwcC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7OztHQUlHO0FBRUg7RUFDRSxtQkFBa0I7RUFDbEIsaUJBQWdCLEVBQ2pCO0FBRUQ7RUFDRSxhQUFZLEVBQ2I7QUFFRDtFQUdFLGNBQWEsRUFDZDtBQUVEO0VBQ0UsbUJBQWtCO0VBQ2xCLFlBQVc7RUFDWCxrQkFBaUI7RUFDakIscUJBQW9CLEVBQ3JCO0FBRUQ7RUFDRSxpQkFBZ0I7RUFDaEIsbUJBQWtCLEVBQ25CO0FBRUQ7RUFDRSxnQkFBZSxFQUNoQjtBQUVEO0VBQ0U7SUFDRSxvQkFBbUIsRUFDcEI7RUFDRDtJQUNFLG1CQUFrQixFQUNuQixFQUFBO0FBR0g7RUFDRSxnQkFBZTtFQUNmLFlBQVc7RUFDWCxhQUFZO0VBQ1osY0FBYTtFQUNiLFlBQVc7RUFDWCxhQUFZO0VBQ1osbUJBQWtCO0VBQ2xCLFlBQVc7RUFDWCxrQ0FBaUM7RUFDakMsa0JBQWlCLEVBQ2xCO0FBRUQ7RUFDRSxhQUFZLEVBQ2I7QUFFRDtFQUNFLG9CQUFtQixFQUNwQjtBQUVEO0VBQ0UsaUJBQWdCLEVBQ2pCO0FBRUQ7RUFDRSxrQkFBaUIsRUFDbEI7QUFFRDtFQUNFLDRCQUEyQixFQUM1QjtBQUVEO0VBQ0UsV0FBVSxFQUNYO0FBRUQ7RUFDRSxXQUFVLEVBQ1g7QUFFRDtFQUNFLFlBQVcsRUFDWjtBQUVEO0VBQ0UsWUFBVyxFQUNaO0FBRUQ7RUFDRSxZQUFXO0VBQ1gsbUJBQWtCO0VBQ2xCLGFBQVk7RUFDWixrQkFBaUI7RUFDakIsVUFBUztFQUNULGlCQUFnQjtFQUNoQixpQkFBZ0I7RUFDaEIsbUNBQWtDLEVBQ25DO0FBRUQ7RUFDRSxpQkFBZ0IsRUFDakI7QUFFRDtFQUNFLGNBQWEsRUFDZDtBQUVEO0VBQ0UsY0FBYSxFQUNkO0FBRUQ7RUFDRSxtQkFBa0I7RUFDbEIscUJBQW9CO0VBQ3BCLFlBQVc7RUFDWCxpQkFBZ0I7RUFDaEIsa0JBQWlCLEVBQ2xCO0FBRUQ7RUFDRTtJQUNFLFlBQVcsRUFDWixFQUFBO0FBR0g7RUFDRSx1QkFBc0I7RUFDdEIsMEJBQXlCO0VBQ3pCLCtCQUE4QixFQUMvQjtBQUVEO0VBQ0Usb0JBQW1CLEVBQ3BCO0FBRUQ7RUFDRSxtQkFBa0I7RUFDbEIsc0JBQXFCO0VBQ3JCLFlBQVcsRUFDWjtBQUVEO0VBQ0UsbUJBQWtCO0VBQ2xCLGVBQWMsRUFDZjtBQUVEO0VBQ0UsOEJBQTZCO0VBQzdCLG1DQUFrQztFQUNsQywyQkFBMEI7RUFDMUIscUNBQW9DO0VBQ3BDLFVBQVMsRUFDVjtBQUVEO0VBQ0UsVUFBUztFQUNULHFCQUFvQixFQUNyQjtBQUVEO0VBQ0UsY0FBYSxFQUNkO0FBRUQ7RUFDRSxnQ0FBK0IsRUFDaEM7QUFFRDtFQUNFLGlDQUFnQyxFQUNqQztBQUVEO0VBQ0Usb0JBQW1CO0VBQ25CLGlCQUFnQixFQUNqQjtBQUVEO0VBQ0U7SUFDRSx3QkFBdUIsRUFDeEI7RUFDRDtJQUNFLGVBQWM7SUFDZCxZQUFXO0lBQ1gsaUJBQWdCO0lBQ2hCLGNBQWE7SUFDYixhQUFZLEVBQ2I7RUFDRDtJQUNFLGdCQUFlO0lBQ2YsZ0JBQWUsRUFDaEI7RUFDRDtJQUNFLDRCQUEyQjtJQUMzQixlQUFjO0lBQ2QsT0FBTSxFQUNQO0VBQ0Q7SUFDRSxlQUFjLEVBQ2Y7RUFDRDtJQUNFLGtCQUFpQjtJQUNqQix1QkFBc0IsRUFDdkI7RUFDRDtJQUNFLG9CQUFtQixFQUNwQjtFQUNEO0lBQ0UsbUJBQWtCO0lBQ2xCLHNCQUFxQjtJQUNyQixZQUFXLEVBQ1o7RUFDRDtJQUNFLG1CQUFrQjtJQUNsQixlQUFjLEVBQ2Y7RUFDRDtJQUNFLDhCQUE2QjtJQUM3QixtQ0FBa0M7SUFDbEMsMkJBQTBCO0lBQzFCLHFDQUFvQztJQUNwQyxVQUFTLEVBQ1Y7RUFDRDtJQUNFLFVBQVM7SUFDVCxxQkFBb0IsRUFDckI7RUFDRDtJQUNFLGNBQWEsRUFDZCxFQUFBO0FBR0g7RUFDRSxVQUFTO0VBQ1QsMkJBQTBCO0VBQzFCLGlCQUFnQixFQUNqQjtBQUVEO0VBQ0UsbUJBQWtCO0VBQ2xCLFdBQVU7RUFDVixjQUFhO0VBQ2IsYUFBWTtFQUNaLGFBQVk7RUFDWixnQkFBZTtFQUNmLGlDQUFnQztFQUNoQyx5QkFBd0IsRUFDekI7QUFFRDtFQUNFO0lBQ0Usd0JBQXVCO0lBQ3ZCLGdCQUFlLEVBQ2hCLEVBQUE7QUFHSDtFQUNFO0lBQ0Usd0JBQXVCO0lBQ3ZCLGdCQUFlLEVBQ2hCLEVBQUE7QUFHSDtFQUNFO0lBQ0Usd0JBQXVCO0lBQ3ZCLGdCQUFlLEVBQ2hCLEVBQUE7QUFHSDtFQUNFLDJCQUFrQjtFQUNsQiwyQkFBa0IsRUFDbkI7QUFFRDtFQUNFLGlCQUFnQixFQUNqQjtBQUVEO0VBQ0UsaUJBQWdCLEVBQ2pCO0FBRUQ7RUFDRSxtQkFBa0IsRUFDbkI7QUFFRDs7RUFFRSx1REFBc0Q7RUFDdEQsYUFBWSxFQUNiO0FBRUQ7RUFDRSxtQkFBa0I7RUFDbEIsT0FBTTtFQUNOLFFBQU87RUFDUCxlQUFjO0VBQ2QsWUFBVztFQUNYLGlCQUFnQjtFQUNoQix1Q0FBdUM7RUFDdkMsaUJBQWdCO0VBQ2hCLGVBQWM7RUFDZCw4QkFBNkI7RUFDN0IsdUJBQXNCO0VBRXRCLGlDQUFnQyxFQUNqQztBQUVEO0VBQ0UsbUJBQWtCLEVBQ25CO0FBRUQ7RUFDRSxtQkFBa0IsRUFDbkI7QUFFRDtFQUNFLG1CQUFrQixFQUNuQjtBQUVEO0VBQ0UsbUJBQWtCLEVBQ25CO0FBRUQ7RUFDRSw2RUFBNEU7RUFDNUUsaURBQWdELEVBQ2pEO0FBRUQ7RUFDRSw4Q0FBNkM7RUFDN0MsaURBQWdEO0VBQ2hELGdCQUFlO0VBQ2YsWUFBVyxFQUNaO0FBRUQ7RUFHRSxjQUFhO0VBQ2IsbUJBQWtCO0VBQ2xCLFNBQVE7RUFDUixVQUFTO0VBQ1QseUJBQXdCO0VBQ3hCLGFBQVk7RUFDWiwwQkFBeUIsRUFDMUI7QUFFRDtFQUNFLGVBQWM7RUFDZCxrQkFBaUIsRUFDbEI7QUFFRDtFQUNFO0lBQ0UsMEJBQXlCLEVBQzFCLEVBQUE7QUFHSDtFQUNFLFlBQVcsRUFDWjtBQUVEO0VBQ0U7SUFDRSx5QkFBd0IsRUFDekIsRUFBQSIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qIVxyXG4gKiBTdGFydCBCb290c3RyYXAgLSBTQiBBZG1pbiB2NS4wLjIgKGh0dHBzOi8vc3RhcnRib290c3RyYXAuY29tL3RlbXBsYXRlLW92ZXJ2aWV3cy9zYi1hZG1pbilcclxuICogQ29weXJpZ2h0IDIwMTMtMjAxOCBTdGFydCBCb290c3RyYXBcclxuICogTGljZW5zZWQgdW5kZXIgTUlUIChodHRwczovL2dpdGh1Yi5jb20vQmxhY2tyb2NrRGlnaXRhbC9zdGFydGJvb3RzdHJhcC1zYi1hZG1pbi9ibG9iL21hc3Rlci9MSUNFTlNFKVxyXG4gKi9cclxuXHJcbmh0bWwge1xyXG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuICBtaW4taGVpZ2h0OiAxMDAlO1xyXG59XHJcblxyXG5ib2R5IHtcclxuICBoZWlnaHQ6IDEwMCU7XHJcbn1cclxuXHJcbiN3cmFwcGVyIHtcclxuICBkaXNwbGF5OiAtd2Via2l0LWJveDtcclxuICBkaXNwbGF5OiAtbXMtZmxleGJveDtcclxuICBkaXNwbGF5OiBmbGV4O1xyXG59XHJcblxyXG4jd3JhcHBlciAjY29udGVudC13cmFwcGVyIHtcclxuICBvdmVyZmxvdy14OiBoaWRkZW47XHJcbiAgd2lkdGg6IDEwMCU7XHJcbiAgcGFkZGluZy10b3A6IDFyZW07XHJcbiAgcGFkZGluZy1ib3R0b206IDgwcHg7XHJcbn1cclxuXHJcbmJvZHkuZml4ZWQtbmF2ICNjb250ZW50LXdyYXBwZXIge1xyXG4gIG1hcmdpbi10b3A6IDU2cHg7XHJcbiAgcGFkZGluZy1sZWZ0OiA5MHB4O1xyXG59XHJcblxyXG5ib2R5LmZpeGVkLW5hdi5zaWRlYmFyLXRvZ2dsZWQgI2NvbnRlbnQtd3JhcHBlciB7XHJcbiAgcGFkZGluZy1sZWZ0OiAwO1xyXG59XHJcblxyXG5AbWVkaWEgKG1pbi13aWR0aDogNzY4cHgpIHtcclxuICBib2R5LmZpeGVkLW5hdiAjY29udGVudC13cmFwcGVyIHtcclxuICAgIHBhZGRpbmctbGVmdDogMjI1cHg7XHJcbiAgfVxyXG4gIGJvZHkuZml4ZWQtbmF2LnNpZGViYXItdG9nZ2xlZCAjY29udGVudC13cmFwcGVyIHtcclxuICAgIHBhZGRpbmctbGVmdDogOTBweDtcclxuICB9XHJcbn1cclxuXHJcbi5zY3JvbGwtdG8tdG9wIHtcclxuICBwb3NpdGlvbjogZml4ZWQ7XHJcbiAgcmlnaHQ6IDE1cHg7XHJcbiAgYm90dG9tOiAxNXB4O1xyXG4gIGRpc3BsYXk6IG5vbmU7XHJcbiAgd2lkdGg6IDUwcHg7XHJcbiAgaGVpZ2h0OiA1MHB4O1xyXG4gIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICBjb2xvcjogI2ZmZjtcclxuICBiYWNrZ3JvdW5kOiByZ2JhKDUyLCA1OCwgNjQsIDAuNSk7XHJcbiAgbGluZS1oZWlnaHQ6IDQ2cHg7XHJcbn1cclxuXHJcbi5zY3JvbGwtdG8tdG9wOmZvY3VzLCAuc2Nyb2xsLXRvLXRvcDpob3ZlciB7XHJcbiAgY29sb3I6IHdoaXRlO1xyXG59XHJcblxyXG4uc2Nyb2xsLXRvLXRvcDpob3ZlciB7XHJcbiAgYmFja2dyb3VuZDogIzM0M2E0MDtcclxufVxyXG5cclxuLnNjcm9sbC10by10b3AgaSB7XHJcbiAgZm9udC13ZWlnaHQ6IDgwMDtcclxufVxyXG5cclxuLnNtYWxsZXIge1xyXG4gIGZvbnQtc2l6ZTogMC43cmVtO1xyXG59XHJcblxyXG4uby1oaWRkZW4ge1xyXG4gIG92ZXJmbG93OiBoaWRkZW4gIWltcG9ydGFudDtcclxufVxyXG5cclxuLnotMCB7XHJcbiAgei1pbmRleDogMDtcclxufVxyXG5cclxuLnotMSB7XHJcbiAgei1pbmRleDogMTtcclxufVxyXG5cclxuLm5hdmJhci1uYXYgLmZvcm0taW5saW5lIC5pbnB1dC1ncm91cCB7XHJcbiAgd2lkdGg6IDEwMCU7XHJcbn1cclxuXHJcbi5uYXZiYXItbmF2IC5uYXYtaXRlbS5hY3RpdmUgLm5hdi1saW5rIHtcclxuICBjb2xvcjogI2ZmZjtcclxufVxyXG5cclxuLm5hdmJhci1uYXYgLm5hdi1pdGVtLmRyb3Bkb3duIC5kcm9wZG93bi10b2dnbGU6OmFmdGVyIHtcclxuICB3aWR0aDogMXJlbTtcclxuICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgZmxvYXQ6IHJpZ2h0O1xyXG4gIHZlcnRpY2FsLWFsaWduOiAwO1xyXG4gIGJvcmRlcjogMDtcclxuICBmb250LXdlaWdodDogOTAwO1xyXG4gIGNvbnRlbnQ6ICdcXGYxMDUnO1xyXG4gIGZvbnQtZmFtaWx5OiAnRm9udCBBd2Vzb21lIDUgRnJlZSc7XHJcbn1cclxuXHJcbi5uYXZiYXItbmF2IC5uYXYtaXRlbS5kcm9wZG93bi5zaG93IC5kcm9wZG93bi10b2dnbGU6OmFmdGVyIHtcclxuICBjb250ZW50OiAnXFxmMTA3JztcclxufVxyXG5cclxuLm5hdmJhci1uYXYgLm5hdi1pdGVtLmRyb3Bkb3duLm5vLWFycm93IC5kcm9wZG93bi10b2dnbGU6OmFmdGVyIHtcclxuICBkaXNwbGF5OiBub25lO1xyXG59XHJcblxyXG4ubmF2YmFyLW5hdiAubmF2LWl0ZW0gLm5hdi1saW5rOmZvY3VzIHtcclxuICBvdXRsaW5lOiBub25lO1xyXG59XHJcblxyXG4ubmF2YmFyLW5hdiAubmF2LWl0ZW0gLm5hdi1saW5rIC5iYWRnZSB7XHJcbiAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gIG1hcmdpbi1sZWZ0OiAwLjc1cmVtO1xyXG4gIHRvcDogMC4zcmVtO1xyXG4gIGZvbnQtd2VpZ2h0OiA0MDA7XHJcbiAgZm9udC1zaXplOiAwLjVyZW07XHJcbn1cclxuXHJcbkBtZWRpYSAobWluLXdpZHRoOiA3NjhweCkge1xyXG4gIC5uYXZiYXItbmF2IC5mb3JtLWlubGluZSAuaW5wdXQtZ3JvdXAge1xyXG4gICAgd2lkdGg6IGF1dG87XHJcbiAgfVxyXG59XHJcblxyXG4uc2lkZWJhciB7XHJcbiAgd2lkdGg6IDkwcHggIWltcG9ydGFudDtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiAjMjEyNTI5O1xyXG4gIG1pbi1oZWlnaHQ6IGNhbGMoMTAwdmggLSA1NnB4KTtcclxufVxyXG5cclxuLnNpZGViYXIgLm5hdi1pdGVtOmxhc3QtY2hpbGQge1xyXG4gIG1hcmdpbi1ib3R0b206IDFyZW07XHJcbn1cclxuXHJcbi5zaWRlYmFyIC5uYXYtaXRlbSAubmF2LWxpbmsge1xyXG4gIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICBwYWRkaW5nOiAwLjc1cmVtIDFyZW07XHJcbiAgd2lkdGg6IDkwcHg7XHJcbn1cclxuXHJcbi5zaWRlYmFyIC5uYXYtaXRlbSAubmF2LWxpbmsgc3BhbiB7XHJcbiAgZm9udC1zaXplOiAwLjY1cmVtO1xyXG4gIGRpc3BsYXk6IGJsb2NrO1xyXG59XHJcblxyXG4uc2lkZWJhciAubmF2LWl0ZW0gLmRyb3Bkb3duLW1lbnUge1xyXG4gIHBvc2l0aW9uOiBhYnNvbHV0ZSAhaW1wb3J0YW50O1xyXG4gIC13ZWJraXQtdHJhbnNmb3JtOiBub25lICFpbXBvcnRhbnQ7XHJcbiAgdHJhbnNmb3JtOiBub25lICFpbXBvcnRhbnQ7XHJcbiAgbGVmdDogY2FsYyg5MHB4ICsgMC41cmVtKSAhaW1wb3J0YW50O1xyXG4gIG1hcmdpbjogMDtcclxufVxyXG5cclxuLnNpZGViYXIgLm5hdi1pdGVtIC5kcm9wZG93bi1tZW51LmRyb3B1cCB7XHJcbiAgYm90dG9tOiAwO1xyXG4gIHRvcDogYXV0byAhaW1wb3J0YW50O1xyXG59XHJcblxyXG4uc2lkZWJhciAubmF2LWl0ZW0uZHJvcGRvd24gLmRyb3Bkb3duLXRvZ2dsZTo6YWZ0ZXIge1xyXG4gIGRpc3BsYXk6IG5vbmU7XHJcbn1cclxuXHJcbi5zaWRlYmFyIC5uYXYtaXRlbSAubmF2LWxpbmsge1xyXG4gIGNvbG9yOiByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuNSk7XHJcbn1cclxuXHJcbi5zaWRlYmFyIC5uYXYtaXRlbSAubmF2LWxpbms6YWN0aXZlLCAuc2lkZWJhciAubmF2LWl0ZW0gLm5hdi1saW5rOmZvY3VzLCAuc2lkZWJhciAubmF2LWl0ZW0gLm5hdi1saW5rOmhvdmVyIHtcclxuICBjb2xvcjogcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjc1KTtcclxufVxyXG5cclxuLnNpZGViYXIudG9nZ2xlZCB7XHJcbiAgd2lkdGg6IDAgIWltcG9ydGFudDtcclxuICBvdmVyZmxvdzogaGlkZGVuO1xyXG59XHJcblxyXG5AbWVkaWEgKG1pbi13aWR0aDogNzY4cHgpIHtcclxuICAuc2lkZWJhciB7XHJcbiAgICB3aWR0aDogMjI1cHggIWltcG9ydGFudDtcclxuICB9XHJcbiAgLnNpZGViYXIgLm5hdi1pdGVtIC5uYXYtbGluayB7XHJcbiAgICBkaXNwbGF5OiBibG9jaztcclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgdGV4dC1hbGlnbjogbGVmdDtcclxuICAgIHBhZGRpbmc6IDFyZW07XHJcbiAgICB3aWR0aDogMjI1cHg7XHJcbiAgfVxyXG4gIC5zaWRlYmFyIC5uYXYtaXRlbSAubmF2LWxpbmsgc3BhbiB7XHJcbiAgICBmb250LXNpemU6IDFyZW07XHJcbiAgICBkaXNwbGF5OiBpbmxpbmU7XHJcbiAgfVxyXG4gIC5zaWRlYmFyIC5uYXYtaXRlbSAuZHJvcGRvd24tbWVudSB7XHJcbiAgICBwb3NpdGlvbjogc3RhdGljICFpbXBvcnRhbnQ7XHJcbiAgICBtYXJnaW46IDAgMXJlbTtcclxuICAgIHRvcDogMDtcclxuICB9XHJcbiAgLnNpZGViYXIgLm5hdi1pdGVtLmRyb3Bkb3duIC5kcm9wZG93bi10b2dnbGU6OmFmdGVyIHtcclxuICAgIGRpc3BsYXk6IGJsb2NrO1xyXG4gIH1cclxuICAuc2lkZWJhci50b2dnbGVkIHtcclxuICAgIG92ZXJmbG93OiB2aXNpYmxlO1xyXG4gICAgd2lkdGg6IDkwcHggIWltcG9ydGFudDtcclxuICB9XHJcbiAgLnNpZGViYXIudG9nZ2xlZCAubmF2LWl0ZW06bGFzdC1jaGlsZCB7XHJcbiAgICBtYXJnaW4tYm90dG9tOiAxcmVtO1xyXG4gIH1cclxuICAuc2lkZWJhci50b2dnbGVkIC5uYXYtaXRlbSAubmF2LWxpbmsge1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gICAgcGFkZGluZzogMC43NXJlbSAxcmVtO1xyXG4gICAgd2lkdGg6IDkwcHg7XHJcbiAgfVxyXG4gIC5zaWRlYmFyLnRvZ2dsZWQgLm5hdi1pdGVtIC5uYXYtbGluayBzcGFuIHtcclxuICAgIGZvbnQtc2l6ZTogMC42NXJlbTtcclxuICAgIGRpc3BsYXk6IGJsb2NrO1xyXG4gIH1cclxuICAuc2lkZWJhci50b2dnbGVkIC5uYXYtaXRlbSAuZHJvcGRvd24tbWVudSB7XHJcbiAgICBwb3NpdGlvbjogYWJzb2x1dGUgIWltcG9ydGFudDtcclxuICAgIC13ZWJraXQtdHJhbnNmb3JtOiBub25lICFpbXBvcnRhbnQ7XHJcbiAgICB0cmFuc2Zvcm06IG5vbmUgIWltcG9ydGFudDtcclxuICAgIGxlZnQ6IGNhbGMoOTBweCArIDAuNXJlbSkgIWltcG9ydGFudDtcclxuICAgIG1hcmdpbjogMDtcclxuICB9XHJcbiAgLnNpZGViYXIudG9nZ2xlZCAubmF2LWl0ZW0gLmRyb3Bkb3duLW1lbnUuZHJvcHVwIHtcclxuICAgIGJvdHRvbTogMDtcclxuICAgIHRvcDogYXV0byAhaW1wb3J0YW50O1xyXG4gIH1cclxuICAuc2lkZWJhci50b2dnbGVkIC5uYXYtaXRlbS5kcm9wZG93biAuZHJvcGRvd24tdG9nZ2xlOjphZnRlciB7XHJcbiAgICBkaXNwbGF5OiBub25lO1xyXG4gIH1cclxufVxyXG5cclxuLnNpZGViYXIuZml4ZWQtdG9wIHtcclxuICB0b3A6IDU2cHg7XHJcbiAgaGVpZ2h0OiBjYWxjKDEwMHZoIC0gNTZweCk7XHJcbiAgb3ZlcmZsb3cteTogYXV0bztcclxufVxyXG5cclxuLmNhcmQtYm9keS1pY29uIHtcclxuICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgei1pbmRleDogMDtcclxuICB0b3A6IC0xLjI1cmVtO1xyXG4gIHJpZ2h0OiAtMXJlbTtcclxuICBvcGFjaXR5OiAwLjQ7XHJcbiAgZm9udC1zaXplOiA1cmVtO1xyXG4gIC13ZWJraXQtdHJhbnNmb3JtOiByb3RhdGUoMTVkZWcpO1xyXG4gIHRyYW5zZm9ybTogcm90YXRlKDE1ZGVnKTtcclxufVxyXG5cclxuQG1lZGlhIChtaW4td2lkdGg6IDU3NnB4KSB7XHJcbiAgLmNhcmQtY29sdW1ucyB7XHJcbiAgICAtd2Via2l0LWNvbHVtbi1jb3VudDogMTtcclxuICAgIGNvbHVtbi1jb3VudDogMTtcclxuICB9XHJcbn1cclxuXHJcbkBtZWRpYSAobWluLXdpZHRoOiA3NjhweCkge1xyXG4gIC5jYXJkLWNvbHVtbnMge1xyXG4gICAgLXdlYmtpdC1jb2x1bW4tY291bnQ6IDI7XHJcbiAgICBjb2x1bW4tY291bnQ6IDI7XHJcbiAgfVxyXG59XHJcblxyXG5AbWVkaWEgKG1pbi13aWR0aDogMTIwMHB4KSB7XHJcbiAgLmNhcmQtY29sdW1ucyB7XHJcbiAgICAtd2Via2l0LWNvbHVtbi1jb3VudDogMjtcclxuICAgIGNvbHVtbi1jb3VudDogMjtcclxuICB9XHJcbn1cclxuXHJcbjpyb290IHtcclxuICAtLWlucHV0LXBhZGRpbmcteDogMC43NXJlbTtcclxuICAtLWlucHV0LXBhZGRpbmcteTogMC43NXJlbTtcclxufVxyXG5cclxuLmNhcmQtbG9naW4ge1xyXG4gIG1heC13aWR0aDogMjVyZW07XHJcbn1cclxuXHJcbi5jYXJkLXJlZ2lzdGVyIHtcclxuICBtYXgtd2lkdGg6IDQwcmVtO1xyXG59XHJcblxyXG4uZm9ybS1sYWJlbC1ncm91cCB7XHJcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG59XHJcblxyXG4uZm9ybS1sYWJlbC1ncm91cCA+IGlucHV0LFxyXG4uZm9ybS1sYWJlbC1ncm91cCA+IGxhYmVsIHtcclxuICBwYWRkaW5nOiB2YXIoLS1pbnB1dC1wYWRkaW5nLXkpIHZhcigtLWlucHV0LXBhZGRpbmcteCk7XHJcbiAgaGVpZ2h0OiBhdXRvO1xyXG59XHJcblxyXG4uZm9ybS1sYWJlbC1ncm91cCA+IGxhYmVsIHtcclxuICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgdG9wOiAwO1xyXG4gIGxlZnQ6IDA7XHJcbiAgZGlzcGxheTogYmxvY2s7XHJcbiAgd2lkdGg6IDEwMCU7XHJcbiAgbWFyZ2luLWJvdHRvbTogMDtcclxuICAvKiBPdmVycmlkZSBkZWZhdWx0IGA8bGFiZWw+YCBtYXJnaW4gKi9cclxuICBsaW5lLWhlaWdodDogMS41O1xyXG4gIGNvbG9yOiAjNDk1MDU3O1xyXG4gIGJvcmRlcjogMXB4IHNvbGlkIHRyYW5zcGFyZW50O1xyXG4gIGJvcmRlci1yYWRpdXM6IDAuMjVyZW07XHJcbiAgLXdlYmtpdC10cmFuc2l0aW9uOiBhbGwgMC4xcyBlYXNlLWluLW91dDtcclxuICB0cmFuc2l0aW9uOiBhbGwgMC4xcyBlYXNlLWluLW91dDtcclxufVxyXG5cclxuLmZvcm0tbGFiZWwtZ3JvdXAgaW5wdXQ6Oi13ZWJraXQtaW5wdXQtcGxhY2Vob2xkZXIge1xyXG4gIGNvbG9yOiB0cmFuc3BhcmVudDtcclxufVxyXG5cclxuLmZvcm0tbGFiZWwtZ3JvdXAgaW5wdXQ6LW1zLWlucHV0LXBsYWNlaG9sZGVyIHtcclxuICBjb2xvcjogdHJhbnNwYXJlbnQ7XHJcbn1cclxuXHJcbi5mb3JtLWxhYmVsLWdyb3VwIGlucHV0OjotbXMtaW5wdXQtcGxhY2Vob2xkZXIge1xyXG4gIGNvbG9yOiB0cmFuc3BhcmVudDtcclxufVxyXG5cclxuLmZvcm0tbGFiZWwtZ3JvdXAgaW5wdXQ6OnBsYWNlaG9sZGVyIHtcclxuICBjb2xvcjogdHJhbnNwYXJlbnQ7XHJcbn1cclxuXHJcbi5mb3JtLWxhYmVsLWdyb3VwIGlucHV0Om5vdCg6cGxhY2Vob2xkZXItc2hvd24pIHtcclxuICBwYWRkaW5nLXRvcDogY2FsYyh2YXIoLS1pbnB1dC1wYWRkaW5nLXkpICsgdmFyKC0taW5wdXQtcGFkZGluZy15KSAqICgyIC8gMykpO1xyXG4gIHBhZGRpbmctYm90dG9tOiBjYWxjKHZhcigtLWlucHV0LXBhZGRpbmcteSkgLyAzKTtcclxufVxyXG5cclxuLmZvcm0tbGFiZWwtZ3JvdXAgaW5wdXQ6bm90KDpwbGFjZWhvbGRlci1zaG93bikgfiBsYWJlbCB7XHJcbiAgcGFkZGluZy10b3A6IGNhbGModmFyKC0taW5wdXQtcGFkZGluZy15KSAvIDMpO1xyXG4gIHBhZGRpbmctYm90dG9tOiBjYWxjKHZhcigtLWlucHV0LXBhZGRpbmcteSkgLyAzKTtcclxuICBmb250LXNpemU6IDEycHg7XHJcbiAgY29sb3I6ICM3Nzc7XHJcbn1cclxuXHJcbmZvb3Rlci5zdGlja3ktZm9vdGVyIHtcclxuICBkaXNwbGF5OiAtd2Via2l0LWJveDtcclxuICBkaXNwbGF5OiAtbXMtZmxleGJveDtcclxuICBkaXNwbGF5OiBmbGV4O1xyXG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICByaWdodDogMDtcclxuICBib3R0b206IDA7XHJcbiAgd2lkdGg6IGNhbGMoMTAwJSAtIDkwcHgpO1xyXG4gIGhlaWdodDogODBweDtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZTllY2VmO1xyXG59XHJcblxyXG5mb290ZXIuc3RpY2t5LWZvb3RlciAuY29weXJpZ2h0IHtcclxuICBsaW5lLWhlaWdodDogMTtcclxuICBmb250LXNpemU6IDAuOHJlbTtcclxufVxyXG5cclxuQG1lZGlhIChtaW4td2lkdGg6IDc2OHB4KSB7XHJcbiAgZm9vdGVyLnN0aWNreS1mb290ZXIge1xyXG4gICAgd2lkdGg6IGNhbGMoMTAwJSAtIDIyNXB4KTtcclxuICB9XHJcbn1cclxuXHJcbmJvZHkuc2lkZWJhci10b2dnbGVkIGZvb3Rlci5zdGlja3ktZm9vdGVyIHtcclxuICB3aWR0aDogMTAwJTtcclxufVxyXG5cclxuQG1lZGlhIChtaW4td2lkdGg6IDc2OHB4KSB7XHJcbiAgYm9keS5zaWRlYmFyLXRvZ2dsZWQgZm9vdGVyLnN0aWNreS1mb290ZXIge1xyXG4gICAgd2lkdGg6IGNhbGMoMTAwJSAtIDkwcHgpO1xyXG4gIH1cclxufVxyXG4iXX0= */"
+module.exports = "/*!\r\n * Start Bootstrap - SB Admin v5.0.2 (https://startbootstrap.com/template-overviews/sb-admin)\r\n * Copyright 2013-2018 Start Bootstrap\r\n * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-sb-admin/blob/master/LICENSE)\r\n */\nhtml {\n  position: relative;\n  min-height: 100%; }\nbody {\n  height: 100%; }\n#wrapper {\n  display: flex; }\n#wrapper #content-wrapper {\n  overflow-x: hidden;\n  width: 100%;\n  padding-top: 1rem;\n  padding-bottom: 80px; }\nbody.fixed-nav #content-wrapper {\n  margin-top: 56px;\n  padding-left: 90px; }\nbody.fixed-nav.sidebar-toggled #content-wrapper {\n  padding-left: 0; }\n@media (min-width: 768px) {\n  body.fixed-nav #content-wrapper {\n    padding-left: 225px; }\n  body.fixed-nav.sidebar-toggled #content-wrapper {\n    padding-left: 90px; } }\n.scroll-to-top {\n  position: fixed;\n  right: 15px;\n  bottom: 15px;\n  display: none;\n  width: 50px;\n  height: 50px;\n  text-align: center;\n  color: #fff;\n  background: rgba(52, 58, 64, 0.5);\n  line-height: 46px; }\n.scroll-to-top:focus, .scroll-to-top:hover {\n  color: white; }\n.scroll-to-top:hover {\n  background: #343a40; }\n.scroll-to-top i {\n  font-weight: 800; }\n.smaller {\n  font-size: 0.7rem; }\n.o-hidden {\n  overflow: hidden !important; }\n.z-0 {\n  z-index: 0; }\n.z-1 {\n  z-index: 1; }\n.navbar-nav .form-inline .input-group {\n  width: 100%; }\n.navbar-nav .nav-item.active .nav-link {\n  color: #fff; }\n.navbar-nav .nav-item.dropdown .dropdown-toggle::after {\n  width: 1rem;\n  text-align: center;\n  float: right;\n  vertical-align: 0;\n  border: 0;\n  font-weight: 900;\n  content: '\\f105';\n  font-family: 'Font Awesome 5 Free'; }\n.navbar-nav .nav-item.dropdown.show .dropdown-toggle::after {\n  content: '\\f107'; }\n.navbar-nav .nav-item.dropdown.no-arrow .dropdown-toggle::after {\n  display: none; }\n.navbar-nav .nav-item .nav-link:focus {\n  outline: none; }\n.navbar-nav .nav-item .nav-link .badge {\n  position: absolute;\n  margin-left: 0.75rem;\n  top: 0.3rem;\n  font-weight: 400;\n  font-size: 0.5rem; }\n@media (min-width: 768px) {\n  .navbar-nav .form-inline .input-group {\n    width: auto; } }\n.sidebar {\n  width: 90px !important;\n  background-color: #212529;\n  min-height: calc(100vh - 56px); }\n.sidebar .nav-item:last-child {\n  margin-bottom: 1rem; }\n.sidebar .nav-item .nav-link {\n  text-align: center;\n  padding: 0.75rem 1rem;\n  width: 90px; }\n.sidebar .nav-item .nav-link span {\n  font-size: 0.65rem;\n  display: block; }\n.sidebar .nav-item .dropdown-menu {\n  position: absolute !important;\n  -webkit-transform: none !important;\n  transform: none !important;\n  left: calc(90px + 0.5rem) !important;\n  margin: 0; }\n.sidebar .nav-item .dropdown-menu.dropup {\n  bottom: 0;\n  top: auto !important; }\n.sidebar .nav-item.dropdown .dropdown-toggle::after {\n  display: none; }\n.sidebar .nav-item .nav-link {\n  color: rgba(255, 255, 255, 0.5); }\n.sidebar .nav-item .nav-link:active, .sidebar .nav-item .nav-link:focus, .sidebar .nav-item .nav-link:hover {\n  color: rgba(255, 255, 255, 0.75); }\n.sidebar.toggled {\n  width: 0 !important;\n  overflow: hidden; }\n@media (min-width: 768px) {\n  .sidebar {\n    width: 225px !important; }\n  .sidebar .nav-item .nav-link {\n    display: block;\n    width: 100%;\n    text-align: left;\n    padding: 1rem;\n    width: 225px; }\n  .sidebar .nav-item .nav-link span {\n    font-size: 1rem;\n    display: inline; }\n  .sidebar .nav-item .dropdown-menu {\n    position: static !important;\n    margin: 0 1rem;\n    top: 0; }\n  .sidebar .nav-item.dropdown .dropdown-toggle::after {\n    display: block; }\n  .sidebar.toggled {\n    overflow: visible;\n    width: 90px !important; }\n  .sidebar.toggled .nav-item:last-child {\n    margin-bottom: 1rem; }\n  .sidebar.toggled .nav-item .nav-link {\n    text-align: center;\n    padding: 0.75rem 1rem;\n    width: 90px; }\n  .sidebar.toggled .nav-item .nav-link span {\n    font-size: 0.65rem;\n    display: block; }\n  .sidebar.toggled .nav-item .dropdown-menu {\n    position: absolute !important;\n    -webkit-transform: none !important;\n    transform: none !important;\n    left: calc(90px + 0.5rem) !important;\n    margin: 0; }\n  .sidebar.toggled .nav-item .dropdown-menu.dropup {\n    bottom: 0;\n    top: auto !important; }\n  .sidebar.toggled .nav-item.dropdown .dropdown-toggle::after {\n    display: none; } }\n.sidebar.fixed-top {\n  top: 56px;\n  height: calc(100vh - 56px);\n  overflow-y: auto; }\n.card-body-icon {\n  position: absolute;\n  z-index: 0;\n  top: -1.25rem;\n  right: -1rem;\n  opacity: 0.4;\n  font-size: 5rem;\n  -webkit-transform: rotate(15deg);\n  transform: rotate(15deg); }\n@media (min-width: 576px) {\n  .card-columns {\n    -webkit-column-count: 1;\n    column-count: 1; } }\n@media (min-width: 768px) {\n  .card-columns {\n    -webkit-column-count: 2;\n    column-count: 2; } }\n@media (min-width: 1200px) {\n  .card-columns {\n    -webkit-column-count: 2;\n    column-count: 2; } }\n:root {\n  --input-padding-x: 0.75rem;\n  --input-padding-y: 0.75rem; }\n.card-login {\n  max-width: 25rem; }\n.card-register {\n  max-width: 40rem; }\n.form-label-group {\n  position: relative; }\n.form-label-group > input,\n.form-label-group > label {\n  padding: var(--input-padding-y) var(--input-padding-x);\n  height: auto; }\n.form-label-group > label {\n  position: absolute;\n  top: 0;\n  left: 0;\n  display: block;\n  width: 100%;\n  margin-bottom: 0;\n  /* Override default `<label>` margin */\n  line-height: 1.5;\n  color: #495057;\n  border: 1px solid transparent;\n  border-radius: 0.25rem;\n  transition: all 0.1s ease-in-out; }\n.form-label-group input::-webkit-input-placeholder {\n  color: transparent; }\n.form-label-group input:-ms-input-placeholder {\n  color: transparent; }\n.form-label-group input::-ms-input-placeholder {\n  color: transparent; }\n.form-label-group input::placeholder {\n  color: transparent; }\n.form-label-group input:not(:placeholder-shown) {\n  padding-top: calc(var(--input-padding-y) + var(--input-padding-y) * (2 / 3));\n  padding-bottom: calc(var(--input-padding-y) / 3); }\n.form-label-group input:not(:placeholder-shown) ~ label {\n  padding-top: calc(var(--input-padding-y) / 3);\n  padding-bottom: calc(var(--input-padding-y) / 3);\n  font-size: 12px;\n  color: #777; }\nfooter.sticky-footer {\n  display: flex;\n  position: absolute;\n  right: 0;\n  bottom: 0;\n  width: calc(100% - 90px);\n  height: 80px;\n  background-color: #e9ecef; }\nfooter.sticky-footer .copyright {\n  line-height: 1;\n  font-size: 0.8rem; }\n@media (min-width: 768px) {\n  footer.sticky-footer {\n    width: calc(100% - 225px); } }\nbody.sidebar-toggled footer.sticky-footer {\n  width: 100%; }\n@media (min-width: 768px) {\n  body.sidebar-toggled footer.sticky-footer {\n    width: calc(100% - 90px); } }\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvRzpcXFdvcmtzcGFjZVxcY2xpZW50dmlldHBvd2VyL3NyY1xcYXBwXFxhcHAuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7R0FJRztBQUVIO0VBQ0UsbUJBQWtCO0VBQ2xCLGlCQUFnQixFQUNqQjtBQUVEO0VBQ0UsYUFBWSxFQUNiO0FBRUQ7RUFHRSxjQUFhLEVBQ2Q7QUFFRDtFQUNFLG1CQUFrQjtFQUNsQixZQUFXO0VBQ1gsa0JBQWlCO0VBQ2pCLHFCQUFvQixFQUNyQjtBQUVEO0VBQ0UsaUJBQWdCO0VBQ2hCLG1CQUFrQixFQUNuQjtBQUVEO0VBQ0UsZ0JBQWUsRUFDaEI7QUFFRDtFQUNFO0lBQ0Usb0JBQW1CLEVBQ3BCO0VBQ0Q7SUFDRSxtQkFBa0IsRUFDbkIsRUFBQTtBQUdIO0VBQ0UsZ0JBQWU7RUFDZixZQUFXO0VBQ1gsYUFBWTtFQUNaLGNBQWE7RUFDYixZQUFXO0VBQ1gsYUFBWTtFQUNaLG1CQUFrQjtFQUNsQixZQUFXO0VBQ1gsa0NBQWlDO0VBQ2pDLGtCQUFpQixFQUNsQjtBQUVEO0VBQ0UsYUFBWSxFQUNiO0FBRUQ7RUFDRSxvQkFBbUIsRUFDcEI7QUFFRDtFQUNFLGlCQUFnQixFQUNqQjtBQUVEO0VBQ0Usa0JBQWlCLEVBQ2xCO0FBRUQ7RUFDRSw0QkFBMkIsRUFDNUI7QUFFRDtFQUNFLFdBQVUsRUFDWDtBQUVEO0VBQ0UsV0FBVSxFQUNYO0FBRUQ7RUFDRSxZQUFXLEVBQ1o7QUFFRDtFQUNFLFlBQVcsRUFDWjtBQUVEO0VBQ0UsWUFBVztFQUNYLG1CQUFrQjtFQUNsQixhQUFZO0VBQ1osa0JBQWlCO0VBQ2pCLFVBQVM7RUFDVCxpQkFBZ0I7RUFDaEIsaUJBQWdCO0VBQ2hCLG1DQUFrQyxFQUNuQztBQUVEO0VBQ0UsaUJBQWdCLEVBQ2pCO0FBRUQ7RUFDRSxjQUFhLEVBQ2Q7QUFFRDtFQUNFLGNBQWEsRUFDZDtBQUVEO0VBQ0UsbUJBQWtCO0VBQ2xCLHFCQUFvQjtFQUNwQixZQUFXO0VBQ1gsaUJBQWdCO0VBQ2hCLGtCQUFpQixFQUNsQjtBQUVEO0VBQ0U7SUFDRSxZQUFXLEVBQ1osRUFBQTtBQUdIO0VBQ0UsdUJBQXNCO0VBQ3RCLDBCQUF5QjtFQUN6QiwrQkFBOEIsRUFDL0I7QUFFRDtFQUNFLG9CQUFtQixFQUNwQjtBQUVEO0VBQ0UsbUJBQWtCO0VBQ2xCLHNCQUFxQjtFQUNyQixZQUFXLEVBQ1o7QUFFRDtFQUNFLG1CQUFrQjtFQUNsQixlQUFjLEVBQ2Y7QUFFRDtFQUNFLDhCQUE2QjtFQUM3QixtQ0FBa0M7RUFDbEMsMkJBQTBCO0VBQzFCLHFDQUFvQztFQUNwQyxVQUFTLEVBQ1Y7QUFFRDtFQUNFLFVBQVM7RUFDVCxxQkFBb0IsRUFDckI7QUFFRDtFQUNFLGNBQWEsRUFDZDtBQUVEO0VBQ0UsZ0NBQStCLEVBQ2hDO0FBRUQ7RUFDRSxpQ0FBZ0MsRUFDakM7QUFFRDtFQUNFLG9CQUFtQjtFQUNuQixpQkFBZ0IsRUFDakI7QUFFRDtFQUNFO0lBQ0Usd0JBQXVCLEVBQ3hCO0VBQ0Q7SUFDRSxlQUFjO0lBQ2QsWUFBVztJQUNYLGlCQUFnQjtJQUNoQixjQUFhO0lBQ2IsYUFBWSxFQUNiO0VBQ0Q7SUFDRSxnQkFBZTtJQUNmLGdCQUFlLEVBQ2hCO0VBQ0Q7SUFDRSw0QkFBMkI7SUFDM0IsZUFBYztJQUNkLE9BQU0sRUFDUDtFQUNEO0lBQ0UsZUFBYyxFQUNmO0VBQ0Q7SUFDRSxrQkFBaUI7SUFDakIsdUJBQXNCLEVBQ3ZCO0VBQ0Q7SUFDRSxvQkFBbUIsRUFDcEI7RUFDRDtJQUNFLG1CQUFrQjtJQUNsQixzQkFBcUI7SUFDckIsWUFBVyxFQUNaO0VBQ0Q7SUFDRSxtQkFBa0I7SUFDbEIsZUFBYyxFQUNmO0VBQ0Q7SUFDRSw4QkFBNkI7SUFDN0IsbUNBQWtDO0lBQ2xDLDJCQUEwQjtJQUMxQixxQ0FBb0M7SUFDcEMsVUFBUyxFQUNWO0VBQ0Q7SUFDRSxVQUFTO0lBQ1QscUJBQW9CLEVBQ3JCO0VBQ0Q7SUFDRSxjQUFhLEVBQ2QsRUFBQTtBQUdIO0VBQ0UsVUFBUztFQUNULDJCQUEwQjtFQUMxQixpQkFBZ0IsRUFDakI7QUFFRDtFQUNFLG1CQUFrQjtFQUNsQixXQUFVO0VBQ1YsY0FBYTtFQUNiLGFBQVk7RUFDWixhQUFZO0VBQ1osZ0JBQWU7RUFDZixpQ0FBZ0M7RUFDaEMseUJBQXdCLEVBQ3pCO0FBRUQ7RUFDRTtJQUNFLHdCQUF1QjtJQUN2QixnQkFBZSxFQUNoQixFQUFBO0FBR0g7RUFDRTtJQUNFLHdCQUF1QjtJQUN2QixnQkFBZSxFQUNoQixFQUFBO0FBR0g7RUFDRTtJQUNFLHdCQUF1QjtJQUN2QixnQkFBZSxFQUNoQixFQUFBO0FBR0g7RUFDRSwyQkFBa0I7RUFDbEIsMkJBQWtCLEVBQ25CO0FBRUQ7RUFDRSxpQkFBZ0IsRUFDakI7QUFFRDtFQUNFLGlCQUFnQixFQUNqQjtBQUVEO0VBQ0UsbUJBQWtCLEVBQ25CO0FBRUQ7O0VBRUUsdURBQXNEO0VBQ3RELGFBQVksRUFDYjtBQUVEO0VBQ0UsbUJBQWtCO0VBQ2xCLE9BQU07RUFDTixRQUFPO0VBQ1AsZUFBYztFQUNkLFlBQVc7RUFDWCxpQkFBZ0I7RUFDaEIsdUNBQXVDO0VBQ3ZDLGlCQUFnQjtFQUNoQixlQUFjO0VBQ2QsOEJBQTZCO0VBQzdCLHVCQUFzQjtFQUV0QixpQ0FBZ0MsRUFDakM7QUFFRDtFQUNFLG1CQUFrQixFQUNuQjtBQUVEO0VBQ0UsbUJBQWtCLEVBQ25CO0FBRUQ7RUFDRSxtQkFBa0IsRUFDbkI7QUFFRDtFQUNFLG1CQUFrQixFQUNuQjtBQUVEO0VBQ0UsNkVBQTRFO0VBQzVFLGlEQUFnRCxFQUNqRDtBQUVEO0VBQ0UsOENBQTZDO0VBQzdDLGlEQUFnRDtFQUNoRCxnQkFBZTtFQUNmLFlBQVcsRUFDWjtBQUVEO0VBR0UsY0FBYTtFQUNiLG1CQUFrQjtFQUNsQixTQUFRO0VBQ1IsVUFBUztFQUNULHlCQUF3QjtFQUN4QixhQUFZO0VBQ1osMEJBQXlCLEVBQzFCO0FBRUQ7RUFDRSxlQUFjO0VBQ2Qsa0JBQWlCLEVBQ2xCO0FBRUQ7RUFDRTtJQUNFLDBCQUF5QixFQUMxQixFQUFBO0FBR0g7RUFDRSxZQUFXLEVBQ1o7QUFFRDtFQUNFO0lBQ0UseUJBQXdCLEVBQ3pCLEVBQUEiLCJmaWxlIjoic3JjL2FwcC9hcHAuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIvKiFcclxuICogU3RhcnQgQm9vdHN0cmFwIC0gU0IgQWRtaW4gdjUuMC4yIChodHRwczovL3N0YXJ0Ym9vdHN0cmFwLmNvbS90ZW1wbGF0ZS1vdmVydmlld3Mvc2ItYWRtaW4pXHJcbiAqIENvcHlyaWdodCAyMDEzLTIwMTggU3RhcnQgQm9vdHN0cmFwXHJcbiAqIExpY2Vuc2VkIHVuZGVyIE1JVCAoaHR0cHM6Ly9naXRodWIuY29tL0JsYWNrcm9ja0RpZ2l0YWwvc3RhcnRib290c3RyYXAtc2ItYWRtaW4vYmxvYi9tYXN0ZXIvTElDRU5TRSlcclxuICovXHJcblxyXG5odG1sIHtcclxuICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbiAgbWluLWhlaWdodDogMTAwJTtcclxufVxyXG5cclxuYm9keSB7XHJcbiAgaGVpZ2h0OiAxMDAlO1xyXG59XHJcblxyXG4jd3JhcHBlciB7XHJcbiAgZGlzcGxheTogLXdlYmtpdC1ib3g7XHJcbiAgZGlzcGxheTogLW1zLWZsZXhib3g7XHJcbiAgZGlzcGxheTogZmxleDtcclxufVxyXG5cclxuI3dyYXBwZXIgI2NvbnRlbnQtd3JhcHBlciB7XHJcbiAgb3ZlcmZsb3cteDogaGlkZGVuO1xyXG4gIHdpZHRoOiAxMDAlO1xyXG4gIHBhZGRpbmctdG9wOiAxcmVtO1xyXG4gIHBhZGRpbmctYm90dG9tOiA4MHB4O1xyXG59XHJcblxyXG5ib2R5LmZpeGVkLW5hdiAjY29udGVudC13cmFwcGVyIHtcclxuICBtYXJnaW4tdG9wOiA1NnB4O1xyXG4gIHBhZGRpbmctbGVmdDogOTBweDtcclxufVxyXG5cclxuYm9keS5maXhlZC1uYXYuc2lkZWJhci10b2dnbGVkICNjb250ZW50LXdyYXBwZXIge1xyXG4gIHBhZGRpbmctbGVmdDogMDtcclxufVxyXG5cclxuQG1lZGlhIChtaW4td2lkdGg6IDc2OHB4KSB7XHJcbiAgYm9keS5maXhlZC1uYXYgI2NvbnRlbnQtd3JhcHBlciB7XHJcbiAgICBwYWRkaW5nLWxlZnQ6IDIyNXB4O1xyXG4gIH1cclxuICBib2R5LmZpeGVkLW5hdi5zaWRlYmFyLXRvZ2dsZWQgI2NvbnRlbnQtd3JhcHBlciB7XHJcbiAgICBwYWRkaW5nLWxlZnQ6IDkwcHg7XHJcbiAgfVxyXG59XHJcblxyXG4uc2Nyb2xsLXRvLXRvcCB7XHJcbiAgcG9zaXRpb246IGZpeGVkO1xyXG4gIHJpZ2h0OiAxNXB4O1xyXG4gIGJvdHRvbTogMTVweDtcclxuICBkaXNwbGF5OiBub25lO1xyXG4gIHdpZHRoOiA1MHB4O1xyXG4gIGhlaWdodDogNTBweDtcclxuICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgY29sb3I6ICNmZmY7XHJcbiAgYmFja2dyb3VuZDogcmdiYSg1MiwgNTgsIDY0LCAwLjUpO1xyXG4gIGxpbmUtaGVpZ2h0OiA0NnB4O1xyXG59XHJcblxyXG4uc2Nyb2xsLXRvLXRvcDpmb2N1cywgLnNjcm9sbC10by10b3A6aG92ZXIge1xyXG4gIGNvbG9yOiB3aGl0ZTtcclxufVxyXG5cclxuLnNjcm9sbC10by10b3A6aG92ZXIge1xyXG4gIGJhY2tncm91bmQ6ICMzNDNhNDA7XHJcbn1cclxuXHJcbi5zY3JvbGwtdG8tdG9wIGkge1xyXG4gIGZvbnQtd2VpZ2h0OiA4MDA7XHJcbn1cclxuXHJcbi5zbWFsbGVyIHtcclxuICBmb250LXNpemU6IDAuN3JlbTtcclxufVxyXG5cclxuLm8taGlkZGVuIHtcclxuICBvdmVyZmxvdzogaGlkZGVuICFpbXBvcnRhbnQ7XHJcbn1cclxuXHJcbi56LTAge1xyXG4gIHotaW5kZXg6IDA7XHJcbn1cclxuXHJcbi56LTEge1xyXG4gIHotaW5kZXg6IDE7XHJcbn1cclxuXHJcbi5uYXZiYXItbmF2IC5mb3JtLWlubGluZSAuaW5wdXQtZ3JvdXAge1xyXG4gIHdpZHRoOiAxMDAlO1xyXG59XHJcblxyXG4ubmF2YmFyLW5hdiAubmF2LWl0ZW0uYWN0aXZlIC5uYXYtbGluayB7XHJcbiAgY29sb3I6ICNmZmY7XHJcbn1cclxuXHJcbi5uYXZiYXItbmF2IC5uYXYtaXRlbS5kcm9wZG93biAuZHJvcGRvd24tdG9nZ2xlOjphZnRlciB7XHJcbiAgd2lkdGg6IDFyZW07XHJcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gIGZsb2F0OiByaWdodDtcclxuICB2ZXJ0aWNhbC1hbGlnbjogMDtcclxuICBib3JkZXI6IDA7XHJcbiAgZm9udC13ZWlnaHQ6IDkwMDtcclxuICBjb250ZW50OiAnXFxmMTA1JztcclxuICBmb250LWZhbWlseTogJ0ZvbnQgQXdlc29tZSA1IEZyZWUnO1xyXG59XHJcblxyXG4ubmF2YmFyLW5hdiAubmF2LWl0ZW0uZHJvcGRvd24uc2hvdyAuZHJvcGRvd24tdG9nZ2xlOjphZnRlciB7XHJcbiAgY29udGVudDogJ1xcZjEwNyc7XHJcbn1cclxuXHJcbi5uYXZiYXItbmF2IC5uYXYtaXRlbS5kcm9wZG93bi5uby1hcnJvdyAuZHJvcGRvd24tdG9nZ2xlOjphZnRlciB7XHJcbiAgZGlzcGxheTogbm9uZTtcclxufVxyXG5cclxuLm5hdmJhci1uYXYgLm5hdi1pdGVtIC5uYXYtbGluazpmb2N1cyB7XHJcbiAgb3V0bGluZTogbm9uZTtcclxufVxyXG5cclxuLm5hdmJhci1uYXYgLm5hdi1pdGVtIC5uYXYtbGluayAuYmFkZ2Uge1xyXG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICBtYXJnaW4tbGVmdDogMC43NXJlbTtcclxuICB0b3A6IDAuM3JlbTtcclxuICBmb250LXdlaWdodDogNDAwO1xyXG4gIGZvbnQtc2l6ZTogMC41cmVtO1xyXG59XHJcblxyXG5AbWVkaWEgKG1pbi13aWR0aDogNzY4cHgpIHtcclxuICAubmF2YmFyLW5hdiAuZm9ybS1pbmxpbmUgLmlucHV0LWdyb3VwIHtcclxuICAgIHdpZHRoOiBhdXRvO1xyXG4gIH1cclxufVxyXG5cclxuLnNpZGViYXIge1xyXG4gIHdpZHRoOiA5MHB4ICFpbXBvcnRhbnQ7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogIzIxMjUyOTtcclxuICBtaW4taGVpZ2h0OiBjYWxjKDEwMHZoIC0gNTZweCk7XHJcbn1cclxuXHJcbi5zaWRlYmFyIC5uYXYtaXRlbTpsYXN0LWNoaWxkIHtcclxuICBtYXJnaW4tYm90dG9tOiAxcmVtO1xyXG59XHJcblxyXG4uc2lkZWJhciAubmF2LWl0ZW0gLm5hdi1saW5rIHtcclxuICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgcGFkZGluZzogMC43NXJlbSAxcmVtO1xyXG4gIHdpZHRoOiA5MHB4O1xyXG59XHJcblxyXG4uc2lkZWJhciAubmF2LWl0ZW0gLm5hdi1saW5rIHNwYW4ge1xyXG4gIGZvbnQtc2l6ZTogMC42NXJlbTtcclxuICBkaXNwbGF5OiBibG9jaztcclxufVxyXG5cclxuLnNpZGViYXIgLm5hdi1pdGVtIC5kcm9wZG93bi1tZW51IHtcclxuICBwb3NpdGlvbjogYWJzb2x1dGUgIWltcG9ydGFudDtcclxuICAtd2Via2l0LXRyYW5zZm9ybTogbm9uZSAhaW1wb3J0YW50O1xyXG4gIHRyYW5zZm9ybTogbm9uZSAhaW1wb3J0YW50O1xyXG4gIGxlZnQ6IGNhbGMoOTBweCArIDAuNXJlbSkgIWltcG9ydGFudDtcclxuICBtYXJnaW46IDA7XHJcbn1cclxuXHJcbi5zaWRlYmFyIC5uYXYtaXRlbSAuZHJvcGRvd24tbWVudS5kcm9wdXAge1xyXG4gIGJvdHRvbTogMDtcclxuICB0b3A6IGF1dG8gIWltcG9ydGFudDtcclxufVxyXG5cclxuLnNpZGViYXIgLm5hdi1pdGVtLmRyb3Bkb3duIC5kcm9wZG93bi10b2dnbGU6OmFmdGVyIHtcclxuICBkaXNwbGF5OiBub25lO1xyXG59XHJcblxyXG4uc2lkZWJhciAubmF2LWl0ZW0gLm5hdi1saW5rIHtcclxuICBjb2xvcjogcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjUpO1xyXG59XHJcblxyXG4uc2lkZWJhciAubmF2LWl0ZW0gLm5hdi1saW5rOmFjdGl2ZSwgLnNpZGViYXIgLm5hdi1pdGVtIC5uYXYtbGluazpmb2N1cywgLnNpZGViYXIgLm5hdi1pdGVtIC5uYXYtbGluazpob3ZlciB7XHJcbiAgY29sb3I6IHJnYmEoMjU1LCAyNTUsIDI1NSwgMC43NSk7XHJcbn1cclxuXHJcbi5zaWRlYmFyLnRvZ2dsZWQge1xyXG4gIHdpZHRoOiAwICFpbXBvcnRhbnQ7XHJcbiAgb3ZlcmZsb3c6IGhpZGRlbjtcclxufVxyXG5cclxuQG1lZGlhIChtaW4td2lkdGg6IDc2OHB4KSB7XHJcbiAgLnNpZGViYXIge1xyXG4gICAgd2lkdGg6IDIyNXB4ICFpbXBvcnRhbnQ7XHJcbiAgfVxyXG4gIC5zaWRlYmFyIC5uYXYtaXRlbSAubmF2LWxpbmsge1xyXG4gICAgZGlzcGxheTogYmxvY2s7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIHRleHQtYWxpZ246IGxlZnQ7XHJcbiAgICBwYWRkaW5nOiAxcmVtO1xyXG4gICAgd2lkdGg6IDIyNXB4O1xyXG4gIH1cclxuICAuc2lkZWJhciAubmF2LWl0ZW0gLm5hdi1saW5rIHNwYW4ge1xyXG4gICAgZm9udC1zaXplOiAxcmVtO1xyXG4gICAgZGlzcGxheTogaW5saW5lO1xyXG4gIH1cclxuICAuc2lkZWJhciAubmF2LWl0ZW0gLmRyb3Bkb3duLW1lbnUge1xyXG4gICAgcG9zaXRpb246IHN0YXRpYyAhaW1wb3J0YW50O1xyXG4gICAgbWFyZ2luOiAwIDFyZW07XHJcbiAgICB0b3A6IDA7XHJcbiAgfVxyXG4gIC5zaWRlYmFyIC5uYXYtaXRlbS5kcm9wZG93biAuZHJvcGRvd24tdG9nZ2xlOjphZnRlciB7XHJcbiAgICBkaXNwbGF5OiBibG9jaztcclxuICB9XHJcbiAgLnNpZGViYXIudG9nZ2xlZCB7XHJcbiAgICBvdmVyZmxvdzogdmlzaWJsZTtcclxuICAgIHdpZHRoOiA5MHB4ICFpbXBvcnRhbnQ7XHJcbiAgfVxyXG4gIC5zaWRlYmFyLnRvZ2dsZWQgLm5hdi1pdGVtOmxhc3QtY2hpbGQge1xyXG4gICAgbWFyZ2luLWJvdHRvbTogMXJlbTtcclxuICB9XHJcbiAgLnNpZGViYXIudG9nZ2xlZCAubmF2LWl0ZW0gLm5hdi1saW5rIHtcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICAgIHBhZGRpbmc6IDAuNzVyZW0gMXJlbTtcclxuICAgIHdpZHRoOiA5MHB4O1xyXG4gIH1cclxuICAuc2lkZWJhci50b2dnbGVkIC5uYXYtaXRlbSAubmF2LWxpbmsgc3BhbiB7XHJcbiAgICBmb250LXNpemU6IDAuNjVyZW07XHJcbiAgICBkaXNwbGF5OiBibG9jaztcclxuICB9XHJcbiAgLnNpZGViYXIudG9nZ2xlZCAubmF2LWl0ZW0gLmRyb3Bkb3duLW1lbnUge1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlICFpbXBvcnRhbnQ7XHJcbiAgICAtd2Via2l0LXRyYW5zZm9ybTogbm9uZSAhaW1wb3J0YW50O1xyXG4gICAgdHJhbnNmb3JtOiBub25lICFpbXBvcnRhbnQ7XHJcbiAgICBsZWZ0OiBjYWxjKDkwcHggKyAwLjVyZW0pICFpbXBvcnRhbnQ7XHJcbiAgICBtYXJnaW46IDA7XHJcbiAgfVxyXG4gIC5zaWRlYmFyLnRvZ2dsZWQgLm5hdi1pdGVtIC5kcm9wZG93bi1tZW51LmRyb3B1cCB7XHJcbiAgICBib3R0b206IDA7XHJcbiAgICB0b3A6IGF1dG8gIWltcG9ydGFudDtcclxuICB9XHJcbiAgLnNpZGViYXIudG9nZ2xlZCAubmF2LWl0ZW0uZHJvcGRvd24gLmRyb3Bkb3duLXRvZ2dsZTo6YWZ0ZXIge1xyXG4gICAgZGlzcGxheTogbm9uZTtcclxuICB9XHJcbn1cclxuXHJcbi5zaWRlYmFyLmZpeGVkLXRvcCB7XHJcbiAgdG9wOiA1NnB4O1xyXG4gIGhlaWdodDogY2FsYygxMDB2aCAtIDU2cHgpO1xyXG4gIG92ZXJmbG93LXk6IGF1dG87XHJcbn1cclxuXHJcbi5jYXJkLWJvZHktaWNvbiB7XHJcbiAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gIHotaW5kZXg6IDA7XHJcbiAgdG9wOiAtMS4yNXJlbTtcclxuICByaWdodDogLTFyZW07XHJcbiAgb3BhY2l0eTogMC40O1xyXG4gIGZvbnQtc2l6ZTogNXJlbTtcclxuICAtd2Via2l0LXRyYW5zZm9ybTogcm90YXRlKDE1ZGVnKTtcclxuICB0cmFuc2Zvcm06IHJvdGF0ZSgxNWRlZyk7XHJcbn1cclxuXHJcbkBtZWRpYSAobWluLXdpZHRoOiA1NzZweCkge1xyXG4gIC5jYXJkLWNvbHVtbnMge1xyXG4gICAgLXdlYmtpdC1jb2x1bW4tY291bnQ6IDE7XHJcbiAgICBjb2x1bW4tY291bnQ6IDE7XHJcbiAgfVxyXG59XHJcblxyXG5AbWVkaWEgKG1pbi13aWR0aDogNzY4cHgpIHtcclxuICAuY2FyZC1jb2x1bW5zIHtcclxuICAgIC13ZWJraXQtY29sdW1uLWNvdW50OiAyO1xyXG4gICAgY29sdW1uLWNvdW50OiAyO1xyXG4gIH1cclxufVxyXG5cclxuQG1lZGlhIChtaW4td2lkdGg6IDEyMDBweCkge1xyXG4gIC5jYXJkLWNvbHVtbnMge1xyXG4gICAgLXdlYmtpdC1jb2x1bW4tY291bnQ6IDI7XHJcbiAgICBjb2x1bW4tY291bnQ6IDI7XHJcbiAgfVxyXG59XHJcblxyXG46cm9vdCB7XHJcbiAgLS1pbnB1dC1wYWRkaW5nLXg6IDAuNzVyZW07XHJcbiAgLS1pbnB1dC1wYWRkaW5nLXk6IDAuNzVyZW07XHJcbn1cclxuXHJcbi5jYXJkLWxvZ2luIHtcclxuICBtYXgtd2lkdGg6IDI1cmVtO1xyXG59XHJcblxyXG4uY2FyZC1yZWdpc3RlciB7XHJcbiAgbWF4LXdpZHRoOiA0MHJlbTtcclxufVxyXG5cclxuLmZvcm0tbGFiZWwtZ3JvdXAge1xyXG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxufVxyXG5cclxuLmZvcm0tbGFiZWwtZ3JvdXAgPiBpbnB1dCxcclxuLmZvcm0tbGFiZWwtZ3JvdXAgPiBsYWJlbCB7XHJcbiAgcGFkZGluZzogdmFyKC0taW5wdXQtcGFkZGluZy15KSB2YXIoLS1pbnB1dC1wYWRkaW5nLXgpO1xyXG4gIGhlaWdodDogYXV0bztcclxufVxyXG5cclxuLmZvcm0tbGFiZWwtZ3JvdXAgPiBsYWJlbCB7XHJcbiAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gIHRvcDogMDtcclxuICBsZWZ0OiAwO1xyXG4gIGRpc3BsYXk6IGJsb2NrO1xyXG4gIHdpZHRoOiAxMDAlO1xyXG4gIG1hcmdpbi1ib3R0b206IDA7XHJcbiAgLyogT3ZlcnJpZGUgZGVmYXVsdCBgPGxhYmVsPmAgbWFyZ2luICovXHJcbiAgbGluZS1oZWlnaHQ6IDEuNTtcclxuICBjb2xvcjogIzQ5NTA1NztcclxuICBib3JkZXI6IDFweCBzb2xpZCB0cmFuc3BhcmVudDtcclxuICBib3JkZXItcmFkaXVzOiAwLjI1cmVtO1xyXG4gIC13ZWJraXQtdHJhbnNpdGlvbjogYWxsIDAuMXMgZWFzZS1pbi1vdXQ7XHJcbiAgdHJhbnNpdGlvbjogYWxsIDAuMXMgZWFzZS1pbi1vdXQ7XHJcbn1cclxuXHJcbi5mb3JtLWxhYmVsLWdyb3VwIGlucHV0Ojotd2Via2l0LWlucHV0LXBsYWNlaG9sZGVyIHtcclxuICBjb2xvcjogdHJhbnNwYXJlbnQ7XHJcbn1cclxuXHJcbi5mb3JtLWxhYmVsLWdyb3VwIGlucHV0Oi1tcy1pbnB1dC1wbGFjZWhvbGRlciB7XHJcbiAgY29sb3I6IHRyYW5zcGFyZW50O1xyXG59XHJcblxyXG4uZm9ybS1sYWJlbC1ncm91cCBpbnB1dDo6LW1zLWlucHV0LXBsYWNlaG9sZGVyIHtcclxuICBjb2xvcjogdHJhbnNwYXJlbnQ7XHJcbn1cclxuXHJcbi5mb3JtLWxhYmVsLWdyb3VwIGlucHV0OjpwbGFjZWhvbGRlciB7XHJcbiAgY29sb3I6IHRyYW5zcGFyZW50O1xyXG59XHJcblxyXG4uZm9ybS1sYWJlbC1ncm91cCBpbnB1dDpub3QoOnBsYWNlaG9sZGVyLXNob3duKSB7XHJcbiAgcGFkZGluZy10b3A6IGNhbGModmFyKC0taW5wdXQtcGFkZGluZy15KSArIHZhcigtLWlucHV0LXBhZGRpbmcteSkgKiAoMiAvIDMpKTtcclxuICBwYWRkaW5nLWJvdHRvbTogY2FsYyh2YXIoLS1pbnB1dC1wYWRkaW5nLXkpIC8gMyk7XHJcbn1cclxuXHJcbi5mb3JtLWxhYmVsLWdyb3VwIGlucHV0Om5vdCg6cGxhY2Vob2xkZXItc2hvd24pIH4gbGFiZWwge1xyXG4gIHBhZGRpbmctdG9wOiBjYWxjKHZhcigtLWlucHV0LXBhZGRpbmcteSkgLyAzKTtcclxuICBwYWRkaW5nLWJvdHRvbTogY2FsYyh2YXIoLS1pbnB1dC1wYWRkaW5nLXkpIC8gMyk7XHJcbiAgZm9udC1zaXplOiAxMnB4O1xyXG4gIGNvbG9yOiAjNzc3O1xyXG59XHJcblxyXG5mb290ZXIuc3RpY2t5LWZvb3RlciB7XHJcbiAgZGlzcGxheTogLXdlYmtpdC1ib3g7XHJcbiAgZGlzcGxheTogLW1zLWZsZXhib3g7XHJcbiAgZGlzcGxheTogZmxleDtcclxuICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgcmlnaHQ6IDA7XHJcbiAgYm90dG9tOiAwO1xyXG4gIHdpZHRoOiBjYWxjKDEwMCUgLSA5MHB4KTtcclxuICBoZWlnaHQ6IDgwcHg7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogI2U5ZWNlZjtcclxufVxyXG5cclxuZm9vdGVyLnN0aWNreS1mb290ZXIgLmNvcHlyaWdodCB7XHJcbiAgbGluZS1oZWlnaHQ6IDE7XHJcbiAgZm9udC1zaXplOiAwLjhyZW07XHJcbn1cclxuXHJcbkBtZWRpYSAobWluLXdpZHRoOiA3NjhweCkge1xyXG4gIGZvb3Rlci5zdGlja3ktZm9vdGVyIHtcclxuICAgIHdpZHRoOiBjYWxjKDEwMCUgLSAyMjVweCk7XHJcbiAgfVxyXG59XHJcblxyXG5ib2R5LnNpZGViYXItdG9nZ2xlZCBmb290ZXIuc3RpY2t5LWZvb3RlciB7XHJcbiAgd2lkdGg6IDEwMCU7XHJcbn1cclxuXHJcbkBtZWRpYSAobWluLXdpZHRoOiA3NjhweCkge1xyXG4gIGJvZHkuc2lkZWJhci10b2dnbGVkIGZvb3Rlci5zdGlja3ktZm9vdGVyIHtcclxuICAgIHdpZHRoOiBjYWxjKDEwMCUgLSA5MHB4KTtcclxuICB9XHJcbn1cclxuIl19 */"
 
 /***/ }),
 
@@ -93,23 +93,31 @@ module.exports = "/*!\r\n * Start Bootstrap - SB Admin v5.0.2 (https://startboot
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppComponent", function() { return AppComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _global__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./global */ "./src/app/global.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
 
 var AppComponent = /** @class */ (function () {
-    function AppComponent() {
+    function AppComponent(globalVariable) {
+        this.globalVariable = globalVariable;
         this.title = 'frontend';
+        this.globalVariable.getEndpoint();
     }
     AppComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-root',
             template: __webpack_require__(/*! ./app.component.html */ "./src/app/app.component.html"),
             styles: [__webpack_require__(/*! ./app.component.scss */ "./src/app/app.component.scss")]
-        })
+        }),
+        __metadata("design:paramtypes", [_global__WEBPACK_IMPORTED_MODULE_1__["GlobalVariable"]])
     ], AppComponent);
     return AppComponent;
 }());
@@ -189,6 +197,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _directions_product_base_can_base_can_component__WEBPACK_IMPORTED_MODULE_57__ = __webpack_require__(/*! ./directions/product/base-can/base-can.component */ "./src/app/directions/product/base-can/base-can.component.ts");
 /* harmony import */ var _components_setting_customer_customer_component__WEBPACK_IMPORTED_MODULE_58__ = __webpack_require__(/*! ./components/setting/customer/customer.component */ "./src/app/components/setting/customer/customer.component.ts");
 /* harmony import */ var _components_user_user_component__WEBPACK_IMPORTED_MODULE_59__ = __webpack_require__(/*! ./components/user/user.component */ "./src/app/components/user/user.component.ts");
+/* harmony import */ var _components_company_company_component__WEBPACK_IMPORTED_MODULE_60__ = __webpack_require__(/*! ./components/company/company.component */ "./src/app/components/company/company.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -259,6 +268,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
 var routes = [
     { 'path': '', redirectTo: 'login', pathMatch: 'full' },
     { 'path': 'index', component: _components_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_32__["DashboardComponent"] },
@@ -275,6 +285,7 @@ var routes = [
             { path: 'collection', component: _components_setting_collection_collection_component__WEBPACK_IMPORTED_MODULE_40__["CollectionComponent"] },
             { path: 'product', component: _components_setting_product_product_component__WEBPACK_IMPORTED_MODULE_41__["ProductComponent"] },
             { path: 'customer', component: _components_setting_customer_customer_component__WEBPACK_IMPORTED_MODULE_58__["CustomerComponent"] },
+            { path: 'company', component: _components_company_company_component__WEBPACK_IMPORTED_MODULE_60__["CompanyComponent"] },
             // {path: 'product/view-detail/:id', component: ViewDetailComponent},
             { path: 'formula', component: _components_formula_formula_formula_component__WEBPACK_IMPORTED_MODULE_42__["FormulaComponent"] },
             // {path: 'formula', loadChildren: './components/formula/'},
@@ -336,6 +347,7 @@ var AppModule = /** @class */ (function () {
                 // machine component
                 _components_machine_machinesetting_machinesetting_component__WEBPACK_IMPORTED_MODULE_51__["MachineSettingComponent"],
                 _components_user_user_component__WEBPACK_IMPORTED_MODULE_59__["UserComponent"],
+                _components_company_company_component__WEBPACK_IMPORTED_MODULE_60__["CompanyComponent"],
                 // test component
                 _components_issue_list_list_component__WEBPACK_IMPORTED_MODULE_12__["ListComponent"],
                 _components_issue_create_create_component__WEBPACK_IMPORTED_MODULE_13__["CreateComponent"],
@@ -533,7 +545,7 @@ module.exports = "<div class=\"task-content\" *ngIf=\"dispenseStepTask != null\"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".color-bar {\n  width: 100%;\n  display: inline-block;\n  position: relative;\n  height: 1em; }\n  .color-bar .color-select {\n    display: inline-block;\n    position: absolute;\n    top: 0px;\n    left: 0px;\n    bottom: 0px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9iYWNrZ3JvdW5kdGFzay92aWV3ZGlzcGVuc2V0YXNrL1g6XFx3c19sZWFybmluZ1xcY2xpZW50dmlldHBvd2VyL3NyY1xcYXBwXFxjb21wb25lbnRzXFxiYWNrZ3JvdW5kdGFza1xcdmlld2Rpc3BlbnNldGFza1xcdmlld2Rpc3BlbnNldGFzay5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLFlBQVc7RUFDWCxzQkFBcUI7RUFDckIsbUJBQWtCO0VBQ2xCLFlBQVcsRUFTWjtFQWJEO0lBT0ksc0JBQXFCO0lBQ3JCLG1CQUFrQjtJQUNsQixTQUFRO0lBQ1IsVUFBUztJQUNULFlBQVcsRUFDWiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvYmFja2dyb3VuZHRhc2svdmlld2Rpc3BlbnNldGFzay92aWV3ZGlzcGVuc2V0YXNrLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmNvbG9yLWJhcntcclxuICB3aWR0aDogMTAwJTtcclxuICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XHJcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG4gIGhlaWdodDogMWVtO1xyXG5cclxuICAuY29sb3Itc2VsZWN0e1xyXG4gICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgdG9wOiAwcHg7XHJcbiAgICBsZWZ0OiAwcHg7XHJcbiAgICBib3R0b206IDBweDtcclxuICB9XHJcbn1cclxuIl19 */"
+module.exports = ".color-bar {\n  width: 100%;\n  display: inline-block;\n  position: relative;\n  height: 1em; }\n  .color-bar .color-select {\n    display: inline-block;\n    position: absolute;\n    top: 0px;\n    left: 0px;\n    bottom: 0px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9iYWNrZ3JvdW5kdGFzay92aWV3ZGlzcGVuc2V0YXNrL0c6XFxXb3Jrc3BhY2VcXGNsaWVudHZpZXRwb3dlci9zcmNcXGFwcFxcY29tcG9uZW50c1xcYmFja2dyb3VuZHRhc2tcXHZpZXdkaXNwZW5zZXRhc2tcXHZpZXdkaXNwZW5zZXRhc2suY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxZQUFXO0VBQ1gsc0JBQXFCO0VBQ3JCLG1CQUFrQjtFQUNsQixZQUFXLEVBU1o7RUFiRDtJQU9JLHNCQUFxQjtJQUNyQixtQkFBa0I7SUFDbEIsU0FBUTtJQUNSLFVBQVM7SUFDVCxZQUFXLEVBQ1oiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL2JhY2tncm91bmR0YXNrL3ZpZXdkaXNwZW5zZXRhc2svdmlld2Rpc3BlbnNldGFzay5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jb2xvci1iYXJ7XHJcbiAgd2lkdGg6IDEwMCU7XHJcbiAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuICBoZWlnaHQ6IDFlbTtcclxuXHJcbiAgLmNvbG9yLXNlbGVjdHtcclxuICAgIGRpc3BsYXk6IGlubGluZS1ibG9jaztcclxuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgIHRvcDogMHB4O1xyXG4gICAgbGVmdDogMHB4O1xyXG4gICAgYm90dG9tOiAwcHg7XHJcbiAgfVxyXG59XHJcbiJdfQ== */"
 
 /***/ }),
 
@@ -599,6 +611,116 @@ var ViewDispenseTaskComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/components/company/company.component.html":
+/*!***********************************************************!*\
+  !*** ./src/app/components/company/company.component.html ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"block-header\" *ngIf=\"dbItem != null\">\n  <h1>Company {{dbItem.code}}</h1>\n</div>\n\n<div class=\"row\" *ngIf=\"dbItem != null\">\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n    <div class=\"card\">\n      <div class=\"card-header\">\n        Company {{dbItem.code}} Information\n      </div>\n\n      <div class=\"card-body\">\n        <form class=\"form form-horizontal form-detail\">\n          <div class=\"form-body\">\n            <div class=\"form-group row\">\n              <label class=\"col-md-3 label-control\">Company Name</label>\n              <div class=\"col-md-8\">\n                <input type=\"text\" [(ngModel)]=\"dbItem.name\" class=\"form-control\" [ngModelOptions]=\"{standalone: true}\">\n\n                <ng-container *ngIf=\"errorValidation != null && errorValidation['name'] != null\">\n                  <span class=\"error-label\">{{errorValidation['name']}}</span>\n                </ng-container>\n              </div>\n            </div>\n\n            <div class=\"form-group row\">\n              <label class=\"col-md-3 label-control\">Phone Number</label>\n              <div class=\"col-md-8\">\n                <input type=\"text\" [(ngModel)]=\"dbItem.phone\" class=\"form-control\" [ngModelOptions]=\"{standalone: true}\">\n\n                <ng-container *ngIf=\"errorValidation != null && errorValidation['phone'] != null\">\n                  <span class=\"error-label\">{{errorValidation['phone']}}</span>\n                </ng-container>\n              </div>\n            </div>\n\n            <div class=\"form-group row\">\n              <label class=\"col-md-3 label-control\">website</label>\n              <div class=\"col-md-8\">\n                <input type=\"text\" [(ngModel)]=\"dbItem.website\" class=\"form-control\" [ngModelOptions]=\"{standalone: true}\">\n\n                <ng-container *ngIf=\"errorValidation != null && errorValidation['website'] != null\">\n                  <span class=\"error-label\">{{errorValidation['website']}}</span>\n                </ng-container>\n              </div>\n            </div>\n\n            <div class=\"form-group row\">\n              <label class=\"col-md-3 label-control\">email</label>\n              <div class=\"col-md-8\">\n                <input type=\"text\" [(ngModel)]=\"dbItem.email\" class=\"form-control\" [ngModelOptions]=\"{standalone: true}\">\n\n                <ng-container *ngIf=\"errorValidation != null && errorValidation['email'] != null\">\n                  <span class=\"error-label\">{{errorValidation['email']}}</span>\n                </ng-container>\n              </div>\n            </div>\n\n            <div class=\"form-group row\">\n              <label class=\"col-md-3 label-control\">address</label>\n              <div class=\"col-md-8\">\n                <input type=\"text\" [(ngModel)]=\"dbItem.address\" class=\"form-control\" [ngModelOptions]=\"{standalone: true}\">\n\n                <ng-container *ngIf=\"errorValidation != null && errorValidation['address'] != null\">\n                  <span class=\"error-label\">{{errorValidation['address']}}</span>\n                </ng-container>\n              </div>\n            </div>\n\n            <div class=\"form-group row\">\n              <label class=\"col-md-3 label-control\">city</label>\n              <div class=\"col-md-8\">\n                <input type=\"text\" [(ngModel)]=\"dbItem.city\" class=\"form-control\" [ngModelOptions]=\"{standalone: true}\">\n\n                <ng-container *ngIf=\"errorValidation != null && errorValidation['city'] != null\">\n                  <span class=\"error-label\">{{errorValidation['city']}}</span>\n                </ng-container>\n              </div>\n            </div>\n          </div>\n          <input type=\"hidden\" [(ngModel)]=\"dbItem.companyId\" [ngModelOptions]=\"{standalone: true}\">\n        </form>\n      </div>\n      <div class=\"card-footer\">\n        <button class=\"btn btn-primary\" (click)=\"updateCompanyInfo()\">Update</button>\n      </div>\n    </div>\n  </div>\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/components/company/company.component.scss":
+/*!***********************************************************!*\
+  !*** ./src/app/components/company/company.component.scss ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvY29tcGFueS9jb21wYW55LmNvbXBvbmVudC5zY3NzIn0= */"
+
+/***/ }),
+
+/***/ "./src/app/components/company/company.component.ts":
+/*!*********************************************************!*\
+  !*** ./src/app/components/company/company.component.ts ***!
+  \*********************************************************/
+/*! exports provided: CompanyComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CompanyComponent", function() { return CompanyComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_store_store_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/store/store.service */ "./src/app/services/store/store.service.ts");
+/* harmony import */ var _services_user_user_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/user/user.service */ "./src/app/services/user/user.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var CompanyComponent = /** @class */ (function () {
+    function CompanyComponent(router, storeService, userService) {
+        this.router = router;
+        this.storeService = storeService;
+        this.userService = userService;
+    }
+    CompanyComponent.prototype.ngOnInit = function () {
+        this.dbItem = this.storeService.getLoginUserData().company;
+    };
+    CompanyComponent.prototype.updateCompanyInfo = function () {
+        var _this = this;
+        this.errorValidation = {};
+        var errorData = this.validateDataBeforeSubmit();
+        if (!errorData.hasError) {
+            this.userService.updateCompanyInfo(this.dbItem).subscribe(function (data) {
+                _this.storeService.getLoginUserData().company = data;
+                _this.router.navigate(['/dashboard']);
+            });
+        }
+        else {
+            this.errorValidation = errorData.mapErrors;
+        }
+    };
+    CompanyComponent.prototype.validateDataBeforeSubmit = function () {
+        var hasError = false;
+        var mapErrors = {};
+        if (this.dbItem.name == null || this.dbItem.name.trim() === '') {
+            hasError = true;
+            mapErrors['name'] = 'Please enter the Company Name!';
+        }
+        if (this.dbItem.phone == null || this.dbItem.phone.trim() === '') {
+            hasError = true;
+            mapErrors['phone'] = 'Please enter the Phone Number';
+        }
+        if (this.dbItem.website == null || this.dbItem.website.trim() === '') {
+            hasError = true;
+            mapErrors['website'] = 'Please enter the website!';
+        }
+        if (this.dbItem.email == null || this.dbItem.email.trim() === '') {
+            hasError = true;
+            mapErrors['email'] = 'Please enter the email';
+        }
+        return {
+            hasError: hasError, mapErrors: mapErrors
+        };
+    };
+    CompanyComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-company',
+            template: __webpack_require__(/*! ./company.component.html */ "./src/app/components/company/company.component.html"),
+            styles: [__webpack_require__(/*! ./company.component.scss */ "./src/app/components/company/company.component.scss")]
+        }),
+        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], _services_store_store_service__WEBPACK_IMPORTED_MODULE_1__["StoreService"], _services_user_user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"]])
+    ], CompanyComponent);
+    return CompanyComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/components/dashboard/dashboard.component.html":
 /*!***************************************************************!*\
   !*** ./src/app/components/dashboard/dashboard.component.html ***!
@@ -606,7 +728,7 @@ var ViewDispenseTaskComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-header></app-header>\r\n<div id=\"wrapper\">\r\n  <div id=\"content-wrapper\">\r\n    <div class=\"container-fluid\">\r\n\r\n      <div class=\"container\">\r\n        <app-breadcrumb></app-breadcrumb>\r\n      </div>\r\n\r\n      <div class=\"container\">\r\n        <router-outlet></router-outlet>\r\n      </div>\r\n\r\n      <!--<section class=\"content\">-->\r\n      <!---->\r\n      <!--</section>-->\r\n<!---->\r\n      <!--<section class=\"content\">-->\r\n        <!---->\r\n      <!--</section>-->\r\n    </div>\r\n  </div>\r\n\r\n  <app-footer></app-footer>\r\n</div>\r\n"
+module.exports = "<app-header></app-header>\n<div id=\"wrapper\">\n  <div id=\"content-wrapper\">\n    <div class=\"container-fluid\">\n\n      <div class=\"container\">\n        <app-breadcrumb></app-breadcrumb>\n      </div>\n\n      <div class=\"container\">\n        <router-outlet></router-outlet>\n      </div>\n\n      <!--<section class=\"content\">-->\n      <!---->\n      <!--</section>-->\n<!---->\n      <!--<section class=\"content\">-->\n        <!---->\n      <!--</section>-->\n    </div>\n  </div>\n\n  <app-footer></app-footer>\n</div>\n"
 
 /***/ }),
 
@@ -652,7 +774,6 @@ var DashboardComponent = /** @class */ (function () {
         this.validateMachineData();
     };
     DashboardComponent.prototype.validateMachineData = function () {
-        this.dashboardService.validateMachineData();
     };
     DashboardComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -676,7 +797,7 @@ var DashboardComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"block-header\">\r\n  <h1>{{viewMode}} Formula</h1>\r\n</div>\r\n\r\n<div class=\"row\" *ngIf=\"dbItem != null\">\r\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n    <div class=\"card filter-card\">\r\n      <div class=\"card-header\">\r\n        Standard Formula\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        <form class=\"form form-horizontal form-detail\">\r\n          <div class=\"form-body\">\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-md-2 label-control\">Formula Code</label>\r\n              <div class=\"input-group input-group-sm col-md-4\">\r\n                <input type=\"text\" [(ngModel)]=\"dbItem.formula.formulaCode\" class=\"form-control\" [ngModelOptions]=\"{standalone: true}\" (change)=\"clearErrorField('formulaCode')\">\r\n                <ng-container *ngIf=\"errorValidation['formulaCode'] != null\">\r\n                  <span class=\"error-label\">{{errorValidation['formulaCode']}}</span>\r\n                </ng-container>\r\n              </div>\r\n\r\n              <label class=\"col-md-2 label-control\">Formula name</label>\r\n              <div class=\"input-group input-group-sm col-md-4\">\r\n                <input type=\"text\" [(ngModel)]=\"dbItem.formula.formulaName\" class=\"form-control\" [ngModelOptions]=\"{standalone: true}\" (change)=\"clearErrorField('formulaName')\">\r\n                <ng-container *ngIf=\"errorValidation['formulaName'] != null\">\r\n                  <span class=\"error-label\">{{errorValidation['formulaName']}}</span>\r\n                </ng-container>\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-md-2 label-control\">Collection</label>\r\n              <div class=\"col-md-4\">\r\n                <select class=\"form-control form-control-sm select-sm\" [(ngModel)]=\"dbItem.formula.collection.collectionId\" [ngModelOptions]=\"{standalone: true}\"  (change)=\"clearErrorField('collectionId')\">\r\n                  <option [ngValue]=\"undefined\">Choose Collection</option>\r\n                  <option *ngFor=\"let c of listCollections\" [ngValue]=\"c.collectionId\">{{c.collectionName}}</option>\r\n                </select>\r\n\r\n                <ng-container *ngIf=\"errorValidation['collectionId'] != null\">\r\n                  <span class=\"error-label\">{{errorValidation['collectionId']}}</span>\r\n                </ng-container>\r\n              </div>\r\n\r\n              <label class=\"col-md-2 label-control\">Product</label>\r\n              <div class=\"col-md-4\">\r\n                {{dbItem.productBase.product.productCode}} : {{dbItem.productBase.product.productName}}\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-md-2 label-control\">Approximate color</label>\r\n              <div class=\"col-md-4\">\r\n                <input [value]=\"dbItem.formula.approximateColor\" [style.background]=\"dbItem.formula.approximateColor\" [(colorPicker)]=\"dbItem.formula.approximateColor\" (colorPickerChange)=\"clearErrorField('approximateColor')\"/>\r\n\r\n                <ng-container *ngIf=\"errorValidation['approximateColor'] != null\">\r\n                  <span class=\"error-label\">{{errorValidation['approximateColor']}}</span>\r\n                </ng-container>\r\n              </div>\r\n\r\n              <label class=\"col-md-2 label-control\">Formula Date</label>\r\n              <div class=\"col-md-4\">\r\n                {{dbItem.formula.createdDate | date : 'dd/MM/yyyy'}}\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-md-2 label-control\">Substrate</label>\r\n              <div class=\"col-md-4\">\r\n                <input type=\"text\" [(ngModel)]=\"dbItem.formula.substrate\" class=\"form-control\" [ngModelOptions]=\"{standalone: true}\">\r\n              </div>\r\n\r\n              <label class=\"col-md-2 label-control\">Barcode</label>\r\n              <div class=\"col-md-4\">\r\n                <!--{{dbItem.productBase.product}}-->\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-md-2 label-control\">Comment</label>\r\n              <div class=\"col-md-9\">\r\n                <textarea [(ngModel)]=\"dbItem.formula.comment\" [ngModelOptions]=\"{standalone: true}\" [ngStyle]=\"{'width': '100%', 'min-height': (1.2 * 4) +'em'}\">{{dbItem.formula.comment}}</textarea>\r\n              </div>\r\n            </div>\r\n          </div>\r\n        </form>\r\n\r\n        <div class=\"row\" *ngIf=\"listCustomerSelected != null && listCustomerSelected.length > 0\">\r\n          <div class=\"col-md-12\">\r\n            <table class=\"table table-bordered\">\r\n              <tr>\r\n                <th>#</th>\r\n                <th>Name</th>\r\n                <th>Phone Number</th>\r\n                <th>Email</th>\r\n                <th>Address</th>\r\n              </tr>\r\n\r\n              <tr *ngFor=\"let customerSelected of listCustomerSelected\">\r\n                <td>\r\n                  <mat-checkbox class=\"example-margin\" [(ngModel)]=\"customerSelected.checked\"></mat-checkbox>\r\n                </td>\r\n                <td>{{customerSelected.customer.name}}</td>\r\n                <td>{{customerSelected.customer.phone}}</td>\r\n                <td>{{customerSelected.customer.email}}</td>\r\n                <td>{{customerSelected.customer.address}}</td>\r\n              </tr>\r\n            </table>\r\n          </div>\r\n        </div>\r\n      </div>\r\n\r\n      <div class=\"card-footer\">\r\n        <div class=\"row\">\r\n          <label class=\"col-md-3 label-control\"></label>\r\n          <div class=\"col-md-9\">\r\n            <button class=\"btn btn-primary mr-3\" (click)=\"saveOrUpdateFormula()\">\r\n              <span *ngIf=\"viewMode == 'Add'\">Save</span>\r\n              <span *ngIf=\"viewMode == 'Edit'\">Update</span>\r\n            </button>\r\n\r\n            <button class=\"btn btn-default mr-3\" (click)=\"goToFormulaPage()\">\r\n              Back\r\n            </button>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n\r\n<div class=\"row\" *ngIf=\"dbItem != null && listColourants != null\">\r\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n    <div class=\"card filter-card\">\r\n      <div class=\"card-header\">\r\n        Formula Detail\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        <form class=\"form form-horizontal form-detail\">\r\n          <div class=\"row\">\r\n            <div class=\"col-md-6\">\r\n              <div class=\"row\">\r\n                <div class=\"card-subtitle col-md-12\">\r\n                  <h4>Contents</h4>\r\n                </div>\r\n                <div class=\"col-md-12\">\r\n                  <ng-container *ngIf=\"errorValidation['listColourants'] != null\">\r\n                    <span class=\"error-label\">{{errorValidation['listColourants']}}</span>\r\n                  </ng-container>\r\n                  <app-table-colourants [listFormulaColorant]=\"listColourants\" [canSize]=\"1\" [baseOnCan]=\"dbItem.formula.baseOnCan\" [maxColorQuantity]=\"getMaxColourantValue(listColourants)\"></app-table-colourants>\r\n                </div>\r\n\r\n                <div class=\"col-md-12\">\r\n                  <br />\r\n                  <br />\r\n                </div>\r\n\r\n                <div class=\"col-md-12\">\r\n                  <app-base-can [productBase]=\"dbItem.productBase\" [canSize]=\"1\" [collection]=\"dbItem.formula.collection\"></app-base-can>\r\n                </div>\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"col-md-6\">\r\n              <div class=\"row\">\r\n                <div class=\"card-subtitle col-md-12\">\r\n                  <h4>Components</h4>\r\n                </div>\r\n\r\n                <div class=\"col-md-12\">\r\n                  <div class=\"form-group row\">\r\n                    <label class=\"col-md-4 label-control\">Product</label>\r\n                    <div class=\"col-md-8\">\r\n                      <select class=\"form-control form-control-sm select-sm\" [(ngModel)]=\"selectedProductId\" [ngModelOptions]=\"{standalone: true}\" (change)=\"getListProductBase(); clearErrorField('productId')\">\r\n                        <option [ngValue]=\"undefined\">Choose Product</option>\r\n                        <option *ngFor=\"let c of listProducts\" [ngValue]=\"c.productId\">{{c.productCode}}</option>\r\n                      </select>\r\n\r\n                      <ng-container *ngIf=\"errorValidation['productId'] != null\">\r\n                        <span class=\"error-label\">{{errorValidation['productId']}}</span>\r\n                      </ng-container>\r\n                    </div>\r\n                  </div>\r\n\r\n                  <div class=\"form-group row\">\r\n                    <label class=\"col-md-4 label-control\">Base</label>\r\n                    <div class=\"col-md-8\">\r\n                      <select class=\"form-control form-control-sm select-sm\" [(ngModel)]=\"selectedProductBaseId\" [ngModelOptions]=\"{standalone: true}\" (change)=\"updateCurrentProductBase(); clearErrorField('baseId')\">\r\n                        <option [ngValue]=\"undefined\">Choose Base</option>\r\n                        <option *ngFor=\"let pb of listProductBases\" [ngValue]=\"pb.productBaseId\">{{pb.base.baseName}} ({{pb.base.baseCode}})</option>\r\n                      </select>\r\n\r\n                      <ng-container *ngIf=\"errorValidation['baseId'] != null\">\r\n                        <span class=\"error-label\">{{errorValidation['baseId']}}</span>\r\n                      </ng-container>\r\n                    </div>\r\n                  </div>\r\n\r\n\r\n                  <div class=\"form-group row\">\r\n                    <label class=\"col-md-4 label-control\">Base On Can</label>\r\n                    <div class=\"col-md-8\">\r\n                      <input type=\"number\" [(ngModel)]=\"dbItem.formula.baseOnCan\" [ngModelOptions]=\"{standalone: true}\"  (change)=\"updateCurrentProductBase(); clearErrorField('baseOnCan')\"/>\r\n\r\n                      <ng-container *ngIf=\"errorValidation['baseOnCan'] != null\">\r\n                        <span class=\"error-label\">{{errorValidation['baseOnCan']}}</span>\r\n                      </ng-container>\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n\r\n              <div class=\"row\">\r\n                <div class=\"card-subtitle col-md-12\">\r\n                  <h4>Colourants</h4>\r\n                </div>\r\n\r\n                <ng-container *ngFor=\"let colour of listColourants\">\r\n                  <div class=\"col-md-6 colourant-group\">\r\n                    <div class=\"row\">\r\n                      <label class=\"col-md-8 label-control\">\r\n                        <span class=\"colour-bar\" [ngStyle]=\"{'background': colour.colourant.rbgHex}\">{{colour.colourant.colourantCode}} : {{colour.colourant.colourantName}}</span>\r\n                      </label>\r\n                      <div class=\"col-md-4\">\r\n                        <input type=\"number\" [(ngModel)]=\"colour.quantity\" class=\"form-control\" [ngModelOptions]=\"{standalone: true}\"  (change)=\"clearErrorField('listColourants')\">\r\n                      </div>\r\n                    </div>\r\n                  </div>\r\n                </ng-container>\r\n              </div>\r\n            </div>\r\n          </div>\r\n        </form>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n\r\n<ng-container *ngIf=\"updateMessage != null\">\r\n  <pp-modal id=\"show-update-formula-model\" class=\"modal show-update-formula-model\">\r\n    <div class=\"modal-content\">\r\n      <div class=\"modal-header\">\r\n        <h5 class=\"modal-title\">{{updateMessage.title}}</h5>\r\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\" (click)=\"closeModal('show-update-formula-model')\">\r\n          <span aria-hidden=\"true\">×</span>\r\n        </button>\r\n      </div>\r\n\r\n      <div class=\"modal-body\">\r\n        {{updateMessage.message}}\r\n      </div>\r\n\r\n      <div class=\"modal-footer\">\r\n        <ng-container *ngIf=\"updateMessage.title == 'Error'\">\r\n          <button type=\"button\" class=\"btn btn-default\" (click)=\"closeModal('show-update-formula-model')\">Close</button>\r\n        </ng-container>\r\n\r\n        <ng-container *ngIf=\"updateMessage.title != 'Error'\">\r\n          <button type=\"button\" class=\"btn btn-primary\" (click)=\"closeModal('show-update-formula-model')\">OK</button>\r\n        </ng-container>\r\n      </div>\r\n    </div>\r\n  </pp-modal>\r\n</ng-container>\r\n"
+module.exports = "<div class=\"block-header\">\n  <h1>{{viewMode}} Formula</h1>\n</div>\n\n<div class=\"row\" *ngIf=\"dbItem != null\">\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n    <div class=\"card filter-card\">\n      <div class=\"card-header\">\n        Standard Formula\n      </div>\n\n      <div class=\"card-body\">\n        <form class=\"form form-horizontal form-detail\">\n          <div class=\"form-body\">\n            <div class=\"form-group row\">\n              <label class=\"col-md-2 label-control\">Formula Code</label>\n              <div class=\"input-group input-group-sm col-md-4\">\n                <input type=\"text\" [(ngModel)]=\"dbItem.formula.formulaCode\" class=\"form-control\" [ngModelOptions]=\"{standalone: true}\" (change)=\"clearErrorField('formulaCode')\">\n                <ng-container *ngIf=\"errorValidation['formulaCode'] != null\">\n                  <span class=\"error-label\">{{errorValidation['formulaCode']}}</span>\n                </ng-container>\n              </div>\n\n              <label class=\"col-md-2 label-control\">Formula name</label>\n              <div class=\"input-group input-group-sm col-md-4\">\n                <input type=\"text\" [(ngModel)]=\"dbItem.formula.formulaName\" class=\"form-control\" [ngModelOptions]=\"{standalone: true}\" (change)=\"clearErrorField('formulaName')\">\n                <ng-container *ngIf=\"errorValidation['formulaName'] != null\">\n                  <span class=\"error-label\">{{errorValidation['formulaName']}}</span>\n                </ng-container>\n              </div>\n            </div>\n\n            <div class=\"form-group row\">\n              <label class=\"col-md-2 label-control\">Collection</label>\n              <div class=\"col-md-4\">\n                <select class=\"form-control form-control-sm select-sm\" [(ngModel)]=\"dbItem.formula.collection.collectionId\" [ngModelOptions]=\"{standalone: true}\"  (change)=\"clearErrorField('collectionId')\">\n                  <option [ngValue]=\"undefined\">Choose Collection</option>\n                  <option *ngFor=\"let c of listCollections\" [ngValue]=\"c.collectionId\">{{c.collectionName}}</option>\n                </select>\n\n                <ng-container *ngIf=\"errorValidation['collectionId'] != null\">\n                  <span class=\"error-label\">{{errorValidation['collectionId']}}</span>\n                </ng-container>\n              </div>\n\n              <label class=\"col-md-2 label-control\">Product</label>\n              <div class=\"col-md-4\">\n                {{dbItem.productBase.product.productCode}} : {{dbItem.productBase.product.productName}}\n              </div>\n            </div>\n\n            <div class=\"form-group row\">\n              <label class=\"col-md-2 label-control\">Approximate color</label>\n              <div class=\"col-md-4\">\n                <input [value]=\"dbItem.formula.approximateColor\" [style.background]=\"dbItem.formula.approximateColor\" [(colorPicker)]=\"dbItem.formula.approximateColor\" (colorPickerChange)=\"clearErrorField('approximateColor')\"/>\n\n                <ng-container *ngIf=\"errorValidation['approximateColor'] != null\">\n                  <span class=\"error-label\">{{errorValidation['approximateColor']}}</span>\n                </ng-container>\n              </div>\n\n              <label class=\"col-md-2 label-control\">Formula Date</label>\n              <div class=\"col-md-4\">\n                {{dbItem.formula.createdDate | date : 'dd/MM/yyyy'}}\n              </div>\n            </div>\n\n            <div class=\"form-group row\">\n              <label class=\"col-md-2 label-control\">Substrate</label>\n              <div class=\"col-md-4\">\n                <input type=\"text\" [(ngModel)]=\"dbItem.formula.substrate\" class=\"form-control\" [ngModelOptions]=\"{standalone: true}\">\n              </div>\n\n              <label class=\"col-md-2 label-control\">Barcode</label>\n              <div class=\"col-md-4\">\n                <!--{{dbItem.productBase.product}}-->\n              </div>\n            </div>\n\n            <div class=\"form-group row\">\n              <label class=\"col-md-2 label-control\">Comment</label>\n              <div class=\"col-md-9\">\n                <textarea [(ngModel)]=\"dbItem.formula.comment\" [ngModelOptions]=\"{standalone: true}\" [ngStyle]=\"{'width': '100%', 'min-height': (1.2 * 4) +'em'}\">{{dbItem.formula.comment}}</textarea>\n              </div>\n            </div>\n          </div>\n        </form>\n\n        <div class=\"row\" *ngIf=\"listCustomerSelected != null && listCustomerSelected.length > 0\">\n          <div class=\"col-md-12\">\n            <table class=\"table table-bordered\">\n              <tr>\n                <th>#</th>\n                <th>Name</th>\n                <th>Phone Number</th>\n                <th>Email</th>\n                <th>Address</th>\n              </tr>\n\n              <tr *ngFor=\"let customerSelected of listCustomerSelected\">\n                <td>\n                  <mat-checkbox class=\"example-margin\" [(ngModel)]=\"customerSelected.checked\"></mat-checkbox>\n                </td>\n                <td>{{customerSelected.customer.name}}</td>\n                <td>{{customerSelected.customer.phone}}</td>\n                <td>{{customerSelected.customer.email}}</td>\n                <td>{{customerSelected.customer.address}}</td>\n              </tr>\n            </table>\n          </div>\n        </div>\n      </div>\n\n      <div class=\"card-footer\">\n        <div class=\"row\">\n          <label class=\"col-md-3 label-control\"></label>\n          <div class=\"col-md-9\">\n            <button class=\"btn btn-primary mr-3\" (click)=\"saveOrUpdateFormula('saving')\">\n              <span *ngIf=\"viewMode == 'Add'\">Save</span>\n              <span *ngIf=\"viewMode == 'Edit'\">Update</span>\n            </button>\n\n            <button class=\"btn btn-default mr-3\" (click)=\"goToFormulaPage()\">\n              Back\n            </button>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n\n<div class=\"row\" *ngIf=\"dbItem != null && listColourants != null\">\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n    <div class=\"card filter-card\">\n      <div class=\"card-header\">\n        Formula Detail\n      </div>\n\n      <div class=\"card-body\">\n        <form class=\"form form-horizontal form-detail\">\n          <div class=\"row\">\n            <div class=\"col-md-6\">\n              <div class=\"row\">\n                <div class=\"card-subtitle col-md-12\">\n                  <h4>Contents</h4>\n                </div>\n                <div class=\"col-md-12\">\n                  <ng-container *ngIf=\"errorValidation['listColourants'] != null\">\n                    <span class=\"error-label\">{{errorValidation['listColourants']}}</span>\n                  </ng-container>\n                  <app-table-colourants [listFormulaColorant]=\"listColourants\" [canSize]=\"1\" [baseOnCan]=\"dbItem.formula.baseOnCan\" [maxColorQuantity]=\"getMaxColourantValue(listColourants)\"></app-table-colourants>\n                </div>\n\n                <div class=\"col-md-12\">\n                  <br />\n                  <br />\n                </div>\n\n                <div class=\"col-md-12\">\n                  <app-base-can [productBase]=\"dbItem.productBase\" [canSize]=\"1\" [collection]=\"dbItem.formula.collection\"></app-base-can>\n                </div>\n              </div>\n\n              <div class=\"col-md-12\">\n                <br />\n                <br />\n              </div>\n\n              <div class=\"row text-center\" *ngIf=\"dbItem.formula == null || dbItem.formula.formulaId == null\">\n                <div class=\"col-md-12\">\n                  <button type=\"button\" class=\"btn btn-primary\" (click)=\"saveOrUpdateFormula('template')\">Dispense Manual</button>\n                </div>\n              </div>\n            </div>\n\n            <div class=\"col-md-6\">\n              <div class=\"row\">\n                <div class=\"card-subtitle col-md-12\">\n                  <h4>Components</h4>\n                </div>\n\n                <div class=\"col-md-12\">\n                  <div class=\"form-group row\">\n                    <label class=\"col-md-4 label-control\">Product</label>\n                    <div class=\"col-md-8\">\n                      <select class=\"form-control form-control-sm select-sm\" [(ngModel)]=\"selectedProductId\" [ngModelOptions]=\"{standalone: true}\" (change)=\"getListProductBase(); clearErrorField('productId')\">\n                        <option [ngValue]=\"undefined\">Choose Product</option>\n                        <option *ngFor=\"let c of listProducts\" [ngValue]=\"c.productId\">{{c.productCode}}</option>\n                      </select>\n\n                      <ng-container *ngIf=\"errorValidation['productId'] != null\">\n                        <span class=\"error-label\">{{errorValidation['productId']}}</span>\n                      </ng-container>\n                    </div>\n                  </div>\n\n                  <div class=\"form-group row\">\n                    <label class=\"col-md-4 label-control\">Base</label>\n                    <div class=\"col-md-8\">\n                      <select class=\"form-control form-control-sm select-sm\" [(ngModel)]=\"selectedProductBaseId\" [ngModelOptions]=\"{standalone: true}\" (change)=\"updateCurrentProductBase(); clearErrorField('baseId')\">\n                        <option [ngValue]=\"undefined\">Choose Base</option>\n                        <option *ngFor=\"let pb of listProductBases\" [ngValue]=\"pb.productBaseId\">{{pb.base.baseName}} ({{pb.base.baseCode}})</option>\n                      </select>\n\n                      <ng-container *ngIf=\"errorValidation['baseId'] != null\">\n                        <span class=\"error-label\">{{errorValidation['baseId']}}</span>\n                      </ng-container>\n                    </div>\n                  </div>\n\n\n                  <div class=\"form-group row\">\n                    <label class=\"col-md-4 label-control\">Base On Can</label>\n                    <div class=\"col-md-8\">\n                      <input type=\"number\" [(ngModel)]=\"dbItem.formula.baseOnCan\" [ngModelOptions]=\"{standalone: true}\"  (change)=\"updateCurrentProductBase(); clearErrorField('baseOnCan')\"/>\n\n                      <ng-container *ngIf=\"errorValidation['baseOnCan'] != null\">\n                        <span class=\"error-label\">{{errorValidation['baseOnCan']}}</span>\n                      </ng-container>\n                    </div>\n                  </div>\n                </div>\n              </div>\n\n              <div class=\"row\">\n                <div class=\"card-subtitle col-md-12\">\n                  <h4>Colourants</h4>\n                </div>\n\n                <ng-container *ngFor=\"let colour of listColourants\">\n                  <div class=\"col-md-6 colourant-group\">\n                    <div class=\"row\">\n                      <label class=\"col-md-8 label-control\">\n                        <span class=\"colour-bar\" [ngStyle]=\"{'background': colour.colourant.rbgHex}\">{{colour.colourant.colourantCode}} : {{colour.colourant.colourantName}}</span>\n                      </label>\n                      <div class=\"col-md-4\">\n                        <input type=\"number\" [(ngModel)]=\"colour.quantity\" class=\"form-control\" [ngModelOptions]=\"{standalone: true}\"  (change)=\"clearErrorField('listColourants')\">\n                      </div>\n                    </div>\n                  </div>\n                </ng-container>\n              </div>\n            </div>\n          </div>\n        </form>\n      </div>\n    </div>\n  </div>\n</div>\n\n\n<ng-container *ngIf=\"updateMessage != null\">\n  <pp-modal id=\"show-update-formula-model\" class=\"modal show-update-formula-model\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <h5 class=\"modal-title\">{{updateMessage.title}}</h5>\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\" (click)=\"closeModal('show-update-formula-model')\">\n          <span aria-hidden=\"true\">×</span>\n        </button>\n      </div>\n\n      <div class=\"modal-body\">\n        {{updateMessage.message}}\n      </div>\n\n      <div class=\"modal-footer\">\n        <ng-container *ngIf=\"updateMessage.title == 'Error'\">\n          <button type=\"button\" class=\"btn btn-default\" (click)=\"closeModal('show-update-formula-model')\">Close</button>\n        </ng-container>\n\n        <ng-container *ngIf=\"updateMessage.title != 'Error'\">\n          <button type=\"button\" class=\"btn btn-primary\" (click)=\"closeModal('show-update-formula-model')\">OK</button>\n        </ng-container>\n      </div>\n    </div>\n  </pp-modal>\n</ng-container>\n"
 
 /***/ }),
 
@@ -687,7 +808,7 @@ module.exports = "<div class=\"block-header\">\r\n  <h1>{{viewMode}} Formula</h1
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".colourant-group {\n  margin-bottom: 10px; }\n  .colourant-group .colour-bar {\n    display: inline-block;\n    width: 100%;\n    min-height: 1em;\n    border: 1px solid #000;\n    padding: 3px 5px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9mb3JtdWxhL2VkaXQtZm9ybXVsYS9YOlxcd3NfbGVhcm5pbmdcXGNsaWVudHZpZXRwb3dlci9zcmNcXGFwcFxcY29tcG9uZW50c1xcZm9ybXVsYVxcZWRpdC1mb3JtdWxhXFxlZGl0LWZvcm11bGEuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxvQkFBbUIsRUFTcEI7RUFWRDtJQUlJLHNCQUFxQjtJQUNyQixZQUFXO0lBQ1gsZ0JBQWU7SUFDZix1QkFBc0I7SUFDdEIsaUJBQWdCLEVBQ2pCIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50cy9mb3JtdWxhL2VkaXQtZm9ybXVsYS9lZGl0LWZvcm11bGEuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY29sb3VyYW50LWdyb3Vwe1xyXG4gIG1hcmdpbi1ib3R0b206IDEwcHg7XHJcblxyXG4gIC5jb2xvdXItYmFye1xyXG4gICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbiAgICBtaW4taGVpZ2h0OiAxZW07XHJcbiAgICBib3JkZXI6IDFweCBzb2xpZCAjMDAwO1xyXG4gICAgcGFkZGluZzogM3B4IDVweDtcclxuICB9XHJcbn1cclxuIl19 */"
+module.exports = ".colourant-group {\n  margin-bottom: 10px; }\n  .colourant-group .colour-bar {\n    display: inline-block;\n    width: 100%;\n    min-height: 1em;\n    border: 1px solid #000;\n    padding: 3px 5px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9mb3JtdWxhL2VkaXQtZm9ybXVsYS9HOlxcV29ya3NwYWNlXFxjbGllbnR2aWV0cG93ZXIvc3JjXFxhcHBcXGNvbXBvbmVudHNcXGZvcm11bGFcXGVkaXQtZm9ybXVsYVxcZWRpdC1mb3JtdWxhLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0Usb0JBQW1CLEVBU3BCO0VBVkQ7SUFJSSxzQkFBcUI7SUFDckIsWUFBVztJQUNYLGdCQUFlO0lBQ2YsdUJBQXNCO0lBQ3RCLGlCQUFnQixFQUNqQiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvZm9ybXVsYS9lZGl0LWZvcm11bGEvZWRpdC1mb3JtdWxhLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmNvbG91cmFudC1ncm91cHtcclxuICBtYXJnaW4tYm90dG9tOiAxMHB4O1xyXG5cclxuICAuY29sb3VyLWJhcntcclxuICAgIGRpc3BsYXk6IGlubGluZS1ibG9jaztcclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgbWluLWhlaWdodDogMWVtO1xyXG4gICAgYm9yZGVyOiAxcHggc29saWQgIzAwMDtcclxuICAgIHBhZGRpbmc6IDNweCA1cHg7XHJcbiAgfVxyXG59XHJcbiJdfQ== */"
 
 /***/ }),
 
@@ -751,7 +872,6 @@ var EditFormulaComponent = /** @class */ (function () {
         this.collectionService = collectionService;
         this.productService = productService;
         this.viewMode = null;
-        this.dbItem = null;
         this.listProducts = null;
         this.listProductBases = null;
         this.listCollections = null;
@@ -914,24 +1034,31 @@ var EditFormulaComponent = /** @class */ (function () {
         }
         return maxQuantity;
     };
-    EditFormulaComponent.prototype.validateDataBeforeSubmit = function () {
+    EditFormulaComponent.prototype.validateDataBeforeSubmit = function (type) {
         var hasError = false;
         var mapErrors = {};
-        if (this.dbItem.formula.formulaCode == null || this.dbItem.formula.formulaCode.trim() === '') {
-            hasError = true;
-            mapErrors['formulaCode'] = 'Please enter the formula code';
+        // when type is saving --> validate the formula
+        if (type === 'saving') {
+            if (this.dbItem.formula.formulaCode == null || this.dbItem.formula.formulaCode.trim() === '') {
+                hasError = true;
+                mapErrors['formulaCode'] = 'Please enter the formula code';
+            }
+            if (this.dbItem.formula.formulaName == null || this.dbItem.formula.formulaName.trim() === '') {
+                hasError = true;
+                mapErrors['formulaName'] = 'Please enter the formula name';
+            }
+            if (this.dbItem.formula.collection == null || this.dbItem.formula.collection.collectionId == null) {
+                hasError = true;
+                mapErrors['collectionId'] = 'Please select the collection';
+            }
+            if (this.dbItem.formula.approximateColor == null || this.dbItem.formula.approximateColor.trim() === '') {
+                hasError = true;
+                mapErrors['approximateColor'] = 'Please select the collection';
+            }
         }
-        if (this.dbItem.formula.formulaName == null || this.dbItem.formula.formulaName.trim() === '') {
+        if (this.dbItem.formula.baseOnCan == null) {
             hasError = true;
-            mapErrors['formulaName'] = 'Please enter the formula name';
-        }
-        if (this.dbItem.formula.collection == null || this.dbItem.formula.collection.collectionId == null) {
-            hasError = true;
-            mapErrors['collectionId'] = 'Please select the collection';
-        }
-        if (this.dbItem.formula.approximateColor == null || this.dbItem.formula.approximateColor.trim() === '') {
-            hasError = true;
-            mapErrors['approximateColor'] = 'Please select the collection';
+            mapErrors['baseOnCan'] = 'Please enter the base on can (Default 1)';
         }
         if (this.selectedProductBase == null || this.selectedProductBase.product == null
             || this.selectedProductBase.product.productId == null) {
@@ -942,10 +1069,6 @@ var EditFormulaComponent = /** @class */ (function () {
             hasError = true;
             mapErrors['baseId'] = 'Please select the base';
         }
-        if (this.dbItem.formula.baseOnCan == null) {
-            hasError = true;
-            mapErrors['baseOnCan'] = 'Please enter the base on can (Default 1)';
-        }
         if (this.listColourants == null || this.listColourants.length === 0) {
             hasError = true;
             mapErrors['listColourants'] = 'Please add colourants detail.';
@@ -954,7 +1077,7 @@ var EditFormulaComponent = /** @class */ (function () {
             var listColourant = this.listColourants.filter(function (item) {
                 return item.quantity > 0;
             });
-            if (listColourant == null || listColourant.length == 0) {
+            if (listColourant == null || listColourant.length === 0) {
                 hasError = true;
                 mapErrors['listColourants'] = 'Please add colourants detail.';
             }
@@ -966,41 +1089,52 @@ var EditFormulaComponent = /** @class */ (function () {
     EditFormulaComponent.prototype.clearErrorField = function (field) {
         this.errorValidation[field] = null;
     };
-    EditFormulaComponent.prototype.saveOrUpdateFormula = function () {
-        var _this = this;
+    EditFormulaComponent.prototype.saveOrUpdateFormula = function (type) {
         this.errorValidation = {};
         this.updateMessage = null;
-        var validateData = this.validateDataBeforeSubmit();
+        var validateData = this.validateDataBeforeSubmit(type);
         if (!validateData.hasError) {
-            this.formulaService.saveOrUpdateFormulaData(this.dbItem.formulaProductBaseId, this.dbItem.formula, this.selectedProductBase, this.listColourants, this.listCustomerSelected).subscribe(function (datas) {
-                if (datas.formulaProductBaseId != null) {
-                    if (_this.dbItem.formulaProductBaseId == null) {
-                        _this.updateMessage = {
-                            title: 'Save',
-                            message: 'Saving the formula successful!.'
-                        };
-                    }
-                    else {
-                        _this.updateMessage = {
-                            title: 'Update',
-                            message: 'Update the formula successful!.'
-                        };
-                    }
-                }
-                else {
-                    _this.updateMessage = {
-                        title: 'Error',
-                        message: 'Have problem when saving the formula. Please retry.'
-                    };
-                }
-                setTimeout(function () {
-                    _this.openModal('show-update-formula-model');
-                }, 1);
-            });
+            this.updateOrSavingDispenseFormula(type);
         }
         else {
             this.errorValidation = validateData.mapErrors;
         }
+    };
+    EditFormulaComponent.prototype.updateOrSavingDispenseFormula = function (type) {
+        var _this = this;
+        if (type === 'template') {
+            this.dbItem.formula.formulaCode = 'TEMPLATE FORMULA';
+        }
+        this.formulaService.saveOrUpdateFormulaData(this.dbItem.formulaProductBaseId, this.dbItem.formula, this.selectedProductBase, this.listColourants, this.listCustomerSelected).subscribe(function (datas) {
+            if (datas.formulaProductBaseId != null) {
+                if (_this.dbItem.formulaProductBaseId == null) {
+                    _this.updateMessage = {
+                        title: 'Save',
+                        message: 'Saving the formula successful!.'
+                    };
+                }
+                else {
+                    _this.updateMessage = {
+                        title: 'Update',
+                        message: 'Update the formula successful!.'
+                    };
+                }
+            }
+            else {
+                _this.updateMessage = {
+                    title: 'Error',
+                    message: 'Have problem when saving the formula. Please retry.'
+                };
+            }
+            if (type === 'saving') {
+                setTimeout(function () {
+                    _this.openModal('show-update-formula-model');
+                }, 1);
+            }
+            else {
+                _this.router.navigate(["../dashboard/view-formula/" + datas.formulaProductBaseId]);
+            }
+        });
     };
     EditFormulaComponent.prototype.goToFormulaPage = function () {
         try {
@@ -1024,6 +1158,10 @@ var EditFormulaComponent = /** @class */ (function () {
             this.updateMessage = null;
         }
     };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", _models_formula_product_base__WEBPACK_IMPORTED_MODULE_2__["FormulaProductBaseModel"])
+    ], EditFormulaComponent.prototype, "dbItem", void 0);
     EditFormulaComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-edit-formula',
@@ -1053,7 +1191,7 @@ var EditFormulaComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\r\n<div [ngStyle]=\"{'display' : dbItem != null ? 'none': 'block'}\">\r\n  <app-list-formula (selectedFormula)=\"selectFormula($event)\"></app-list-formula>\r\n</div>\r\n\r\n<ng-container *ngIf=\"dbItem\">\r\n  <app-viewformula [dbItem]=\"dbItem\"></app-viewformula>\r\n</ng-container>\r\n\r\n<ng-container *ngIf=\"dbItem\">\r\n  <div class=\"row\">\r\n    <div class=\"col-12\">\r\n      <button class=\"btn btn-primary push-left\" (click)=\"clearSelectedFormula()\"><i class=\"fas fa-arrow-circle-left\"></i> Back</button>\r\n    </div>\r\n  </div>\r\n</ng-container>\r\n"
+module.exports = "\n<div [ngStyle]=\"{'display' : viewItem != null ? 'none': 'block'}\">\n  <app-list-formula (selectedFormula)=\"selectFormula($event)\"></app-list-formula>\n</div>\n\n<ng-container *ngIf=\"viewItem\">\n  <app-viewformula [dbItem]=\"viewItem\"></app-viewformula>\n</ng-container>\n\n<ng-container *ngIf=\"editItem\">\n  <app-edit-formula [dbItem]=\"editItem\"></app-edit-formula>\n</ng-container>\n\n<ng-container *ngIf=\"addItem\">\n  <app-edit-formula [dbItem]=\"addItem\"></app-edit-formula>\n</ng-container>\n\n<ng-container *ngIf=\"viewItem\">\n  <div class=\"row\">\n    <div class=\"col-12\">\n      <button class=\"btn btn-primary push-left\" (click)=\"clearSelectedFormula()\"><i class=\"fas fa-arrow-circle-left\"></i> Back</button>\n    </div>\n  </div>\n</ng-container>\n"
 
 /***/ }),
 
@@ -1091,15 +1229,19 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 var FormulaComponent = /** @class */ (function () {
     function FormulaComponent() {
-        this.dbItem = null;
+        this.viewItem = null;
+        this.editItem = null;
+        this.addItem = null;
     }
     FormulaComponent.prototype.ngOnInit = function () {
     };
     FormulaComponent.prototype.selectFormula = function (selectedFormula) {
-        this.dbItem = selectedFormula;
+        this.viewItem = selectedFormula;
     };
     FormulaComponent.prototype.clearSelectedFormula = function () {
-        this.dbItem = null;
+        this.viewItem = null;
+        this.editItem = null;
+        this.addItem = null;
     };
     FormulaComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -1123,7 +1265,7 @@ var FormulaComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"block-header\">\r\n  <h1>List Formula</h1>\r\n</div>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n    <div class=\"card filter-card\">\r\n      <div class=\"card-header\">\r\n        Filter\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        <form class=\"form form-horizontal form-detail\">\r\n          <div class=\"form-body\">\r\n            <div class=\"form-group row\" *ngIf=\"listFormulas\">\r\n              <label class=\"col-md-3 label-control\">Select Color</label>\r\n              <div class=\"input-group input-group-sm col-md-9\">\r\n                <select class=\"form-control form-control-sm select-sm select-color-field\" id=\"selectedFormulaFilter\" name=\"selectedFormulaFilter\" [(ngModel)]=\"filter.formulaId\" (ngModelChange)=\"onFilterChange($event)\">\r\n                  <option [ngValue]=\"undefined\">Choose Color</option>\r\n                  <option *ngFor=\"let f of listFormulas\" value=\"{{f.formulaId}}\">{{f.formulaName}}</option>\r\n                </select>\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"form-group row\" *ngIf=\"listCollections\">\r\n              <label class=\"col-md-3 label-control\">Select Collection</label>\r\n              <div class=\"col-md-9\">\r\n                <select class=\"form-control form-control-sm select-sm select-color-field\" id=\"selectedCollectionFilter\" name=\"selectedCollectionFilter\" [(ngModel)]=\"filter.collectionId\" (ngModelChange)=\"onFilterChange($event)\">\r\n                  <option [ngValue]=\"undefined\">Choose Collection</option>\r\n                  <option *ngFor=\"let c of listCollections\" value=\"{{c.collectionId}}\">{{c.collectionName}}</option>\r\n                </select>\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"form-group row\" *ngIf=\"listProducts\">\r\n              <label class=\"col-md-3 label-control\">Select Product</label>\r\n              <div class=\"col-md-9\">\r\n                <select class=\"form-control form-control-sm select-sm select-color-field\" id=\"selectedProductFilter\" name=\"selectedProductFilter\" [(ngModel)]=\"filter.productId\" (ngModelChange)=\"onFilterChange($event)\">\r\n                  <option [ngValue]=\"undefined\">Choose Product</option>\r\n                  <option *ngFor=\"let c of listProducts\" value=\"{{c.productId}}\">{{c.productCode}}</option>\r\n                </select>\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"form-group row\" *ngIf=\"listProductBase\">\r\n              <label class=\"col-md-3 label-control\">Select Base</label>\r\n              <div class=\"col-md-9\">\r\n                <select class=\"form-control form-control-sm select-sm select-color-field\" id=\"selectedProductBaseFilter\" name=\"selectedProductFilter\" [(ngModel)]=\"filter.productBaseId\" (ngModelChange)=\"onFilterChange($event)\">\r\n                  <option [ngValue]=\"undefined\">Choose Base</option>\r\n                  <option *ngFor=\"let c of listProductBase\" value=\"{{c.productBaseId}}\">{{c.base.baseName}}</option>\r\n                </select>\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"form-group row\" *ngIf=\"listCustomer\">\r\n              <label class=\"col-md-3 label-control\">Select Customer</label>\r\n              <div class=\"col-md-9\">\r\n                <select class=\"form-control form-control-sm select-sm select-color-field\" id=\"selectedCustomerFilter\" name=\"selectedProductFilter\" [(ngModel)]=\"filter.customerId\" (ngModelChange)=\"onFilterChange($event)\">\r\n                  <option [ngValue]=\"undefined\">Choose Customer</option>\r\n                  <option *ngFor=\"let c of listCustomer\" value=\"{{c.customerId}}\">{{c.name}}</option>\r\n                </select>\r\n              </div>\r\n            </div>\r\n          </div>\r\n\r\n          <div class=\"form-actions text-center\">\r\n            <button class=\"btn btn-primary mr-3\" (click)=\"refresh()\">Search</button>\r\n            <button class=\"btn btn-default\" (click)=\"reset()\">Reset</button>\r\n            <button class=\"btn btn-default\" (click)=\"testElectron()\">Electron</button>\r\n          </div>\r\n        </form>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n\r\n<div class=\"row\" *ngIf=\"pagenationMode\">\r\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        List Colorant\r\n\r\n        <button class=\"close\" (click)=\"addNewFormula()\" matTooltip=\"Add Formula\" aria-label=\"Add Formula\"><i class=\"fas fa-plus-square\"></i></button>\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        <div class=\"table-responsive\">\r\n          <!--matSort (matSortChange)=\"sortData($event)\"-->\r\n          <table class=\"table table-bordered\" matSort (matSortChange)=\"sortData($event)\">\r\n            <tr>\r\n              <th mat-sort-header=\"formulaCode\">Formula Code</th>\r\n              <th mat-sort-header=\"formulaName\">Formula Name</th>\r\n              <th mat-sort-header=\"approximateColor\">Approximate<br />Color</th>\r\n              <th mat-sort-header=\"collection\">Collection\r\n              <th mat-sort-header=\"product\">Product</th>\r\n              <th mat-sort-header=\"createdDate\">Created Date</th>\r\n              <th mat-sort-header=\"createdBy\">Created By</th>\r\n              <th>Action</th>\r\n            </tr>\r\n\r\n            <tr *ngFor=\"let item of pagenationMode.listItems\">\r\n              <td>{{item.formula.formulaCode}}</td>\r\n              <td>{{item.formula.formulaName}}</td>\r\n              <td class=\"text-center\"><span [ngStyle]=\"{'background': item.formula.approximateColor, 'display': 'inline-block', 'width': '30px', 'height': '30px', 'border': '1px solid #333'}\"></span></td>\r\n              <td>{{item.formula.collection.collectionName}}</td>\r\n              <td>{{item.productBase.product.productName}}</td>\r\n              <td>{{item.formula.createdDate | date: 'dd/MM/yyyy'}}</td>\r\n              <td> {{item.formula.machine != null && item.formula.machine.machineId > 0 ? 'Me' : 'System'}}</td>\r\n              <td [ngStyle]=\"{'white-space': 'nowrap'}\">\r\n                <button mat-raised-button matTooltip=\"View Formula\" aria-label=\"View Formula\" (click)=\"viewFormula(item)\">\r\n                  <i class=\"fas fa-info-circle\"></i>\r\n                </button>\r\n\r\n                <ng-container *ngIf=\"item.formula.machine != null && item.formula.machine.machineId > 0\">\r\n                  <span class=\"vertical-separate-line\">&nbsp;</span>\r\n\r\n                  <button mat-raised-button matTooltip=\"Edit Formula\" aria-label=\"Edit Formula\" (click)=\"editTheFormula(item.formulaProductBaseId)\">\r\n                    <i class=\"fas fa-edit\"></i>\r\n                  </button>\r\n                </ng-container>\r\n            </tr>\r\n\r\n            <tfoot>\r\n            <tr>\r\n              <td colspan=\"100%\">\r\n                Show {{pagenationMode.listItems.length}} of  {{pagenationMode.totalItem}} items.\r\n\r\n                <span class=\"pagenation-footer\" style=\"float: right\">\r\n                  <span *ngIf=\"pagenationMode.pageIndex > 0\" (click)=\"goToPage(pagenationMode.pageIndex - 1)\" class=\"btn-action\"><</span>\r\n                  <span>{{pagenationMode.pageIndex + 1}}</span>\r\n                  <span *ngIf=\"pagenationMode.pageIndex * pagenationMode.maxPageItem + pagenationMode.maxPageItem < pagenationMode.totalItem\"  (click)=\"goToPage(pagenationMode.pageIndex + 1)\" class=\"btn-action\">></span>\r\n                </span>\r\n              </td>\r\n            </tr>\r\n            </tfoot>\r\n          </table>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class=\"block-header\">\r\n  <h1>List Formula</h1>\r\n</div>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n    <div class=\"card filter-card\">\r\n      <div class=\"card-header\">\r\n        Filter\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        <form class=\"form form-horizontal form-detail\">\r\n          <div class=\"form-body\">\r\n            <div class=\"form-group row\" *ngIf=\"listFormulas\">\r\n              <label class=\"col-md-3 label-control\">Select Color</label>\r\n              <div class=\"input-group input-group-sm col-md-9\">\r\n                <select class=\"form-control form-control-sm select-sm select-color-field\" id=\"selectedFormulaFilter\" name=\"selectedFormulaFilter\" [(ngModel)]=\"filter.formulaId\" (ngModelChange)=\"onFilterChange($event)\">\r\n                  <option [ngValue]=\"undefined\">Choose Color</option>\r\n                  <option *ngFor=\"let f of listFormulas\" [ngValue]=\"f.formulaId\">{{f.formulaName}}</option>\r\n                </select>\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"form-group row\" *ngIf=\"listCollections\">\r\n              <label class=\"col-md-3 label-control\">Select Collection</label>\r\n              <div class=\"col-md-9\">\r\n                <select class=\"form-control form-control-sm select-sm select-color-field\" id=\"selectedCollectionFilter\" name=\"selectedCollectionFilter\" [(ngModel)]=\"filter.collectionId\" (ngModelChange)=\"onFilterChange($event)\">\r\n                  <option [ngValue]=\"undefined\">Choose Collection</option>\r\n                  <option *ngFor=\"let c of listCollections\" [ngValue]=\"c.collectionId\">{{c.collectionName}}</option>\r\n                </select>\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"form-group row\" *ngIf=\"listProducts\">\r\n              <label class=\"col-md-3 label-control\">Select Product</label>\r\n              <div class=\"col-md-9\">\r\n                <select class=\"form-control form-control-sm select-sm select-color-field\" id=\"selectedProductFilter\" name=\"selectedProductFilter\" [(ngModel)]=\"filter.productId\" (ngModelChange)=\"onFilterChange($event)\">\r\n                  <option [ngValue]=\"undefined\">Choose Product</option>\r\n                  <option *ngFor=\"let c of listProducts\" [ngValue]=\"c.productId\">{{c.productCode}}</option>\r\n                </select>\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"form-group row\" *ngIf=\"listBases\">\r\n              <label class=\"col-md-3 label-control\">Select Base</label>\r\n              <div class=\"col-md-9\">\r\n                <select class=\"form-control form-control-sm select-sm select-color-field\" id=\"selectedProductBaseFilter\" name=\"selectedProductFilter\" [(ngModel)]=\"filter.baseId\" (ngModelChange)=\"onFilterChange($event)\">\r\n                  <option [ngValue]=\"undefined\">Choose Base</option>\r\n                  <option *ngFor=\"let c of listBases\" [ngValue]=\"c.baseId\">{{c.baseName}}</option>\r\n                </select>\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"form-group row\" *ngIf=\"listCustomer\">\r\n              <label class=\"col-md-3 label-control\">Select Customer</label>\r\n              <div class=\"col-md-9\">\r\n                <select class=\"form-control form-control-sm select-sm select-color-field\" id=\"selectedCustomerFilter\" name=\"selectedProductFilter\" [(ngModel)]=\"filter.customerId\" (ngModelChange)=\"onFilterChange($event)\">\r\n                  <option [ngValue]=\"undefined\">Choose Customer</option>\r\n                  <option *ngFor=\"let c of listCustomer\" [ngValue]=\"c.customerId\">{{c.name}}</option>\r\n                </select>\r\n              </div>\r\n            </div>\r\n          </div>\r\n\r\n          <div class=\"form-actions text-center\">\r\n            <button class=\"btn btn-primary mr-3\" (click)=\"refresh()\">Search</button>\r\n            <button class=\"btn btn-default\" (click)=\"reset()\">Reset</button>\r\n            <button class=\"btn btn-default\" (click)=\"testElectron()\">Electron</button>\r\n          </div>\r\n        </form>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n\r\n<div class=\"row\" *ngIf=\"pagenationMode\">\r\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        List Colorant\r\n\r\n        <button class=\"close\" (click)=\"addNewFormula()\" matTooltip=\"Add Formula\" aria-label=\"Add Formula\"><i class=\"fas fa-plus-square\"></i></button>\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        <div class=\"table-responsive\">\r\n          <!--matSort (matSortChange)=\"sortData($event)\"-->\r\n          <table class=\"table table-bordered\" matSort (matSortChange)=\"sortData($event)\">\r\n            <tr>\r\n              <th mat-sort-header=\"formulaCode\">Formula Code</th>\r\n              <th mat-sort-header=\"formulaName\">Formula Name</th>\r\n              <th mat-sort-header=\"approximateColor\">Approximate<br />Color</th>\r\n              <th mat-sort-header=\"collection\">Collection\r\n              <th mat-sort-header=\"product\">Product</th>\r\n              <th mat-sort-header=\"createdDate\">Created Date</th>\r\n              <th mat-sort-header=\"createdBy\">Created By</th>\r\n              <th>Action</th>\r\n            </tr>\r\n\r\n            <tr *ngFor=\"let item of pagenationMode.listItems\">\r\n              <td>{{item.formula.formulaCode}}</td>\r\n              <td>{{item.formula.formulaName}}</td>\r\n              <td class=\"text-center\"><span [ngStyle]=\"{'background': item.formula.approximateColor, 'display': 'inline-block', 'width': '30px', 'height': '30px', 'border': '1px solid #333'}\"></span></td>\r\n              <td>{{item.formula.collection.collectionName}}</td>\r\n              <td>{{item.productBase.product.productName}}</td>\r\n              <td>{{item.formula.createdDate | date: 'dd/MM/yyyy'}}</td>\r\n              <td> {{item.formula.machine != null && item.formula.machine.machineId > 0 ? 'Me' : 'System'}}</td>\r\n              <td [ngStyle]=\"{'white-space': 'nowrap'}\">\r\n                <button mat-raised-button matTooltip=\"View Formula\" aria-label=\"View Formula\" (click)=\"viewFormula(item)\">\r\n                  <i class=\"fas fa-info-circle\"></i>\r\n                </button>\r\n\r\n                <ng-container *ngIf=\"item.formula.machine != null && item.formula.machine.machineId > 0\">\r\n                  <span class=\"vertical-separate-line\">&nbsp;</span>\r\n\r\n                  <button mat-raised-button matTooltip=\"Edit Formula\" aria-label=\"Edit Formula\" (click)=\"editTheFormula(item.formulaProductBaseId)\">\r\n                    <i class=\"fas fa-edit\"></i>\r\n                  </button>\r\n                </ng-container>\r\n            </tr>\r\n\r\n            <tfoot>\r\n            <tr>\r\n              <td colspan=\"100%\">\r\n                Show {{pagenationMode.listItems.length}} of  {{pagenationMode.totalItem}} items.\r\n\r\n                <span class=\"pagenation-footer\" style=\"float: right\">\r\n                  <span *ngIf=\"pagenationMode.pageIndex > 0\" (click)=\"goToPage(pagenationMode.pageIndex - 1)\" class=\"btn-action\"><</span>\r\n                  <span>{{pagenationMode.pageIndex + 1}}</span>\r\n                  <span *ngIf=\"pagenationMode.pageIndex * pagenationMode.maxPageItem + pagenationMode.maxPageItem < pagenationMode.totalItem\"  (click)=\"goToPage(pagenationMode.pageIndex + 1)\" class=\"btn-action\">></span>\r\n                </span>\r\n              </td>\r\n            </tr>\r\n            </tfoot>\r\n          </table>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -1134,7 +1276,7 @@ module.exports = "<div class=\"block-header\">\r\n  <h1>List Formula</h1>\r\n</d
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".select-color-field {\n  width: 100%; }\n\n.select2.select2-container {\n  min-width: 300px;\n  width: 100%; }\n\n.pagenation-footer {\n  float: right; }\n\n.pagenation-footer span {\n    display: inline-block;\n    min-width: 50px;\n    text-align: center;\n    padding: 5px 10px; }\n\n.pagenation-footer span.btn-action {\n      border: 1px solid #ccc;\n      cursor: pointer; }\n\n.vertical-separate-line {\n  margin-left: 0.25em;\n  margin-right: 0.25em; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9mb3JtdWxhL2xpc3QtZm9ybXVsYS9YOlxcd3NfbGVhcm5pbmdcXGNsaWVudHZpZXRwb3dlci9zcmNcXGFwcFxcY29tcG9uZW50c1xcZm9ybXVsYVxcbGlzdC1mb3JtdWxhXFxsaXN0LWZvcm11bGEuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxZQUFXLEVBQ1o7O0FBRUQ7RUFDRSxpQkFBZ0I7RUFDaEIsWUFBVyxFQUNaOztBQUdEO0VBQ0UsYUFBWSxFQWFiOztBQWREO0lBR0ksc0JBQXFCO0lBRXJCLGdCQUFlO0lBQ2YsbUJBQWtCO0lBQ2xCLGtCQUFpQixFQU1sQjs7QUFiSDtNQVVNLHVCQUFzQjtNQUN0QixnQkFBZSxFQUNoQjs7QUFLTDtFQUNFLG9CQUFtQjtFQUNuQixxQkFBb0IsRUFDckIiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL2Zvcm11bGEvbGlzdC1mb3JtdWxhL2xpc3QtZm9ybXVsYS5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5zZWxlY3QtY29sb3ItZmllbGR7XHJcbiAgd2lkdGg6IDEwMCU7XHJcbn1cclxuXHJcbi5zZWxlY3QyLnNlbGVjdDItY29udGFpbmVye1xyXG4gIG1pbi13aWR0aDogMzAwcHg7XHJcbiAgd2lkdGg6IDEwMCU7XHJcbn1cclxuXHJcblxyXG4ucGFnZW5hdGlvbi1mb290ZXJ7XHJcbiAgZmxvYXQ6IHJpZ2h0O1xyXG4gIHNwYW57XHJcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XHJcblxyXG4gICAgbWluLXdpZHRoOiA1MHB4O1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gICAgcGFkZGluZzogNXB4IDEwcHg7XHJcblxyXG4gICAgJi5idG4tYWN0aW9ue1xyXG4gICAgICBib3JkZXI6IDFweCBzb2xpZCAjY2NjO1xyXG4gICAgICBjdXJzb3I6IHBvaW50ZXI7XHJcbiAgICB9XHJcbiAgfVxyXG59XHJcblxyXG5cclxuLnZlcnRpY2FsLXNlcGFyYXRlLWxpbmV7XHJcbiAgbWFyZ2luLWxlZnQ6IDAuMjVlbTtcclxuICBtYXJnaW4tcmlnaHQ6IDAuMjVlbTtcclxufVxyXG4iXX0= */"
+module.exports = ".select-color-field {\n  width: 100%; }\n\n.select2.select2-container {\n  min-width: 300px;\n  width: 100%; }\n\n.pagenation-footer {\n  float: right; }\n\n.pagenation-footer span {\n    display: inline-block;\n    min-width: 50px;\n    text-align: center;\n    padding: 5px 10px; }\n\n.pagenation-footer span.btn-action {\n      border: 1px solid #ccc;\n      cursor: pointer; }\n\n.vertical-separate-line {\n  margin-left: 0.25em;\n  margin-right: 0.25em; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9mb3JtdWxhL2xpc3QtZm9ybXVsYS9HOlxcV29ya3NwYWNlXFxjbGllbnR2aWV0cG93ZXIvc3JjXFxhcHBcXGNvbXBvbmVudHNcXGZvcm11bGFcXGxpc3QtZm9ybXVsYVxcbGlzdC1mb3JtdWxhLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsWUFBVyxFQUNaOztBQUVEO0VBQ0UsaUJBQWdCO0VBQ2hCLFlBQVcsRUFDWjs7QUFHRDtFQUNFLGFBQVksRUFhYjs7QUFkRDtJQUdJLHNCQUFxQjtJQUVyQixnQkFBZTtJQUNmLG1CQUFrQjtJQUNsQixrQkFBaUIsRUFNbEI7O0FBYkg7TUFVTSx1QkFBc0I7TUFDdEIsZ0JBQWUsRUFDaEI7O0FBS0w7RUFDRSxvQkFBbUI7RUFDbkIscUJBQW9CLEVBQ3JCIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50cy9mb3JtdWxhL2xpc3QtZm9ybXVsYS9saXN0LWZvcm11bGEuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuc2VsZWN0LWNvbG9yLWZpZWxke1xyXG4gIHdpZHRoOiAxMDAlO1xyXG59XHJcblxyXG4uc2VsZWN0Mi5zZWxlY3QyLWNvbnRhaW5lcntcclxuICBtaW4td2lkdGg6IDMwMHB4O1xyXG4gIHdpZHRoOiAxMDAlO1xyXG59XHJcblxyXG5cclxuLnBhZ2VuYXRpb24tZm9vdGVye1xyXG4gIGZsb2F0OiByaWdodDtcclxuICBzcGFue1xyXG4gICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG5cclxuICAgIG1pbi13aWR0aDogNTBweDtcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICAgIHBhZGRpbmc6IDVweCAxMHB4O1xyXG5cclxuICAgICYuYnRuLWFjdGlvbntcclxuICAgICAgYm9yZGVyOiAxcHggc29saWQgI2NjYztcclxuICAgICAgY3Vyc29yOiBwb2ludGVyO1xyXG4gICAgfVxyXG4gIH1cclxufVxyXG5cclxuXHJcbi52ZXJ0aWNhbC1zZXBhcmF0ZS1saW5le1xyXG4gIG1hcmdpbi1sZWZ0OiAwLjI1ZW07XHJcbiAgbWFyZ2luLXJpZ2h0OiAwLjI1ZW07XHJcbn1cclxuIl19 */"
 
 /***/ }),
 
@@ -1185,10 +1327,7 @@ var ListFormulaComponent = /** @class */ (function () {
         this.fileService = fileService;
         this.router = router;
         this.selectedFormula = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
-        this.listItems = [];
-        this.sortedData = [];
         this.currentSort = null;
-        this.listOriginal = [];
         this.listFormulas = [];
         this.listCollections = [];
         this.listProducts = [];
@@ -1221,8 +1360,9 @@ var ListFormulaComponent = /** @class */ (function () {
         this.sortedData = [];
         this.filter = {
             formulaId: undefined,
-            productId: undefined,
             collectionId: undefined,
+            baseId: undefined,
+            productId: undefined,
             customerId: undefined
         };
         if (this.storeService.getMachineData() != null && this.storeService.getMachineData().machineId > 0) {
@@ -1231,33 +1371,15 @@ var ListFormulaComponent = /** @class */ (function () {
     };
     ListFormulaComponent.prototype.initMetadata = function () {
         var _this = this;
-        // this.formulaService.postData();
-        // this.formulaService.postData1();
-        var me = this;
-        this.listFormulas = [];
-        this.formulaService.getALl().subscribe(function (datas) {
-            _this.listFormulas = datas;
-        });
-        this.listProducts = [];
-        this.productService.getListItems().subscribe(function (datas) {
-            _this.listProducts = datas;
-        });
-        this.listCollections = [];
-        this.collectionService.getListItems().subscribe(function (datas) {
-            me.listCollections = datas;
-        });
-        this.listProductBase = [];
-        this.productService.getListProductBase().subscribe(function (datas) {
-            me.listProductBase = datas;
-        });
         // get list formula product base
         this.listItems = [];
         this.listOriginal = [];
         this.formulaService.getAllFormulaProductBase().subscribe(function (datas) {
             datas.map(function (fpb) {
-                me.listItems.push(fpb);
-                me.listOriginal.push(fpb);
+                _this.listItems.push(fpb);
+                _this.listOriginal.push(fpb);
             });
+            _this.updateRelativeData();
             _this.updateCustomerForFormula();
             _this.updatePagenationMode();
         });
@@ -1271,10 +1393,39 @@ var ListFormulaComponent = /** @class */ (function () {
             _this.updateCustomerForFormula();
         });
     };
+    ListFormulaComponent.prototype.updateRelativeData = function () {
+        this.listFormulas = [];
+        this.listCollections = [];
+        this.listProducts = [];
+        this.listBases = [];
+        var _loop_1 = function (item) {
+            var exitsFormula = this_1.listFormulas.filter(function (_item) { return _item.formulaId === item.formula.formulaId; });
+            if (exitsFormula == null || exitsFormula.length === 0) {
+                this_1.listFormulas.push(item.formula);
+            }
+            var exitsCollection = this_1.listCollections.filter(function (_item) { return _item.collectionId === item.formula.collection.collectionId; });
+            if (exitsCollection == null || exitsCollection.length === 0) {
+                this_1.listCollections.push(item.formula.collection);
+            }
+            var exitsProduct = this_1.listProducts.filter(function (_item) { return _item.productId === item.productBase.product.productId; });
+            if (exitsProduct == null || exitsProduct.length === 0) {
+                this_1.listProducts.push(item.productBase.product);
+            }
+            var existBase = this_1.listBases.filter(function (_item) { return _item.baseId === item.productBase.base.baseId; });
+            if (existBase == null || existBase.length === 0) {
+                this_1.listBases.push(item.productBase.base);
+            }
+        };
+        var this_1 = this;
+        for (var _i = 0, _a = this.listItems; _i < _a.length; _i++) {
+            var item = _a[_i];
+            _loop_1(item);
+        }
+    };
     ListFormulaComponent.prototype.updateCustomerForFormula = function () {
         if (this.listFormulaCustomer != null && this.listFormulaCustomer.length > 0 && this.listItems != null && this.listItems.length > 0) {
-            var _loop_1 = function (formulaCustomer) {
-                var listFormulaBase = this_1.listItems.filter(function (item) {
+            var _loop_2 = function (formulaCustomer) {
+                var listFormulaBase = this_2.listItems.filter(function (item) {
                     return item.formula.formulaId === formulaCustomer.formula.formulaId;
                 });
                 if (listFormulaBase != null && listFormulaBase.length > 0) {
@@ -1287,12 +1438,15 @@ var ListFormulaComponent = /** @class */ (function () {
                     }
                 }
             };
-            var this_1 = this;
+            var this_2 = this;
             for (var _i = 0, _a = this.listFormulaCustomer; _i < _a.length; _i++) {
                 var formulaCustomer = _a[_i];
-                _loop_1(formulaCustomer);
+                _loop_2(formulaCustomer);
             }
         }
+    };
+    ListFormulaComponent.prototype.testElectron = function () {
+        this.fileService.saveFile();
     };
     ListFormulaComponent.prototype.viewFormula = function (selectItem) {
         this.selectedFormula.emit(selectItem);
@@ -1303,25 +1457,27 @@ var ListFormulaComponent = /** @class */ (function () {
     };
     ListFormulaComponent.prototype.reset = function () {
     };
-    ListFormulaComponent.prototype.testElectron = function () {
-        this.fileService.saveFile();
-    };
     ListFormulaComponent.prototype.refresh = function () {
         var _this = this;
         var resFilter = this.listOriginal;
         if (this.filter.formulaId) {
             resFilter = resFilter.filter(function (fpb) {
-                return fpb.formula.formulaId.toString() === _this.filter.formulaId.toString();
+                return fpb.formula.formulaId === _this.filter.formulaId;
             });
         }
         if (this.filter.collectionId) {
             resFilter = resFilter.filter(function (fpb) {
-                return fpb.formula.collection.collectionId.toString() === _this.filter.collectionId.toString();
+                return fpb.formula.collection.collectionId === _this.filter.collectionId;
             });
         }
         if (this.filter.productId) {
             resFilter = resFilter.filter(function (fpb) {
-                return fpb.productBase.product.productId.toString() === _this.filter.productId.toString();
+                return fpb.productBase.product.productId === _this.filter.productId;
+            });
+        }
+        if (this.filter.baseId) {
+            resFilter = resFilter.filter(function (fpb) {
+                return fpb.productBase.base.baseId === _this.filter.baseId;
             });
         }
         if (this.filter.customerId) {
@@ -1329,7 +1485,7 @@ var ListFormulaComponent = /** @class */ (function () {
                 var isExis = false;
                 if (fpb.formula.listCustomer != null && fpb.formula.listCustomer.length > 0) {
                     var index = fpb.formula.listCustomer.findIndex(function (customer) {
-                        return customer.customerId.toString() === _this.filter.customerId.toString();
+                        return customer.customerId === _this.filter.customerId;
                     });
                     if (index != null && index > -1) {
                         isExis = true;
@@ -1339,6 +1495,7 @@ var ListFormulaComponent = /** @class */ (function () {
             });
         }
         this.listItems = resFilter;
+        this.updateRelativeData();
         if (this.currentSort == null || !this.currentSort.active || this.currentSort.direction === '') {
             this.listItems = resFilter;
         }
@@ -1413,7 +1570,7 @@ var ListFormulaComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"block-header\">\r\n  <h1>Maintenance</h1>\r\n</div>\r\n"
+module.exports = "<div class=\"block-header\">\n  <h1>Maintenance</h1>\n</div>\n"
 
 /***/ }),
 
@@ -1476,7 +1633,7 @@ var MaintenanceComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"block-header\">\r\n  <h1>Standard Formula</h1>\r\n</div>\r\n\r\n<div class=\"row\" *ngIf=\"dbItem != null\">\r\n  <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        Information\r\n      </div>\r\n\r\n      <div class=\"card-body form-detail\">\r\n        <div class=\"form-group row\">\r\n          <label class=\"col-md-4 label-control\">Color</label>\r\n          <div class=\"col-md-8\">\r\n            {{dbItem.formula.formulaCode}}\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"form-group row\">\r\n          <label class=\"col-md-4 label-control\">Collection</label>\r\n          <div class=\"col-md-8\">\r\n            {{dbItem.formula.collection.collectionName}}\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"form-group row\">\r\n          <label class=\"col-md-4 label-control\">Approximate Color</label>\r\n          <div class=\"col-md-8\">\r\n            <span [ngStyle]=\"{'background': dbItem.formula.approximateColor, 'display': 'inline-block', 'width': '30px', 'height': '30px', 'border': '1px solid #333'}\"></span>\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"form-group row\">\r\n          <label class=\"col-md-4 label-control\">Product</label>\r\n          <div class=\"col-md-8\">\r\n            {{dbItem.productBase.product.productName}}\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"form-group row\">\r\n          <label class=\"col-md-4 label-control\">Formula Date</label>\r\n          <div class=\"col-md-8\">\r\n            {{dbItem.formula.createdDate | date : 'dd/MM/yyyy'}}\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"form-group row\">\r\n          <label class=\"col-md-4 label-control\">Substrate</label>\r\n          <div class=\"col-md-8\">\r\n            {{dbItem.formula.substrate}}\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"form-group row\">\r\n          <label class=\"col-md-4 label-control\">Comment</label>\r\n          <div class=\"col-md-8\">\r\n            {{dbItem.formula.comment}}\r\n          </div>\r\n        </div>\r\n\r\n\r\n        <div class=\"form-group row\">\r\n          <label class=\"col-md-4 label-control\">Barcode</label>\r\n          <div class=\"col-md-8\">\r\n            <span *ngIf=\"selectProductBase != null\">\r\n              {{selectProductBase.barCode}}\r\n            </span>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n\r\n  </div>\r\n\r\n  <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        Component colors\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        <div class=\"table-responsive\">\r\n          <table class=\"table table-bordered\" >\r\n            <tr>\r\n              <th style=\"width: 30%\">Component</th>\r\n              <th style=\"width: 20%\">ml</th>\r\n              <th style=\"width: 50%\">Color\r\n            </tr>\r\n\r\n            <tr *ngFor=\"let colorantItem of listFormulaColorant\">\r\n              <td>{{colorantItem.colourant.colourantName}}</td>\r\n              <td>{{roundNumber((colorantItem.quantity / dbItem.formula.baseOnCan) * canSize)}}</td>\r\n              <td>\r\n                <span class=\"color-bar\" >\r\n                  <span class=\"color-select\" [ngStyle]=\"{'background': colorantItem.colourant.rbgHex, 'width': (colorantItem.quantity / maxColorQuantity) * 100 + '%'}\"></span>\r\n                </span>\r\n              </td>\r\n            </tr>\r\n          </table>\r\n        </div>\r\n\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n\r\n<div class=\"row\" *ngIf=\"dbItem != null\">\r\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        Mixed\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        <div class=\"row\"  *ngIf=\"errorMessage != null && errorMessage != ''\">\r\n          <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n            <div class=\"alert alert-danger\">\r\n              <button class=\"close\" data-dismiss=\"alert\" aria-label=\"close\" (click)=\"clearErrorMessage()\">&times;</button>\r\n              {{errorMessage}}\r\n            </div>\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"row\">\r\n          <div class=\"col-lg-6 col-md-6 col-sm-16 col-xs-12 text-right\">\r\n\r\n             <span class=\"base-can-empty\" *ngIf=\"selectProductBase != null\">\r\n                <span class=\"base-can-background\">\r\n                  <span class=\"base-can-volume\" [ngStyle]=\"{'background-color': selectProductBase.productBase.rbgHex, 'height': selectProductBase.percentage + '%'}\">\r\n                    <span class=\"can-base-info\">\r\n                      <span class=\"base-type\">Base : {{selectProductBase.productBase.base.baseCode}}</span>\r\n                      <span class=\"base-volume\">{{canSize}} Liter</span>\r\n                      <span class=\"base-name\">{{selectProductBase.productBase.product.productName}}</span>\r\n                    </span>\r\n                  </span>\r\n                </span>\r\n              </span>\r\n          </div>\r\n\r\n          <div class=\"col-lg-6 col-md-6 col-sm-126 col-xs-12 form-detail\">\r\n            <div class=\"row form-group\">\r\n              <label class=\"col-md-4 label-control\">Number of cans : </label>\r\n              <div class=\"col-md-8\">\r\n                <input type=\"number\" [(ngModel)]=\"numberOfCan\" class=\"form-control\" required=\"required\" [ngModelOptions]=\"{standalone: true}\" [ngStyle]=\"{'width': '200px'}\">\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"row form-group\">\r\n              <label class=\"col-md-4 label-control\">Can size:</label>\r\n              <div class=\"col-md-8\">\r\n                <input type=\"number\" [(ngModel)]=\"canSize\" class=\"form-control\" required=\"required\" [ngModelOptions]=\"{standalone: true}\" [ngStyle]=\"{'width': '200px'}\">\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"row form-group\">\r\n              <label class=\"col-md-4 label-control\">Or select:</label>\r\n              <div class=\"col-md-8\">\r\n                <ng-select2 class=\"select-color-field\" [(ngModel)]=\"canSize\" [data]=\"listProductBase\" [value]=\"canSize\" [placeholder]=\"'Choose Can Size'\" [width]=\"200\" (valueChanged)=\"changedCanSize($event)\"></ng-select2>\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"row form-group\">\r\n              <label class=\"col-md-4 label-control\"></label>\r\n\r\n              <div class=\"col-md-8\">\r\n                <button class=\"btn btn-primary\" (click)=\"beginDispense('view-dispense-task-modal')\">\r\n                  <i class=\"fas fa-fill-drip\"></i>\r\n                  <span *ngIf=\"inProgress\">In Progress</span>\r\n                  <span *ngIf=\"! inProgress\">Dispense</span>\r\n                </button>\r\n              </div>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<ng-container *ngIf=\"stateMachine != null && stateMachine == 'DISPENSE' && (errorMessage == null || errorMessage == '') && dbItem != null && currentTask != null && currentTask.taskId != null && currentTask.taskId > 0\">\r\n  <pp-modal id=\"view-dispense-task-modal\" class=\"modal dispense-job-status-modal\" [ngStyle]=\"{'display': 'none'}\">\r\n    <div class=\"modal-content\">\r\n      <ng-container *ngIf=\"errorMessage == null || errorMessage == ''\">\r\n        <div class=\"modal-header\">\r\n          <h5 class=\"modal-title\">Dispense Job Status</h5>\r\n          <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\" (click)=\"closeModal('view-dispense-task-modal')\">\r\n            <span aria-hidden=\"true\">×</span>\r\n          </button>\r\n        </div>\r\n\r\n        <div class=\"modal-body\">\r\n          <ng-container *ngIf=\"dbItem != null && currentTask != null && currentTask.taskId != null && currentTask.taskId > 0\">\r\n            <app-viewdispensetask [dispenseTask]=\"currentTask\" [dispenseStepTask]=\"currentTaskStep\" [listColorantUsed]=\"listColorant\" [maxColorQuantity]=\"maxColorQuantity\"></app-viewdispensetask>\r\n          </ng-container>\r\n        </div>\r\n      </ng-container>\r\n\r\n      <div class=\"modal-footer\">\r\n        <button type=\"button\" class=\"btn btn-primary\" (click)=\"closeModal('view-dispense-task-modal')\">Hide</button>\r\n      </div>\r\n    </div>\r\n  </pp-modal>\r\n</ng-container>\r\n\r\n<ng-container *ngIf=\"stateMachine != null && stateMachine == 'PRINT' && dbItem != null\">\r\n  <pp-modal id=\"print-formula-modal\" class=\"modal print-formula-modal\" [ngStyle]=\"{'display': 'none'}\">\r\n    <div class=\"modal-content\">\r\n      <div class=\"modal-header\">\r\n        <h5 class=\"modal-title\">Print</h5>\r\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\" (click)=\"closeModal('print-formula-modal')\">\r\n          <span aria-hidden=\"true\">×</span>\r\n        </button>\r\n      </div>\r\n\r\n      <div class=\"modal-body\">\r\n        <div class=\"row text-center\">\r\n          <div class=\"col-md-12 formula-color-info\"><h3>{{dbItem.formula.formulaCode}}</h3></div>\r\n          <div class=\"col-md-12 collection-info\"><h4>{{dbItem.formula.collection.collectionName}}</h4></div>\r\n          <div class=\"col-md-12 shop-info\"><h5>Paintshop \"Demo\"</h5></div>\r\n          <div class=\"col-md-12 street-info\"><h5>Demostreet 1</h5></div>\r\n          <div class=\"col-md-12 ville-info\"><h5>Demo ville</h5></div>\r\n          <div class=\"col-md-12 substrate-info\"><p>Substrate recommendation Universal primer Grey</p></div>\r\n          <div class=\"col-md-12 bar-code-info\">\r\n             <span *ngIf=\"selectProductBase != null\">\r\n              <ngx-barcode [bc-value]=\"selectProductBase.barCode\" [bc-display-value]=\"true\"></ngx-barcode>\r\n            </span>\r\n          </div>\r\n        </div>\r\n      </div>\r\n\r\n      <div class=\"modal-footer\">\r\n        <button type=\"button\" class=\"btn btn-default\" (click)=\"closeDispenseModel()\">Close</button>\r\n        <button type=\"button\" class=\"btn btn-primary\" (click)=\"printFormulaDispense()\">Print</button>\r\n      </div>\r\n    </div>\r\n  </pp-modal>\r\n</ng-container>\r\n\r\n\r\n"
+module.exports = "<div class=\"block-header\">\r\n  <h1>Standard Formula</h1>\r\n</div>\r\n\r\n<div class=\"row\" *ngIf=\"dbItem != null\">\r\n  <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        Information\r\n      </div>\r\n\r\n      <div class=\"card-body form-detail\">\r\n        <div class=\"form-group row\">\r\n          <label class=\"col-md-4 label-control\">Color</label>\r\n          <div class=\"col-md-8\">\r\n            {{dbItem.formula.formulaCode}}\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"form-group row\">\r\n          <label class=\"col-md-4 label-control\">Collection</label>\r\n          <div class=\"col-md-8\">\r\n            {{dbItem.formula.collection.collectionName}}\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"form-group row\">\r\n          <label class=\"col-md-4 label-control\">Approximate Color</label>\r\n          <div class=\"col-md-8\">\r\n            <span [ngStyle]=\"{'background': dbItem.formula.approximateColor, 'display': 'inline-block', 'width': '30px', 'height': '30px', 'border': '1px solid #333'}\"></span>\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"form-group row\">\r\n          <label class=\"col-md-4 label-control\">Product</label>\r\n          <div class=\"col-md-8\">\r\n            {{dbItem.productBase.product.productName}}\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"form-group row\">\r\n          <label class=\"col-md-4 label-control\">Formula Date</label>\r\n          <div class=\"col-md-8\">\r\n            {{dbItem.formula.createdDate | date : 'dd/MM/yyyy'}}\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"form-group row\">\r\n          <label class=\"col-md-4 label-control\">Substrate</label>\r\n          <div class=\"col-md-8\">\r\n            {{dbItem.formula.substrate}}\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"form-group row\">\r\n          <label class=\"col-md-4 label-control\">Comment</label>\r\n          <div class=\"col-md-8\">\r\n            {{dbItem.formula.comment}}\r\n          </div>\r\n        </div>\r\n\r\n\r\n        <div class=\"form-group row\">\r\n          <label class=\"col-md-4 label-control\">Barcode</label>\r\n          <div class=\"col-md-8\">\r\n            <span *ngIf=\"selectProductBase != null\">\r\n              {{selectProductBase.barCode}}\r\n            </span>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n\r\n  </div>\r\n\r\n  <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        Component colors\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        <div class=\"table-responsive\">\r\n          <table class=\"table table-bordered\" >\r\n            <tr>\r\n              <th style=\"width: 30%\">Component</th>\r\n              <th style=\"width: 20%\">ml</th>\r\n              <th style=\"width: 50%\">Color\r\n            </tr>\r\n\r\n            <tr *ngFor=\"let colorantItem of listFormulaColorant\">\r\n              <td>{{colorantItem.colourant.colourantName}}</td>\r\n              <td>{{roundNumber((colorantItem.quantity / dbItem.formula.baseOnCan) * canSize)}}</td>\r\n              <td>\r\n                <span class=\"color-bar\" >\r\n                  <span class=\"color-select\" [ngStyle]=\"{'background': colorantItem.colourant.rbgHex, 'width': (colorantItem.quantity / maxColorQuantity) * 100 + '%'}\"></span>\r\n                </span>\r\n              </td>\r\n            </tr>\r\n          </table>\r\n        </div>\r\n\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n\r\n<div class=\"row\" *ngIf=\"dbItem != null\">\r\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        Mixed\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        <div class=\"row\"  *ngIf=\"errorMessage != null && errorMessage != ''\">\r\n          <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n            <div class=\"alert alert-danger\">\r\n              <button class=\"close\" data-dismiss=\"alert\" aria-label=\"close\" (click)=\"clearErrorMessage()\">&times;</button>\r\n              {{errorMessage}}\r\n            </div>\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"row\">\r\n          <div class=\"col-lg-6 col-md-6 col-sm-16 col-xs-12 text-right\">\r\n\r\n             <span class=\"base-can-empty\" *ngIf=\"selectProductBase != null\">\r\n                <span class=\"base-can-background\">\r\n                  <span class=\"base-can-volume\" [ngStyle]=\"{'background-color': selectProductBase.productBase.rbgHex, 'height': selectProductBase.percentage + '%'}\">\r\n                    <span class=\"can-base-info\">\r\n                      <span class=\"base-type\">Base : {{selectProductBase.productBase.base.baseCode}}</span>\r\n                      <span class=\"base-volume\">{{canSize}} Liter</span>\r\n                      <span class=\"base-name\">{{selectProductBase.productBase.product.productName}}</span>\r\n                    </span>\r\n                  </span>\r\n                </span>\r\n              </span>\r\n          </div>\r\n\r\n          <div class=\"col-lg-6 col-md-6 col-sm-126 col-xs-12 form-detail\">\r\n            <div class=\"row form-group\">\r\n              <label class=\"col-md-4 label-control\">Number of cans : </label>\r\n              <div class=\"col-md-8\">\r\n                <input type=\"number\" [(ngModel)]=\"numberOfCan\" class=\"form-control\" required=\"required\" [ngModelOptions]=\"{standalone: true}\" [ngStyle]=\"{'width': '200px'}\">\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"row form-group\">\r\n              <label class=\"col-md-4 label-control\">Can size:</label>\r\n              <div class=\"col-md-8\">\r\n                <input type=\"number\" [(ngModel)]=\"canSize\" class=\"form-control\" required=\"required\" [ngModelOptions]=\"{standalone: true}\" [ngStyle]=\"{'width': '200px'}\">\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"row form-group\">\r\n              <label class=\"col-md-4 label-control\">Or select:</label>\r\n              <div class=\"col-md-8\">\r\n                <ng-select2 class=\"select-color-field\" [(ngModel)]=\"canSize\" [data]=\"listProductBase\" [value]=\"canSize\" [placeholder]=\"'Choose Can Size'\" [width]=\"200\" (valueChanged)=\"changedCanSize($event)\"></ng-select2>\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"row form-group\">\r\n              <label class=\"col-md-4 label-control\"></label>\r\n\r\n              <div class=\"col-md-8\">\r\n                <button class=\"btn btn-primary\" (click)=\"beginDispense('view-dispense-task-modal')\">\r\n                  <i class=\"fas fa-fill-drip\"></i>\r\n                  <span *ngIf=\"inProgress\">In Progress</span>\r\n                  <span *ngIf=\"! inProgress\">Dispense</span>\r\n                </button>\r\n              </div>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<ng-container *ngIf=\"stateMachine != null && stateMachine == 'DISPENSE' && (errorMessage == null || errorMessage == '') && dbItem != null && currentTask != null && currentTask.taskId != null && currentTask.taskId > 0\">\r\n  <pp-modal id=\"view-dispense-task-modal\" class=\"modal dispense-job-status-modal\" [ngStyle]=\"{'display': 'none'}\">\r\n    <div class=\"modal-content\">\r\n      <ng-container *ngIf=\"errorMessage == null || errorMessage == ''\">\r\n        <div class=\"modal-header\">\r\n          <h5 class=\"modal-title\">Dispense Job Status</h5>\r\n          <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\" (click)=\"closeModal('view-dispense-task-modal')\">\r\n            <span aria-hidden=\"true\">×</span>\r\n          </button>\r\n        </div>\r\n\r\n        <div class=\"modal-body\">\r\n          <ng-container *ngIf=\"dbItem != null && currentTask != null && currentTask.taskId != null && currentTask.taskId > 0\">\r\n            <app-viewdispensetask [dispenseTask]=\"currentTask\" [dispenseStepTask]=\"currentTaskStep\" [listColorantUsed]=\"listColorant\" [maxColorQuantity]=\"maxColorQuantity\"></app-viewdispensetask>\r\n          </ng-container>\r\n        </div>\r\n      </ng-container>\r\n\r\n      <div class=\"modal-footer\">\r\n        <button type=\"button\" class=\"btn btn-primary\" (click)=\"closeModal('view-dispense-task-modal')\">Hide</button>\r\n      </div>\r\n    </div>\r\n  </pp-modal>\r\n</ng-container>\r\n\r\n<ng-container *ngIf=\"stateMachine != null && stateMachine == 'PRINT' && dbItem != null\">\r\n  <pp-modal id=\"print-formula-modal\" class=\"modal print-formula-modal\" [ngStyle]=\"{'display': 'none'}\">\r\n    <div class=\"modal-content\">\r\n      <div class=\"modal-header\">\r\n        <h5 class=\"modal-title\">Print</h5>\r\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\" (click)=\"closeModal('print-formula-modal')\">\r\n          <span aria-hidden=\"true\">×</span>\r\n        </button>\r\n      </div>\r\n\r\n      <div class=\"modal-body\">\r\n        <div class=\"row text-center\">\r\n          <div class=\"col-md-12 formula-color-info\"><h3>{{dbItem.formula.formulaCode}}</h3></div>\r\n          <div class=\"col-md-12 collection-info\"><h4>{{dbItem.formula.collection.collectionName}}</h4></div>\r\n          <div class=\"col-md-12 collection-info\"><h5>{{canSize}} Liter</h5></div>\r\n          <div class=\"col-md-12 collection-info\"><h5>Created Date: {{currentTask.startTime | date: 'dd/MM/yyyy'}}</h5></div>\r\n          <div class=\"col-md-12 shop-info\"><h5>Company: {{userInfo.company.name}}</h5></div>\r\n          <div class=\"col-md-12 street-info\"><h5>Address: {{userInfo.company.address}}</h5></div>\r\n          <div class=\"col-md-12 ville-info\"><h5>City: {{userInfo.company.city}}</h5></div>\r\n          <div class=\"col-md-12 ville-info\"><h5>Website: {{userInfo.company.website}}</h5></div>\r\n          <div class=\"col-md-12 ville-info\"><h5>Phone: {{userInfo.company.phone}}</h5></div>\r\n          <div class=\"col-md-12 substrate-info\"><p>{{dbItem.formula.substrate}}</p></div>\r\n          <div class=\"col-md-12 bar-code-info\">\r\n             <span *ngIf=\"selectProductBase != null\">\r\n              <ngx-barcode [bc-value]=\"selectProductBase.barCode\" [bc-display-value]=\"true\"></ngx-barcode>\r\n            </span>\r\n          </div>\r\n        </div>\r\n      </div>\r\n\r\n      <div class=\"modal-footer\">\r\n        <button type=\"button\" class=\"btn btn-default\" (click)=\"closeDispenseModel()\">Close</button>\r\n        <button type=\"button\" class=\"btn btn-primary\" (click)=\"printFormulaDispense()\">Print</button>\r\n      </div>\r\n    </div>\r\n  </pp-modal>\r\n</ng-container>\r\n\r\n\r\n"
 
 /***/ }),
 
@@ -1487,7 +1644,7 @@ module.exports = "<div class=\"block-header\">\r\n  <h1>Standard Formula</h1>\r\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".color-bar {\n  width: 100%;\n  display: inline-block;\n  position: relative;\n  height: 1em; }\n  .color-bar .color-select {\n    display: inline-block;\n    position: absolute;\n    top: 0px;\n    left: 0px;\n    bottom: 0px; }\n  .text-error {\n  color: red; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9mb3JtdWxhL3ZpZXdmb3JtdWxhL1g6XFx3c19sZWFybmluZ1xcY2xpZW50dmlldHBvd2VyL3NyY1xcYXBwXFxjb21wb25lbnRzXFxmb3JtdWxhXFx2aWV3Zm9ybXVsYVxcdmlld2Zvcm11bGEuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxZQUFXO0VBQ1gsc0JBQXFCO0VBQ3JCLG1CQUFrQjtFQUNsQixZQUFXLEVBU1o7RUFiRDtJQU9JLHNCQUFxQjtJQUNyQixtQkFBa0I7SUFDbEIsU0FBUTtJQUNSLFVBQVM7SUFDVCxZQUFXLEVBQ1o7RUFFSDtFQUNFLFdBQVUsRUFDWCIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvZm9ybXVsYS92aWV3Zm9ybXVsYS92aWV3Zm9ybXVsYS5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jb2xvci1iYXJ7XHJcbiAgd2lkdGg6IDEwMCU7XHJcbiAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuICBoZWlnaHQ6IDFlbTtcclxuXHJcbiAgLmNvbG9yLXNlbGVjdHtcclxuICAgIGRpc3BsYXk6IGlubGluZS1ibG9jaztcclxuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgIHRvcDogMHB4O1xyXG4gICAgbGVmdDogMHB4O1xyXG4gICAgYm90dG9tOiAwcHg7XHJcbiAgfVxyXG59XHJcbi50ZXh0LWVycm9ye1xyXG4gIGNvbG9yOiByZWQ7XHJcbn1cclxuIl19 */"
+module.exports = ".color-bar {\n  width: 100%;\n  display: inline-block;\n  position: relative;\n  height: 1em; }\n  .color-bar .color-select {\n    display: inline-block;\n    position: absolute;\n    top: 0px;\n    left: 0px;\n    bottom: 0px; }\n  .text-error {\n  color: red; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9mb3JtdWxhL3ZpZXdmb3JtdWxhL0c6XFxXb3Jrc3BhY2VcXGNsaWVudHZpZXRwb3dlci9zcmNcXGFwcFxcY29tcG9uZW50c1xcZm9ybXVsYVxcdmlld2Zvcm11bGFcXHZpZXdmb3JtdWxhLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsWUFBVztFQUNYLHNCQUFxQjtFQUNyQixtQkFBa0I7RUFDbEIsWUFBVyxFQVNaO0VBYkQ7SUFPSSxzQkFBcUI7SUFDckIsbUJBQWtCO0lBQ2xCLFNBQVE7SUFDUixVQUFTO0lBQ1QsWUFBVyxFQUNaO0VBRUg7RUFDRSxXQUFVLEVBQ1giLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL2Zvcm11bGEvdmlld2Zvcm11bGEvdmlld2Zvcm11bGEuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY29sb3ItYmFye1xyXG4gIHdpZHRoOiAxMDAlO1xyXG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcclxuICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbiAgaGVpZ2h0OiAxZW07XHJcblxyXG4gIC5jb2xvci1zZWxlY3R7XHJcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XHJcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICB0b3A6IDBweDtcclxuICAgIGxlZnQ6IDBweDtcclxuICAgIGJvdHRvbTogMHB4O1xyXG4gIH1cclxufVxyXG4udGV4dC1lcnJvcntcclxuICBjb2xvcjogcmVkO1xyXG59XHJcbiJdfQ== */"
 
 /***/ }),
 
@@ -1511,6 +1668,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_productbase_productbase_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../services/productbase/productbase.service */ "./src/app/services/productbase/productbase.service.ts");
 /* harmony import */ var _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../utils/convert-models-utils */ "./src/app/utils/convert-models-utils.ts");
 /* harmony import */ var _services_machine_machine_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../services/machine/machine.service */ "./src/app/services/machine/machine.service.ts");
+/* harmony import */ var _services_store_store_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../../services/store/store.service */ "./src/app/services/store/store.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1531,13 +1689,15 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
 var ViewFormulaComponent = /** @class */ (function () {
-    function ViewFormulaComponent(formulaService, productBaseService, modalService, dispenseTaskService, machineService, router, route) {
+    function ViewFormulaComponent(formulaService, productBaseService, modalService, dispenseTaskService, machineService, storeService, router, route) {
         this.formulaService = formulaService;
         this.productBaseService = productBaseService;
         this.modalService = modalService;
         this.dispenseTaskService = dispenseTaskService;
         this.machineService = machineService;
+        this.storeService = storeService;
         this.router = router;
         this.route = route;
         this.listFormulaColorant = null;
@@ -1556,12 +1716,26 @@ var ViewFormulaComponent = /** @class */ (function () {
         this.stateMachine = null;
     }
     ViewFormulaComponent.prototype.ngOnInit = function () {
+        var _this = this;
         this.listFormulaColorant = [];
         this.listProductBaseCan = [];
-        this.fetchDBItem();
+        this.route.params.subscribe(function (params) {
+            var formulaProductBaseId = +params.id;
+            if (formulaProductBaseId != null && formulaProductBaseId > 0) {
+                _this.formulaProductBaseId = formulaProductBaseId;
+                _this.formulaService.findFormulaProductBaseById(_this.formulaProductBaseId).subscribe(function (data) {
+                    _this.dbItem = data;
+                    _this.selectProductBase = null;
+                    _this.getRelativeData();
+                });
+            }
+            else {
+                _this.selectProductBase = null;
+                _this.fetchDBItem();
+            }
+        });
     };
     ViewFormulaComponent.prototype.fetchDBItem = function () {
-        this.selectProductBase = null;
         this.getRelativeData();
     };
     ViewFormulaComponent.prototype.roundNumber = function (num) {
@@ -1570,6 +1744,7 @@ var ViewFormulaComponent = /** @class */ (function () {
     ViewFormulaComponent.prototype.getRelativeData = function () {
         var _this = this;
         if (this.dbItem != null) {
+            this.userInfo = this.storeService.getLoginUserData();
             // Step 2. Get list Colorant of Formula
             this.formulaService.getListColorantOfFormula(this.dbItem.formula.formulaId).subscribe(function (data) {
                 _this.listFormulaColorant = data;
@@ -1599,6 +1774,9 @@ var ViewFormulaComponent = /** @class */ (function () {
                 }
                 if (_this.selectProductBase == null && _this.listProductBaseCan.length > 0) {
                     _this.selectProductBase = _this.listProductBaseCan[0];
+                    _this.canSize = _this.dbItem.formula.baseOnCan;
+                }
+                else {
                     _this.canSize = _this.dbItem.formula.baseOnCan;
                 }
             });
@@ -1705,6 +1883,7 @@ var ViewFormulaComponent = /** @class */ (function () {
             _services_boostrap_modal_service__WEBPACK_IMPORTED_MODULE_3__["ModalService"],
             _services_dispensetask_dispensetask_service__WEBPACK_IMPORTED_MODULE_5__["DispenseTaskService"],
             _services_machine_machine_service__WEBPACK_IMPORTED_MODULE_9__["MachineService"],
+            _services_store_store_service__WEBPACK_IMPORTED_MODULE_10__["StoreService"],
             _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"]])
     ], ViewFormulaComponent);
     return ViewFormulaComponent;
@@ -1721,7 +1900,7 @@ var ViewFormulaComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<section class=\"container\">\r\n  <h2>Hướng dẫn setup git nếu commit ko được</h2>\r\n  <div class=\"content\">\r\n    <p>Khi gặp lỗi này: </p>\r\n    <blockquote>\r\n      Failed with error: unable to access 'https://github.com/buitahau/demoson.git/': The requested URL returned error: 403\r\n    </blockquote>\r\n\r\n    <p>Ta cần làm như sau: Vào folder .git/config, edit lại cái url như sau :</p>\r\n\r\n    <p>url = https://github.com/buitahau/demoson.git</p>\r\n\r\n    <p>url = https://bluesky020990:xxxxxxxxxxx@github.com/buitahau/demoson.git</p>\r\n\r\n    <p>Vẫn ko được :( Do ko đc share !!</p>\r\n  </div>\r\n</section>\r\n\r\n<section class=\"container\">\r\n  <h2>Hướng dẫn cài đặt angular</h2>\r\n\r\n  <div class=\"content\">\r\n    <p>Để cài đặt angular, đầu tiên ta new 1 cái angular project</p>\r\n\r\n    <blockquote>\r\n      ng new frontend\r\n    </blockquote>\r\n\r\n    <p>Sau khi khởi tạo nó rồi, đơn giản là ta sẽ start nó thôi đúng ko</p>\r\n\r\n    <blockquote>\r\n      ng serve --open\r\n    </blockquote>\r\n\r\n    <p>--open khai báo tự open cái browser lên để show cái page.</p>\r\n\r\n\r\n    <p>Các npm cần install để làm việc trong project này bao gồm:</p>\r\n    <ol>\r\n      <li>material </li>\r\n      <li>boostrap</li>\r\n      <li>node sass (để generate scss files)</li>\r\n    </ol>\r\n\r\n    <p>Sau đó, ta add material cho cái project này</p>\r\n\r\n    <blockquote>\r\n      ng add @angular/material\r\n    </blockquote>\r\n\r\n\r\n    <p>Add luon cai boostrap</p>\r\n\r\n    <p>Install boostrap</p>\r\n\r\n    <blockquote>\r\n      npm install ngx-bootstrap --save\r\n    </blockquote>\r\n\r\n    <p>Add boostrap to project </p>\r\n\r\n    <blockquote>\r\n      ng add ngx-bootstrap\r\n    </blockquote>\r\n\r\n    <p>Xem hướng dẫn install bootstrap cho angular tai  : <a href=\"https://medium.com/@tomastrajan/how-to-build-responsive-layouts-with-bootstrap-4-and-angular-6-cfbb108d797b\">đây</a> </p>\r\n\r\n    <p>Install node sass để generate scss file. Nếu ko cài cái này thì style trong file scss sẽ ko được generate ra đâu</p>\r\n\r\n    <blockquote>\r\n      npm install -g node-sass\r\n    </blockquote>\r\n  </div>\r\n</section>\r\n\r\n<section class=\"container\">\r\n  <h2>Hướng dẫn tạo component và khai báo routers</h2>\r\n\r\n  <div class=\"content\">\r\n    <p>Để tạo một component tự động, ta làm như sau : ** Khuyến khích xài command line vì generate thủ công\r\n    rất dễ sai và đôi khi xảy ra những sai sót ko đáng có.</p>\r\n\r\n    <ol>\r\n      <li>cd vào folder cài đặt angular, folder chứa file package.json (ở đây là front-end)</li>\r\n      <li>Dùng command line sau để tạo component một cách tự động:\r\n        <blockquote>\r\n          ng g c components/help\r\n        </blockquote>\r\n\r\n        <p>Giải thích  thêm : g - generate, c - component, components/help : tạo component Help ở folder /components</p>\r\n      </li>\r\n    </ol>\r\n\r\n    <img src=\"../../../assets/help/add_components.JPG\" width=\"989\" height=\"837\" class=\"img-fluid\"/>\r\n\r\n    <p>Đối với component, luôn có 2 phần, 1 là annotation @component và 2 là export class. 2 Cái này luôn đi với nhau, như hình:</p>\r\n\r\n    <img src=\"../../../assets/help/component_note_1.JPG\" width=\"1492\" height=\"1235\" class=\"img-fluid\"/>\r\n  </div>\r\n\r\n  <div class=\"content\">\r\n    <p>Quan trọng nhất của angular là các router. Ta phải khai báo các router này để định tuyến các request tới\r\n    các Component tương ứng.</p>\r\n\r\n    <p>Trong file app.module.ts, ta khai báo routers như sau: Xem image</p>\r\n\r\n    <img src=\"../../../assets/help/config_routers.jpg\" width=\"1884\" height=\"1453\"/>\r\n  </div>\r\n</section>\r\n\r\n<section class=\"container\">\r\n  <h2>Những lưu ý khi sử dụng các components trong Angular.</h2>\r\n\r\n  <div class=\"content\">\r\n    <p>Nếu một tag chưa được khai báo, thì nó sẽ báo lỗi biên dịch. Ví dụ thêm vào < mat-toolbar>&lt;/> thì ngay lập tức nó báo lỗi.</p>\r\n    <p>Khi import một module vào, thì phải thêm nó ở trong imports</p>\r\n\r\n    <img src=\"../../../assets/help/add_module.JPG\" width=\"1432\" height=\"1467\" class=\"img-fluid\"/>\r\n\r\n  </div>\r\n</section>\r\n\r\n\r\n<section class=\"container\">\r\n  <h2>Tạo service trong Angular </h2>\r\n\r\n  <div class=\"content\">\r\n    <p>Việc tạo service cũng như tạo component, tốt nhất nên generate tự động.</p>\r\n\r\n    <blockquote>\r\n      ng g s issue\r\n    </blockquote>\r\n\r\n    <p>Khác với component, sau khi generate xong ta phải khao báo trong declarations của app.module, thì service phải được khai báo trong providers.</p>\r\n\r\n    <img src=\"../../../assets/help/add_service.JPG\" width=\"2134\" height=\"1700\" class=\"img-fluid\"/>\r\n\r\n    <p>Như vậy, trước mắt ta có các lưu ý sau:</p>\r\n\r\n    <ol>\r\n      <li>Component khai báo trong declarations</li>\r\n      <li>Service khai báo trong providers</li>\r\n      <li>Module khai báo trong imports</li>\r\n    </ol>\r\n  </div>\r\n</section>\r\n\r\n"
+module.exports = "<section class=\"container\">\n  <h2>Hướng dẫn setup git nếu commit ko được</h2>\n  <div class=\"content\">\n    <p>Khi gặp lỗi này: </p>\n    <blockquote>\n      Failed with error: unable to access 'https://github.com/buitahau/demoson.git/': The requested URL returned error: 403\n    </blockquote>\n\n    <p>Ta cần làm như sau: Vào folder .git/config, edit lại cái url như sau :</p>\n\n    <p>url = https://github.com/buitahau/demoson.git</p>\n\n    <p>url = https://bluesky020990:xxxxxxxxxxx@github.com/buitahau/demoson.git</p>\n\n    <p>Vẫn ko được :( Do ko đc share !!</p>\n  </div>\n</section>\n\n<section class=\"container\">\n  <h2>Hướng dẫn cài đặt angular</h2>\n\n  <div class=\"content\">\n    <p>Để cài đặt angular, đầu tiên ta new 1 cái angular project</p>\n\n    <blockquote>\n      ng new frontend\n    </blockquote>\n\n    <p>Sau khi khởi tạo nó rồi, đơn giản là ta sẽ start nó thôi đúng ko</p>\n\n    <blockquote>\n      ng serve --open\n    </blockquote>\n\n    <p>--open khai báo tự open cái browser lên để show cái page.</p>\n\n\n    <p>Các npm cần install để làm việc trong project này bao gồm:</p>\n    <ol>\n      <li>material </li>\n      <li>boostrap</li>\n      <li>node sass (để generate scss files)</li>\n    </ol>\n\n    <p>Sau đó, ta add material cho cái project này</p>\n\n    <blockquote>\n      ng add @angular/material\n    </blockquote>\n\n\n    <p>Add luon cai boostrap</p>\n\n    <p>Install boostrap</p>\n\n    <blockquote>\n      npm install ngx-bootstrap --save\n    </blockquote>\n\n    <p>Add boostrap to project </p>\n\n    <blockquote>\n      ng add ngx-bootstrap\n    </blockquote>\n\n    <p>Xem hướng dẫn install bootstrap cho angular tai  : <a href=\"https://medium.com/@tomastrajan/how-to-build-responsive-layouts-with-bootstrap-4-and-angular-6-cfbb108d797b\">đây</a> </p>\n\n    <p>Install node sass để generate scss file. Nếu ko cài cái này thì style trong file scss sẽ ko được generate ra đâu</p>\n\n    <blockquote>\n      npm install -g node-sass\n    </blockquote>\n  </div>\n</section>\n\n<section class=\"container\">\n  <h2>Hướng dẫn tạo component và khai báo routers</h2>\n\n  <div class=\"content\">\n    <p>Để tạo một component tự động, ta làm như sau : ** Khuyến khích xài command line vì generate thủ công\n    rất dễ sai và đôi khi xảy ra những sai sót ko đáng có.</p>\n\n    <ol>\n      <li>cd vào folder cài đặt angular, folder chứa file package.json (ở đây là front-end)</li>\n      <li>Dùng command line sau để tạo component một cách tự động:\n        <blockquote>\n          ng g c components/help\n        </blockquote>\n\n        <p>Giải thích  thêm : g - generate, c - component, components/help : tạo component Help ở folder /components</p>\n      </li>\n    </ol>\n\n    <img src=\"../../../assets/help/add_components.JPG\" width=\"989\" height=\"837\" class=\"img-fluid\"/>\n\n    <p>Đối với component, luôn có 2 phần, 1 là annotation @component và 2 là export class. 2 Cái này luôn đi với nhau, như hình:</p>\n\n    <img src=\"../../../assets/help/component_note_1.JPG\" width=\"1492\" height=\"1235\" class=\"img-fluid\"/>\n  </div>\n\n  <div class=\"content\">\n    <p>Quan trọng nhất của angular là các router. Ta phải khai báo các router này để định tuyến các request tới\n    các Component tương ứng.</p>\n\n    <p>Trong file app.module.ts, ta khai báo routers như sau: Xem image</p>\n\n    <img src=\"../../../assets/help/config_routers.jpg\" width=\"1884\" height=\"1453\"/>\n  </div>\n</section>\n\n<section class=\"container\">\n  <h2>Những lưu ý khi sử dụng các components trong Angular.</h2>\n\n  <div class=\"content\">\n    <p>Nếu một tag chưa được khai báo, thì nó sẽ báo lỗi biên dịch. Ví dụ thêm vào < mat-toolbar>&lt;/> thì ngay lập tức nó báo lỗi.</p>\n    <p>Khi import một module vào, thì phải thêm nó ở trong imports</p>\n\n    <img src=\"../../../assets/help/add_module.JPG\" width=\"1432\" height=\"1467\" class=\"img-fluid\"/>\n\n  </div>\n</section>\n\n\n<section class=\"container\">\n  <h2>Tạo service trong Angular </h2>\n\n  <div class=\"content\">\n    <p>Việc tạo service cũng như tạo component, tốt nhất nên generate tự động.</p>\n\n    <blockquote>\n      ng g s issue\n    </blockquote>\n\n    <p>Khác với component, sau khi generate xong ta phải khao báo trong declarations của app.module, thì service phải được khai báo trong providers.</p>\n\n    <img src=\"../../../assets/help/add_service.JPG\" width=\"2134\" height=\"1700\" class=\"img-fluid\"/>\n\n    <p>Như vậy, trước mắt ta có các lưu ý sau:</p>\n\n    <ol>\n      <li>Component khai báo trong declarations</li>\n      <li>Service khai báo trong providers</li>\n      <li>Module khai báo trong imports</li>\n    </ol>\n  </div>\n</section>\n\n"
 
 /***/ }),
 
@@ -1732,7 +1911,7 @@ module.exports = "<section class=\"container\">\r\n  <h2>Hướng dẫn setup gi
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "app-help blockquote {\n  border: 1px solid #ccc;\n  padding: 5px; }\n\napp-help img {\n  max-width: 50% !important;\n  height: auto !important; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9oZWxwL1g6XFx3c19sZWFybmluZ1xcY2xpZW50dmlldHBvd2VyL3NyY1xcYXBwXFxjb21wb25lbnRzXFxoZWxwXFxoZWxwLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBRUksdUJBQXNCO0VBQ3RCLGFBQVksRUFDYjs7QUFKSDtFQU9JLDBCQUF5QjtFQUN6Qix3QkFBdUIsRUFDeEIiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL2hlbHAvaGVscC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbImFwcC1oZWxwe1xyXG4gIGJsb2NrcXVvdGV7XHJcbiAgICBib3JkZXI6IDFweCBzb2xpZCAjY2NjO1xyXG4gICAgcGFkZGluZzogNXB4O1xyXG4gIH1cclxuXHJcbiAgaW1ne1xyXG4gICAgbWF4LXdpZHRoOiA1MCUgIWltcG9ydGFudDtcclxuICAgIGhlaWdodDogYXV0byAhaW1wb3J0YW50O1xyXG4gIH1cclxufVxyXG4iXX0= */"
+module.exports = "app-help blockquote {\n  border: 1px solid #ccc;\n  padding: 5px; }\n\napp-help img {\n  max-width: 50% !important;\n  height: auto !important; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9oZWxwL0c6XFxXb3Jrc3BhY2VcXGNsaWVudHZpZXRwb3dlci9zcmNcXGFwcFxcY29tcG9uZW50c1xcaGVscFxcaGVscC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUVJLHVCQUFzQjtFQUN0QixhQUFZLEVBQ2I7O0FBSkg7RUFPSSwwQkFBeUI7RUFDekIsd0JBQXVCLEVBQ3hCIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50cy9oZWxwL2hlbHAuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJhcHAtaGVscHtcclxuICBibG9ja3F1b3Rle1xyXG4gICAgYm9yZGVyOiAxcHggc29saWQgI2NjYztcclxuICAgIHBhZGRpbmc6IDVweDtcclxuICB9XHJcblxyXG4gIGltZ3tcclxuICAgIG1heC13aWR0aDogNTAlICFpbXBvcnRhbnQ7XHJcbiAgICBoZWlnaHQ6IGF1dG8gIWltcG9ydGFudDtcclxuICB9XHJcbn1cclxuIl19 */"
 
 /***/ }),
 
@@ -1784,7 +1963,7 @@ var HelpComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"block-header\">\r\n  <h1>Angular language</h1>\r\n</div>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        Làm việc với kiểu dữ liệu trong angular.\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        <p>Danh sách các vấn đề cần quan tâm bao gồm :</p>\r\n\r\n        <ul>\r\n          <li>Show 1 biến ra màn hình</li>\r\n          <li>Gán giá trị local trong template</li>\r\n          <li>Câu điều kiện if else</li>\r\n          <li>Vòng lặp</li>\r\n        </ul>\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        <h4>Overview</h4>\r\n\r\n        <p>Trong angular, để set các biến cho các component để sử dụng bên html page, thì ta phải khai báo nó trong method export component.</p>\r\n\r\n        <p>Mỗi languge có những vấn đề khác nhau, ở đây ta sẽ tìm hiểu về việc show cái giá trị biến, gán giá trị, so sánh\r\n          điều kiện if  else if, else, các vòng lặp for, while (nếu có), cũng như các hashtag khác.</p>\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        <h4>Show 1 biến ra màn hình</h4>\r\n\r\n        <p>Biến trong angular được export trong đoạn block code cuối cùng của component. Ví dụ ta có biến pageTitle.</p>\r\n\r\n        <p>Để show nó ra màn hình ta sử dụng cặp dấu \"{{'{'}}\" \"{{ '{' }}\" \"{{ '}' }}\" \"{{ '}' }}\" này nhé.</p>\r\n\r\n        <p>(Lưu ý là show nó, còn sử dụng thì ko cần cặp dấu  \"{{'{'}}\" \"{{ '}' }}\" này đâu nhé. Xem file colorant.component.html để biết thêm chi tiết)</p>\r\n\r\n        <blockquote>\r\n          Content này lấy từ pageTitle : {{ pageTitle | uppercase }}\r\n        </blockquote>\r\n\r\n        <p>Màu của biến nó sẽ khác với màu của mấy thằng còn lại nên sẽ rất dễ xem.</p>\r\n\r\n        <p>Để gán giá trị của biến, ta cần sử dụng ngInit</p>\r\n\r\n        <blockquote>\r\n          *ngInit\r\n        </blockquote>\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        <h4>Gán giá trị local trong template.</h4>\r\n\r\n        <p>để khai báo 1 biến, ta sử dụng từ khóa ngInit</p>\r\n\r\n        <p>Xem thêm ở đây <a href=\"https://www.guru99.com/angularjs-expressions.html\" target=\"_blank\">Click to view</a></p>\r\n\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        <h4>Câu điều kiện if else</h4>\r\n\r\n        <p>Đây là 1 ví dụ của câu điều kiện if</p>\r\n\r\n        <blockquote>\r\n          &lt;p *ngIf=\"heroes.length > 3\">There are many heroes!&lt;/p&gt;`\r\n        </blockquote>\r\n\r\n        <p *ngIf=\"test_if_value  == true\">There are many heroes!</p>\r\n\r\n        <p>Xem thêm ở đây <a href=\"https://angular.io/guide/template-syntax#ngIf\" target=\"_blank\">Click to view</a> </p>\r\n\r\n      </div>\r\n\r\n\r\n\r\n\r\n      <div class=\"card-body\">\r\n        <h4>Làm việc với biến.</h4>\r\n\r\n        <p>Biến trong angular được export trong đoạn block code cuối cùng của component. Ví dụ ta có biến pageTitle.</p>\r\n\r\n        <p>Để sử dụng nó, ta sử dụng cặp dấu \"{{'{'}}\" \"{{ '{' }}\" \"{{ '}' }}\" \"{{ '}' }}\" này nhé.</p>\r\n\r\n        <blockquote>\r\n          Content này lấy từ pageTitle : {{ pageTitle }}\r\n        </blockquote>\r\n\r\n        <p>Màu của biến nó sẽ khác với màu của mấy thằng còn lại nên sẽ rất dễ xem.</p>\r\n      </div>\r\n\r\n\r\n\r\n      *ngIf=\"heroes.length > 3\"\r\n\r\n\r\n      <div class=\"card-body\">\r\n        <h4>Làm việc với mảng.</h4>\r\n\r\n        <p>Duyệt các phần tử của mảng : sử dụng * ngFor=\"let item of listItem\" </p>\r\n\r\n        <blockquote>\r\n          <ul *ngFor=\"let item of listItems\">\r\n            <li>{{item}}</li>\r\n          </ul>\r\n        </blockquote>\r\n      </div>\r\n\r\n\r\n      <div class=\"card-body\">\r\n        <h4>Style trong angular</h4>\r\n\r\n        <p>Xem tai link sau : <a href=\"https://alligator.io/angular/style-binding-ngstyle-angular/\" target=\"_blank\">Click to view </a></p>\r\n      </div>\r\n\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n\r\n<!---->\r\n"
+module.exports = "<div class=\"block-header\">\n  <h1>Angular language</h1>\n</div>\n\n<div class=\"row\">\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n    <div class=\"card\">\n      <div class=\"card-header\">\n        Làm việc với kiểu dữ liệu trong angular.\n      </div>\n\n      <div class=\"card-body\">\n        <p>Danh sách các vấn đề cần quan tâm bao gồm :</p>\n\n        <ul>\n          <li>Show 1 biến ra màn hình</li>\n          <li>Gán giá trị local trong template</li>\n          <li>Câu điều kiện if else</li>\n          <li>Vòng lặp</li>\n        </ul>\n      </div>\n\n      <div class=\"card-body\">\n        <h4>Overview</h4>\n\n        <p>Trong angular, để set các biến cho các component để sử dụng bên html page, thì ta phải khai báo nó trong method export component.</p>\n\n        <p>Mỗi languge có những vấn đề khác nhau, ở đây ta sẽ tìm hiểu về việc show cái giá trị biến, gán giá trị, so sánh\n          điều kiện if  else if, else, các vòng lặp for, while (nếu có), cũng như các hashtag khác.</p>\n      </div>\n\n      <div class=\"card-body\">\n        <h4>Show 1 biến ra màn hình</h4>\n\n        <p>Biến trong angular được export trong đoạn block code cuối cùng của component. Ví dụ ta có biến pageTitle.</p>\n\n        <p>Để show nó ra màn hình ta sử dụng cặp dấu \"{{'{'}}\" \"{{ '{' }}\" \"{{ '}' }}\" \"{{ '}' }}\" này nhé.</p>\n\n        <p>(Lưu ý là show nó, còn sử dụng thì ko cần cặp dấu  \"{{'{'}}\" \"{{ '}' }}\" này đâu nhé. Xem file colorant.component.html để biết thêm chi tiết)</p>\n\n        <blockquote>\n          Content này lấy từ pageTitle : {{ pageTitle | uppercase }}\n        </blockquote>\n\n        <p>Màu của biến nó sẽ khác với màu của mấy thằng còn lại nên sẽ rất dễ xem.</p>\n\n        <p>Để gán giá trị của biến, ta cần sử dụng ngInit</p>\n\n        <blockquote>\n          *ngInit\n        </blockquote>\n      </div>\n\n      <div class=\"card-body\">\n        <h4>Gán giá trị local trong template.</h4>\n\n        <p>để khai báo 1 biến, ta sử dụng từ khóa ngInit</p>\n\n        <p>Xem thêm ở đây <a href=\"https://www.guru99.com/angularjs-expressions.html\" target=\"_blank\">Click to view</a></p>\n\n      </div>\n\n      <div class=\"card-body\">\n        <h4>Câu điều kiện if else</h4>\n\n        <p>Đây là 1 ví dụ của câu điều kiện if</p>\n\n        <blockquote>\n          &lt;p *ngIf=\"heroes.length > 3\">There are many heroes!&lt;/p&gt;`\n        </blockquote>\n\n        <p *ngIf=\"test_if_value  == true\">There are many heroes!</p>\n\n        <p>Xem thêm ở đây <a href=\"https://angular.io/guide/template-syntax#ngIf\" target=\"_blank\">Click to view</a> </p>\n\n      </div>\n\n\n\n\n      <div class=\"card-body\">\n        <h4>Làm việc với biến.</h4>\n\n        <p>Biến trong angular được export trong đoạn block code cuối cùng của component. Ví dụ ta có biến pageTitle.</p>\n\n        <p>Để sử dụng nó, ta sử dụng cặp dấu \"{{'{'}}\" \"{{ '{' }}\" \"{{ '}' }}\" \"{{ '}' }}\" này nhé.</p>\n\n        <blockquote>\n          Content này lấy từ pageTitle : {{ pageTitle }}\n        </blockquote>\n\n        <p>Màu của biến nó sẽ khác với màu của mấy thằng còn lại nên sẽ rất dễ xem.</p>\n      </div>\n\n\n\n      *ngIf=\"heroes.length > 3\"\n\n\n      <div class=\"card-body\">\n        <h4>Làm việc với mảng.</h4>\n\n        <p>Duyệt các phần tử của mảng : sử dụng * ngFor=\"let item of listItem\" </p>\n\n        <blockquote>\n          <ul *ngFor=\"let item of listItems\">\n            <li>{{item}}</li>\n          </ul>\n        </blockquote>\n      </div>\n\n\n      <div class=\"card-body\">\n        <h4>Style trong angular</h4>\n\n        <p>Xem tai link sau : <a href=\"https://alligator.io/angular/style-binding-ngstyle-angular/\" target=\"_blank\">Click to view </a></p>\n      </div>\n\n    </div>\n  </div>\n</div>\n\n\n<!---->\n"
 
 /***/ }),
 
@@ -1850,7 +2029,7 @@ var LanguageComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"block-header\">\r\n  <h1>Help</h1>\r\n</div>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        Task process\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        <div class=\"detail-status\">\r\n          <span class=\"not-start\">Not start</span> <span class=\"vertical-separate-line\"></span>\r\n          <span class=\"in-progress\">In progress</span> <span class=\"vertical-separate-line\"></span>\r\n          <span class=\"done\">Done</span>\r\n        </div>\r\n\r\n        <h3>Server</h3>\r\n        <ol>\r\n          <li class=\"not-start\">Upload cái structure database</li>\r\n\r\n          <li class=\"not-start\">validate dữ liệu trước khi import (Import == CLEAR)\r\n            <ul>\r\n              <li>Dữ liệu không được trùng, các field là duy nhất (cho cả 4 sheets)</li>\r\n\r\n              <li>Validate data không hợp lệ (ví dụ check colourant trong formula, product, base...)</li>\r\n\r\n              <li>Đảm bảo import dữ liệu. Hiện tại quy tắc là import vào 1 cái sheet mới thì delete toàn bộ data cũ có liên quan.</li>\r\n            </ul>\r\n          </li>\r\n\r\n          <li class=\"not-start\">Thêm phần quản lý machine</li>\r\n\r\n          <li class=\"not-start\">Sau khi build App phải có phần communicate với app khác, và tiến hành ghi dữ liệu vào 1 folder được chia sẻ cùng.</li>\r\n          <li class=\"not-start\">Nếu đóng gói 2 app lại 1 thì tự config, còn ko thì lúc cài đặt cần chọn folder để copy file vào đó.</li>\r\n        </ol>\r\n\r\n        <h3>Client</h3>\r\n        <ol>\r\n          <li class=\"not-start\">\r\n            Setting Machine Page\r\n            <ul>\r\n              <li>Chuyển phần config setting từ machine sang admin.</li>\r\n              <li>Chuyển từ alert sang warning bằng icon</li>\r\n              <li>Validate mức màu trước lúc dispense không cho phép dưới min. Nếu sau khi pha xong mà màu dưới min thì không cho nó pha.</li>\r\n            </ul>\r\n\r\n          </li>\r\n\r\n          <li class=\"not-start\">\r\n            Adjust Canister Fill Page\r\n\r\n            <ul>\r\n              <li>Bỏ phần set 100%</li>\r\n              <li>Thêm vào số điều chỉnh, ví dụ bình tỉ lệ thực là 1000ml, số lượng thực chỉ có 95% (5% dính ở đáy bình chẳng hạn)</li>\r\n            </ul>\r\n          </li>\r\n\r\n          <li class=\"not-start\">Formula Page\r\n            <ul>\r\n              <li>Thêm Base cho phần filter</li>\r\n              <li class=\"done\">Add back navigator</li>\r\n            </ul>\r\n          </li>\r\n\r\n          <li class=\"not-start\">\r\n            Print function\r\n\r\n            <ul>\r\n              <li>Show custom data</li>\r\n              <li>Show dung tích, ngày giờ</li>\r\n            </ul>\r\n          </li>\r\n\r\n          <li class=\"not-start\">\r\n            Dispense manual\r\n\r\n            <ul>\r\n              <li>Show custom data</li>\r\n              <li>Show dung tích, ngày giờ</li>\r\n            </ul>\r\n          </li>\r\n        </ol>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        How to use this app...\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        Content .....\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        How to use this app...\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        Content .....\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        How to use this app...\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        Content .....\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        How to use this app...\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        Content .....\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class=\"block-header\">\n  <h1>Help</h1>\n</div>\n\n<div class=\"row\">\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n    <div class=\"card\">\n      <div class=\"card-header\">\n        Task process\n      </div>\n\n      <div class=\"card-body\">\n        <div class=\"detail-status\" style=\"float: right\">\n          <span class=\"not-start\">Not start</span> <span class=\"vertical-separate-line\"></span><br />\n          <span class=\"in-progress\">In progress</span> <span class=\"vertical-separate-line\"></span><br />\n          <span class=\"done\">Done</span><br />\n        </div>\n\n        <h3>Server</h3>\n        <ol>\n          <li class=\"done\">Upload cái structure database</li>\n\n          <li class=\"not-start\">validate dữ liệu trước khi import (Import == CLEAR)\n            <ul>\n              <li>Dữ liệu không được trùng, các field là duy nhất (cho cả 4 sheets)</li>\n\n              <li>Validate data không hợp lệ (ví dụ check colourant trong formula, product, base...)</li>\n\n              <li>Đảm bảo import dữ liệu. Hiện tại quy tắc là import vào 1 cái sheet mới thì delete toàn bộ data cũ có liên quan.</li>\n            </ul>\n          </li>\n\n          <li class=\"done\">Thêm phần quản lý machine</li>\n\n          <li class=\"not-start\">\n            Window App\n\n            <ul>\n              <li class=\"not-start\">Sau khi build App phải có phần communicate với app khác, và tiến hành ghi dữ liệu vào 1 folder được chia sẻ cùng.</li>\n              <li class=\"not-start\">Nếu đóng gói 2 app lại 1 thì tự config, còn ko thì lúc cài đặt cần chọn folder để copy file vào đó.</li>\n              <li class=\"not-start\">Ghi thử file theo cấu trúc</li>\n\n            </ul>\n          </li>\n        </ol>\n\n        <h3>Client</h3>\n\n        <ol>\n          <li class=\"done\">\n            Setting Machine Page\n            <ul>\n              <li class=\"done\">Chuyển phần config setting từ machine sang admin.</li>\n              <li class=\"done\">Chuyển từ alert sang warning bằng icon</li>\n              <li class=\"done\">Validate mức màu trước lúc dispense không cho phép dưới min. Nếu sau khi pha xong mà màu dưới min thì không cho nó pha.</li>\n            </ul>\n\n          </li>\n\n          <li class=\"in-progress\">\n            Adjust Canister Fill Page\n            <ul>\n              <li class=\"done\">Bỏ phần set 100%</li>\n              <li class=\"done\">Thêm vào số điều chỉnh, ví dụ bình tỉ lệ thực là 1000ml, số lượng thực chỉ có 95% (5% dính ở đáy bình chẳng hạn)</li>\n              <li class=\"in-progress\">Validate con so nay</li>\n            </ul>\n          </li>\n\n          <li class=\"done\">Formula Page\n            <ul>\n              <li class=\"done\">Thêm Base cho phần filter</li>\n              <li class=\"done\">Add back navigator</li>\n            </ul>\n          </li>\n\n          <li class=\"done\">\n            Print function\n            <ul>\n              <li class=\"done\">Show custom data</li>\n              <li class=\"done\">Show dung tích, ngày giờ</li>\n            </ul>\n          </li>\n\n          <li class=\"done\">\n            Dispense manual\n          </li>\n        </ol>\n      </div>\n    </div>\n  </div>\n</div>\n\n\n<div class=\"row\">\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n    <div class=\"card\">\n      <div class=\"card-header\">\n        Structure database\n      </div>\n\n      <div class=\"card-body\">\n        <img src=\"/assets/images/data_model.png\" width=\"1492\" height=\"1235\" class=\"img-fluid\"/>\n      </div>\n    </div>\n  </div>\n</div>\n\n\n<div class=\"row\">\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n    <div class=\"card\">\n      <div class=\"card-header\">\n        How to use this app...\n      </div>\n\n      <div class=\"card-body\">\n        Content .....\n      </div>\n    </div>\n  </div>\n</div>\n\n\n<div class=\"row\">\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n    <div class=\"card\">\n      <div class=\"card-header\">\n        How to use this app...\n      </div>\n\n      <div class=\"card-body\">\n        Content .....\n      </div>\n    </div>\n  </div>\n</div>\n\n\n<div class=\"row\">\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n    <div class=\"card\">\n      <div class=\"card-header\">\n        How to use this app...\n      </div>\n\n      <div class=\"card-body\">\n        Content .....\n      </div>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -1861,7 +2040,7 @@ module.exports = "<div class=\"block-header\">\r\n  <h1>Help</h1>\r\n</div>\r\n\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".not-start {\n  color: grey; }\n\n.in-progress {\n  color: orange; }\n\n.done {\n  color: darkgreen; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9oZWxwL3F1ZXN0aW9uL1g6XFx3c19sZWFybmluZ1xcY2xpZW50dmlldHBvd2VyL3NyY1xcYXBwXFxjb21wb25lbnRzXFxoZWxwXFxxdWVzdGlvblxccXVlc3Rpb24uY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxZQUFXLEVBQ1o7O0FBRUQ7RUFDRSxjQUFhLEVBQ2Q7O0FBRUQ7RUFDRSxpQkFBZ0IsRUFDakIiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL2hlbHAvcXVlc3Rpb24vcXVlc3Rpb24uY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubm90LXN0YXJ0e1xyXG4gIGNvbG9yOiBncmV5O1xyXG59XHJcblxyXG4uaW4tcHJvZ3Jlc3N7XHJcbiAgY29sb3I6IG9yYW5nZTtcclxufVxyXG5cclxuLmRvbmV7XHJcbiAgY29sb3I6IGRhcmtncmVlbjtcclxufVxyXG4iXX0= */"
+module.exports = ".not-start {\n  color: grey; }\n\n.in-progress {\n  color: orange; }\n\n.done {\n  color: darkgreen; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9oZWxwL3F1ZXN0aW9uL0c6XFxXb3Jrc3BhY2VcXGNsaWVudHZpZXRwb3dlci9zcmNcXGFwcFxcY29tcG9uZW50c1xcaGVscFxccXVlc3Rpb25cXHF1ZXN0aW9uLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsWUFBVyxFQUNaOztBQUVEO0VBQ0UsY0FBYSxFQUNkOztBQUVEO0VBQ0UsaUJBQWdCLEVBQ2pCIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50cy9oZWxwL3F1ZXN0aW9uL3F1ZXN0aW9uLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLm5vdC1zdGFydHtcclxuICBjb2xvcjogZ3JleTtcclxufVxyXG5cclxuLmluLXByb2dyZXNze1xyXG4gIGNvbG9yOiBvcmFuZ2U7XHJcbn1cclxuXHJcbi5kb25le1xyXG4gIGNvbG9yOiBkYXJrZ3JlZW47XHJcbn1cclxuIl19 */"
 
 /***/ }),
 
@@ -1913,7 +2092,7 @@ var QuestionComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"block-header\">\r\n  <h1>Structure HTML & Boostrap</h1>\r\n</div>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        Overview\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        <p>Cái nào cùng vậy, đã là web thì kiểu gì cũng phải xài boostrap. Boostrap không những giúp code nhanh hơn, mà hơn\r\n        hết, cái thư viện css và js của nó rất đẹp. Nên nếu biết sử dụng đúng cách thì ko cần biết về css cũng có thể làm được.</p>\r\n\r\n        <p>Bản chất của boostrap là quy định các template. Chỉ cần khai báo đúng template là đc. Riêng vấn đề này đòi hỏi ta phải làm\r\n        nhiều mới nhớ được.</p>\r\n\r\n        <p>Đối với bất cứ việc design một cái website nào cũng vậy, theo yêu cầu khách hàng, ta nên search trên mạng để tìm 1 cái layout cho hợp lý\r\n        sau đó mang về chỉnh sửa lại css custom theo ý ta muốn. Tất nhiên, để custom thì chắc chắn phải biết 1 chút về css và các layout của boostrap rồi, đúng ko?</p>\r\n\r\n        <p>Boostrap ra đời lâu rồi. Cái này xài boostrap 4. Ngày xưa boostrap chạy với js, thì giờ ta phải sửa lại để nó cũng chạy với angula.</p>\r\n\r\n        <p>Trong cái này, sẽ bỏ vào từ từ các template của angular và boostrap.</p>\r\n\r\n        <p>Đối với việc chuyển từ js sang angular, nó phức tạp hơn những gì ta tưởng. Tuy nhiên, may mắn thay là đã có những plugin (library) hỗ trợ\r\n          ta làm cái đó. Bài viết này chủ yếu list các trường hợp như vậy thôi</p>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        Boostrap modal\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        <p>Boostrap modal là 1 component thường gặp nhất. Nó show các boostbox nhưu confirm, alert, và các modal để tương tác.</p>\r\n\r\n        <p>Hướng dãn thêm boostrap modal vào, ta xem ở đây <a href=\"http://eriktufvesson.github.io/ngbootbox/\" target=\"_blank\">Click to view</a> </p>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class=\"block-header\">\n  <h1>Structure HTML & Boostrap</h1>\n</div>\n\n<div class=\"row\">\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n    <div class=\"card\">\n      <div class=\"card-header\">\n        Overview\n      </div>\n\n      <div class=\"card-body\">\n        <p>Cái nào cùng vậy, đã là web thì kiểu gì cũng phải xài boostrap. Boostrap không những giúp code nhanh hơn, mà hơn\n        hết, cái thư viện css và js của nó rất đẹp. Nên nếu biết sử dụng đúng cách thì ko cần biết về css cũng có thể làm được.</p>\n\n        <p>Bản chất của boostrap là quy định các template. Chỉ cần khai báo đúng template là đc. Riêng vấn đề này đòi hỏi ta phải làm\n        nhiều mới nhớ được.</p>\n\n        <p>Đối với bất cứ việc design một cái website nào cũng vậy, theo yêu cầu khách hàng, ta nên search trên mạng để tìm 1 cái layout cho hợp lý\n        sau đó mang về chỉnh sửa lại css custom theo ý ta muốn. Tất nhiên, để custom thì chắc chắn phải biết 1 chút về css và các layout của boostrap rồi, đúng ko?</p>\n\n        <p>Boostrap ra đời lâu rồi. Cái này xài boostrap 4. Ngày xưa boostrap chạy với js, thì giờ ta phải sửa lại để nó cũng chạy với angula.</p>\n\n        <p>Trong cái này, sẽ bỏ vào từ từ các template của angular và boostrap.</p>\n\n        <p>Đối với việc chuyển từ js sang angular, nó phức tạp hơn những gì ta tưởng. Tuy nhiên, may mắn thay là đã có những plugin (library) hỗ trợ\n          ta làm cái đó. Bài viết này chủ yếu list các trường hợp như vậy thôi</p>\n      </div>\n    </div>\n  </div>\n</div>\n\n\n<div class=\"row\">\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n    <div class=\"card\">\n      <div class=\"card-header\">\n        Boostrap modal\n      </div>\n\n      <div class=\"card-body\">\n        <p>Boostrap modal là 1 component thường gặp nhất. Nó show các boostbox nhưu confirm, alert, và các modal để tương tác.</p>\n\n        <p>Hướng dãn thêm boostrap modal vào, ta xem ở đây <a href=\"http://eriktufvesson.github.io/ngbootbox/\" target=\"_blank\">Click to view</a> </p>\n      </div>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -1976,7 +2155,7 @@ var StructureComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\r\n  create works!\r\n</p>\r\n"
+module.exports = "<p>\n  create works!\n</p>\n"
 
 /***/ }),
 
@@ -2042,7 +2221,7 @@ var CreateComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\r\n  edit works!\r\n</p>\r\n"
+module.exports = "<p>\n  edit works!\n</p>\n"
 
 /***/ }),
 
@@ -2108,7 +2287,7 @@ var EditComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\r\n  list works!\r\n</p>\r\n"
+module.exports = "<p>\n  list works!\n</p>\n"
 
 /***/ }),
 
@@ -2178,7 +2357,7 @@ var ListComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ol class=\"breadcrumb\">\r\n  <li class=\"breadcrumb-item\">\r\n    <a href=\"index.html\">Dashboard</a>\r\n  </li>\r\n  <li class=\"breadcrumb-item active\">Sample</li>\r\n</ol>\r\n"
+module.exports = "<ol class=\"breadcrumb\">\n  <li class=\"breadcrumb-item\">\n    <a href=\"index.html\">Dashboard</a>\n  </li>\n  <li class=\"breadcrumb-item active\">Sample</li>\n</ol>\n"
 
 /***/ }),
 
@@ -2241,7 +2420,7 @@ var BreadcrumbComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<footer class=\"sticky-footer\">\r\n  <div class=\"container my-auto\">\r\n    <div class=\"copyright text-center my-auto\">\r\n      <span>Copyright © VietPower 2018</span>\r\n    </div>\r\n  </div>\r\n</footer>\r\n"
+module.exports = "<footer class=\"sticky-footer\">\n  <div class=\"container my-auto\">\n    <div class=\"copyright text-center my-auto\">\n      <span>Copyright © VietPower 2018</span>\n    </div>\n  </div>\n</footer>\n"
 
 /***/ }),
 
@@ -2315,7 +2494,7 @@ module.exports = "<nav class=\"navbar navbar-expand static-top\">\r\n  <div clas
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".navbar.navbar-expand {\n  position: fixed;\n  left: 0;\n  top: 0;\n  right: 0;\n  transition: all 0.5s;\n  z-index: 997;\n  background: #fff;\n  box-shadow: -21.213px 21.213px 30px 0px rgba(158, 158, 158, 0.3);\n  display: flex;\n  justify-content: space-between !important;\n  margin-bottom: 10px; }\n  .navbar.navbar-expand .page-menu {\n    float: right; }\n  .background_logo {\n  background: url('/./assets/images/logo.png') center center/100% 100% no-repeat;\n  display: inline-block; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9sYXlvdXQvaGVhZGVyL1g6XFx3c19sZWFybmluZ1xcY2xpZW50dmlldHBvd2VyL3NyY1xcYXBwXFxjb21wb25lbnRzXFxsYXlvdXRcXGhlYWRlclxcaGVhZGVyLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsZ0JBQWU7RUFDZixRQUFPO0VBQ1AsT0FBTTtFQUNOLFNBQVE7RUFDUixxQkFBb0I7RUFDcEIsYUFBWTtFQUNaLGlCQUFnQjtFQUVoQixpRUFBZ0U7RUFFaEUsY0FBYTtFQUNiLDBDQUF5QztFQUN6QyxvQkFBbUIsRUFPcEI7RUFwQkQ7SUFpQkksYUFBWSxFQUNiO0VBSUg7RUFDRSwrRUFBNEU7RUFDNUUsc0JBQW9CLEVBQ3JCIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50cy9sYXlvdXQvaGVhZGVyL2hlYWRlci5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5uYXZiYXIubmF2YmFyLWV4cGFuZHtcclxuICBwb3NpdGlvbjogZml4ZWQ7XHJcbiAgbGVmdDogMDtcclxuICB0b3A6IDA7XHJcbiAgcmlnaHQ6IDA7XHJcbiAgdHJhbnNpdGlvbjogYWxsIDAuNXM7XHJcbiAgei1pbmRleDogOTk3O1xyXG4gIGJhY2tncm91bmQ6ICNmZmY7XHJcbiAgLy90cmFuc2l0aW9uOiBhbGwgMC41cztcclxuICBib3gtc2hhZG93OiAtMjEuMjEzcHggMjEuMjEzcHggMzBweCAwcHggcmdiYSgxNTgsIDE1OCwgMTU4LCAwLjMpO1xyXG4gIC8vXHJcbiAgZGlzcGxheTogZmxleDtcclxuICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW4gIWltcG9ydGFudDtcclxuICBtYXJnaW4tYm90dG9tOiAxMHB4O1xyXG5cclxuXHJcbiAgLnBhZ2UtbWVudXtcclxuICAgIGZsb2F0OiByaWdodDtcclxuICB9XHJcblxyXG59XHJcblxyXG4uYmFja2dyb3VuZF9sb2dvIHtcclxuICBiYWNrZ3JvdW5kOiB1cmwoJy9hc3NldHMvaW1hZ2VzL2xvZ28ucG5nJykgY2VudGVyIGNlbnRlci8xMDAlIDEwMCUgbm8tcmVwZWF0O1xyXG4gIGRpc3BsYXk6aW5saW5lLWJsb2NrO1xyXG59XHJcbiJdfQ== */"
+module.exports = ".navbar.navbar-expand {\n  position: fixed;\n  left: 0;\n  top: 0;\n  right: 0;\n  transition: all 0.5s;\n  z-index: 997;\n  background: #fff;\n  box-shadow: -21.213px 21.213px 30px 0px rgba(158, 158, 158, 0.3);\n  display: flex;\n  justify-content: space-between !important;\n  margin-bottom: 10px; }\n  .navbar.navbar-expand .page-menu {\n    float: right; }\n  .background_logo {\n  background: url(\"/assets/images/logo.png\") center center/100% 100% no-repeat;\n  display: inline-block; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9sYXlvdXQvaGVhZGVyL0c6XFxXb3Jrc3BhY2VcXGNsaWVudHZpZXRwb3dlci9zcmNcXGFwcFxcY29tcG9uZW50c1xcbGF5b3V0XFxoZWFkZXJcXGhlYWRlci5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGdCQUFlO0VBQ2YsUUFBTztFQUNQLE9BQU07RUFDTixTQUFRO0VBQ1IscUJBQW9CO0VBQ3BCLGFBQVk7RUFDWixpQkFBZ0I7RUFFaEIsaUVBQWdFO0VBRWhFLGNBQWE7RUFDYiwwQ0FBeUM7RUFDekMsb0JBQW1CLEVBT3BCO0VBcEJEO0lBaUJJLGFBQVksRUFDYjtFQUlIO0VBQ0UsNkVBQTRFO0VBQzVFLHNCQUFvQixFQUNyQiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvbGF5b3V0L2hlYWRlci9oZWFkZXIuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubmF2YmFyLm5hdmJhci1leHBhbmR7XHJcbiAgcG9zaXRpb246IGZpeGVkO1xyXG4gIGxlZnQ6IDA7XHJcbiAgdG9wOiAwO1xyXG4gIHJpZ2h0OiAwO1xyXG4gIHRyYW5zaXRpb246IGFsbCAwLjVzO1xyXG4gIHotaW5kZXg6IDk5NztcclxuICBiYWNrZ3JvdW5kOiAjZmZmO1xyXG4gIC8vdHJhbnNpdGlvbjogYWxsIDAuNXM7XHJcbiAgYm94LXNoYWRvdzogLTIxLjIxM3B4IDIxLjIxM3B4IDMwcHggMHB4IHJnYmEoMTU4LCAxNTgsIDE1OCwgMC4zKTtcclxuICAvL1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbiAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuICFpbXBvcnRhbnQ7XHJcbiAgbWFyZ2luLWJvdHRvbTogMTBweDtcclxuXHJcblxyXG4gIC5wYWdlLW1lbnV7XHJcbiAgICBmbG9hdDogcmlnaHQ7XHJcbiAgfVxyXG5cclxufVxyXG5cclxuLmJhY2tncm91bmRfbG9nbyB7XHJcbiAgYmFja2dyb3VuZDogdXJsKCcvYXNzZXRzL2ltYWdlcy9sb2dvLnBuZycpIGNlbnRlciBjZW50ZXIvMTAwJSAxMDAlIG5vLXJlcGVhdDtcclxuICBkaXNwbGF5OmlubGluZS1ibG9jaztcclxufVxyXG4iXX0= */"
 
 /***/ }),
 
@@ -2367,7 +2546,7 @@ var HeaderComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ul class=\"navbar-nav navigation-bar\">\r\n\r\n  <li class=\"nav-item dropdown\" *ngIf=\"currentUser != null && currentUser.role.roleName == USER_ROLE.SHOP\">\r\n    <a class=\"nav-link dropdown-toggle\" id=\"user-dropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\" (click)=\"updateCurrentMode(userMode)\" [attr.aria-expanded]=\"currentMode == userMode\" aria-controls=\"collapseExample\">\r\n      <i class=\"fas fa-users-cog\"></i>\r\n      <span class=\"menu-item\">User Setting</span>\r\n    </a>\r\n\r\n    <div class=\"dropdown-menu\" aria-labelledby=\"setting-dropdown\" [ngbCollapse]=\"currentMode != userMode\" (click)=\"updateCurrentMode('hide')\">\r\n      <!--<a class=\"dropdown-item\" >User Manager</a>-->\r\n      <a class=\"dropdown-item\" [routerLink]=\"['../dashboard/customer']\">Customer Manager</a>\r\n    </div>\r\n  </li>\r\n\r\n  <li class=\"nav-item dropdown\" *ngIf=\"currentUser != null && (currentUser.role.roleName == USER_ROLE.SHOP || currentUser.role.roleName == USER_ROLE.ADMIN)\">\r\n    <a class=\"nav-link dropdown-toggle\" id=\"setting-dropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\" (click)=\"updateCurrentMode(settingMode)\" [attr.aria-expanded]=\"currentMode == settingMode\" aria-controls=\"collapseExample\">\r\n      <i class=\"fas fa-cogs\"></i>\r\n      <span class=\"menu-item\">Setting</span>\r\n    </a>\r\n\r\n    <div class=\"dropdown-menu\" aria-labelledby=\"setting-dropdown\" [ngbCollapse]=\"currentMode != settingMode\" (click)=\"updateCurrentMode('hide')\">\r\n      <h6 class=\"dropdown-header\">Metadata Setting:</h6>\r\n\r\n      <a class=\"dropdown-item\" [routerLink]=\"['../dashboard/colorant']\">Colorant</a>\r\n      <a class=\"dropdown-item\" [routerLink]=\"['../dashboard/base']\">Base</a>\r\n      <a class=\"dropdown-item\" [routerLink]=\"['../dashboard/product']\">Product</a>\r\n      <a class=\"dropdown-item\" [routerLink]=\"['../dashboard/collection']\">Collection</a>\r\n\r\n      <ng-container *ngIf=\"currentUser != null && currentUser.role.roleName == USER_ROLE.SHOP\">\r\n        <div class=\"dropdown-divider\"></div>\r\n\r\n        <h6 class=\"dropdown-header\">Machine Setting:</h6>\r\n        <a class=\"dropdown-item\" [routerLink]=\"['../dashboard/machine']\">Machine</a>\r\n      </ng-container>\r\n    </div>\r\n  </li>\r\n\r\n  <li class=\"nav-item\" (click)=\"updateCurrentMode('formula')\">\r\n    <a class=\"nav-link\" [routerLink]=\"['../dashboard/formula']\">\r\n      <i class=\"fas fa-palette\"></i>\r\n      <span class=\"menu-item\">Formula</span></a>\r\n  </li>\r\n\r\n  <li class=\"nav-item\">\r\n    <a class=\"nav-link\" [routerLink]=\"['../dashboard/job-status']\">\r\n      <i class=\"fas fa-file-contract\"></i>\r\n      <span class=\"menu-item\">Job status</span>\r\n    </a>\r\n  </li>\r\n\r\n  <li class=\"nav-item\" (click)=\"updateCurrentMode('maintenance')\" *ngIf=\"currentUser != null && (currentUser.role.roleName == USER_ROLE.ADMIN && currentUser.role.roleName == USER_ROLE.MAINTENANCE)\">\r\n    <a class=\"nav-link\" [routerLink]=\"['../dashboard/maintenance']\">\r\n      <i class=\"fas fa-hammer\"></i>\r\n      <span class=\"menu-item\">Maintenance</span></a>\r\n  </li>\r\n\r\n  <li class=\"nav-item\" (click)=\"updateCurrentMode('question')\">\r\n    <a class=\"nav-link\" [routerLink]=\"['../dashboard/question']\">\r\n      <i class=\"fas fa-question-circle\"></i>\r\n      <span class=\"menu-item\">Help</span></a>\r\n  </li>\r\n\r\n  <li class=\"nav-item\" (click)=\"logOut()\">\r\n    <a class=\"nav-link\">\r\n      <i class=\"fas fa-sign-out-alt\"></i>\r\n      <span class=\"menu-item\">Logout</span></a>\r\n  </li>\r\n\r\n  <!--<li class=\"nav-item dropdown\">-->\r\n    <!--<a class=\"nav-link dropdown-toggle\" id=\"developer-dropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\" (click)=\"updateCurrentMode(devMode)\" [attr.aria-expanded]=\"currentMode == devMode\" aria-controls=\"collapseExample\">-->\r\n      <!--<i class=\"fab fa-dev\"></i>-->\r\n      <!--<span class=\"menu-item\">Developer</span>-->\r\n    <!--</a>-->\r\n\r\n    <!--<div class=\"dropdown-menu\" aria-labelledby=\"developer-dropdown\" [ngbCollapse]=\"currentMode != devMode\" (click)=\"updateCurrentMode('hide')\">-->\r\n      <!--<h6 class=\"dropdown-header\">Document :</h6>-->\r\n      <!--<a class=\"dropdown-item\" [routerLink]=\"['../dashboard/help/overview']\">Overview</a>-->\r\n      <!--<div class=\"dropdown-divider\"></div>-->\r\n      <!--<a class=\"dropdown-item\" [routerLink]=\"['../dashboard/help/language']\">Language</a>-->\r\n      <!--<a class=\"dropdown-item\" [routerLink]=\"['../dashboard/help/boostrap']\">Boostrap Template</a>-->\r\n    <!--</div>-->\r\n  <!--</li>-->\r\n</ul>\r\n"
+module.exports = "<ul class=\"navbar-nav navigation-bar\">\r\n\r\n  <li class=\"nav-item\" *ngIf=\"lowColourants\" type=\"{{warningType}}\">\r\n    <a class=\"nav-link\" [routerLink]=\"['../dashboard/machine']\">\r\n      <i class=\"fas fa-exclamation-triangle\"></i>\r\n      <span class=\"menu-item\">Warning</span></a>\r\n  </li>\r\n\r\n  <li class=\"nav-item dropdown\" *ngIf=\"currentUser != null && currentUser.role.roleName == USER_ROLE.SHOP\">\r\n    <a class=\"nav-link dropdown-toggle\" id=\"user-dropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\" (click)=\"updateCurrentMode(userMode)\" [attr.aria-expanded]=\"currentMode == userMode\" aria-controls=\"collapseExample\">\r\n      <i class=\"fas fa-users-cog\"></i>\r\n      <span class=\"menu-item\">User Setting</span>\r\n    </a>\r\n\r\n    <div class=\"dropdown-menu\" aria-labelledby=\"setting-dropdown\" [ngbCollapse]=\"currentMode != userMode\" (click)=\"updateCurrentMode('hide')\">\r\n      <!--<a class=\"dropdown-item\" >User Manager</a>-->\r\n      <a class=\"dropdown-item\" [routerLink]=\"['../dashboard/company']\">Company Manager</a>\r\n      <a class=\"dropdown-item\" [routerLink]=\"['../dashboard/customer']\">Customer Manager</a>\r\n    </div>\r\n  </li>\r\n\r\n  <li class=\"nav-item dropdown\" *ngIf=\"currentUser != null && (currentUser.role.roleName == USER_ROLE.SHOP || currentUser.role.roleName == USER_ROLE.ADMIN)\">\r\n    <a class=\"nav-link dropdown-toggle\" id=\"setting-dropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\" (click)=\"updateCurrentMode(settingMode)\" [attr.aria-expanded]=\"currentMode == settingMode\" aria-controls=\"collapseExample\">\r\n      <i class=\"fas fa-cogs\"></i>\r\n      <span class=\"menu-item\">Setting</span>\r\n    </a>\r\n\r\n    <div class=\"dropdown-menu\" aria-labelledby=\"setting-dropdown\" [ngbCollapse]=\"currentMode != settingMode\" (click)=\"updateCurrentMode('hide')\">\r\n      <h6 class=\"dropdown-header\">Metadata Setting:</h6>\r\n\r\n      <a class=\"dropdown-item\" [routerLink]=\"['../dashboard/colorant']\">Colorant</a>\r\n      <a class=\"dropdown-item\" [routerLink]=\"['../dashboard/base']\">Base</a>\r\n      <a class=\"dropdown-item\" [routerLink]=\"['../dashboard/product']\">Product</a>\r\n      <a class=\"dropdown-item\" [routerLink]=\"['../dashboard/collection']\">Collection</a>\r\n\r\n      <ng-container *ngIf=\"currentUser != null && currentUser.role.roleName == USER_ROLE.SHOP\">\r\n        <div class=\"dropdown-divider\"></div>\r\n\r\n        <h6 class=\"dropdown-header\">Machine Setting:</h6>\r\n        <a class=\"dropdown-item\" [routerLink]=\"['../dashboard/machine']\">Machine</a>\r\n      </ng-container>\r\n    </div>\r\n  </li>\r\n\r\n  <li class=\"nav-item\" (click)=\"updateCurrentMode('formula')\">\r\n    <a class=\"nav-link\" [routerLink]=\"['../dashboard/formula']\">\r\n      <i class=\"fas fa-palette\"></i>\r\n      <span class=\"menu-item\">Formula</span></a>\r\n  </li>\r\n\r\n  <li class=\"nav-item\">\r\n    <a class=\"nav-link\" [routerLink]=\"['../dashboard/job-status']\">\r\n      <i class=\"fas fa-file-contract\"></i>\r\n      <span class=\"menu-item\">Job status</span>\r\n    </a>\r\n  </li>\r\n\r\n  <li class=\"nav-item\" (click)=\"updateCurrentMode('maintenance')\" *ngIf=\"currentUser != null && (currentUser.role.roleName == USER_ROLE.ADMIN && currentUser.role.roleName == USER_ROLE.MAINTENANCE)\">\r\n    <a class=\"nav-link\" [routerLink]=\"['../dashboard/maintenance']\">\r\n      <i class=\"fas fa-hammer\"></i>\r\n      <span class=\"menu-item\">Maintenance</span></a>\r\n  </li>\r\n\r\n  <li class=\"nav-item\" (click)=\"updateCurrentMode('question')\">\r\n    <a class=\"nav-link\" [routerLink]=\"['../dashboard/question']\">\r\n      <i class=\"fas fa-question-circle\"></i>\r\n      <span class=\"menu-item\">Help</span></a>\r\n  </li>\r\n\r\n  <li class=\"nav-item\" (click)=\"logOut()\">\r\n    <a class=\"nav-link\">\r\n      <i class=\"fas fa-sign-out-alt\"></i>\r\n      <span class=\"menu-item\">Logout</span></a>\r\n  </li>\r\n\r\n  <!--<li class=\"nav-item dropdown\">-->\r\n    <!--<a class=\"nav-link dropdown-toggle\" id=\"developer-dropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\" (click)=\"updateCurrentMode(devMode)\" [attr.aria-expanded]=\"currentMode == devMode\" aria-controls=\"collapseExample\">-->\r\n      <!--<i class=\"fab fa-dev\"></i>-->\r\n      <!--<span class=\"menu-item\">Developer</span>-->\r\n    <!--</a>-->\r\n\r\n    <!--<div class=\"dropdown-menu\" aria-labelledby=\"developer-dropdown\" [ngbCollapse]=\"currentMode != devMode\" (click)=\"updateCurrentMode('hide')\">-->\r\n      <!--<h6 class=\"dropdown-header\">Document :</h6>-->\r\n      <!--<a class=\"dropdown-item\" [routerLink]=\"['../dashboard/help/overview']\">Overview</a>-->\r\n      <!--<div class=\"dropdown-divider\"></div>-->\r\n      <!--<a class=\"dropdown-item\" [routerLink]=\"['../dashboard/help/language']\">Language</a>-->\r\n      <!--<a class=\"dropdown-item\" [routerLink]=\"['../dashboard/help/boostrap']\">Boostrap Template</a>-->\r\n    <!--</div>-->\r\n  <!--</li>-->\r\n</ul>\r\n"
 
 /***/ }),
 
@@ -2378,7 +2557,7 @@ module.exports = "<ul class=\"navbar-nav navigation-bar\">\r\n\r\n  <li class=\"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".navigation-bar .nav-item {\n  margin-left: 25px;\n  color: #00417b;\n  text-align: center; }\n  .navigation-bar .nav-item > .nav-link {\n    color: #00417b; }\n  .navigation-bar .nav-item > .nav-link > i.fas {\n      font-size: 42px;\n      color: #00417b; }\n  .navigation-bar .nav-item.dropdown .dropdown-toggle::after {\n    display: none; }\n  .navigation-bar span.menu-item {\n  font-size: 14px !important;\n  white-space: nowrap;\n  display: block; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9sYXlvdXQvbmF2aWdhdGlvbi9YOlxcd3NfbGVhcm5pbmdcXGNsaWVudHZpZXRwb3dlci9zcmNcXGFwcFxcY29tcG9uZW50c1xcbGF5b3V0XFxuYXZpZ2F0aW9uXFxuYXZpZ2F0aW9uLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBRUksa0JBQWlCO0VBQ2pCLGVBQWU7RUFDZixtQkFBa0IsRUFnQm5CO0VBcEJIO0lBT00sZUFBZSxFQU1oQjtFQWJMO01BVVEsZ0JBQWU7TUFDZixlQUFlLEVBQ2hCO0VBWlA7SUFpQlEsY0FBYSxFQUNmO0VBbEJOO0VBc0JJLDJCQUEwQjtFQUMxQixvQkFBbUI7RUFDbkIsZUFBYyxFQUVmIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50cy9sYXlvdXQvbmF2aWdhdGlvbi9uYXZpZ2F0aW9uLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLm5hdmlnYXRpb24tYmFye1xyXG4gIC5uYXYtaXRlbXtcclxuICAgIG1hcmdpbi1sZWZ0OiAyNXB4O1xyXG4gICAgY29sb3I6ICAjMDA0MTdiO1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG5cclxuICAgID4gLm5hdi1saW5re1xyXG4gICAgICBjb2xvcjogICMwMDQxN2I7XHJcblxyXG4gICAgICA+IGkuZmFze1xyXG4gICAgICAgIGZvbnQtc2l6ZTogNDJweDtcclxuICAgICAgICBjb2xvcjogICMwMDQxN2I7XHJcbiAgICAgIH1cclxuICAgIH1cclxuXHJcbiAgICAmLmRyb3Bkb3due1xyXG4gICAgIC5kcm9wZG93bi10b2dnbGU6OmFmdGVye1xyXG4gICAgICAgIGRpc3BsYXk6IG5vbmU7XHJcbiAgICAgfVxyXG4gICAgfVxyXG4gIH1cclxuICBzcGFuLm1lbnUtaXRlbSB7XHJcbiAgICBmb250LXNpemU6IDE0cHggIWltcG9ydGFudDtcclxuICAgIHdoaXRlLXNwYWNlOiBub3dyYXA7XHJcbiAgICBkaXNwbGF5OiBibG9jaztcclxuXHJcbiAgfVxyXG59XHJcbiJdfQ== */"
+module.exports = ".navigation-bar .nav-item {\n  margin-left: 25px;\n  color: #00417b;\n  text-align: center; }\n  .navigation-bar .nav-item[type=\"danger\"] {\n    color: red; }\n  .navigation-bar .nav-item[type=\"danger\"] > .nav-link {\n      color: red; }\n  .navigation-bar .nav-item[type=\"danger\"] > .nav-link > i.fas {\n        color: red; }\n  .navigation-bar .nav-item[type=\"warning\"] {\n    color: darkorange; }\n  .navigation-bar .nav-item[type=\"warning\"] > .nav-link {\n      color: darkorange; }\n  .navigation-bar .nav-item[type=\"warning\"] > .nav-link > i.fas {\n        color: darkorange; }\n  .navigation-bar .nav-item > .nav-link {\n    color: #00417b; }\n  .navigation-bar .nav-item > .nav-link > i.fas {\n      font-size: 42px;\n      color: #00417b; }\n  .navigation-bar .nav-item.dropdown .dropdown-toggle::after {\n    display: none; }\n  .navigation-bar span.menu-item {\n  font-size: 14px !important;\n  white-space: nowrap;\n  display: block; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9sYXlvdXQvbmF2aWdhdGlvbi9HOlxcV29ya3NwYWNlXFxjbGllbnR2aWV0cG93ZXIvc3JjXFxhcHBcXGNvbXBvbmVudHNcXGxheW91dFxcbmF2aWdhdGlvblxcbmF2aWdhdGlvbi5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUVJLGtCQUFpQjtFQUNqQixlQUFlO0VBQ2YsbUJBQWtCLEVBb0NuQjtFQXhDSDtJQU9NLFdBQVUsRUFPWDtFQWRMO01BU1EsV0FBVSxFQUlYO0VBYlA7UUFXVSxXQUFVLEVBQ1g7RUFaVDtJQWlCTSxrQkFBaUIsRUFPbEI7RUF4Qkw7TUFtQlEsa0JBQWlCLEVBSWxCO0VBdkJQO1FBcUJVLGtCQUFpQixFQUNsQjtFQXRCVDtJQTJCTSxlQUFlLEVBTWhCO0VBakNMO01BOEJRLGdCQUFlO01BQ2YsZUFBZSxFQUNoQjtFQWhDUDtJQXFDUSxjQUFhLEVBQ2Y7RUF0Q047RUEwQ0ksMkJBQTBCO0VBQzFCLG9CQUFtQjtFQUNuQixlQUFjLEVBRWYiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL2xheW91dC9uYXZpZ2F0aW9uL25hdmlnYXRpb24uY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubmF2aWdhdGlvbi1iYXJ7XHJcbiAgLm5hdi1pdGVte1xyXG4gICAgbWFyZ2luLWxlZnQ6IDI1cHg7XHJcbiAgICBjb2xvcjogICMwMDQxN2I7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcblxyXG4gICAgJlt0eXBlPVwiZGFuZ2VyXCJde1xyXG4gICAgICBjb2xvcjogcmVkO1xyXG4gICAgICA+IC5uYXYtbGlua3tcclxuICAgICAgICBjb2xvcjogcmVkO1xyXG4gICAgICAgID4gaS5mYXN7XHJcbiAgICAgICAgICBjb2xvcjogcmVkO1xyXG4gICAgICAgIH1cclxuICAgICAgfVxyXG4gICAgfVxyXG5cclxuICAgICZbdHlwZT1cIndhcm5pbmdcIl17XHJcbiAgICAgIGNvbG9yOiBkYXJrb3JhbmdlO1xyXG4gICAgICA+IC5uYXYtbGlua3tcclxuICAgICAgICBjb2xvcjogZGFya29yYW5nZTtcclxuICAgICAgICA+IGkuZmFze1xyXG4gICAgICAgICAgY29sb3I6IGRhcmtvcmFuZ2U7XHJcbiAgICAgICAgfVxyXG4gICAgICB9XHJcbiAgICB9XHJcblxyXG4gICAgPiAubmF2LWxpbmt7XHJcbiAgICAgIGNvbG9yOiAgIzAwNDE3YjtcclxuXHJcbiAgICAgID4gaS5mYXN7XHJcbiAgICAgICAgZm9udC1zaXplOiA0MnB4O1xyXG4gICAgICAgIGNvbG9yOiAgIzAwNDE3YjtcclxuICAgICAgfVxyXG4gICAgfVxyXG5cclxuICAgICYuZHJvcGRvd257XHJcbiAgICAgLmRyb3Bkb3duLXRvZ2dsZTo6YWZ0ZXJ7XHJcbiAgICAgICAgZGlzcGxheTogbm9uZTtcclxuICAgICB9XHJcbiAgICB9XHJcbiAgfVxyXG4gIHNwYW4ubWVudS1pdGVtIHtcclxuICAgIGZvbnQtc2l6ZTogMTRweCAhaW1wb3J0YW50O1xyXG4gICAgd2hpdGUtc3BhY2U6IG5vd3JhcDtcclxuICAgIGRpc3BsYXk6IGJsb2NrO1xyXG5cclxuICB9XHJcbn1cclxuIl19 */"
 
 /***/ }),
 
@@ -2396,6 +2575,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_user_user_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../services/user/user.service */ "./src/app/services/user/user.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _models_constant__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../models/constant */ "./src/app/models/constant.ts");
+/* harmony import */ var _services_machine_machine_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../services/machine/machine.service */ "./src/app/services/machine/machine.service.ts");
+/* harmony import */ var _services_store_store_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../services/store/store.service */ "./src/app/services/store/store.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2409,20 +2590,52 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
+
 var NavigationComponent = /** @class */ (function () {
-    function NavigationComponent(userService, router) {
+    function NavigationComponent(userService, storeService, machineService, router) {
         this.userService = userService;
+        this.storeService = storeService;
+        this.machineService = machineService;
         this.router = router;
         this.USER_ROLE = _models_constant__WEBPACK_IMPORTED_MODULE_3__["USER_ROLE"];
         this.currentMode = '';
         this.userMode = 'user';
         this.settingMode = 'setting';
         this.devMode = 'dev';
+        this.lowColourants = false;
     }
     NavigationComponent.prototype.ngOnInit = function () {
         this.currentUser = this.userService.getLoginUser();
         if (this.currentUser == null) {
             this.router.navigate(["../login"]);
+        }
+        this.checkLowColourant();
+    };
+    NavigationComponent.prototype.checkLowColourant = function () {
+        var _this = this;
+        var machine = this.storeService.getMachineData();
+        if (machine != null) {
+            this.machineService.fetchDataFromServer().subscribe(function (data) {
+                var isLowColourant = false;
+                var listMachineColourants = data;
+                if (listMachineColourants == null || listMachineColourants.length === 0) {
+                    isLowColourant = true;
+                }
+                else {
+                    for (var _i = 0, listMachineColourants_1 = listMachineColourants; _i < listMachineColourants_1.length; _i++) {
+                        var colourantMachine = listMachineColourants_1[_i];
+                        if (colourantMachine.quantity < machine.warningQuantity) {
+                            isLowColourant = true;
+                            _this.warningType = 'warning';
+                        }
+                        if (colourantMachine.quantity < machine.minQuantity) {
+                            _this.warningType = 'danger';
+                        }
+                    }
+                }
+                _this.lowColourants = isLowColourant;
+            });
         }
     };
     NavigationComponent.prototype.updateCurrentMode = function (selectMode) {
@@ -2442,7 +2655,10 @@ var NavigationComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./navigation.component.html */ "./src/app/components/layout/navigation/navigation.component.html"),
             styles: [__webpack_require__(/*! ./navigation.component.scss */ "./src/app/components/layout/navigation/navigation.component.scss")]
         }),
-        __metadata("design:paramtypes", [_services_user_user_service__WEBPACK_IMPORTED_MODULE_1__["UserService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])
+        __metadata("design:paramtypes", [_services_user_user_service__WEBPACK_IMPORTED_MODULE_1__["UserService"],
+            _services_store_store_service__WEBPACK_IMPORTED_MODULE_5__["StoreService"],
+            _services_machine_machine_service__WEBPACK_IMPORTED_MODULE_4__["MachineService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])
     ], NavigationComponent);
     return NavigationComponent;
 }());
@@ -2458,7 +2674,7 @@ var NavigationComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\r\n  <div class=\"card card-login mx-auto mt-5\">\r\n    <div class=\"card-header\">Reset Password</div>\r\n    <div class=\"card-body\">\r\n      <div class=\"text-center mb-4\">\r\n        <h4>Forgot your password?</h4>\r\n        <p>Enter your email address and we will send you instructions on how to reset your password.</p>\r\n      </div>\r\n      <form>\r\n        <div class=\"form-group\">\r\n          <div class=\"form-label-group\">\r\n            <input type=\"email\" id=\"inputEmail\" class=\"form-control\" placeholder=\"Enter email address\" required=\"required\" autofocus=\"autofocus\">\r\n            <label for=\"inputEmail\">Enter email address</label>\r\n          </div>\r\n        </div>\r\n        <a class=\"btn btn-primary btn-block\" [routerLink]=\"['../login']\">Reset Password</a>\r\n      </form>\r\n      <div class=\"text-center\">\r\n        <a class=\"d-block small mt-3\" [routerLink]=\"['../register']\">Register an Account</a>\r\n        <a class=\"d-block small\" [routerLink]=\"['../login']\">Login Page</a>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class=\"container\">\n  <div class=\"card card-login mx-auto mt-5\">\n    <div class=\"card-header\">Reset Password</div>\n    <div class=\"card-body\">\n      <div class=\"text-center mb-4\">\n        <h4>Forgot your password?</h4>\n        <p>Enter your email address and we will send you instructions on how to reset your password.</p>\n      </div>\n      <form>\n        <div class=\"form-group\">\n          <div class=\"form-label-group\">\n            <input type=\"email\" id=\"inputEmail\" class=\"form-control\" placeholder=\"Enter email address\" required=\"required\" autofocus=\"autofocus\">\n            <label for=\"inputEmail\">Enter email address</label>\n          </div>\n        </div>\n        <a class=\"btn btn-primary btn-block\" [routerLink]=\"['../login']\">Reset Password</a>\n      </form>\n      <div class=\"text-center\">\n        <a class=\"d-block small mt-3\" [routerLink]=\"['../register']\">Register an Account</a>\n        <a class=\"d-block small\" [routerLink]=\"['../login']\">Login Page</a>\n      </div>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -2532,7 +2748,7 @@ module.exports = "<div class=\"container\">\r\n  <div class=\"card card-login mx
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".login-component {\n  width: 800px;\n  margin: 80px auto;\n  font-size: 20px; }\n  .login-component .login-container {\n    display: flex;\n    flex-direction: column; }\n  .login-component .login-container > * {\n      width: 100%; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9sb2dpbi1wYWdlL2xvZ2luL1g6XFx3c19sZWFybmluZ1xcY2xpZW50dmlldHBvd2VyL3NyY1xcYXBwXFxjb21wb25lbnRzXFxsb2dpbi1wYWdlXFxsb2dpblxcbG9naW4uY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxhQUFZO0VBQ1osa0JBQWlCO0VBQ2pCLGdCQUFlLEVBVWhCO0VBYkQ7SUFNSSxjQUFhO0lBQ2IsdUJBQXNCLEVBS3ZCO0VBWkg7TUFVTSxZQUFXLEVBQ1oiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL2xvZ2luLXBhZ2UvbG9naW4vbG9naW4uY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubG9naW4tY29tcG9uZW50e1xyXG4gIHdpZHRoOiA4MDBweDtcclxuICBtYXJnaW46IDgwcHggYXV0bztcclxuICBmb250LXNpemU6IDIwcHg7XHJcblxyXG4gIC5sb2dpbi1jb250YWluZXIge1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XHJcblxyXG4gICAgPiAqe1xyXG4gICAgICB3aWR0aDogMTAwJTtcclxuICAgIH1cclxuICB9XHJcbn1cclxuXHJcblxyXG4iXX0= */"
+module.exports = ".login-component {\n  width: 800px;\n  margin: 80px auto;\n  font-size: 20px; }\n  .login-component .login-container {\n    display: flex;\n    flex-direction: column; }\n  .login-component .login-container > * {\n      width: 100%; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9sb2dpbi1wYWdlL2xvZ2luL0c6XFxXb3Jrc3BhY2VcXGNsaWVudHZpZXRwb3dlci9zcmNcXGFwcFxcY29tcG9uZW50c1xcbG9naW4tcGFnZVxcbG9naW5cXGxvZ2luLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsYUFBWTtFQUNaLGtCQUFpQjtFQUNqQixnQkFBZSxFQVVoQjtFQWJEO0lBTUksY0FBYTtJQUNiLHVCQUFzQixFQUt2QjtFQVpIO01BVU0sWUFBVyxFQUNaIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50cy9sb2dpbi1wYWdlL2xvZ2luL2xvZ2luLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmxvZ2luLWNvbXBvbmVudHtcclxuICB3aWR0aDogODAwcHg7XHJcbiAgbWFyZ2luOiA4MHB4IGF1dG87XHJcbiAgZm9udC1zaXplOiAyMHB4O1xyXG5cclxuICAubG9naW4tY29udGFpbmVyIHtcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xyXG5cclxuICAgID4gKntcclxuICAgICAgd2lkdGg6IDEwMCU7XHJcbiAgICB9XHJcbiAgfVxyXG59XHJcblxyXG5cclxuIl19 */"
 
 /***/ }),
 
@@ -2549,6 +2765,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _services_user_user_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../services/user/user.service */ "./src/app/services/user/user.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _global__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../global */ "./src/app/global.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2561,16 +2778,20 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
 var LoginComponent = /** @class */ (function () {
-    function LoginComponent(userService, router) {
+    function LoginComponent(userService, router, globalVarialble) {
         this.userService = userService;
         this.router = router;
+        this.globalVarialble = globalVarialble;
         this.userName = null;
         this.password = null;
     }
     // @ContentChild(MatFormFieldControl) _control: MatFormFieldControl<any>;
     // @ViewChild(MatFormField) _matFormField: MatFormField;
     LoginComponent.prototype.ngOnInit = function () {
+        debugger;
+        var url = this.globalVarialble.getBaseApiUrl();
         this.userService.clearData();
     };
     LoginComponent.prototype.login = function () {
@@ -2583,7 +2804,8 @@ var LoginComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./login.component.html */ "./src/app/components/login-page/login/login.component.html"),
             styles: [__webpack_require__(/*! ./login.component.scss */ "./src/app/components/login-page/login/login.component.scss")]
         }),
-        __metadata("design:paramtypes", [_services_user_user_service__WEBPACK_IMPORTED_MODULE_1__["UserService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])
+        __metadata("design:paramtypes", [_services_user_user_service__WEBPACK_IMPORTED_MODULE_1__["UserService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"],
+            _global__WEBPACK_IMPORTED_MODULE_3__["GlobalVariable"]])
     ], LoginComponent);
     return LoginComponent;
 }());
@@ -2599,7 +2821,7 @@ var LoginComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\r\n  <div class=\"card card-register mx-auto mt-5\">\r\n    <div class=\"card-header\">Register an Account</div>\r\n    <div class=\"card-body\">\r\n      <form>\r\n        <div class=\"form-group\">\r\n          <div class=\"form-row\">\r\n            <div class=\"col-md-6\">\r\n              <div class=\"form-label-group\">\r\n                <input type=\"text\" id=\"firstName\" class=\"form-control\" placeholder=\"First name\" required=\"required\" autofocus=\"autofocus\">\r\n                <label for=\"firstName\">First name</label>\r\n              </div>\r\n            </div>\r\n            <div class=\"col-md-6\">\r\n              <div class=\"form-label-group\">\r\n                <input type=\"text\" id=\"lastName\" class=\"form-control\" placeholder=\"Last name\" required=\"required\">\r\n                <label for=\"lastName\">Last name</label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n        </div>\r\n        <div class=\"form-group\">\r\n          <div class=\"form-label-group\">\r\n            <input type=\"email\" id=\"inputEmail\" class=\"form-control\" placeholder=\"Email address\" required=\"required\">\r\n            <label for=\"inputEmail\">Email address</label>\r\n          </div>\r\n        </div>\r\n        <div class=\"form-group\">\r\n          <div class=\"form-row\">\r\n            <div class=\"col-md-6\">\r\n              <div class=\"form-label-group\">\r\n                <input type=\"password\" id=\"inputPassword\" class=\"form-control\" placeholder=\"Password\" required=\"required\">\r\n                <label for=\"inputPassword\">Password</label>\r\n              </div>\r\n            </div>\r\n            <div class=\"col-md-6\">\r\n              <div class=\"form-label-group\">\r\n                <input type=\"password\" id=\"confirmPassword\" class=\"form-control\" placeholder=\"Confirm password\" required=\"required\">\r\n                <label for=\"confirmPassword\">Confirm password</label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n        </div>\r\n        <a class=\"btn btn-primary btn-block\" [routerLink]=\"['../login']\">Register</a>\r\n      </form>\r\n\r\n      <div class=\"text-center\">\r\n        <a class=\"d-block small mt-3\" [routerLink]=\"['../login']\">Login Page</a>\r\n        <a class=\"d-block small\" [routerLink]=\"['../forgot-password']\">Forgot Password?</a>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class=\"container\">\n  <div class=\"card card-register mx-auto mt-5\">\n    <div class=\"card-header\">Register an Account</div>\n    <div class=\"card-body\">\n      <form>\n        <div class=\"form-group\">\n          <div class=\"form-row\">\n            <div class=\"col-md-6\">\n              <div class=\"form-label-group\">\n                <input type=\"text\" id=\"firstName\" class=\"form-control\" placeholder=\"First name\" required=\"required\" autofocus=\"autofocus\">\n                <label for=\"firstName\">First name</label>\n              </div>\n            </div>\n            <div class=\"col-md-6\">\n              <div class=\"form-label-group\">\n                <input type=\"text\" id=\"lastName\" class=\"form-control\" placeholder=\"Last name\" required=\"required\">\n                <label for=\"lastName\">Last name</label>\n              </div>\n            </div>\n          </div>\n        </div>\n        <div class=\"form-group\">\n          <div class=\"form-label-group\">\n            <input type=\"email\" id=\"inputEmail\" class=\"form-control\" placeholder=\"Email address\" required=\"required\">\n            <label for=\"inputEmail\">Email address</label>\n          </div>\n        </div>\n        <div class=\"form-group\">\n          <div class=\"form-row\">\n            <div class=\"col-md-6\">\n              <div class=\"form-label-group\">\n                <input type=\"password\" id=\"inputPassword\" class=\"form-control\" placeholder=\"Password\" required=\"required\">\n                <label for=\"inputPassword\">Password</label>\n              </div>\n            </div>\n            <div class=\"col-md-6\">\n              <div class=\"form-label-group\">\n                <input type=\"password\" id=\"confirmPassword\" class=\"form-control\" placeholder=\"Confirm password\" required=\"required\">\n                <label for=\"confirmPassword\">Confirm password</label>\n              </div>\n            </div>\n          </div>\n        </div>\n        <a class=\"btn btn-primary btn-block\" [routerLink]=\"['../login']\">Register</a>\n      </form>\n\n      <div class=\"text-center\">\n        <a class=\"d-block small mt-3\" [routerLink]=\"['../login']\">Login Page</a>\n        <a class=\"d-block small\" [routerLink]=\"['../forgot-password']\">Forgot Password?</a>\n      </div>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -2662,7 +2884,7 @@ var RegisterComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"block-header\">\r\n  <h1>Machine Setting</h1>\r\n</div>\r\n\r\n<div class=\"row\" *ngIf=\"machine != null\">\r\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        Colorant Machine {{ machine.name + '(' + machine.code + ')'}}\r\n\r\n        <ng-container *ngIf=\"! openSetting\">\r\n          <button class=\"close\" (click)=\"openSettingMachine()\"><i class=\"fas fa-sliders-h\"></i></button>\r\n        </ng-container>\r\n\r\n        <ng-container *ngIf=\"openSetting\">\r\n          <button class=\"close\" (click)=\"closeSettingMachine()\"><i class=\"fas fa-window-close\"></i></button>\r\n        </ng-container>\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        <div class=\"machine-colourant-group\" [attr.actionType]=\"openSetting ? 'open-setting': ''\">\r\n          <div class=\"machine-background\">\r\n            <ng-container *ngIf=\"openSetting == true\">\r\n              <div class=\"machine-background-setting\">\r\n                <mat-slider class=\"machine-range-slider\" [tickInterval]=\"100 / 20\" [max]=\"maxQuantity\" [min]=\"0\" [step]=\"50\" [(ngModel)]=\"warningQuantity\" [vertical]=\"true\" [thumbLabel]=\"true\" (change)=\"updateMachineDataSlider('warning')\"></mat-slider>\r\n                <mat-slider class=\"machine-range-slider\" [tickInterval]=\"100 / 20\" [max]=\"maxQuantity\" [min]=\"0\" [step]=\"50\" [(ngModel)]=\"minQuantity\" [vertical]=\"true\" [thumbLabel]=\"true\" (change)=\"updateMachineDataSlider('min')\"></mat-slider>\r\n              </div>\r\n            </ng-container>\r\n\r\n            <span class=\"machine-colourant-max-range\" [ngStyle]=\"{'height': '100%'}\"><span class=\"step-label\">{{maxQuantity}}</span></span>\r\n            <span class=\"machine-colourant-warning-range\" [ngStyle]=\"{'height': (warningQuantity / maxQuantity) * 100 + '%'}\"><span class=\"step-label\">{{warningQuantity}}</span></span>\r\n            <span class=\"machine-colourant-min-range\" [ngStyle]=\"{'height': (minQuantity / maxQuantity) * 100 + '%'}\"><span class=\"step-label\">{{minQuantity}}</span></span>\r\n            <span class=\"machine-colourant-zero-range\" [ngStyle]=\"{'height': '0%'}\"><span class=\"step-label\">0</span></span>\r\n          </div>\r\n\r\n          <ng-container *ngFor=\"let machineColourant of listMachineColourant\">\r\n            <div class=\"machine-colourant-item\" (click)=\"selectMachineColourant(machineColourant.colourant.colourantId)\">\r\n              <span *ngIf=\"selectedMachineColourant != null && selectedMachineColourant.colourant.colourantId == machineColourant.colourant.colourantId\" class=\"selected-colourant-bgr\"></span>\r\n              <span class=\"machine-colourant-bgr\">\r\n                <span class=\"machine-colourant-current-range\" [ngStyle]=\"{'height': (machineColourant.quantity / maxQuantity) * 100 + '%', 'background-color': machineColourant.colourant.rbgHex, 'border': '1px solid #' + machineColourant.colourant.rbgHex}\"></span>\r\n              </span>\r\n              <span class=\"colourant-name\">{{machineColourant.colourant.colourantName}}</span>\r\n              <span class=\"colourant-code\">{{machineColourant.colourant.colourantCode}}</span>\r\n            </div>\r\n          </ng-container>\r\n        </div>\r\n      </div>\r\n      <ng-container *ngIf=\"minQuantity != initMinQuantity || warningQuantity != initWarningQuantity\">\r\n        <div class=\"card-footer\">\r\n          <button class=\"btn btn-primary\" (click)=\"updateSettingMachine()\">Update</button>\r\n        </div>\r\n      </ng-container>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<ng-container *ngIf=\"errorType != null\">\r\n  <pp-modal id=\"warning-colourants-machine-modal\" class=\"modal warning-colourants-machine-modal\">\r\n    <div class=\"modal-content\" [attr.type]=\"errorType\" >\r\n      <div class=\"modal-header\">\r\n        <h5 class=\"modal-title\">{{errorType}}</h5>\r\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\" (click)=\"closeModal('warning-colourants-machine-modal')\">\r\n          <span aria-hidden=\"true\">×</span>\r\n        </button>\r\n      </div>\r\n\r\n      <div class=\"modal-body\">\r\n        {{errorMessage}}\r\n      </div>\r\n\r\n      <div class=\"modal-footer\">\r\n        <button type=\"button\" class=\"btn btn-primary\" (click)=\"closeModal('warning-colourants-machine-modal')\">Close</button>\r\n      </div>\r\n    </div>\r\n  </pp-modal>\r\n</ng-container>\r\n\r\n\r\n\r\n<ng-container *ngIf=\"selectedMachineColourant != null\">\r\n  <pp-modal id=\"view-selected-colourant-machine-modal\" class=\"modal machine-colourant-single-item\">\r\n    <div class=\"modal-content\">\r\n      <div class=\"modal-header\">\r\n        <h5 class=\"modal-title\">Canister Refill</h5>\r\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\" (click)=\"closeModal('view-selected-colourant-machine-modal')\">\r\n          <span aria-hidden=\"true\">×</span>\r\n        </button>\r\n      </div>\r\n\r\n      <div class=\"modal-body\">\r\n        <div class=\"row\">\r\n          <div class=\"col-lg-2 col-md-2 col-sm-3 col-xs-3\">\r\n            <div class=\"machine-colorant-slider-group\">\r\n              <mat-slider class=\"machine-colourant-slider\" [tickInterval]=\"maxQuantity / 20\" [max]=\"maxQuantity\" [min]=\"0\" [step]=\"1\" [(ngModel)]=\"updateAmount\" [vertical]=\"true\" [thumbLabel]=\"true\" (change)=\"updateAmountBySlider()\"></mat-slider>\r\n            </div>\r\n          </div>\r\n\r\n          <div class=\"col-lg-2 col-md-2 col-sm-3 col-xs-3\">\r\n            <div class=\"machine-colourant-group\">\r\n              <div class=\"machine-background\">\r\n                <span class=\"machine-colourant-max-range\" [ngStyle]=\"{'height': '100%'}\"><span class=\"step-label\">{{maxQuantity}}</span></span>\r\n                <span class=\"machine-colourant-warning-range\" [ngStyle]=\"{'height': (minQuantity / maxQuantity) * 100 + '%'}\"><span class=\"step-label\">{{minQuantity}}</span></span>\r\n                <span class=\"machine-colourant-min-range\" [ngStyle]=\"{'height': '0%'}\"><span class=\"step-label\">0</span></span>\r\n              </div>\r\n              <div class=\"machine-colourant-item\">\r\n                <span class=\"machine-colourant-bgr\">\r\n                  <span class=\"machine-colourant-update-range\"  [ngStyle]=\"{'height': ((selectedMachineColourant.quantity + addedAmount) / maxQuantity) * 100 + '%', 'background-color': selectedMachineColourant.colourant.rbgHex, 'border': '1px solid #' + selectedMachineColourant.colourant.rbgHex}\"></span>\r\n                  <span class=\"machine-colourant-current-range\" [ngStyle]=\"{'height': (selectedMachineColourant.quantity / maxQuantity) * 100 + '%', 'background-color': selectedMachineColourant.colourant.rbgHex, 'border': '1px solid #' + selectedMachineColourant.colourant.rbgHex}\"></span>\r\n                </span>\r\n                <span class=\"colourant-name\">{{selectedMachineColourant.colourant.colourantName}}</span>\r\n                <span class=\"colourant-code\">{{selectedMachineColourant.colourant.colourantCode}}</span>\r\n              </div>\r\n            </div>\r\n          </div>\r\n\r\n          <div class=\"col-lg-8 col-md-8 col-sm-6 col-xs-6\">\r\n            <div class=\"machine-colourant-info form-detail\">\r\n              <div class=\"row form-group\">\r\n                <label class=\"col-md-4 label-control\">Amount:</label>\r\n                <div class=\"col-md-6\">\r\n                  <div class=\"input-group\">\r\n                    <!--<input type=\"number\" [(ngModel)]=\"addedAmount\" class=\"form-control\" required=\"required\" [ngModelOptions]=\"{standalone: true}\" (change)=\"updateAddedAmount('amount')\">-->\r\n                    <input type=\"number\" [(ngModel)]=\"addedAmount\" class=\"form-control\" required=\"required\" [ngModelOptions]=\"{standalone: true}\" (change)=\"updateAddedAmount('amount')\">\r\n                    <div class=\"input-group-append\">\r\n                      <span class=\"input-group-text\">ml</span>\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n\r\n              <div class=\"row form-group\">\r\n                <label class=\"col-md-4 label-control\">\r\n\r\n                </label>\r\n                <div class=\"col-md-8\">\r\n                  <button class=\"btn btn-dark\" (click)=\"fillByPercent(100);\">Fill to 100%</button>\r\n                </div>\r\n              </div>\r\n\r\n              <div class=\"row form-group\">\r\n                <label class=\"col-md-4 label-control\">Canister</label>\r\n                <div class=\"col-md-8\">\r\n                  {{selectedMachineColourant.colourant.colourantId}}\r\n                </div>\r\n              </div>\r\n\r\n              <div class=\"row form-group\">\r\n                <label class=\"col-md-4 label-control\">Component</label>\r\n                <div class=\"col-md-8\">\r\n                  {{selectedMachineColourant.colourant.colourantCode}}\r\n                </div>\r\n              </div>\r\n\r\n              <div class=\"row form-group\">\r\n                <label class=\"col-md-4 label-control\">Current</label>\r\n                <div class=\"col-md-8\">\r\n                  {{selectedMachineColourant.quantity / 1000}} L\r\n                </div>\r\n              </div>\r\n\r\n              <div class=\"row form-group\">\r\n                <label class=\"col-md-4 label-control\">Maximum</label>\r\n                <div class=\"col-md-8\">\r\n                  {{maxQuantity / 1000}} L\r\n                </div>\r\n              </div>\r\n\r\n              <div class=\"row form-group\">\r\n                <label class=\"col-md-4 label-control\">Minimum</label>\r\n                <div class=\"col-md-8\">\r\n                  {{minQuantity / 1000}} L\r\n                </div>\r\n              </div>\r\n\r\n              <div class=\"row form-group\">\r\n                <label class=\"col-md-4 label-control\">Density</label>\r\n                <div class=\"col-md-8\">\r\n                  {{selectedMachineColourant.colourant.density}} kg/L\r\n                </div>\r\n              </div>\r\n\r\n              <!--<div class=\"row form-group\">-->\r\n                <!--View Usage >>-->\r\n              <!--</div>-->\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n\r\n      <div class=\"modal-footer\">\r\n        <button type=\"button\" class=\"btn btn-success\" (click)=\"updateAndSaving('view-selected-colourant-machine-modal')\">Update</button>\r\n        <button type=\"button\" class=\"btn btn-default\" (click)=\"closeModal('view-selected-colourant-machine-modal')\">Cancel</button>\r\n      </div>\r\n    </div>\r\n  </pp-modal>\r\n</ng-container>\r\n"
+module.exports = "<div class=\"block-header\">\n  <h1>Machine Setting</h1>\n</div>\n\n<div class=\"row\" *ngIf=\"machine != null\">\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n    <div class=\"card\">\n      <div class=\"card-header\">\n        Colorant Machine {{ machine.name + '(' + machine.code + ')'}}\n\n        <ng-container *ngIf=\"! openSetting\">\n          <button class=\"close\" (click)=\"openSettingMachine()\"><i class=\"fas fa-sliders-h\"></i></button>\n        </ng-container>\n\n        <ng-container *ngIf=\"openSetting\">\n          <button class=\"close\" (click)=\"closeSettingMachine()\"><i class=\"fas fa-window-close\"></i></button>\n        </ng-container>\n      </div>\n\n      <div class=\"card-body\">\n        <div class=\"machine-colourant-group\" [attr.actionType]=\"openSetting ? 'open-setting': ''\">\n          <div class=\"machine-background\">\n            <ng-container *ngIf=\"openSetting == true\">\n              <div class=\"machine-background-setting\">\n                <mat-slider class=\"machine-range-slider\" [tickInterval]=\"100 / 20\" [max]=\"maxQuantity\" [min]=\"0\" [step]=\"50\" [(ngModel)]=\"warningQuantity\" [vertical]=\"true\" [thumbLabel]=\"true\" (change)=\"updateMachineDataSlider('warning')\"></mat-slider>\n                <mat-slider class=\"machine-range-slider\" [tickInterval]=\"100 / 20\" [max]=\"maxQuantity\" [min]=\"0\" [step]=\"50\" [(ngModel)]=\"minQuantity\" [vertical]=\"true\" [thumbLabel]=\"true\" (change)=\"updateMachineDataSlider('min')\"></mat-slider>\n              </div>\n            </ng-container>\n\n            <span class=\"machine-colourant-max-range\" [ngStyle]=\"{'height': '100%'}\"><span class=\"step-label\">{{maxQuantity}}</span></span>\n            <span class=\"machine-colourant-warning-range\" [ngStyle]=\"{'height': (warningQuantity / maxQuantity) * 100 + '%'}\"><span class=\"step-label\">{{warningQuantity}}</span></span>\n            <span class=\"machine-colourant-min-range\" [ngStyle]=\"{'height': (minQuantity / maxQuantity) * 100 + '%'}\"><span class=\"step-label\">{{minQuantity}}</span></span>\n            <span class=\"machine-colourant-zero-range\" [ngStyle]=\"{'height': '0%'}\"><span class=\"step-label\">0</span></span>\n          </div>\n\n          <ng-container *ngFor=\"let machineColourant of listMachineColourant\">\n            <div class=\"machine-colourant-item\" (click)=\"selectMachineColourant(machineColourant.colourant.colourantId)\">\n              <span *ngIf=\"selectedMachineColourant != null && selectedMachineColourant.colourant.colourantId == machineColourant.colourant.colourantId\" class=\"selected-colourant-bgr\"></span>\n              <span class=\"machine-colourant-bgr\">\n                <span class=\"machine-colourant-current-range\" [ngStyle]=\"{'height': (machineColourant.quantity / maxQuantity) * 100 + '%', 'background-color': machineColourant.colourant.rbgHex, 'border': '1px solid #' + machineColourant.colourant.rbgHex}\"></span>\n              </span>\n              <span class=\"colourant-name\">{{machineColourant.colourant.colourantName}}</span>\n              <span class=\"colourant-code\">{{machineColourant.colourant.colourantCode}}</span>\n            </div>\n          </ng-container>\n        </div>\n      </div>\n      <ng-container *ngIf=\"minQuantity != initMinQuantity || warningQuantity != initWarningQuantity\">\n        <div class=\"card-footer\">\n          <button class=\"btn btn-primary\" (click)=\"updateSettingMachine()\">Update</button>\n        </div>\n      </ng-container>\n    </div>\n  </div>\n</div>\n\n<ng-container *ngIf=\"errorType != null\">\n  <pp-modal id=\"warning-colourants-machine-modal\" class=\"modal warning-colourants-machine-modal\">\n    <div class=\"modal-content\" [attr.type]=\"errorType\" >\n      <div class=\"modal-header\">\n        <h5 class=\"modal-title\">{{errorType}}</h5>\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\" (click)=\"closeModal('warning-colourants-machine-modal')\">\n          <span aria-hidden=\"true\">×</span>\n        </button>\n      </div>\n\n      <div class=\"modal-body\">\n        {{errorMessage}}\n      </div>\n\n      <div class=\"modal-footer\">\n        <button type=\"button\" class=\"btn btn-primary\" (click)=\"closeModal('warning-colourants-machine-modal')\">Close</button>\n      </div>\n    </div>\n  </pp-modal>\n</ng-container>\n\n\n\n<ng-container *ngIf=\"selectedMachineColourant != null\">\n  <pp-modal id=\"view-selected-colourant-machine-modal\" class=\"modal machine-colourant-single-item\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <h5 class=\"modal-title\">Canister Refill</h5>\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\" (click)=\"closeModal('view-selected-colourant-machine-modal')\">\n          <span aria-hidden=\"true\">×</span>\n        </button>\n      </div>\n\n      <div class=\"modal-body\">\n        <div class=\"row\">\n          <div class=\"col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n            <div class=\"machine-colorant-slider-group\">\n              <mat-slider class=\"machine-colourant-slider\" [tickInterval]=\"maxQuantity / 20\" [max]=\"maxQuantity\" [min]=\"0\" [step]=\"1\" [(ngModel)]=\"updateAmount\" [vertical]=\"true\" [thumbLabel]=\"true\" (change)=\"updateAmountBySlider()\"></mat-slider>\n            </div>\n          </div>\n\n          <div class=\"col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n            <div class=\"machine-colourant-group\">\n              <div class=\"machine-background\">\n                <span class=\"machine-colourant-max-range\" [ngStyle]=\"{'height': '100%'}\"><span class=\"step-label\">{{maxQuantity}}</span></span>\n                <span class=\"machine-colourant-warning-range\" [ngStyle]=\"{'height': (warningQuantity / maxQuantity) * 100 + '%'}\"><span class=\"step-label\">{{warningQuantity}}</span></span>\n                <span class=\"machine-colourant-min-range\" [ngStyle]=\"{'height': (minQuantity / maxQuantity) * 100 + '%'}\"><span class=\"step-label\">{{minQuantity}}</span></span>\n                <span class=\"machine-colourant-zero-range\" [ngStyle]=\"{'height': '0%'}\"><span class=\"step-label\">0</span></span>\n              </div>\n              <div class=\"machine-colourant-item\">\n                <span class=\"machine-colourant-bgr\">\n                  <span class=\"machine-colourant-update-range\"  [ngStyle]=\"{'height': ((selectedMachineColourant.quantity + addedAmount) / maxQuantity) * 100 + '%', 'background-color': selectedMachineColourant.colourant.rbgHex, 'border': '1px solid #' + selectedMachineColourant.colourant.rbgHex}\"></span>\n                  <span class=\"machine-colourant-current-range\" [ngStyle]=\"{'height': (selectedMachineColourant.quantity / maxQuantity) * 100 + '%', 'background-color': selectedMachineColourant.colourant.rbgHex, 'border': '1px solid #' + selectedMachineColourant.colourant.rbgHex}\"></span>\n                </span>\n                <span class=\"colourant-name\">{{selectedMachineColourant.colourant.colourantName}}</span>\n                <span class=\"colourant-code\">{{selectedMachineColourant.colourant.colourantCode}}</span>\n              </div>\n            </div>\n          </div>\n\n          <div class=\"col-lg-8 col-md-8 col-sm-6 col-xs-6\">\n            <div class=\"machine-colourant-info form-detail\">\n              <div class=\"row form-group\">\n                <label class=\"col-md-4 label-control\">Amount:</label>\n                <div class=\"col-md-6\">\n                  <div class=\"input-group\">\n                    <input type=\"number\" [(ngModel)]=\"addedAmount\" class=\"form-control\" required=\"required\" [ngModelOptions]=\"{standalone: true}\" (change)=\"updateAddedAmount('amount')\">\n                    <div class=\"input-group-append\">\n                      <span class=\"input-group-text\">ml</span>\n                    </div>\n                  </div>\n                </div>\n              </div>\n\n              <div class=\"row form-group\">\n                <label class=\"col-md-4 label-control\">Refill Factor:</label>\n                <div class=\"col-md-6\">\n                  <div class=\"input-group\">\n                    <input type=\"number\" [(ngModel)]=\"refillFactor\" class=\"form-control\" required=\"required\" [ngModelOptions]=\"{standalone: true}\" (change)=\"updateAddedAmount('refillFactor')\">\n                    <div class=\"input-group-append\">\n                      <span class=\"input-group-text\">%</span>\n                    </div>\n                  </div>\n                </div>\n              </div>\n\n              <div class=\"row form-group\">\n                <div class=\"col-md-12\">\n                  &nbsp;\n                </div>\n              </div>\n\n              <div class=\"row form-group\">\n                <label class=\"col-md-4 label-control\">Canister</label>\n                <div class=\"col-md-8\">\n                  {{selectedMachineColourant.colourant.colourantId}}\n                </div>\n              </div>\n\n              <div class=\"row form-group\">\n                <label class=\"col-md-4 label-control\">Component</label>\n                <div class=\"col-md-8\">\n                  {{selectedMachineColourant.colourant.colourantCode}}\n                </div>\n              </div>\n\n              <div class=\"row form-group\">\n                <label class=\"col-md-4 label-control\">Current</label>\n                <div class=\"col-md-8\">\n                  {{selectedMachineColourant.quantity / 1000}} L\n                </div>\n              </div>\n\n              <div class=\"row form-group\">\n                <label class=\"col-md-4 label-control\">Maximum</label>\n                <div class=\"col-md-8\">\n                  {{maxQuantity / 1000}} L\n                </div>\n              </div>\n\n              <div class=\"row form-group\">\n                <label class=\"col-md-4 label-control\">Minimum</label>\n                <div class=\"col-md-8\">\n                  {{minQuantity / 1000}} L\n                </div>\n              </div>\n\n              <div class=\"row form-group\">\n                <label class=\"col-md-4 label-control\">Density</label>\n                <div class=\"col-md-8\">\n                  {{selectedMachineColourant.colourant.density}} kg/L\n                </div>\n              </div>\n\n              <!--<div class=\"row form-group\">-->\n                <!--View Usage >>-->\n              <!--</div>-->\n            </div>\n          </div>\n        </div>\n      </div>\n\n      <div class=\"modal-footer\">\n        <button type=\"button\" class=\"btn btn-success\" (click)=\"updateAndSaving('view-selected-colourant-machine-modal')\">Update</button>\n        <button type=\"button\" class=\"btn btn-default\" (click)=\"closeModal('view-selected-colourant-machine-modal')\">Cancel</button>\n      </div>\n    </div>\n  </pp-modal>\n</ng-container>\n"
 
 /***/ }),
 
@@ -2673,7 +2895,7 @@ module.exports = "<div class=\"block-header\">\r\n  <h1>Machine Setting</h1>\r\n
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".machine-colourant-group {\n  margin: 30px 20px 50px 70px;\n  position: relative;\n  display: flex; }\n  .machine-colourant-group[actiontype=\"open-setting\"] .machine-background {\n    left: -25px; }\n  .machine-colourant-group[actiontype=\"open-setting\"] .machine-background-setting {\n    position: absolute;\n    top: 0px;\n    left: -10px;\n    bottom: 0px; }\n  .machine-colourant-group[actiontype=\"open-setting\"] .machine-background-setting .machine-range-slider {\n      top: -8px;\n      bottom: -8px;\n      position: absolute; }\n  .machine-colourant-group[actiontype=\"open-setting\"] .machine-colourant-min-range .step-label,\n  .machine-colourant-group[actiontype=\"open-setting\"] .machine-colourant-warning-range .step-label {\n    opacity: 0.8; }\n  .machine-colourant-single-item .machine-colourant-group {\n  margin: 0px; }\n  .machine-colourant-single-item .machine-colourant-item {\n  min-width: 60px; }\n  .machine-colourant-single-item .machine-colourant-zero-range .step-label,\n.machine-colourant-single-item .machine-colourant-min-range .step-label,\n.machine-colourant-single-item .machine-colourant-warning-range .step-label,\n.machine-colourant-single-item .machine-colourant-max-range .step-label {\n  display: none; }\n  .machine-background {\n  position: absolute;\n  top: 0px;\n  left: 0px;\n  bottom: 0px;\n  right: 0px; }\n  .machine-background .machine-colourant-zero-range,\n  .machine-background .machine-colourant-min-range,\n  .machine-background .machine-colourant-warning-range,\n  .machine-background .machine-colourant-max-range {\n    width: 100%;\n    position: absolute;\n    left: 0px;\n    right: 0px;\n    bottom: 0px;\n    opacity: 0.5; }\n  .machine-background .machine-colourant-zero-range .step-label,\n    .machine-background .machine-colourant-min-range .step-label,\n    .machine-background .machine-colourant-warning-range .step-label,\n    .machine-background .machine-colourant-max-range .step-label {\n      position: absolute;\n      top: 0px;\n      left: -5px;\n      -webkit-transform: translate(-100%, -50%);\n      transform: translate(-100%, -50%); }\n  .machine-background .machine-colourant-zero-range {\n    border-top: 1px dashed #333333; }\n  .machine-background .machine-colourant-zero-range .step-label {\n      color: #333333; }\n  .machine-background .machine-colourant-warning-range {\n    border-top: 1px dashed darkorange; }\n  .machine-background .machine-colourant-warning-range .step-label {\n      color: darkorange; }\n  .machine-background .machine-colourant-min-range {\n    border-top: 1px dashed red; }\n  .machine-background .machine-colourant-min-range .step-label {\n      color: red; }\n  .machine-background .machine-colourant-max-range {\n    border-top: 1px dashed green; }\n  .machine-background .machine-colourant-max-range .step-label {\n      color: green; }\n  .machine-colorant-slider-group {\n  padding-left: 20px; }\n  .machine-colorant-slider-group .machine-colourant-slider {\n    height: 416px;\n    margin-top: -8px;\n    padding: 8px; }\n  .machine-colourant-item {\n  width: 6.25%;\n  display: inline-block;\n  height: 400px;\n  padding-left: 5px;\n  padding-right: 5px;\n  position: relative; }\n  .machine-colourant-item .machine-colourant-bgr {\n    position: absolute;\n    top: 0px;\n    bottom: 0px;\n    left: 15px;\n    right: 15px;\n    border: 1px solid #333333; }\n  .machine-colourant-item .machine-colourant-bgr .machine-colourant-update-range,\n    .machine-colourant-item .machine-colourant-bgr .machine-colourant-current-range {\n      position: absolute;\n      display: inline-block;\n      left: 0px;\n      right: 0px;\n      bottom: 0px;\n      border-top: 1px solid #000000; }\n  .machine-colourant-item .machine-colourant-bgr .machine-colourant-update-range {\n      opacity: 0.5; }\n  .machine-colourant-item .selected-colourant-bgr {\n    position: absolute;\n    outline: 2px solid #00417b;\n    top: -15px;\n    left: 0px;\n    right: 0px;\n    bottom: -15px; }\n  .machine-colourant-item .colourant-name {\n    position: absolute;\n    width: 100%;\n    display: inline-block;\n    -webkit-transform: rotate(-90deg);\n            transform: rotate(-90deg);\n    -webkit-transform-origin: left center;\n            transform-origin: left center;\n    left: 50%;\n    bottom: 0px;\n    white-space: nowrap; }\n  .machine-colourant-item .colourant-code {\n    font-weight: bold;\n    font-size: 120%;\n    position: absolute;\n    bottom: 0px;\n    left: 50%;\n    -webkit-transform: translate(-50%, 45px);\n            transform: translate(-50%, 45px); }\n  .warning-colourants-machine-modal .modal-content[type=\"Warning\"] .modal-header,\n.warning-colourants-machine-modal .modal-content[type=\"Warning\"] .modal-body {\n  color: darkorange; }\n  .warning-colourants-machine-modal .modal-content[type=\"Danger\"] .modal-header,\n.warning-colourants-machine-modal .modal-content[type=\"Danger\"] .modal-body {\n  color: red; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9tYWNoaW5lL21hY2hpbmVzZXR0aW5nL1g6XFx3c19sZWFybmluZ1xcY2xpZW50dmlldHBvd2VyL3NyY1xcYXBwXFxjb21wb25lbnRzXFxtYWNoaW5lXFxtYWNoaW5lc2V0dGluZ1xcbWFjaGluZXNldHRpbmcuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSw0QkFBMkI7RUFDM0IsbUJBQWtCO0VBQ2xCLGNBQWEsRUEyQmQ7RUE5QkQ7SUFPTSxZQUFXLEVBQ1o7RUFSTDtJQVdNLG1CQUFrQjtJQUNsQixTQUFRO0lBQ1IsWUFBVztJQUNYLFlBQVcsRUFPWjtFQXJCTDtNQWlCUSxVQUFTO01BQ1QsYUFBWTtNQUNaLG1CQUFrQixFQUNuQjtFQXBCUDs7SUEwQlEsYUFBWSxFQUNiO0VBTVA7RUFFSSxZQUFXLEVBQ1o7RUFISDtFQU1JLGdCQUFlLEVBQ2hCO0VBUEg7Ozs7RUFjTSxjQUFhLEVBQ2Q7RUFJTDtFQUNFLG1CQUFrQjtFQUNsQixTQUFRO0VBQ1IsVUFBUztFQUNULFlBQVc7RUFDWCxXQUFVLEVBb0RYO0VBekREOzs7O0lBV0ksWUFBVztJQUNYLG1CQUFrQjtJQUNsQixVQUFTO0lBQ1QsV0FBVTtJQUNWLFlBQVc7SUFDWCxhQUFZLEVBWWI7RUE1Qkg7Ozs7TUFtQk0sbUJBQWtCO01BQ2xCLFNBQVE7TUFDUixXQUFVO01BQ1YsMENBQXlDO01BSXpDLGtDQUFpQyxFQUNsQztFQTNCTDtJQStCSSwrQkFBOEIsRUFJL0I7RUFuQ0g7TUFpQ00sZUFBYyxFQUNmO0VBbENMO0lBc0NJLGtDQUFpQyxFQUlsQztFQTFDSDtNQXdDTSxrQkFBaUIsRUFDbEI7RUF6Q0w7SUE2Q0ksMkJBQTBCLEVBSTNCO0VBakRIO01BK0NNLFdBQVUsRUFDWDtFQWhETDtJQW9ESSw2QkFBNEIsRUFJN0I7RUF4REg7TUFzRE0sYUFBWSxFQUNiO0VBSUw7RUFDRSxtQkFBa0IsRUFRbkI7RUFURDtJQUtJLGNBQW1DO0lBQ25DLGlCQUFpQztJQUNqQyxhQUptQixFQUtwQjtFQUdIO0VBQ0UsYUFBeUI7RUFDekIsc0JBQXFCO0VBQ3JCLGNBQWE7RUFDYixrQkFBaUI7RUFDakIsbUJBQWtCO0VBQ2xCLG1CQUFrQixFQWdFbkI7RUF0RUQ7SUFTSSxtQkFBa0I7SUFDbEIsU0FBUTtJQUNSLFlBQVc7SUFDWCxXQUFVO0lBQ1YsWUFBVztJQUNYLDBCQUF5QixFQTBCMUI7RUF4Q0g7O01BNkJNLG1CQUFrQjtNQUNsQixzQkFBcUI7TUFDckIsVUFBUztNQUNULFdBQVU7TUFDVixZQUFXO01BQ1gsOEJBQTZCLEVBQzlCO0VBbkNMO01Bc0NNLGFBQVksRUFDYjtFQXZDTDtJQTJDSSxtQkFBa0I7SUFDbEIsMkJBQTBCO0lBQzFCLFdBQVU7SUFDVixVQUFTO0lBQ1QsV0FBVTtJQUNWLGNBQWEsRUFDZDtFQWpESDtJQW9ESSxtQkFBa0I7SUFDbEIsWUFBVztJQUNYLHNCQUFxQjtJQUNyQixrQ0FBeUI7WUFBekIsMEJBQXlCO0lBQ3pCLHNDQUE2QjtZQUE3Qiw4QkFBNkI7SUFDN0IsVUFBUztJQUNULFlBQVc7SUFDWCxvQkFBbUIsRUFDcEI7RUE1REg7SUErREksa0JBQWlCO0lBQ2pCLGdCQUFlO0lBQ2YsbUJBQWtCO0lBQ2xCLFlBQVc7SUFDWCxVQUFTO0lBQ1QseUNBQWdDO1lBQWhDLGlDQUFnQyxFQUNqQztFQUdIOztFQUtRLGtCQUFpQixFQUNsQjtFQU5QOztFQVlRLFdBQVUsRUFDWCIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvbWFjaGluZS9tYWNoaW5lc2V0dGluZy9tYWNoaW5lc2V0dGluZy5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5tYWNoaW5lLWNvbG91cmFudC1ncm91cHtcclxuICBtYXJnaW46IDMwcHggMjBweCA1MHB4IDcwcHg7XHJcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcblxyXG4gICZbYWN0aW9udHlwZT1cIm9wZW4tc2V0dGluZ1wiXXtcclxuICAgIC5tYWNoaW5lLWJhY2tncm91bmR7XHJcbiAgICAgIGxlZnQ6IC0yNXB4O1xyXG4gICAgfVxyXG5cclxuICAgIC5tYWNoaW5lLWJhY2tncm91bmQtc2V0dGluZ3tcclxuICAgICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgICB0b3A6IDBweDtcclxuICAgICAgbGVmdDogLTEwcHg7XHJcbiAgICAgIGJvdHRvbTogMHB4O1xyXG5cclxuICAgICAgLm1hY2hpbmUtcmFuZ2Utc2xpZGVye1xyXG4gICAgICAgIHRvcDogLThweDtcclxuICAgICAgICBib3R0b206IC04cHg7XHJcbiAgICAgICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgICB9XHJcbiAgICB9XHJcblxyXG4gICAgLm1hY2hpbmUtY29sb3VyYW50LW1pbi1yYW5nZSxcclxuICAgIC5tYWNoaW5lLWNvbG91cmFudC13YXJuaW5nLXJhbmdle1xyXG4gICAgICAuc3RlcC1sYWJlbHtcclxuICAgICAgICBvcGFjaXR5OiAwLjg7XHJcbiAgICAgIH1cclxuICAgIH1cclxuICB9XHJcbn1cclxuXHJcblxyXG4ubWFjaGluZS1jb2xvdXJhbnQtc2luZ2xlLWl0ZW17XHJcbiAgLm1hY2hpbmUtY29sb3VyYW50LWdyb3Vwe1xyXG4gICAgbWFyZ2luOiAwcHg7XHJcbiAgfVxyXG5cclxuICAubWFjaGluZS1jb2xvdXJhbnQtaXRlbXtcclxuICAgIG1pbi13aWR0aDogNjBweDtcclxuICB9XHJcblxyXG4gIC5tYWNoaW5lLWNvbG91cmFudC16ZXJvLXJhbmdlLFxyXG4gIC5tYWNoaW5lLWNvbG91cmFudC1taW4tcmFuZ2UsXHJcbiAgLm1hY2hpbmUtY29sb3VyYW50LXdhcm5pbmctcmFuZ2UsXHJcbiAgLm1hY2hpbmUtY29sb3VyYW50LW1heC1yYW5nZXtcclxuICAgIC5zdGVwLWxhYmVse1xyXG4gICAgICBkaXNwbGF5OiBub25lO1xyXG4gICAgfVxyXG4gIH1cclxufVxyXG5cclxuLm1hY2hpbmUtYmFja2dyb3VuZHtcclxuICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgdG9wOiAwcHg7XHJcbiAgbGVmdDogMHB4O1xyXG4gIGJvdHRvbTogMHB4O1xyXG4gIHJpZ2h0OiAwcHg7XHJcblxyXG4gIC5tYWNoaW5lLWNvbG91cmFudC16ZXJvLXJhbmdlLFxyXG4gIC5tYWNoaW5lLWNvbG91cmFudC1taW4tcmFuZ2UsXHJcbiAgLm1hY2hpbmUtY29sb3VyYW50LXdhcm5pbmctcmFuZ2UsXHJcbiAgLm1hY2hpbmUtY29sb3VyYW50LW1heC1yYW5nZXtcclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgbGVmdDogMHB4O1xyXG4gICAgcmlnaHQ6IDBweDtcclxuICAgIGJvdHRvbTogMHB4O1xyXG4gICAgb3BhY2l0eTogMC41O1xyXG5cclxuICAgIC5zdGVwLWxhYmVse1xyXG4gICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICAgIHRvcDogMHB4O1xyXG4gICAgICBsZWZ0OiAtNXB4O1xyXG4gICAgICAtd2Via2l0LXRyYW5zZm9ybTogdHJhbnNsYXRlKC0xMDAlLCAtNTAlKTtcclxuICAgICAgLW1vei10cmFuc2Zvcm06IHRyYW5zbGF0ZSgtMTAwJSwgLTUwJSk7XHJcbiAgICAgIC1tcy10cmFuc2Zvcm06IHRyYW5zbGF0ZSgtMTAwJSwgLTUwJSk7XHJcbiAgICAgIC1vLXRyYW5zZm9ybTogdHJhbnNsYXRlKC0xMDAlLCAtNTAlKTtcclxuICAgICAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTEwMCUsIC01MCUpO1xyXG4gICAgfVxyXG4gIH1cclxuXHJcbiAgLm1hY2hpbmUtY29sb3VyYW50LXplcm8tcmFuZ2V7XHJcbiAgICBib3JkZXItdG9wOiAxcHggZGFzaGVkICMzMzMzMzM7XHJcbiAgICAuc3RlcC1sYWJlbHtcclxuICAgICAgY29sb3I6ICMzMzMzMzM7XHJcbiAgICB9XHJcbiAgfVxyXG5cclxuICAubWFjaGluZS1jb2xvdXJhbnQtd2FybmluZy1yYW5nZXtcclxuICAgIGJvcmRlci10b3A6IDFweCBkYXNoZWQgZGFya29yYW5nZTtcclxuICAgIC5zdGVwLWxhYmVse1xyXG4gICAgICBjb2xvcjogZGFya29yYW5nZTtcclxuICAgIH1cclxuICB9XHJcblxyXG4gIC5tYWNoaW5lLWNvbG91cmFudC1taW4tcmFuZ2V7XHJcbiAgICBib3JkZXItdG9wOiAxcHggZGFzaGVkIHJlZDtcclxuICAgIC5zdGVwLWxhYmVse1xyXG4gICAgICBjb2xvcjogcmVkO1xyXG4gICAgfVxyXG4gIH1cclxuXHJcbiAgLm1hY2hpbmUtY29sb3VyYW50LW1heC1yYW5nZXtcclxuICAgIGJvcmRlci10b3A6IDFweCBkYXNoZWQgZ3JlZW47XHJcbiAgICAuc3RlcC1sYWJlbHtcclxuICAgICAgY29sb3I6IGdyZWVuO1xyXG4gICAgfVxyXG4gIH1cclxufVxyXG5cclxuLm1hY2hpbmUtY29sb3JhbnQtc2xpZGVyLWdyb3Vwe1xyXG4gIHBhZGRpbmctbGVmdDogMjBweDtcclxuXHJcbiAgJHNsaWRlcl9wYWRkaW5nIDogOHB4O1xyXG4gIC5tYWNoaW5lLWNvbG91cmFudC1zbGlkZXJ7XHJcbiAgICBoZWlnaHQ6IDQwMHB4ICsgJHNsaWRlcl9wYWRkaW5nICogMjtcclxuICAgIG1hcmdpbi10b3A6IDBweCAtICRzbGlkZXJfcGFkZGluZztcclxuICAgIHBhZGRpbmc6ICRzbGlkZXJfcGFkZGluZztcclxuICB9XHJcbn1cclxuXHJcbi5tYWNoaW5lLWNvbG91cmFudC1pdGVte1xyXG4gIHdpZHRoOiBwZXJjZW50YWdlKDEgLyAxNik7XHJcbiAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG4gIGhlaWdodDogNDAwcHg7XHJcbiAgcGFkZGluZy1sZWZ0OiA1cHg7XHJcbiAgcGFkZGluZy1yaWdodDogNXB4O1xyXG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuXHJcbiAgLm1hY2hpbmUtY29sb3VyYW50LWJncntcclxuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgIHRvcDogMHB4O1xyXG4gICAgYm90dG9tOiAwcHg7XHJcbiAgICBsZWZ0OiAxNXB4O1xyXG4gICAgcmlnaHQ6IDE1cHg7XHJcbiAgICBib3JkZXI6IDFweCBzb2xpZCAjMzMzMzMzO1xyXG5cclxuICAgICY6YWZ0ZXJ7XHJcbiAgICAgIC8vY29udGVudDogXCJcIjtcclxuICAgICAgLy9kaXNwbGF5OiBpbmxpbmUtYmxvY2s7XHJcbiAgICAgIC8vcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgICAvL3RvcDogMHB4O1xyXG4gICAgICAvL2xlZnQ6IDBweDtcclxuICAgICAgLy9yaWdodDogMHB4O1xyXG4gICAgICAvL2JvdHRvbTogMHB4O1xyXG4gICAgICAvL2JhY2tncm91bmQtaW1hZ2U6IGxpbmVhci1ncmFkaWVudCh0byByaWdodCwgcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjApLCByZ2JhKDIwNCwgMjA0LCAyMDQsIDAuMiksICByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMSksIHJnYmEoMjU1LCAyNTUsIDI1NSwgMC4wNSksIHJnYmEoMjU1LCAyNTUsIDI1NSwgMC4wKSk7XHJcbiAgICB9XHJcblxyXG4gICAgLm1hY2hpbmUtY29sb3VyYW50LXVwZGF0ZS1yYW5nZSxcclxuICAgIC5tYWNoaW5lLWNvbG91cmFudC1jdXJyZW50LXJhbmdlIHtcclxuICAgICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XHJcbiAgICAgIGxlZnQ6IDBweDtcclxuICAgICAgcmlnaHQ6IDBweDtcclxuICAgICAgYm90dG9tOiAwcHg7XHJcbiAgICAgIGJvcmRlci10b3A6IDFweCBzb2xpZCAjMDAwMDAwO1xyXG4gICAgfVxyXG5cclxuICAgIC5tYWNoaW5lLWNvbG91cmFudC11cGRhdGUtcmFuZ2V7XHJcbiAgICAgIG9wYWNpdHk6IDAuNTtcclxuICAgIH1cclxuICB9XHJcblxyXG4gIC5zZWxlY3RlZC1jb2xvdXJhbnQtYmdye1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgb3V0bGluZTogMnB4IHNvbGlkICMwMDQxN2I7XHJcbiAgICB0b3A6IC0xNXB4O1xyXG4gICAgbGVmdDogMHB4O1xyXG4gICAgcmlnaHQ6IDBweDtcclxuICAgIGJvdHRvbTogLTE1cHg7XHJcbiAgfVxyXG5cclxuICAuY29sb3VyYW50LW5hbWV7XHJcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIGRpc3BsYXk6IGlubGluZS1ibG9jaztcclxuICAgIHRyYW5zZm9ybTogcm90YXRlKC05MGRlZyk7XHJcbiAgICB0cmFuc2Zvcm0tb3JpZ2luOiBsZWZ0IGNlbnRlcjtcclxuICAgIGxlZnQ6IDUwJTtcclxuICAgIGJvdHRvbTogMHB4O1xyXG4gICAgd2hpdGUtc3BhY2U6IG5vd3JhcDtcclxuICB9XHJcblxyXG4gIC5jb2xvdXJhbnQtY29kZSB7XHJcbiAgICBmb250LXdlaWdodDogYm9sZDtcclxuICAgIGZvbnQtc2l6ZTogMTIwJTtcclxuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgIGJvdHRvbTogMHB4O1xyXG4gICAgbGVmdDogNTAlO1xyXG4gICAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTUwJSwgNDVweCk7XHJcbiAgfVxyXG59XHJcblxyXG4ud2FybmluZy1jb2xvdXJhbnRzLW1hY2hpbmUtbW9kYWx7XHJcbiAgLm1vZGFsLWNvbnRlbnR7XHJcbiAgICAmW3R5cGU9XCJXYXJuaW5nXCJde1xyXG4gICAgICAubW9kYWwtaGVhZGVyLFxyXG4gICAgICAubW9kYWwtYm9keXtcclxuICAgICAgICBjb2xvcjogZGFya29yYW5nZTtcclxuICAgICAgfVxyXG4gICAgfVxyXG5cclxuICAgICZbdHlwZT1cIkRhbmdlclwiXXtcclxuICAgICAgLm1vZGFsLWhlYWRlcixcclxuICAgICAgLm1vZGFsLWJvZHl7XHJcbiAgICAgICAgY29sb3I6IHJlZDtcclxuICAgICAgfVxyXG4gICAgfVxyXG4gIH1cclxuXHJcbn1cclxuIl19 */"
+module.exports = ".machine-colourant-group {\n  margin: 30px 20px 50px 70px;\n  position: relative;\n  display: flex; }\n  .machine-colourant-group[actiontype=\"open-setting\"] .machine-background {\n    left: -25px; }\n  .machine-colourant-group[actiontype=\"open-setting\"] .machine-background-setting {\n    position: absolute;\n    top: 0px;\n    left: -10px;\n    bottom: 0px; }\n  .machine-colourant-group[actiontype=\"open-setting\"] .machine-background-setting .machine-range-slider {\n      top: -8px;\n      bottom: -8px;\n      position: absolute; }\n  .machine-colourant-group[actiontype=\"open-setting\"] .machine-colourant-min-range .step-label,\n  .machine-colourant-group[actiontype=\"open-setting\"] .machine-colourant-warning-range .step-label {\n    opacity: 0.8; }\n  .machine-colourant-single-item .machine-colourant-group {\n  margin: 0px; }\n  .machine-colourant-single-item .machine-colourant-item {\n  min-width: 60px; }\n  .machine-colourant-single-item .machine-colorant-slider-group {\n  padding-right: 20px;\n  padding-left: 0px; }\n  .machine-colourant-single-item .machine-colourant-zero-range .step-label,\n.machine-colourant-single-item .machine-colourant-min-range .step-label,\n.machine-colourant-single-item .machine-colourant-warning-range .step-label,\n.machine-colourant-single-item .machine-colourant-max-range .step-label {\n  font-size: 80%; }\n  .machine-background {\n  position: absolute;\n  top: 0px;\n  left: 0px;\n  bottom: 0px;\n  right: 0px; }\n  .machine-background .machine-colourant-zero-range,\n  .machine-background .machine-colourant-min-range,\n  .machine-background .machine-colourant-warning-range,\n  .machine-background .machine-colourant-max-range {\n    width: 100%;\n    position: absolute;\n    left: 0px;\n    right: 0px;\n    bottom: 0px;\n    opacity: 0.5; }\n  .machine-background .machine-colourant-zero-range .step-label,\n    .machine-background .machine-colourant-min-range .step-label,\n    .machine-background .machine-colourant-warning-range .step-label,\n    .machine-background .machine-colourant-max-range .step-label {\n      position: absolute;\n      top: 0px;\n      left: -5px;\n      -webkit-transform: translate(-100%, -50%);\n      transform: translate(-100%, -50%); }\n  .machine-background .machine-colourant-zero-range {\n    border-top: 1px dashed #333333; }\n  .machine-background .machine-colourant-zero-range .step-label {\n      color: #333333; }\n  .machine-background .machine-colourant-warning-range {\n    border-top: 1px dashed darkorange; }\n  .machine-background .machine-colourant-warning-range .step-label {\n      color: darkorange; }\n  .machine-background .machine-colourant-min-range {\n    border-top: 1px dashed red; }\n  .machine-background .machine-colourant-min-range .step-label {\n      color: red; }\n  .machine-background .machine-colourant-max-range {\n    border-top: 1px dashed green; }\n  .machine-background .machine-colourant-max-range .step-label {\n      color: green; }\n  .machine-colorant-slider-group {\n  padding-left: 20px; }\n  .machine-colorant-slider-group .machine-colourant-slider {\n    height: 416px;\n    margin-top: -8px;\n    padding: 8px; }\n  .machine-colourant-item {\n  width: 6.25%;\n  display: inline-block;\n  height: 400px;\n  padding-left: 5px;\n  padding-right: 5px;\n  position: relative; }\n  .machine-colourant-item .machine-colourant-bgr {\n    position: absolute;\n    top: 0px;\n    bottom: 0px;\n    left: 15px;\n    right: 15px;\n    border: 1px solid #333333; }\n  .machine-colourant-item .machine-colourant-bgr .machine-colourant-update-range,\n    .machine-colourant-item .machine-colourant-bgr .machine-colourant-current-range {\n      position: absolute;\n      display: inline-block;\n      left: 0px;\n      right: 0px;\n      bottom: 0px;\n      border-top: 1px solid #000000; }\n  .machine-colourant-item .machine-colourant-bgr .machine-colourant-update-range {\n      opacity: 0.5; }\n  .machine-colourant-item .selected-colourant-bgr {\n    position: absolute;\n    outline: 2px solid #00417b;\n    top: -15px;\n    left: 0px;\n    right: 0px;\n    bottom: -15px; }\n  .machine-colourant-item .colourant-name {\n    position: absolute;\n    width: 100%;\n    display: inline-block;\n    -webkit-transform: rotate(-90deg);\n            transform: rotate(-90deg);\n    -webkit-transform-origin: left center;\n            transform-origin: left center;\n    left: 50%;\n    bottom: 0px;\n    white-space: nowrap; }\n  .machine-colourant-item .colourant-code {\n    font-weight: bold;\n    font-size: 120%;\n    position: absolute;\n    bottom: 0px;\n    left: 50%;\n    -webkit-transform: translate(-50%, 45px);\n            transform: translate(-50%, 45px); }\n  .warning-colourants-machine-modal .modal-content[type=\"Warning\"] .modal-header,\n.warning-colourants-machine-modal .modal-content[type=\"Warning\"] .modal-body {\n  color: darkorange; }\n  .warning-colourants-machine-modal .modal-content[type=\"Danger\"] .modal-header,\n.warning-colourants-machine-modal .modal-content[type=\"Danger\"] .modal-body {\n  color: red; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9tYWNoaW5lL21hY2hpbmVzZXR0aW5nL0c6XFxXb3Jrc3BhY2VcXGNsaWVudHZpZXRwb3dlci9zcmNcXGFwcFxcY29tcG9uZW50c1xcbWFjaGluZVxcbWFjaGluZXNldHRpbmdcXG1hY2hpbmVzZXR0aW5nLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsNEJBQTJCO0VBQzNCLG1CQUFrQjtFQUNsQixjQUFhLEVBMkJkO0VBOUJEO0lBT00sWUFBVyxFQUNaO0VBUkw7SUFXTSxtQkFBa0I7SUFDbEIsU0FBUTtJQUNSLFlBQVc7SUFDWCxZQUFXLEVBT1o7RUFyQkw7TUFpQlEsVUFBUztNQUNULGFBQVk7TUFDWixtQkFBa0IsRUFDbkI7RUFwQlA7O0lBMEJRLGFBQVksRUFDYjtFQU1QO0VBRUksWUFBVyxFQUNaO0VBSEg7RUFNSSxnQkFBZSxFQUNoQjtFQVBIO0VBVUksb0JBQW1CO0VBQ25CLGtCQUFpQixFQUNsQjtFQVpIOzs7O0VBbUJNLGVBQWMsRUFDZjtFQUlMO0VBQ0UsbUJBQWtCO0VBQ2xCLFNBQVE7RUFDUixVQUFTO0VBQ1QsWUFBVztFQUNYLFdBQVUsRUFvRFg7RUF6REQ7Ozs7SUFXSSxZQUFXO0lBQ1gsbUJBQWtCO0lBQ2xCLFVBQVM7SUFDVCxXQUFVO0lBQ1YsWUFBVztJQUNYLGFBQVksRUFZYjtFQTVCSDs7OztNQW1CTSxtQkFBa0I7TUFDbEIsU0FBUTtNQUNSLFdBQVU7TUFDViwwQ0FBeUM7TUFJekMsa0NBQWlDLEVBQ2xDO0VBM0JMO0lBK0JJLCtCQUE4QixFQUkvQjtFQW5DSDtNQWlDTSxlQUFjLEVBQ2Y7RUFsQ0w7SUFzQ0ksa0NBQWlDLEVBSWxDO0VBMUNIO01Bd0NNLGtCQUFpQixFQUNsQjtFQXpDTDtJQTZDSSwyQkFBMEIsRUFJM0I7RUFqREg7TUErQ00sV0FBVSxFQUNYO0VBaERMO0lBb0RJLDZCQUE0QixFQUk3QjtFQXhESDtNQXNETSxhQUFZLEVBQ2I7RUFJTDtFQUNFLG1CQUFrQixFQVFuQjtFQVREO0lBS0ksY0FBbUM7SUFDbkMsaUJBQWlDO0lBQ2pDLGFBSm1CLEVBS3BCO0VBR0g7RUFDRSxhQUF5QjtFQUN6QixzQkFBcUI7RUFDckIsY0FBYTtFQUNiLGtCQUFpQjtFQUNqQixtQkFBa0I7RUFDbEIsbUJBQWtCLEVBZ0VuQjtFQXRFRDtJQVNJLG1CQUFrQjtJQUNsQixTQUFRO0lBQ1IsWUFBVztJQUNYLFdBQVU7SUFDVixZQUFXO0lBQ1gsMEJBQXlCLEVBMEIxQjtFQXhDSDs7TUE2Qk0sbUJBQWtCO01BQ2xCLHNCQUFxQjtNQUNyQixVQUFTO01BQ1QsV0FBVTtNQUNWLFlBQVc7TUFDWCw4QkFBNkIsRUFDOUI7RUFuQ0w7TUFzQ00sYUFBWSxFQUNiO0VBdkNMO0lBMkNJLG1CQUFrQjtJQUNsQiwyQkFBMEI7SUFDMUIsV0FBVTtJQUNWLFVBQVM7SUFDVCxXQUFVO0lBQ1YsY0FBYSxFQUNkO0VBakRIO0lBb0RJLG1CQUFrQjtJQUNsQixZQUFXO0lBQ1gsc0JBQXFCO0lBQ3JCLGtDQUF5QjtZQUF6QiwwQkFBeUI7SUFDekIsc0NBQTZCO1lBQTdCLDhCQUE2QjtJQUM3QixVQUFTO0lBQ1QsWUFBVztJQUNYLG9CQUFtQixFQUNwQjtFQTVESDtJQStESSxrQkFBaUI7SUFDakIsZ0JBQWU7SUFDZixtQkFBa0I7SUFDbEIsWUFBVztJQUNYLFVBQVM7SUFDVCx5Q0FBZ0M7WUFBaEMsaUNBQWdDLEVBQ2pDO0VBR0g7O0VBS1Esa0JBQWlCLEVBQ2xCO0VBTlA7O0VBWVEsV0FBVSxFQUNYIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50cy9tYWNoaW5lL21hY2hpbmVzZXR0aW5nL21hY2hpbmVzZXR0aW5nLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLm1hY2hpbmUtY29sb3VyYW50LWdyb3Vwe1xyXG4gIG1hcmdpbjogMzBweCAyMHB4IDUwcHggNzBweDtcclxuICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbiAgZGlzcGxheTogZmxleDtcclxuXHJcbiAgJlthY3Rpb250eXBlPVwib3Blbi1zZXR0aW5nXCJde1xyXG4gICAgLm1hY2hpbmUtYmFja2dyb3VuZHtcclxuICAgICAgbGVmdDogLTI1cHg7XHJcbiAgICB9XHJcblxyXG4gICAgLm1hY2hpbmUtYmFja2dyb3VuZC1zZXR0aW5ne1xyXG4gICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICAgIHRvcDogMHB4O1xyXG4gICAgICBsZWZ0OiAtMTBweDtcclxuICAgICAgYm90dG9tOiAwcHg7XHJcblxyXG4gICAgICAubWFjaGluZS1yYW5nZS1zbGlkZXJ7XHJcbiAgICAgICAgdG9wOiAtOHB4O1xyXG4gICAgICAgIGJvdHRvbTogLThweDtcclxuICAgICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICAgIH1cclxuICAgIH1cclxuXHJcbiAgICAubWFjaGluZS1jb2xvdXJhbnQtbWluLXJhbmdlLFxyXG4gICAgLm1hY2hpbmUtY29sb3VyYW50LXdhcm5pbmctcmFuZ2V7XHJcbiAgICAgIC5zdGVwLWxhYmVse1xyXG4gICAgICAgIG9wYWNpdHk6IDAuODtcclxuICAgICAgfVxyXG4gICAgfVxyXG4gIH1cclxufVxyXG5cclxuXHJcbi5tYWNoaW5lLWNvbG91cmFudC1zaW5nbGUtaXRlbXtcclxuICAubWFjaGluZS1jb2xvdXJhbnQtZ3JvdXB7XHJcbiAgICBtYXJnaW46IDBweDtcclxuICB9XHJcblxyXG4gIC5tYWNoaW5lLWNvbG91cmFudC1pdGVte1xyXG4gICAgbWluLXdpZHRoOiA2MHB4O1xyXG4gIH1cclxuXHJcbiAgLm1hY2hpbmUtY29sb3JhbnQtc2xpZGVyLWdyb3Vwe1xyXG4gICAgcGFkZGluZy1yaWdodDogMjBweDtcclxuICAgIHBhZGRpbmctbGVmdDogMHB4O1xyXG4gIH1cclxuXHJcbiAgLm1hY2hpbmUtY29sb3VyYW50LXplcm8tcmFuZ2UsXHJcbiAgLm1hY2hpbmUtY29sb3VyYW50LW1pbi1yYW5nZSxcclxuICAubWFjaGluZS1jb2xvdXJhbnQtd2FybmluZy1yYW5nZSxcclxuICAubWFjaGluZS1jb2xvdXJhbnQtbWF4LXJhbmdle1xyXG4gICAgLnN0ZXAtbGFiZWx7XHJcbiAgICAgIGZvbnQtc2l6ZTogODAlO1xyXG4gICAgfVxyXG4gIH1cclxufVxyXG5cclxuLm1hY2hpbmUtYmFja2dyb3VuZHtcclxuICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgdG9wOiAwcHg7XHJcbiAgbGVmdDogMHB4O1xyXG4gIGJvdHRvbTogMHB4O1xyXG4gIHJpZ2h0OiAwcHg7XHJcblxyXG4gIC5tYWNoaW5lLWNvbG91cmFudC16ZXJvLXJhbmdlLFxyXG4gIC5tYWNoaW5lLWNvbG91cmFudC1taW4tcmFuZ2UsXHJcbiAgLm1hY2hpbmUtY29sb3VyYW50LXdhcm5pbmctcmFuZ2UsXHJcbiAgLm1hY2hpbmUtY29sb3VyYW50LW1heC1yYW5nZXtcclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgbGVmdDogMHB4O1xyXG4gICAgcmlnaHQ6IDBweDtcclxuICAgIGJvdHRvbTogMHB4O1xyXG4gICAgb3BhY2l0eTogMC41O1xyXG5cclxuICAgIC5zdGVwLWxhYmVse1xyXG4gICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICAgIHRvcDogMHB4O1xyXG4gICAgICBsZWZ0OiAtNXB4O1xyXG4gICAgICAtd2Via2l0LXRyYW5zZm9ybTogdHJhbnNsYXRlKC0xMDAlLCAtNTAlKTtcclxuICAgICAgLW1vei10cmFuc2Zvcm06IHRyYW5zbGF0ZSgtMTAwJSwgLTUwJSk7XHJcbiAgICAgIC1tcy10cmFuc2Zvcm06IHRyYW5zbGF0ZSgtMTAwJSwgLTUwJSk7XHJcbiAgICAgIC1vLXRyYW5zZm9ybTogdHJhbnNsYXRlKC0xMDAlLCAtNTAlKTtcclxuICAgICAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTEwMCUsIC01MCUpO1xyXG4gICAgfVxyXG4gIH1cclxuXHJcbiAgLm1hY2hpbmUtY29sb3VyYW50LXplcm8tcmFuZ2V7XHJcbiAgICBib3JkZXItdG9wOiAxcHggZGFzaGVkICMzMzMzMzM7XHJcbiAgICAuc3RlcC1sYWJlbHtcclxuICAgICAgY29sb3I6ICMzMzMzMzM7XHJcbiAgICB9XHJcbiAgfVxyXG5cclxuICAubWFjaGluZS1jb2xvdXJhbnQtd2FybmluZy1yYW5nZXtcclxuICAgIGJvcmRlci10b3A6IDFweCBkYXNoZWQgZGFya29yYW5nZTtcclxuICAgIC5zdGVwLWxhYmVse1xyXG4gICAgICBjb2xvcjogZGFya29yYW5nZTtcclxuICAgIH1cclxuICB9XHJcblxyXG4gIC5tYWNoaW5lLWNvbG91cmFudC1taW4tcmFuZ2V7XHJcbiAgICBib3JkZXItdG9wOiAxcHggZGFzaGVkIHJlZDtcclxuICAgIC5zdGVwLWxhYmVse1xyXG4gICAgICBjb2xvcjogcmVkO1xyXG4gICAgfVxyXG4gIH1cclxuXHJcbiAgLm1hY2hpbmUtY29sb3VyYW50LW1heC1yYW5nZXtcclxuICAgIGJvcmRlci10b3A6IDFweCBkYXNoZWQgZ3JlZW47XHJcbiAgICAuc3RlcC1sYWJlbHtcclxuICAgICAgY29sb3I6IGdyZWVuO1xyXG4gICAgfVxyXG4gIH1cclxufVxyXG5cclxuLm1hY2hpbmUtY29sb3JhbnQtc2xpZGVyLWdyb3Vwe1xyXG4gIHBhZGRpbmctbGVmdDogMjBweDtcclxuXHJcbiAgJHNsaWRlcl9wYWRkaW5nIDogOHB4O1xyXG4gIC5tYWNoaW5lLWNvbG91cmFudC1zbGlkZXJ7XHJcbiAgICBoZWlnaHQ6IDQwMHB4ICsgJHNsaWRlcl9wYWRkaW5nICogMjtcclxuICAgIG1hcmdpbi10b3A6IDBweCAtICRzbGlkZXJfcGFkZGluZztcclxuICAgIHBhZGRpbmc6ICRzbGlkZXJfcGFkZGluZztcclxuICB9XHJcbn1cclxuXHJcbi5tYWNoaW5lLWNvbG91cmFudC1pdGVte1xyXG4gIHdpZHRoOiBwZXJjZW50YWdlKDEgLyAxNik7XHJcbiAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG4gIGhlaWdodDogNDAwcHg7XHJcbiAgcGFkZGluZy1sZWZ0OiA1cHg7XHJcbiAgcGFkZGluZy1yaWdodDogNXB4O1xyXG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuXHJcbiAgLm1hY2hpbmUtY29sb3VyYW50LWJncntcclxuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgIHRvcDogMHB4O1xyXG4gICAgYm90dG9tOiAwcHg7XHJcbiAgICBsZWZ0OiAxNXB4O1xyXG4gICAgcmlnaHQ6IDE1cHg7XHJcbiAgICBib3JkZXI6IDFweCBzb2xpZCAjMzMzMzMzO1xyXG5cclxuICAgICY6YWZ0ZXJ7XHJcbiAgICAgIC8vY29udGVudDogXCJcIjtcclxuICAgICAgLy9kaXNwbGF5OiBpbmxpbmUtYmxvY2s7XHJcbiAgICAgIC8vcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgICAvL3RvcDogMHB4O1xyXG4gICAgICAvL2xlZnQ6IDBweDtcclxuICAgICAgLy9yaWdodDogMHB4O1xyXG4gICAgICAvL2JvdHRvbTogMHB4O1xyXG4gICAgICAvL2JhY2tncm91bmQtaW1hZ2U6IGxpbmVhci1ncmFkaWVudCh0byByaWdodCwgcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjApLCByZ2JhKDIwNCwgMjA0LCAyMDQsIDAuMiksICByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMSksIHJnYmEoMjU1LCAyNTUsIDI1NSwgMC4wNSksIHJnYmEoMjU1LCAyNTUsIDI1NSwgMC4wKSk7XHJcbiAgICB9XHJcblxyXG4gICAgLm1hY2hpbmUtY29sb3VyYW50LXVwZGF0ZS1yYW5nZSxcclxuICAgIC5tYWNoaW5lLWNvbG91cmFudC1jdXJyZW50LXJhbmdlIHtcclxuICAgICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XHJcbiAgICAgIGxlZnQ6IDBweDtcclxuICAgICAgcmlnaHQ6IDBweDtcclxuICAgICAgYm90dG9tOiAwcHg7XHJcbiAgICAgIGJvcmRlci10b3A6IDFweCBzb2xpZCAjMDAwMDAwO1xyXG4gICAgfVxyXG5cclxuICAgIC5tYWNoaW5lLWNvbG91cmFudC11cGRhdGUtcmFuZ2V7XHJcbiAgICAgIG9wYWNpdHk6IDAuNTtcclxuICAgIH1cclxuICB9XHJcblxyXG4gIC5zZWxlY3RlZC1jb2xvdXJhbnQtYmdye1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgb3V0bGluZTogMnB4IHNvbGlkICMwMDQxN2I7XHJcbiAgICB0b3A6IC0xNXB4O1xyXG4gICAgbGVmdDogMHB4O1xyXG4gICAgcmlnaHQ6IDBweDtcclxuICAgIGJvdHRvbTogLTE1cHg7XHJcbiAgfVxyXG5cclxuICAuY29sb3VyYW50LW5hbWV7XHJcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIGRpc3BsYXk6IGlubGluZS1ibG9jaztcclxuICAgIHRyYW5zZm9ybTogcm90YXRlKC05MGRlZyk7XHJcbiAgICB0cmFuc2Zvcm0tb3JpZ2luOiBsZWZ0IGNlbnRlcjtcclxuICAgIGxlZnQ6IDUwJTtcclxuICAgIGJvdHRvbTogMHB4O1xyXG4gICAgd2hpdGUtc3BhY2U6IG5vd3JhcDtcclxuICB9XHJcblxyXG4gIC5jb2xvdXJhbnQtY29kZSB7XHJcbiAgICBmb250LXdlaWdodDogYm9sZDtcclxuICAgIGZvbnQtc2l6ZTogMTIwJTtcclxuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgIGJvdHRvbTogMHB4O1xyXG4gICAgbGVmdDogNTAlO1xyXG4gICAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTUwJSwgNDVweCk7XHJcbiAgfVxyXG59XHJcblxyXG4ud2FybmluZy1jb2xvdXJhbnRzLW1hY2hpbmUtbW9kYWx7XHJcbiAgLm1vZGFsLWNvbnRlbnR7XHJcbiAgICAmW3R5cGU9XCJXYXJuaW5nXCJde1xyXG4gICAgICAubW9kYWwtaGVhZGVyLFxyXG4gICAgICAubW9kYWwtYm9keXtcclxuICAgICAgICBjb2xvcjogZGFya29yYW5nZTtcclxuICAgICAgfVxyXG4gICAgfVxyXG5cclxuICAgICZbdHlwZT1cIkRhbmdlclwiXXtcclxuICAgICAgLm1vZGFsLWhlYWRlcixcclxuICAgICAgLm1vZGFsLWJvZHl7XHJcbiAgICAgICAgY29sb3I6IHJlZDtcclxuICAgICAgfVxyXG4gICAgfVxyXG4gIH1cclxuXHJcbn1cclxuIl19 */"
 
 /***/ }),
 
@@ -2765,6 +2987,7 @@ var MachineSettingComponent = /** @class */ (function () {
             });
             this.selectedMachineColourant = listFilter.length > 0 ? listFilter[0] : null;
             this.currentAmount = this.selectedMachineColourant != null ? this.selectedMachineColourant.quantity : 0;
+            this.refillFactor = this.selectedMachineColourant != null ? this.selectedMachineColourant.refillFactor : 100;
             this.addedAmount = 0;
             // this.addedAmountPercent = 0;
             this.updateAmount = this.currentAmount + this.addedAmount;
@@ -2774,20 +2997,20 @@ var MachineSettingComponent = /** @class */ (function () {
         }
     };
     MachineSettingComponent.prototype.updateAddedAmount = function (type) {
+        var maxQuantity = this.maxQuantity;
         if (type === 'amount') {
-            this.updateAmount = this.currentAmount + this.addedAmount;
-            if (this.updateAmount > this.maxQuantity) {
-                this.updateAmount = this.maxQuantity;
-                this.addedAmount = this.maxQuantity - this.updateAmount;
-            }
-            else if (this.updateAmount < 0) {
-                this.updateAmount = 0;
-                this.addedAmount = this.updateAmount - this.currentAmount;
-            }
-            // this.addedAmountPercent = (this.addedAmount / this.maxQuantity) * 100;
         }
-        else if (type === 'percent') {
-            // this.addedAmount = (this.addedAmountPercent - (this.currentAmount / this.maxQuantity)) * this.maxQuantity;
+        else if (type === 'refillFactor') {
+            maxQuantity = this.maxQuantity * this.refillFactor;
+        }
+        this.updateAmount = this.currentAmount + this.addedAmount;
+        if (this.updateAmount > maxQuantity) {
+            this.updateAmount = maxQuantity;
+            this.addedAmount = maxQuantity - this.updateAmount;
+        }
+        else if (this.updateAmount < 0) {
+            this.updateAmount = 0;
+            this.addedAmount = this.updateAmount - this.currentAmount;
         }
     };
     MachineSettingComponent.prototype.updateAmountBySlider = function () {
@@ -2832,7 +3055,7 @@ var MachineSettingComponent = /** @class */ (function () {
     };
     MachineSettingComponent.prototype.updateAndSaving = function (id) {
         var _this = this;
-        this.machineService.updateColourantMachineData(this.machine, this.selectedMachineColourant.colourant, this.addedAmount)
+        this.machineService.updateColourantMachineData(this.selectedMachineColourant.colourant, this.addedAmount, this.refillFactor)
             .subscribe(function (datas) {
             _this.processListColourantData(datas, 'update');
             _this.modalService.close(id);
@@ -2952,7 +3175,7 @@ var BaseComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        List Collection\r\n\r\n        <button class=\"close\" (click)=\"addCollection()\"><i class=\"fas fa-plus-square\"></i></button>\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        <ng-container *ngIf=\"responseMessage != null && responseMessage.type == 'success'\">\r\n          <div class=\"alert alert-success\">\r\n            <button class=\"close\" data-dismiss=\"alert\" aria-label=\"close\" (click)=\"clearResponseMessage()\">&times;</button>\r\n            {{responseMessage.message}}\r\n          </div>\r\n        </ng-container>\r\n\r\n        <ng-container *ngIf=\"responseMessage != null && responseMessage.type == 'error'\">\r\n          <div class=\"alert alert-danger\">\r\n            <button class=\"close\" data-dismiss=\"alert\" aria-label=\"close\" (click)=\"clearResponseMessage()\">&times;</button>\r\n            {{responseMessage.message}}\r\n          </div>\r\n        </ng-container>\r\n\r\n\r\n        <div class=\"table-responsive\">\r\n          <table class=\"table table-bordered\" matSort (matSortChange)=\"sortData($event)\">\r\n            <tr>\r\n              <th mat-sort-header=\"collectionName\">Collection Name</th>\r\n              <th mat-sort-header=\"description\">Description</th>\r\n              <th>Created Date</th>\r\n              <th>Created By</th>\r\n              <th class=\"text-center\">Action</th>\r\n            </tr>\r\n\r\n            <tr *ngFor=\"let item of sortedData\">\r\n              <td>{{item.collectionName}}</td>\r\n              <td>{{item.description}}</td>\r\n              <td>{{item.createdDate | date: 'dd/MM/yyyy'}}</td>\r\n              <td>\r\n                <p *ngIf=\"item.machine == null\">System</p>\r\n                <p *ngIf=\"item.machine != null\">Me</p>\r\n              </td>\r\n              <td class=\"text-center\">\r\n                <ng-container *ngIf=\"item.machine != null && item.machine.machineId != null && item.machine.machineId > 0\">\r\n                  <button mat-raised-button\r\n                          matTooltip=\"Edit Collection\"\r\n                          aria-label=\"Edit Collection\"\r\n                          (click)=\"viewCollection(item.collectionId)\">\r\n                          <i class=\"fas fa-edit\"></i>\r\n                  </button>\r\n\r\n                  <span class=\"vertical-separate-line\">&nbsp;</span>\r\n\r\n                  <button mat-raised-button\r\n                          matTooltip=\"Delete Collection\"\r\n                          aria-label=\"Delete Collection\"\r\n                          (click)=\"confirmDeleteCollection(item.collectionId)\">\r\n                    <i class=\"fas fa-trash-alt\"></i>\r\n                  </button>\r\n                </ng-container>\r\n              </td>\r\n            </tr>\r\n          </table>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n\r\n\r\n<ng-container *ngIf=\"dbItem != null\">\r\n  <pp-modal id=\"view-detail-collection\" class=\"modal view-detail-collection\">\r\n    <div class=\"modal-content\">\r\n      <div class=\"modal-header\">\r\n        <h5 class=\"modal-title\">{{dbItem.collectionId > 0 ? 'Edit Collection':  'Add Collection'}}</h5>\r\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\" (click)=\"closeModal('view-detail-collection')\">\r\n          <span aria-hidden=\"true\">×</span>\r\n        </button>\r\n      </div>\r\n\r\n      <div class=\"modal-body\">\r\n        <form class=\"form form-horizontal form-detail\">\r\n          <div class=\"form-body\">\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-md-3 label-control\">Collection Name</label>\r\n              <div class=\"col-md-8\">\r\n                <input type=\"text\" [(ngModel)]=\"dbItem.collectionName\" class=\"form-control\" [ngModelOptions]=\"{standalone: true}\">\r\n\r\n                <ng-container *ngIf=\"errorValidation != null && errorValidation['collectionName'] != null\">\r\n                  <span class=\"error-label\">{{errorValidation['collectionName']}}</span>\r\n                </ng-container>\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-md-3 label-control\">Description</label>\r\n              <div class=\"col-md-8\">\r\n                <textarea [(ngModel)]=\"dbItem.description\" class=\"form-control\" [ngModelOptions]=\"{standalone: true}\"></textarea>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <input type=\"hidden\" [(ngModel)]=\"dbItem.collectionId\" [ngModelOptions]=\"{standalone: true}\">\r\n        </form>\r\n      </div>\r\n\r\n      <div class=\"modal-footer\">\r\n        <button type=\"button\" class=\"btn btn-default\" (click)=\"closeModal('view-detail-collection')\">Cancel</button>\r\n        <button type=\"button\" class=\"btn btn-primary\" (click)=\"updateOrSavingCollection()\">Save</button>\r\n      </div>\r\n    </div>\r\n  </pp-modal>\r\n</ng-container>\r\n\r\n\r\n\r\n<ng-container *ngIf=\"collectionId != null && collectionId > 0\">\r\n  <pp-modal id=\"confirm-remove-collection-model\" class=\"modal confirm-remove-collection-model\">\r\n    <div class=\"modal-content\">\r\n      <div class=\"modal-header\">\r\n        <h5 class=\"modal-title\">Confirm</h5>\r\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\" (click)=\"closeModal('confirm-remove-collection-model')\">\r\n          <span aria-hidden=\"true\">×</span>\r\n        </button>\r\n      </div>\r\n\r\n      <div class=\"modal-body\">\r\n        Do you want to delete this collection ?\r\n      </div>\r\n\r\n      <div class=\"modal-footer\">\r\n        <button type=\"button\" class=\"btn btn-default\" (click)=\"closeModal('view-detail-collection')\">Cancel</button>\r\n        <button type=\"button\" class=\"btn btn-primary\" (click)=\"deleteCollection(collectionId)\">Ok</button>\r\n      </div>\r\n    </div>\r\n  </pp-modal>\r\n</ng-container>\r\n"
+module.exports = "<div class=\"row\">\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n    <div class=\"card\">\n      <div class=\"card-header\">\n        List Collection\n\n        <button class=\"close\" (click)=\"addCollection()\"><i class=\"fas fa-plus-square\"></i></button>\n      </div>\n\n      <div class=\"card-body\">\n        <ng-container *ngIf=\"responseMessage != null && responseMessage.type == 'success'\">\n          <div class=\"alert alert-success\">\n            <button class=\"close\" data-dismiss=\"alert\" aria-label=\"close\" (click)=\"clearResponseMessage()\">&times;</button>\n            {{responseMessage.message}}\n          </div>\n        </ng-container>\n\n        <ng-container *ngIf=\"responseMessage != null && responseMessage.type == 'error'\">\n          <div class=\"alert alert-danger\">\n            <button class=\"close\" data-dismiss=\"alert\" aria-label=\"close\" (click)=\"clearResponseMessage()\">&times;</button>\n            {{responseMessage.message}}\n          </div>\n        </ng-container>\n\n\n        <div class=\"table-responsive\">\n          <table class=\"table table-bordered\" matSort (matSortChange)=\"sortData($event)\">\n            <tr>\n              <th mat-sort-header=\"collectionName\">Collection Name</th>\n              <th mat-sort-header=\"description\">Description</th>\n              <th>Created Date</th>\n              <th>Created By</th>\n              <th class=\"text-center\">Action</th>\n            </tr>\n\n            <tr *ngFor=\"let item of sortedData\">\n              <td>{{item.collectionName}}</td>\n              <td>{{item.description}}</td>\n              <td>{{item.createdDate | date: 'dd/MM/yyyy'}}</td>\n              <td>\n                <p *ngIf=\"item.machine == null\">System</p>\n                <p *ngIf=\"item.machine != null\">Me</p>\n              </td>\n              <td class=\"text-center\">\n                <ng-container *ngIf=\"item.machine != null && item.machine.machineId != null && item.machine.machineId > 0\">\n                  <button mat-raised-button\n                          matTooltip=\"Edit Collection\"\n                          aria-label=\"Edit Collection\"\n                          (click)=\"viewCollection(item.collectionId)\">\n                          <i class=\"fas fa-edit\"></i>\n                  </button>\n\n                  <span class=\"vertical-separate-line\">&nbsp;</span>\n\n                  <button mat-raised-button\n                          matTooltip=\"Delete Collection\"\n                          aria-label=\"Delete Collection\"\n                          (click)=\"confirmDeleteCollection(item.collectionId)\">\n                    <i class=\"fas fa-trash-alt\"></i>\n                  </button>\n                </ng-container>\n              </td>\n            </tr>\n          </table>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n\n\n<ng-container *ngIf=\"dbItem != null\">\n  <pp-modal id=\"view-detail-collection\" class=\"modal view-detail-collection\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <h5 class=\"modal-title\">{{dbItem.collectionId > 0 ? 'Edit Collection':  'Add Collection'}}</h5>\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\" (click)=\"closeModal('view-detail-collection')\">\n          <span aria-hidden=\"true\">×</span>\n        </button>\n      </div>\n\n      <div class=\"modal-body\">\n        <form class=\"form form-horizontal form-detail\">\n          <div class=\"form-body\">\n            <div class=\"form-group row\">\n              <label class=\"col-md-3 label-control\">Collection Name</label>\n              <div class=\"col-md-8\">\n                <input type=\"text\" [(ngModel)]=\"dbItem.collectionName\" class=\"form-control\" [ngModelOptions]=\"{standalone: true}\">\n\n                <ng-container *ngIf=\"errorValidation != null && errorValidation['collectionName'] != null\">\n                  <span class=\"error-label\">{{errorValidation['collectionName']}}</span>\n                </ng-container>\n              </div>\n            </div>\n\n            <div class=\"form-group row\">\n              <label class=\"col-md-3 label-control\">Description</label>\n              <div class=\"col-md-8\">\n                <textarea [(ngModel)]=\"dbItem.description\" class=\"form-control\" [ngModelOptions]=\"{standalone: true}\"></textarea>\n              </div>\n            </div>\n          </div>\n          <input type=\"hidden\" [(ngModel)]=\"dbItem.collectionId\" [ngModelOptions]=\"{standalone: true}\">\n        </form>\n      </div>\n\n      <div class=\"modal-footer\">\n        <button type=\"button\" class=\"btn btn-default\" (click)=\"closeModal('view-detail-collection')\">Cancel</button>\n        <button type=\"button\" class=\"btn btn-primary\" (click)=\"updateOrSavingCollection()\">Save</button>\n      </div>\n    </div>\n  </pp-modal>\n</ng-container>\n\n\n\n<ng-container *ngIf=\"collectionId != null && collectionId > 0\">\n  <pp-modal id=\"confirm-remove-collection-model\" class=\"modal confirm-remove-collection-model\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <h5 class=\"modal-title\">Confirm</h5>\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\" (click)=\"closeModal('confirm-remove-collection-model')\">\n          <span aria-hidden=\"true\">×</span>\n        </button>\n      </div>\n\n      <div class=\"modal-body\">\n        Do you want to delete this collection ?\n      </div>\n\n      <div class=\"modal-footer\">\n        <button type=\"button\" class=\"btn btn-default\" (click)=\"closeModal('view-detail-collection')\">Cancel</button>\n        <button type=\"button\" class=\"btn btn-primary\" (click)=\"deleteCollection(collectionId)\">Ok</button>\n      </div>\n    </div>\n  </pp-modal>\n</ng-container>\n"
 
 /***/ }),
 
@@ -2963,7 +3186,7 @@ module.exports = "<div class=\"row\">\r\n  <div class=\"col-lg-12 col-md-12 col-
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".view-detail-collection .modal-dialog {\n  width: 800px !important;\n  max-width: 800px !important; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9zZXR0aW5nL2NvbGxlY3Rpb24vWDpcXHdzX2xlYXJuaW5nXFxjbGllbnR2aWV0cG93ZXIvc3JjXFxhcHBcXGNvbXBvbmVudHNcXHNldHRpbmdcXGNvbGxlY3Rpb25cXGNvbGxlY3Rpb24uY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFFSSx3QkFBdUI7RUFDdkIsNEJBQTJCLEVBQzVCIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50cy9zZXR0aW5nL2NvbGxlY3Rpb24vY29sbGVjdGlvbi5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi52aWV3LWRldGFpbC1jb2xsZWN0aW9ue1xyXG4gIC5tb2RhbC1kaWFsb2d7XHJcbiAgICB3aWR0aDogODAwcHggIWltcG9ydGFudDtcclxuICAgIG1heC13aWR0aDogODAwcHggIWltcG9ydGFudDtcclxuICB9XHJcbn1cclxuIl19 */"
+module.exports = ".view-detail-collection .modal-dialog {\n  width: 800px !important;\n  max-width: 800px !important; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9zZXR0aW5nL2NvbGxlY3Rpb24vRzpcXFdvcmtzcGFjZVxcY2xpZW50dmlldHBvd2VyL3NyY1xcYXBwXFxjb21wb25lbnRzXFxzZXR0aW5nXFxjb2xsZWN0aW9uXFxjb2xsZWN0aW9uLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBRUksd0JBQXVCO0VBQ3ZCLDRCQUEyQixFQUM1QiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvc2V0dGluZy9jb2xsZWN0aW9uL2NvbGxlY3Rpb24uY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIudmlldy1kZXRhaWwtY29sbGVjdGlvbntcclxuICAubW9kYWwtZGlhbG9ne1xyXG4gICAgd2lkdGg6IDgwMHB4ICFpbXBvcnRhbnQ7XHJcbiAgICBtYXgtd2lkdGg6IDgwMHB4ICFpbXBvcnRhbnQ7XHJcbiAgfVxyXG59XHJcbiJdfQ== */"
 
 /***/ }),
 
@@ -3125,7 +3348,7 @@ var CollectionComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"block-header\">\r\n  <h1>Colorant Manager</h1>\r\n</div>\r\n\r\n<div class=\"row\" ng-init=\"testInput='value'\">\r\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        List Colorant\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        <div class=\"table-responsive\">\r\n          <table class=\"table table-bordered\" matSort (matSortChange)=\"sortData($event)\">\r\n            <tr>\r\n              <th mat-sort-header=\"colourantCode\">Colourant Code</th>\r\n              <th mat-sort-header=\"colourantName\">Colourant Name</th>\r\n              <th mat-sort-header=\"density\">Density</th>\r\n              <th mat-sort-header=\"pricePerUnit\">Price Per Unit</th>\r\n              <th mat-sort-header=\"surcharge\">Surcharge</th>\r\n              <th>Color</th>\r\n              <th>Kind</th>\r\n            </tr>\r\n\r\n            <tr *ngFor=\"let colorant of sortedData\">\r\n              <td>{{colorant.colourantCode}}</td>\r\n              <td>{{colorant.colourantName}}</td>\r\n              <td>{{colorant.density}}</td>\r\n              <td>{{colorant.pricePerUnit}}</td>\r\n              <td>{{colorant.surcharge}}</td>\r\n              <td><span [ngStyle]=\"{'background': colorant.rbgHex, 'display': 'inline-block', 'width': '30px', 'height': '30px', 'border': '1px solid #333'}\"></span></td>\r\n              <td>{{colorant.kind}}</td>\r\n            </tr>\r\n          </table>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class=\"block-header\">\n  <h1>Colorant Manager</h1>\n</div>\n\n<div class=\"row\" ng-init=\"testInput='value'\">\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n    <div class=\"card\">\n      <div class=\"card-header\">\n        List Colorant\n      </div>\n\n      <div class=\"card-body\">\n        <div class=\"table-responsive\">\n          <table class=\"table table-bordered\" matSort (matSortChange)=\"sortData($event)\">\n            <tr>\n              <th mat-sort-header=\"colourantCode\">Colourant Code</th>\n              <th mat-sort-header=\"colourantName\">Colourant Name</th>\n              <th mat-sort-header=\"density\">Density</th>\n              <th mat-sort-header=\"pricePerUnit\">Price Per Unit</th>\n              <th mat-sort-header=\"surcharge\">Surcharge</th>\n              <th>Color</th>\n              <th>Kind</th>\n            </tr>\n\n            <tr *ngFor=\"let colorant of sortedData\">\n              <td>{{colorant.colourantCode}}</td>\n              <td>{{colorant.colourantName}}</td>\n              <td>{{colorant.density}}</td>\n              <td>{{colorant.pricePerUnit}}</td>\n              <td>{{colorant.surcharge}}</td>\n              <td><span [ngStyle]=\"{'background': colorant.rbgHex, 'display': 'inline-block', 'width': '30px', 'height': '30px', 'border': '1px solid #333'}\"></span></td>\n              <td>{{colorant.kind}}</td>\n            </tr>\n          </table>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -3136,7 +3359,7 @@ module.exports = "<div class=\"block-header\">\r\n  <h1>Colorant Manager</h1>\r\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".mat-form-field {\n  width: 100%; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9zZXR0aW5nL2NvbG9yYW50L1g6XFx3c19sZWFybmluZ1xcY2xpZW50dmlldHBvd2VyL3NyY1xcYXBwXFxjb21wb25lbnRzXFxzZXR0aW5nXFxjb2xvcmFudFxcY29sb3JhbnQuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxZQUFXLEVBQ1oiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL3NldHRpbmcvY29sb3JhbnQvY29sb3JhbnQuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubWF0LWZvcm0tZmllbGQge1xyXG4gIHdpZHRoOiAxMDAlO1xyXG59XHJcbiJdfQ== */"
+module.exports = ".mat-form-field {\n  width: 100%; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9zZXR0aW5nL2NvbG9yYW50L0c6XFxXb3Jrc3BhY2VcXGNsaWVudHZpZXRwb3dlci9zcmNcXGFwcFxcY29tcG9uZW50c1xcc2V0dGluZ1xcY29sb3JhbnRcXGNvbG9yYW50LmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsWUFBVyxFQUNaIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50cy9zZXR0aW5nL2NvbG9yYW50L2NvbG9yYW50LmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLm1hdC1mb3JtLWZpZWxkIHtcclxuICB3aWR0aDogMTAwJTtcclxufVxyXG4iXX0= */"
 
 /***/ }),
 
@@ -3407,7 +3630,7 @@ var CustomerComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"block-header\">\r\n  <h1>Product Manager</h1>\r\n</div>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header\">\r\n        List Product\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        <div class=\"table-responsive\">\r\n          <table class=\"table table-bordered\" matSort (matSortChange)=\"sortData($event)\">\r\n            <tr>\r\n              <th>#</th>\r\n              <th mat-sort-header=\"productCode\">Product Code</th>\r\n              <th mat-sort-header=\"productName\">Product Name</th>\r\n              <th mat-sort-header=\"createdDate\">Created Date</th>\r\n              <th mat-sort-header=\"createBy\">Created By</th>\r\n            </tr>\r\n\r\n            <ng-container *ngFor=\"let item of sortedData let i=index\">\r\n              <tr>\r\n                <td>\r\n                  <span *ngIf=\"currentProductViewer == item.productId\" (click)=\"showProductDetail(-1)\"><i class=\"fas fa-minus\"></i></span>\r\n                  <span *ngIf=\"currentProductViewer != item.productId\" (click)=\"showProductDetail(item.productId)\"><i class=\"fas fa-plus\"></i></span>\r\n                </td>\r\n                <td>{{item.productCode}}</td>\r\n                <td>{{item.productName}}</td>\r\n                <td>{{item.createdDate | date : 'dd/MM/yyyy'}}</td>\r\n                <td>\r\n                  <span *ngIf=\"item.createBy == null\">\r\n                    System\r\n                  </span>\r\n\r\n                  <span *ngIf=\"item.createBy != null\">\r\n                    Me\r\n                  </span>\r\n                </td>\r\n              </tr>\r\n\r\n              <tr *ngIf=\"currentProductViewer == item.productId\" selected class=\"product-detail-row\">\r\n                <td></td>\r\n                <td colspan=\"4\">\r\n                  <app-viewdetail [productId]=\"item.productId\"></app-viewdetail>\r\n                </td>\r\n              </tr>\r\n            </ng-container>\r\n          </table>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class=\"block-header\">\n  <h1>Product Manager</h1>\n</div>\n\n<div class=\"row\">\n  <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n    <div class=\"card\">\n      <div class=\"card-header\">\n        List Product\n      </div>\n\n      <div class=\"card-body\">\n        <div class=\"table-responsive\">\n          <table class=\"table table-bordered\" matSort (matSortChange)=\"sortData($event)\">\n            <tr>\n              <th>#</th>\n              <th mat-sort-header=\"productCode\">Product Code</th>\n              <th mat-sort-header=\"productName\">Product Name</th>\n              <th mat-sort-header=\"createdDate\">Created Date</th>\n              <th mat-sort-header=\"createBy\">Created By</th>\n            </tr>\n\n            <ng-container *ngFor=\"let item of sortedData let i=index\">\n              <tr>\n                <td>\n                  <span *ngIf=\"currentProductViewer == item.productId\" (click)=\"showProductDetail(-1)\"><i class=\"fas fa-minus\"></i></span>\n                  <span *ngIf=\"currentProductViewer != item.productId\" (click)=\"showProductDetail(item.productId)\"><i class=\"fas fa-plus\"></i></span>\n                </td>\n                <td>{{item.productCode}}</td>\n                <td>{{item.productName}}</td>\n                <td>{{item.createdDate | date : 'dd/MM/yyyy'}}</td>\n                <td>\n                  <span *ngIf=\"item.createBy == null\">\n                    System\n                  </span>\n\n                  <span *ngIf=\"item.createBy != null\">\n                    Me\n                  </span>\n                </td>\n              </tr>\n\n              <tr *ngIf=\"currentProductViewer == item.productId\" selected class=\"product-detail-row\">\n                <td></td>\n                <td colspan=\"4\">\n                  <app-viewdetail [productId]=\"item.productId\"></app-viewdetail>\n                </td>\n              </tr>\n            </ng-container>\n          </table>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -3515,7 +3738,7 @@ var ProductComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\r\n  productbase works!\r\n</p>\r\n"
+module.exports = "<p>\n  productbase works!\n</p>\n"
 
 /***/ }),
 
@@ -3578,7 +3801,7 @@ var ProductbaseComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\r\n  user works!\r\n</p>\r\n"
+module.exports = "<p>\n  user works!\n</p>\n"
 
 /***/ }),
 
@@ -3641,7 +3864,7 @@ var UserComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"pp-modal modal-dialog modal-dialog-centered\">\r\n  <ng-content></ng-content>\r\n</div>\r\n\r\n<div class=\"modal-backdrop fade show\"></div>\r\n"
+module.exports = "<div class=\"pp-modal modal-dialog modal-dialog-centered\">\n  <ng-content></ng-content>\n</div>\n\n<div class=\"modal-backdrop fade show\"></div>\n"
 
 /***/ }),
 
@@ -3744,7 +3967,7 @@ var ModalComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ng-container *ngIf=\"productBase != null\">\r\n  <div class=\"base-can-information\">\r\n    <div class=\"base-can-empty\">\r\n    <span class=\"base-can-background\">\r\n      <span class=\"base-can-volume\" [ngStyle]=\"{'background-color': productBase.rbgHex, 'height': '100%'}\">\r\n        <span class=\"can-base-info\">\r\n          <span class=\"base-type\">Base : {{productBase.base.baseCode}}</span>\r\n          <span class=\"base-volume\">{{canSize + \" Liter\" }}</span>\r\n          <span class=\"base-name\">{{collection.collectionName}}</span>\r\n        </span>\r\n      </span>\r\n    </span>\r\n    </div>\r\n  </div>\r\n</ng-container>\r\n"
+module.exports = "<ng-container *ngIf=\"productBase != null\">\n  <div class=\"base-can-information\">\n    <div class=\"base-can-empty\">\n    <span class=\"base-can-background\">\n      <span class=\"base-can-volume\" [ngStyle]=\"{'background-color': productBase.rbgHex, 'height': '100%'}\">\n        <span class=\"can-base-info\">\n          <span class=\"base-type\">Base : {{productBase.base.baseCode}}</span>\n          <span class=\"base-volume\">{{canSize + \" Liter\" }}</span>\n          <span class=\"base-name\">{{collection.collectionName}}</span>\n        </span>\n      </span>\n    </span>\n    </div>\n  </div>\n</ng-container>\n"
 
 /***/ }),
 
@@ -3755,7 +3978,7 @@ module.exports = "<ng-container *ngIf=\"productBase != null\">\r\n  <div class=\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".base-can-information {\n  text-align: center; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZGlyZWN0aW9ucy9wcm9kdWN0L2Jhc2UtY2FuL1g6XFx3c19sZWFybmluZ1xcY2xpZW50dmlldHBvd2VyL3NyY1xcYXBwXFxkaXJlY3Rpb25zXFxwcm9kdWN0XFxiYXNlLWNhblxcYmFzZS1jYW4uY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxtQkFBa0IsRUFDbkIiLCJmaWxlIjoic3JjL2FwcC9kaXJlY3Rpb25zL3Byb2R1Y3QvYmFzZS1jYW4vYmFzZS1jYW4uY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuYmFzZS1jYW4taW5mb3JtYXRpb257XHJcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG59XHJcbiJdfQ== */"
+module.exports = ".base-can-information {\n  text-align: center; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZGlyZWN0aW9ucy9wcm9kdWN0L2Jhc2UtY2FuL0c6XFxXb3Jrc3BhY2VcXGNsaWVudHZpZXRwb3dlci9zcmNcXGFwcFxcZGlyZWN0aW9uc1xccHJvZHVjdFxcYmFzZS1jYW5cXGJhc2UtY2FuLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsbUJBQWtCLEVBQ25CIiwiZmlsZSI6InNyYy9hcHAvZGlyZWN0aW9ucy9wcm9kdWN0L2Jhc2UtY2FuL2Jhc2UtY2FuLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmJhc2UtY2FuLWluZm9ybWF0aW9ue1xyXG4gIHRleHQtYWxpZ246IGNlbnRlcjtcclxufVxyXG4iXX0= */"
 
 /***/ }),
 
@@ -3823,7 +4046,7 @@ var BaseCanComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ng-container *ngIf=\"listFormulaColorant != null\">\r\n  <div class=\"table-responsive\">\r\n    <table class=\"table table-bordered\" >\r\n      <tr>\r\n        <th style=\"width: 30%\">Component</th>\r\n        <th style=\"width: 20%\">ml</th>\r\n        <th style=\"width: 50%\">Color\r\n      </tr>\r\n\r\n      <ng-container *ngFor=\"let colorantItem of listFormulaColorant\">\r\n        <tr *ngIf=\"colorantItem.quantity != null && colorantItem.quantity > 0\">\r\n          <td>{{colorantItem.colourant.colourantName}}</td>\r\n          <td>{{roundNumber((colorantItem.quantity / baseOnCan) * canSize)}}</td>\r\n          <td>\r\n          <span class=\"color-bar\" >\r\n            <span class=\"color-select\" [ngStyle]=\"{'background': colorantItem.colourant.rbgHex, 'width': (colorantItem.quantity / maxColorQuantity) * 100 + '%'}\"></span>\r\n          </span>\r\n          </td>\r\n        </tr>\r\n      </ng-container>\r\n    </table>\r\n  </div>\r\n</ng-container>\r\n\r\n"
+module.exports = "<ng-container *ngIf=\"listFormulaColorant != null\">\n  <div class=\"table-responsive\">\n    <table class=\"table table-bordered\" >\n      <tr>\n        <th style=\"width: 30%\">Component</th>\n        <th style=\"width: 20%\">ml</th>\n        <th style=\"width: 50%\">Color\n      </tr>\n\n      <ng-container *ngFor=\"let colorantItem of listFormulaColorant\">\n        <tr *ngIf=\"colorantItem.quantity != null && colorantItem.quantity > 0\">\n          <td>{{colorantItem.colourant.colourantName}}</td>\n          <td>{{roundNumber((colorantItem.quantity / baseOnCan) * canSize)}}</td>\n          <td>\n          <span class=\"color-bar\" >\n            <span class=\"color-select\" [ngStyle]=\"{'background': colorantItem.colourant.rbgHex, 'width': (colorantItem.quantity / maxColorQuantity) * 100 + '%'}\"></span>\n          </span>\n          </td>\n        </tr>\n      </ng-container>\n    </table>\n  </div>\n</ng-container>\n\n"
 
 /***/ }),
 
@@ -3834,7 +4057,7 @@ module.exports = "<ng-container *ngIf=\"listFormulaColorant != null\">\r\n  <div
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".color-bar {\n  width: 100%;\n  display: inline-block;\n  position: relative;\n  height: 1em; }\n  .color-bar .color-select {\n    display: inline-block;\n    position: absolute;\n    top: 0px;\n    left: 0px;\n    bottom: 0px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZGlyZWN0aW9ucy9wcm9kdWN0L3RhYmxlY29sb3VyYW50L1g6XFx3c19sZWFybmluZ1xcY2xpZW50dmlldHBvd2VyL3NyY1xcYXBwXFxkaXJlY3Rpb25zXFxwcm9kdWN0XFx0YWJsZWNvbG91cmFudFxcdGFibGUtY29sb3VyYW50cy5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLFlBQVc7RUFDWCxzQkFBcUI7RUFDckIsbUJBQWtCO0VBQ2xCLFlBQVcsRUFTWjtFQWJEO0lBT0ksc0JBQXFCO0lBQ3JCLG1CQUFrQjtJQUNsQixTQUFRO0lBQ1IsVUFBUztJQUNULFlBQVcsRUFDWiIsImZpbGUiOiJzcmMvYXBwL2RpcmVjdGlvbnMvcHJvZHVjdC90YWJsZWNvbG91cmFudC90YWJsZS1jb2xvdXJhbnRzLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmNvbG9yLWJhcntcclxuICB3aWR0aDogMTAwJTtcclxuICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XHJcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG4gIGhlaWdodDogMWVtO1xyXG5cclxuICAuY29sb3Itc2VsZWN0e1xyXG4gICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgdG9wOiAwcHg7XHJcbiAgICBsZWZ0OiAwcHg7XHJcbiAgICBib3R0b206IDBweDtcclxuICB9XHJcbn1cclxuIl19 */"
+module.exports = ".color-bar {\n  width: 100%;\n  display: inline-block;\n  position: relative;\n  height: 1em; }\n  .color-bar .color-select {\n    display: inline-block;\n    position: absolute;\n    top: 0px;\n    left: 0px;\n    bottom: 0px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZGlyZWN0aW9ucy9wcm9kdWN0L3RhYmxlY29sb3VyYW50L0c6XFxXb3Jrc3BhY2VcXGNsaWVudHZpZXRwb3dlci9zcmNcXGFwcFxcZGlyZWN0aW9uc1xccHJvZHVjdFxcdGFibGVjb2xvdXJhbnRcXHRhYmxlLWNvbG91cmFudHMuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxZQUFXO0VBQ1gsc0JBQXFCO0VBQ3JCLG1CQUFrQjtFQUNsQixZQUFXLEVBU1o7RUFiRDtJQU9JLHNCQUFxQjtJQUNyQixtQkFBa0I7SUFDbEIsU0FBUTtJQUNSLFVBQVM7SUFDVCxZQUFXLEVBQ1oiLCJmaWxlIjoic3JjL2FwcC9kaXJlY3Rpb25zL3Byb2R1Y3QvdGFibGVjb2xvdXJhbnQvdGFibGUtY29sb3VyYW50cy5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jb2xvci1iYXJ7XHJcbiAgd2lkdGg6IDEwMCU7XHJcbiAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuICBoZWlnaHQ6IDFlbTtcclxuXHJcbiAgLmNvbG9yLXNlbGVjdHtcclxuICAgIGRpc3BsYXk6IGlubGluZS1ibG9jaztcclxuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgIHRvcDogMHB4O1xyXG4gICAgbGVmdDogMHB4O1xyXG4gICAgYm90dG9tOiAwcHg7XHJcbiAgfVxyXG59XHJcbiJdfQ== */"
 
 /***/ }),
 
@@ -3924,7 +4147,7 @@ var TableColourantsComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"table-responsive\">\r\n  <table class=\"table table-borderless\">\r\n    <thead>\r\n    <tr>\r\n      <th>Base</th>\r\n      <th>Density</th>\r\n      <th>Color</th>\r\n    </tr>\r\n    </thead>\r\n    <tr *ngFor=\"let item of listProductBaseCan let i=index\">\r\n      <td>{{item.base.baseName}}</td>\r\n      <td>{{item.density}}</td>\r\n      <td>\r\n        <span [ngStyle]=\"{'background': item.rbgHex, 'display': 'inline-block', 'width': '30px', 'height': '30px', 'border': '1px solid #333'}\"></span>\r\n      </td>\r\n    </tr>\r\n  </table>\r\n</div>\r\n"
+module.exports = "<div class=\"table-responsive\">\n  <table class=\"table table-borderless\">\n    <thead>\n    <tr>\n      <th>Base</th>\n      <th>Density</th>\n      <th>Color</th>\n    </tr>\n    </thead>\n    <tr *ngFor=\"let item of listProductBaseCan let i=index\">\n      <td>{{item.base.baseName}}</td>\n      <td>{{item.density}}</td>\n      <td>\n        <span [ngStyle]=\"{'background': item.rbgHex, 'display': 'inline-block', 'width': '30px', 'height': '30px', 'border': '1px solid #333'}\"></span>\n      </td>\n    </tr>\n  </table>\n</div>\n"
 
 /***/ }),
 
@@ -4017,6 +4240,41 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (undefined && undefined.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
 
 var FileService = /** @class */ (function () {
     function FileService() {
@@ -4041,6 +4299,19 @@ var FileService = /** @class */ (function () {
         // });
         this.ipc.send('saveFile', { data: 'test' });
     };
+    FileService.prototype.getFiles = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, new Promise(function (resolve, reject) {
+                        _this.ipc.once("getFilesResponse", function (event, arg) {
+                            resolve(arg);
+                        });
+                        _this.ipc.send('readFile');
+                    })];
+            });
+        });
+    };
     FileService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
             providedIn: 'root'
@@ -4048,6 +4319,71 @@ var FileService = /** @class */ (function () {
         __metadata("design:paramtypes", [])
     ], FileService);
     return FileService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/global.ts":
+/*!***************************!*\
+  !*** ./src/app/global.ts ***!
+  \***************************/
+/*! exports provided: GlobalVariable */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GlobalVariable", function() { return GlobalVariable; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var src_environments_environment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/environments/environment */ "./src/environments/environment.ts");
+/* harmony import */ var _file_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./file.service */ "./src/app/file.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+// const fs = require('fs');
+
+
+var GlobalVariable = /** @class */ (function () {
+    function GlobalVariable(fileService) {
+        this.fileService = fileService;
+    }
+    GlobalVariable.prototype.getBaseApiUrl = function () {
+        var test = true;
+        var res = '';
+        if (test) {
+            res = src_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].settings.serverendpoint;
+        }
+        else {
+            if (this.BASE_API_URL) {
+                res = this.BASE_API_URL;
+            }
+        }
+        return res;
+    };
+    GlobalVariable.prototype.getEndpoint = function () {
+        var me = this;
+        this.fileService.getFiles().then(function (data) {
+            var d = JSON.parse(data.toString());
+            if (d.endPoint) {
+                me.BASE_API_URL = d.endPoint;
+            }
+        });
+    };
+    GlobalVariable = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+            providedIn: 'root'
+        }),
+        __metadata("design:paramtypes", [_file_service__WEBPACK_IMPORTED_MODULE_2__["FileService"]])
+    ], GlobalVariable);
+    return GlobalVariable;
 }());
 
 
@@ -4374,6 +4710,106 @@ var ColorantModel = /** @class */ (function () {
         configurable: true
     });
     return ColorantModel;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/models/company.model.ts":
+/*!*****************************************!*\
+  !*** ./src/app/models/company.model.ts ***!
+  \*****************************************/
+/*! exports provided: CompanyModel */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CompanyModel", function() { return CompanyModel; });
+var CompanyModel = /** @class */ (function () {
+    function CompanyModel() {
+    }
+    Object.defineProperty(CompanyModel.prototype, "companyId", {
+        get: function () {
+            return this._companyId;
+        },
+        set: function (value) {
+            this._companyId = value;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(CompanyModel.prototype, "name", {
+        get: function () {
+            return this._name;
+        },
+        set: function (value) {
+            this._name = value;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(CompanyModel.prototype, "phone", {
+        get: function () {
+            return this._phone;
+        },
+        set: function (value) {
+            this._phone = value;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(CompanyModel.prototype, "website", {
+        get: function () {
+            return this._website;
+        },
+        set: function (value) {
+            this._website = value;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(CompanyModel.prototype, "email", {
+        get: function () {
+            return this._email;
+        },
+        set: function (value) {
+            this._email = value;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(CompanyModel.prototype, "address", {
+        get: function () {
+            return this._address;
+        },
+        set: function (value) {
+            this._address = value;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(CompanyModel.prototype, "city", {
+        get: function () {
+            return this._city;
+        },
+        set: function (value) {
+            this._city = value;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(CompanyModel.prototype, "code", {
+        get: function () {
+            return this._code;
+        },
+        set: function (value) {
+            this._code = value;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    return CompanyModel;
 }());
 
 
@@ -5651,6 +6087,16 @@ var UserModel = /** @class */ (function () {
         enumerable: true,
         configurable: true
     });
+    Object.defineProperty(UserModel.prototype, "company", {
+        get: function () {
+            return this._company;
+        },
+        set: function (value) {
+            this._company = value;
+        },
+        enumerable: true,
+        configurable: true
+    });
     return UserModel;
 }());
 
@@ -5693,6 +6139,16 @@ var MachineColourantModel = /** @class */ (function () {
         },
         set: function (value) {
             this._quantity = value;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(MachineColourantModel.prototype, "refillFactor", {
+        get: function () {
+            return this._refillFactor;
+        },
+        set: function (value) {
+            this._refillFactor = value;
         },
         enumerable: true,
         configurable: true
@@ -5742,10 +6198,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BaseService", function() { return BaseService; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _shared_http_services_http_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../shared/http/services/http.service */ "./src/app/shared/http/services/http.service.ts");
-/* harmony import */ var src_environments_environment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/environments/environment */ "./src/environments/environment.ts");
-/* harmony import */ var rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/internal/operators */ "./node_modules/rxjs/internal/operators/index.js");
-/* harmony import */ var rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../utils/convert-models-utils */ "./src/app/utils/convert-models-utils.ts");
+/* harmony import */ var rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/internal/operators */ "./node_modules/rxjs/internal/operators/index.js");
+/* harmony import */ var rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../utils/convert-models-utils */ "./src/app/utils/convert-models-utils.ts");
+/* harmony import */ var _global__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../global */ "./src/app/global.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -5761,26 +6217,27 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 var BaseService = /** @class */ (function () {
-    function BaseService(http) {
+    function BaseService(http, globalVariable) {
         this.http = http;
+        this.globalVariable = globalVariable;
     }
     BaseService.prototype.getListBaseFromServer = function () {
-        return this.http.get(src_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].settings.serverendpoint + 'base/getAll').pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (data) {
+        return this.http.get(this.globalVariable.getBaseApiUrl() + 'base/getAll').pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (data) {
             var listBases = [];
             if (data) {
                 for (var _i = 0, data_1 = data; _i < data_1.length; _i++) {
                     var base = data_1[_i];
-                    listBases.push(_utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_4__["default"].convertToBaseModel(base));
+                    listBases.push(_utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_3__["default"].convertToBaseModel(base));
                 }
             }
             return listBases;
-        }), Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(function (e) {
+        }), Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])(function (e) {
             return [];
         }));
     };
     BaseService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({ providedIn: 'root' }),
-        __metadata("design:paramtypes", [_shared_http_services_http_service__WEBPACK_IMPORTED_MODULE_1__["HttpService"]])
+        __metadata("design:paramtypes", [_shared_http_services_http_service__WEBPACK_IMPORTED_MODULE_1__["HttpService"], _global__WEBPACK_IMPORTED_MODULE_4__["GlobalVariable"]])
     ], BaseService);
     return BaseService;
 }());
@@ -5856,12 +6313,12 @@ var ModalService = /** @class */ (function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CollectionService", function() { return CollectionService; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../environments/environment */ "./src/environments/environment.ts");
-/* harmony import */ var rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/internal/operators */ "./node_modules/rxjs/internal/operators/index.js");
-/* harmony import */ var rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _shared_http_services_http_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../shared/http/services/http.service */ "./src/app/shared/http/services/http.service.ts");
-/* harmony import */ var _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../utils/convert-models-utils */ "./src/app/utils/convert-models-utils.ts");
-/* harmony import */ var _store_store_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../store/store.service */ "./src/app/services/store/store.service.ts");
+/* harmony import */ var rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs/internal/operators */ "./node_modules/rxjs/internal/operators/index.js");
+/* harmony import */ var rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _shared_http_services_http_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../shared/http/services/http.service */ "./src/app/shared/http/services/http.service.ts");
+/* harmony import */ var _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../utils/convert-models-utils */ "./src/app/utils/convert-models-utils.ts");
+/* harmony import */ var _store_store_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../store/store.service */ "./src/app/services/store/store.service.ts");
+/* harmony import */ var _global__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../global */ "./src/app/global.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -5878,27 +6335,28 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 var CollectionService = /** @class */ (function () {
-    function CollectionService(http, storeService) {
+    function CollectionService(http, storeService, globalVariable) {
         this.http = http;
         this.storeService = storeService;
+        this.globalVariable = globalVariable;
     }
     CollectionService.prototype.getListItems = function () {
-        return this.http.get(_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].settings.serverendpoint + 'collection/getAll').pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (data) {
+        return this.http.get(this.globalVariable.getBaseApiUrl() + 'collection/getAll').pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_1__["map"])(function (data) {
             var listItems = [];
             if (data) {
                 for (var _i = 0, data_1 = data; _i < data_1.length; _i++) {
                     var collection = data_1[_i];
-                    listItems.push(_utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_4__["default"].convertCollectionModel(collection));
+                    listItems.push(_utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_3__["default"].convertCollectionModel(collection));
                 }
             }
             return listItems;
-        }), Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])(function (e) {
+        }), Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_1__["catchError"])(function (e) {
             return [];
         }));
     };
     CollectionService.prototype.findById = function (collectionId) {
-        return this.http.get(_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].settings.serverendpoint + 'collection/findById/' + collectionId).pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (data) {
-            return _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_4__["default"].convertCollectionModel(data);
+        return this.http.get(this.globalVariable.getBaseApiUrl() + 'collection/findById/' + collectionId).pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_1__["map"])(function (data) {
+            return _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_3__["default"].convertCollectionModel(data);
         }));
     };
     CollectionService.prototype.updateOrSavingCollection = function (collection) {
@@ -5909,20 +6367,20 @@ var CollectionService = /** @class */ (function () {
             description: collection.description,
             machine: { machineId: machine.machineId }
         };
-        return this.http.post(_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].settings.serverendpoint + 'collection/save', dt).pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (data) {
-            return _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_4__["default"].convertToMachineModel(data);
+        return this.http.post(this.globalVariable.getBaseApiUrl() + 'collection/save', dt).pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_1__["map"])(function (data) {
+            return _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_3__["default"].convertToMachineModel(data);
         }));
     };
     CollectionService.prototype.deleteCollection = function (collectionId) {
-        return this.http.get(_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].settings.serverendpoint + 'collection/delete/' + collectionId).pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (data) {
-            return _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_4__["default"].convertToResponseMessageModel(data);
+        return this.http.get(this.globalVariable.getBaseApiUrl() + 'collection/delete/' + collectionId).pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_1__["map"])(function (data) {
+            return _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_3__["default"].convertToResponseMessageModel(data);
         }));
     };
     CollectionService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
             providedIn: 'root'
         }),
-        __metadata("design:paramtypes", [_shared_http_services_http_service__WEBPACK_IMPORTED_MODULE_3__["HttpService"], _store_store_service__WEBPACK_IMPORTED_MODULE_5__["StoreService"]])
+        __metadata("design:paramtypes", [_shared_http_services_http_service__WEBPACK_IMPORTED_MODULE_2__["HttpService"], _store_store_service__WEBPACK_IMPORTED_MODULE_4__["StoreService"], _global__WEBPACK_IMPORTED_MODULE_5__["GlobalVariable"]])
     ], CollectionService);
     return CollectionService;
 }());
@@ -5942,11 +6400,11 @@ var CollectionService = /** @class */ (function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ColourantService", function() { return ColourantService; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../environments/environment */ "./src/environments/environment.ts");
-/* harmony import */ var rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/internal/operators */ "./node_modules/rxjs/internal/operators/index.js");
-/* harmony import */ var rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _models_colorant__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../models/colorant */ "./src/app/models/colorant.ts");
-/* harmony import */ var _shared_http_services_http_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../shared/http/services/http.service */ "./src/app/shared/http/services/http.service.ts");
+/* harmony import */ var rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs/internal/operators */ "./node_modules/rxjs/internal/operators/index.js");
+/* harmony import */ var rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _models_colorant__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../models/colorant */ "./src/app/models/colorant.ts");
+/* harmony import */ var _shared_http_services_http_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../shared/http/services/http.service */ "./src/app/shared/http/services/http.service.ts");
+/* harmony import */ var _global__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../global */ "./src/app/global.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -5962,8 +6420,9 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 var ColourantService = /** @class */ (function () {
-    function ColourantService(http) {
+    function ColourantService(http, globalVariable) {
         this.http = http;
+        this.globalVariable = globalVariable;
     }
     ColourantService.prototype.search = function (code, name) {
         return this.getListItems();
@@ -5974,7 +6433,7 @@ var ColourantService = /** @class */ (function () {
     };
     ColourantService.prototype.getListItems = function () {
         var _this = this;
-        return this.http.get(_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].settings.serverendpoint + 'colourant/getAll').pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (data) {
+        return this.http.get(this.globalVariable.getBaseApiUrl() + 'colourant/getAll').pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_1__["map"])(function (data) {
             var listColourant = [];
             if (data) {
                 for (var _i = 0, data_1 = data; _i < data_1.length; _i++) {
@@ -5983,12 +6442,12 @@ var ColourantService = /** @class */ (function () {
                 }
             }
             return listColourant;
-        }), Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])(function (e) {
+        }), Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_1__["catchError"])(function (e) {
             return [];
         }));
     };
     ColourantService.prototype.convertColourantToDTO = function (object) {
-        var colourantModel = new _models_colorant__WEBPACK_IMPORTED_MODULE_3__["ColorantModel"]();
+        var colourantModel = new _models_colorant__WEBPACK_IMPORTED_MODULE_2__["ColorantModel"]();
         colourantModel.colourantId = object.colourantId;
         colourantModel.colourantCode = object.colourantCode;
         colourantModel.colourantName = object.colourantName;
@@ -6003,7 +6462,7 @@ var ColourantService = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
             providedIn: 'root'
         }),
-        __metadata("design:paramtypes", [_shared_http_services_http_service__WEBPACK_IMPORTED_MODULE_4__["HttpService"]])
+        __metadata("design:paramtypes", [_shared_http_services_http_service__WEBPACK_IMPORTED_MODULE_3__["HttpService"], _global__WEBPACK_IMPORTED_MODULE_4__["GlobalVariable"]])
     ], ColourantService);
     return ColourantService;
 }());
@@ -6023,12 +6482,12 @@ var ColourantService = /** @class */ (function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CustomerService", function() { return CustomerService; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../environments/environment */ "./src/environments/environment.ts");
-/* harmony import */ var rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/internal/operators */ "./node_modules/rxjs/internal/operators/index.js");
-/* harmony import */ var rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _shared_http_services_http_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../shared/http/services/http.service */ "./src/app/shared/http/services/http.service.ts");
-/* harmony import */ var _store_store_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../store/store.service */ "./src/app/services/store/store.service.ts");
-/* harmony import */ var _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../utils/convert-models-utils */ "./src/app/utils/convert-models-utils.ts");
+/* harmony import */ var rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs/internal/operators */ "./node_modules/rxjs/internal/operators/index.js");
+/* harmony import */ var rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _shared_http_services_http_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../shared/http/services/http.service */ "./src/app/shared/http/services/http.service.ts");
+/* harmony import */ var _store_store_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../store/store.service */ "./src/app/services/store/store.service.ts");
+/* harmony import */ var _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../utils/convert-models-utils */ "./src/app/utils/convert-models-utils.ts");
+/* harmony import */ var _global__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../global */ "./src/app/global.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -6045,32 +6504,33 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 var CustomerService = /** @class */ (function () {
-    function CustomerService(http, storeService) {
+    function CustomerService(http, storeService, globalVariable) {
         this.http = http;
         this.storeService = storeService;
+        this.globalVariable = globalVariable;
     }
     CustomerService.prototype.findAll = function () {
         var machine = this.storeService.getMachineData();
         if (machine != null && machine.machineId > 0) {
-            return this.http.get(_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].settings.serverendpoint + 'customer/findAll/' + machine.machineId).pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (data) {
+            return this.http.get(this.globalVariable.getBaseApiUrl() + 'customer/findAll/' + machine.machineId).pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_1__["map"])(function (data) {
                 var listCustomer = [];
                 if (data) {
                     for (var _i = 0, data_1 = data; _i < data_1.length; _i++) {
                         var customer = data_1[_i];
-                        listCustomer.push(_utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_5__["default"].convertToCustomerModel(customer));
+                        listCustomer.push(_utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_4__["default"].convertToCustomerModel(customer));
                     }
                 }
                 return listCustomer;
-            }), Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])(function (e) {
+            }), Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_1__["catchError"])(function (e) {
                 return [];
             }));
         }
     };
     CustomerService.prototype.saveOrUpdate = function (dbItem) {
         var machine = this.storeService.getMachineData();
-        var dt = _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_5__["default"].convertToCustomerDBItem(dbItem, machine);
-        return this.http.post(_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].settings.serverendpoint + 'customer/save', dt).pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (data) {
-            return _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_5__["default"].convertToMachineModel(data);
+        var dt = _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_4__["default"].convertToCustomerDBItem(dbItem, machine);
+        return this.http.post(this.globalVariable.getBaseApiUrl() + 'customer/save', dt).pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_1__["map"])(function (data) {
+            return _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_4__["default"].convertToMachineModel(data);
         }));
     };
     CustomerService.prototype.deleteCustomer = function (customerId) {
@@ -6079,16 +6539,16 @@ var CustomerService = /** @class */ (function () {
             customerId: customerId,
             machine: { machineId: machine.machineId }
         };
-        return this.http.post(_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].settings.serverendpoint + 'customer/delete', dt).pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (data) {
+        return this.http.post(this.globalVariable.getBaseApiUrl() + 'customer/delete', dt).pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_1__["map"])(function (data) {
             console.log(data);
-            return _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_5__["default"].convertToResponseMessageModel(data);
+            return _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_4__["default"].convertToResponseMessageModel(data);
         }));
     };
     CustomerService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
             providedIn: 'root'
         }),
-        __metadata("design:paramtypes", [_shared_http_services_http_service__WEBPACK_IMPORTED_MODULE_3__["HttpService"], _store_store_service__WEBPACK_IMPORTED_MODULE_4__["StoreService"]])
+        __metadata("design:paramtypes", [_shared_http_services_http_service__WEBPACK_IMPORTED_MODULE_2__["HttpService"], _store_store_service__WEBPACK_IMPORTED_MODULE_3__["StoreService"], _global__WEBPACK_IMPORTED_MODULE_5__["GlobalVariable"]])
     ], CustomerService);
     return CustomerService;
 }());
@@ -6300,11 +6760,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FormulaService", function() { return FormulaService; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _shared_http_services_http_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../shared/http/services/http.service */ "./src/app/shared/http/services/http.service.ts");
-/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../environments/environment */ "./src/environments/environment.ts");
-/* harmony import */ var rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/internal/operators */ "./node_modules/rxjs/internal/operators/index.js");
-/* harmony import */ var rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../utils/convert-models-utils */ "./src/app/utils/convert-models-utils.ts");
-/* harmony import */ var _store_store_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../store/store.service */ "./src/app/services/store/store.service.ts");
+/* harmony import */ var rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/internal/operators */ "./node_modules/rxjs/internal/operators/index.js");
+/* harmony import */ var rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../utils/convert-models-utils */ "./src/app/utils/convert-models-utils.ts");
+/* harmony import */ var _store_store_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../store/store.service */ "./src/app/services/store/store.service.ts");
+/* harmony import */ var _global__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../global */ "./src/app/global.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -6321,9 +6781,10 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 var FormulaService = /** @class */ (function () {
-    function FormulaService(http, storeService) {
+    function FormulaService(http, storeService, globalVariable) {
         this.http = http;
         this.storeService = storeService;
+        this.globalVariable = globalVariable;
         this.listFormula = [];
         this.listFormulaProductBase = [];
         this.fetchData();
@@ -6334,48 +6795,48 @@ var FormulaService = /** @class */ (function () {
     };
     FormulaService.prototype.getAllFormulaProductBase = function () {
         var _this = this;
-        return this.http.get(_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].settings.serverendpoint + 'formula_product_base/getAll').pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (data) {
+        return this.http.get(this.globalVariable.getBaseApiUrl() + 'formula_product_base/getAll').pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (data) {
             var listFormulaProductBase = [];
             if (data) {
                 for (var _i = 0, data_1 = data; _i < data_1.length; _i++) {
                     var fpb = data_1[_i];
-                    listFormulaProductBase.push(_utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_4__["default"].convertFormulaProductBaseModel(fpb));
+                    listFormulaProductBase.push(_utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_3__["default"].convertFormulaProductBaseModel(fpb));
                 }
             }
             _this.listFormulaProductBase = listFormulaProductBase;
             return listFormulaProductBase;
-        }), Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(function (e) {
+        }), Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])(function (e) {
             return [];
         }));
     };
     FormulaService.prototype.getALl = function () {
         var _this = this;
-        return this.http.get(_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].settings.serverendpoint + 'formula/getAll').pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (data) {
+        return this.http.get(this.globalVariable.getBaseApiUrl() + 'formula/getAll').pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (data) {
             var result = [];
             if (data) {
                 for (var _i = 0, data_2 = data; _i < data_2.length; _i++) {
                     var formula = data_2[_i];
-                    result.push(_utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_4__["default"].convertToFormulaModel(formula));
+                    result.push(_utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_3__["default"].convertToFormulaModel(formula));
                 }
             }
             _this.listFormula = result;
             return result;
-        }), Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(function (e) {
+        }), Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])(function (e) {
             return [];
         }));
     };
     FormulaService.prototype.findAllByCustomer = function () {
         var machine = this.storeService.getMachineData();
-        return this.http.get(_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].settings.serverendpoint + 'formula-customer/getAll/' + machine.machineId).pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (data) {
+        return this.http.get(this.globalVariable.getBaseApiUrl() + 'formula-customer/getAll/' + machine.machineId).pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (data) {
             var result = [];
             if (data) {
                 for (var _i = 0, data_3 = data; _i < data_3.length; _i++) {
                     var formula = data_3[_i];
-                    result.push(_utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_4__["default"].convertToFormulaCustomerModel(formula));
+                    result.push(_utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_3__["default"].convertToFormulaCustomerModel(formula));
                 }
             }
             return result;
-        }), Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(function (e) {
+        }), Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])(function (e) {
             return [];
         }));
     };
@@ -6412,41 +6873,41 @@ var FormulaService = /** @class */ (function () {
         }
     };
     FormulaService.prototype.getListColorantOfFormula = function (formulaId) {
-        return this.http.get(_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].settings.serverendpoint + 'formula/getColourants/' + formulaId).pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (data) {
+        return this.http.get(this.globalVariable.getBaseApiUrl() + 'formula/getColourants/' + formulaId).pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (data) {
             var result = [];
             if (data) {
                 for (var _i = 0, data_4 = data; _i < data_4.length; _i++) {
                     var item = data_4[_i];
-                    result.push(_utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_4__["default"].convertToFormulaColourantModel(item));
+                    result.push(_utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_3__["default"].convertToFormulaColourantModel(item));
                 }
             }
             return result;
-        }), Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(function (e) {
+        }), Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])(function (e) {
             return [];
         }));
     };
     FormulaService.prototype.getListProductBaseCan = function (productBaseId) {
-        return this.http.get(_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].settings.serverendpoint + 'product_base_can/findById/' + productBaseId).pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (data) {
+        return this.http.get(this.globalVariable.getBaseApiUrl() + 'product_base_can/findById/' + productBaseId).pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (data) {
             var result = [];
             if (data) {
                 for (var _i = 0, data_5 = data; _i < data_5.length; _i++) {
                     var item = data_5[_i];
-                    result.push(_utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_4__["default"].convertToProductBaseCanModel(item));
+                    result.push(_utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_3__["default"].convertToProductBaseCanModel(item));
                 }
             }
             return result;
-        }), Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(function (e) {
+        }), Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])(function (e) {
             return [];
         }));
     };
     FormulaService.prototype.findFormulaProductBaseById = function (formulaProductBaseId) {
-        return this.http.get(_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].settings.serverendpoint + 'formula_product_base/findById/' + formulaProductBaseId).pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (data) {
-            return _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_4__["default"].convertToFormulaProductBaseModel(data);
+        return this.http.get(this.globalVariable.getBaseApiUrl() + 'formula_product_base/findById/' + formulaProductBaseId).pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (data) {
+            return _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_3__["default"].convertToFormulaProductBaseModel(data);
         }));
     };
     FormulaService.prototype.saveOrUpdateFormulaData = function (formulaProductBaseId, formula, productBase, listColourants, listCustomerSelected) {
-        var savingItem = _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_4__["default"].convertToSavingFormulaProductBaseDBItem(formulaProductBaseId, formula, productBase, this.storeService.getMachineData(), listColourants, listCustomerSelected);
-        return this.http.post(_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].settings.serverendpoint + 'machine_formula/saveOrUpdate', savingItem).pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (data) {
+        var savingItem = _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_3__["default"].convertToSavingFormulaProductBaseDBItem(formulaProductBaseId, formula, productBase, this.storeService.getMachineData(), listColourants, listCustomerSelected);
+        return this.http.post(this.globalVariable.getBaseApiUrl() + 'machine_formula/saveOrUpdate', savingItem).pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (data) {
             console.log(data);
             return data;
         }));
@@ -6455,7 +6916,7 @@ var FormulaService = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
             providedIn: 'root'
         }),
-        __metadata("design:paramtypes", [_shared_http_services_http_service__WEBPACK_IMPORTED_MODULE_1__["HttpService"], _store_store_service__WEBPACK_IMPORTED_MODULE_5__["StoreService"]])
+        __metadata("design:paramtypes", [_shared_http_services_http_service__WEBPACK_IMPORTED_MODULE_1__["HttpService"], _store_store_service__WEBPACK_IMPORTED_MODULE_4__["StoreService"], _global__WEBPACK_IMPORTED_MODULE_5__["GlobalVariable"]])
     ], FormulaService);
     return FormulaService;
 }());
@@ -6560,9 +7021,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../utils/convert-models-utils */ "./src/app/utils/convert-models-utils.ts");
 /* harmony import */ var rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/internal/operators */ "./node_modules/rxjs/internal/operators/index.js");
 /* harmony import */ var rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../environments/environment */ "./src/environments/environment.ts");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _store_store_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../store/store.service */ "./src/app/services/store/store.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _store_store_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../store/store.service */ "./src/app/services/store/store.service.ts");
+/* harmony import */ var _global__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../global */ "./src/app/global.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -6580,9 +7041,10 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 var MachineService = /** @class */ (function () {
-    function MachineService(http, storeService, router) {
+    function MachineService(http, storeService, globalVariable, router) {
         this.http = http;
         this.storeService = storeService;
+        this.globalVariable = globalVariable;
         this.router = router;
         this.machine = null;
         this.fetchData();
@@ -6598,7 +7060,7 @@ var MachineService = /** @class */ (function () {
     };
     MachineService.prototype.fetchDataFromServer = function () {
         this.getCurrentMachine();
-        return this.http.get(_environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].settings.serverendpoint + 'machine/getColourants/' + this.machine.machineId).pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (data) {
+        return this.http.get(this.globalVariable.getBaseApiUrl() + 'machine/getColourants/' + this.machine.machineId).pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (data) {
             var result = [];
             if (data && data.length > 0) {
                 for (var _i = 0, data_1 = data; _i < data_1.length; _i++) {
@@ -6620,13 +7082,15 @@ var MachineService = /** @class */ (function () {
         }
         return this.machine;
     };
-    MachineService.prototype.updateColourantMachineData = function (machine, colourant, addedAmount) {
+    MachineService.prototype.updateColourantMachineData = function (colourant, addedAmount, refillFactor) {
+        var machine = this.getCurrentMachine();
         var dt = {
             machine: { machineId: machine.machineId },
             colourant: { colourantId: colourant.colourantId },
-            quantity: addedAmount
+            quantity: addedAmount,
+            refillFactor: refillFactor
         };
-        return this.http.post(_environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].settings.serverendpoint + 'machine_colour/update', dt).pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (data) {
+        return this.http.post(this.globalVariable.getBaseApiUrl() + 'machine_colour/update', dt).pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (data) {
             var result = [];
             if (data && data.length > 0) {
                 for (var _i = 0, data_2 = data; _i < data_2.length; _i++) {
@@ -6647,7 +7111,7 @@ var MachineService = /** @class */ (function () {
             quantity: quantity,
             machineFormulaProductBaseId: taskId
         };
-        this.http.post(_environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].settings.serverendpoint + 'machine_colour/subtraction', dt).pipe().subscribe();
+        this.http.post(this.globalVariable.getBaseApiUrl() + 'machine_colour/subtraction', dt).pipe().subscribe();
     };
     MachineService.prototype.recordDispenseFormulaProductBase = function (status, taskId, formulaProductBase, quantity) {
         var machine = this.storeService.getMachineData();
@@ -6660,11 +7124,11 @@ var MachineService = /** @class */ (function () {
             quantity: quantity,
             status: status
         };
-        return this.http.post(_environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].settings.serverendpoint + 'machine_formula/record', dt);
+        return this.http.post(this.globalVariable.getBaseApiUrl() + 'machine_formula/record', dt);
     };
     MachineService.prototype.findAllDispenseTask = function () {
         this.getCurrentMachine();
-        return this.http.get(_environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].settings.serverendpoint + 'machine_formula/findAll/' + this.machine.machineId).pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (data) {
+        return this.http.get(this.globalVariable.getBaseApiUrl() + 'machine_formula/findAll/' + this.machine.machineId).pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (data) {
             var listDispenseTaskLog = [];
             if (data) {
                 for (var _i = 0, data_3 = data; _i < data_3.length; _i++) {
@@ -6678,7 +7142,7 @@ var MachineService = /** @class */ (function () {
         }));
     };
     MachineService.prototype.findDispenseTaskById = function (taskId) {
-        return this.http.get(_environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].settings.serverendpoint + 'machine_formula/findById/' + taskId).pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (data) {
+        return this.http.get(this.globalVariable.getBaseApiUrl() + 'machine_formula/findById/' + taskId).pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (data) {
             return _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_2__["default"].convertToFormulaProductBaseModel(data);
         }));
     };
@@ -6687,11 +7151,12 @@ var MachineService = /** @class */ (function () {
      * listFormulaColorant: là default colourant khi chọn formula, chưa nhân cansize
      * canSize: số lít
      */
-    MachineService.prototype.validateQuantityColourant = function (canSize, listFormulaColorant, formular) {
+    MachineService.prototype.validateQuantityColourant = function (canSize, listFormulaColorant, formula) {
+        var _this = this;
         this.getCurrentMachine();
         var machineId = this.machine.machineId;
-        var baseOnCan = formular.baseOnCan ? formular.baseOnCan : 1; // nếu undefined thì default là 1;
-        return this.http.get(_environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].settings.serverendpoint + 'machine/getColourants/' + machineId).pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (mColours) {
+        var baseOnCan = formula.baseOnCan ? formula.baseOnCan : 1; // nếu undefined thì default là 1;
+        return this.http.get(this.globalVariable.getBaseApiUrl() + 'machine/getColourants/' + machineId).pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (mColours) {
             // list colourant hiện có của machine
             var res = []; // kết quả trả về, danh sách màu không đủ
             var mapExistColours = {}; // tạo map colour với key là colourcode, value là số lượng còn lại
@@ -6703,7 +7168,7 @@ var MachineService = /** @class */ (function () {
                 // số lượng mong đợi: lấy số ml cần có, chia cho baseOnCan của formula và nhân cho số lit cansize
                 var expectQuantity = ((lf.quantity / baseOnCan) * canSize).toFixed(2);
                 // nếu trong máy không còn màu này, hoặc còn nhưng nhỏ hơn số lượng mong đợi
-                if (!mapExistColours[colourCode] || mapExistColours[colourCode] < expectQuantity) {
+                if (!mapExistColours[colourCode] || (+mapExistColours[colourCode] - +expectQuantity < _this.machine.minQuantity)) {
                     res.push(colourCode);
                 }
             });
@@ -6717,7 +7182,7 @@ var MachineService = /** @class */ (function () {
             minQuantity: minQuantity,
             warningQuantity: warningQuantity,
         };
-        return this.http.post(_environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].settings.serverendpoint + 'machine/update', dt).pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (data) {
+        return this.http.post(this.globalVariable.getBaseApiUrl() + 'machine/update', dt).pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (data) {
             return _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_2__["default"].convertToMachineModel(data);
         }));
     };
@@ -6729,7 +7194,7 @@ var MachineService = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
             providedIn: 'root'
         }),
-        __metadata("design:paramtypes", [_shared_http_services_http_service__WEBPACK_IMPORTED_MODULE_1__["HttpService"], _store_store_service__WEBPACK_IMPORTED_MODULE_6__["StoreService"], _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"]])
+        __metadata("design:paramtypes", [_shared_http_services_http_service__WEBPACK_IMPORTED_MODULE_1__["HttpService"], _store_store_service__WEBPACK_IMPORTED_MODULE_5__["StoreService"], _global__WEBPACK_IMPORTED_MODULE_6__["GlobalVariable"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]])
     ], MachineService);
     return MachineService;
 }());
@@ -6749,11 +7214,11 @@ var MachineService = /** @class */ (function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProductService", function() { return ProductService; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../environments/environment */ "./src/environments/environment.ts");
-/* harmony import */ var rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/internal/operators */ "./node_modules/rxjs/internal/operators/index.js");
-/* harmony import */ var rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _shared_http_services_http_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../shared/http/services/http.service */ "./src/app/shared/http/services/http.service.ts");
-/* harmony import */ var _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../utils/convert-models-utils */ "./src/app/utils/convert-models-utils.ts");
+/* harmony import */ var rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs/internal/operators */ "./node_modules/rxjs/internal/operators/index.js");
+/* harmony import */ var rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _shared_http_services_http_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../shared/http/services/http.service */ "./src/app/shared/http/services/http.service.ts");
+/* harmony import */ var _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../utils/convert-models-utils */ "./src/app/utils/convert-models-utils.ts");
+/* harmony import */ var _global__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../global */ "./src/app/global.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -6769,27 +7234,28 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 var ProductService = /** @class */ (function () {
-    function ProductService(http) {
+    function ProductService(http, globalVariable) {
         this.http = http;
+        this.globalVariable = globalVariable;
         this.listItems = [];
         this.sortedData = null;
     }
     ProductService.prototype.getListItems = function () {
-        return this.http.get(_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].settings.serverendpoint + 'product/getAll').pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (data) {
+        return this.http.get(this.globalVariable.getBaseApiUrl() + 'product/getAll').pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_1__["map"])(function (data) {
             var listItems = [];
             if (data) {
                 for (var _i = 0, data_1 = data; _i < data_1.length; _i++) {
                     var item = data_1[_i];
-                    listItems.push(_utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_4__["default"].convertToProductModel(item));
+                    listItems.push(_utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_3__["default"].convertToProductModel(item));
                 }
             }
             return listItems;
-        }), Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])(function (e) {
+        }), Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_1__["catchError"])(function (e) {
             return [];
         }));
     };
     ProductService.prototype.viewProductDetail = function (productId) {
-        return this.http.get(_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].settings.serverendpoint + 'product/view-detail/' + productId);
+        return this.http.get(this.globalVariable.getBaseApiUrl() + 'product/view-detail/' + productId);
     };
     ProductService.prototype.sortData = function (sort) {
         var data = this.listItems.slice();
@@ -6806,30 +7272,30 @@ var ProductService = /** @class */ (function () {
         }
     };
     ProductService.prototype.getListProductBase = function () {
-        return this.http.get(_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].settings.serverendpoint + 'product-base/findAll').pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (data) {
+        return this.http.get(this.globalVariable.getBaseApiUrl() + 'product-base/findAll').pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_1__["map"])(function (data) {
             var listItems = [];
             if (data) {
                 for (var _i = 0, data_2 = data; _i < data_2.length; _i++) {
                     var item = data_2[_i];
-                    listItems.push(_utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_4__["default"].convertToProductBaseModel(item));
+                    listItems.push(_utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_3__["default"].convertToProductBaseModel(item));
                 }
             }
             return listItems;
-        }), Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])(function (e) {
+        }), Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_1__["catchError"])(function (e) {
             return [];
         }));
     };
     ProductService.prototype.getListProductBaseFromProduct = function (productId) {
-        return this.http.get(_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].settings.serverendpoint + 'product-base/findByProduct/' + productId).pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (data) {
+        return this.http.get(this.globalVariable.getBaseApiUrl() + 'product-base/findByProduct/' + productId).pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_1__["map"])(function (data) {
             var listItems = [];
             if (data) {
                 for (var _i = 0, data_3 = data; _i < data_3.length; _i++) {
                     var item = data_3[_i];
-                    listItems.push(_utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_4__["default"].convertToProductBaseModel(item));
+                    listItems.push(_utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_3__["default"].convertToProductBaseModel(item));
                 }
             }
             return listItems;
-        }), Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])(function (e) {
+        }), Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_1__["catchError"])(function (e) {
             return [];
         }));
     };
@@ -6837,7 +7303,7 @@ var ProductService = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
             providedIn: 'root'
         }),
-        __metadata("design:paramtypes", [_shared_http_services_http_service__WEBPACK_IMPORTED_MODULE_3__["HttpService"]])
+        __metadata("design:paramtypes", [_shared_http_services_http_service__WEBPACK_IMPORTED_MODULE_2__["HttpService"], _global__WEBPACK_IMPORTED_MODULE_4__["GlobalVariable"]])
     ], ProductService);
     return ProductService;
 }());
@@ -6857,7 +7323,8 @@ var ProductService = /** @class */ (function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProductBaseService", function() { return ProductBaseService; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _shared_http_services_http_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../shared/http/services/http.service */ "./src/app/shared/http/services/http.service.ts");
+/* harmony import */ var _global__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../global */ "./src/app/global.ts");
+/* harmony import */ var _shared_http_services_http_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../shared/http/services/http.service */ "./src/app/shared/http/services/http.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -6869,15 +7336,17 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 };
 
 
+
 var ProductBaseService = /** @class */ (function () {
-    function ProductBaseService(http) {
+    function ProductBaseService(http, globalVariable) {
         this.http = http;
+        this.globalVariable = globalVariable;
     }
     ProductBaseService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
             providedIn: 'root'
         }),
-        __metadata("design:paramtypes", [_shared_http_services_http_service__WEBPACK_IMPORTED_MODULE_1__["HttpService"]])
+        __metadata("design:paramtypes", [_shared_http_services_http_service__WEBPACK_IMPORTED_MODULE_2__["HttpService"], _global__WEBPACK_IMPORTED_MODULE_1__["GlobalVariable"]])
     ], ProductBaseService);
     return ProductBaseService;
 }());
@@ -6914,6 +7383,7 @@ var StoreService = /** @class */ (function () {
     }
     StoreService.prototype.updateLoginUserData = function (loginUser) {
         this.loginUser = loginUser;
+        console.log(loginUser);
     };
     StoreService.prototype.updateMachineData = function (machine) {
         this.machine = machine;
@@ -6953,10 +7423,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/internal/operators */ "./node_modules/rxjs/internal/operators/index.js");
 /* harmony import */ var rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../environments/environment */ "./src/environments/environment.ts");
-/* harmony import */ var _shared_http_services_http_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../shared/http/services/http.service */ "./src/app/shared/http/services/http.service.ts");
-/* harmony import */ var _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../utils/convert-models-utils */ "./src/app/utils/convert-models-utils.ts");
-/* harmony import */ var _store_store_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../store/store.service */ "./src/app/services/store/store.service.ts");
+/* harmony import */ var _shared_http_services_http_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../shared/http/services/http.service */ "./src/app/shared/http/services/http.service.ts");
+/* harmony import */ var _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../utils/convert-models-utils */ "./src/app/utils/convert-models-utils.ts");
+/* harmony import */ var _store_store_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../store/store.service */ "./src/app/services/store/store.service.ts");
+/* harmony import */ var _global__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../global */ "./src/app/global.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -6975,9 +7445,10 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 var UserService = /** @class */ (function () {
-    function UserService(http, router, cookieService, storeService) {
+    function UserService(http, router, globalVariable, cookieService, storeService) {
         this.http = http;
         this.router = router;
+        this.globalVariable = globalVariable;
         this.cookieService = cookieService;
         this.storeService = storeService;
         this.isLogin = false;
@@ -6995,10 +7466,10 @@ var UserService = /** @class */ (function () {
             userName: userName,
             password: password,
         };
-        this.http.post(_environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].settings.serverendpoint + 'login_test', dt).pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (datas) {
+        this.http.post(this.globalVariable.getBaseApiUrl() + 'login_test', dt).pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (datas) {
             if (datas != null) {
                 _this.isLogin = true;
-                _this.userDTO = _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_6__["default"].convertToUserModel(datas);
+                _this.userDTO = _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_5__["default"].convertToUserModel(datas);
                 _this.storeService.updateLoginUserData(_this.userDTO);
                 _this.storeService.updateMachineData(_this.userDTO.machine);
                 _this.cookieService.set_cookie('username', userName, 1);
@@ -7013,6 +7484,21 @@ var UserService = /** @class */ (function () {
                 alert('Username or Password is incorrect! Please try again');
             }
         })).subscribe();
+    };
+    UserService.prototype.updateCompanyInfo = function (dbItem) {
+        var dt = {
+            companyId: dbItem.companyId,
+            code: dbItem.code,
+            name: dbItem.name,
+            phone: dbItem.phone,
+            website: dbItem.website,
+            email: dbItem.email,
+            address: dbItem.address,
+            city: dbItem.city,
+        };
+        return this.http.post(this.globalVariable.getBaseApiUrl() + 'company/save', dt).pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (data) {
+            return _utils_convert_models_utils__WEBPACK_IMPORTED_MODULE_5__["default"].convertToCompanyModel(data);
+        }));
     };
     UserService.prototype.getLoginUser = function () {
         return this.userDTO;
@@ -7031,7 +7517,7 @@ var UserService = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
             providedIn: 'root'
         }),
-        __metadata("design:paramtypes", [_shared_http_services_http_service__WEBPACK_IMPORTED_MODULE_5__["HttpService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], ng_cookie__WEBPACK_IMPORTED_MODULE_1__["CookieService"], _store_store_service__WEBPACK_IMPORTED_MODULE_7__["StoreService"]])
+        __metadata("design:paramtypes", [_shared_http_services_http_service__WEBPACK_IMPORTED_MODULE_4__["HttpService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _global__WEBPACK_IMPORTED_MODULE_7__["GlobalVariable"], ng_cookie__WEBPACK_IMPORTED_MODULE_1__["CookieService"], _store_store_service__WEBPACK_IMPORTED_MODULE_6__["StoreService"]])
     ], UserService);
     return UserService;
 }());
@@ -7291,6 +7777,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _models_dispense_task_model__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../models/dispense.task.model */ "./src/app/models/dispense.task.model.ts");
 /* harmony import */ var _models_customer__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../models/customer */ "./src/app/models/customer.ts");
 /* harmony import */ var _models_formulacustomer__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../models/formulacustomer */ "./src/app/models/formulacustomer.ts");
+/* harmony import */ var _models_company_model__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../models/company.model */ "./src/app/models/company.model.ts");
+
 
 
 
@@ -7416,7 +7904,20 @@ var ConvertModelUtils = /** @class */ (function () {
         user.userName = object.userName;
         user.role = object.role != null ? ConvertModelUtils.convertToRoleModel(object.role) : null;
         user.machine = object.machine != null ? ConvertModelUtils.convertToMachineModel(object.machine) : null;
+        user.company = object.company != null ? ConvertModelUtils.convertToCompanyModel(object.company) : null;
         return user;
+    };
+    ConvertModelUtils.convertToCompanyModel = function (object) {
+        var company = new _models_company_model__WEBPACK_IMPORTED_MODULE_11__["CompanyModel"]();
+        company.companyId = object.companyId;
+        company.code = object.code;
+        company.name = object.name;
+        company.phone = object.phone;
+        company.email = object.email;
+        company.website = object.website;
+        company.address = object.address;
+        company.city = object.city;
+        return company;
     };
     ConvertModelUtils.convertToRoleModel = function (object) {
         var role = new _models_user_model__WEBPACK_IMPORTED_MODULE_7__["RoleModel"]();
@@ -7440,6 +7941,7 @@ var ConvertModelUtils = /** @class */ (function () {
         item.colourant = ConvertModelUtils.convertToColourantModel(object.colourant);
         item.machine = ConvertModelUtils.convertToMachineModel(object.machine);
         item.quantity = object.quantity;
+        item.refillFactor = object.refillFactor;
         return item;
     };
     ConvertModelUtils.convertToDispenseFormulaProductBaseModel = function (object) {
@@ -7556,8 +8058,8 @@ __webpack_require__.r(__webpack_exports__);
 var environment = {
     production: false,
     settings: {
-        // serverendpoint: 'http://localhost:8080/server/api/',
-        serverendpoint: 'http://ec2-34-227-171-6.compute-1.amazonaws.com:8081/demoson/server/api/',
+        serverendpoint: 'http://localhost:8080/server/api/',
+        // serverendpoint: 'http://ec2-34-227-171-6.compute-1.amazonaws.com:8081/demoson/server/api/',
         dateFormat: 'dd/MM/yyyy'
     }
 };
@@ -7621,7 +8123,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! X:\ws_learning\clientvietpower\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! G:\Workspace\clientvietpower\src\main.ts */"./src/main.ts");
 
 
 /***/ })

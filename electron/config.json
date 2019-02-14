@@ -1,4 +1,4 @@
 {
-	"saveTo": "X://saveto/testhaukute.txt",
+  "saveTo": "D://saveto/flink.txt",
   "endPoint": "http://localhost:8080/server/api"
 }

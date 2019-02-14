@@ -19,6 +19,7 @@ import {MachineService} from '../../../services/machine/machine.service';
 import {FormulaCustomerModel} from '../../../models/formulacustomer';
 import {StoreService} from '../../../services/store/store.service';
 import {UserModel} from '../../../models/user.model';
+import {FileService} from '../../../file.service';
 
 @Component({
   selector: 'app-viewformula',
@@ -56,6 +57,7 @@ export class ViewFormulaComponent implements OnInit {
               private dispenseTaskService: DispenseTaskService,
               private machineService: MachineService,
               private storeService: StoreService,
+              private fileService: FileService,
               private router: Router, private route: ActivatedRoute) {
   }
 
@@ -190,6 +192,8 @@ export class ViewFormulaComponent implements OnInit {
 
             this.dispenseTaskService.runDispenseTask(this.currentTask);
             this.stateMachine = 'DISPENSE';
+            this.fileService.saveDispenseTask(item.formulaProductBase.productBase.base.baseCode, item.formulaProductBase.formula.baseOnCan,
+              item.canSize, this.listFormulaColorant);
 
             setTimeout(() => {
               this.openModal(modalId);
