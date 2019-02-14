@@ -27,4 +27,14 @@ export class FileService {
     // });
     this.ipc.send('saveFile', {data: 'test'});
   }
+
+  async getFiles() {
+    return new Promise<string[]>((resolve, reject) => {
+      this.ipc.once("getFilesResponse", (event, arg) => {
+        resolve(arg);
+      });
+      this.ipc.send('readFile');
+    });
+  }
+
 }

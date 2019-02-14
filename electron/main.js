@@ -8,6 +8,7 @@ const fs = require('fs');
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow;
 
+
 function createWindow () {
   // Create the browser window.
   //mainWindow = new BrowserWindow({width: 800, height: 600})
@@ -20,10 +21,10 @@ function createWindow () {
 
   // Emitted when the window is closed.
   //mainWindow.on('closed', function () {
-    // Dereference the window object, usually you would store windows
-    // in an array if your app supports multi windows, this is the time
-    // when you should delete the corresponding element.
-    //mainWindow = null
+  // Dereference the window object, usually you would store windows
+  // in an array if your app supports multi windows, this is the time
+  // when you should delete the corresponding element.
+  //mainWindow = null
   //})
 
   mainWindow = new BrowserWindow({ width: 800, height: 600 });
@@ -31,7 +32,8 @@ function createWindow () {
   // load the dist folder from Angular
   mainWindow.loadURL(
     url.format({
-      // pathname: path.join(__dirname, `./dist/index.html`),
+      pathname: path.join(__dirname, `./dist/frontend/index.html`),
+      //pathname: path.join('', `D://Workspace/HDBS/electrondev/dist/frontend/index.html`),
       protocol: "file:",
       slashes: true
     })
@@ -42,7 +44,7 @@ function createWindow () {
 
   mainWindow.on("closed", () => {
     mainWindow = null;
-  });
+});
 }
 
 // This method will be called when Electron has finished
@@ -82,13 +84,17 @@ ipcMain.on("saveFile", function(event, arg){
         if(err) {
           return console.log(err);
         }
-
         console.log("The file was saved!");
       });
     }
   });
 });
 
-
+ipcMain.on("readFile", (event, arg) => {
+  fs.readFile('./config.json', function read(err, data) {
+  console.log("data read: " + data);
+  mainWindow.webContents.send("getFilesResponse", data);
+});
+});
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.

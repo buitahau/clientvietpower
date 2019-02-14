@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 // const fs = require('fs');
 import {environment} from 'src/environments/environment';
+import {FileService} from './file.service';
 
 @Injectable({
   providedIn: 'root'
@@ -9,18 +10,29 @@ import {environment} from 'src/environments/environment';
 export class GlobalVariable {
   BASE_API_URL: undefined;
 
-  constructor() {
+  constructor(private fileService: FileService) {
   }
 
   getBaseApiUrl() {
-    let res;
-    if (this.BASE_API_URL) {
-      res = this.BASE_API_URL;
-    } else {
+    const test = true;
+    let res = '';
+    if (test) {
       res = environment.settings.serverendpoint;
-      this.BASE_API_URL = res;
+    } else {
+      if (this.BASE_API_URL) {
+        res = this.BASE_API_URL;
+      }
     }
-
     return res;
+  }
+
+  getEndpoint() {
+    const me = this;
+    this.fileService.getFiles().then(data => {
+      const d = JSON.parse(data.toString());
+      if (d.endPoint) {
+        me.BASE_API_URL = d.endPoint;
+      }
+    });
   }
 }
