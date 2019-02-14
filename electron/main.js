@@ -44,6 +44,18 @@ function createWindow () {
 
   mainWindow.on("closed", () => {
     mainWindow = null;
+  });
+
+  const initCfg = {
+    "saveTo": "X://saveto/testhaukute.txt",
+    "endPoint":"http://localhost:8080/server/api/"
+  };
+  fs.exists(urlConfig, (exists) => {
+    if (!exists){
+    fs.writeFile(urlConfig, JSON.stringify(initCfg), function(err){
+      console.log('init config file');
+    })
+  }
 });
 }
 
