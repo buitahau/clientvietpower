@@ -202,7 +202,7 @@ export class ViewFormulaComponent implements OnInit {
         }
       } else {
         this.errorMessage = 'Not enough colorant quantity to dispense.';
-        this.currentTask == null;
+        this.currentTask = null;
       }
     });
   }
