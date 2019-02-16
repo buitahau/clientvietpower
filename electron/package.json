@@ -6,7 +6,8 @@
   "scripts": {
     "start": "electron .",
     "pack": "asar pack your-app app.asar",
-    "dist": "build --win"
+    "build_win": "build --win",
+    "build_mac": "build --mac"
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
