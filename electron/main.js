@@ -82,16 +82,6 @@ app.on('activate', function () {
 });
 
 ipcMain.on("saveFile", function(event, arg){
-  arg = {
-    baseCode: 'PNB',
-    canSize: 0.75,
-    formulaColourants: [
-      {colourantCode: "NS", quantity: 0.185357},
-      {colourantCode: "LS", quantity: 0.185357},
-      {colourantCode: "TS", quantity: 0.185357},
-    ]
-  };
-
   var formulaLog = [];
   for(var i = 0; i < arg.formulaColourants.length; i++){
     var formulaData = arg.formulaColourants[i];
