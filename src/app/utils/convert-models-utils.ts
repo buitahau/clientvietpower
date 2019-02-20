@@ -185,7 +185,7 @@ export default class ConvertModelUtils {
     item.colourant = ConvertModelUtils.convertToColourantModel(object.colourant);
     item.machine = ConvertModelUtils.convertToMachineModel(object.machine);
     item.quantity = object.quantity;
-    item.refillFactor = object.refillFactor;
+    item.refillFactor = object.refillFactor != null && object.refillFactor > 0 ? object.refillFactor : 100;
     return item;
   }
 

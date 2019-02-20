@@ -15,3 +15,19 @@
 .text-error{
   color: red;
 }
+
+.table-product-base{
+  tr{
+    cursor: pointer;
+    td{
+      padding: 5px 10px;
+    }
+
+    .check-box{
+      display: inline-block;
+      min-width: 24px;
+    }
+  }
+}
+
+

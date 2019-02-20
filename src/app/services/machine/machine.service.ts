@@ -157,7 +157,7 @@ export class MachineService {
         const res = []; // kết quả trả về, danh sách màu không đủ
         const mapExistColours = {}; // tạo map colour với key là colourcode, value là số lượng còn lại
         mColours.map(c => {
-          mapExistColours[c.colourant.colourantCode] = c.quantity;
+          mapExistColours[c.colourant.colourantCode] = c.quantity * c.refillFactor / 100;
         });
 
         listFormulaColorant.map(lf => {

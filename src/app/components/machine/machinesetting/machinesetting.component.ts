@@ -113,7 +113,7 @@ export class MachineSettingComponent implements OnInit {
     let maxQuantity = this.maxQuantity;
     if (type === 'amount') {
     } else if (type === 'refillFactor') {
-      maxQuantity = this.maxQuantity * this.refillFactor;
+      maxQuantity = this.maxQuantity;
     }
 
     this.updateAmount = this.currentAmount + this.addedAmount;

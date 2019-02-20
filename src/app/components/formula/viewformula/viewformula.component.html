@@ -157,7 +157,15 @@
             <div class="row form-group">
               <label class="col-md-4 label-control">Or select:</label>
               <div class="col-md-8">
-                <ng-select2 class="select-color-field" [(ngModel)]="canSize" [data]="listProductBase" [value]="canSize" [placeholder]="'Choose Can Size'" [width]="200" (valueChanged)="changedCanSize($event)"></ng-select2>
+                <table class="table table-bordered table-product-base" [ngStyle]="{'width' : '200px'}">
+                  <tbody *ngFor="let cs of listProductBase">
+                    <tr (click)="changedCanSize(cs.id)">
+                      <td><span class="check-box"><i class="fa fa-check" aria-hidden="true" *ngIf="cs.id == canSize"></i></span> {{cs.text}}</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <!--<ng-select2 class="select-color-field" [(ngModel)]="canSize" [data]="listProductBase" [value]="canSize" [placeholder]="'Choose Can Size'" [width]="200" (valueChanged)="changedCanSize($event)"></ng-select2>-->
               </div>
             </div>
 
