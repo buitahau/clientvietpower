@@ -14,7 +14,7 @@ export class GlobalVariable {
   }
 
   getBaseApiUrl() {
-    const test = true;
+    const test = false;
     let res = '';
     if (test) {
       res = environment.settings.serverendpoint;
