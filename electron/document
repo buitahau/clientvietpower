@@ -1,6 +1,18 @@
-0. preapare : copy dist to electron
-1. npm install
-2. npm start
-3. npm run dist
+Huong dan Build electron
 
 
+1. Build angular
+   + npm install
+   + npm run build_electron
+
+   Sau khi generate ra dist folder, copy dist folder vao electron
+   va replace assets path cho dung.
+
+2. Build electron app
+   + npm install
+   + npm run build_win
+
+   Sau khi build xong thi se co 1 file exe trong folder dist, run file nay de cai dat
+   va vao desktop mo app len kiem tra lai xem da dung chua.
+
+   Neu muon build cho Mac thi chay lenh npm run build_mac thay vi command tren.
