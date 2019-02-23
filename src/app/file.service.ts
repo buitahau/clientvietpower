@@ -9,11 +9,11 @@ export class FileService {
   private ipc: IpcRenderer;
   constructor() {
     if ((<any>window).require) {
-    try {
-      this.ipc = (<any>window).require('electron').ipcRenderer;
-    } catch (error) {
-      throw error;
-    }
+      try {
+        this.ipc = (<any>window).require('electron').ipcRenderer;
+      } catch (error) {
+        throw error;
+      }
     } else {
       console.warn('Could not load electron ipc');
     }
@@ -30,12 +30,16 @@ export class FileService {
   }
 
   async getFiles() {
-    return new Promise<string[]>((resolve, reject) => {
-      this.ipc.once("getFilesResponse", (event, arg) => {
-        resolve(arg);
+    try {
+      return new Promise<string[]>((resolve, reject) => {
+        this.ipc.once('getFilesResponse', (event, arg) => {
+          resolve(arg);
+        });
+        this.ipc.send('readFile');
       });
-      this.ipc.send('readFile');
-    });
+    } catch (e) {
+
+    }
   }
 
   saveDispenseTask(baseCode: string, baseOnCan: number, canSize: number, formulaColourants: FormulaColourantModel[]) {
@@ -45,7 +49,10 @@ export class FileService {
       formulaColourants: this.convertFormulaColourantData(formulaColourants, baseOnCan, canSize)
     };
 
-    this.ipc.send('saveFile', dispenseTaskData);
+    try {
+      this.ipc.send('saveFile', dispenseTaskData);
+    } catch (e) {
+    }
   }
 
 

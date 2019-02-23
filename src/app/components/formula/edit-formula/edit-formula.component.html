@@ -141,7 +141,7 @@
       <div class="card-body">
         <form class="form form-horizontal form-detail">
           <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-5">
               <div class="row">
                 <div class="card-subtitle col-md-12">
                   <h4>Contents</h4>
@@ -175,7 +175,7 @@
               </div>
             </div>
 
-            <div class="col-md-6">
+            <div class="col-md-7">
               <div class="row">
                 <div class="card-subtitle col-md-12">
                   <h4>Components</h4>
@@ -232,10 +232,10 @@
                 <ng-container *ngFor="let colour of listColourants">
                   <div class="col-md-6 colourant-group">
                     <div class="row">
-                      <label class="col-md-8 label-control">
+                      <label class="col-md-7 label-control">
                         <span class="colour-bar" [ngStyle]="{'background': colour.colourant.rbgHex}">{{colour.colourant.colourantCode}} : {{colour.colourant.colourantName}}</span>
                       </label>
-                      <div class="col-md-4">
+                      <div class="col-md-5">
                         <input type="number" [(ngModel)]="colour.quantity" class="form-control" [ngModelOptions]="{standalone: true}"  (change)="clearErrorField('listColourants')">
                       </div>
                     </div>

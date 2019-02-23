@@ -39,13 +39,17 @@ export class MachineSettingComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.openSetting = false;
-    this.errorType = null;
-    this.errorMessage = null;
     this.fetchData();
   }
 
   fetchData() {
+    this.openSetting = false;
+    this.errorType = null;
+    this.errorMessage = null;
+    this.selectedMachineColourant = null;
+    this.listMachineColourant = null;
+    this.machine = null;
+
     this.machine = this.storeService.getMachineData();
 
     if (this.machine != null) {

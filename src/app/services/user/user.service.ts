@@ -2,13 +2,14 @@ import {Injectable} from '@angular/core';
 import {CookieService} from 'ng-cookie';
 import {Router} from '@angular/router';
 import {map} from 'rxjs/internal/operators';
-import {environment} from '../../../environments/environment';
+
 import {HttpService} from '../../shared/http/services/http.service';
 import ConvertModelUtils from '../../utils/convert-models-utils';
 import {UserModel} from '../../models/user.model';
 import {StoreService} from '../store/store.service';
 import {CompanyModel} from '../../models/company.model';
 import {GlobalVariable} from '../../global';
+import {MachineService} from '../machine/machine.service';
 
 @Injectable({
   providedIn: 'root'
@@ -19,11 +20,18 @@ export class UserService {
   userDTO: UserModel = null;
   errorMessage: string;
 
-  constructor(private http: HttpService, private router: Router, private globalVariable: GlobalVariable, private cookieService: CookieService, private storeService: StoreService) {
+  constructor(private http: HttpService,
+              private router: Router,
+              private globalVariable: GlobalVariable,
+              private cookieService: CookieService,
+              private storeService: StoreService,
+              private machineService: MachineService) {
     this.isAuthenticated();
   }
 
   isAuthenticated() {
+    this.clearData();
+
     if (this.cookieService.get_cookie('username') && this.cookieService.get_cookie('password')) {
       this.login(this.cookieService.get_cookie('username'), this.cookieService.get_cookie('password'));
     }
@@ -42,6 +50,7 @@ export class UserService {
           this.userDTO = ConvertModelUtils.convertToUserModel(datas);
           this.storeService.updateLoginUserData(this.userDTO);
           this.storeService.updateMachineData(this.userDTO.machine);
+
           this.cookieService.set_cookie('username', userName, 1);
           this.cookieService.set_cookie('password', password, 1);
           this.router.navigate(['/dashboard']);
@@ -87,6 +96,9 @@ export class UserService {
   clearData() {
     this.userDTO = null;
     this.isLogin = false;
+    this.storeService.clearData();
+    this.machineService.clearData();
+
     this.cookieService.delete_cookie('username');
     this.cookieService.delete_cookie('token');
   }

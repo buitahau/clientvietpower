@@ -14,7 +14,6 @@ export class StoreService {
 
   updateLoginUserData(loginUser: UserModel) {
     this.loginUser = loginUser;
-    console.log(loginUser);
   }
 
   updateMachineData(machine: MachineModel) {
@@ -27,5 +26,10 @@ export class StoreService {
 
   getMachineData(): MachineModel {
     return this.machine;
+  }
+
+  clearData() {
+    this.loginUser = null;
+    this.machine = null;
   }
 }
